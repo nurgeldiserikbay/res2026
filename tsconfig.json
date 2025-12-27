@@ -23,5 +23,5 @@
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts", "**/*.mts", "eslint.config.mjs"],
-	"exclude": ["node_modules"]
+	"exclude": [".next", "node_modules", "out", "build"]
 }

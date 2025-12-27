@@ -13,12 +13,14 @@
 		"format:check": "prettier . --check",
 		"lint:ci": "eslint . --max-warnings 0",
 		"typecheck": "tsc --noEmit",
+		"fix": "pnpm format && pnpm lint:fix",
 		"check": "pnpm lint:ci && pnpm typecheck && pnpm format:check",
 		"typecheck:watch": "tsc --noEmit --watch",
 		"prepare": "husky"
 	},
 	"dependencies": {
 		"next": "16.1.1",
+		"next-intl": "^4.6.1",
 		"react": "19.2.3",
 		"react-dom": "19.2.3"
 	},

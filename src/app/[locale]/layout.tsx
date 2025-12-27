@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
 
 import type { Metadata } from 'next'
 
@@ -26,7 +27,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable}`}>
+				<NextIntlClientProvider>{children}</NextIntlClientProvider>
+			</body>
 		</html>
 	)
 }
