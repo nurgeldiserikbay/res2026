@@ -12,6 +12,7 @@ const prettierConfig = {
 	arrowParens: 'always',
 	vueIndentScriptAndStyle: false,
 	singleAttributePerLine: true,
+	plugins: ['prettier-plugin-tailwindcss'],
 }
 
 export default prettierConfig
