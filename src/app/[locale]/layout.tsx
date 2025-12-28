@@ -1,18 +1,68 @@
-import { Geist, Geist_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
+
+import { Footer } from '@/widgets/footer/ui/Footer'
+import { Header } from '@/widgets/header/ui/Header'
 
 import type { Metadata } from 'next'
 
 import './globals.css'
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
+const HelveticaNeue = localFont({
+	variable: '--font-helvetica',
+	display: 'swap',
+	src: [
+		{
+			path: '../../../public/fonts/HelveticaNeue-Thin.woff2',
+			weight: '200',
+			style: 'normal',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-ThinItalic.woff2',
+			weight: '200',
+			style: 'italic',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-Light.woff2',
+			weight: '300',
+			style: 'normal',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-LightItalic.woff2',
+			weight: '300',
+			style: 'italic',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-Regular.woff2',
+			weight: '400',
+			style: 'normal',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-RegularItalic.woff2',
+			weight: '400',
+			style: 'italic',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-Medium.woff2',
+			weight: '500',
+			style: 'normal',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-MediumItalic.woff2',
+			weight: '500',
+			style: 'italic',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-Bold.woff2',
+			weight: '700',
+			style: 'normal',
+		},
+		{
+			path: '../../../public/fonts/HelveticaNeue-BoldItalic.woff2',
+			weight: '700',
+			style: 'italic',
+		},
+	],
 })
 
 export const metadata: Metadata = {
@@ -27,8 +77,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				<NextIntlClientProvider>{children}</NextIntlClientProvider>
+			<body className={`${HelveticaNeue.className}`}>
+				<NextIntlClientProvider>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	)

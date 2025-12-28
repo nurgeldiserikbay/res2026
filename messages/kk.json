@@ -1,5 +1,41 @@
 {
 	"meta": {
 		"title": "Res2026 - KAZ"
+	},
+	"nav": {
+		"about": {
+			"root": "RES-2026 туралы",
+			"res": "RES-2026",
+			"organizers": "Ұйымдастырушылар",
+			"coOrganizers": "Қоса ұйымдастырушылар",
+			"specialProjects": "Арнайы жобалар",
+			"registration": "Тіркелу",
+			"partners": "Серіктестер мен демеушілер"
+		},
+		"program": {
+			"root": "Бағдарлама",
+			"schedule": "RES-2026 бағдарламасы",
+			"speakers": "Спикерлер және арнайы қонақтар",
+			"latestNews": "Соңғы жаңалықтар"
+		},
+		"useful": {
+			"root": "Қатысушыларға пайдалы ақпарат",
+			"astana": "Астана туралы",
+			"venue": "Өтетін орны",
+			"hotels": "Қонақүйлер",
+			"restaurants": "Мейрамханалар мен кафелер",
+			"visa": "Виза",
+			"weather": "Ауа райы",
+			"attractions": "Көрікті жерлер"
+		},
+		"news": {
+			"root": "Жаңалықтар",
+			"pressReleases": "Пресс-релиздер",
+			"announcements": "Анонстар",
+			"latest": "Соңғы жаңалықтар"
+		},
+		"gallery": "Галерея",
+		"faq": "FAQ",
+		"contacts": "Байланыс"
 	}
 }

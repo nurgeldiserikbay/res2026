@@ -1,1 +1,59 @@
 @import 'tailwindcss';
+
+:root {
+	--color-primary: #2e8656;
+	--color-primary-dark: #02493f;
+	--color-secondary: #41754f;
+	--color-muted: #a1bb94;
+	--color-muted-light: #e0eab8;
+	--color-text: #292d32;
+	--color-white: #ffffff;
+}
+
+@theme {
+	--color-primary: var(--color-primary);
+	--color-primary-dark: var(--color-primary-dark);
+	--color-secondary: var(--color-secondary);
+	--color-muted: var(--color-muted);
+	--color-muted-light: var(--color-muted-light);
+	--color-text: var(--color-text);
+	--color-white: var(--color-white);
+}
+
+@layer utilities {
+	.bg-horizontal-lines {
+		background-image: repeating-linear-gradient(to right, #ededed 0px, #ededed 1px, transparent 1px, transparent 120px);
+	}
+}
+
+html {
+	color: var(--color-text);
+	background: var(--color-white);
+	overflow-x: hidden;
+}
+
+@keyframes dropdownIn {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes dropdownOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+}
+
+.visible-swiper .swiper {
+	overflow: visible !important;
+}

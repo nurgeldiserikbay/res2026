@@ -1,5 +1,41 @@
 {
 	"meta": {
 		"title": "Res2026 - ENG"
+	},
+	"nav": {
+		"about": {
+			"root": "About RES-2026",
+			"res": "RES-2026",
+			"organizers": "Organizers",
+			"coOrganizers": "Co-organizers",
+			"specialProjects": "Special projects",
+			"registration": "Registration",
+			"partners": "Sponsors & partners"
+		},
+		"program": {
+			"root": "Program",
+			"schedule": "RES-2026 program",
+			"speakers": "Speakers & special guests",
+			"latestNews": "Latest news"
+		},
+		"useful": {
+			"root": "Participant info",
+			"astana": "About Astana",
+			"venue": "Venue",
+			"hotels": "Hotels",
+			"restaurants": "Restaurants & cafes",
+			"visa": "Visa",
+			"weather": "Weather",
+			"attractions": "Attractions"
+		},
+		"news": {
+			"root": "News",
+			"pressReleases": "Press releases",
+			"announcements": "Announcements",
+			"latest": "Latest news"
+		},
+		"gallery": "Gallery",
+		"faq": "FAQ",
+		"contacts": "Contacts"
 	}
 }

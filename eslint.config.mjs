@@ -6,7 +6,7 @@ import boundaries from 'eslint-plugin-boundaries'
 import security from 'eslint-plugin-security'
 import sonarjs from 'eslint-plugin-sonarjs'
 
-const FSD_LAYERS = ['app', 'processes', 'widgets', 'features', 'entities', 'shared']
+const FSD_LAYERS = ['app', 'widgets', 'features', 'entities', 'shared']
 
 const eslintConfig = defineConfig([
 	...nextVitals,
@@ -57,14 +57,14 @@ const eslintConfig = defineConfig([
 
 			'@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 			'@typescript-eslint/no-explicit-any': 'error',
+			'sonarjs/no-nested-functions': 'off',
 
 			'boundaries/element-types': [
 				'error',
 				{
 					default: 'disallow',
 					rules: [
-						{ from: 'app', allow: ['processes', 'widgets', 'features', 'entities', 'shared'] },
-						{ from: 'processes', allow: ['widgets', 'features', 'entities', 'shared'] },
+						{ from: 'app', allow: ['widgets', 'features', 'entities', 'shared'] },
 						{ from: 'widgets', allow: ['features', 'entities', 'shared'] },
 						{ from: 'features', allow: ['entities', 'shared'] },
 						{ from: 'entities', allow: ['shared'] },
