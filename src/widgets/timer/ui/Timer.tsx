@@ -1,5 +1,7 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import { useTranslations } from 'next-intl'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
@@ -162,19 +164,57 @@ export function Timer({ targetDate, animateOnMount = true }: TimerProps) {
 		}
 	}, [targetMs, animateOnMount])
 
-	const items = [
-		{ value: display.days, label: t('labels.days'), pad: false },
-		{ value: display.hours, label: t('labels.hours'), pad: true },
-		{ value: display.minutes, label: t('labels.minutes'), pad: true },
-		{ value: display.seconds, label: t('labels.seconds'), pad: true },
+	const items: { value: number; label: string; pad: boolean; x: number; y: number }[] = [
+		{ value: display.days, label: t('labels.days'), pad: false, x: -25, y: 80 },
+		{ value: display.hours, label: t('labels.hours'), pad: true, x: -10, y: 80 },
+		{ value: display.minutes, label: t('labels.minutes'), pad: true, x: 10, y: 80 },
+		{ value: display.seconds, label: t('labels.seconds'), pad: true, x: 25, y: 80 },
 	] as const
 
+	const rootRef = useRef<HTMLDivElement>(null)
+	useGSAP(
+		() => {
+			if (!rootRef.current) return
+
+			const itemsElements = rootRef.current.querySelectorAll<HTMLElement>('[data-timer-item]')
+			if (!itemsElements.length) return
+
+			Array.from(itemsElements).forEach((item, index: number) => {
+				const settings = items[index]
+
+				if (!settings) return
+
+				gsap.fromTo(
+					item,
+					{
+						y: settings.y,
+						x: settings.x,
+						opacity: 0,
+					},
+					{
+						y: 0,
+						x: 0,
+						opacity: 1,
+						delay: 0.35,
+						duration: 1,
+						ease: 'power2.out',
+					},
+				)
+			})
+		},
+		{ scope: rootRef, dependencies: [] },
+	)
+
 	return (
-		<div className="flex w-full max-w-[674px] items-center justify-between gap-[20px]">
-			{items.map((it) => (
+		<div
+			ref={rootRef}
+			className="flex w-full max-w-[674px] items-center justify-between gap-[20px]"
+		>
+			{items.map((it, index) => (
 				<div
 					key={it.label}
-					className="flex h-[136px] min-w-[131px] flex-col items-center justify-between rounded-[12px] bg-[#ffffff08] p-[12px] text-center text-[20px] leading-[1.2] font-light text-white lowercase backdrop-blur-[3px]"
+					data-timer-item={index}
+					className="flex h-[136px] min-w-[131px] translate-y-[24px] transform flex-col items-center justify-between rounded-[12px] bg-[#ffffff08] p-[12px] text-center text-[20px] leading-[1.2] font-light text-white lowercase opacity-0 backdrop-blur-[3px]"
 				>
 					<div
 						className="mb-[10px] align-top text-[64px] leading-[1.2] font-bold tabular-nums"

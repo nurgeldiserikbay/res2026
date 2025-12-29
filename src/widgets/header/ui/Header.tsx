@@ -1,8 +1,9 @@
 'use client'
-
 import { useEffect, useRef, useState } from 'react'
 
+import { usePathname } from '@/i18n/navigation'
 import { locales } from '@/shared/config/i18n'
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 import { HeaderActions } from './HeaderActions'
@@ -10,15 +11,19 @@ import { HeaderLogo } from './HeaderLogo'
 import { HeaderNav } from './HeaderNav'
 
 export function Header() {
+	const pathname = usePathname()
 	const [hidden, setHidden] = useState(false)
 	const [scrolled, setScrolled] = useState(false)
+
+	const headerContainerRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(headerContainerRef, { y: -90 })
 
 	const lastYRef = useRef(0)
 	const tickingRef = useRef(false)
 
 	const excludedRoutes = ['/', ...locales.map((locale) => `/${locale}`)] // add excluded routes as needed
 
-	const makeDark = !excludedRoutes.includes(window?.location?.pathname ?? '')
+	const makeDark = !excludedRoutes.includes(pathname ?? '')
 
 	useEffect(() => {
 		lastYRef.current = window.scrollY
@@ -57,20 +62,30 @@ export function Header() {
 	return (
 		<header
 			className={[
-				'fixed top-0 right-0 left-0 z-50 py-[18px]',
+				'fixed top-0 right-0 left-0 z-50',
 				'transition-all duration-700 ease-out',
 				hidden ? '-translate-y-full' : 'translate-y-0',
-				scrolled || makeDark ? 'bg-primary-dark shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur' : 'bg-transparent',
 			].join(' ')}
 		>
-			<Container className="flex items-center justify-between gap-[10px]">
-				<HeaderLogo />
+			<div
+				ref={headerContainerRef as React.RefObject<HTMLDivElement>}
+				className={[
+					'-translate-y-[90px] transform py-[18px] opacity-0',
+					scrolled || makeDark ? 'bg-primary-dark shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur' : 'bg-transparent',
+				].join(' ')}
+			>
+				<Container
+					id="header-container"
+					className="flex items-center justify-between gap-[10px]"
+				>
+					<HeaderLogo />
 
-				<div className="flex max-w-[1656px] flex-1 items-center justify-between gap-[10px]">
-					<HeaderNav />
-					<HeaderActions />
-				</div>
-			</Container>
+					<div className="flex max-w-[1656px] flex-1 items-center justify-between gap-[10px]">
+						<HeaderNav />
+						<HeaderActions />
+					</div>
+				</Container>
+			</div>
 		</header>
 	)
 }

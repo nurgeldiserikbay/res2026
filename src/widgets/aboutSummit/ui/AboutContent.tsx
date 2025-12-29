@@ -1,17 +1,41 @@
+'use client'
+
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { useRef } from 'react'
 
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonTree } from '@/shared/ui/button/ButtonTree'
 import { Container } from '@/shared/ui/container/container'
 
 export function AboutContent() {
 	const t = useTranslations()
 
+	const TextRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(TextRef, { y: 50, delay: 0.1 })
+	const QuoteRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(QuoteRef, { y: 50, delay: 0.2 })
+	const PresidentInfoRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(PresidentInfoRef, { y: 50, delay: 0.3 })
+	const Text2Ref = useRef<HTMLParagraphElement>(null)
+	useAnimSlide(Text2Ref, { y: 50, delay: 0.4 })
+	const Image1Ref = useRef<HTMLDivElement>(null)
+	useAnimSlide(Image1Ref, { y: 50, delay: 0.5 })
+	const Image2Ref = useRef<HTMLDivElement>(null)
+	useAnimSlide(Image2Ref, { y: 50, delay: 0.6 })
+	const PurposeRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(PurposeRef, { y: 50, delay: 0.7 })
+	const Image3Ref = useRef<HTMLDivElement>(null)
+	useAnimSlide(Image3Ref, { y: 50, delay: 0.8 })
+
 	return (
 		<section className="relative bg-white pt-[100px]">
 			<Container>
 				<div className="flex items-start justify-between gap-[30px]">
-					<div className="text-text relative mb-[78px] max-w-[940px] grow text-[48px] leading-[1.2]">
+					<div
+						ref={TextRef}
+						className="text-text relative mb-[78px] max-w-[940px] grow translate-y-[50px] text-[48px] leading-[1.2] opacity-0"
+					>
 						{t.rich('pages.about.text', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
 							secondary: (chunks) => <span className="text-secondary font-bold">{chunks}</span>,
@@ -29,13 +53,19 @@ export function AboutContent() {
 
 				<div className="relative z-1 mb-[15px] flex items-start justify-between gap-[30px]">
 					<div className="max-w-[721px]">
-						<div className="relative pt-[39px] pl-[71px]">
-							<div className="text-muted absolute top-0 left-0 text-[128px] leading-none">”</div>
+						<div
+							ref={QuoteRef}
+							className="relative translate-y-[50px] pt-[39px] pl-[71px] opacity-0"
+						>
+							<div className="text-muted absolute top-0 left-0 text-[128px] leading-none">&quot;</div>
 							<div className="font-regular mb-[50px] max-w-[493px] text-[16px] leading-normal whitespace-pre-line text-black">
 								{t('pages.about.presidentText')}
 							</div>
 
-							<div className="flex items-center gap-[30px]">
+							<div
+								ref={PresidentInfoRef}
+								className="flex translate-y-[50px] items-center gap-[30px] opacity-0"
+							>
 								<Image
 									src="/imgs/president.png"
 									alt="About President"
@@ -50,11 +80,19 @@ export function AboutContent() {
 							</div>
 						</div>
 
-						<p className="font-regular text-text mt-[60px] text-[24px] leading-normal">{t('pages.about.text2')}</p>
+						<p
+							ref={Text2Ref}
+							className="font-regular text-text mt-[60px] translate-y-[50px] text-[24px] leading-normal opacity-0"
+						>
+							{t('pages.about.text2')}
+						</p>
 					</div>
 
 					<div className="flex max-w-[974px] -translate-y-[130px] transform items-end justify-between gap-[5px]">
-						<div className="relative">
+						<div
+							ref={Image1Ref}
+							className="relative translate-y-[50px] opacity-0"
+						>
 							<Image
 								src="/imgs/about-page-img-1.png"
 								alt="About President"
@@ -67,7 +105,10 @@ export function AboutContent() {
 								<div className="max-w-[247px] text-[32px] leading-[1.2] font-bold text-white">{t(`pages.footer.text1`)}</div>
 							</div>
 						</div>
-						<div>
+						<div
+							ref={Image2Ref}
+							className="translate-y-[50px] opacity-0"
+						>
 							<Image
 								src="/imgs/about-page-img-2.png"
 								alt="About President"
@@ -80,12 +121,18 @@ export function AboutContent() {
 				</div>
 
 				<div className="flex items-center justify-between">
-					<div className="max-w-[721px]">
+					<div
+						ref={PurposeRef}
+						className="max-w-[721px] translate-y-[50px] opacity-0"
+					>
 						<h2 className="text-primary mb-[60px] text-[48px] leading-[1.2] font-bold">{t('pages.about.purpose')}</h2>
 						<p className="text-text text-[16px] leading-normal font-normal">{t('pages.about.text3')}</p>
 					</div>
 
-					<div className="relative">
+					<div
+						ref={Image3Ref}
+						className="relative translate-y-[50px] opacity-0"
+					>
 						<Image
 							src="/imgs/about-img-3.png"
 							alt="About President"

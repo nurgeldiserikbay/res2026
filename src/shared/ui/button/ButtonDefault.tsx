@@ -9,6 +9,7 @@ export function ButtonDefault({
 	className,
 	href = '',
 	id,
+	ref,
 }: {
 	children?: React.ReactNode
 	onClick?: () => void
@@ -16,6 +17,7 @@ export function ButtonDefault({
 	className?: string
 	id?: string
 	href?: string
+	ref?: React.RefObject<HTMLButtonElement>
 }) {
 	return href ? (
 		<Link
@@ -36,6 +38,7 @@ export function ButtonDefault({
 				className || '',
 			].join(' ')}
 			onClick={onClick}
+			ref={ref}
 		>
 			{children}
 			{icon && <IconArrowRight className="text-inherit" />}

@@ -26,7 +26,7 @@ export function NewsItem({ title, image, date, tag, slug, type = 'light', wide =
 				alt={title}
 				width={wide ? 860 : 405}
 				height={507}
-				className="absolute top-0 right-0 bottom-0 left-0 block h-full w-full rounded-[12px] object-cover transition-all duration-700 ease-out group-hover:scale-105"
+				className="absolute top-0 right-0 bottom-0 left-0 block h-full w-full rounded-[12px] object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-x-[22%] group-hover:translate-y-[8%] group-hover:scale-[1.75]"
 			/>
 			<div className="relative z-1 flex h-full w-full flex-col items-start justify-end p-[30px]">
 				<div className={`${type === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>

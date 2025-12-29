@@ -1,6 +1,7 @@
 import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 
+import { GSAPProvider } from '@/shared/lib/gsap/provider'
 import { Footer } from '@/widgets/footer/ui/Footer'
 import { Header } from '@/widgets/header/ui/Header'
 
@@ -79,9 +80,14 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${HelveticaNeue.className}`}>
 				<NextIntlClientProvider>
-					<Header />
-					<main>{children}</main>
-					<Footer />
+					<GSAPProvider />
+					<div id="smooth-wrapper">
+						<div id="smooth-content">
+							<Header />
+							<main>{children}</main>
+							<Footer />
+						</div>
+					</div>
 				</NextIntlClientProvider>
 			</body>
 		</html>
