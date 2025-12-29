@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLocale } from 'next-intl'
 
 import { IconArrowRight } from '@/shared/icons/IconArrowRight'
 
@@ -8,19 +9,22 @@ export interface NewsItemProps {
 	image: string
 	date: string
 	tag: string
-	link: string
+	slug: string
 	type: 'light' | 'dark'
+	wide?: boolean
 }
 
-export function NewsItem({ title, image, date, tag, link, type = 'light' }: NewsItemProps) {
+export function NewsItem({ title, image, date, tag, slug, type = 'light', wide = false }: NewsItemProps) {
+	const locale = useLocale()
+
 	return (
 		<div
-			className={`group relative aspect-[0.789] w-full overflow-hidden rounded-[12px] bg-white shadow-[-31px_124px_36px_0_rgba(0,0,0,0),-20px_79px_33px_0px_rgba(0,0,0,0.01),-11px_44px_28px_0px_rgba(0,0,0,0.03),-5px_20px_20px_0px_rgba(0,0,0,0.04),-1px_5px_11px_0px_rgba(0,0,0,0.05)]`}
+			className={`group relative ${wide ? 'aspect-[1.696]' : 'aspect-[0.789]'} w-full overflow-hidden rounded-[12px] bg-white shadow-[-31px_124px_36px_0_rgba(0,0,0,0),-20px_79px_33px_0px_rgba(0,0,0,0.01),-11px_44px_28px_0px_rgba(0,0,0,0.03),-5px_20px_20px_0px_rgba(0,0,0,0.04),-1px_5px_11px_0px_rgba(0,0,0,0.05)]`}
 		>
 			<Image
 				src={image}
 				alt={title}
-				width={405}
+				width={wide ? 860 : 405}
 				height={507}
 				className="absolute top-0 right-0 bottom-0 left-0 block h-full w-full rounded-[12px] object-cover transition-all duration-700 ease-out group-hover:scale-105"
 			/>
@@ -36,7 +40,7 @@ export function NewsItem({ title, image, date, tag, link, type = 'light' }: News
 				</h4>
 			</div>
 			<Link
-				href={link}
+				href={`/${locale}/news/${slug}`}
 				className="absolute top-[30px] right-[30px] z-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-black/10"
 			>
 				<IconArrowRight className="text-white" />

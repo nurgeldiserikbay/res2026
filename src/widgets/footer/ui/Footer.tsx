@@ -14,7 +14,7 @@ export function Footer() {
 	const t = useTranslations()
 
 	return (
-		<footer className="bg-horizontal-lines bg-white pt-[100px] pb-[82px]">
+		<footer className="bg-horizontal-lines relative z-1 bg-white pt-[100px] pb-[82px]">
 			<Container className="flex items-stretch justify-between">
 				<div className="aspect-[1.11] max-w-[716px] grow">
 					<iframe

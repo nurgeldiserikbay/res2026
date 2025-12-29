@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+import { locales } from '@/shared/config/i18n'
 import { Container } from '@/shared/ui/container/container'
 
 import { HeaderActions } from './HeaderActions'
@@ -14,6 +15,10 @@ export function Header() {
 
 	const lastYRef = useRef(0)
 	const tickingRef = useRef(false)
+
+	const excludedRoutes = ['/', ...locales.map((locale) => `/${locale}`)] // add excluded routes as needed
+
+	const makeDark = !excludedRoutes.includes(window?.location?.pathname ?? '')
 
 	useEffect(() => {
 		lastYRef.current = window.scrollY
@@ -55,7 +60,7 @@ export function Header() {
 				'fixed top-0 right-0 left-0 z-50 py-[18px]',
 				'transition-all duration-700 ease-out',
 				hidden ? '-translate-y-full' : 'translate-y-0',
-				scrolled ? 'bg-primary-dark shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur' : 'bg-transparent',
+				scrolled || makeDark ? 'bg-primary-dark shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur' : 'bg-transparent',
 			].join(' ')}
 		>
 			<Container className="flex items-center justify-between gap-[10px]">
