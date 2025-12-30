@@ -1,15 +1,18 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
+import { Locale } from '@/shared/config/i18n'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
+import { GallerySection } from '@/widgets/gallery-section/GallerySection'
 
 export default function Page() {
 	const t = useTranslations()
+	const locale = useLocale()
 
 	const BannerRef = useRef<HTMLElement>(null)
 	useAnimBg(BannerRef, {
@@ -45,6 +48,8 @@ export default function Page() {
 					</div>
 				</Container>
 			</section>
+
+			<GallerySection locale={locale as Locale} />
 		</>
 	)
 }

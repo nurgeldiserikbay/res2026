@@ -19,6 +19,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^6.1.7",
 		"@gsap/react": "^2.1.2",
 		"@tailwindcss/postcss": "^4.1.18",
 		"@types/greensock": "^1.15.32",
