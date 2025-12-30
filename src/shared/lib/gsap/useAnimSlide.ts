@@ -6,7 +6,13 @@ import { usePathname } from 'next/navigation'
 
 export function useAnimSlide(
 	element?: React.RefObject<HTMLElement | null>,
-	{ duration = 1, y = -90, x = 0, delay = 0 }: { duration?: number; y?: number; x?: number; delay?: number } = {},
+	{
+		duration = 1,
+		y = -90,
+		x = 0,
+		delay = 0,
+		start = 'top 80%',
+	}: { duration?: number; y?: number; x?: number; delay?: number; start?: string } = {},
 ) {
 	const pathname = usePathname()
 
@@ -30,7 +36,7 @@ export function useAnimSlide(
 					ease: 'circ.out',
 					scrollTrigger: {
 						trigger: element.current,
-						start: 'top 80%',
+						start,
 					},
 				},
 			)

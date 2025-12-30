@@ -26,15 +26,15 @@ export function Footer() {
 	const FooterText1Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterText1Ref, { y: 50, delay: 0.4 })
 	const FooterText2Ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(FooterText2Ref, { y: 50, delay: 0.5 })
+	useAnimSlide(FooterText2Ref, { y: 50, delay: 0.5, start: 'top bottom' })
 	const FooterContactsRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterContactsRef, { y: 50, delay: 0.6 })
 	const FooterSocialRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(FooterSocialRef, { y: 50, delay: 0.7 })
+	useAnimSlide(FooterSocialRef, { y: 50, delay: 0.7, start: 'top bottom' })
 	const FooterNavBottomRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterNavBottomRef, { y: 50, delay: 0.8 })
 	const FooterCopyrightRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9 })
+	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9, start: 'top bottom' })
 
 	return (
 		<footer className="bg-horizontal-lines relative z-1 bg-white pt-[100px] pb-[82px]">

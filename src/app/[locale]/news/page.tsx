@@ -37,8 +37,8 @@ export default function Page() {
 
 	const BannerRef = useRef<HTMLElement>(null)
 	useAnimBg(BannerRef, {
-		fromSize: '120%',
-		toSize: '100%',
+		fromSize: '140%',
+		toSize: '120%',
 		fromPosition: 'center 70%',
 		toPosition: 'center center',
 		duration: 1.4,
