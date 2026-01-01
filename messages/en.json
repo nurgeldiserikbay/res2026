@@ -8,34 +8,131 @@
 			"res": "RES-2026",
 			"organizers": "Organizers",
 			"coOrganizers": "Co-organizers",
-			"specialProjects": "Special projects",
+			"specialProjects": "Special Projects",
 			"registration": "Registration",
-			"partners": "Sponsors & partners"
+			"partners": "Sponsors & Partners"
 		},
 		"program": {
 			"root": "Program",
-			"schedule": "RES-2026 program",
-			"speakers": "Speakers & special guests",
-			"latestNews": "Latest news"
+			"schedule": "RES-2026 Program",
+			"speakers": "Speakers & Special Guests",
+			"latestNews": "Latest News"
 		},
 		"useful": {
-			"root": "Participant info",
+			"root": "Useful Information for Participants",
 			"astana": "About Astana",
 			"venue": "Venue",
 			"hotels": "Hotels",
-			"restaurants": "Restaurants & cafes",
+			"restaurants": "Restaurants & Cafes",
 			"visa": "Visa",
 			"weather": "Weather",
 			"attractions": "Attractions"
 		},
 		"news": {
 			"root": "News",
-			"pressReleases": "Press releases",
+			"pressReleases": "Press Releases",
 			"announcements": "Announcements",
-			"latest": "Latest news"
+			"latest": "Latest News"
 		},
 		"gallery": "Gallery",
 		"faq": "FAQ",
 		"contacts": "Contacts"
+	},
+	"commands": {
+		"register": "Register",
+		"join": "Join",
+		"toMainPage": "Back to Home"
+	},
+	"titles": {
+		"contacts": "Contacts",
+		"main": "Home",
+		"strategicPartner": "Strategic Partner",
+		"aboutSummit": "About the Summit",
+		"speakers": "Speakers & Participants",
+		"news": "News",
+		"partners": "Partners & Sponsors",
+		"soon": "Coming Soon",
+		"soonText": "This section is under development. We are preparing new content and will open access soon.\nPlease check back later!",
+		"otherNews": "Other News",
+		"organizers": "Organizers",
+		"contactPersons": "Contact Persons",
+		"responsibleMinistry": "Responsible Ministry",
+		"venue": "Venue Address",
+		"generalQuestions": "General Questions & Program",
+		"registrationAndParticipation": "Registration & Participation",
+		"partnershipAndSponsorship": "Partnership & Sponsorship",
+		"mediaWork": "Media Relations",
+		"ministryOfEnvironment": "Ministry of Ecology and Natural Resources of Kazakhstan",
+		"programs": "Program",
+		"gallery": "Gallery"
+	},
+	"labels": {
+		"days": "Days",
+		"hours": "Hours",
+		"minutes": "Minutes",
+		"seconds": "Seconds",
+		"more": "Read more",
+		"allSpeakers": "All Speakers",
+		"allNews": "All News",
+		"latestNews": "Latest News",
+		"announcements": "Announcements",
+		"pressReleases": "Press Releases"
+	},
+	"pages": {
+		"aboutSummit": {
+			"title": "<primary>A unique event</primary> bringing together leading experts, entrepreneurs, scientists, and innovators from <secondary>around the world.</secondary>",
+			"text1": "This is not just an exhibition, but a platform for exchanging ideas, promoting new technologies, and building global partnerships. RES 2026 is a chance to be part of a transformation shaping the future of our planet.",
+			"text2": "We live in an era where innovation and sustainable development are top priorities. At the summit, you will see how cutting-edge ideas and solutions can change the world for the better. We invite you to join this movement and build an inspiring future together."
+		},
+		"programms": {
+			"title": "Program",
+			"text": "Each day of RES 2026 will bring inspiration, discoveries, and opportunities for collaboration. Follow key moments, including evening events, networking sessions, and awards for outstanding innovative projects."
+		},
+		"speakers": {
+			"text": "RES 2026 will gather the brightest minds of our time.",
+			"text1": "We are proud to present global leaders in technology, sustainability, and science. Our speakers are those shaping the future through impactful decisions."
+		},
+		"partners": {
+			"text": "RES 2026 would not be possible without the support of our respected organizers, partners, and media partners.",
+			"text1": "These leading companies and organizations play a key role in delivering this unique event and showcasing world-class ideas and technologies."
+		},
+		"connectionBanner": {
+			"text": "Join us at RES 2026 — a unique event becoming the center of innovation, technology, and sustainable development!"
+		},
+		"footer": {
+			"text": "The exhibition will take place at the EXPO International Exhibition Center, one of the country’s main venues for global events and innovative projects.",
+			"text1": "April 22–23, 2026, Astana, EXPO IEC",
+			"copyright": "© Regional Ecological Summit EXPO 2026"
+		},
+		"about": {
+			"title": "About the Summit",
+			"text": "<primary>A unique event</primary> bringing together global experts from <secondary>around the world.</secondary>",
+			"presidentText": "We live in an era where innovation and sustainable development are becoming key priorities.\n\nThis is an opportunity to be part of a transformation that will define the future of our planet.",
+			"presidentName": "Kassym-Jomart Tokayev",
+			"presidentPosition": "President of the Republic of Kazakhstan",
+			"text2": "The Regional Ecological Summit 2026 was initiated by the President of Kazakhstan and aims to unite Central Asian countries to develop joint solutions to climate change in partnership with the UN.",
+			"purpose": "Summit Purpose",
+			"text3": "The summit serves as a platform to develop coordinated solutions and mechanisms to address climate and environmental challenges in Central Asia."
+		},
+		"contacts": {
+			"ministryOfEnvironment": "The event is held with the support of the Ministry of Ecology and Natural Resources of Kazakhstan.",
+			"address": "Astana, Republic of Kazakhstan",
+			"eventAddress": "Astana, Republic of Kazakhstan",
+			"text": "The exhibition will be held at the EXPO International Exhibition Center."
+		}
+	},
+	"days": {
+		"short": {
+			"0": "Mon",
+			"1": "Tue",
+			"2": "Wed",
+			"3": "Thu",
+			"4": "Fri",
+			"5": "Sat",
+			"6": "Sun"
+		}
+	},
+	"messages": {
+		"noPrograms": "Program not found"
 	}
 }

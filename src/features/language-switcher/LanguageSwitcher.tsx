@@ -1,5 +1,9 @@
+'use client'
+
+import { useLocale } from 'next-intl'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
+import { useRouter, usePathname } from '@/i18n/navigation'
 import type { Locale } from '@/shared/config/i18n'
 import { IconArrowDown } from '@/shared/icons/IconArrowDown'
 
@@ -12,9 +16,11 @@ const LANG_LABEL: Record<Locale, string> = {
 export function LanguageSwitcher() {
 	const ref = useRef<HTMLDivElement | null>(null)
 	const [open, setOpen] = useState(false)
-	const [lang, setLang] = useState<Locale>('ru')
+	const locale = useLocale() as Locale
+	const router = useRouter()
+	const pathname = usePathname()
 
-	const options = useMemo(() => (['kk', 'ru', 'en'] as Locale[]).filter((l) => l !== lang), [lang])
+	const options = useMemo(() => (['kk', 'ru', 'en'] as Locale[]).filter((l) => l !== locale), [locale])
 
 	useEffect(() => {
 		const onDown = (e: MouseEvent | TouchEvent) => {
@@ -54,7 +60,7 @@ export function LanguageSwitcher() {
 						aria-haspopup="listbox"
 						aria-expanded={open}
 					>
-						<span className="text-[16px] leading-none">{LANG_LABEL[lang as Locale]}</span>
+						<span className="text-[16px] leading-none">{LANG_LABEL[locale]}</span>
 
 						{/* Chevron */}
 						<span className={`shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`}>
@@ -74,7 +80,7 @@ export function LanguageSwitcher() {
 									<button
 										type="button"
 										onClick={() => {
-											setLang(l)
+											router.replace(pathname, { locale: l })
 											setOpen(false)
 										}}
 										className={[
@@ -86,7 +92,7 @@ export function LanguageSwitcher() {
 										role="option"
 										aria-selected={false}
 									>
-										<span className="text-[16px] leading-none">{LANG_LABEL[l as Locale]}</span>
+										<span className="text-[16px] leading-none">{LANG_LABEL[l]}</span>
 									</button>
 								</li>
 							))}

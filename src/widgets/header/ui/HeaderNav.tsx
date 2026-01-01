@@ -41,7 +41,7 @@ export function HeaderNav() {
 						key={item.key}
 						href={item.href ?? '/'}
 						className={[
-							'font-regular transition-duration-300 hover:text-muted-light transition-colors',
+							'font-regular transition-duration-300 hover:text-muted-light text-center transition-colors',
 							active ? 'text-muted-light' : '',
 							'focus-visible:text-muted-light focus-visible:outline-none',
 						].join(' ')}
