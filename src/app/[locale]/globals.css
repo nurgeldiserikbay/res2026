@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+
+:root {
+	--color-primary: #2e8656;
+	--color-primary-dark: #02493f;
+	--color-secondary: #41754f;
+	--color-muted: #a1bb94;
+	--color-muted-light: #e0eab8;
+	--color-text: #292d32;
+	--color-white: #ffffff;
+}
+
+@theme {
+	--color-primary: var(--color-primary);
+	--color-primary-dark: var(--color-primary-dark);
+	--color-secondary: var(--color-secondary);
+	--color-muted: var(--color-muted);
+	--color-muted-light: var(--color-muted-light);
+	--color-text: var(--color-text);
+	--color-white: var(--color-white);
+	--breakpoint-xs: 440px;
+	--breakpoint-sm: 640px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1536px;
+	--breakpoint-3xl: 1800px;
+}
+
+@layer utilities {
+	.bg-horizontal-lines {
+		background-image: repeating-linear-gradient(to right, #ededed 0px, #ededed 1px, transparent 1px, transparent 120px);
+	}
+}
+
+html {
+	color: var(--color-text);
+	background: var(--color-white);
+	overflow-x: hidden;
+}
+
+@keyframes dropdownIn {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes dropdownOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+}
+
+.visible-swiper .swiper {
+	overflow: visible !important;
+}
+
+/* Стили для анимированного баннера с псевдоэлементом */
+[data-animated-banner] {
+	position: relative;
+	overflow: hidden;
+}
+
+[data-animated-banner]::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: var(--bg-image);
+	background-size: cover;
+	background-position: var(--bg-position, center center);
+	background-repeat: no-repeat;
+	transform: scale(var(--bg-scale, 1));
+	transform-origin: center center;
+	z-index: 0;
+}

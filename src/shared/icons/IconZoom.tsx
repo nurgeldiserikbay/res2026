@@ -1,0 +1,44 @@
+import * as React from 'react'
+
+type IconProps = Omit<React.SVGProps<SVGSVGElement>, 'color'> & {
+	/** px */
+	size?: number
+	/** если не задано — используется currentColor (цвет из CSS) */
+	color?: string
+	title?: string
+}
+
+export function IconZoom({ size = 42, color, title = 'Zoom icon', className, ...props }: IconProps) {
+	const fill = color ?? 'currentColor'
+
+	return (
+		<svg
+			width={size}
+			height={size}
+			viewBox="0 0 42 42"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+			className={className}
+			role={props.role ?? 'img'}
+			aria-label={props['aria-label'] ?? title}
+			{...props}
+		>
+			<path
+				d="M35 35V36H36V35H35ZM26.9571 25.5429C26.5666 25.1524 25.9334 25.1524 25.5429 25.5429C25.1524 25.9334 25.1524 26.5666 25.5429 26.9571L26.25 26.25L26.9571 25.5429ZM35 24.5H34V35H35H36V24.5H35ZM35 35V34H24.5V35V36H35V35ZM35 35L35.7071 34.2929L26.9571 25.5429L26.25 26.25L25.5429 26.9571L34.2929 35.7071L35 35Z"
+				fill={fill}
+			/>
+			<path
+				d="M7 35H6V36H7V35ZM16.4571 26.9571C16.8476 26.5666 16.8476 25.9334 16.4571 25.5429C16.0666 25.1524 15.4334 25.1524 15.0429 25.5429L15.75 26.25L16.4571 26.9571ZM7 24.5H6V35H7H8V24.5H7ZM7 35V36H17.5V35V34H7V35ZM7 35L7.70711 35.7071L16.4571 26.9571L15.75 26.25L15.0429 25.5429L6.29289 34.2929L7 35Z"
+				fill={fill}
+			/>
+			<path
+				d="M35 7H36V6H35V7ZM25.5429 15.0429C25.1524 15.4334 25.1524 16.0666 25.5429 16.4571C25.9334 16.8476 26.5666 16.8476 26.9571 16.4571L26.25 15.75L25.5429 15.0429ZM35 17.5H36V7H35H34V17.5H35ZM35 7V6H24.5V7V8H35V7ZM35 7L34.2929 6.29289L25.5429 15.0429L26.25 15.75L26.9571 16.4571L35.7071 7.70711L35 7Z"
+				fill={fill}
+			/>
+			<path
+				d="M7 7V6H6V7H7ZM15.0429 16.4571C15.4334 16.8476 16.0666 16.8476 16.4571 16.4571C16.8476 16.0666 16.8476 15.4334 16.4571 15.0429L15.75 15.75L15.0429 16.4571ZM7 17.5H8V7H7H6V17.5H7ZM7 7V8H17.5V7V6H7V7ZM7 7L6.29289 7.70711L15.0429 16.4571L15.75 15.75L16.4571 15.0429L7.70711 6.29289L7 7Z"
+				fill={fill}
+			/>
+		</svg>
+	)
+}
