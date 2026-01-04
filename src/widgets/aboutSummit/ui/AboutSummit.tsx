@@ -29,6 +29,14 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitImg3Ref, { y: 90, delay: 0.3 })
 	const AboutSummitImg4Ref = useRef<HTMLImageElement>(null)
 	useAnimSlide(AboutSummitImg4Ref, { y: 90, delay: 0.4 })
+	const AboutSummitPresidentInitiativeRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(AboutSummitPresidentInitiativeRef, { y: 90, delay: 0.5 })
+	const AboutSummitPresidentTextRef = useRef<HTMLParagraphElement>(null)
+	useAnimSlide(AboutSummitPresidentTextRef, { y: 90, delay: 0.6 })
+	const AboutSummitQuoteRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(AboutSummitQuoteRef, { y: 90, delay: 0.35 })
+	const AboutSummitPurposeRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(AboutSummitPurposeRef, { y: 90, delay: 0.45 })
 
 	return (
 		<section className="3xl:py-[100px] overflow-hidden bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
@@ -89,8 +97,16 @@ export function AboutSummit() {
 					</div>
 
 					<div className="mb-[60px]">
-						<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.presidentInitiative`)}</h3>
-						<p className="text-text mb-[55px] text-[16px] leading-normal font-normal whitespace-pre-line">
+						<h3
+							ref={AboutSummitPresidentInitiativeRef}
+							className="text-text mb-[10px] translate-y-90 text-[24px] leading-normal font-bold opacity-0"
+						>
+							{t(`pages.about.presidentInitiative`)}
+						</h3>
+						<p
+							ref={AboutSummitPresidentTextRef}
+							className="text-text mb-[55px] translate-y-90 text-[16px] leading-normal font-normal whitespace-pre-line opacity-0"
+						>
 							{t(`pages.about.presidentInitiativeText`)}
 						</p>
 						<ButtonDefault
@@ -120,8 +136,11 @@ export function AboutSummit() {
 						{t(`pages.aboutSummit.text1`)}
 					</p>
 
-					<div className="seld-start relative mb-[54px] rounded-[12px] bg-[#FBFFE9] p-[26px] md:pt-[65px] md:pl-[97px]">
-						<div className="text-muted absolute top-[26px] left-[26px] hidden text-[128px] leading-none md:block">”</div>
+					<div
+						ref={AboutSummitQuoteRef}
+						className="seld-start relative mb-[54px] translate-y-90 rounded-[12px] bg-[#FBFFE9] p-[26px] opacity-0 md:pt-[65px] md:pl-[97px]"
+					>
+						<div className="text-muted absolute top-[26px] left-[26px] hidden text-[128px] leading-none md:block">&quot;</div>
 						<div className="font-regular relative z-1 mb-[50px] text-[16px] leading-normal whitespace-pre-line text-black">
 							{t('pages.about.presidentText')}
 						</div>
@@ -146,7 +165,10 @@ export function AboutSummit() {
 						/>
 					</div>
 
-					<div>
+					<div
+						ref={AboutSummitPurposeRef}
+						className="translate-y-90 opacity-0"
+					>
 						<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.purpose`)}</h3>
 						<p className="font-regular text-text text-left text-[16px] leading-normal">{t(`pages.about.text3`)}</p>
 					</div>
