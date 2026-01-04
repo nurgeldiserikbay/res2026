@@ -10,12 +10,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
 import { Speaker } from '@/entities/speaker/Speaker'
-import { IconArrowHead } from '@/shared/icons/IconArrowHead'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
-import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
-import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
+
+import { SpekerControl } from './SpekerControl'
 
 export function Speakers() {
 	const t = useTranslations()
@@ -75,65 +74,29 @@ export function Speakers() {
 			data-animated-banner
 			className="bg-secondary relative overflow-hidden pt-[110px] pb-[57px] after:pointer-events-none after:absolute after:top-0 after:right-0 after:bottom-0 after:left-0 after:z-0 after:bg-[url('/imgs/points.png')] after:bg-cover after:bg-left after:bg-no-repeat md:pt-[120px] md:pb-[85px] lg:pb-[100px] 2xl:pt-[134px] 2xl:pb-[120px]"
 		>
-			<Container className="flex items-start justify-between gap-[30px]">
-				<div className="flex max-w-[578px] flex-col items-end justify-start">
+			<Container className="flex flex-wrap items-start justify-between gap-x-[30px] gap-y-[12px] lg:flex-nowrap">
+				<div className="flex flex-col items-end justify-start lg:max-w-[578px]">
 					<h2
 						ref={titleRef}
-						className="text-text 3xl:text-[96px] mb-[30px] w-full translate-x-[90px] text-[32px] leading-none font-bold opacity-0 md:mb-[40px] md:text-[48px] lg:mb-[50px] lg:text-[64px] 2xl:mb-[66px] 2xl:text-[72px]"
+						className="text-text 3xl:text-[96px] mb-[30px] w-full translate-x-[90px] text-[32px] leading-none font-bold opacity-0 md:mb-[40px] md:text-[48px] lg:mb-[50px] lg:text-[58px] 2xl:mb-[66px] 2xl:text-[72px]"
 					>
 						{t('titles.speakers')}
 					</h2>
 
 					<div
 						ref={textWithButtonsRef}
-						className="max-w-[402px] translate-y-[90px] opacity-0"
+						className="translate-y-[90px] opacity-0 lg:max-w-[402px]"
 					>
 						<h4 className="text-text mb-[30px] text-left text-[20px] leading-normal font-bold md:text-[22px] xl:text-[24px]">
 							{t('pages.speakers.text')}
 						</h4>
 						<p className="text-text mb-[30px] text-[16px] leading-normal">{t('pages.speakers.text1')}</p>
 
-						<div className="flex w-full items-start justify-between gap-[20px]">
-							<ButtonDefault>{t('labels.allSpeakers')}</ButtonDefault>
-
-							<div>
-								<div id="swiper-button-prev">
-									{isBeginning ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none mb-[10px] h-[45px] w-[82px] cursor-default py-[12px]"
-										>
-											<IconArrowHead className="text-muted rotate-180 transform" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="mb-[10px] h-[45px] w-[82px] py-[12px]"
-										>
-											<IconArrowHead className="rotate-180 transform" />
-										</ButtonDefault>
-									)}
-								</div>
-
-								<div id="swiper-button-next">
-									{isEnd ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none mb-[10px] h-[45px] w-[82px] cursor-default py-[12px]"
-										>
-											<IconArrowHead className="text-muted" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[82px] py-[12px]"
-										>
-											<IconArrowHead />
-										</ButtonDefault>
-									)}
-								</div>
-							</div>
-						</div>
+						<SpekerControl
+							isBeginning={isBeginning}
+							isEnd={isEnd}
+							className="hidden lg:flex"
+						/>
 					</div>
 				</div>
 
@@ -152,12 +115,12 @@ export function Speakers() {
 						breakpoints={{
 							// when window width is >= 320px
 							320: {
-								slidesPerView: 1,
-								spaceBetween: 20,
+								slidesPerView: 1.2,
+								spaceBetween: 10,
 							},
 							// when window width is >= 480px
 							480: {
-								slidesPerView: 3,
+								slidesPerView: 2.2,
 								spaceBetween: 30,
 							},
 							// when window width is >= 640px
@@ -191,6 +154,11 @@ export function Speakers() {
 						))}
 					</Swiper>
 				</div>
+				<SpekerControl
+					className="mt-[48px] flex lg:hidden"
+					isBeginning={isBeginning}
+					isEnd={isEnd}
+				/>
 			</Container>
 		</section>
 	)

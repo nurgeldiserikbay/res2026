@@ -55,12 +55,12 @@ export default function Page() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="bg-secondary h-[343px] pt-[176px]"
+				className="bg-secondary xs:h-[343px] xs:pt-[176px] h-[451px] pt-[284px]"
 			>
 				<Container className="relative z-10">
 					<h1
 						ref={TitleRef}
-						className="mb-[30px] translate-y-[50px] text-center text-[48px] leading-none font-bold text-white opacity-0"
+						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 					>
 						{t('titles.speakersPage')}
 					</h1>
@@ -73,9 +73,9 @@ export default function Page() {
 				</Container>
 			</section>
 
-			<section className="bg-white pt-[100px]">
+			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
-					<div className="grid grid-cols-4 gap-x-[82px] gap-y-[22px]">
+					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
 						{speakersPaginItems.map((item, index) => (
 							<SpeakersItemWrapper
 								key={index}
@@ -88,7 +88,7 @@ export default function Page() {
 
 					<div
 						ref={PaginationRef}
-						className="mt-[50px] flex translate-y-[50px] items-center justify-center opacity-0"
+						className="mt-[30px] flex translate-y-[50px] items-center justify-center opacity-0 xl:mt-[50px]"
 					>
 						<MainPagination totalPages={10} />
 					</div>

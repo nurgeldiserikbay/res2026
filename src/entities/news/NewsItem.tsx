@@ -35,7 +35,9 @@ export function NewsItem({ title, image, date, tag, slug, type = 'light', wide =
 				<div
 					className={`${type === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
 				>{`//${tag}`}</div>
-				<h4 className={`${type === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[72px] text-[24px] leading-none font-medium`}>
+				<h4
+					className={`${type === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[60px] text-[20px] leading-none font-medium md:h-[66px] md:text-[22px] lg:h-[72px] lg:text-[24px]`}
+				>
 					{title}
 				</h4>
 			</div>

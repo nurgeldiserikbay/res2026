@@ -126,18 +126,18 @@ export default function Home() {
 				</Container>
 			</section>
 
-			{/* <AboutSummit /> */}
+			<AboutSummit />
 
-			{/* <Programms /> */}
+			<Programms />
 
 			<Speakers />
 
-			{/* <section className="bg-horizontal-lines bg-white py-[100px]">
+			<section className="bg-horizontal-lines 3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
 				<Container>
-					<div className="mb-[70px] flex items-center justify-between">
+					<div className="xs:flex-nowrap mb-[30px] flex flex-wrap items-center justify-between gap-5 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]">
 						<h2
 							ref={NewsTitleRef}
-							className="text-text translate-x-[-90px] text-[48px] leading-none font-bold opacity-0"
+							className="text-text 3xl:text-[48px] translate-x-[-90px] text-[32px] leading-none font-bold opacity-0 lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 						>
 							{t('titles.news')}
 						</h2>
@@ -152,26 +152,26 @@ export default function Home() {
 
 					<NewsTab />
 				</Container>
-			</section> */}
+			</section>
 
-			{/* <section className="bg-horizontal-lines bg-white pb-[100px]">
-				<Container className="flex items-start justify-between">
-					<div className="max-w-[560px] grow">
+			<section className="bg-horizontal-lines bg-white pb-[50px] md:pb-[60px] 2xl:pb-[100px]">
+				<Container className="flex flex-wrap items-start justify-between gap-x-8 gap-y-[30px] lg:flex-nowrap">
+					<div className="grow lg:max-w-[400px] xl:max-w-[560px]">
 						<h2
 							ref={PartnersTitleRef}
-							className="text-text mb-[70px] max-w-[376px] translate-x-[-90px] text-[48px] leading-none font-bold opacity-0"
+							className="text-text 3xl:text-[48px] mb-[30px] max-w-[376px] translate-x-[-90px] text-[32px] leading-none font-bold opacity-0 lg:text-[36px] xl:mb-[50px] xl:text-[40px] 2xl:mb-[70px] 2xl:text-[44px]"
 						>
 							{t('titles.partners')}
 						</h2>
 						<p
 							ref={PartnersText1Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-normal font-bold opacity-0"
+							className="text-text mb-[30px] translate-y-[50px] text-[20px] leading-normal font-bold opacity-0 xl:text-[22px] 2xl:text-[24px]"
 						>
 							{t(`pages.partners.text`)}
 						</p>
 						<p
 							ref={PartnersText2Ref}
-							className="text-text mb-[70px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0"
+							className="text-text mb-[30px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]"
 						>
 							{t(`pages.partners.text1`)}
 						</p>
@@ -194,19 +194,19 @@ export default function Home() {
 						<PartnersList />
 					</div>
 				</Container>
-			</section> */}
+			</section>
 
-			{/* <section className="bg-horizontal-lines bg-white">
+			<section className="bg-horizontal-lines bg-white">
 				<Container>
 					<div
 						ref={ConnectionBannerRef}
 						data-animated-banner
-						className="relative rounded-[17px] px-[36px] pt-[58px] pb-[84px]"
+						className="relative rounded-[17px] px-[36px] pt-[58px] pr-[28px] pb-[181px] md:pr-[36px] md:pb-[84px]"
 					>
-						<div className="relative z-10 max-w-[1196px]">
+						<div className="3xl:max-w-[1196px] relative z-10 max-w-full xl:max-w-[800px] 2xl:max-w-[900px]">
 							<p
 								ref={ConnectionTextRef}
-								className="font-regular mb-[55px] translate-y-[50px] text-left text-[40px] leading-[1.3] text-white opacity-0"
+								className="font-regular 3xl:text-[40px] xs:text-[24px] mb-[55px] translate-y-[50px] text-left text-[20px] leading-[1.3] text-white opacity-0 xl:text-[28px] 2xl:text-[32px]"
 							>
 								{t(`pages.connectionBanner.text`)}
 							</p>
@@ -214,24 +214,30 @@ export default function Home() {
 								ref={ConnectionButtonRef}
 								className="translate-y-[50px] opacity-0"
 							>
-								<ButtonTree>{t('commands.join')}</ButtonTree>
+								<ButtonTree
+									className={[
+										'w-full before:bg-[url("/imgs/btn-mask-tree-yellow.svg")]! before:bg-blend-normal! md:w-auto md:before:bg-[url("/imgs/btn-mask-tree.svg")]! md:before:bg-blend-overlay!',
+									].join(' ')}
+								>
+									{t('commands.join')}
+								</ButtonTree>
 							</div>
 						</div>
 						<div
 							ref={ConnectionImageRef}
-							className="absolute top-0 right-0 bottom-0 translate-x-[-200px] opacity-0"
+							className="absolute right-0 -bottom-[65px] translate-x-[-200px] opacity-0 md:bottom-0"
 						>
 							<Image
 								src="/imgs/connection.png"
 								alt="Connection"
 								width={811}
 								height={414}
-								className="block h-[full] w-auto"
+								className="block h-[280px] w-auto lg:h-[414px]"
 							/>
 						</div>
 					</div>
 				</Container>
-			</section> */}
+			</section>
 		</>
 	)
 }

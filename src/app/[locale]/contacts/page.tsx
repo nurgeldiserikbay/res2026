@@ -34,11 +34,11 @@ function OrganizersSection({ t }: SectionProps) {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.organizers`)}
 			</h2>
-			<div className="flex items-start justify-between gap-5">
+			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div
 					ref={contactsRef}
 					className="translate-y-[50px] opacity-0"
@@ -76,7 +76,7 @@ function OrganizersSection({ t }: SectionProps) {
 				</div>
 				<div
 					ref={mapRef}
-					className="aspect-[4.2] max-w-[716px] grow translate-y-[50px] opacity-0"
+					className="aspect-[1.5] max-w-[716px] grow translate-y-[50px] opacity-0 lg:aspect-[4.2]"
 				>
 					<iframe
 						id="map_279913141"
@@ -102,17 +102,19 @@ function MeprSection({ t }: SectionProps) {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`pages.contacts.mepr`)}
 			</h2>
-			<div className="flex items-start justify-between gap-5">
+			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div
 					ref={contactsRef}
 					className="max-w-[545px] translate-y-[50px] opacity-0"
 				>
 					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.meprPosition`)}</h3>
-					<div className="text-text mb-[20px] text-[24px] leading-none font-normal">{t(`pages.contacts.meprName`)}</div>
+					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+						{t(`pages.contacts.meprName`)}
+					</div>
 					<Link
 						href="tel:+77015250876"
 						target="_blank"
@@ -145,7 +147,9 @@ function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCa
 			className="max-w-[374px] translate-y-[50px] opacity-0"
 		>
 			<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{title}</h3>
-			<div className="text-text mb-[20px] text-[24px] leading-none font-normal">{name}</div>
+			<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+				{name}
+			</div>
 			{email && (
 				<Link
 					href={`mailto:${email}`}
@@ -176,11 +180,11 @@ function ContactPersonsSection({ t }: SectionProps) {
 
 	return (
 		<>
-			<div className="flex items-start justify-between gap-5">
+			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div>
 					<h2
 						ref={titleRef}
-						className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+						className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 					>
 						{t(`titles.contactPersons`)}
 					</h2>
@@ -193,7 +197,9 @@ function ContactPersonsSection({ t }: SectionProps) {
 					/>
 				</div>
 				<div>
-					<h2 className="mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold text-transparent opacity-0">hidden title</h2>
+					<h2 className="mb-[30px] hidden translate-y-[50px] text-[32px] leading-none font-bold text-transparent opacity-0 lg:block">
+						hidden title
+					</h2>
 					<ContactPersonCard
 						title={t(`titles.registrationAndParticipation`)}
 						name={t(`titles.registrationAndParticipationName`)}
@@ -205,7 +211,7 @@ function ContactPersonsSection({ t }: SectionProps) {
 				<div>
 					<h2
 						ref={titleRef2}
-						className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+						className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 					>
 						{t(`titles.pressSecretary`)}
 					</h2>
@@ -236,11 +242,11 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.organizationQuestions`)}
 			</h2>
-			<div className="flex items-start justify-between gap-5">
+			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div
 					ref={block1Ref}
 					className="max-w-[709px] translate-y-[50px] opacity-0"
@@ -351,11 +357,11 @@ function ResponsibleMinistrySection({ t }: SectionProps) {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.responsibleMinistry`)}
 			</h2>
-			<div className="flex items-start justify-between gap-5">
+			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div
 					ref={infoRef}
 					className="max-w-[473px] translate-y-[50px] opacity-0"
@@ -381,7 +387,7 @@ function ResponsibleMinistrySection({ t }: SectionProps) {
 
 				<div
 					ref={logoRef}
-					className="text-text flex max-w-[806px] translate-y-[50px] items-center justify-center gap-[20px] text-[24px] leading-none font-normal opacity-0"
+					className="text-text 3xl:text-[24px] flex max-w-[806px] translate-y-[50px] items-center justify-center gap-[20px] text-[16px] leading-none font-normal opacity-0 lg:text-[18px] xl:text-[20px] 2xl:text-[22px]"
 				>
 					<Image
 						src="/imgs/kz-gerb.png"
@@ -412,11 +418,11 @@ function VenueSection({ t }: SectionProps) {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[32px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.venue`)}
 			</h2>
-			<div className="flex items-start justify-between gap-5">
+			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div
 					ref={linksRef}
 					className="max-w-[473px] translate-y-[50px] opacity-0"
@@ -448,7 +454,7 @@ function VenueSection({ t }: SectionProps) {
 
 				<div
 					ref={mapRef}
-					className="aspect-[4.2] max-w-[716px] grow translate-y-[50px] opacity-0"
+					className="aspect-[1.5] max-w-[716px] grow translate-y-[50px] opacity-0 lg:aspect-[4.2]"
 				>
 					<iframe
 						id="map_279913141"
@@ -485,12 +491,12 @@ export default function Page() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="bg-secondary h-[343px] pt-[176px]"
+				className="bg-secondary xs:h-[343px] xs:pt-[176px] h-[451px] pt-[284px]"
 			>
 				<Container className="relative z-10">
 					<h1
 						ref={TitleRef}
-						className="mb-[30px] translate-y-[50px] text-center text-[48px] leading-none font-bold text-white opacity-0"
+						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 					>
 						{t('titles.contacts')}
 					</h1>
@@ -503,7 +509,7 @@ export default function Page() {
 				</Container>
 			</section>
 
-			<section className="bg-white pt-[100px]">
+			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<OrganizersSection t={t} />

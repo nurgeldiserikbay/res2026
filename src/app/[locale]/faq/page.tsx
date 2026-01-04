@@ -67,12 +67,12 @@ export default function Page() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="bg-secondary h-[343px] pt-[176px]"
+				className="bg-secondary xs:h-[343px] xs:pt-[176px] h-[451px] pt-[284px]"
 			>
 				<Container className="relative z-10">
 					<h1
 						ref={TitleRef}
-						className="mb-[30px] translate-y-[50px] text-center text-[48px] leading-none font-bold text-white opacity-0"
+						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 					>
 						FAQ
 					</h1>
@@ -85,11 +85,11 @@ export default function Page() {
 				</Container>
 			</section>
 
-			<section className="bg-white pt-[100px]">
+			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container className="flex items-start justify-between gap-[30px]">
 					<div
 						ref={imageRef}
-						className="block max-w-[560px] translate-y-[50px] opacity-0"
+						className="hidden max-w-[560px] translate-y-[50px] opacity-0 md:block"
 					>
 						<Image
 							src="/imgs/faq.png"

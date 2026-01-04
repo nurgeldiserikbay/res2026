@@ -27,9 +27,9 @@ export function Accordion({ title, children, defaultOpen = false }: AccordionPro
 			{/* Header */}
 			<button
 				onClick={() => setOpen((v) => !v)}
-				className="text-text flex w-full cursor-pointer items-center justify-between text-left"
+				className="text-text flex w-full cursor-pointer items-center justify-between gap-[20px] text-left"
 			>
-				<span className="text-[20px] leading-none font-bold">{title}</span>
+				<span className="text-[18px] leading-none font-bold lg:text-[20px]">{title}</span>
 
 				<span className={clsx('transition-transform duration-300', open && 'rotate-45')}>
 					<IconCloseCircle className="text-secondary" />

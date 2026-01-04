@@ -28,19 +28,19 @@ function GalleryTabButton({ day, isActive, locale, onClick, delay }: GalleryTabB
 			ref={ref}
 			onClick={onClick}
 			className={[
-				'p-[26]',
-				'flex items-center justify-center gap-[10px]',
+				'p-[12px] md:p-[14px] lg:p-[18px] xl:p-[20px] 2xl:p-[26px]',
+				'box-border flex items-center justify-center gap-[10px]',
 				'rounded-[12px]',
 				'cursor-pointer',
 				'transition-all duration-300 ease-out',
-				'text-[24px] leading-none font-bold',
+				'text-[16px] leading-none font-bold md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]',
 				'translate-y-[50px] opacity-0',
 				// ACTIVE
 				isActive
 					? 'bg-primary-dark text-white'
 					: [
 							// 🔑 ГРАДИЕНТНЫЙ БОРДЕР
-							'text-muted border-muted border-2',
+							'text-muted hover:bg-primary-dark border-muted border hover:text-white',
 							'shadow-[-1px_0_0_0.5px_rgba(255,255,255,0.15),0_8px_24px_rgba(255,255,255,0.08)]',
 						].join(' '),
 			].join(' ')}
@@ -61,12 +61,21 @@ function GalleryItemWrapper({ item, locale, size, delay }: GalleryItemWrapperPro
 	const ref = useRef<HTMLAnchorElement>(null)
 	useAnimSlide(ref, { y: 50, delay })
 
+	// Map size classes for different breakpoints
+	const sizeClasses: Record<string, string> = {
+		'col-span-3': 'lg:col-span-3',
+		'col-span-4': 'lg:col-span-4',
+		'col-span-5': 'lg:col-span-5',
+	}
+
+	const responsiveSize = sizeClasses[size] || 'lg:col-span-4'
+
 	return (
 		<a
 			ref={ref}
 			data-fancybox="gallery"
 			href={item.image}
-			className={`${size} translate-y-[50px] opacity-0`}
+			className={`col-span-1 sm:col-span-1 ${responsiveSize} translate-y-[50px] opacity-0`}
 		>
 			<GalleryCard
 				src={item.image}
@@ -89,9 +98,9 @@ export function GallerySection({ locale = 'ru' }: { locale?: Locale }) {
 	if (!activeDay) return null
 
 	return (
-		<section className="bg-white py-[100px]">
+		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container>
-				<div className="mb-[50px] flex items-center justify-center gap-[27px]">
+				<div className="mb-[30px] flex flex-wrap items-center justify-center gap-[10px] md:mb-[40px] md:gap-[20px] lg:mb-[50px] lg:gap-[27px]">
 					{days.map((d, index) => (
 						<GalleryTabButton
 							key={d.key}
@@ -107,7 +116,7 @@ export function GallerySection({ locale = 'ru' }: { locale?: Locale }) {
 				{/* Grid */}
 				<div
 					id="gallery"
-					className="mx-auto grid auto-rows-[415px] grid-cols-12 gap-[60px]"
+					className="mx-auto grid auto-rows-[200px] grid-cols-1 gap-[20px] sm:auto-rows-[250px] sm:grid-cols-2 sm:gap-[30px] md:auto-rows-[300px] md:gap-[40px] lg:auto-rows-[350px] lg:grid-cols-12 lg:gap-[50px] xl:auto-rows-[415px] xl:gap-[60px]"
 				>
 					{activeDay.items.map((item, inx) => {
 						const size = sizes[inx % 9]
