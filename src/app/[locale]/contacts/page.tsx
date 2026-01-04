@@ -223,7 +223,14 @@ function ContactPersonsSection({ t }: SectionProps) {
 
 function OrganizationQuestionsSection({ t }: SectionProps) {
 	const titleRef = useRef<HTMLHeadingElement>(null)
+	const block1Ref = useRef<HTMLDivElement>(null)
+	const block2Ref = useRef<HTMLDivElement>(null)
+	const block3Ref = useRef<HTMLDivElement>(null)
+
 	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
+	useAnimSlide(block1Ref, { y: 50, delay: 0.2 })
+	useAnimSlide(block2Ref, { y: 50, delay: 0.25 })
+	useAnimSlide(block3Ref, { y: 50, delay: 0.3 })
 
 	return (
 		<>
@@ -234,7 +241,10 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 				{t(`titles.organizationQuestions`)}
 			</h2>
 			<div className="flex items-start justify-between gap-5">
-				<div className="max-w-[709px]">
+				<div
+					ref={block1Ref}
+					className="max-w-[709px] translate-y-[50px] opacity-0"
+				>
 					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`titles.internationalCenterForGreenTechnology`)}</h3>
 					<div className="text-text mb-[20px] text-[16px] leading-none font-normal">{t(`pages.contacts.rsvp`)}</div>
 					<Link
@@ -270,7 +280,10 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 						<span>gov.kz</span>
 					</Link>
 				</div>
-				<div className="max-w-[570px]">
+				<div
+					ref={block2Ref}
+					className="max-w-[570px] translate-y-[50px] opacity-0"
+				>
 					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.aydarName`)}</h3>
 					<div className="text-text mb-[20px] text-[16px] leading-none font-normal">{t(`pages.contacts.aydarPosition`)}</div>
 					<Link
@@ -298,7 +311,10 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 						<span>gov.kz</span>
 					</Link>
 				</div>
-				<div className="max-w-[194px]">
+				<div
+					ref={block3Ref}
+					className="max-w-[194px] translate-y-[50px] opacity-0"
+				>
 					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.communicationLine`)}</h3>
 					<Link
 						href={`tel:+77712886597`}

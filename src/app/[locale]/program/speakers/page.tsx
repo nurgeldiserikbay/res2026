@@ -46,10 +46,8 @@ export default function Page() {
 	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
 	const BreadcrumbsRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
-	const TabLinksRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(TabLinksRef, { y: 50, delay: 0.3 })
 	const PaginationRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(PaginationRef, { y: 50, delay: 0.4 })
+	useAnimSlide(PaginationRef, { y: 50, delay: 0.3 })
 
 	return (
 		<>

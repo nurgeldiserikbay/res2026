@@ -33,14 +33,12 @@ export function ProgrammsPage() {
 
 	// Refs for animations
 	const titleRef = useRef<HTMLHeadingElement>(null)
-	const textRef = useRef<HTMLDivElement>(null)
 	const aprilRef = useRef<HTMLDivElement>(null)
 	const datesContainerRef = useRef<HTMLDivElement>(null)
 	const programsContainerRef = useRef<HTMLDivElement>(null)
 
 	// Animations
 	useAnimSlide(titleRef, { x: -90, y: 0, delay: 0.1 })
-	useAnimSlide(textRef, { x: 90, y: 0, delay: 0.2 })
 
 	// Animation for "Апрель" and dates
 	useGSAP(
