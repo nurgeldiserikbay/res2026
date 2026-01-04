@@ -9,8 +9,8 @@ import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Accordion } from '@/shared/ui/Accordion/Accordion'
 import { Container } from '@/shared/ui/container/container'
-import { FAQ_MOCK } from '@/widgets/widgets/model'
-import { FaqBlockData } from '@/widgets/widgets/types'
+import { FAQ_MOCK } from '@/widgets/faqs/model'
+import { FaqBlockData } from '@/widgets/faqs/types'
 
 type FaqItemWrapperProps = {
 	item: FaqBlockData['items'][0]
@@ -41,6 +41,7 @@ export default function Page() {
 		fromPosition: 'center 70%',
 		toPosition: 'center center',
 		duration: 1.4,
+		bgImage: '/imgs/news-banner.png',
 	})
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
@@ -65,9 +66,10 @@ export default function Page() {
 		<>
 			<section
 				ref={BannerRef}
-				className="bg-secondary h-[343px] bg-[url('/imgs/news-banner.png')] bg-cover bg-center bg-no-repeat pt-[176px]"
+				data-animated-banner
+				className="bg-secondary h-[343px] pt-[176px]"
 			>
-				<Container>
+				<Container className="relative z-10">
 					<h1
 						ref={TitleRef}
 						className="mb-[30px] translate-y-[50px] text-center text-[48px] leading-none font-bold text-white opacity-0"

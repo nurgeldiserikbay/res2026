@@ -26,6 +26,7 @@ export default function Home() {
 		fromPosition: 'center 70%',
 		toPosition: 'center center',
 		duration: 1.4,
+		bgImage: '/imgs/home-banner-bg.png',
 	})
 	const RegionalRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(RegionalRef, { y: 90, delay: 0.1 })
@@ -56,6 +57,7 @@ export default function Home() {
 		fromPosition: 'center 60%',
 		toPosition: 'center center',
 		duration: 1.4,
+		bgImage: '/imgs/connection-banner.png',
 	})
 	const ConnectionTextRef = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(ConnectionTextRef, { y: 50, delay: 0.1 })
@@ -68,10 +70,11 @@ export default function Home() {
 		<>
 			<section
 				ref={BannerRef}
-				className="bg-primary-dark min-h-[945px] bg-[url('/imgs/home-banner-bg.png')] bg-cover bg-center bg-no-repeat pt-[132.5px]"
+				data-animated-banner
+				className="bg-primary-dark min-h-[812px] pt-[240px] pb-[64px] sm:pt-[132.5px] md:min-h-[945px]"
 			>
-				<Container className="flex flex-col items-center justify-center">
-					<h1 className="mb-[30px] w-full max-w-[790px] text-center text-[111px] leading-[0.96] font-bold text-white">
+				<Container className="relative z-10 flex flex-col items-center justify-center">
+					<h1 className="xs:text-[62px] 3xl:text-[111px] mb-[30px] w-full max-w-[790px] text-center text-[48px] leading-[0.96] font-bold text-white sm:text-[82px] xl:text-[98px]">
 						<div
 							ref={RegionalRef}
 							className="text-muted-light block translate-y-[-90px] transform opacity-0"
@@ -93,7 +96,7 @@ export default function Home() {
 					</h1>
 					<div
 						ref={BannerTextRef}
-						className="relative z-1 mb-[20px] max-w-[467px] translate-y-[-180px] transform text-center text-[40px] leading-[1.2] font-medium text-white opacity-0"
+						className="3xl:text-[40px] relative z-10 mb-[20px] max-w-[467px] translate-y-[-180px] transform text-center text-[32px] leading-[1.2] font-medium text-white opacity-0 md:text-[36px] xl:text-[38px]"
 					>
 						{'Shared vision for a Resilient Future'}
 					</div>
@@ -102,7 +105,7 @@ export default function Home() {
 						className="mb-[25.5px] flex translate-y-[-180px] transform items-center justify-center gap-[30px] opacity-0"
 					>
 						<div
-							className="align-top text-[96px] leading-none font-bold"
+							className="xs:text-[64px] align-top text-[44px] leading-none font-bold sm:text-[72px] md:text-[80px] xl:text-[96px]"
 							style={{
 								background: 'linear-gradient(to bottom, #E0EAB8 0%, rgba(212, 216, 195, 0) 95%)',
 								WebkitBackgroundClip: 'text',
@@ -113,7 +116,7 @@ export default function Home() {
 						>
 							22-24
 						</div>
-						<div className="text-[24px] leading-none font-light text-white">
+						<div className="xs:text-[20px] text-[16px] leading-none font-light text-white md:text-[22px] xl:text-[24px]">
 							<div className="opacity-40">апреля</div>
 							<div>Астана, Казахстан</div>
 						</div>
@@ -123,13 +126,13 @@ export default function Home() {
 				</Container>
 			</section>
 
-			<AboutSummit />
+			{/* <AboutSummit /> */}
 
-			<Programms />
+			{/* <Programms /> */}
 
 			<Speakers />
 
-			<section className="bg-horizontal-lines bg-white py-[100px]">
+			{/* <section className="bg-horizontal-lines bg-white py-[100px]">
 				<Container>
 					<div className="mb-[70px] flex items-center justify-between">
 						<h2
@@ -149,9 +152,9 @@ export default function Home() {
 
 					<NewsTab />
 				</Container>
-			</section>
+			</section> */}
 
-			<section className="bg-horizontal-lines bg-white pb-[100px]">
+			{/* <section className="bg-horizontal-lines bg-white pb-[100px]">
 				<Container className="flex items-start justify-between">
 					<div className="max-w-[560px] grow">
 						<h2
@@ -191,15 +194,16 @@ export default function Home() {
 						<PartnersList />
 					</div>
 				</Container>
-			</section>
+			</section> */}
 
-			<section className="bg-horizontal-lines bg-white">
+			{/* <section className="bg-horizontal-lines bg-white">
 				<Container>
 					<div
 						ref={ConnectionBannerRef}
-						className="relative rounded-[17px] bg-[url('/imgs/connection-banner.png')] bg-cover bg-center bg-no-repeat px-[36px] pt-[58px] pb-[84px]"
+						data-animated-banner
+						className="relative rounded-[17px] px-[36px] pt-[58px] pb-[84px]"
 					>
-						<div className="max-w-[1196px]">
+						<div className="relative z-10 max-w-[1196px]">
 							<p
 								ref={ConnectionTextRef}
 								className="font-regular mb-[55px] translate-y-[50px] text-left text-[40px] leading-[1.3] text-white opacity-0"
@@ -227,7 +231,7 @@ export default function Home() {
 						</div>
 					</div>
 				</Container>
-			</section>
+			</section> */}
 		</>
 	)
 }

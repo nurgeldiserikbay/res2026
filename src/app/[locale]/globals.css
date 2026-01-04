@@ -18,6 +18,13 @@
 	--color-muted-light: var(--color-muted-light);
 	--color-text: var(--color-text);
 	--color-white: var(--color-white);
+	--breakpoint-xs: 440px;
+	--breakpoint-sm: 640px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1536px;
+	--breakpoint-3xl: 1800px;
 }
 
 @layer utilities {
@@ -56,4 +63,26 @@ html {
 
 .visible-swiper .swiper {
 	overflow: visible !important;
+}
+
+/* Стили для анимированного баннера с псевдоэлементом */
+[data-animated-banner] {
+	position: relative;
+	overflow: hidden;
+}
+
+[data-animated-banner]::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: var(--bg-image);
+	background-size: cover;
+	background-position: var(--bg-position, center center);
+	background-repeat: no-repeat;
+	transform: scale(var(--bg-scale, 1));
+	transform-origin: center center;
+	z-index: 0;
 }

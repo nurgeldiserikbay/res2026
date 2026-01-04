@@ -38,11 +38,11 @@ export function LanguageSwitcher() {
 	return (
 		<div
 			ref={ref}
-			className="relative z-10 h-[58px] w-[87px]"
+			className="relative z-10 h-[42px] w-[79px] 2xl:h-[58px] 2xl:w-[87px]"
 		>
 			{/* ВНЕШНЯЯ ГРАДИЕНТ-РАМКА (она “удлиняется”) */}
 			<div
-				className={`absolute top-0 left-0 rounded-[8px] bg-linear-to-tr from-white/0 to-white/90 p-px transition-colors duration-200 ${open ? 'h-[174px]' : 'h-[58px]'}`}
+				className={`absolute top-0 left-0 w-full rounded-[8px] bg-linear-to-tr from-white/0 to-white/90 p-px transition-colors duration-200 ${open ? 'h-[126px] 2xl:h-[174px]' : 'h-[42px] 2xl:h-[58px]'}`}
 			>
 				<div
 					className={[
@@ -56,7 +56,7 @@ export function LanguageSwitcher() {
 					<button
 						type="button"
 						onClick={() => setOpen((v) => !v)}
-						className="box-border flex h-[58px] w-full cursor-pointer items-center justify-between gap-[10px] px-[16px] text-white"
+						className="box-border flex h-[42px] w-full cursor-pointer items-center justify-between gap-[10px] px-[8px] text-white 2xl:h-[58px] 2xl:px-[16px]"
 						aria-haspopup="listbox"
 						aria-expanded={open}
 					>
@@ -84,8 +84,8 @@ export function LanguageSwitcher() {
 											setOpen(false)
 										}}
 										className={[
-											'cursor-pointer',
-											'flex h-[58px] w-full items-center px-[16px] text-white/80',
+											'cursor-pointer rounded-[8px]',
+											'flex h-[42px] w-full items-center px-[8px] text-white/80 2xl:h-[58px] 2xl:px-[16px]',
 											'transition-colors duration-200',
 											'hover:bg-white/5 hover:text-white',
 										].join(' ')}

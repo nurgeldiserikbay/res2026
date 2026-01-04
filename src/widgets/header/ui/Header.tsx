@@ -7,6 +7,7 @@ import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 import { HeaderActions } from './HeaderActions'
+import { HeaderCta } from './HeaderCta'
 import { HeaderLogo } from './HeaderLogo'
 import { HeaderNav } from './HeaderNav'
 
@@ -39,7 +40,7 @@ export function Header() {
 					const delta = currentY - lastY
 
 					// фон при любом скролле
-					setScrolled(currentY > 0)
+					setScrolled(currentY > 100)
 
 					// небольшая "мертвая зона", чтобы не дергалось
 					if (Math.abs(delta) > 6) {
@@ -70,7 +71,7 @@ export function Header() {
 			<div
 				ref={headerContainerRef as React.RefObject<HTMLDivElement>}
 				className={[
-					'-translate-y-[90px] transform py-[18px] opacity-0',
+					'-translate-y-[90px] transform py-[30px] opacity-0 lg:py-[18px]',
 					scrolled || makeDark ? 'bg-primary-dark shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur' : 'bg-transparent',
 				].join(' ')}
 			>
@@ -80,10 +81,14 @@ export function Header() {
 				>
 					<HeaderLogo />
 
-					<div className="flex max-w-[1656px] flex-1 items-center justify-between gap-[10px]">
+					<div className="3xl:max-w-[1656px] flex max-w-[980px] flex-1 items-center justify-end gap-[10px] lg:justify-between xl:max-w-[1160px] 2xl:max-w-[1340px]">
 						<HeaderNav />
 						<HeaderActions />
 					</div>
+				</Container>
+
+				<Container className="mt-[20px] hidden max-[441px]:block">
+					<HeaderCta className="h-[58px]! w-full" />
 				</Container>
 			</div>
 		</header>

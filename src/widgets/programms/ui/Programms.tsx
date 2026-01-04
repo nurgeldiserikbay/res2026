@@ -151,28 +151,31 @@ export function Programms() {
 	)
 
 	return (
-		<section className="relative bg-[#2E8656] bg-linear-to-b from-[#589668] to-[#41754F] pt-[100px] pb-[140px] before:pointer-events-none before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:z-0 before:bg-black/20 before:bg-[url('/imgs/programms-bg.png')] before:bg-cover before:bg-center before:bg-no-repeat">
+		<section className="relative bg-[#2E8656] bg-linear-to-b from-[#589668] to-[#41754F] pt-[57px] pb-[85px] before:pointer-events-none before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:z-0 before:bg-black/20 before:bg-[url('/imgs/programms-bg.png')] before:bg-cover before:bg-center before:bg-no-repeat md:pt-[75px] md:pb-[85px] xl:pt-[100px] xl:pb-[140px]">
 			<Container>
-				<div className="mb-[70px] flex items-start justify-between">
+				<div className="mb-[30px] flex items-start justify-between gap-8 md:mb-[40px] xl:mb-[50px] 2xl:mb-[70px]">
 					<div className="max-w-[626px] grow">
 						<h2
 							ref={titleRef}
-							className="mb-[50px] translate-x-[-90px] text-[48px] leading-[1.2] font-bold text-white opacity-0"
+							className="mb-[30px] translate-x-[-90px] text-[32px] leading-[1.2] font-bold text-white opacity-0 md:text-[34px] lg:text-[38px] xl:mb-[50px] xl:text-[42px] 2xl:text-[48px]"
 						>
 							{t('pages.programms.title')}
 						</h2>
+						<div className="3xl:text-[24px] mb-[50px] max-w-[820px] grow text-left text-[20px] leading-normal text-white lg:hidden 2xl:text-[22px]">
+							{t('pages.programms.text')}
+						</div>
 
-						<div className="flex items-center justify-start gap-[40px]">
+						<div className="flex flex-wrap items-center justify-start gap-x-[40px] gap-y-[20px] sm:flex-nowrap">
 							<div
 								ref={aprilRef}
-								className="translate-x-[-90px] text-[24px] font-light text-white opacity-0"
+								className="translate-x-[-90px] text-[20px] font-light text-white opacity-0 lg:text-[22px] 2xl:text-[24px]"
 							>
-								{'Апрель'}
+								{t('titles.april')}
 							</div>
 
 							<div
 								ref={datesContainerRef}
-								className="flex items-center justify-between gap-[27px]"
+								className="flex items-center justify-between gap-[10px] md:gap-[27px]"
 							>
 								{programSchedule.map((program) => {
 									return (
@@ -180,7 +183,7 @@ export function Programms() {
 											key={program.id}
 											onClick={() => handleProgramClick(program.id)}
 											className={[
-												'h-[76px] w-[105px]',
+												'h-[72px] w-[85px] md:w-[105px] lg:h-[76px]',
 												'flex items-center justify-center gap-[10px]',
 												'rounded-[12px]',
 												'cursor-pointer',
@@ -192,7 +195,7 @@ export function Programms() {
 													? 'bg-primary-dark'
 													: [
 															// 🔑 ГРАДИЕНТНЫЙ БОРДЕР
-															'border border-transparent',
+															'hover:bg-primary-dark/50 border border-transparent',
 															'shadow-[-1px_0_0_0.5px_rgba(255,255,255,0.15),0_8px_24px_rgba(255,255,255,0.08)]',
 														].join(' '),
 											].join(' ')}
@@ -209,7 +212,7 @@ export function Programms() {
 
 					<div
 						ref={textRef}
-						className="max-w-[820px] grow translate-x-[90px] text-left text-[24px] leading-normal text-white opacity-0"
+						className="3xl:text-[24px] hidden max-w-[820px] grow translate-x-[90px] text-left text-[20px] leading-normal text-white opacity-0 lg:block 2xl:text-[22px]"
 					>
 						{t('pages.programms.text')}
 					</div>
@@ -217,7 +220,7 @@ export function Programms() {
 
 				<div
 					ref={programsContainerRef}
-					className="flex h-[674px] w-full flex-col items-stretch gap-[10px] overflow-y-auto py-1"
+					className="flex w-full flex-col items-stretch gap-[30px] overflow-y-auto py-1 md:gap-[10px]"
 				>
 					{program && program.programs?.length ? (
 						program.programs.map((programItem) => {
@@ -225,11 +228,11 @@ export function Programms() {
 								<div
 									key={programItem.id}
 									data-program-item
-									className="relative flex items-start justify-between gap-[20px]"
+									className="relative flex flex-wrap items-start justify-between gap-[20px] md:flex-nowrap"
 								>
 									<div
 										data-time
-										className="text-text h-[36px] w-[138px] translate-x-[-90px] rounded-[12px] bg-white py-[10px] text-center align-top text-[16px] leading-none opacity-0"
+										className="text-text h-[36px] w-[138px] shrink-0 translate-x-[-90px] rounded-[12px] bg-white py-[10px] text-center align-top text-[16px] leading-none opacity-0"
 									>
 										{programItem.time}
 									</div>
@@ -237,12 +240,14 @@ export function Programms() {
 									<div
 										data-block
 										className={[
-											'relative flex max-w-[1607px] grow items-center justify-between gap-[20px] rounded-[12px] px-[40px] py-[21px] shadow-[-1px_0_0_0.5px_rgba(255,255,255,0.15)]',
+											'xs:px-[40px] relative flex max-w-[1607px] grow flex-wrap items-center justify-between gap-x-[20px] gap-y-[10px] rounded-[12px] px-[20px] py-[21px] shadow-[-1px_0_0_0.5px_rgba(255,255,255,0.15)] md:flex-nowrap lg:flex-nowrap',
 											'translate-x-[-90px] opacity-0',
 										].join(' ')}
 									>
 										<div>
-											<h3 className="text-[32px] leading-none font-bold text-white">{programItem.title}</h3>
+											<h3 className="xs:text-[24px] text-[20px] leading-none font-bold text-white md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]">
+												{programItem.title}
+											</h3>
 											{programItem.points?.length && (
 												<ul className="mt-[10px] list-inside list-disc pl-2 text-[16px] leading-normal text-white">
 													{programItem.points?.map((point) => {

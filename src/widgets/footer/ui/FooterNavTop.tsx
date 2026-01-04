@@ -11,12 +11,15 @@ export function FooterNavTop() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="flex max-w-[789px] grow items-start justify-between gap-[10px]">
+		<nav className="flex max-w-[789px] grow flex-wrap items-start justify-between gap-x-[10px] gap-y-[36px] lg:flex-nowrap">
 			{headerNav
 				.filter((item) => item.main)
 				.map((item) => {
 					return (
-						<div key={item.key}>
+						<div
+							key={item.key}
+							className="sm:max-w-unset max-w-[150px]"
+						>
 							<p className="text-text mb-[30px] text-[14px] leading-none font-bold">{t(item.key)}</p>
 							<ul className="flex flex-col gap-[20px]">
 								{item.children?.map((child) => (

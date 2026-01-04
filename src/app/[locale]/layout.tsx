@@ -81,13 +81,13 @@ export default function RootLayout({
 			<body className={`${HelveticaNeue.className}`}>
 				<NextIntlClientProvider>
 					<GSAPProvider />
-					<div id="smooth-wrapper">
-						<div id="smooth-content">
-							<Header />
-							<main>{children}</main>
-							<Footer />
-						</div>
-					</div>
+					{/* <div id="smooth-wrapper">
+						<div id="smooth-content"> */}
+					<Header />
+					<main>{children}</main>
+					<Footer />
+					{/* </div>
+					</div> */}
 				</NextIntlClientProvider>
 			</body>
 		</html>

@@ -11,6 +11,7 @@ type BgAnimOptions = {
 	fromPosition?: string
 	toPosition?: string
 	trigger?: HTMLElement | string
+	bgImage?: string
 }
 
 export function useAnimBg(
@@ -23,6 +24,7 @@ export function useAnimBg(
 		fromPosition = 'center 60%',
 		toPosition = 'center center',
 		trigger = 'body',
+		bgImage,
 	}: BgAnimOptions = {},
 ) {
 	useGSAP(
@@ -30,16 +32,27 @@ export function useAnimBg(
 			const el = element?.current
 			if (!el) return
 
-			// начальное состояние
-			gsap.set(el, {
-				backgroundSize: fromSize,
-				backgroundPosition: fromPosition,
-			})
+			// Вычисляем scale на основе fromSize и toSize
+			const fromScale = parseFloat(fromSize) / 100
+			const toScale = parseFloat(toSize) / 100
 
-			// анимация
+			// Устанавливаем CSS переменные для псевдоэлемента
+			el.style.setProperty('--bg-scale-from', fromScale.toString())
+			el.style.setProperty('--bg-scale-to', toScale.toString())
+			el.style.setProperty('--bg-position-from', fromPosition)
+			el.style.setProperty('--bg-position-to', toPosition)
+			if (bgImage) {
+				el.style.setProperty('--bg-image', `url(${bgImage})`)
+			}
+
+			// Начальное состояние псевдоэлемента через CSS переменную
+			el.style.setProperty('--bg-scale', fromScale.toString())
+			el.style.setProperty('--bg-position', fromPosition)
+
+			// Анимация scale псевдоэлемента
 			gsap.to(el, {
-				backgroundSize: toSize,
-				backgroundPosition: toPosition,
+				'--bg-scale': toScale,
+				'--bg-position': toPosition,
 				duration,
 				delay,
 				ease: 'power2.out',

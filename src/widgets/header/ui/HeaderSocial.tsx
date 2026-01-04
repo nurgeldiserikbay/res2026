@@ -5,9 +5,9 @@ import { IconInstagram } from '@/shared/icons/IconInstagram'
 import { IconX } from '@/shared/icons/IconX'
 import { IconYouTube } from '@/shared/icons/IconYouTube'
 
-export function HeaderSocial() {
+export function HeaderSocial({ className }: { className?: string }) {
 	return (
-		<div className="flex max-w-[156px] grow items-center justify-between gap-[10px]">
+		<div className={['flex max-w-[156px] grow items-center justify-between gap-[10px]', className].join(' ')}>
 			<Link
 				href="https://www.facebook.com/profile.php?id=100063571767189"
 				target="_blank"

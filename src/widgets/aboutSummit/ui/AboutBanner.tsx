@@ -17,6 +17,7 @@ export function AboutBanner() {
 		fromPosition: 'center 70%',
 		toPosition: 'center center',
 		duration: 1.4,
+		bgImage: '/imgs/abount-banner.png',
 	})
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	useAnimSlide(TitleRef, { y: 90, delay: 0.1 })
@@ -30,9 +31,10 @@ export function AboutBanner() {
 	return (
 		<section
 			ref={BannerRef}
-			className="bg-primary-dark min-h-[895px] bg-[url('/imgs/abount-banner.png')] bg-cover bg-center bg-no-repeat pt-[268px] pb-[168px]"
+			data-animated-banner
+			className="bg-primary-dark min-h-[895px] pt-[268px] pb-[168px]"
 		>
-			<Container className="relative z-1 flex flex-col items-center justify-center">
+			<Container className="relative z-10 flex flex-col items-center justify-center">
 				<h1
 					ref={TitleRef}
 					className="mb-[40px] translate-y-[-90px] text-center text-[128px] leading-none font-bold text-white opacity-0"

@@ -208,16 +208,16 @@ export function Timer({ targetDate, animateOnMount = true }: TimerProps) {
 	return (
 		<div
 			ref={rootRef}
-			className="flex w-full max-w-[674px] items-center justify-between gap-[20px]"
+			className="xs:grid-cols-4 grid w-full max-w-[674px] grid-cols-2 gap-[20px]"
 		>
 			{items.map((it, index) => (
 				<div
 					key={it.label}
 					data-timer-item={index}
-					className="flex h-[136px] min-w-[131px] translate-y-[24px] transform flex-col items-center justify-between rounded-[12px] bg-[#ffffff08] p-[12px] text-center text-[20px] leading-[1.2] font-light text-white lowercase opacity-0 backdrop-blur-[3px]"
+					className="3xl:text-[24px] flex h-[93px] min-w-[78px] translate-y-[24px] transform flex-col items-center justify-between rounded-[12px] bg-[#ffffff08] p-[12px] text-center text-[16px] leading-[1.2] font-light text-white lowercase opacity-0 backdrop-blur-[3px] md:h-[136px] md:min-w-[131px] md:text-[18px] xl:text-[20px] 2xl:text-[22px]"
 				>
 					<div
-						className="mb-[10px] align-top text-[64px] leading-[1.2] font-bold tabular-nums"
+						className="3xl:text-[64px] xs:text-[32px] mb-[10px] align-top text-[28px] leading-[1.2] font-bold tabular-nums md:text-[40px] xl:text-[48px] 2xl:text-[56px]"
 						style={{
 							background: 'linear-gradient(to bottom, #FFFFFF 0%, #BACDA6 100%)',
 							WebkitBackgroundClip: 'text',

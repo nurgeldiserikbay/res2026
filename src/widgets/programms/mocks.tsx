@@ -2,9 +2,9 @@ import { ProgramDay } from './types'
 
 export const programSchedule: ProgramDay[] = [
 	{
-		id: 'day-20',
-		date: '2026-04-20',
-		label: '20 апреля',
+		id: 'day-22',
+		date: '2026-04-22',
+		label: '22 апреля',
 		programs: [
 			{
 				id: 'opening',
@@ -44,11 +44,10 @@ export const programSchedule: ProgramDay[] = [
 			},
 		],
 	},
-
 	{
-		id: 'day-21',
-		date: '2026-04-21',
-		label: '21 апреля',
+		id: 'day-23',
+		date: '2026-04-23',
+		label: '23 апреля',
 		programs: [
 			{
 				id: 'program-4',
@@ -66,16 +65,22 @@ export const programSchedule: ProgramDay[] = [
 	},
 
 	{
-		id: 'day-22',
-		date: '2026-04-22',
-		label: '22 апреля',
-		programs: [],
-	},
-
-	{
-		id: 'day-23',
-		date: '2026-04-23',
-		label: '23 апреля',
-		programs: [],
+		id: 'day-24',
+		date: '2026-04-24',
+		label: '24 апреля',
+		programs: [
+			{
+				id: 'program-4',
+				time: '10:00 – 11:30',
+				title: 'Программа 4: Искусственный интеллект и аналитика',
+				points: ['Практические кейсы применения AI', 'Обсуждение этики и регулирования ИИ'],
+			},
+			{
+				id: 'program-5',
+				time: '12:00 – 13:30',
+				title: 'Программа 5: Финтех и цифровые финансы',
+				points: ['Будущее цифровых валют', 'Платежные системы нового поколения'],
+			},
+		],
 	},
 ]

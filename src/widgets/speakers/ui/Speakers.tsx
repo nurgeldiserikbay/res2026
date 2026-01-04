@@ -11,6 +11,7 @@ import 'swiper/css'
 
 import { Speaker } from '@/entities/speaker/Speaker'
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
+import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
@@ -28,31 +29,15 @@ export function Speakers() {
 	const textWithButtonsRef = useRef<HTMLDivElement>(null)
 	const swiperRef = useRef<HTMLDivElement>(null)
 
-	// Animation for background size
-	useGSAP(
-		() => {
-			if (!sectionRef.current) return
-
-			// Set initial background size
-			gsap.set(sectionRef.current, {
-				backgroundSize: '140% 140%',
-			})
-
-			// Animate background size
-			gsap.to(sectionRef.current, {
-				backgroundSize: '100% 100%',
-				duration: 1.2,
-				delay: 0,
-				ease: 'power2.out',
-				scrollTrigger: {
-					trigger: sectionRef.current,
-					start: 'top 80%',
-					once: true,
-				},
-			})
-		},
-		{ scope: sectionRef },
-	)
+	// Animation for background banner
+	useAnimBg(sectionRef, {
+		fromSize: '140%',
+		toSize: '100%',
+		fromPosition: 'left center',
+		toPosition: 'left center',
+		duration: 1.2,
+		bgImage: '/imgs/map-bg.svg',
+	})
 
 	useAnimSlide(titleRef, { x: 90, y: 0, delay: 0.1 })
 	useAnimSlide(textWithButtonsRef, { x: 0, y: 90, delay: 0.2 })
@@ -87,13 +72,14 @@ export function Speakers() {
 	return (
 		<section
 			ref={sectionRef}
-			className="bg-secondary relative bg-[url(/imgs/map-bg.svg)] bg-center bg-no-repeat pt-[134px] pb-[120px] before:pointer-events-none before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:z-0 before:bg-[url('/imgs/points.png')] before:bg-cover before:bg-center before:bg-no-repeat"
+			data-animated-banner
+			className="bg-secondary relative overflow-hidden pt-[110px] pb-[57px] after:pointer-events-none after:absolute after:top-0 after:right-0 after:bottom-0 after:left-0 after:z-0 after:bg-[url('/imgs/points.png')] after:bg-cover after:bg-left after:bg-no-repeat md:pt-[120px] md:pb-[85px] lg:pb-[100px] 2xl:pt-[134px] 2xl:pb-[120px]"
 		>
 			<Container className="flex items-start justify-between gap-[30px]">
 				<div className="flex max-w-[578px] flex-col items-end justify-start">
 					<h2
 						ref={titleRef}
-						className="text-text mb-[66px] w-full translate-x-[90px] text-[96px] leading-none font-bold opacity-0"
+						className="text-text 3xl:text-[96px] mb-[30px] w-full translate-x-[90px] text-[32px] leading-none font-bold opacity-0 md:mb-[40px] md:text-[48px] lg:mb-[50px] lg:text-[64px] 2xl:mb-[66px] 2xl:text-[72px]"
 					>
 						{t('titles.speakers')}
 					</h2>
@@ -102,7 +88,9 @@ export function Speakers() {
 						ref={textWithButtonsRef}
 						className="max-w-[402px] translate-y-[90px] opacity-0"
 					>
-						<h4 className="text-text mb-[30px] text-left text-[24px] leading-normal font-bold">{t('pages.speakers.text')}</h4>
+						<h4 className="text-text mb-[30px] text-left text-[20px] leading-normal font-bold md:text-[22px] xl:text-[24px]">
+							{t('pages.speakers.text')}
+						</h4>
 						<p className="text-text mb-[30px] text-[16px] leading-normal">{t('pages.speakers.text1')}</p>
 
 						<div className="flex w-full items-start justify-between gap-[20px]">

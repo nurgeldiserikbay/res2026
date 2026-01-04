@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation'
 import { useEscape } from '@/shared/lib/hooks/useEscape'
 import { useOnClickOutside } from '@/shared/lib/hooks/useOnClickOutside'
 
-function isActive(pathname: string, href?: string) {
+export function isActive(pathname: string, href?: string) {
 	if (!href) return false
 	if (href === '/') return pathname === '/'
 	return pathname === href || pathname.startsWith(href + '/')
@@ -20,7 +20,7 @@ export function HeaderNav() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="flex max-w-[937px] grow items-center justify-between gap-[10px] text-[16px] text-white">
+		<nav className="3xl:max-w-[937px] hidden max-w-[600px] grow items-center justify-between gap-[10px] text-[12px] text-white lg:flex xl:max-w-[680px] xl:text-[14px] 2xl:max-w-[800px] 2xl:text-[16px]">
 			{headerNav.map((item) => {
 				const active = isActive(pathname, item.href)
 
@@ -127,7 +127,7 @@ function NavDropdown({ item, label, active, t }: { item: NavItem; label: string;
 				<div className={['absolute top-full left-1/2 z-1 min-w-[191px] -translate-x-1/2 transform'].join(' ')}>
 					<div
 						role="menu"
-						className={['relative', 'mt-[21px]', 'box-border rounded-[12px]'].join(' ')}
+						className={['bg-primary-dark relative', 'mt-[21px]', 'box-border rounded-[12px]'].join(' ')}
 						style={dropdownStyle}
 					>
 						<div className="absolute bottom-[-35%] left-1/2 h-[60%] w-[130%] -translate-x-1/2 rounded-full bg-black/70 blur-[18vw]"></div>
