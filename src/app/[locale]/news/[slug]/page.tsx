@@ -23,10 +23,10 @@ export default function Page() {
 				</Container>
 			</section>
 
-			<section className="bg-white pt-[100px]">
-				<Container className="flex items-start justify-between gap-[54px]">
+			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+				<Container className="flex flex-wrap items-start justify-between gap-[30px] lg:flex-nowrap lg:gap-[54px]">
 					<div className="max-w-[1332px] grow">
-						<h2 className="text-text mb-[50px] max-w-[1214px] text-[48px] leading-none font-normal">
+						<h2 className="text-text 3xl:text-[48px] mb-[50px] max-w-[1214px] text-[32px] leading-none font-normal xl:text-[36px] 2xl:text-[44px]">
 							<strong>Центральная Азия объединяет усилия</strong> для достижения глобальной цели климатического финансирования
 						</h2>
 						<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">26 декабря 2026</div>
@@ -40,7 +40,7 @@ export default function Page() {
 							className="mb-[50px] block aspect-[2.17] w-full rounded-[12px] object-cover"
 						/>
 
-						<p className="text-text mb-[60px] text-[24px] leading-normal font-normal">
+						<p className="text-text mb-[60px] text-[20px] leading-normal font-normal lg:text-[22px] 2xl:text-[24px]">
 							В Ашхабаде проводится 7-я Центрально-Азиатская конференция по вопросам изменения климата (ЦАКИК-2025). В рамках конференции 14
 							мая 2025 года Министерством экологии и природных ресурсов Казахстана совместно с Проектным офисом для Центральной Азии по
 							изменению климата и зеленой энергетики проведена третья региональная консультация по подготовке к Региональному климатическому
@@ -52,8 +52,10 @@ export default function Page() {
 						</p>
 					</div>
 
-					<div className="w-[405px]">
-						<h2 className="text-text mb-[50px] text-[48px] leading-none font-bold">{t('titles.otherNews')}</h2>
+					<div className="lg:w-[405px] lg:shrink-0">
+						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-none font-bold xl:mb-[50px] xl:text-[36px] 2xl:text-[44px]">
+							{t('titles.otherNews')}
+						</h2>
 
 						<div>
 							{newsPaginItems.slice(0, 5).map((item, index) => (

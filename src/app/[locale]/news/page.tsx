@@ -25,7 +25,7 @@ function NewsItemWrapper({ item, delay }: NewsItemWrapperProps) {
 	return (
 		<div
 			ref={ref}
-			className={`translate-y-[50px] opacity-0 ${item.wide ? 'col-span-2 row-span-1' : 'col-span-1 row-span-1'}`}
+			className={`translate-y-[50px] opacity-0 ${item.wide ? 'col-span-1 row-span-1 sm:col-span-2' : 'col-span-1 row-span-1'}`}
 		>
 			<NewsItem {...item} />
 		</div>
@@ -58,7 +58,7 @@ export default function Page() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="bg-secondary h-[343px] pt-[176px]"
+				className="bg-secondary xs:h-[343px] xs:pt-[176px] h-[451px] pt-[284px]"
 			>
 				<Container className="relative z-10">
 					<h1
@@ -76,7 +76,7 @@ export default function Page() {
 				</Container>
 			</section>
 
-			<section className="bg-white pt-[100px]">
+			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
 					<div
 						ref={TabLinksRef}
@@ -85,7 +85,7 @@ export default function Page() {
 						<NewsTabLinks />
 					</div>
 
-					<div className="grid grid-cols-4 gap-[60px]">
+					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
 						{newsPaginItems.map((item, index) => (
 							<NewsItemWrapper
 								key={index}
@@ -98,7 +98,7 @@ export default function Page() {
 
 					<div
 						ref={PaginationRef}
-						className="mt-[50px] flex translate-y-[50px] items-center justify-center opacity-0"
+						className="mt-[30px] flex translate-y-[50px] items-center justify-center opacity-0 xl:mt-[50px]"
 					>
 						<MainPagination totalPages={10} />
 					</div>

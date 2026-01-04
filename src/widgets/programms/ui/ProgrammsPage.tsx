@@ -159,26 +159,26 @@ export function ProgrammsPage() {
 	)
 
 	return (
-		<section className="relative bg-white pt-[100px]">
+		<section className="relative bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container>
 				<h2
 					ref={titleRef}
-					className="text-text mb-[50px] translate-x-[-90px] text-[48px] leading-[1.2] font-bold opacity-0"
+					className="text-text 3xl:text-[48px] mb-[30px] translate-x-[-90px] text-[32px] leading-[1.2] font-bold opacity-0 lg:mb-[50px] xl:text-[36px] 2xl:text-[44px]"
 				>
 					{t('pages.programms.title')}
 				</h2>
 
-				<div className="mb-[60px] flex items-center justify-start gap-[40px]">
+				<div className="mb-[60px] flex flex-wrap items-center justify-start gap-x-[40px] gap-y-[20px] sm:flex-nowrap">
 					<div
 						ref={aprilRef}
 						className="text-text translate-x-[-90px] text-[24px] font-light opacity-0"
 					>
-						{'Апрель'}
+						{t('titles.april')}
 					</div>
 
 					<div
 						ref={datesContainerRef}
-						className="flex items-center justify-between gap-[27px]"
+						className="flex items-center justify-between gap-[10px] md:gap-[27px]"
 					>
 						{programSchedule.map((program) => {
 							return (
@@ -186,7 +186,7 @@ export function ProgrammsPage() {
 									key={program.id}
 									onClick={() => handleProgramClick(program.id)}
 									className={[
-										'h-[76px] w-[105px]',
+										'h-[72px] w-[85px] md:w-[105px] lg:h-[76px]',
 										'flex items-center justify-center gap-[10px]',
 										'rounded-[12px]',
 										'cursor-pointer',
@@ -198,7 +198,7 @@ export function ProgrammsPage() {
 											? 'bg-primary-dark'
 											: [
 													// 🔑 ГРАДИЕНТНЫЙ БОРДЕР
-													'border-muted border',
+													'border-muted hover:bg-primary-dark border',
 													'shadow-[-1px_0_0_0.5px_rgba(255,255,255,0.15),0_8px_24px_rgba(255,255,255,0.08)]',
 												].join(' '),
 									].join(' ')}
@@ -214,7 +214,7 @@ export function ProgrammsPage() {
 
 				<div
 					ref={programsContainerRef}
-					className="flex max-h-[1000px] w-full flex-col items-stretch gap-[10px] overflow-y-auto py-1"
+					className="flex w-full flex-col items-stretch gap-[30px] overflow-y-auto py-1 md:gap-[10px]"
 				>
 					{program && program.programs?.length ? (
 						program.programs.map((programItem) => {
@@ -222,11 +222,11 @@ export function ProgrammsPage() {
 								<div
 									key={programItem.id}
 									data-program-item
-									className="relative flex items-start justify-between gap-[20px]"
+									className="relative flex flex-wrap items-start justify-between gap-[20px] md:flex-nowrap"
 								>
 									<div
 										data-time
-										className="text-text bg-muted h-[36px] w-[138px] translate-x-[-90px] rounded-[12px] py-[10px] text-center align-top text-[16px] leading-none opacity-0"
+										className="text-text bg-muted-light h-[36px] w-[138px] shrink-0 translate-x-[-90px] rounded-[12px] py-[10px] text-center align-top text-[16px] leading-none opacity-0"
 									>
 										{programItem.time}
 									</div>
@@ -235,15 +235,15 @@ export function ProgrammsPage() {
 										data-block
 										className={[
 											`bg-primary-dark bg-[url('/imgs/programms-mask.png')] bg-cover bg-center bg-no-repeat`,
-											'relative flex max-w-[1607px] grow items-center justify-between gap-[20px] rounded-[12px] px-[40px] py-[37px]',
+											'xs:px-[40px] relative flex max-w-[1607px] grow flex-wrap items-center justify-between gap-x-[20px] gap-y-[10px] rounded-[12px] px-[20px] py-[21px] md:flex-nowrap md:px-[40px] md:py-[37px] lg:flex-nowrap',
 											'translate-x-[-90px] opacity-0',
 										].join(' ')}
 									>
 										<div>
-											<h3 className="flex items-center justify-center gap-[10px] text-[32px] leading-none font-bold text-white">
+											<h3 className="xs:text-[24px] flex items-center justify-start gap-[10px] text-[20px] leading-none font-bold text-white md:justify-center md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]">
 												{programItem.title}{' '}
 												<button onClick={() => handleSelectedProgramItemClick(programItem.id)}>
-													<IconArrowRight className="text-muted size-[32px]" />
+													<IconArrowRight className="text-muted size-[24px] md:size-[28px] lg:size-[32px]" />
 												</button>
 											</h3>
 											{programItem.points?.length && (

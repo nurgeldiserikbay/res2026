@@ -485,12 +485,12 @@ export default function Page() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="bg-secondary h-[343px] pt-[176px]"
+				className="bg-secondary xs:h-[343px] xs:pt-[176px] h-[451px] pt-[284px]"
 			>
 				<Container className="relative z-10">
 					<h1
 						ref={TitleRef}
-						className="mb-[30px] translate-y-[50px] text-center text-[48px] leading-none font-bold text-white opacity-0"
+						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 					>
 						{t('titles.contacts')}
 					</h1>
@@ -503,7 +503,7 @@ export default function Page() {
 				</Container>
 			</section>
 
-			<section className="bg-white pt-[100px]">
+			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<OrganizersSection t={t} />
