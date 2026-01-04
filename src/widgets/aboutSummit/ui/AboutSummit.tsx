@@ -31,24 +31,24 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitImg4Ref, { y: 90, delay: 0.4 })
 
 	return (
-		<section className="bg-white py-[100px]">
-			<Container className="flex items-start justify-between gap-[30px]">
-				<div className="max-w-[655px] grow">
+		<section className="3xl:py-[100px] overflow-hidden bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
+			<Container className="flex flex-wrap-reverse items-start justify-between gap-[30px] overflow-hidden xl:flex-nowrap">
+				<div className="grow xl:max-w-[721px]">
 					<div
 						ref={AboutSummitRef}
-						className="font-regular text-text mb-[62px] -translate-x-90 text-[24px] leading-[1.2] opacity-0"
+						className="font-regular text-text mb-[62px] hidden -translate-x-90 text-[24px] leading-[1.2] opacity-0 xl:block"
 					>
 						{t(`titles.aboutSummit`)}
 					</div>
 
-					<div className="flex items-start justify-between gap-[5px]">
+					<div className="xs:flex-row mb-[22px] flex max-w-[655px] flex-col items-start justify-between gap-[5px]">
 						<Image
 							ref={AboutSummitImg1Ref}
 							src="/imgs/about-img-1.png"
 							alt="About Summit"
 							width={351}
-							height={571}
-							className="block max-w-[351px] translate-y-90 rounded-[12px] opacity-0"
+							height={377}
+							className="ax-w-full block translate-y-90 rounded-[12px] opacity-0 sm:max-w-[351px]"
 						/>
 						<div className="flex flex-col items-center justify-between">
 							<Image
@@ -56,8 +56,8 @@ export function AboutSummit() {
 								src="/imgs/about-img-2.png"
 								alt="About Summit 2"
 								width={299}
-								height={238}
-								className="mb-[56px] block max-w-[299px] translate-y-[120px] rounded-[12px] opacity-0"
+								height={181}
+								className="mb-[24px] block max-w-full translate-y-[120px] rounded-[12px] opacity-0 sm:max-w-[299px]"
 							/>
 							<div
 								ref={AboutSummitImg3Ref}
@@ -87,46 +87,68 @@ export function AboutSummit() {
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div className="flex max-w-[1025px] grow flex-col justify-start">
-					<div
-						ref={AboutSummitTitleRef}
-						className="font-regular mb-[70px] max-w-[940px] translate-x-90 self-end text-[48px] leading-[1.2] opacity-0"
-					>
-						{t.rich('pages.aboutSummit.title', {
-							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
-							secondary: (chunks) => <span className="text-secondary font-bold">{chunks}</span>,
-						})}
-					</div>
-
-					<div className="seld-start relative max-w-[721px]">
-						<p
-							ref={AboutSummitText1Ref}
-							className="font-regular text-text mb-[60px] translate-y-90 text-left text-[24px] leading-normal opacity-0"
-						>
-							{t(`pages.aboutSummit.text1`)}
-						</p>
-						<p
-							ref={AboutSummitText2Ref}
-							className="font-regular text-text mb-[60px] translate-y-90 text-left text-[16px] leading-normal opacity-0"
-						>
-							{t(`pages.aboutSummit.text2`)}
+					<div className="mb-[60px]">
+						<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.presidentInitiative`)}</h3>
+						<p className="text-text mb-[55px] text-[16px] leading-normal font-normal whitespace-pre-line">
+							{t(`pages.about.presidentInitiativeText`)}
 						</p>
 						<ButtonDefault
 							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
 							className="translate-y-90 opacity-0"
 						>
-							{t('labels.more')}
+							{t('pages.about.moreAboutSummit')}
 						</ButtonDefault>
+					</div>
+				</div>
+
+				<div className="flex grow flex-col justify-start xl:max-w-[1025px]">
+					<div className="font-regular text-text mb-[30px] block text-[24px] leading-[1.2] xl:hidden">{t(`titles.aboutSummit`)}</div>
+					<div
+						ref={AboutSummitTitleRef}
+						className="font-regular 3xl:text-[48px] mb-[31px] translate-x-90 self-end text-[24px] leading-[1.2] opacity-0 md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
+					>
+						{t.rich('pages.aboutSummit.title', {
+							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
+							secondary: (chunks) => <span className="text-text font-bold">{chunks}</span>,
+						})}
+					</div>
+					<p
+						ref={AboutSummitText1Ref}
+						className="font-regular text-text mb-[60px] translate-y-90 text-left text-[16px] leading-normal opacity-0"
+					>
+						{t(`pages.aboutSummit.text1`)}
+					</p>
+
+					<div className="seld-start relative mb-[54px] rounded-[12px] bg-[#FBFFE9] p-[26px] md:pt-[65px] md:pl-[97px]">
+						<div className="text-muted absolute top-[26px] left-[26px] hidden text-[128px] leading-none md:block">”</div>
+						<div className="font-regular relative z-1 mb-[50px] text-[16px] leading-normal whitespace-pre-line text-black">
+							{t('pages.about.presidentText')}
+						</div>
+
+						<div className="relative z-1 flex flex-wrap items-center gap-[30px] sm:flex-nowrap">
+							<Image
+								src="/imgs/president.png"
+								alt="About President"
+								width={122}
+								height={122}
+								className="block max-w-[122px] rounded-full"
+							/>
+							<div className="text-primary max-w-[311px] text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
+						</div>
 						<Image
 							ref={AboutSummitMapRef}
-							className="absolute top-0 left-full block min-h-[435px] min-w-[1014px] translate-x-90 opacity-0"
+							className="absolute top-[55%] left-[65%] block min-h-[435px] min-w-[1014px] translate-x-90 opacity-0"
 							src="/imgs/kz-map.svg"
 							alt="KZ Map"
 							width={1014}
 							height={435}
 						/>
+					</div>
+
+					<div>
+						<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.purpose`)}</h3>
+						<p className="font-regular text-text text-left text-[16px] leading-normal">{t(`pages.about.text3`)}</p>
 					</div>
 				</div>
 			</Container>

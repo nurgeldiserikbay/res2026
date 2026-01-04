@@ -9,7 +9,7 @@ import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonTree } from '@/shared/ui/button/ButtonTree'
 import { Container } from '@/shared/ui/container/container'
-// import { AboutSummit } from '@/widgets/aboutSummit/ui/AboutSummit'
+import { AboutSummit } from '@/widgets/aboutSummit/ui/AboutSummit'
 import { NewsTab } from '@/widgets/news/ui/NewsTab'
 import { PartnersList } from '@/widgets/partners/ui/PartnersList'
 import { Programms } from '@/widgets/programms/ui/Programms'
@@ -126,7 +126,7 @@ export default function Home() {
 				</Container>
 			</section>
 
-			{/* <AboutSummit /> */}
+			<AboutSummit />
 
 			<Programms />
 
