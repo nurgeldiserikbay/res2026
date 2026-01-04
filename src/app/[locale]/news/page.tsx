@@ -63,7 +63,7 @@ export default function Page() {
 				<Container className="relative z-10">
 					<h1
 						ref={TitleRef}
-						className="mb-[30px] translate-y-[50px] text-center text-[48px] leading-none font-bold text-white opacity-0"
+						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 					>
 						{t('titles.news')}
 					</h1>

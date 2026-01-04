@@ -35,7 +35,7 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 				alt={item.title}
 				width={item.width}
 				height={item.height}
-				className="block h-[122px] w-auto"
+				className="block h-[85px] w-auto xl:h-[122px]"
 			/>
 		</Link>
 	)
@@ -122,14 +122,14 @@ export function PartnersList() {
 
 	return (
 		<div className="flex items-start justify-between gap-[30px]">
-			<div>
+			<div className="shrink-0">
 				{partners.map((partner, groupIndex) => (
 					<div
 						key={partner.title}
-						className="mb-[70px] last:mb-0"
+						className="mb-[30px] last:mb-0 xl:mb-[50px] 2xl:mb-[70px]"
 					>
 						<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${partner.title}`}</h2>
-						<div className="flex items-center justify-start gap-[60px]">
+						<div className="xs:gap-[30px] xs:flex-row xs:items-center flex flex-col items-start justify-start gap-[10px] lg:gap-[60px]">
 							{partner.list.map((item, itemIndex) => (
 								<PartnerItemComponent
 									key={item.id}
@@ -146,6 +146,7 @@ export function PartnersList() {
 				alt="Partners list"
 				width={447}
 				height={720}
+				className="hidden md:block"
 			/>
 		</div>
 	)

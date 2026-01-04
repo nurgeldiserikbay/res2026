@@ -82,7 +82,7 @@ export function NewsTab() {
 
 	return (
 		<div>
-			<div className="mb-[50px] flex gap-[30px]">
+			<div className="mb-[30px] flex gap-[30px] md:mb-[40px] lg:mb-[50px]">
 				{newsTabs.map((tab, index) => (
 					<TabButton
 						key={tab.id}
@@ -94,7 +94,7 @@ export function NewsTab() {
 				))}
 			</div>
 
-			<div className="grid grid-cols-4 gap-[60px]">
+			<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
 				{newsItems.map((item, index) => (
 					<NewsItemWrapper
 						key={index}
