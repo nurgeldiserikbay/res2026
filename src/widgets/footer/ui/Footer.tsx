@@ -50,8 +50,8 @@ export function Footer() {
 						className="h-full w-full rounded-[12px]"
 					></iframe>
 				</div>
-				<div className="max-w-[1019px] grow">
-					<div className="mb-[112px] flex max-w-[923px] items-start justify-between">
+				<div className="max-w-[1024px] grow">
+					<div className="mb-[68px] flex max-w-[923px] items-start justify-between">
 						<div
 							ref={FooterLogoRef}
 							className="translate-y-[50px] opacity-0"
@@ -61,28 +61,13 @@ export function Footer() {
 
 						<div
 							ref={FooterNavTopRef}
-							className="translate-y-[50px] opacity-0"
+							className="max-w-[789px] grow translate-y-[50px] opacity-0"
 						>
 							<FooterNavTop />
 						</div>
 					</div>
 
-					<div className="flex items-stretch justify-between">
-						<div className="max-w-[247px]">
-							<div
-								ref={FooterText1Ref}
-								className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0"
-							>
-								{t(`pages.footer.text`)}
-							</div>
-							<div
-								ref={FooterText2Ref}
-								className="text-text translate-y-[50px] text-[32px] leading-[1.2] font-bold opacity-0"
-							>
-								{t(`pages.footer.text1`)}
-							</div>
-						</div>
-
+					<div className="mb-[68px] flex w-full items-stretch justify-between">
 						<div className="flex flex-col items-start justify-between">
 							<div
 								ref={FooterContactsRef}
@@ -103,23 +88,42 @@ export function Footer() {
 									<span>+7 708 026 88 66</span>
 								</Link>
 							</div>
-
-							<div
-								ref={FooterSocialRef}
-								className="translate-y-[50px] opacity-0"
-							>
-								<FooterSocial />
-							</div>
 						</div>
 
-						<div className="flex max-w-[367px] grow flex-col items-start justify-between">
+						<div className="flex">
 							<div
 								ref={FooterNavBottomRef}
 								className="translate-y-[50px] opacity-0"
 							>
 								<FooterNavBottom />
 							</div>
+						</div>
+					</div>
 
+					<div className="flex items-end justify-between gap-[60px]">
+						<div className="max-w-[247px]">
+							<div
+								ref={FooterText1Ref}
+								className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0"
+							>
+								{t(`pages.footer.text`)}
+							</div>
+							<div
+								ref={FooterText2Ref}
+								className="text-text translate-y-[50px] text-[16px] leading-[1.2] font-bold opacity-0"
+							>
+								{t(`pages.footer.text1`)}
+							</div>
+						</div>
+
+						<div
+							ref={FooterSocialRef}
+							className="grow translate-y-[50px] opacity-0"
+						>
+							<FooterSocial />
+						</div>
+
+						<div className="flex max-w-[367px] grow flex-col items-start justify-between">
 							<p
 								ref={FooterCopyrightRef}
 								className="text-text w-full translate-y-[50px] text-right text-[11px] leading-[1.2] font-light opacity-0"

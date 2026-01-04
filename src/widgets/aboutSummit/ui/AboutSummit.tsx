@@ -76,7 +76,7 @@ export function AboutSummit() {
 								ref={AboutSummitImg4Ref}
 								className="font-regular text-secondary max-w-[197px] translate-y-90 text-left text-[16px] leading-[1.2] opacity-0"
 							>
-								<div className="mb-[15px] max-w-[170px]">\\{t('titles.strategicPartner')}</div>
+								<div className="mb-[15px] max-w-[170px]">\\{t('titles.strategicMediaPartner')}</div>
 								<Image
 									src="/imgs/cnn-color.svg"
 									width={102}

@@ -93,9 +93,9 @@ export default function Home() {
 					</h1>
 					<div
 						ref={BannerTextRef}
-						className="relative z-1 mb-[20px] max-w-[586px] translate-y-[-180px] transform text-center text-[40px] leading-[1.2] font-medium text-white opacity-0 before:absolute before:top-1/2 before:left-1/2 before:w-full before:-translate-x-1/2 before:-translate-y-1/2 before:transform before:text-center before:text-[47px] before:leading-[1.2] before:font-medium before:text-[#ffffff]/10 before:content-['Shared_Vision_For_Resilient_Future_in_Central_Asia']"
+						className="relative z-1 mb-[20px] max-w-[467px] translate-y-[-180px] transform text-center text-[40px] leading-[1.2] font-medium text-white opacity-0"
 					>
-						{'Shared Vision For Resilient Future in Central Asia'}
+						{'Shared vision for a Resilient Future'}
 					</div>
 					<div
 						ref={BannerDateRef}
@@ -111,7 +111,7 @@ export default function Home() {
 								color: 'transparent',
 							}}
 						>
-							20-23
+							22-24
 						</div>
 						<div className="text-[24px] leading-none font-light text-white">
 							<div className="opacity-40">апреля</div>
@@ -153,7 +153,7 @@ export default function Home() {
 
 			<section className="bg-horizontal-lines bg-white pb-[100px]">
 				<Container className="flex items-start justify-between">
-					<div className="max-w-[402px] grow">
+					<div className="max-w-[560px] grow">
 						<h2
 							ref={PartnersTitleRef}
 							className="text-text mb-[70px] max-w-[376px] translate-x-[-90px] text-[48px] leading-none font-bold opacity-0"
@@ -180,14 +180,14 @@ export default function Home() {
 							<Image
 								src="/imgs/partners-banner.png"
 								alt="Partners"
-								width={402}
-								height={191}
+								width={560}
+								height={297}
 								className="block"
 							/>
 						</div>
 					</div>
 
-					<div className="max-w-[1180px] grow">
+					<div className="max-w-[1024px] grow">
 						<PartnersList />
 					</div>
 				</Container>

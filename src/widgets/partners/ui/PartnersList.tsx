@@ -53,32 +53,32 @@ const partners: PartnerGroup[] = [
 				width: 250,
 				height: 122,
 			},
+			{
+				id: 1,
+				image: '/imgs/partner-2.png',
+				title: 'Partner 2',
+				link: '/partner-2',
+				width: 250,
+				height: 122,
+			},
 		],
 	},
 	{
 		title: 'При поддержке',
 		list: [
 			{
-				id: 0,
-				image: '/imgs/partner-2.png',
-				title: 'Partner 2',
-				link: '/partner-1',
-				width: 250,
-				height: 122,
-			},
-			{
-				id: 1,
+				id: 2,
 				image: '/imgs/partner-3.png',
 				title: 'Partner 3',
-				link: '/partner-2',
+				link: '/partner-3',
 				width: 250,
 				height: 122,
 			},
 			{
-				id: 2,
+				id: 3,
 				image: '/imgs/partner-4.png',
 				title: 'Partner 4',
-				link: '/partner-3',
+				link: '/partner-4',
 				width: 250,
 				height: 122,
 			},
@@ -88,19 +88,19 @@ const partners: PartnerGroup[] = [
 		title: 'Партнеры',
 		list: [
 			{
-				id: 0,
+				id: 4,
 				image: '/imgs/partner-5.png',
 				title: 'Partner 5',
-				link: '/partner-1',
-				width: 143,
+				link: '/partner-5',
+				width: 250,
 				height: 122,
 			},
 			{
-				id: 1,
+				id: 5,
 				image: '/imgs/partner-6.png',
 				title: 'Partner 6',
-				link: '/partner-2',
-				width: 143,
+				link: '/partner-6',
+				width: 250,
 				height: 122,
 			},
 		],
@@ -121,24 +121,32 @@ export function PartnersList() {
 	}, [])
 
 	return (
-		<div>
-			{partners.map((partner, groupIndex) => (
-				<div
-					key={partner.title}
-					className="mb-[70px] last:mb-0"
-				>
-					<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${partner.title}`}</h2>
-					<div className="flex items-center justify-start gap-[60px]">
-						{partner.list.map((item, itemIndex) => (
-							<PartnerItemComponent
-								key={item.id}
-								item={item}
-								delay={delays[groupIndex][itemIndex]}
-							/>
-						))}
+		<div className="flex items-start justify-between gap-[30px]">
+			<div>
+				{partners.map((partner, groupIndex) => (
+					<div
+						key={partner.title}
+						className="mb-[70px] last:mb-0"
+					>
+						<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${partner.title}`}</h2>
+						<div className="flex items-center justify-start gap-[60px]">
+							{partner.list.map((item, itemIndex) => (
+								<PartnerItemComponent
+									key={item.id}
+									item={item}
+									delay={delays[groupIndex][itemIndex]}
+								/>
+							))}
+						</div>
 					</div>
-				</div>
-			))}
+				))}
+			</div>
+			<Image
+				src="/imgs/partner-banner.png"
+				alt="Partners list"
+				width={447}
+				height={720}
+			/>
 		</div>
 	)
 }

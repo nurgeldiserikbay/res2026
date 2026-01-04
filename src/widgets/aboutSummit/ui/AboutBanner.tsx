@@ -41,7 +41,7 @@ export function AboutBanner() {
 				</h1>
 				<h2
 					ref={SubtitleRef}
-					className="mb-[40px] translate-y-[-90px] text-center text-[48px] leading-[0.85] font-bold text-white opacity-0"
+					className="mb-[40px] translate-y-[-90px] text-center text-[48px] leading-none font-bold text-white opacity-0"
 				>
 					<span className="text-muted-light">Regional</span> <br /> Ecological <br /> Summit 2026
 				</h2>
@@ -56,7 +56,7 @@ export function AboutBanner() {
 						color: 'transparent',
 					}}
 				>
-					20-23
+					22-24
 				</div>
 				<p
 					ref={MonthRef}
