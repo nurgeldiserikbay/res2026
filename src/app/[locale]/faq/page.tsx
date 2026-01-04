@@ -89,7 +89,7 @@ export default function Page() {
 				<Container className="flex items-start justify-between gap-[30px]">
 					<div
 						ref={imageRef}
-						className="block max-w-[560px] translate-y-[50px] opacity-0"
+						className="hidden max-w-[560px] translate-y-[50px] opacity-0 md:block"
 					>
 						<Image
 							src="/imgs/faq.png"

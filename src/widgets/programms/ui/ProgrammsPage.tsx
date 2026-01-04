@@ -394,23 +394,25 @@ export function ProgrammsPageModal({ open, onClose }: { open: boolean; onClose: 
 		<ModalShell
 			open={open}
 			onClose={onClose}
-			maxWidthClassName="max-w-[960px]"
-			panelClassName="rounded-[12px] pt-[44px] pb-[221px] px-[78px] bg-primary-dark bg-[url('/imgs/modal-bg.png')] bg-cover bg-center bg-no-repeat"
+			maxWidthClassName="max-w-[calc(100%-32px)] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[960px]"
+			panelClassName="rounded-[12px] pt-[24px] pb-[50px] px-[16px] md:pt-[32px] md:pb-[100px] md:px-[40px] lg:pt-[44px] lg:pb-[150px] lg:px-[60px] xl:pb-[221px] xl:px-[78px] bg-primary-dark bg-[url('/imgs/modal-bg.png')] bg-cover bg-center bg-no-repeat"
 		>
 			<div>
 				<button
 					onClick={onClose}
-					className="mb-[48px]"
+					className="mb-[24px] md:mb-[32px] lg:mb-[48px]"
 				>
-					<IconClose className="size-[24px] text-white" />
+					<IconClose className="size-[20px] text-white md:size-[22px] lg:size-[24px]" />
 				</button>
 
-				<h2 className="mb-[20px] text-[48px] leading-[1.2] font-bold text-white">{ceremonyModalData.title.ru}</h2>
+				<h2 className="mb-[16px] text-[24px] leading-[1.2] font-bold text-white md:mb-[18px] md:text-[32px] lg:mb-[20px] lg:text-[40px] xl:text-[48px]">
+					{ceremonyModalData.title.ru}
+				</h2>
 
-				<p className="mb-[10px] text-[16px] leading-[1.2] font-normal text-white/30">
+				<p className="mb-[8px] text-[14px] leading-[1.2] font-normal text-white/30 md:mb-[10px] md:text-[16px]">
 					{ceremonyModalData.meta.dateLabel.ru + ' ' + ceremonyModalData.meta.dateValue.ru}
 				</p>
-				<p className="mb-[30px] text-[16px] leading-[1.2] font-normal text-white/30">
+				<p className="mb-[20px] text-[14px] leading-[1.2] font-normal text-white/30 md:mb-[24px] md:text-[16px] lg:mb-[30px]">
 					{ceremonyModalData.meta.placeLabel.ru + ' ' + ceremonyModalData.meta.placeValue.ru}
 				</p>
 
@@ -419,27 +421,33 @@ export function ProgrammsPageModal({ open, onClose }: { open: boolean; onClose: 
 					alt={ceremonyModalData.cover.alt.ru}
 					width={960}
 					height={540}
-					className="mb-[30px] block w-full rounded-[12px]"
+					className="mb-[20px] block w-full rounded-[12px] md:mb-[24px] lg:mb-[30px]"
 				/>
 
-				<p className="mb-[30px] text-[16px] leading-normal font-normal text-white">{ceremonyModalData.about.ru}</p>
+				<p className="mb-[20px] text-[14px] leading-normal font-normal text-white md:mb-[24px] md:text-[16px] lg:mb-[30px]">
+					{ceremonyModalData.about.ru}
+				</p>
 
 				<div>
-					<h3 className="mb-[20px] text-[24px] leading-[1.2] font-bold text-white">{ceremonyModalData.programTitle.ru}</h3>
+					<h3 className="mb-[16px] text-[18px] leading-[1.2] font-bold text-white md:mb-[18px] md:text-[20px] lg:mb-[20px] lg:text-[24px]">
+						{ceremonyModalData.programTitle.ru}
+					</h3>
 					{ceremonyModalData.program.map((item) => {
 						return (
 							<div
 								key={item.time}
-								className="mb-[30px] border-b border-white/10 pb-[30px] text-[16px] leading-[1.2] font-normal text-white"
+								className="mb-[20px] border-b border-white/10 pb-[20px] text-[14px] leading-[1.2] font-normal text-white last:mb-0 md:mb-[24px] md:pb-[24px] md:text-[16px] lg:mb-[30px] lg:pb-[30px]"
 							>
-								<div className="mb-[10px] flex items-center justify-start gap-[10px]">
-									<div className="rounded-[90px] border border-solid border-white/20 px-[6px] py-[6px] text-[14px] leading-[1.2] font-normal text-white">
+								<div className="mb-[8px] flex flex-wrap items-center justify-start gap-[8px] md:mb-[10px] md:gap-[10px]">
+									<div className="rounded-[90px] border border-solid border-white/20 px-[4px] py-[4px] text-[12px] leading-[1.2] font-normal text-white md:px-[6px] md:py-[6px] md:text-[14px]">
 										{item.time}
 									</div>
-									<div className="text-[16px] leading-[1.2] font-bold text-white">{item.title.ru}</div>
+									<div className="text-[14px] leading-[1.2] font-bold text-white md:text-[16px]">{item.title.ru}</div>
 								</div>
-								<p className="text-[16px] leading-[1.2] font-normal text-white">{item.description.ru}</p>
-								<p className="mt-[10px] text-[16px] leading-[1.2] font-normal text-white">{item.topicLabel.ru + ' ' + item.topicText.ru}</p>
+								<p className="text-[14px] leading-[1.2] font-normal text-white md:text-[16px]">{item.description.ru}</p>
+								<p className="mt-[8px] text-[14px] leading-[1.2] font-normal text-white md:mt-[10px] md:text-[16px]">
+									{item.topicLabel.ru + ' ' + item.topicText.ru}
+								</p>
 							</div>
 						)
 					})}
