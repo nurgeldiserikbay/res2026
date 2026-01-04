@@ -20,16 +20,16 @@ export const headerNav: readonly NavItem[] = [
 			{ key: 'about.partners', href: '/partners' },
 		],
 	},
-	{
-		key: 'program.root',
-		href: '/program',
-		main: true,
-		children: [
-			{ key: 'program.schedule', href: '/program' },
-			{ key: 'program.speakers', href: '/program/speakers' },
-			{ key: 'program.latestNews', href: '/news' },
-		],
-	},
+	// {
+	// 	key: 'program.root',
+	// 	href: '/program',
+	// 	main: true,
+	// 	children: [
+	// 		{ key: 'program.schedule', href: '/program' },
+	// 		{ key: 'program.speakers', href: '/program/speakers' },
+	// 		{ key: 'program.latestNews', href: '/news' },
+	// 	],
+	// },
 	{
 		key: 'useful.root',
 		href: '/useful',
@@ -54,7 +54,7 @@ export const headerNav: readonly NavItem[] = [
 			{ key: 'news.latest', href: '/news' },
 		],
 	},
-	{ key: 'gallery', href: '/gallery', main: false },
-	{ key: 'faq', href: '/faq', main: false },
+	// { key: 'gallery', href: '/gallery', main: false },
+	// { key: 'faq', href: '/faq', main: false },
 	{ key: 'contacts', href: '/contacts', main: false },
 ] as const
