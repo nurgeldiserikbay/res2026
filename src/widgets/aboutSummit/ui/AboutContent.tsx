@@ -33,81 +33,37 @@ export function AboutContent() {
 	useAnimSlide(PresidentInitiativeTextRef, { y: 50, delay: 0.2 })
 
 	return (
-		<section className="relative bg-white pt-[100px]">
-			<Container>
-				<div className="flex items-start justify-between gap-[30px]">
-					<div
-						ref={TextRef}
-						className="text-text relative mb-[60px] max-w-[858px] grow translate-y-[50px] text-[24px] leading-normal opacity-0"
-					>
-						{t('pages.about.text2')}
-
-						<Image
-							src="/imgs/kz-about-map.svg"
-							alt="KZ About Map"
-							width={1885}
-							height={1112}
-							className="pointer-events-none absolute top-0 left-[110%] block min-h-[1112px] min-w-[1885px] -translate-y-[268px] transform"
-						/>
+		<>
+			<section className="bg-white pt-[100px]">
+				<Container className="relative z-10 flex items-start justify-between">
+					<div className="text-text max-w-[721px] text-[16px] leading-normal font-normal whitespace-pre-line">
+						<p className="mb-[60px]">{t('pages.about.aboutText2')}</p>
+						<p>{t('pages.about.aboutText3')}</p>
+						<ul className="list-disc pb-[25px] pl-[25px]">
+							<li>{t(`pages.about.aboutText31`)}</li>
+							<li>{t(`pages.about.aboutText32`)}</li>
+							<li>{t(`pages.about.aboutText33`)}</li>
+						</ul>
+						<p>{t('pages.about.aboutText34')}</p>
 					</div>
-				</div>
 
-				<div className="relative z-1 mb-[15px] flex items-start justify-between gap-[30px]">
-					<div className="max-w-[721px]">
-						<h2
-							ref={PresidentInitiativeTitleRef}
-							className="text-text mb-[60px] translate-y-[50px] text-[48px] leading-[1.2] font-bold opacity-0"
-						>
-							{t('pages.about.presidentInitiative')}
-						</h2>
-
-						<p
-							ref={PresidentInitiativeTextRef}
-							className="text-text mb-[60px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0"
-						>
-							{t('pages.about.presidentInitiativeText')}
-						</p>
-
-						<div
-							ref={QuoteRef}
-							className="relative translate-y-[50px] pt-[39px] pl-[71px] opacity-0"
-						>
-							<div className="text-muted absolute top-0 left-0 text-[128px] leading-none">”</div>
-							<div className="font-regular mb-[50px] max-w-[493px] text-[16px] leading-normal whitespace-pre-line text-black">
-								{t('pages.about.presidentText')}
-							</div>
-
+					<div className="flex max-w-[865px] items-end justify-between gap-[5px]">
+						<div className="relative -translate-y-[60px] transform">
 							<div
-								ref={PresidentInfoRef}
-								className="flex translate-y-[50px] items-center gap-[30px] opacity-0"
+								ref={Image1Ref}
+								className="relative translate-y-[60px] opacity-0"
 							>
 								<Image
-									src="/imgs/president.png"
+									src="/imgs/about-page-img-1.png"
 									alt="About President"
-									width={102}
-									height={102}
-									className="block max-w-[102px] rounded-full"
+									width={509}
+									height={662}
+									className="block max-w-[509px] rounded-[12px]"
 								/>
-								<div className="text-primary max-w-[290px] text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
-							</div>
-						</div>
-					</div>
-
-					<div className="flex max-w-[974px] -translate-y-[230px] transform items-end justify-between gap-[5px]">
-						<div
-							ref={Image1Ref}
-							className="relative translate-y-[50px] opacity-0"
-						>
-							<Image
-								src="/imgs/about-page-img-1.png"
-								alt="About President"
-								width={509}
-								height={662}
-								className="block max-w-[509px] rounded-[12px]"
-							/>
-							<div className="absolute bottom-0 left-0 p-[60px]">
-								<div className="mb-[30px] max-w-[294px] text-[16px] leading-normal font-normal text-white">{t(`pages.footer.text`)}</div>
-								<div className="max-w-[294px] text-[32px] leading-[1.2] font-bold text-white">{t(`pages.footer.text1`)}</div>
+								<div className="absolute bottom-0 left-0 p-[60px]">
+									<div className="mb-[30px] max-w-[294px] text-[16px] leading-normal font-normal text-white">{t(`pages.footer.text`)}</div>
+									<div className="max-w-[294px] text-[32px] leading-[1.2] font-bold text-white">{t(`pages.footer.text1`)}</div>
+								</div>
 							</div>
 						</div>
 						<div
@@ -117,47 +73,110 @@ export function AboutContent() {
 							<Image
 								src="/imgs/about-page-img-2.png"
 								alt="About President"
-								width={460}
-								height={808}
+								width={342}
+								height={869}
 								className="block max-w-[460px] rounded-[12px]"
 							/>
 						</div>
 					</div>
-				</div>
+				</Container>
+			</section>
 
-				<div className="flex items-center justify-between">
-					<div
-						ref={PurposeRef}
-						className="max-w-[721px] translate-y-[50px] opacity-0"
-					>
-						<h2 className="text-text mb-[60px] text-[48px] leading-[1.2] font-bold">{t('pages.about.purpose')}</h2>
-						<p className="text-text text-[16px] leading-normal font-normal">{t('pages.about.text3')}</p>
+			<section className="relative bg-white pt-[100px]">
+				<Container>
+					<div className="flex items-start justify-between gap-[30px]">
+						<div
+							ref={TextRef}
+							className="text-text relative mb-[60px] max-w-[858px] grow translate-y-[50px] text-[24px] leading-normal opacity-0"
+						>
+							{t('pages.about.text2')}
+
+							<Image
+								src="/imgs/kz-about-map.svg"
+								alt="KZ About Map"
+								width={1885}
+								height={1112}
+								className="pointer-events-none absolute top-0 left-[110%] block min-h-[1112px] min-w-[1885px] -translate-y-[268px] transform"
+							/>
+						</div>
 					</div>
 
-					<div
-						ref={Image3Ref}
-						className="relative translate-y-[50px] opacity-0"
-					>
-						<div className="relative -translate-y-[230px] transform">
-							<Image
-								src="/imgs/about-img-3.png"
-								alt="About President"
-								width={865}
-								height={414}
-								className="block rounded-[12px]"
-							/>
+					<div className="relative z-1 mb-[15px] flex items-start justify-between gap-[30px]">
+						<div className="max-w-[721px]">
+							<h2
+								ref={PresidentInitiativeTitleRef}
+								className="text-text mb-[60px] translate-y-[50px] text-[48px] leading-[1.2] font-bold opacity-0"
+							>
+								{t('pages.about.presidentInitiative')}
+							</h2>
 
-							<div className="absolute top-0 left-0 flex h-full w-full flex-col items-start justify-center gap-[55px] p-[36px]">
-								<p className="font-regular max-w-[456px] text-left text-[24px] leading-[1.3] text-white">
-									{t('pages.connectionBanner.text')}
-								</p>
+							<p
+								ref={PresidentInitiativeTextRef}
+								className="text-text mb-[60px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0"
+							>
+								{t('pages.about.presidentInitiativeText')}
+							</p>
 
-								<ButtonTree>{t('commands.join')}</ButtonTree>
+							<div
+								ref={QuoteRef}
+								className="relative translate-y-[50px] pt-[39px] pl-[71px] opacity-0"
+							>
+								<div className="text-muted absolute top-0 left-0 text-[128px] leading-none">”</div>
+								<div className="font-regular mb-[50px] max-w-[493px] text-[16px] leading-normal whitespace-pre-line text-black">
+									{t('pages.about.presidentText')}
+								</div>
+
+								<div
+									ref={PresidentInfoRef}
+									className="flex translate-y-[50px] items-center gap-[30px] opacity-0"
+								>
+									<Image
+										src="/imgs/president.png"
+										alt="About President"
+										width={102}
+										height={102}
+										className="block max-w-[102px] rounded-full"
+									/>
+									<div className="text-primary max-w-[290px] text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</Container>
-		</section>
+
+					<div className="flex items-center justify-between">
+						<div
+							ref={PurposeRef}
+							className="max-w-[721px] translate-y-[50px] opacity-0"
+						>
+							<h2 className="text-text mb-[60px] text-[48px] leading-[1.2] font-bold">{t('pages.about.purpose')}</h2>
+							<p className="text-text text-[16px] leading-normal font-normal">{t('pages.about.text3')}</p>
+						</div>
+
+						<div
+							ref={Image3Ref}
+							className="relative translate-y-[50px] opacity-0"
+						>
+							<div className="relative -translate-y-[230px] transform">
+								<Image
+									src="/imgs/about-img-3.png"
+									alt="About President"
+									width={865}
+									height={414}
+									className="block rounded-[12px]"
+								/>
+
+								<div className="absolute top-0 left-0 flex h-full w-full flex-col items-start justify-center gap-[55px] p-[36px]">
+									<p className="font-regular max-w-[456px] text-left text-[24px] leading-[1.3] text-white">
+										{t('pages.connectionBanner.text')}
+									</p>
+
+									<ButtonTree>{t('commands.join')}</ButtonTree>
+								</div>
+							</div>
+						</div>
+					</div>
+				</Container>
+			</section>
+		</>
 	)
 }
