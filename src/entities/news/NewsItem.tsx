@@ -2,24 +2,31 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
+import { Locale, LocalizedText } from '@/shared/config/i18n'
+import { localize } from '@/shared/utils/localize'
+
 import { IconArrowRight } from '@/shared/icons/IconArrowRight'
 import { IconEye } from '@/shared/icons/IconEye'
 
 export interface NewsItemProps {
-	title: string
+	title: LocalizedText | string
 	image: string
-	date: string
-	tag: string
+	date: LocalizedText | string
+	tag: LocalizedText | string
 	slug: string
 	variant: 'light' | 'dark'
 	type: 'release' | 'anounce'
-	content: string
+	content: LocalizedText | string
 	wide?: boolean
 	views?: number
 }
 
 export function NewsItem({ title, image, date, tag, slug, variant = 'light', wide = false, views = 0 }: NewsItemProps) {
-	const locale = useLocale()
+	const locale = useLocale() as Locale
+
+	const localizedTitle = localize(title, locale)
+	const localizedDate = localize(date, locale)
+	const localizedTag = localize(tag, locale)
 
 	return (
 		<div
@@ -27,22 +34,22 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'light', wid
 		>
 			<Image
 				src={image}
-				alt={title}
+				alt={localizedTitle}
 				width={wide ? 860 : 405}
 				height={507}
 				className="absolute top-0 right-0 bottom-0 left-0 block h-full w-full rounded-[12px] object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-x-[22%] group-hover:translate-y-[8%] group-hover:scale-[1.75]"
 			/>
 			<div className="relative z-1 flex h-full w-full flex-col items-start justify-end p-[30px]">
 				<div className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
-					{date}
+					{localizedDate}
 				</div>
 				<div
 					className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
-				>{`//${tag}`}</div>
+				>{`//${localizedTag}`}</div>
 				<h4
 					className={`${variant === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[60px] text-[20px] leading-none font-medium md:h-[66px] md:text-[22px] lg:h-[72px] lg:text-[24px]`}
 				>
-					{title}
+					{localizedTitle}
 				</h4>
 				{views && (
 					<div
