@@ -27,6 +27,10 @@ export function AboutContent() {
 	useAnimSlide(PurposeRef, { y: 50, delay: 0.7 })
 	const Image3Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(Image3Ref, { y: 50, delay: 0.8 })
+	const PresidentInitiativeTitleRef = useRef<HTMLHeadingElement>(null)
+	useAnimSlide(PresidentInitiativeTitleRef, { y: 50, delay: 0.15 })
+	const PresidentInitiativeTextRef = useRef<HTMLParagraphElement>(null)
+	useAnimSlide(PresidentInitiativeTextRef, { y: 50, delay: 0.2 })
 
 	return (
 		<section className="relative bg-white pt-[100px]">
@@ -50,9 +54,17 @@ export function AboutContent() {
 
 				<div className="relative z-1 mb-[15px] flex items-start justify-between gap-[30px]">
 					<div className="max-w-[721px]">
-						<h2 className="text-text mb-[60px] text-[48px] leading-[1.2] font-bold">{t('pages.about.presidentInitiative')}</h2>
+						<h2
+							ref={PresidentInitiativeTitleRef}
+							className="text-text mb-[60px] translate-y-[50px] text-[48px] leading-[1.2] font-bold opacity-0"
+						>
+							{t('pages.about.presidentInitiative')}
+						</h2>
 
-						<p className="text-text mb-[60px] text-[16px] leading-normal font-normal whitespace-pre-line">
+						<p
+							ref={PresidentInitiativeTextRef}
+							className="text-text mb-[60px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0"
+						>
 							{t('pages.about.presidentInitiativeText')}
 						</p>
 
