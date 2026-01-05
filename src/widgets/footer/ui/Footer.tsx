@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Link } from '@/i18n/navigation'
+import { appConfig } from '@/shared/config/app.config'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
@@ -60,9 +61,12 @@ export function Footer() {
 								<FooterLogo />
 							</div>
 
-							<div className="block lg:hidden">
-								<FooterSocial />
-							</div>
+							{!appConfig.isProduction && (
+								<div className="block lg:hidden">
+									{' '}
+									<FooterSocial />
+								</div>
+							)}
 						</div>
 
 						<div
@@ -126,7 +130,7 @@ export function Footer() {
 							ref={FooterSocialRef}
 							className="hidden grow translate-y-[50px] opacity-0 lg:block"
 						>
-							<FooterSocial />
+							{!appConfig.isProduction && <FooterSocial />}
 						</div>
 
 						<div className="flex max-w-[367px] grow flex-col items-start justify-between">

@@ -1,3 +1,5 @@
+import { appConfig } from '@/shared/config/app.config'
+
 import { HeaderCta } from './HeaderCta'
 import { HeaderLang } from './HeaderLang'
 import { HeaderMobileNav } from './HeaderMobileNav'
@@ -8,7 +10,7 @@ export function HeaderActions() {
 	return (
 		<div className="flex grow items-center justify-end gap-[10px] md:max-w-[456px] md:justify-between lg:max-w-[556px]">
 			<div className="hidden max-w-[210px] grow items-center justify-between gap-[10px] md:flex">
-				<HeaderSocial />
+				{!appConfig.isProduction && <HeaderSocial />}
 				<HeaderSearch />
 			</div>
 			<div className="flex items-center gap-[10px]">

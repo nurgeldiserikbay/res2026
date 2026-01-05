@@ -11,7 +11,12 @@
 			"coOrganizers": "Co-organizers",
 			"specialProjects": "Special Projects",
 			"registration": "Registration",
-			"partners": "Sponsors & Partners"
+			"partners": "Sponsors & Partners",
+			"regionKazakhstan": "Kazakhstan",
+			"regionKyrgyzstan": "Кыргыстан",
+			"regionUzbekistan": "Uzbekistan",
+			"regionTajikistan": "Tajikistan",
+			"regionTurkmenistan": "Turkmenistan"
 		},
 		"program": {
 			"root": "Program",
