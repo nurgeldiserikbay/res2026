@@ -21,7 +21,7 @@ export function AboutBanner() {
 	})
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	useAnimSlide(TitleRef, { y: 90, delay: 0.1 })
-	const SubtitleRef = useRef<HTMLHeadingElement>(null)
+	const SubtitleRef = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(SubtitleRef, { y: 90, delay: 0.2 })
 	const DateRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(DateRef, { y: 50, delay: 0.3 })
@@ -42,7 +42,10 @@ export function AboutBanner() {
 					>
 						{t('pages.about.title')}
 					</h1>
-					<p className="w-full max-w-[1027px] text-[24px] leading-normal font-normal whitespace-pre-line text-white">
+					<p
+						ref={SubtitleRef}
+						className="w-full max-w-[1027px] translate-y-[90px] text-[24px] leading-normal font-normal whitespace-pre-line text-white opacity-0"
+					>
 						{t('pages.about.aboutText1')}
 					</p>
 				</Container>

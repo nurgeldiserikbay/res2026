@@ -20,6 +20,11 @@ export const headerNav: readonly NavItem[] = [
 			{ key: 'about.partners', href: '/partners' },
 		],
 	},
+	{
+		key: 'about.region',
+		href: '/about/region',
+		main: true,
+	},
 	// {
 	// 	key: 'program.root',
 	// 	href: '/program',

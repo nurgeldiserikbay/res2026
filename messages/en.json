@@ -5,6 +5,7 @@
 	"nav": {
 		"about": {
 			"root": "About RES-2026",
+			"region": "About region",
 			"res": "RES-2026",
 			"organizers": "Organizers",
 			"coOrganizers": "Co-organizers",
