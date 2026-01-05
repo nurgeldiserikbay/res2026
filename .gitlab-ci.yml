@@ -32,7 +32,7 @@ deploy-dev:
   rules:
     - if: $CI_COMMIT_BRANCH == $DEVBRANCH
   script:
-    - ssh -p$PORT -tt crocos@$SRV "source bbashrc && cd /home/crocos/http/www/$DEVPATH && git reset --hard HEAD && git pull origin $DEVBRANCH && pwd && docker exec $NODE bash -c 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm install && npm run build'  && docker exec $NODE pm2 restart $APPDEV --update-env"
+    - ssh -p$PORT -tt crocos@$SRV "cd /home/crocos/http/www/$DEVPATH && git fetch --all --prune && git reset --hard origin/$DEVBRANCH && git clean -fd && docker exec $NODE bash -lc 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm ci && npm run build' && docker exec $NODE pm2 restart $APPDEV --update-env"
 
 deploy-prod:
   stage: deploy-prod
@@ -43,4 +43,4 @@ deploy-prod:
   rules:
     - if: $CI_COMMIT_BRANCH == $PRODBRANCH
   script:
-    - ssh -p$PORT -tt crocos@$SRV "source bbashrc && cd /home/crocos/http/www/$PRODPATH && git reset --hard HEAD && git pull origin $PRODBRANCH && pwd && docker exec $NODE bash -c 'cd /var/www/$PRODPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm install && npm run build' && docker exec $NODE pm2 restart $APPPROD --update-env"
+    - ssh -p$PORT -tt crocos@$SRV "cd /home/crocos/http/www/$PRODPATH && git fetch --all --prune && git reset --hard origin/$PRODBRANCH && git clean -fd && docker exec $NODE bash -lc 'cd /var/www/$PRODPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm ci && npm run build' && docker exec $NODE pm2 restart $APPPROD --update-env"
