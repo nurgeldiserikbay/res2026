@@ -364,17 +364,13 @@ export function PartnersList() {
 											slidesPerView: 2.2,
 											spaceBetween: 16,
 										},
-										640: {
+										768: {
 											slidesPerView: 3,
 											spaceBetween: 20,
 										},
-										768: {
+										1020: {
 											slidesPerView: 4,
 											spaceBetween: 25,
-										},
-										1020: {
-											slidesPerView: 5,
-											spaceBetween: 30,
 										},
 										1280: {
 											slidesPerView: 6,
