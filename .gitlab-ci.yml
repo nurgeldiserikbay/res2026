@@ -5,7 +5,7 @@ variables:
   DEVBRANCH: 'develop'
   PRODBRANCH: 'main'
   DEVPATH: 'res2026.crocos.kz'
-  PRODPATH: 'contract-offer.kz'
+  PRODPATH: 'res2026.kz'
   NODE: 'node22'
   APPDEV: 'res2026'
   APPPROD: 'okay'
