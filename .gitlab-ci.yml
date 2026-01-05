@@ -23,7 +23,6 @@ stages:
   - deploy-prod
 
 
-
 deploy-prod:
   stage: deploy-prod
   extends: .sshcon
