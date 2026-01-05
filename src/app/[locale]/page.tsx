@@ -128,7 +128,7 @@ export default function Home() {
 
 			<AboutSummit />
 
-			<section className="bg-horizontal-lines bg-white">
+			<section className="bg-white">
 				<Container className="flex flex-wrap items-start justify-between gap-x-8 gap-y-[30px] lg:flex-nowrap">
 					<div className="grow lg:max-w-[400px] xl:max-w-[560px]">
 						<h2
@@ -174,7 +174,7 @@ export default function Home() {
 
 			{/* <Speakers /> */}
 
-			<section className="bg-horizontal-lines 3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
+			<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
 				<Container>
 					<div className="xs:flex-nowrap mb-[30px] flex flex-wrap items-center justify-between gap-5 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]">
 						<h2
@@ -196,7 +196,7 @@ export default function Home() {
 				</Container>
 			</section>
 
-			<section className="bg-horizontal-lines bg-white">
+			<section className="bg-white">
 				<Container>
 					<div
 						ref={ConnectionBannerRef}

@@ -142,9 +142,9 @@ export function AboutSummit() {
 					>
 						<div className="text-muted absolute top-[26px] left-[26px] hidden text-[128px] leading-none md:block">”</div>
 
-						<div className="relative z-1 flex flex-wrap items-center gap-[50px] sm:flex-nowrap">
+						<div className="relative z-1 flex flex-wrap items-start gap-[50px] sm:flex-nowrap">
 							<Image
-								src="/imgs/president.png"
+								src="/imgs/president-img.png"
 								alt="About President"
 								width={213}
 								height={309}

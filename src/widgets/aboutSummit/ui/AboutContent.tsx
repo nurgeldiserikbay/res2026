@@ -206,23 +206,25 @@ export function AboutContent() {
 						<div className="text-muted absolute top-[20px] left-[20px] hidden text-[64px] leading-none sm:text-[80px] md:block md:text-[100px] lg:text-[128px]">
 							&quot;
 						</div>
-						<div className="font-regular relative z-1 mb-[30px] text-[13px] leading-normal whitespace-pre-line text-black sm:mb-[40px] sm:text-[14px] md:mb-[50px] md:text-[15px]">
-							{t('pages.about.presidentText')}
-						</div>
 
 						<div
 							ref={PresidentInfoRef}
-							className="relative z-1 flex flex-wrap items-center gap-[20px] sm:flex-nowrap sm:gap-[30px]"
+							className="relative z-1 flex flex-wrap items-start gap-[20px] sm:flex-nowrap sm:gap-[30px]"
 						>
 							<Image
-								src="/imgs/president.png"
+								src="/imgs/president-about-img.png"
 								alt="About President"
-								width={122}
-								height={122}
-								className="block max-w-[80px] rounded-full sm:max-w-[100px] md:max-w-[122px]"
+								width={213}
+								height={360}
+								className="block max-w-[213px]"
 							/>
-							<div className="text-primary max-w-[311px] text-[12px] leading-normal sm:text-[13px] md:text-[14px]">
-								{t('pages.about.presidentPosition')}
+							<div>
+								<div className="font-regular relative z-1 mb-[30px] text-[13px] leading-normal whitespace-pre-line text-black sm:mb-[40px] sm:text-[14px] md:mb-[50px] md:text-[15px]">
+									{t('pages.about.presidentText')}
+								</div>
+								<div className="text-primary text-[12px] leading-normal sm:text-[13px] md:text-[14px]">
+									{t('pages.about.presidentPosition')}
+								</div>
 							</div>
 						</div>
 					</div>

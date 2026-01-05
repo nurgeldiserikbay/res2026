@@ -27,12 +27,6 @@
 	--breakpoint-3xl: 1800px;
 }
 
-@layer utilities {
-	.bg-horizontal-lines {
-		background-image: repeating-linear-gradient(to right, #ededed 0px, #ededed 1px, transparent 1px, transparent 120px);
-	}
-}
-
 html {
 	color: var(--color-text);
 	background: var(--color-white);
