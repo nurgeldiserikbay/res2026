@@ -50,51 +50,6 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 	)
 }
 
-const partners: PartnerGroup[] = [
-	{
-		title: 'Организаторы',
-		list: [
-			{
-				id: 0,
-				image: '/imgs/partner-1.png',
-				title: 'Partner 1',
-				link: '/partner-1',
-				width: 250,
-				height: 122,
-			},
-			{
-				id: 1,
-				image: '/imgs/partner-2.png',
-				title: 'Partner 2',
-				link: '/partner-2',
-				width: 250,
-				height: 122,
-			},
-		],
-	},
-	{
-		title: 'При поддержке',
-		list: [
-			{
-				id: 2,
-				image: '/imgs/partner-3.png',
-				title: 'Partner 3',
-				link: '/partner-3',
-				width: 250,
-				height: 122,
-			},
-			{
-				id: 3,
-				image: '/imgs/partner-4.png',
-				title: 'Partner 4',
-				link: '/partner-4',
-				width: 250,
-				height: 122,
-			},
-		],
-	},
-]
-
 const partnersArray: PartnerGroup[] = [
 	{
 		title: 'Партнеры',
@@ -267,7 +222,7 @@ export function PartnersList() {
 	// Вычисляем задержки для каждого партнера
 	const delays = useMemo(() => {
 		let counter = 0
-		return partners.map((partner) =>
+		return partnersArray.map((partner) =>
 			partner.list.map(() => {
 				const delay = counter * 0.1
 				counter++
@@ -311,23 +266,6 @@ export function PartnersList() {
 	return (
 		<div className="flex w-full items-start justify-between gap-[30px]">
 			<div className="w-full">
-				{partners.map((partner, groupIndex) => (
-					<div
-						key={partner.title}
-						className="mb-[30px] last:mb-0 xl:mb-[50px] 2xl:mb-[70px]"
-					>
-						<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${partner.title}`}</h2>
-						<div className="xs:gap-[30px] xs:flex-row xs:items-center flex flex-col items-start justify-start gap-[10px] lg:gap-[60px]">
-							{partner.list.map((item, itemIndex) => (
-								<PartnerItemComponent
-									key={item.id}
-									item={item}
-									delay={delays[groupIndex][itemIndex]}
-								/>
-							))}
-						</div>
-					</div>
-				))}
 				{partnersArray.map((partner, groupIndex) => (
 					<div
 						key={partner.title}

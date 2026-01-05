@@ -11,12 +11,14 @@ export interface NewsItemProps {
 	date: string
 	tag: string
 	slug: string
-	type: 'light' | 'dark'
+	variant: 'light' | 'dark'
+	type: 'release' | 'anounce'
+	content: string
 	wide?: boolean
 	views?: number
 }
 
-export function NewsItem({ title, image, date, tag, slug, type = 'light', wide = false, views = 0 }: NewsItemProps) {
+export function NewsItem({ title, image, date, tag, slug, variant = 'light', wide = false, views = 0 }: NewsItemProps) {
 	const locale = useLocale()
 
 	return (
@@ -31,14 +33,14 @@ export function NewsItem({ title, image, date, tag, slug, type = 'light', wide =
 				className="absolute top-0 right-0 bottom-0 left-0 block h-full w-full rounded-[12px] object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-x-[22%] group-hover:translate-y-[8%] group-hover:scale-[1.75]"
 			/>
 			<div className="relative z-1 flex h-full w-full flex-col items-start justify-end p-[30px]">
-				<div className={`${type === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
+				<div className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
 					{date}
 				</div>
 				<div
-					className={`${type === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
+					className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
 				>{`//${tag}`}</div>
 				<h4
-					className={`${type === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[60px] text-[20px] leading-none font-medium md:h-[66px] md:text-[22px] lg:h-[72px] lg:text-[24px]`}
+					className={`${variant === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[60px] text-[20px] leading-none font-medium md:h-[66px] md:text-[22px] lg:h-[72px] lg:text-[24px]`}
 				>
 					{title}
 				</h4>
@@ -46,7 +48,7 @@ export function NewsItem({ title, image, date, tag, slug, type = 'light', wide =
 					<div
 						className={[
 							`mt-[10px] flex items-center justify-start gap-[10px] text-[13px] leading-none font-medium`,
-							type === 'light' ? 'text-text' : 'text-white',
+							variant === 'light' ? 'text-text' : 'text-white',
 						].join(` `)}
 					>
 						<IconEye />
