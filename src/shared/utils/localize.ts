@@ -7,11 +7,7 @@ import { Locale, LocalizedText } from '@/shared/config/i18n'
  * @param fallback - значение по умолчанию, если для локали нет перевода
  * @returns строка с переводом для текущей локали
  */
-export function localize(
-	localizedText: LocalizedText | string,
-	locale: Locale,
-	fallback?: string
-): string {
+export function localize(localizedText: LocalizedText | string, locale: Locale, fallback?: string): string {
 	// Если это уже строка, возвращаем её как есть
 	if (typeof localizedText === 'string') {
 		return localizedText
@@ -31,10 +27,6 @@ export function localize(
  * @param locale - текущая локаль
  * @returns массив строк с переводами для текущей локали
  */
-export function localizeArray(
-	localizedTexts: (LocalizedText | string)[],
-	locale: Locale
-): string[] {
+export function localizeArray(localizedTexts: (LocalizedText | string)[], locale: Locale): string[] {
 	return localizedTexts.map((text) => localize(text, locale))
 }
-
