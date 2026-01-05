@@ -173,15 +173,13 @@ function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCa
 }
 
 function ContactPersonsSection({ t }: SectionProps) {
-	const titleRef = useRef<HTMLHeadingElement>(null)
-	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
 	const titleRef2 = useRef<HTMLHeadingElement>(null)
 	useAnimSlide(titleRef2, { y: 50, delay: 0.1 })
 
 	return (
 		<>
 			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
-				<div>
+				{/* <div>
 					<h2
 						ref={titleRef}
 						className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
@@ -207,18 +205,19 @@ function ContactPersonsSection({ t }: SectionProps) {
 						phone="+7 775 069 0703"
 						delay={0.25}
 					/>
-				</div>
+				</div> */}
 				<div>
 					<h2
 						ref={titleRef2}
 						className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 					>
-						{t(`titles.pressSecretary`)}
+						{t(`titles.contactPersons`)}
 					</h2>
 					<ContactPersonCard
-						title={t(`titles.partnershipAndSponsorship`)}
+						title={t(`labels.pressSecretary`)}
 						name={t(`titles.partnershipAndSponsorshipName`)}
 						phone="+7 701 208 1811"
+						email="office@caclimate.fund"
 						delay={0.3}
 					/>
 				</div>
@@ -229,14 +228,18 @@ function ContactPersonsSection({ t }: SectionProps) {
 
 function OrganizationQuestionsSection({ t }: SectionProps) {
 	const titleRef = useRef<HTMLHeadingElement>(null)
+	const subtitleRef = useRef<HTMLHeadingElement>(null)
 	const block1Ref = useRef<HTMLDivElement>(null)
 	const block2Ref = useRef<HTMLDivElement>(null)
 	const block3Ref = useRef<HTMLDivElement>(null)
+	const block4Ref = useRef<HTMLDivElement>(null)
 
 	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
+	useAnimSlide(subtitleRef, { y: 50, delay: 0.15 })
 	useAnimSlide(block1Ref, { y: 50, delay: 0.2 })
 	useAnimSlide(block2Ref, { y: 50, delay: 0.25 })
 	useAnimSlide(block3Ref, { y: 50, delay: 0.3 })
+	useAnimSlide(block4Ref, { y: 50, delay: 0.35 })
 
 	return (
 		<>
@@ -246,48 +249,15 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 			>
 				{t(`titles.organizationQuestions`)}
 			</h2>
+			<h3
+				ref={subtitleRef}
+				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+			>
+				{t(`titles.internationalCenterForGreenTechnology`)}
+			</h3>
 			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
 				<div
 					ref={block1Ref}
-					className="max-w-[709px] translate-y-[50px] opacity-0"
-				>
-					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`titles.internationalCenterForGreenTechnology`)}</h3>
-					<div className="text-text mb-[20px] text-[16px] leading-none font-normal">{t(`pages.contacts.rsvp`)}</div>
-					<Link
-						href={`tel:+77712886597`}
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconPhone className="text-secondary block transition-colors" />
-						<span> {t(`pages.contacts.botPhone`)}</span>
-					</Link>
-					<Link
-						href={`tel:+77073197731`}
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconPhone className="text-secondary block transition-colors" />
-						<span> {t(`pages.contacts.lauraPhone`)}</span>
-					</Link>
-					<Link
-						href="https://2gis.kz/astana/firm/70000001018130088/71.43893%2C51.124309?m=71.439565%2C51.123237%2F17.41%2Fr%2F3.4"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconPin className="text-secondary block transition-colors" />
-						<span>{t(`pages.contacts.address`)}</span>
-					</Link>
-					<Link
-						href="https://gov.kz"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconGlobal className="text-secondary block transition-colors" />
-						<span>gov.kz</span>
-					</Link>
-				</div>
-				<div
-					ref={block2Ref}
 					className="max-w-[570px] translate-y-[50px] opacity-0"
 				>
 					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.aydarName`)}</h3>
@@ -318,7 +288,53 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 					</Link>
 				</div>
 				<div
+					ref={block2Ref}
+					className="max-w-[570px] translate-y-[50px] opacity-0"
+				>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.botaName`)}</h3>
+					<div className="text-text mb-[20px] text-[16px] leading-none font-normal">{t(`pages.contacts.botaPosition`)}</div>
+					<Link
+						href={`tel:+77712886597`}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPhone className="text-secondary block transition-colors" />
+						<span> +7 771 288 65 97</span>
+					</Link>
+					<Link
+						href={`mailto:partnership@res2026expo.kz`}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span>partnership@res2026expo.kz</span>
+					</Link>
+				</div>
+				<div
 					ref={block3Ref}
+					className="max-w-[570px] translate-y-[50px] opacity-0"
+				>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.anelName`)}</h3>
+					<div className="text-text mb-[20px] text-[16px] leading-none font-normal">{t(`pages.contacts.anelPosition`)}</div>
+					<Link
+						href={`tel:+77074131677`}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPhone className="text-secondary block transition-colors" />
+						<span> +7 707 413 1677</span>
+					</Link>
+					<Link
+						href={`mailto:sales@res2026expo.kz`}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span>sales@res2026expo.kz</span>
+					</Link>
+				</div>
+				<div
+					ref={block4Ref}
 					className="max-w-[194px] translate-y-[50px] opacity-0"
 				>
 					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.communicationLine`)}</h3>
