@@ -2,8 +2,9 @@
 
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 const MENU_ITEMS = [
@@ -38,6 +39,9 @@ export function RegionTabs() {
 		return ''
 	})
 
+	const TabsRef = useRef<HTMLElement>(null)
+	useAnimSlide(TabsRef, { y: 50, delay: 0.1 })
+
 	useEffect(() => {
 		// Обработчик изменения хеша
 		const handleHashChange = () => {
@@ -55,7 +59,10 @@ export function RegionTabs() {
 
 	return (
 		<>
-			<section className="mb-[50px] bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+			<section
+				ref={TabsRef}
+				className="mb-[50px] translate-y-[50px] bg-white pt-[50px] opacity-0 md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+			>
 				<Container className="relative z-10 flex items-center justify-center gap-[30px]">
 					{MENU_ITEMS.map((item) => {
 						const isActive = activeHash === item.href

@@ -1,7 +1,9 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const IMGS = [
 	{
@@ -29,11 +31,59 @@ const IMGS = [
 
 export function AboutImgs() {
 	const [activeImg, setActiveImg] = useState(IMGS[0])
+	const mainImageRef = useRef<HTMLDivElement>(null)
+	const thumbnailsRef = useRef<HTMLDivElement>(null)
+
+	// Анимация появления миниатюр
+	useGSAP(
+		() => {
+			if (!thumbnailsRef.current) return
+
+			const thumbnails = thumbnailsRef.current.querySelectorAll('button')
+			thumbnails.forEach((thumb, index) => {
+				gsap.fromTo(
+					thumb,
+					{ y: 30, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.6,
+						delay: 0.3 + index * 0.1,
+						ease: 'circ.out',
+						scrollTrigger: {
+							trigger: thumbnailsRef.current,
+							start: 'top 80%',
+						},
+					},
+				)
+			})
+		},
+		{ scope: thumbnailsRef },
+	)
+
+	// Анимация переключения главного изображения
+	useEffect(() => {
+		if (!mainImageRef.current) return
+
+		gsap.fromTo(
+			mainImageRef.current,
+			{ opacity: 0, scale: 1.05 },
+			{
+				opacity: 1,
+				scale: 1,
+				duration: 0.5,
+				ease: 'power2.out',
+			},
+		)
+	}, [activeImg])
 
 	return (
 		<>
 			<div className="relative w-full pb-[48px]">
-				<div className="aspect-870/758 w-full overflow-hidden">
+				<div
+					ref={mainImageRef}
+					className="aspect-870/758 w-full overflow-hidden"
+				>
 					{activeImg && (
 						<Image
 							src={activeImg.img}
@@ -45,13 +95,16 @@ export function AboutImgs() {
 					)}
 				</div>
 
-				<div className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-hidden px-[43px]">
+				<div
+					ref={thumbnailsRef}
+					className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-hidden px-[43px]"
+				>
 					{IMGS.map((img) => (
 						<button
 							key={img.id}
 							onClick={() => setActiveImg(img)}
 							className={[
-								`after:bg-secondary/50 relative block h-[103px] w-[110px] cursor-pointer overflow-hidden rounded-[8px] after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100`,
+								`after:bg-secondary/50 relative block h-[103px] w-[110px] translate-y-[30px] cursor-pointer overflow-hidden rounded-[8px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100`,
 								activeImg.id === img.id ? 'after:opacity-100' : 'after:opacity-0',
 							].join(` `)}
 						>
