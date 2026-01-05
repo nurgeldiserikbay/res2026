@@ -3,7 +3,7 @@ variables:
   SRV: '89.219.32.148'
   PORT: '22022'
   DEVBRANCH: 'develop'
-  PRODBRANCH: 'maein'
+  PRODBRANCH: 'main'
   DEVPATH: 'res2026.crocos.kz'
   PRODPATH: 'contract-offer.kz'
   NODE: 'node22'

@@ -117,8 +117,8 @@ export default function Home() {
 							22-24
 						</div>
 						<div className="xs:text-[20px] text-[16px] leading-none font-light text-white md:text-[22px] xl:text-[24px]">
-							<div className="opacity-40">апреля</div>
-							<div>Астана, Казахстан</div>
+							<div className="opacity-40">{t('titles.april')}</div>
+							<div>{t('titles.eventAddress')}</div>
 						</div>
 					</div>
 

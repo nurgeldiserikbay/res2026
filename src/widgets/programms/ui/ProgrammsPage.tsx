@@ -3,20 +3,23 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRef, useState } from 'react'
 
+import { Locale } from '@/shared/config/i18n'
 import { IconArrowRight } from '@/shared/icons/IconArrowRight'
 import { IconClose } from '@/shared/icons/IconClose'
 import { IconVideoSquare } from '@/shared/icons/IconVideoSquare'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 import { ModalShell } from '@/shared/ui/modal/ModalShell'
+import { localize, localizeArray } from '@/shared/utils/localize'
 
 import { programSchedule } from '../mocks'
 
 export function ProgrammsPage() {
 	const t = useTranslations()
+	const locale = useLocale() as Locale
 	const [activeProgram, setActiveProgram] = useState<string | null>(programSchedule[0].id)
 
 	const program = programSchedule.find((program) => program.id === activeProgram)
@@ -241,15 +244,15 @@ export function ProgrammsPage() {
 									>
 										<div>
 											<h3 className="xs:text-[24px] flex items-center justify-start gap-[10px] text-[20px] leading-none font-bold text-white md:justify-center md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]">
-												{programItem.title}{' '}
+												{localize(programItem.title, locale)}{' '}
 												<button onClick={() => handleSelectedProgramItemClick(programItem.id)}>
 													<IconArrowRight className="text-muted size-[24px] md:size-[28px] lg:size-[32px]" />
 												</button>
 											</h3>
 											{programItem.points?.length && (
 												<ul className="mt-[10px] list-inside list-disc pl-2 text-[16px] leading-normal text-white">
-													{programItem.points?.map((point) => {
-														return <li key={point}>{point}</li>
+													{localizeArray(programItem.points, locale).map((point, index) => {
+														return <li key={index}>{point}</li>
 													})}
 												</ul>
 											)}
