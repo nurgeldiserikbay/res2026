@@ -31,6 +31,7 @@ deploy-prod:
     - shell
   rules:
     - if: $CI_COMMIT_BRANCH == $PRODBRANCH
+  script:
     - ssh -p$PORT -tt crocos@$SRV "source bbashrc && cd /home/crocos/http/www/$PRODPATH && git reset --hard HEAD && git pull origin $PRODBRANCH && pwd && docker exec $NODE bash -c 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm install && npm run build'  && docker exec $NODE pm2 restart $APPPROD --update-env"
 
 deploy-dev:
