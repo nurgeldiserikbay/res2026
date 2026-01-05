@@ -18,7 +18,7 @@ import { Timer } from '@/widgets/timer/ui/Timer'
 
 export default function Home() {
 	const t = useTranslations()
-	console.log(`NEXT_PUBLIC_GIT_BRANCH`, process.env.NEXT_PUBLIC_GIT_BRANCH)
+
 	const BannerRef = useRef<HTMLDivElement>(null)
 	useAnimBg(BannerRef, {
 		fromSize: '120%',

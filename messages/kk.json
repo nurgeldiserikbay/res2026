@@ -11,7 +11,12 @@
 			"coOrganizers": "Бірлескен ұйымдастырушылар",
 			"specialProjects": "Арнайы жобалар",
 			"registration": "Тіркелу",
-			"partners": "Демеушілер мен серіктестер"
+			"partners": "Демеушілер мен серіктестер",
+			"regionKazakhstan": "Қазақстан",
+			"regionKyrgyzstan": "Қырғызстан",
+			"regionUzbekistan": "Өзбекстан",
+			"regionTajikistan": "Тәжікстан",
+			"regionTurkmenistan": "Түркменстан"
 		},
 		"program": {
 			"root": "Бағдарлама",
