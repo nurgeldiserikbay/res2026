@@ -21,7 +21,7 @@ export function AboutBanner() {
 	})
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	useAnimSlide(TitleRef, { y: 90, delay: 0.1 })
-	const SubtitleRef = useRef<HTMLHeadingElement>(null)
+	const SubtitleRef = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(SubtitleRef, { y: 90, delay: 0.2 })
 	const DateRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(DateRef, { y: 50, delay: 0.3 })
@@ -29,44 +29,27 @@ export function AboutBanner() {
 	useAnimSlide(MonthRef, { y: 50, delay: 0.4 })
 
 	return (
-		<section
-			ref={BannerRef}
-			data-animated-banner
-			className="bg-primary-dark min-h-[895px] pt-[268px] pb-[168px]"
-		>
-			<Container className="relative z-10 flex flex-col items-center justify-center">
-				<h1
-					ref={TitleRef}
-					className="mb-[40px] translate-y-[-90px] text-center text-[128px] leading-none font-bold text-white opacity-0"
-				>
-					{t('pages.about.title')}
-				</h1>
-				<h2
-					ref={SubtitleRef}
-					className="mb-[40px] translate-y-[-90px] text-center text-[48px] leading-none font-bold text-white opacity-0"
-				>
-					<span className="text-muted-light">Regional</span> <br /> Ecological <br /> Summit 2026
-				</h2>
-				<div
-					ref={DateRef}
-					className="translate-y-[-50px] align-top text-[96px] leading-none font-bold opacity-0"
-					style={{
-						background: 'linear-gradient(to bottom, #E0EAB8 0%, rgba(212, 216, 195, 0) 95%)',
-						WebkitBackgroundClip: 'text',
-						WebkitTextFillColor: 'transparent',
-						backgroundClip: 'text',
-						color: 'transparent',
-					}}
-				>
-					22-24
-				</div>
-				<p
-					ref={MonthRef}
-					className="translate-y-[-50px] text-[24px] leading-[1.2] font-light text-white opacity-0"
-				>
-					{'апреля'}
-				</p>
-			</Container>
-		</section>
+		<>
+			<section
+				ref={BannerRef}
+				data-animated-banner
+				className="bg-primary-dark min-h-[895px] pt-[296px] pb-[196px]"
+			>
+				<Container className="relative z-10 flex flex-col items-start justify-center">
+					<h1
+						ref={TitleRef}
+						className="mb-[60px] w-full translate-y-[-90px] text-left text-[128px] leading-none font-bold text-white opacity-0"
+					>
+						{t('pages.about.title')}
+					</h1>
+					<p
+						ref={SubtitleRef}
+						className="w-full max-w-[1027px] translate-y-[90px] text-[24px] leading-normal font-normal whitespace-pre-line text-white opacity-0"
+					>
+						{t('pages.about.aboutText1')}
+					</p>
+				</Container>
+			</section>
+		</>
 	)
 }

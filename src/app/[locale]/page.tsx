@@ -12,8 +12,8 @@ import { Container } from '@/shared/ui/container/container'
 import { AboutSummit } from '@/widgets/aboutSummit/ui/AboutSummit'
 import { NewsTab } from '@/widgets/news/ui/NewsTab'
 import { PartnersList } from '@/widgets/partners/ui/PartnersList'
-import { Programms } from '@/widgets/programms/ui/Programms'
-import { Speakers } from '@/widgets/speakers/ui/Speakers'
+// import { Programms } from '@/widgets/programms/ui/Programms'
+// import { Speakers } from '@/widgets/speakers/ui/Speakers'
 import { Timer } from '@/widgets/timer/ui/Timer'
 
 export default function Home() {
@@ -128,9 +128,9 @@ export default function Home() {
 
 			<AboutSummit />
 
-			<Programms />
+			{/* <Programms /> */}
 
-			<Speakers />
+			{/* <Speakers /> */}
 
 			<section className="bg-horizontal-lines 3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
 				<Container>
