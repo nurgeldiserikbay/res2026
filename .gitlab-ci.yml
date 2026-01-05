@@ -19,19 +19,11 @@ variables:
     - chmod 700 ~/.ssh
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
+
 stages:
-<<<<<<< HEAD
-  - deploy-prod
-=======
   - deploy-dev
 
->>>>>>> 677dcbb (Edit .gitlab-ci.yml)
 
-
-<<<<<<< HEAD
-
-d
-=======
 deploy-dev:
   stage: deploy-dev
   extends: .sshcon
@@ -42,4 +34,4 @@ deploy-dev:
     - if: $CI_COMMIT_BRANCH == $DEVBRANCH
   script:
     - ssh -p$PORT -tt crocos@$SRV "source bbashrc && cd /home/crocos/http/www/$DEVPATH && git reset --hard HEAD && git pull origin $DEVBRANCH && pwd && docker exec $NODE bash -c 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm install && npm run build' && docker exec $NODE pm2 restart $APPDEV --update-env"
->>>>>>> 4f86e9e (Edit .gitlab-ci.yml)
+
