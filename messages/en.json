@@ -77,6 +77,7 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"pressSecretary": "Press Secretary",
 		"summers": "summers",
 		"winters": "In the north winters",
 		"oblasts": "oblasts",
@@ -140,7 +141,7 @@
 			"aboutText5": "The Regional Ecological Summit 2026 in partnership with the UN is a platform for uniting Central Asian countries in developing coordinated working solutions and mechanisms that reflect a regional approach to addressing climate and environmental challenges, including the tragedy of the Aral Sea, which has become a global symbol of natural degradation, and the sustainable decline of the Caspian Sea level. Special attention will be paid to shaping the real needs of Central Asia in 'green' financing aimed at supporting adaptation measures, developing low-carbon technologies and strengthening the region's environmental resilience. \n\n The Summit creates a regional platform for dialogue and solidarity, strengthening cooperation between states, international organizations, scientific and business communities. It contributes to raising awareness of priority environmental issues, finding practical solutions and forming joint action plans for the future aimed at sustainable development of the region. The goal is to form specific initiatives and mechanisms for joint action. Adoption of a Joint Declaration of the Heads of State of Central Asia on Regional Cooperation in Ecology and Sustainable Development. \n\n Approval of the Regional Action Program with UN agencies (2026–2030) for a sustainable future of Central Asia, including regional initiatives on the thematic areas of the Summit, launch of new environmental projects and initiatives in the Summit's areas. Summit preparation began in 2024 and includes a series of regional consultations. The Summit will be the culmination of this process and give political impetus to the region's environmental agenda. The initiative strengthens the existing efforts of countries, complementing them with a regional dimension. The basis will be a coordinated environmental agenda, including updated climate goals of Central Asian countries."
 		},
 		"contacts": {
-			"mepr": "MEPR",
+			"mepr": "MENR",
 			"meprPosition": "Press Secretary of the Ministry of Ecology and Natural Resources of the Republic of Kazakhstan",
 			"meprName": "Balzhan Zhambylbekov",
 			"ministryOfEnvironment": "The event is held with the support of the Ministry of Ecology and Natural Resources of Kazakhstan.",
@@ -152,7 +153,11 @@
 			"lauraPhone": "+7 707 319 7731, Laura",
 			"aydarName": "Aidar Yesembayev",
 			"aydarPosition": "Head of the Competence Office for Technology Commercialization of the National Joint Stock Company \"International Center for Green Technologies and Investment Projects\"",
-			"communicationLine": "General Line"
+			"communicationLine": "General Line",
+			"botaName": "Bota Elshibek",
+			"botaPosition": "Director of Business Development RES 2026 EXPO (partnership, content creation, media and general questions)",
+			"anelName": "Anel Omarova",
+			"anelPosition": "Commercial Director RES 2026 EXPO (participation in the exhibition zone, sponsorship)"
 		},
 		"region": {
 			"about": "About Kazakhstan",
