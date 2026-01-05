@@ -20,7 +20,7 @@ export function HeaderNav() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="3xl:max-w-[937px] hidden max-w-[600px] grow items-center justify-between gap-[10px] text-[12px] text-white lg:flex xl:max-w-[680px] xl:text-[14px] 2xl:max-w-[800px] 2xl:text-[16px]">
+		<nav className="3xl:max-w-[937px] hidden max-w-[600px] grow items-center justify-start gap-[40px] text-[12px] text-white lg:flex xl:max-w-[680px] xl:text-[14px] 2xl:max-w-[800px] 2xl:text-[16px]">
 			{headerNav.map((item) => {
 				const active = isActive(pathname, item.href)
 
