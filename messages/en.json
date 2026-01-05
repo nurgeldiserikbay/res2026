@@ -13,7 +13,7 @@
 			"registration": "Registration",
 			"partners": "Sponsors & Partners",
 			"regionKazakhstan": "Kazakhstan",
-			"regionKyrgyzstan": "Кыргыстан",
+			"regionKyrgyzstan": "Kyrgyzstan",
 			"regionUzbekistan": "Uzbekistan",
 			"regionTajikistan": "Tajikistan",
 			"regionTurkmenistan": "Turkmenistan"
@@ -51,6 +51,7 @@
 	},
 	"titles": {
 		"april": "April",
+		"eventAddress": "Astana, Kazakhstan",
 		"speakersPage": "Speakers",
 		"contacts": "Contacts",
 		"main": "Home",
@@ -59,7 +60,7 @@
 		"aboutSummit": "About the Summit",
 		"speakers": "Speakers & Participants",
 		"news": "News",
-		"partners": "Partners & Sponsors",
+		"partners": "Partners",
 		"soon": "Coming Soon",
 		"soonText": "This section is under development. We are preparing new content and will open access soon.\nPlease check back later!",
 		"otherNews": "Other News",

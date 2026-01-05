@@ -4,16 +4,12 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMemo, useRef, useState } from 'react'
-import { Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { useTranslations } from 'next-intl'
+import { useMemo, useRef } from 'react'
 
 import 'swiper/css'
 
-import { IconArrowHead } from '@/shared/icons/IconArrowHead'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
-import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
-import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 
 type PartnerItem = {
 	id: number
@@ -52,7 +48,7 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 
 const partnersArray: PartnerGroup[] = [
 	{
-		title: 'Партнеры',
+		title: 'titles.partners',
 		list: [
 			{
 				id: 1,
@@ -219,6 +215,7 @@ const partnersArray: PartnerGroup[] = [
 ]
 
 export function PartnersList() {
+	const t = useTranslations()
 	// Вычисляем задержки для каждого партнера
 	const delays = useMemo(() => {
 		let counter = 0
@@ -232,9 +229,6 @@ export function PartnersList() {
 	}, [])
 
 	const swiperRef = useRef<HTMLDivElement>(null)
-
-	const [isBeginning, setIsBeginning] = useState(true)
-	const [isEnd, setIsEnd] = useState(false)
 
 	// Animation for swiper slides - right to left one by one
 	useGSAP(
@@ -271,99 +265,19 @@ export function PartnersList() {
 						key={partner.title}
 						className="mb-[30px] last:mb-0 xl:mb-[50px] 2xl:mb-[70px]"
 					>
-						<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${partner.title}`}</h2>
+						<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${t(partner.title)}`}</h2>
 						<div className="w-full">
 							<div
 								ref={swiperRef}
-								className="w-full"
+								className="flex w-full flex-wrap items-center justify-start gap-x-[40px] gap-y-[20px]"
 							>
-								<Swiper
-									modules={[Navigation]}
-									slidesPerView={1}
-									className="w-full overflow-visible"
-									navigation={{
-										nextEl: '#swiper-partners-next',
-										prevEl: '#swiper-partners-prev',
-									}}
-									breakpoints={{
-										320: {
-											slidesPerView: 1.2,
-											spaceBetween: 10,
-										},
-										480: {
-											slidesPerView: 2.2,
-											spaceBetween: 16,
-										},
-										768: {
-											slidesPerView: 3,
-											spaceBetween: 20,
-										},
-										1020: {
-											slidesPerView: 5,
-											spaceBetween: 30,
-										},
-									}}
-									onSwiper={(swiper) => {
-										setIsBeginning(swiper.isBeginning)
-										setIsEnd(swiper.isEnd)
-									}}
-									onSlideChange={(swiper) => {
-										setIsBeginning(swiper.isBeginning)
-										setIsEnd(swiper.isEnd)
-									}}
-								>
-									{partner.list.map((item, itemIndex) => (
-										<SwiperSlide
-											key={itemIndex}
-											className="translate-x-[90px] opacity-0"
-										>
-											<PartnerItemComponent
-												key={item.id}
-												item={item}
-												delay={delays[groupIndex][itemIndex]}
-											/>
-										</SwiperSlide>
-									))}
-								</Swiper>
-							</div>
-
-							{/* Навигация для swiper скрывается на мобильных устройствах */}
-							<div className="xs:flex mt-[48px] flex hidden items-center justify-start gap-[10px]">
-								<div id="swiper-partners-prev">
-									{isBeginning ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none box-border h-[45px] w-[36px] cursor-default p-0!"
-										>
-											<IconArrowHead className="text-muted h-[20px] w-[20px] rotate-180 transform" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[36px] p-0!"
-										>
-											<IconArrowHead className="h-[20px] w-[20px] rotate-180 transform" />
-										</ButtonDefault>
-									)}
-								</div>
-
-								<div id="swiper-partners-next">
-									{isEnd ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none box-border h-[45px] w-[36px] cursor-default p-0!"
-										>
-											<IconArrowHead className="text-muted h-[20px] w-[20px]" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[36px] p-0!"
-										>
-											<IconArrowHead className="h-[20px] w-[20px]" />
-										</ButtonDefault>
-									)}
-								</div>
+								{partner.list.map((item, itemIndex) => (
+									<PartnerItemComponent
+										key={item.id}
+										item={item}
+										delay={delays[groupIndex][itemIndex]}
+									/>
+								))}
 							</div>
 						</div>
 					</div>
