@@ -77,6 +77,11 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"summers": "summers",
+		"winters": "In the north winters",
+		"oblasts": "oblasts",
+		"citiesOfNationalSignificance": "cities of national significance",
+		"population": "20 million people.",
 		"days": "Дней",
 		"hours": "Часов",
 		"minutes": "Минут",
@@ -148,6 +153,39 @@
 			"aydarName": "Айдар Есембаев",
 			"aydarPosition": "Руководитель Офиса компетенций по коммерциализации технологий НАО \"Международный центр зеленых технологий и инвестиционных проектов\"",
 			"communicationLine": "Общая линия"
+		},
+		"region": {
+			"about": "О Казахстане",
+			"climate": "Климат",
+			"floraAndFauna": "Фауна и флора",
+			"etc": "Другие",
+			"aboutKazakhstan": "About Kazakhstan",
+			"aboutKazakhstanText1": "Kazakhstan is the largest country in the world that does not have direct access to the World Ocean. Most of the country's territory is made up of deserts – 44% and semi-deserts-14%. Steppes occupy 26% of the area of Kazakhstan, forests-5.5%. There are 8,5 thousand rivers in the country. \n\n The north-eastern part of the Caspian Sea is part of the republic. The Aral Sea is divided between Kazakhstan and Uzbekistan. There are 48 thousand large and small lakes in Kazakhstan. The largest of them are Balkhash, Zaisan and Alakol. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
+			"aboutKazakhstanText2": "The population of Kazakhstan exceeds.",
+			"climateText1": "The climate of Kazakhstan",
+			"climateText2": "Is sharply continental, with large temperature fluctuations between summer and winter, dry air and low precipitation. All four seasons are pronounced here: cold winters, hot dry summers, short and changeable spring, and warm autumn. In the north, winters are harsher and summers are warmer; in the south, winters are milder (near zero) and summers are hotter",
+			"floraAndFaunaText1": "The flora and fauna of Kazakhstan",
+			"floraAndFaunaText2": "is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity."
+		},
+		"etc": {
+			"strategicVisionTitle": "Стратегическое видение и документы",
+			"strategicVisionIntro": "Казахстан принял следующие стратегические документы:",
+			"strategicDocuments": {
+				"0": "Стратегия достижения углеродной нейтральности до 2060 года. Дорожная карта к стратегии",
+				"1": "IT AMS по сокращению выбросов парниковых газов на 17% от уровня 1990 года к 2035 году",
+				"2": "Концепция перехода Республики Казахстан к «зелёной экономике»",
+				"3": "Концепция управления всеми видами отходов на 2026–2030 годы",
+				"4": "Концепция сохранения и устойчивого использования биоразнообразия на период 2025–2035 годов"
+			},
+			"nationalInitiativesTitle": "Национальные инициативы",
+			"tazaKazakhstanTitle": "Таза Қазақстан",
+			"tazaKazakhstanText": "Масштабная национальная экологическая кампания под эгидой Президента Республики Казахстан К. Токаева, направленная на формирование экологической культуры через очистку территорий (населённых пунктов, природных объектов, берегов водоёмов), посадку деревьев (миллионы саженцев) и борьбу с несанкционированными свалками, с вовлечением молодёжи, бизнеса и государственных органов, с акцентом на управление отходами, инновации и благоустройство.",
+			"twoBillionTreesTitle": "Проект «2 миллиарда деревьев»",
+			"twoBillionTreesText": "Инициатива в Казахстане, направленная на создание лесных массивов до 2025 года с последующим продлением до 2027 года. Цель проекта — посадка и посев 2 миллиардов саженцев древесных и кустарниковых пород, включая саксаул, сосну, берёзу и другие, в государственном лесном фонде для восстановления лесов и улучшения экологической ситуации.",
+			"biodiversityFundTitle": "Международный фонд сохранения биоразнообразия",
+			"biodiversityFundText": "Инициатива Казахстана, объединяющая усилия государств, международных организаций (ПРООН, ЮНЕСКО, ФАО) и НПО для финансирования защиты экосистем, развития экотуризма, внедрения экотехнологий и повышения осведомлённости в соответствии с лучшими международными стандартами устойчивого развития и сохранения флоры и фауны.",
+			"unRegionalCenterTitle": "Региональный центр ООН по целям устойчивого развития (ЦУР) для Центральной Азии и Афганистана создан в Казахстане (Алматы).",
+			"unRegionalCenterText": "Он был одобрен государствами-членами ООН в марте 2025 года, открыт в августе 2025 года и направлен на содействие достижению 17 глобальных ЦУР к 2030 году."
 		}
 	},
 	"days": {

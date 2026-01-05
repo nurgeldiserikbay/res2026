@@ -77,6 +77,11 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"summers": "summers",
+		"winters": "In the north winters",
+		"oblasts": "oblasts",
+		"citiesOfNationalSignificance": "cities of national significance",
+		"population": "20 million people.",
 		"days": "Күн",
 		"hours": "Сағат",
 		"minutes": "Минут",
@@ -148,6 +153,39 @@
 			"aydarName": "Айдар Есембаев",
 			"aydarPosition": "Ұлттық акционерлік қоғам \"Халықаралық жасыл технологиялар және инвестициялық жобалар орталығы\" технологияларды коммерциализациялау бойынша құзыреттер кеңсесінің басшысы",
 			"communicationLine": "Жалпы желі"
+		},
+		"region": {
+			"about": "Қазақстан туралы",
+			"climate": "Климат",
+			"floraAndFauna": "Флора және фауна",
+			"etc": "Басқа да",
+			"aboutKazakhstan": "About Kazakhstan",
+			"aboutKazakhstanText1": "Kazakhstan is the largest country in the world that does not have direct access to the World Ocean. Most of the country's territory is made up of deserts – 44% and semi-deserts-14%. Steppes occupy 26% of the area of Kazakhstan, forests-5.5%. There are 8,5 thousand rivers in the country. \n\n The north-eastern part of the Caspian Sea is part of the republic. The Aral Sea is divided between Kazakhstan and Uzbekistan. There are 48 thousand large and small lakes in Kazakhstan. The largest of them are Balkhash, Zaisan and Alakol. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
+			"aboutKazakhstanText2": "The population of Kazakhstan exceeds.",
+			"climateText1": "The climate of Kazakhstan",
+			"climateText2": "Is sharply continental, with large temperature fluctuations between summer and winter, dry air and low precipitation. All four seasons are pronounced here: cold winters, hot dry summers, short and changeable spring, and warm autumn. In the north, winters are harsher and summers are warmer; in the south, winters are milder (near zero) and summers are hotter",
+			"floraAndFaunaText1": "The flora and fauna of Kazakhstan",
+			"floraAndFaunaText2": "is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity."
+		},
+		"etc": {
+			"strategicVisionTitle": "Стратегиялық көзқарас және құжаттар",
+			"strategicVisionIntro": "Қазақстан келесі стратегиялық құжаттарды қабылдады:",
+			"strategicDocuments": {
+				"0": "2060 жылға дейін көміртекті бейтараптыққа қол жеткізу стратегиясы. Стратегияның жол картасы",
+				"1": "1990 жылғы деңгеймен салыстырғанда парниктік газдар шығарындыларын 2035 жылға дейін 17%-ға қысқартуға арналған IT AMS",
+				"2": "Қазақстан Республикасының «жасыл экономикаға» көшу тұжырымдамасы",
+				"3": "2026–2030 жылдарға арналған қалдықтардың барлық түрлерін басқару тұжырымдамасы",
+				"4": "Биоалуантүрлілікті сақтау және тұрақты пайдалану тұжырымдамасы 2025–2035 жылдарды қамтиды"
+			},
+			"nationalInitiativesTitle": "Ұлттық бастамалар",
+			"tazaKazakhstanTitle": "Таза Қазақстан",
+			"tazaKazakhstanText": "Қазақстан Республикасы Президенті Қ. Тоқаевтың бастамасымен жүзеге асырылатын ауқымды ұлттық экологиялық науқан. Ол аумақтарды тазалау (елді мекендер, табиғи нысандар, су айдындарының жағалаулары), ағаш отырғызу (миллиондаған көшет) және заңсыз қоқыс орындарымен күресу арқылы экологиялық мәдениетті қалыптастыруға бағытталған. Науқанға жастар, бизнес және мемлекеттік органдар тартылып, қалдықтарды басқару, инновация және көгалдандыруға басымдық беріледі.",
+			"twoBillionTreesTitle": "«2 миллиард ағаш» жобасы",
+			"twoBillionTreesText": "Қазақстандағы орман алқаптарын қалыптастыруға бағытталған бастама. Жоба бастапқыда 2025 жылға дейін жоспарланып, кейін 2027 жылға дейін ұзартылды. Мақсаты — саксаул, қарағай, қайың және басқа да ағаш-бұта түрлерінен тұратын 2 миллиард көшетті мемлекеттік орман қорына отырғызу және егу арқылы ормандарды қалпына келтіру және экологиялық жағдайды жақсарту.",
+			"biodiversityFundTitle": "Биоалуантүрлілікті сақтау жөніндегі халықаралық қор",
+			"biodiversityFundText": "Қазақстанның бастамасы болып табылатын бұл қор мемлекеттердің, халықаралық ұйымдардың (БҰҰДБ, ЮНЕСКО, ФАО) және үкіметтік емес ұйымдардың күшін біріктіріп, экожүйелерді қорғауды қаржыландыруға, экотуризмді дамытуға, экотехнологияларды енгізуге және хабардарлықты арттыруға бағытталған. Қор тұрақты даму мен флора мен фаунаны сақтаудың үздік халықаралық стандарттарына сәйкес жұмыс істейді.",
+			"unRegionalCenterTitle": "Орталық Азия мен Ауғанстан үшін БҰҰ-ның Тұрақты даму мақсаттары (ТДМ) жөніндегі өңірлік орталығы Қазақстанда (Алматы) құрылды.",
+			"unRegionalCenterText": "Орталық БҰҰ-ға мүше мемлекеттер тарапынан 2025 жылғы наурызда мақұлданып, 2025 жылғы тамызда ашылды. Оның мақсаты — 2030 жылға дейін 17 жаһандық ТДМ-ға қол жеткізуге үлес қосу."
 		}
 	},
 	"days": {
