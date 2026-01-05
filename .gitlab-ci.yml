@@ -20,8 +20,8 @@ variables:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 stages:
+  - deploy-dev
   - deploy-prod
-
 
 deploy-prod:
   stage: deploy-prod
@@ -31,5 +31,15 @@ deploy-prod:
     - shell
   rules:
     - if: $CI_COMMIT_BRANCH == $PRODBRANCH
-  script:
     - ssh -p$PORT -tt crocos@$SRV "source bbashrc && cd /home/crocos/http/www/$PRODPATH && git reset --hard HEAD && git pull origin $PRODBRANCH && pwd && docker exec $NODE bash -c 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm install && npm run build'  && docker exec $NODE pm2 restart $APPPROD --update-env"
+
+deploy-dev:
+  stage: deploy-dev
+  extends: .sshcon
+  needs: []
+  tags:
+    - shell
+  rules:
+    - if: $CI_COMMIT_BRANCH == $PRODBRANCH
+  script:
+    - ssh -p$PORT -tt crocos@$SRV "source bbashrc && cd /home/crocos/http/www/$DEVPATH && git reset --hard HEAD && git pull origin $DEVBRANCH && pwd && docker exec $NODE bash -c 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm install && npm run build' && docker exec $NODE pm2 restart $APPDEV --update-env"
