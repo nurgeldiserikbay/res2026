@@ -155,7 +155,7 @@ export function AboutContent() {
 						</div>
 					</div>
 
-					<div className="seld-start w-fullmax-w-[859px] relative rounded-[12px] bg-[#FBFFE9] p-[20px] pr-[26px] md:pt-[65px] md:pl-[86px]">
+					<div className="seld-start relative w-full max-w-[859px] rounded-[12px] bg-[#FBFFE9] p-[20px] pr-[26px] md:pt-[65px] md:pl-[86px]">
 						<div className="text-muted absolute top-[20px] left-[20px] hidden text-[128px] leading-none md:block">&quot;</div>
 						<div className="font-regular relative z-1 mb-[50px] text-[15px] leading-normal whitespace-pre-line text-black">
 							{t('pages.about.presidentText')}
