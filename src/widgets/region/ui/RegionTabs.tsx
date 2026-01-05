@@ -61,9 +61,9 @@ export function RegionTabs() {
 		<>
 			<section
 				ref={TabsRef}
-				className="mb-[50px] translate-y-[50px] bg-white pt-[50px] opacity-0 md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+				className="mb-[30px] translate-y-[50px] bg-white pt-[30px] opacity-0 sm:mb-[40px] sm:pt-[40px] md:mb-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
 			>
-				<Container className="relative z-10 flex items-center justify-center gap-[30px]">
+				<Container className="relative z-10 flex flex-wrap items-center justify-center gap-[15px] overflow-x-auto sm:gap-[20px] md:gap-[30px]">
 					{MENU_ITEMS.map((item) => {
 						const isActive = activeHash === item.href
 
@@ -72,7 +72,7 @@ export function RegionTabs() {
 								key={item.id}
 								href={item.href}
 								className={[
-									'cursor-pointer border-b-[3px] border-solid py-[26px] text-center text-[16px] leading-none font-medium transition-colors',
+									'cursor-pointer border-b-[3px] border-solid py-[20px] text-center text-[14px] leading-none font-medium whitespace-nowrap transition-colors sm:py-[23px] sm:text-[15px] md:py-[26px] md:text-[16px]',
 									isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text',
 								].join(' ')}
 							>

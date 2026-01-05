@@ -29,80 +29,88 @@ export function Climate() {
 		<>
 			<section
 				id="climate"
-				className="relative mt-[100px]"
+				className="relative mt-[50px] sm:mt-[60px] md:mt-[80px] lg:mt-[100px]"
 			>
-				<Container className="flex items-start justify-between overflow-visible">
-					<div className="relative max-w-[872px] whitespace-pre-line">
+				<Container className="flex flex-col items-start justify-between gap-[30px] overflow-visible lg:flex-row lg:gap-[40px] xl:gap-[60px]">
+					<div className="relative w-full whitespace-pre-line lg:max-w-[872px]">
 						<h3
 							ref={TitleRef}
-							className="text-text relative z-1 mb-[30px] translate-y-[50px] text-[32px] leading-normal font-bold opacity-0"
+							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
 						>
 							{t('pages.region.climateText1')}
 						</h3>
 						<p
 							ref={TextRef}
-							className="relative z-1 mb-[30px] translate-y-[50px] opacity-0"
+							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]"
 						>
 							{t('pages.region.climateText2')}
 						</p>
-						<div className="relative z-1 mb-[30px] grid grid-cols-2 gap-[10px]">
+						<div className="relative z-1 mb-[20px] grid grid-cols-2 gap-[10px] sm:mb-[25px] md:mb-[30px]">
 							<div
 								ref={Temp1Ref}
-								className="flex h-[172px] grow translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0"
+								className="flex h-[140px] translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 							>
-								<span className="text-secondary flex items-center gap-[30px] text-[64px] leading-normal font-bold">
+								<span className="text-secondary flex flex-col items-center gap-[10px] text-[40px] leading-normal font-bold sm:flex-row sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
 									<Image
 										src="/imgs/snow.svg"
 										alt="Snow"
 										width={51}
 										height={51}
+										className="h-[35px] w-[35px] sm:h-[45px] sm:w-[45px] md:h-[51px] md:w-[51px]"
 									/>
 									<span>-45</span>
 								</span>
-								<span className="text-secondary text-[16px] leading-normal font-normal">{t(`labels.winters`)}</span>
+								<span className="text-secondary text-[12px] leading-normal font-normal sm:text-[14px] md:text-[16px]">
+									{t(`labels.winters`)}
+								</span>
 							</div>
 							<div
 								ref={Temp2Ref}
-								className="flex h-[172px] grow translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0"
+								className="flex h-[140px] translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 							>
-								<span className="text-secondary flex items-center gap-[30px] text-[64px] leading-normal font-bold">
+								<span className="text-secondary flex flex-col items-center gap-[10px] text-[40px] leading-normal font-bold sm:flex-row sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
 									<Image
 										src="/imgs/sun.svg"
 										alt="Sun"
 										width={51}
 										height={51}
+										className="h-[35px] w-[35px] sm:h-[45px] sm:w-[45px] md:h-[51px] md:w-[51px]"
 									/>
 									<span>+40</span>
 								</span>
-								<span className="text-secondary text-[16px] leading-normal font-normal">{t(`labels.summers`)}</span>
+								<span className="text-secondary text-[12px] leading-normal font-normal sm:text-[14px] md:text-[16px]">
+									{t(`labels.summers`)}
+								</span>
 							</div>
 						</div>
 					</div>
 
 					<div
 						ref={ImagesRef}
-						className="relative z-1 flex max-w-[870px] items-stretch justify-between gap-[8px]"
+						className="relative z-1 flex w-full flex-col items-stretch justify-between gap-[8px] lg:max-w-[870px] lg:flex-row"
 					>
 						<div
 							ref={Image1Ref}
-							className="translate-x-[90px] opacity-0"
+							className="translate-x-[90px] opacity-0 lg:translate-x-[90px]"
 						>
 							<Image
 								src="/imgs/climate-1.png"
 								alt="Climate 1"
 								width={560}
 								height={376}
+								className="h-auto w-full"
 							/>
 						</div>
 						<div
 							ref={Image2Ref}
-							className="translate-x-[90px] opacity-0"
+							className="translate-x-[90px] opacity-0 lg:translate-x-[90px]"
 						>
 							<Image
 								src="/imgs/climate-2.png"
 								alt="Climate 2"
 								width={300}
 								height={376}
+								className="h-auto w-full"
 							/>
 						</div>
 					</div>

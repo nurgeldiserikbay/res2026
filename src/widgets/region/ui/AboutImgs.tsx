@@ -79,10 +79,10 @@ export function AboutImgs() {
 
 	return (
 		<>
-			<div className="relative w-full pb-[48px]">
+			<div className="relative w-full pb-[30px] sm:pb-[40px] md:pb-[48px]">
 				<div
 					ref={mainImageRef}
-					className="aspect-870/758 w-full overflow-hidden"
+					className="aspect-870/758 w-full overflow-hidden rounded-[8px] sm:rounded-[12px]"
 				>
 					{activeImg && (
 						<Image
@@ -97,14 +97,14 @@ export function AboutImgs() {
 
 				<div
 					ref={thumbnailsRef}
-					className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-hidden px-[43px]"
+					className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-x-auto px-[10px] sm:px-[20px] md:px-[30px] lg:px-[43px]"
 				>
 					{IMGS.map((img) => (
 						<button
 							key={img.id}
 							onClick={() => setActiveImg(img)}
 							className={[
-								`after:bg-secondary/50 relative block h-[103px] w-[110px] translate-y-[30px] cursor-pointer overflow-hidden rounded-[8px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100`,
+								`after:bg-secondary/50 relative block h-[60px] w-[70px] shrink-0 translate-y-[30px] cursor-pointer overflow-hidden rounded-[6px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100 sm:h-[80px] sm:w-[90px] sm:rounded-[7px] md:h-[103px] md:w-[110px] md:rounded-[8px]`,
 								activeImg.id === img.id ? 'after:opacity-100' : 'after:opacity-0',
 							].join(` `)}
 						>

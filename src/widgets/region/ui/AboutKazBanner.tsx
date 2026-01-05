@@ -26,12 +26,12 @@ export function AboutKazBanner() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="mt-[100px] h-[795px] bg-[url('/imgs/region-banner.png')] bg-cover bg-center"
+				className="xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] bg-[url('/imgs/region-banner.png')] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]"
 			>
 				<Container className="flex h-full items-center justify-center text-center">
 					<h1
 						ref={TitleRef}
-						className="translate-y-[50px] text-[128px] leading-none font-bold text-white opacity-0"
+						className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
 					>
 						Kazakhstan
 					</h1>
