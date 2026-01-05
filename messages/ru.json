@@ -4,9 +4,9 @@
 	},
 	"nav": {
 		"about": {
-			"root": "О RES-2026",
+			"root": "О RES 2026",
 			"region": "О регионе",
-			"res": "RES-2026",
+			"res": "RES 2026",
 			"organizers": "Организаторы",
 			"coOrganizers": "Со-организаторы",
 			"specialProjects": "Спец.проекты",
@@ -15,7 +15,7 @@
 		},
 		"program": {
 			"root": "Программа",
-			"schedule": "Программа RES-2026",
+			"schedule": "Программа RES 2026",
 			"speakers": "Спикеры и специальные гости",
 			"latestNews": "Последние новости"
 		},
