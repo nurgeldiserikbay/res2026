@@ -39,8 +39,8 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitPurposeRef, { y: 90, delay: 0.45 })
 
 	return (
-		<section className="3xl:py-[100px] overflow-hidden bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
-			<Container className="flex flex-wrap-reverse items-start justify-between gap-[30px] overflow-hidden xl:flex-nowrap">
+		<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
+			<Container className="flex flex-wrap-reverse items-start justify-between gap-[30px] xl:flex-nowrap">
 				<div className="grow xl:max-w-[721px]">
 					<div
 						ref={AboutSummitRef}
@@ -140,24 +140,26 @@ export function AboutSummit() {
 						ref={AboutSummitQuoteRef}
 						className="seld-start relative mb-[54px] translate-y-90 rounded-[12px] bg-[#FBFFE9] p-[26px] opacity-0 md:pt-[65px] md:pl-[97px]"
 					>
-						<div className="text-muted absolute top-[26px] left-[26px] hidden text-[128px] leading-none md:block">&quot;</div>
-						<div className="font-regular relative z-1 mb-[50px] text-[16px] leading-normal whitespace-pre-line text-black">
-							{t('pages.about.presidentText')}
-						</div>
+						<div className="text-muted absolute top-[26px] left-[26px] hidden text-[128px] leading-none md:block">”</div>
 
-						<div className="relative z-1 flex flex-wrap items-center gap-[30px] sm:flex-nowrap">
+						<div className="relative z-1 flex flex-wrap items-center gap-[50px] sm:flex-nowrap">
 							<Image
 								src="/imgs/president.png"
 								alt="About President"
-								width={122}
-								height={122}
-								className="block max-w-[122px] rounded-full"
+								width={213}
+								height={309}
+								className="block max-w-[213px]"
 							/>
-							<div className="text-primary max-w-[311px] text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
+							<div className="max-w-[631px]">
+								<div className="font-regular relative z-1 mb-[30px] text-[16px] leading-normal whitespace-pre-line text-black">
+									{t('pages.about.presidentText')}
+								</div>
+								<div className="text-primary max-w-[312px] text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
+							</div>
 						</div>
 						<Image
 							ref={AboutSummitMapRef}
-							className="absolute top-[55%] left-[65%] block min-h-[435px] min-w-[1014px] translate-x-90 opacity-0"
+							className="absolute top-[65%] left-[65%] block min-h-[435px] min-w-[1014px] translate-x-90 opacity-0"
 							src="/imgs/kz-map.svg"
 							alt="KZ Map"
 							width={1014}
