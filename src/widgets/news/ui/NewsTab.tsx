@@ -6,7 +6,7 @@ import { useMemo, useRef, useState } from 'react'
 import { NewsItem } from '@/entities/news/NewsItem'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 
-import { newsItems } from '../mocks'
+import { newsPaginItems } from '../mocks'
 
 type TabButtonProps = {
 	tab: { id: number; title: string }
@@ -35,7 +35,7 @@ function TabButton({ tab, activeTab, onClick, delay }: TabButtonProps) {
 
 type NewsItemWrapperProps = {
 	idx: number
-	item: (typeof newsItems)[0]
+	item: (typeof newsPaginItems)[0]
 	delay: number
 }
 
@@ -95,14 +95,17 @@ export function NewsTab() {
 			</div>
 
 			<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
-				{newsItems.map((item, index) => (
-					<NewsItemWrapper
-						key={index}
-						idx={index}
-						item={item}
-						delay={0.2 + index * 0.3}
-					/>
-				))}
+				{newsPaginItems
+					.filter((item) => !item.wide)
+					.slice(0, 4)
+					.map((item, index) => (
+						<NewsItemWrapper
+							key={index}
+							idx={index}
+							item={item}
+							delay={0.2 + index * 0.3}
+						/>
+					))}
 			</div>
 		</div>
 	)

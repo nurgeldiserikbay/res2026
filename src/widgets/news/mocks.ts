@@ -1,44 +1,5 @@
 import { NewsItemProps } from '@/entities/news/NewsItem'
 
-export const newsItems: NewsItemProps[] = [
-	{
-		title: 'Что нужно знать о Саммите по климатической амбициозности?',
-		image: '/imgs/news-1.png',
-		date: '26 декабря 2026',
-		tag: 'Экология и окружающая среда',
-		slug: 'summit-climate-ambitions',
-		type: 'light',
-		views: 1250,
-	},
-	{
-		title: 'Механизм достижения климатических амбиций',
-		image: '/imgs/news-2.png',
-		date: '26 декабря 2026',
-		tag: 'Экология и окружающая среда',
-		slug: 'climate-mechanism',
-		type: 'dark',
-		views: 892,
-	},
-	{
-		title: 'Что нужно знать о Саммите по климатической амбициозности?',
-		image: '/imgs/news-3.png',
-		date: '26 декабря 2026',
-		tag: 'Экология и окружающая среда',
-		slug: 'summit-climate-ambitions-2',
-		type: 'light',
-		views: 2145,
-	},
-	{
-		title: 'Механизм достижения климатических амбиций',
-		image: '/imgs/news-4.png',
-		date: '26 декабря 2026',
-		tag: 'Экология и окружающая среда',
-		views: 567,
-		slug: 'climate-mechanism-2',
-		type: 'dark',
-	},
-]
-
 export const newsPaginItems: NewsItemProps[] = [
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -47,7 +8,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions',
 		wide: true,
-		type: 'dark',
+		variant: 'dark',
+		type: 'release',
+		content: ``,
 		views: 3420,
 	},
 	{
@@ -56,7 +19,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions',
-		type: 'light',
+		variant: 'light',
+		type: 'anounce',
+		content: ``,
 		views: 1250,
 	},
 	{
@@ -65,7 +30,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
-		type: 'dark',
+		variant: 'dark',
+		type: 'release',
+		content: ``,
 		views: 892,
 	},
 	{
@@ -74,7 +41,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
-		type: 'light',
+		variant: 'light',
+		type: 'anounce',
+		content: ``,
 		views: 2145,
 	},
 	{
@@ -83,7 +52,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism-2',
-		type: 'dark',
+		variant: 'dark',
+		type: 'release',
+		content: ``,
 		views: 567,
 	},
 	{
@@ -92,7 +63,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
-		type: 'dark',
+		variant: 'dark',
+		type: 'anounce',
+		content: ``,
 		views: 1834,
 	},
 	{
@@ -101,7 +74,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
-		type: 'light',
+		variant: 'light',
+		type: 'release',
+		content: ``,
 		views: 756,
 	},
 	{
@@ -110,7 +85,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism-2',
-		type: 'dark',
+		variant: 'dark',
+		type: 'anounce',
+		content: ``,
 		views: 2901,
 	},
 	{
@@ -119,7 +96,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
-		type: 'dark',
+		variant: 'dark',
+		type: 'release',
+		content: ``,
 		views: 1123,
 	},
 	{
@@ -128,7 +107,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
-		type: 'light',
+		variant: 'light',
+		type: 'anounce',
+		content: ``,
 		views: 1987,
 	},
 	{
@@ -137,7 +118,9 @@ export const newsPaginItems: NewsItemProps[] = [
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism-2',
-		type: 'dark',
+		variant: 'dark',
+		type: 'release',
+		content: ``,
 		views: 445,
 	},
 ]
