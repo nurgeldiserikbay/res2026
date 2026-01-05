@@ -37,7 +37,7 @@ export function Footer() {
 	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9, start: 'top bottom' })
 
 	return (
-		<footer className="bg-horizontal-lines relative z-1 bg-white pt-[50px] pb-[38px] lg:pt-[75px] lg:pb-[58px] 2xl:pt-[100px] 2xl:pb-[82px]">
+		<footer className="relative z-1 bg-white pt-[50px] pb-[38px] lg:pt-[75px] lg:pb-[58px] 2xl:pt-[100px] 2xl:pb-[82px]">
 			<Container className="flex flex-col items-stretch justify-between gap-8 md:flex-row">
 				<div
 					ref={MapRef}

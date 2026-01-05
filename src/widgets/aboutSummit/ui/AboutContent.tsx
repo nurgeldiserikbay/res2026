@@ -47,7 +47,14 @@ export function AboutContent() {
 						<p>{t('pages.about.aboutText34')}</p>
 					</div>
 
-					<div className="flex max-w-[865px] items-end justify-between gap-[5px]">
+					<div className="relative flex max-w-[865px] items-end justify-between gap-[5px]">
+						<Image
+							src="/imgs/kz-about-map.svg"
+							alt="KZ About Map"
+							width={1885}
+							height={1112}
+							className="pointer-events-none absolute top-[-268px] left-0 block min-h-[1112px] min-w-[1885px] transform"
+						/>
 						<div className="relative -translate-y-[60px] transform">
 							<div
 								ref={Image1Ref}
@@ -83,21 +90,22 @@ export function AboutContent() {
 			</section>
 
 			<section className="relative bg-white pt-[100px]">
-				<Container>
+				<Container className="relative z-10 flex items-start justify-between">
+					<div>
+						<Image
+							src="/imgs/about-page-img-3.png"
+							alt="About Summit"
+							width={509}
+							height={662}
+							className="block max-w-[509px] rounded-[12px]"
+						/>
+					</div>
 					<div className="flex items-start justify-between gap-[30px]">
 						<div
 							ref={TextRef}
 							className="text-text relative mb-[60px] max-w-[858px] grow translate-y-[50px] text-[24px] leading-normal opacity-0"
 						>
 							{t('pages.about.text2')}
-
-							<Image
-								src="/imgs/kz-about-map.svg"
-								alt="KZ About Map"
-								width={1885}
-								height={1112}
-								className="pointer-events-none absolute top-0 left-[110%] block min-h-[1112px] min-w-[1885px] -translate-y-[268px] transform"
-							/>
 						</div>
 					</div>
 
