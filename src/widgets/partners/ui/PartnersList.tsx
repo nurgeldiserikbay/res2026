@@ -108,14 +108,6 @@ const partnersArray: PartnerGroup[] = [
 				height: 122,
 			},
 			{
-				id: 2,
-				image: '/imgs/logo/logo-2.png',
-				title: 'Organizer 2',
-				link: '/partner-6',
-				width: 167,
-				height: 122,
-			},
-			{
 				id: 3,
 				image: '/imgs/logo/logo-3.png',
 				title: 'Organizer 3',
@@ -369,16 +361,8 @@ export function PartnersList() {
 											spaceBetween: 20,
 										},
 										1020: {
-											slidesPerView: 4,
-											spaceBetween: 25,
-										},
-										1280: {
-											slidesPerView: 6,
-											spaceBetween: 36,
-										},
-										1536: {
-											slidesPerView: 7,
-											spaceBetween: 44,
+											slidesPerView: 5,
+											spaceBetween: 30,
 										},
 									}}
 									onSwiper={(swiper) => {
