@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
 import { IconArrowRight } from '@/shared/icons/IconArrowRight'
+import { IconEye } from '@/shared/icons/IconEye'
 
 export interface NewsItemProps {
 	title: string
@@ -12,9 +13,10 @@ export interface NewsItemProps {
 	slug: string
 	type: 'light' | 'dark'
 	wide?: boolean
+	views?: number
 }
 
-export function NewsItem({ title, image, date, tag, slug, type = 'light', wide = false }: NewsItemProps) {
+export function NewsItem({ title, image, date, tag, slug, type = 'light', wide = false, views = 0 }: NewsItemProps) {
 	const locale = useLocale()
 
 	return (
@@ -40,6 +42,17 @@ export function NewsItem({ title, image, date, tag, slug, type = 'light', wide =
 				>
 					{title}
 				</h4>
+				{views && (
+					<div
+						className={[
+							`mt-[10px] flex items-center justify-start gap-[10px] text-[13px] leading-none font-medium`,
+							type === 'light' ? 'text-text' : 'text-white',
+						].join(` `)}
+					>
+						<IconEye />
+						<span>{views}</span>
+					</div>
+				)}
 			</div>
 			<Link
 				href={`/${locale}/news/${slug}`}

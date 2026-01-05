@@ -8,6 +8,7 @@ export const newsItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions',
 		type: 'light',
+		views: 1250,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -16,6 +17,7 @@ export const newsItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
 		type: 'dark',
+		views: 892,
 	},
 	{
 		title: 'Что нужно знать о Саммите по климатической амбициозности?',
@@ -24,12 +26,14 @@ export const newsItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
 		type: 'light',
+		views: 2145,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
 		image: '/imgs/news-4.png',
 		date: '26 декабря 2026',
 		tag: 'Экология и окружающая среда',
+		views: 567,
 		slug: 'climate-mechanism-2',
 		type: 'dark',
 	},
@@ -44,6 +48,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		slug: 'summit-climate-ambitions',
 		wide: true,
 		type: 'dark',
+		views: 3420,
 	},
 	{
 		title: 'Что нужно знать о Саммите по климатической амбициозности?',
@@ -52,6 +57,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions',
 		type: 'light',
+		views: 1250,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -60,6 +66,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
 		type: 'dark',
+		views: 892,
 	},
 	{
 		title: 'Что нужно знать о Саммите по климатической амбициозности?',
@@ -68,6 +75,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
 		type: 'light',
+		views: 2145,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -76,6 +84,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism-2',
 		type: 'dark',
+		views: 567,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -84,6 +93,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
 		type: 'dark',
+		views: 1834,
 	},
 	{
 		title: 'Что нужно знать о Саммите по климатической амбициозности?',
@@ -92,6 +102,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
 		type: 'light',
+		views: 756,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -100,6 +111,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism-2',
 		type: 'dark',
+		views: 2901,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -108,6 +120,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism',
 		type: 'dark',
+		views: 1123,
 	},
 	{
 		title: 'Что нужно знать о Саммите по климатической амбициозности?',
@@ -116,6 +129,7 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'summit-climate-ambitions-2',
 		type: 'light',
+		views: 1987,
 	},
 	{
 		title: 'Механизм достижения климатических амбиций',
@@ -124,5 +138,6 @@ export const newsPaginItems: NewsItemProps[] = [
 		tag: 'Экология и окружающая среда',
 		slug: 'climate-mechanism-2',
 		type: 'dark',
+		views: 445,
 	},
 ]
