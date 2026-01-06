@@ -87,7 +87,7 @@ export default function Page() {
 
 					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
 						{newsPaginItems
-							.filter((item) => item.type === 'release')
+							.filter((item) => item.type === 'news')
 							.map((item, index) => (
 								<NewsItemWrapper
 									key={index}
