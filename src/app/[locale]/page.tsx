@@ -80,26 +80,26 @@ export default function Home() {
 							ref={RegionalRef}
 							className="text-muted-light block translate-y-[-90px] transform opacity-0"
 						>
-							Regional
+							{t(`titles.Regional`)}
 						</div>{' '}
 						<div
 							ref={EnvironmentRef}
 							className="block translate-y-[-130px] transform opacity-0"
 						>
-							Ecological
+							{t(`titles.Ecological`)}
 						</div>{' '}
 						<div
 							ref={SummitRef}
 							className="block translate-y-[-180px] transform opacity-0"
 						>
-							Summit 2026
+							{t(`titles.Summit2026`)}
 						</div>
 					</h1>
 					<div
 						ref={BannerTextRef}
 						className="3xl:text-[40px] relative z-10 mb-[20px] max-w-[467px] translate-y-[-180px] transform text-center text-[32px] leading-[1.2] font-medium text-white opacity-0 md:text-[36px] xl:text-[38px]"
 					>
-						{'Shared vision for a Resilient Future'}
+						{t(`titles.slogan`)}
 					</div>
 					<div
 						ref={BannerDateRef}
@@ -175,27 +175,29 @@ export default function Home() {
 
 			{/* <Speakers /> */}
 
-			<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
-				<Container>
-					<div className="xs:flex-nowrap mb-[30px] flex flex-wrap items-center justify-between gap-5 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]">
-						<h2
-							ref={NewsTitleRef}
-							className="text-text 3xl:text-[48px] translate-x-[-90px] text-[32px] leading-none font-bold opacity-0 lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
-						>
-							{t('titles.news')}
-						</h2>
+			{!appConfig.isProduction && (
+				<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
+					<Container>
+						<div className="xs:flex-nowrap mb-[30px] flex flex-wrap items-center justify-between gap-5 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]">
+							<h2
+								ref={NewsTitleRef}
+								className="text-text 3xl:text-[48px] translate-x-[-90px] text-[32px] leading-none font-bold opacity-0 lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
+							>
+								{t('titles.news')}
+							</h2>
 
-						<ButtonDefault
-							ref={NewsButtonRef as React.RefObject<HTMLButtonElement>}
-							className="translate-x-[90px] opacity-0"
-						>
-							{t('labels.allNews')}
-						</ButtonDefault>
-					</div>
+							<ButtonDefault
+								ref={NewsButtonRef as React.RefObject<HTMLButtonElement>}
+								className="translate-x-[90px] opacity-0"
+							>
+								{t('labels.allNews')}
+							</ButtonDefault>
+						</div>
 
-					<NewsTab />
-				</Container>
-			</section>
+						<NewsTab />
+					</Container>
+				</section>
+			)}
 
 			{!appConfig.isProduction && (
 				<section className="bg-white">

@@ -45,10 +45,15 @@ export function Footer() {
 					className="aspect-[1.11] max-w-[716px] grow translate-y-[50px] opacity-0"
 				>
 					<iframe
-						id="map_378765882"
-						src="https://makemap.2gis.ru/widget?data=eJw1jsFuhDAMRP_FvUarBAiEfMBWve1tpVZ7QMRtIwUcBa-0W8S_N5DWJ8sznnkrUHKY0L0iTcjJ4wL2YwV-RgQLZxz4nhAExEQREx_6CiMFSll_kZVRn1XW2XPYP_LqcBmTj-xpLoeft9nhA6yS_7MJ-CqFzz3ur-1CfubsHylD-XngA6ZTp6ZStRZanWRfmVrf8rt3YNuu2W4CpiFeaPGlb4UwMNjilbppTNf2UvcCwi6XMK1MXWkjdWsyHdGU2docmrkphOs3Yng_rpzuuP0CbyxY3g"
-						sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
-						className="h-full w-full rounded-[12px]"
+						width="716"
+						height="641"
+						frameBorder="0"
+						scrolling="no"
+						marginHeight={0}
+						marginWidth={0}
+						id="gmap_canvas"
+						src="https://maps.google.com/maps?width=716&amp;height=641&amp;hl=en&amp;q=%D0%BA%D0%BE%D0%BD%D0%B3%D1%80%D0%B5%D1%81%D1%81%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
 					></iframe>
 				</div>
 				<div className="max-w-[416px] grow lg:max-w-[1024px]">

@@ -8,6 +8,7 @@ import { useRef } from 'react'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
+import { IconQuot } from '@/shared/icons/IconQuot'
 
 export function AboutSummit() {
 	const t = useTranslations()
@@ -70,42 +71,6 @@ export function AboutSummit() {
 								className="block max-w-full translate-y-90 rounded-[12px] opacity-0"
 							/>
 						</div>
-						<div className="flex flex-wrap items-center justify-between gap-[10px] sm:gap-[20px]">
-							<Image
-								ref={AboutSummitImg2Ref}
-								src="/imgs/about-img-2.png"
-								alt="About Summit 2"
-								width={288}
-								height={187}
-								className="block w-full max-w-[140px] translate-y-90 rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[220px] lg:max-w-[288px]"
-							/>
-							<div
-								ref={AboutSummitImg3Ref}
-								className="font-regular text-secondary w-full max-w-[140px] translate-y-90 text-left text-[12px] leading-[1.2] opacity-0 sm:max-w-[181px] sm:text-[14px] md:text-[16px]"
-							>
-								<div className="mb-[10px] max-w-full sm:mb-[15px]">\\{t('titles.strategicPartner')}</div>
-								<Image
-									src="/imgs/un-color.svg"
-									width={182}
-									height={55}
-									alt="UN Ecological"
-									className="block w-full max-w-[120px] sm:max-w-[182px]"
-								/>
-							</div>
-							<div
-								ref={AboutSummitImg4Ref}
-								className="font-regular text-secondary w-full max-w-[140px] translate-y-90 text-left text-[12px] leading-[1.2] opacity-0 sm:max-w-[170px] sm:text-[14px] md:text-[16px]"
-							>
-								<div className="mb-[10px] max-w-full sm:mb-[15px]">\\{t('titles.strategicMediaPartner')}</div>
-								<Image
-									src="/imgs/cnn-color.svg"
-									width={102}
-									height={49}
-									alt="CNN"
-									className="block w-full max-w-[80px] sm:max-w-[102px]"
-								/>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -131,18 +96,18 @@ export function AboutSummit() {
 						ref={AboutSummitQuoteRef}
 						className="seld-start relative mb-[30px] translate-y-90 rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:mb-[40px] sm:p-[26px] md:mb-[54px] md:pt-[65px] md:pl-[97px]"
 					>
-						<div className="text-muted absolute top-[20px] left-[20px] hidden text-[80px] leading-none sm:top-[26px] sm:left-[26px] sm:text-[100px] md:text-[128px]">
-							&quot;
+						<div className="absolute top-[32px] left-[32px]">
+							<IconQuot color="#A1BB94" />
 						</div>
 
 						<div className="relative z-1 flex flex-wrap items-start gap-[20px] sm:flex-nowrap sm:gap-[30px] md:gap-[50px]">
 							<Image
 								ref={AboutSummitPresidentImgRef}
-								src="/imgs/president-img.png"
+								src="/imgs/president-img.jpg"
 								alt="About President"
 								width={213}
 								height={309}
-								className="block w-full max-w-[150px] -translate-x-[50px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
+								className="block w-full max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 							/>
 							<div className="w-full max-w-[631px]">
 								<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
