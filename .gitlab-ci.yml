@@ -1,7 +1,6 @@
 image: docker:stable
 
 stages:
-  - build
   - dockerize
   - deploy
 
@@ -18,3 +17,15 @@ docker-build:
     - docker build -t $CI_REGISTRY_IMAGE:$TAG .
     - docker push $CI_REGISTRY_IMAGE:$TAG
     - docker rmi $CI_REGISTRY_IMAGE:$TAG
+
+
+deploy_prod:
+  stage: deploy
+  environment: $CI_COMMIT_BRANCH
+  tags: [crocos-docker]
+  before_script:
+    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker stop res2026-dev || true
+    - docker run -p 3001:3000 -d --name res2026-dev --rm
