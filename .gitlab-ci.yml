@@ -20,6 +20,7 @@ variables:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 stages:
+  - dockerize
   - deploy-dev
   - deploy-prod
 
