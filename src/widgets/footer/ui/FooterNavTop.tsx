@@ -46,7 +46,7 @@ export function FooterNavTop() {
 								<Link
 									href={item.href ?? '/'}
 									className={[
-										'text-text hover:text-muted mb-[30px] text-[14px] leading-none font-bold transition-colors',
+										'text-text hover:text-muted mb-[30px] block text-[14px] leading-none font-bold transition-colors',
 										pathname === item.href ? 'text-muted' : '',
 									].join(' ')}
 								>
