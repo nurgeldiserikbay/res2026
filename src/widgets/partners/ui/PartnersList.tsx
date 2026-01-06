@@ -3,7 +3,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useMemo, useRef } from 'react'
 
@@ -26,13 +25,12 @@ type PartnerGroup = {
 }
 
 function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: number }) {
-	const ref = useRef<HTMLAnchorElement>(null)
+	const ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(ref, { y: 50, x: 0, delay })
 
 	return (
-		<Link
+		<div
 			ref={ref}
-			href={item.link}
 			className="block translate-y-[50px] opacity-0"
 		>
 			<Image
@@ -42,7 +40,7 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 				height={item.height}
 				className="block h-[85px] w-auto xl:h-[122px]"
 			/>
-		</Link>
+		</div>
 	)
 }
 
@@ -92,30 +90,6 @@ const partnersArray: PartnerGroup[] = [
 				image: '/imgs/logo/logo-3.svg',
 				title: 'Organizer 3',
 				link: '/partner-7',
-				width: 167,
-				height: 122,
-			},
-			{
-				id: 4,
-				image: '/imgs/logo/logo-4.svg',
-				title: 'Organizer 4',
-				link: '/partner-8',
-				width: 167,
-				height: 122,
-			},
-			{
-				id: 5,
-				image: '/imgs/logo/logo-5.svg',
-				title: 'Organizer 5',
-				link: '/partner-9',
-				width: 167,
-				height: 122,
-			},
-			{
-				id: 6,
-				image: '/imgs/logo/logo-6.svg',
-				title: 'Organizer 6',
-				link: '/partner-10',
 				width: 167,
 				height: 122,
 			},
@@ -176,22 +150,6 @@ const partnersArray: PartnerGroup[] = [
 				height: 122,
 			},
 			{
-				id: 15,
-				image: '/imgs/logo/logo-15.svg',
-				title: 'Organizer 15',
-				link: '/partner-19',
-				width: 167,
-				height: 122,
-			},
-			{
-				id: 16,
-				image: '/imgs/logo/logo-16.svg',
-				title: 'Organizer 16',
-				link: '/partner-20',
-				width: 167,
-				height: 122,
-			},
-			{
 				id: 20,
 				image: '/imgs/logo/logo-20.svg',
 				title: 'Organizer 20',
@@ -203,6 +161,14 @@ const partnersArray: PartnerGroup[] = [
 				id: 21,
 				image: '/imgs/logo/SWITCH-Asia.svg',
 				title: 'Organizer 21',
+				link: '/partner-25',
+				width: 167,
+				height: 122,
+			},
+			{
+				id: 22,
+				image: '/imgs/logo/WMO.svg',
+				title: 'Organizer 22',
 				link: '/partner-25',
 				width: 167,
 				height: 122,
@@ -266,7 +232,7 @@ export function PartnersList() {
 						<div className="w-full">
 							<div
 								ref={swiperRef}
-								className="flex w-full flex-wrap items-center justify-start gap-x-[40px] gap-y-[20px]"
+								className="grid grid-cols-2 gap-x-[40px] gap-y-[20px] md:grid-cols-3 lg:grid-cols-4"
 							>
 								{partner.list.map((item, itemIndex) => (
 									<PartnerItemComponent

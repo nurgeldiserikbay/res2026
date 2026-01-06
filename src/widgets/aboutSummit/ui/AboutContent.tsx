@@ -15,8 +15,6 @@ export function AboutContent() {
 	useAnimSlide(TextRef, { y: 50, delay: 0.1 })
 	const QuoteRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(QuoteRef, { y: 50, delay: 0.2 })
-	const PresidentInfoRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(PresidentInfoRef, { y: 50, delay: 0.3 })
 	const Text2Ref = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(Text2Ref, { y: 50, delay: 0.4 })
 	const Image1Ref = useRef<HTMLDivElement>(null)
@@ -125,37 +123,6 @@ export function AboutContent() {
 								),
 							})}
 						</p>
-
-						<div
-							ref={QuoteRef}
-							className="seld-start relative w-full max-w-[859px] translate-y-[50px] rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:p-[24px] md:pt-[30px] md:pl-[40px] lg:pt-[50px] lg:pl-[70px] xl:pt-[65px] xl:pl-[86px]"
-						>
-							<div className="text-muted absolute top-[15px] left-[15px] hidden text-[48px] leading-none sm:top-[20px] sm:left-[20px] sm:text-[64px] md:block md:text-[80px] lg:text-[100px] xl:text-[128px]">
-								&quot;
-							</div>
-
-							<div
-								ref={PresidentInfoRef}
-								className="relative z-1 flex flex-wrap items-start gap-[15px] sm:flex-nowrap sm:gap-[20px] md:gap-[30px]"
-							>
-								<Image
-									ref={PresidentImgRef}
-									src="/imgs/president-about-img.png"
-									alt="About President"
-									width={213}
-									height={360}
-									className="block w-full max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
-								/>
-								<div className="w-full sm:flex-1">
-									<div className="font-regular relative z-1 mb-[20px] text-[12px] leading-normal whitespace-pre-line text-black sm:mb-[25px] sm:text-[13px] md:mb-[30px] md:text-[14px] lg:mb-[40px] lg:text-[15px] xl:mb-[50px]">
-										{t('pages.about.presidentText')}
-									</div>
-									<div className="text-primary text-[11px] leading-normal sm:text-[12px] md:text-[13px] lg:text-[14px]">
-										{t('pages.about.presidentPosition')}
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</Container>
 			</section>
