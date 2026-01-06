@@ -6,6 +6,7 @@ export type NavItem = {
 	href?: `/${string}` // у группы может не быть href
 	children?: NavItem[]
 	main?: boolean
+	ready: boolean
 	showHeader: boolean
 	showFooter: boolean
 }
@@ -15,17 +16,20 @@ const navItems: readonly NavItem[] = [
 		key: 'about.root',
 		href: '/about',
 		main: true,
+		ready: true,
 		children: [
-			{ key: 'about.res', href: '/about', showHeader: !appConfig.isProduction, showFooter: true }, // RES 2026
+			{ key: 'about.res', href: '/about', ready: false, showHeader: !appConfig.isProduction, showFooter: true }, // RES 2026
 			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
+				ready: false,
 				showHeader: !appConfig.isProduction,
 				showFooter: true,
 			},
 			{
 				key: 'about.preparationProcess',
 				href: '/about/preparation-process',
+				ready: false,
 				showHeader: !appConfig.isProduction,
 				showFooter: true,
 			},
@@ -37,6 +41,7 @@ const navItems: readonly NavItem[] = [
 		key: 'program.root',
 		href: '/program',
 		main: true,
+		ready: !appConfig.isProduction,
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
 	},
@@ -44,12 +49,19 @@ const navItems: readonly NavItem[] = [
 		key: 'about.region',
 		href: '/about/region',
 		main: true,
+		ready: !appConfig.isProduction,
 		children: [
-			{ key: 'about.regionKazakhstan', href: '/about/region/kazakhstan', showHeader: true, showFooter: true }, // Kazakhstan
-			{ key: 'about.regionKyrgyzstan', href: '/about/region/kyrgyzstan', showHeader: true, showFooter: true }, // Kyrgyzstan
-			{ key: 'about.regionTajikistan', href: '/about/region/tajikistan', showHeader: true, showFooter: true }, // Tajikistan
-			{ key: 'about.regionTurkmenistan', href: '/about/region/turkmenistan', showHeader: true, showFooter: true }, // Turkmenistan
-			{ key: 'about.regionUzbekistan', href: '/about/region/uzbekistan', showHeader: true, showFooter: true }, // Uzbekistan
+			{
+				key: 'about.regionKazakhstan',
+				href: '/about/region/kazakhstan',
+				ready: !appConfig.isProduction,
+				showHeader: true,
+				showFooter: true,
+			}, // Kazakhstan
+			{ key: 'about.regionKyrgyzstan', href: '/about/region/kyrgyzstan', ready: false, showHeader: true, showFooter: true }, // Kyrgyzstan
+			{ key: 'about.regionTajikistan', href: '/about/region/tajikistan', ready: false, showHeader: true, showFooter: true }, // Tajikistan
+			{ key: 'about.regionTurkmenistan', href: '/about/region/turkmenistan', ready: false, showHeader: true, showFooter: true }, // Turkmenistan
+			{ key: 'about.regionUzbekistan', href: '/about/region/uzbekistan', ready: false, showHeader: true, showFooter: true }, // Uzbekistan
 		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
@@ -58,14 +70,15 @@ const navItems: readonly NavItem[] = [
 		key: 'useful.root',
 		href: '/useful',
 		main: true,
+		ready: false,
 		children: [
-			{ key: 'useful.astana', href: '/useful/astana', showHeader: true, showFooter: true },
-			{ key: 'useful.venue', href: '/useful/venue', showHeader: true, showFooter: true },
-			{ key: 'useful.hotels', href: '/useful/hotels', showHeader: true, showFooter: true },
-			{ key: 'useful.restaurants', href: '/useful/restaurants', showHeader: true, showFooter: true },
-			{ key: 'useful.visa', href: '/useful/visa', showHeader: true, showFooter: true },
-			{ key: 'useful.weather', href: '/useful/weather', showHeader: true, showFooter: true },
-			{ key: 'useful.attractions', href: '/useful/attractions', showHeader: true, showFooter: true },
+			{ key: 'useful.astana', href: '/useful/astana', ready: false, showHeader: true, showFooter: true },
+			{ key: 'useful.venue', href: '/useful/venue', ready: false, showHeader: true, showFooter: true },
+			{ key: 'useful.hotels', href: '/useful/hotels', ready: false, showHeader: true, showFooter: true },
+			{ key: 'useful.restaurants', href: '/useful/restaurants', ready: false, showHeader: true, showFooter: true },
+			{ key: 'useful.visa', href: '/useful/visa', ready: false, showHeader: true, showFooter: true },
+			{ key: 'useful.weather', href: '/useful/weather', ready: false, showHeader: true, showFooter: true },
+			{ key: 'useful.attractions', href: '/useful/attractions', ready: false, showHeader: true, showFooter: true },
 		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
@@ -74,17 +87,18 @@ const navItems: readonly NavItem[] = [
 		key: 'news.root',
 		href: '/news',
 		main: true,
+		ready: !appConfig.isProduction,
 		children: [
-			{ key: 'news.latest', href: '/news', showHeader: true, showFooter: true },
-			{ key: 'news.announcements', href: '/news/announcements', showHeader: true, showFooter: true },
-			{ key: 'news.pressReleases', href: '/news/press-releases', showHeader: true, showFooter: true },
+			{ key: 'news.latest', href: '/news', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+			{ key: 'news.announcements', href: '/news/announcements', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+			{ key: 'news.pressReleases', href: '/news/press-releases', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
 		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
 	},
-	{ key: 'gallery', href: '/gallery', main: false, showHeader: !appConfig.isProduction, showFooter: true },
-	{ key: 'faq', href: '/faq', main: false, showHeader: !appConfig.isProduction, showFooter: true },
-	{ key: 'contacts', href: '/contacts', main: false, showHeader: true, showFooter: true },
+	{ key: 'gallery', href: '/gallery', main: false, ready: !appConfig.isProduction, showHeader: !appConfig.isProduction, showFooter: true },
+	{ key: 'faq', href: '/faq', main: false, ready: !appConfig.isProduction, showHeader: !appConfig.isProduction, showFooter: true },
+	{ key: 'contacts', href: '/contacts', main: false, ready: true, showHeader: true, showFooter: true },
 ] as const
 
 function filterNavItems(items: readonly NavItem[], options?: { for: 'header' | 'footer' }): NavItem[] {
@@ -92,18 +106,24 @@ function filterNavItems(items: readonly NavItem[], options?: { for: 'header' | '
 		.map((item) => {
 			const hasChildren = Array.isArray(item.children)
 			const children = hasChildren
-				? (item.children as NavItem[]).filter((child) => {
-						if (options?.for === 'header') {
-							return child.showHeader !== false
-						}
-						if (options?.for === 'footer') {
-							return child.showFooter !== false
-						}
-						return true
-					})
+				? (item.children as NavItem[])
+						.filter((child) => {
+							if (options?.for === 'header') {
+								return child.showHeader !== false
+							}
+							if (options?.for === 'footer') {
+								return child.showFooter !== false
+							}
+							return true
+						})
+						.map((child) => ({
+							...child,
+							href: child.ready === false && child.href ? '/soon' : child.href,
+						}))
 				: undefined
 			const newItem: NavItem = {
 				...item,
+				href: item.ready === false && item.href ? '/soon' : item.href,
 				children: children ? children : undefined,
 			}
 			return newItem
