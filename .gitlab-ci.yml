@@ -9,6 +9,13 @@ variables:
   NODE: 'node22'
   APPDEV: 'res2026'
   APPPROD: 'okay'
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_DRIVER: overlay2 
+
+
+services:
+  - docker:dind
 
 .sshcon:
   before_script:
