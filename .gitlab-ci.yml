@@ -1,5 +1,5 @@
 variables:
-  GIT_STRATEGY: clone
+#  GIT_STRATEGY: clone
   SRV: '89.219.32.148'
   PORT: '22022'
 
@@ -37,6 +37,9 @@ deploy-prod:
     - chmod 700 ~/.ssh
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config	
   script:
+    - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
+    - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-dev" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-dev" || true   
     - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-dev -p 3000:3000 $CI_REGISTRY_IMAGE:$TAG"	
 
 
