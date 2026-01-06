@@ -24,6 +24,7 @@ function OrganizersSection({ t }: SectionProps) {
 	const socialRef = useRef<HTMLDivElement>(null)
 	const mapRef = useRef<HTMLDivElement>(null)
 
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
 	useAnimSlide(contactsRef, { y: 50, delay: 0.2 })
 	useAnimSlide(socialRef, { y: 50, delay: 0.25 })
@@ -101,6 +102,7 @@ function MeprSection({ t }: SectionProps) {
 	const block3Ref = useRef<HTMLDivElement>(null)
 	const block4Ref = useRef<HTMLDivElement>(null)
 
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
 	useAnimSlide(subtitleRef, { y: 50, delay: 0.15 })
 	useAnimSlide(contactsRef, { y: 50, delay: 0.2 })
@@ -227,6 +229,7 @@ type ContactPersonCardProps = {
 
 function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCardProps) {
 	const ref = useRef<HTMLDivElement>(null)
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(ref, { y: 50, delay })
 
 	return (
@@ -262,6 +265,7 @@ function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCa
 
 function ContactPersonsSection({ t }: SectionProps) {
 	const titleRef2 = useRef<HTMLHeadingElement>(null)
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(titleRef2, { y: 50, delay: 0.1 })
 
 	return (
@@ -292,6 +296,7 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 	const subtitleRef = useRef<HTMLHeadingElement>(null)
 	const block1Ref = useRef<HTMLDivElement>(null)
 
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
 	useAnimSlide(subtitleRef, { y: 50, delay: 0.15 })
 	useAnimSlide(block1Ref, { y: 50, delay: 0.2 })
@@ -346,8 +351,10 @@ export default function Page() {
 		bgImage: '/imgs/news-banner.png',
 	})
 	const TitleRef = useRef<HTMLHeadingElement>(null)
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
 	const BreadcrumbsRef = useRef<HTMLDivElement>(null)
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
 
 	return (
