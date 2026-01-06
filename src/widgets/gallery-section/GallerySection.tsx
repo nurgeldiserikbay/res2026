@@ -60,7 +60,6 @@ type GalleryItemWrapperProps = {
 function GalleryItemWrapper({ item, locale, size, delay }: GalleryItemWrapperProps) {
 	const ref = useRef<HTMLAnchorElement>(null)
 	useAnimSlide(ref, { y: 50, delay })
-
 	// Map size classes for different breakpoints
 	const sizeClasses: Record<string, string> = {
 		'col-span-3': 'lg:col-span-3',
@@ -79,6 +78,8 @@ function GalleryItemWrapper({ item, locale, size, delay }: GalleryItemWrapperPro
 		>
 			<GalleryCard
 				src={item.image}
+				title={item.title}
+				description={item.description}
 				alt={item.alt[locale]}
 				onClick={() => {}}
 			/>

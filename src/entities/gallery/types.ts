@@ -3,6 +3,8 @@ import { Locale } from '@/shared/config/i18n'
 export type GalleryItem = {
 	id: string
 	image: string
+	title?: string
+	description?: string
 	alt: Record<Locale, string>
 }
 
