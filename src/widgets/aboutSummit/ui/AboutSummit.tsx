@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
@@ -8,6 +11,7 @@ import { Container } from '@/shared/ui/container/container'
 
 export function AboutSummit() {
 	const t = useTranslations()
+	const router = useRouter()
 
 	const AboutSummitRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitRef, { x: -90, y: 0, delay: 0.1 })
@@ -27,6 +31,12 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitQuoteRef, { y: 90, delay: 0.35 })
 	const AboutSummitPurposeRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitPurposeRef, { y: 90, delay: 0.45 })
+	const AboutSummitMobileTitleRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(AboutSummitMobileTitleRef, { y: 50, delay: 0.1 })
+	const AboutSummitButtonInsideRef = useRef<HTMLButtonElement | null>(null)
+	useAnimSlide(AboutSummitButtonInsideRef, { y: 50, delay: 0.25 })
+	const AboutSummitPresidentImgRef = useRef<HTMLImageElement>(null)
+	useAnimSlide(AboutSummitPresidentImgRef, { x: -50, delay: 0.4 })
 
 	// const [isOpen, setIsOpen] = useState(false)
 
@@ -44,6 +54,7 @@ export function AboutSummit() {
 						<ButtonDefault
 							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
 							className="translate-y-90 opacity-0"
+							onClick={() => router.push('/about')}
 						>
 							{t('pages.about.moreAboutSummit')}
 						</ButtonDefault>
@@ -58,9 +69,6 @@ export function AboutSummit() {
 								height={363}
 								className="block max-w-full translate-y-90 rounded-[12px] opacity-0"
 							/>
-							<ButtonDefault className="absolute! bottom-[15px] left-[15px] z-1 text-[12px] sm:bottom-[30px] sm:left-[30px] sm:text-base">
-								{t('pages.about.moreAboutSummit')}
-							</ButtonDefault>
 						</div>
 						<div className="flex flex-wrap items-center justify-between gap-[10px] sm:gap-[20px]">
 							<Image
@@ -102,7 +110,10 @@ export function AboutSummit() {
 				</div>
 
 				<div className="flex w-full grow flex-col justify-start xl:max-w-[1025px]">
-					<div className="font-regular text-text mb-[20px] block text-[20px] leading-[1.2] sm:mb-[30px] sm:text-[22px] md:text-[24px] xl:hidden">
+					<div
+						ref={AboutSummitMobileTitleRef}
+						className="font-regular text-text mb-[20px] block translate-y-[50px] text-[20px] leading-[1.2] opacity-0 sm:mb-[30px] sm:text-[22px] md:text-[24px] xl:hidden"
+					>
 						{t(`titles.aboutSummit`)}
 					</div>
 
@@ -126,11 +137,12 @@ export function AboutSummit() {
 
 						<div className="relative z-1 flex flex-wrap items-start gap-[20px] sm:flex-nowrap sm:gap-[30px] md:gap-[50px]">
 							<Image
+								ref={AboutSummitPresidentImgRef}
 								src="/imgs/president-img.png"
 								alt="About President"
 								width={213}
 								height={309}
-								className="block w-full max-w-[150px] sm:max-w-[180px] md:max-w-[213px]"
+								className="block w-full max-w-[150px] -translate-x-[50px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 							/>
 							<div className="w-full max-w-[631px]">
 								<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
