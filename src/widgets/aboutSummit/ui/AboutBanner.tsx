@@ -35,7 +35,7 @@ export function AboutBanner() {
 
 	return (
 		<>
-			<section className="bg-primary-dark">
+			<section className="bg-primary-dark pt-[100px]">
 				<div
 					ref={BannerRef}
 					data-animated-banner

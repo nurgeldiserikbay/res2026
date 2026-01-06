@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
@@ -41,7 +42,9 @@ export function AboutContent() {
 							ref={TextRef}
 							className="text-text mb-[40px] w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[60px] sm:text-[15px] md:mb-[80px] md:text-[16px] lg:mb-[100px] xl:mb-[122px]"
 						>
-							<p className="mb-[20px] sm:mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px]">{t('pages.about.aboutText2')}</p>
+							<p className="mb-[20px] text-[18px] leading-normal font-normal sm:mb-[30px] md:mb-[40px] md:text-[20px] lg:mb-[50px] lg:text-[22px] xl:mb-[60px] 2xl:text-[24px]">
+								{t('pages.about.aboutText2')}
+							</p>
 							<p>{t('pages.about.aboutText3')}</p>
 							<ul className="list-disc pb-[15px] pl-[20px] sm:pb-[20px] sm:pl-[25px]">
 								<li>{t(`pages.about.aboutText31`)}</li>
@@ -50,25 +53,12 @@ export function AboutContent() {
 							</ul>
 							<p>{t('pages.about.aboutText34')}</p>
 						</div>
-
-						<div
-							ref={Image3Ref}
-							className="relative translate-y-[50px] opacity-0"
-						>
-							<Image
-								src="/imgs/about-page-img-3.png"
-								alt="About Summit"
-								width={874}
-								height={1070}
-								className="block w-full max-w-[874px] rounded-[12px]"
-							/>
-						</div>
 					</div>
 
 					<div className="w-full lg:max-w-[871px]">
 						<div className="relative mb-[30px] min-h-[200px] w-full sm:mb-[40px] sm:min-h-[250px] md:mb-[50px] md:min-h-[279px]">
 							<div className="absolute bottom-0 left-0 flex w-full max-w-[865px] flex-col items-end justify-between gap-[10px] sm:gap-[15px] lg:flex-row lg:gap-[5px]">
-								<div className="relative w-full translate-y-0 transform lg:-translate-y-[60px]">
+								<div className="relative w-full grow translate-y-0 transform lg:-translate-y-[60px]">
 									<div
 										ref={Image1Ref}
 										className="relative translate-y-[60px] opacity-0"
@@ -78,7 +68,7 @@ export function AboutContent() {
 											alt="About President"
 											width={509}
 											height={662}
-											className="block w-full max-w-[509px] rounded-[12px]"
+											className="block rounded-[12px]"
 										/>
 										<div className="absolute bottom-0 left-0 p-[15px] sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[60px]">
 											<div className="mb-[10px] max-w-[294px] text-[11px] leading-normal font-normal text-white sm:mb-[15px] sm:text-[12px] md:mb-[20px] md:text-[14px] lg:mb-[25px] lg:text-[16px] xl:mb-[30px]">
@@ -92,14 +82,14 @@ export function AboutContent() {
 								</div>
 								<div
 									ref={Image2Ref}
-									className="w-full translate-y-[50px] opacity-0 sm:w-auto lg:w-auto"
+									className="w-full max-w-[342px] translate-y-[50px] opacity-0"
 								>
 									<Image
 										src="/imgs/about-page-img-2.png"
 										alt="About President"
 										width={342}
 										height={869}
-										className="block w-full max-w-[200px] rounded-[12px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[342px]"
+										className="block rounded-[12px]"
 									/>
 								</div>
 							</div>
@@ -107,22 +97,21 @@ export function AboutContent() {
 
 						<p
 							ref={ResText2Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
+							className="text-text translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-[16px]"
 						>
 							{t('pages.about.resText2')}
 						</p>
-
-						<h2
-							ref={PurposeRef}
-							className="text-text mb-[20px] translate-y-[50px] text-[24px] leading-[1.2] font-bold opacity-0 sm:mb-[30px] sm:text-[28px] md:mb-[40px] md:text-[32px] lg:mb-[50px] lg:text-[36px] xl:mb-[60px] xl:text-[40px] 2xl:text-[48px]"
-						>
-							{t('pages.about.purpose')}
-						</h2>
-						<p
-							ref={Text2Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
-						>
-							{t('pages.about.aboutText5')}
+						<p className="text-text mb-[30px] text-[14px] leading-normal font-normal sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]">
+							{t.rich('pages.about.resText3', {
+								link: (chunks) => (
+									<Link
+										href="/"
+										className="underline"
+									>
+										{chunks}
+									</Link>
+								),
+							})}
 						</p>
 
 						<div
