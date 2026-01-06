@@ -23,6 +23,22 @@ stages:
   - deploy-dev
   - deploy-prod
 
+
+docker-build:
+  stage: dockerize
+  image: docker:stable
+  when: on_success
+  tags: [crocos-docker]
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker builder prune --all --force
+    - docker build --no-cache -t $CI_REGISTRY_IMAGE:$TAG .
+    - docker push $CI_REGISTRY_IMAGE:$TAG
+    - docker rmi $CI_REGISTRY_IMAGE:$TAG
+
+
+
+
 deploy-dev:
   stage: deploy-dev
   extends: .sshcon
