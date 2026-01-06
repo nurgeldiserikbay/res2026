@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
-import { headerNav } from '@/entities/nav/model/nav'
+import { footerNav } from '@/entities/nav/model/nav'
 import { Link } from '@/i18n/navigation'
 
 export function FooterNavTop() {
@@ -11,10 +11,9 @@ export function FooterNavTop() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="flex max-w-[789px] grow flex-wrap items-start justify-start gap-x-[80px] gap-y-[36px] lg:flex-nowrap">
-			{headerNav
+		<nav className="flex max-w-[789px] grow flex-wrap items-start justify-between gap-x-[80px] gap-y-[36px] lg:flex-nowrap">
+			{footerNav
 				.filter((item) => item.main)
-				.slice(0, 2)
 				.map((item) => {
 					return (
 						<div
