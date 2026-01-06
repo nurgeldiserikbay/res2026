@@ -75,6 +75,6 @@ export const headerNav: readonly NavItem[] = (
 		},
 		// { key: 'gallery', href: '/gallery', main: false, show: true, },
 		// { key: 'faq', href: '/faq', main: false, show: true, },
-		{ key: 'contacts', href: '/contacts', main: false, show: true },
+		{ key: 'contacts', href: '/contacts', main: true, show: true },
 	] as const
 ).filter((item) => item?.show) as NavItem[]
