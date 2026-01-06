@@ -27,6 +27,8 @@ docker-build:
 
 deploy-prod:
   stage: deploy
+variables:
+  GIT_STRATEGY: none  
   tags:
     - shell
   before_script:
