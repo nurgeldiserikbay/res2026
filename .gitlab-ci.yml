@@ -22,7 +22,7 @@ docker-build:
 deploy_prod:
   stage: deploy
   environment: $CI_COMMIT_BRANCH
-  tags: [crocos-docker]
+  tags: [shell]
   before_script:
     - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
   script:
