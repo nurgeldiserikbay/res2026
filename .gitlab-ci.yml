@@ -37,9 +37,10 @@ docker-build:
   image: docker:28.0.0
   when: on_success
   tags: [crocos-docker]
+  before_script:
+    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker builder prune --all --force
     - docker build --no-cache -t $CI_REGISTRY_IMAGE:$TAG .
     - docker push $CI_REGISTRY_IMAGE:$TAG
     - docker rmi $CI_REGISTRY_IMAGE:$TAG
