@@ -46,8 +46,8 @@ export function AboutBanner() {
 						src="/imgs/about-page-map.svg"
 						alt="About Summit Logo"
 						width={1039}
-						height={1137}
-						className="absolute top-[10px] left-0 block w-full max-w-[1039px] translate-y-[50px] opacity-0 sm:top-[15px] md:top-[20px] lg:top-[23px]"
+						height={681}
+						className="xs:top-[-150px] absolute top-0 left-0 block translate-y-[50px] opacity-0 max-[762px]:min-w-[120vw] max-[480px]:min-w-[140vw] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]"
 					/>
 
 					<Container className="relative z-10 flex flex-col items-start justify-between gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
