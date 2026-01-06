@@ -4,6 +4,17 @@ stages:
   - dockerize
   - deploy
 
+
+variables:
+  GIT_STRATEGY: none
+  SRV: '89.219.32.148'
+  PORT: '22022'
+  DEVBRANCH: 'develop'
+  PRODBRANCH: 'main'
+  DEVPATH: 'res2026.crocos.kz'
+  PRODPATH: 'res2026.kz
+
+
 before_script:
   - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
 
@@ -19,13 +30,22 @@ docker-build:
     - docker rmi $CI_REGISTRY_IMAGE:$TAG
 
 
-deploy_prod:
-  stage: deploy
-  environment: $CI_COMMIT_BRANCH
-  tags: [shell]
+deploy-prod:
+  stage: deploy-prod
+  extends: .sshcon
+  tags:
+    - shell
+  only:
+    - main
   before_script:
-    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo -n "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker stop res2026-dev || true
-    - docker run -p 3001:3000 -d --name res2026-dev --rm
+    - ssh -p$PORT -tt crocos@$SRV "docker run -d 3001:3000 $CI_REGISTRY_IMAGE:$TAG"
+
+
+
