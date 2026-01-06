@@ -65,7 +65,7 @@ export default function Home() {
 	useAnimSlide(ConnectionImageRef, { x: -200, y: 0, delay: 0.2 })
 	const ConnectionButtonRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(ConnectionButtonRef, { y: 50, delay: 0.3 })
-
+	console.log('process.env.NEXT_PUBLIC_GIT_BRANCH', process.env.NEXT_PUBLIC_GIT_BRANCH)
 	return (
 		<>
 			<section

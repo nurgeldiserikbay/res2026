@@ -31,7 +31,10 @@ export function AboutContent() {
 
 	return (
 		<>
-			<section className="bg-white pt-[30px] sm:pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+			<section
+				id="about-content"
+				className="bg-white pt-[30px] sm:pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+			>
 				<Container className="relative z-10 flex flex-col items-start justify-between gap-[30px] lg:flex-row lg:gap-[40px] xl:gap-[60px]">
 					<div className="w-full lg:max-w-[874px]">
 						<div
