@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 import { usePathname } from '@/i18n/navigation'
+import { appConfig } from '@/shared/config/app.config'
 import { locales } from '@/shared/config/i18n'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
@@ -87,9 +88,11 @@ export function Header() {
 					</div>
 				</Container>
 
-				<Container className="mt-[20px] hidden max-[441px]:block">
-					<HeaderCta className="h-[58px]! w-full" />
-				</Container>
+				{!appConfig.isProduction && (
+					<Container className="mt-[20px] hidden max-[441px]:block">
+						<HeaderCta className="h-[58px]! w-full" />
+					</Container>
+				)}
 			</div>
 		</header>
 	)
