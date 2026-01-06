@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
@@ -10,7 +9,6 @@ import { appConfig } from '@/shared/config/app.config'
 import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
-import { IconPin } from '@/shared/icons/IconPin'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
@@ -335,132 +333,6 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 	)
 }
 
-function ResponsibleMinistrySection({ t }: SectionProps) {
-	const titleRef = useRef<HTMLHeadingElement>(null)
-	const infoRef = useRef<HTMLDivElement>(null)
-	const logoRef = useRef<HTMLDivElement>(null)
-
-	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
-	useAnimSlide(infoRef, { y: 50, delay: 0.2 })
-	useAnimSlide(logoRef, { y: 50, delay: 0.25 })
-
-	return (
-		<>
-			<h2
-				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
-			>
-				{t(`titles.responsibleMinistry`)}
-			</h2>
-			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
-				<div
-					ref={infoRef}
-					className="max-w-[473px] translate-y-[50px] opacity-0"
-				>
-					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`titles.ministryOfEnvironment`)}</h3>
-					<Link
-						href="https://2gis.kz/astana/firm/70000001018130088/71.43893%2C51.124309?m=71.439565%2C51.123237%2F17.41%2Fr%2F3.4"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconPin className="text-secondary block transition-colors" />
-						<span>{t(`pages.contacts.address`)}</span>
-					</Link>
-					<Link
-						href="https://gov.kz"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconGlobal className="text-secondary block transition-colors" />
-						<span>gov.kz</span>
-					</Link>
-				</div>
-
-				<div
-					ref={logoRef}
-					className="text-text 3xl:text-[24px] flex max-w-[806px] translate-y-[50px] items-center justify-center gap-[20px] text-[16px] leading-none font-normal opacity-0 lg:text-[18px] xl:text-[20px] 2xl:text-[22px]"
-				>
-					<Image
-						src="/imgs/kz-gerb.png"
-						alt="Kazakhstan"
-						width={64}
-						height={67}
-						className="block"
-					/>
-					<span>{t(`pages.contacts.ministryOfEnvironment`)}</span>
-				</div>
-			</div>
-		</>
-	)
-}
-
-function VenueSection({ t }: SectionProps) {
-	const titleRef = useRef<HTMLHeadingElement>(null)
-	const linksRef = useRef<HTMLDivElement>(null)
-	const textRef = useRef<HTMLDivElement>(null)
-	const mapRef = useRef<HTMLDivElement>(null)
-
-	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
-	useAnimSlide(linksRef, { y: 50, delay: 0.2 })
-	useAnimSlide(textRef, { y: 50, delay: 0.25 })
-	useAnimSlide(mapRef, { y: 50, delay: 0.3 })
-
-	return (
-		<>
-			<h2
-				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
-			>
-				{t(`titles.venue`)}
-			</h2>
-			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
-				<div
-					ref={linksRef}
-					className="max-w-[473px] translate-y-[50px] opacity-0"
-				>
-					<Link
-						href="https://2gis.kz/astana/firm/70000001018130088/71.43893%2C51.124309?m=71.439565%2C51.123237%2F17.41%2Fr%2F3.4"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconPin className="text-secondary block transition-colors" />
-						<span>{t(`pages.contacts.eventAddress`)}</span>
-					</Link>
-					<Link
-						href="https://gov.kz"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconGlobal className="text-secondary block transition-colors" />
-						<span>gov.kz</span>
-					</Link>
-				</div>
-
-				<div
-					ref={textRef}
-					className="text-text max-w-[316px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0"
-				>
-					{t(`pages.contacts.text`)}
-				</div>
-
-				<div
-					ref={mapRef}
-					className="aspect-[1.5] max-w-[716px] grow translate-y-[50px] opacity-0 lg:aspect-[4.2]"
-				>
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
-						style={{ border: 0 }}
-						allowFullScreen
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
-						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
-					></iframe>
-				</div>
-			</div>
-		</>
-	)
-}
-
 export default function Page() {
 	const t = useTranslations()
 
@@ -517,14 +389,6 @@ export default function Page() {
 
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<MeprSection t={t} />
-					</div>
-
-					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
-						<ResponsibleMinistrySection t={t} />
-					</div>
-
-					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
-						<VenueSection t={t} />
 					</div>
 				</Container>
 			</section>
