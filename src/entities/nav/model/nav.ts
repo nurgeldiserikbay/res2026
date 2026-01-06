@@ -17,9 +17,9 @@ export const headerNav: readonly NavItem[] = (
 			main: true,
 			children: [
 				{ key: 'about.res', href: '/about' }, // RES 2026
-				{ key: 'about.organizers', href: '/about/organizers' },
-				{ key: 'about.coOrganizers', href: '/about/co-organizers' },
-				{ key: 'about.partners', href: '/partners' },
+				// { key: 'about.organizers', href: '/about/organizers' },
+				// { key: 'about.coOrganizers', href: '/about/co-organizers' },
+				// { key: 'about.partners', href: '/partners' },
 			],
 			show: true,
 		},
