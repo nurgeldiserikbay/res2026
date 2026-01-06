@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { appConfig } from '@/shared/config/app.config'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
@@ -65,7 +66,7 @@ export default function Home() {
 	useAnimSlide(ConnectionImageRef, { x: -200, y: 0, delay: 0.2 })
 	const ConnectionButtonRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(ConnectionButtonRef, { y: 50, delay: 0.3 })
-
+	console.log('process.env.NEXT_PUBLIC_GIT_BRANCH', process.env.NEXT_PUBLIC_GIT_BRANCH)
 	return (
 		<>
 			<section
@@ -196,48 +197,50 @@ export default function Home() {
 				</Container>
 			</section>
 
-			<section className="bg-white">
-				<Container>
-					<div
-						ref={ConnectionBannerRef}
-						data-animated-banner
-						className="relative rounded-[17px] px-[36px] pt-[58px] pr-[28px] pb-[181px] md:pr-[36px] md:pb-[84px]"
-					>
-						<div className="3xl:max-w-[1196px] relative z-10 max-w-full xl:max-w-[800px] 2xl:max-w-[900px]">
-							<p
-								ref={ConnectionTextRef}
-								className="font-regular 3xl:text-[40px] xs:text-[24px] mb-[55px] translate-y-[50px] text-left text-[20px] leading-[1.3] text-white opacity-0 xl:text-[28px] 2xl:text-[32px]"
-							>
-								{t(`pages.connectionBanner.text`)}
-							</p>
-							<div
-								ref={ConnectionButtonRef}
-								className="translate-y-[50px] opacity-0"
-							>
-								<ButtonTree
-									className={[
-										'w-full before:bg-[url("/imgs/btn-mask-tree-yellow.svg")]! before:bg-blend-normal! md:w-auto md:before:bg-[url("/imgs/btn-mask-tree.svg")]! md:before:bg-blend-overlay!',
-									].join(' ')}
+			{!appConfig.isProduction && (
+				<section className="bg-white">
+					<Container>
+						<div
+							ref={ConnectionBannerRef}
+							data-animated-banner
+							className="relative rounded-[17px] px-[36px] pt-[58px] pr-[28px] pb-[181px] md:pr-[36px] md:pb-[84px]"
+						>
+							<div className="3xl:max-w-[1196px] relative z-10 max-w-full xl:max-w-[800px] 2xl:max-w-[900px]">
+								<p
+									ref={ConnectionTextRef}
+									className="font-regular 3xl:text-[40px] xs:text-[24px] mb-[55px] translate-y-[50px] text-left text-[20px] leading-[1.3] text-white opacity-0 xl:text-[28px] 2xl:text-[32px]"
 								>
-									{t('commands.join')}
-								</ButtonTree>
+									{t(`pages.connectionBanner.text`)}
+								</p>
+								<div
+									ref={ConnectionButtonRef}
+									className="translate-y-[50px] opacity-0"
+								>
+									<ButtonTree
+										className={[
+											'w-full before:bg-[url("/imgs/btn-mask-tree-yellow.svg")]! before:bg-blend-normal! md:w-auto md:before:bg-[url("/imgs/btn-mask-tree.svg")]! md:before:bg-blend-overlay!',
+										].join(' ')}
+									>
+										{t('commands.join')}
+									</ButtonTree>
+								</div>
+							</div>
+							<div
+								ref={ConnectionImageRef}
+								className="absolute right-0 -bottom-[65px] translate-x-[-200px] opacity-0 md:bottom-0"
+							>
+								<Image
+									src="/imgs/connection.png"
+									alt="Connection"
+									width={811}
+									height={414}
+									className="block h-[280px] w-auto lg:h-[414px]"
+								/>
 							</div>
 						</div>
-						<div
-							ref={ConnectionImageRef}
-							className="absolute right-0 -bottom-[65px] translate-x-[-200px] opacity-0 md:bottom-0"
-						>
-							<Image
-								src="/imgs/connection.png"
-								alt="Connection"
-								width={811}
-								height={414}
-								className="block h-[280px] w-auto lg:h-[414px]"
-							/>
-						</div>
-					</div>
-				</Container>
-			</section>
+					</Container>
+				</section>
+			)}
 		</>
 	)
 }

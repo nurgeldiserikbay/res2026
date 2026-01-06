@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 import { headerNav } from '@/entities/nav/model/nav'
+import { appConfig } from '@/shared/config/app.config'
 import { IconClose } from '@/shared/icons/IconClose'
 import { IconMenu } from '@/shared/icons/IconMenu'
 import { Container } from '@/shared/ui/container/container'
@@ -50,7 +51,7 @@ export function HeaderMobileNav() {
 				<Container>
 					<div className="mb-[40px] flex items-center justify-between">
 						<HeaderLogo />
-						<HeaderSocial />
+						{!appConfig.isProduction && <HeaderSocial />}
 						<button
 							type="button"
 							aria-label="Close"
@@ -61,8 +62,8 @@ export function HeaderMobileNav() {
 						</button>
 					</div>
 
-					<div className="xs:gap-x-[40px] xs:gap-y-[60px] flex flex-wrap gap-x-[10px] gap-y-[30px]">
-						{headerNav.map((item) => {
+					<div className="xs:gap-x-[40px] xs:gap-y-[60px] flex flex-wrap gap-x-[60px] gap-y-[30px]">
+						{headerNav.slice(0, 2).map((item) => {
 							const active = isActive(pathname, item.href)
 
 							if (item.children?.length) {

@@ -1,35 +1,13 @@
 import Image from 'next/image'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { NewsShortItem } from '@/entities/news/NewsShortItem'
-import { Locale } from '@/shared/config/i18n'
 import { Container } from '@/shared/ui/container/container'
-import { localize } from '@/shared/utils/localize'
 import { newsPaginItems } from '@/widgets/news/mocks'
 
-interface PageProps {
-	params: Promise<{ slug: string }>
-}
-
-export default async function Page({ params }: PageProps) {
-	const { slug } = await params
-
-	return <NewsDetailContent slug={slug} />
-}
-
-function NewsDetailContent({ slug }: { slug: string }) {
+export default function Page() {
 	const t = useTranslations()
-	const locale = useLocale() as Locale
-
-	const newsItem = newsPaginItems.find((item) => item.slug === slug)
-	const otherNews = newsPaginItems.filter((item) => item.slug !== slug).slice(0, 5)
-
-	const title = newsItem ? localize(newsItem.title, locale) : ''
-	const date = newsItem ? localize(newsItem.date, locale) : ''
-	const tag = newsItem ? localize(newsItem.tag, locale) : ''
-	const content = newsItem ? localize(newsItem.content, locale) : ''
-	const image = newsItem?.image || '/imgs/news-item-banner.png'
 
 	return (
 		<>
@@ -39,7 +17,7 @@ function NewsDetailContent({ slug }: { slug: string }) {
 					<Breadcrumbs
 						breadcrumbs={[
 							{ label: t('titles.news'), href: '/news' },
-							{ label: title || t('titles.news'), href: `/news/${slug}` },
+							{ label: t('titles.news'), href: '/news/slug' },
 						]}
 					/>
 				</Container>
@@ -49,28 +27,29 @@ function NewsDetailContent({ slug }: { slug: string }) {
 				<Container className="flex flex-wrap items-start justify-between gap-[30px] lg:flex-nowrap lg:gap-[54px]">
 					<div className="max-w-[1332px] grow">
 						<h2 className="text-text 3xl:text-[48px] mb-[50px] max-w-[1214px] text-[32px] leading-none font-normal xl:text-[36px] 2xl:text-[44px]">
-							{title}
+							<strong>Центральная Азия объединяет усилия</strong> для достижения глобальной цели климатического финансирования
 						</h2>
-						<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">{date}</div>
-						<div className="mb-[50px] text-[13px] leading-none font-light text-[#777C83]">
-							{'//'}
-							{tag}
-						</div>
+						<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">26 декабря 2026</div>
+						<div className="mb-[50px] text-[13px] leading-none font-light text-[#777C83]">\\Экология и окружаящая среда</div>
 
 						<Image
-							src={image}
-							alt={title}
+							src="/imgs/news-item-banner.png"
+							alt="news"
 							width={1332}
 							height={613}
 							className="mb-[50px] block aspect-[2.17] w-full rounded-[12px] object-cover"
 						/>
 
-						{content && (
-							<div
-								className="news-content text-text prose prose-lg max-w-none text-[16px] leading-relaxed font-normal lg:text-[18px] 2xl:text-[20px] [&_p]:mb-[20px] [&_p:first-child>strong]:mt-0 [&_p:last-child]:mb-0 [&_p>strong]:mt-[40px] [&_p>strong]:mb-[15px] [&_p>strong]:block [&_p>strong]:text-[20px] [&_p>strong]:lg:text-[24px] [&_p>strong]:2xl:text-[28px] [&_strong]:font-bold"
-								dangerouslySetInnerHTML={{ __html: content }}
-							/>
-						)}
+						<p className="text-text mb-[60px] text-[20px] leading-normal font-normal lg:text-[22px] 2xl:text-[24px]">
+							В Ашхабаде проводится 7-я Центрально-Азиатская конференция по вопросам изменения климата (ЦАКИК-2025). В рамках конференции 14
+							мая 2025 года Министерством экологии и природных ресурсов Казахстана совместно с Проектным офисом для Центральной Азии по
+							изменению климата и зеленой энергетики проведена третья региональная консультация по подготовке к Региональному климатическому
+							саммиту в 2026 году.
+						</p>
+
+						<p className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">
+							{`Мероприятие собрало представителей государственных органов из стран Центральной Азии, международных организаций, научного сообщества и гражданского сектора. Консультация прошла под темой: «Климатические риски в Центральной Азии: механизмы оценки и реагирования» и стала очередным важным этапом в формировании регионального подхода к адаптации и устойчивому развитию.\n\n\n С приветственным словом на открытии выступил вице-министр экологии и природных ресурсов Республики Казахстан г-н Мансур Ошурбаев. Также участников приветствовал депутат Мажилиса Парламента Республики Казахстан г-н Еділ Жаңбыршин. Представителем Проектного офиса было представлено видение по проведению Саммита, а также итоги первой и второй консультации.\n\n Особое внимание было уделено презентации Потсдамского института исследований воздействия на климат (PIK), представившего научный анализ климатических рисков в регионе.`}
+						</p>
 					</div>
 
 					<div className="lg:w-[405px] lg:shrink-0">
@@ -79,7 +58,7 @@ function NewsDetailContent({ slug }: { slug: string }) {
 						</h2>
 
 						<div>
-							{otherNews.map((item, index) => (
+							{newsPaginItems.slice(0, 5).map((item, index) => (
 								<div
 									key={index}
 									className="mb-[10px] w-full last:mb-0"

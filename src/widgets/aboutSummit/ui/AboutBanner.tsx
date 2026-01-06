@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
@@ -29,12 +30,12 @@ export function AboutBanner() {
 	useAnimSlide(MapRef, { y: 50, delay: 0.1 })
 	const DateBlockRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(DateBlockRef, { y: 50, delay: 0.3 })
-	const ButtonRef = useRef<HTMLButtonElement>(null)
+	const ButtonRef = useRef<HTMLAnchorElement>(null)
 	useAnimSlide(ButtonRef, { y: 50, delay: 0.4 })
 
 	return (
 		<>
-			<section className="bg-primary-dark">
+			<section className="bg-primary-dark pt-[100px]">
 				<div
 					ref={BannerRef}
 					data-animated-banner
@@ -64,13 +65,14 @@ export function AboutBanner() {
 								{t('pages.about.resText1')}
 							</p>
 
-							<button
+							<Link
+								href="#about-content"
 								ref={ButtonRef}
 								className="text-secondary flex translate-y-[50px] items-center gap-[20px] text-[14px] leading-normal font-normal opacity-0 sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
 							>
 								<IconDoubleArrowDown className="text-secondary" />
 								<span>{t('labels.swipeForward')}</span>
-							</button>
+							</Link>
 						</div>
 
 						<div

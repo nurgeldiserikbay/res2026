@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
+import { appConfig } from '@/shared/config/app.config'
 import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
@@ -68,15 +69,17 @@ function OrganizersSection({ t }: SectionProps) {
 						<span>www.res2026.kz</span>
 					</Link>
 				</div>
-				<div
-					ref={socialRef}
-					className="w-full max-w-[156px] translate-y-[50px] opacity-0"
-				>
-					<FooterSocial />
-				</div>
+				{!appConfig.isProduction && (
+					<div
+						ref={socialRef}
+						className="w-full max-w-[156px] translate-y-[50px] opacity-0"
+					>
+						<FooterSocial />
+					</div>
+				)}
 				<div
 					ref={mapRef}
-					className="aspect-[1.5] max-w-[716px] grow translate-y-[50px] opacity-0 lg:aspect-[4.2]"
+					className="aspect-[1.5] max-w-[1316px] grow translate-y-[50px] opacity-0 lg:aspect-[3.6]"
 				>
 					<iframe
 						id="map_279913141"

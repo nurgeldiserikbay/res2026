@@ -1,14 +1,17 @@
-import Image from 'next/image'
-import { useTranslations } from 'next-intl'
-import { useRef, useState } from 'react'
+'use client'
 
-import { IconArrowDown } from '@/shared/icons/IconArrowDown'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import { useRef } from 'react'
+
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
 
 export function AboutSummit() {
 	const t = useTranslations()
+	const router = useRouter()
 
 	const AboutSummitRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitRef, { x: -90, y: 0, delay: 0.1 })
@@ -28,8 +31,14 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitQuoteRef, { y: 90, delay: 0.35 })
 	const AboutSummitPurposeRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitPurposeRef, { y: 90, delay: 0.45 })
+	const AboutSummitMobileTitleRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(AboutSummitMobileTitleRef, { y: 50, delay: 0.1 })
+	const AboutSummitButtonInsideRef = useRef<HTMLButtonElement | null>(null)
+	useAnimSlide(AboutSummitButtonInsideRef, { y: 50, delay: 0.25 })
+	const AboutSummitPresidentImgRef = useRef<HTMLImageElement>(null)
+	useAnimSlide(AboutSummitPresidentImgRef, { x: -50, delay: 0.4 })
 
-	const [isOpen, setIsOpen] = useState(false)
+	// const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] lg:py-[80px] 2xl:py-[80px]">
@@ -45,6 +54,7 @@ export function AboutSummit() {
 						<ButtonDefault
 							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
 							className="translate-y-90 opacity-0"
+							onClick={() => router.push('/about')}
 						>
 							{t('pages.about.moreAboutSummit')}
 						</ButtonDefault>
@@ -59,9 +69,6 @@ export function AboutSummit() {
 								height={363}
 								className="block max-w-full translate-y-90 rounded-[12px] opacity-0"
 							/>
-							<ButtonDefault className="!absolute bottom-[15px] left-[15px] z-1 text-[12px] sm:bottom-[30px] sm:left-[30px] sm:text-base">
-								{t('pages.about.moreAboutSummit')}
-							</ButtonDefault>
 						</div>
 						<div className="flex flex-wrap items-center justify-between gap-[10px] sm:gap-[20px]">
 							<Image
@@ -103,13 +110,16 @@ export function AboutSummit() {
 				</div>
 
 				<div className="flex w-full grow flex-col justify-start xl:max-w-[1025px]">
-					<div className="font-regular text-text mb-[20px] block text-[20px] leading-[1.2] sm:mb-[30px] sm:text-[22px] md:text-[24px] xl:hidden">
+					<div
+						ref={AboutSummitMobileTitleRef}
+						className="font-regular text-text mb-[20px] block translate-y-[50px] text-[20px] leading-[1.2] opacity-0 sm:mb-[30px] sm:text-[22px] md:text-[24px] xl:hidden"
+					>
 						{t(`titles.aboutSummit`)}
 					</div>
 
 					<div
 						ref={AboutSummitTitleRef}
-						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold opacity-0 sm:mb-[25px] sm:text-[24px] md:mb-[31px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:mb-[60px] 2xl:text-[44px]"
+						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[24px] md:mb-[31px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:mb-[60px] 2xl:text-[44px]"
 					>
 						{t.rich('pages.aboutSummit.title', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
@@ -127,11 +137,12 @@ export function AboutSummit() {
 
 						<div className="relative z-1 flex flex-wrap items-start gap-[20px] sm:flex-nowrap sm:gap-[30px] md:gap-[50px]">
 							<Image
+								ref={AboutSummitPresidentImgRef}
 								src="/imgs/president-img.png"
 								alt="About President"
 								width={213}
 								height={309}
-								className="block w-full max-w-[150px] sm:max-w-[180px] md:max-w-[213px]"
+								className="block w-full max-w-[150px] -translate-x-[50px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 							/>
 							<div className="w-full max-w-[631px]">
 								<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
@@ -142,7 +153,7 @@ export function AboutSummit() {
 						</div>
 					</div>
 
-					<div className="relative pb-[40px] sm:pb-[54px]">
+					<div className="relative">
 						<div
 							ref={AboutSummitPurposeRef}
 							className="translate-y-90 opacity-0"
@@ -153,7 +164,7 @@ export function AboutSummit() {
 							<p className="font-regular text-text text-left text-[14px] leading-normal sm:text-[16px]">{t(`pages.about.text3`)}</p>
 						</div>
 
-						{isOpen && (
+						{/*isOpen && (
 							<div className="mt-[40px] sm:mt-[60px]">
 								<h3 className="text-text mb-[8px] text-[20px] leading-normal font-bold sm:mb-[10px] sm:text-[22px] md:text-[24px]">
 									{t(`pages.about.presidentInitiative`)}
@@ -162,7 +173,7 @@ export function AboutSummit() {
 									{t(`pages.about.presidentInitiativeText`)}
 								</p>
 							</div>
-						)}
+						)*/}
 
 						{/* <p
 							ref={AboutSummitText1Ref}
@@ -171,7 +182,7 @@ export function AboutSummit() {
 							{t(`pages.aboutSummit.text1`)}
 						</p> */}
 
-						<button
+						{/* <button
 							onClick={() => setIsOpen(!isOpen)}
 							className="text-secondary absolute bottom-0 left-0 flex cursor-pointer items-center gap-[8px] text-[12px] leading-normal font-bold sm:gap-[10px] sm:text-[14px]"
 						>
@@ -182,7 +193,7 @@ export function AboutSummit() {
 									isOpen && 'rotate-180',
 								].join(' ')}
 							/>
-						</button>
+						</button> */}
 					</div>
 
 					{/* <Image
