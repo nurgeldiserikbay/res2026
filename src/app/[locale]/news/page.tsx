@@ -8,7 +8,7 @@ import { NewsItem } from '@/entities/news/NewsItem'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
-// import { MainPagination } from '@/shared/ui/pagination/MainPagination'
+import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 import { newsPaginItems } from '@/widgets/news/mocks'
 import { NewsTabLinks } from '@/widgets/news/ui/NewsTabLinks'
 
@@ -96,12 +96,12 @@ export default function Page() {
 						))}
 					</div>
 
-					{/* <div
+					<div
 						ref={PaginationRef}
 						className="mt-[30px] flex translate-y-[50px] items-center justify-center opacity-0 xl:mt-[50px]"
 					>
 						<MainPagination totalPages={10} />
-					</div> */}
+					</div>
 				</Container>
 			</section>
 		</>

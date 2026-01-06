@@ -8,7 +8,7 @@ import { NewsItem } from '@/entities/news/NewsItem'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
-// import { MainPagination } from '@/shared/ui/pagination/MainPagination'
+import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 import { newsPaginItems } from '@/widgets/news/mocks'
 import { NewsTabLinks } from '@/widgets/news/ui/NewsTabLinks'
 
@@ -86,24 +86,22 @@ export default function Page() {
 					</div>
 
 					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
-						{newsPaginItems
-							.filter((item) => item.type === 'release')
-							.map((item, index) => (
-								<NewsItemWrapper
-									key={index}
-									item={item}
-									index={index}
-									delay={0.1 + index * 0.1}
-								/>
-							))}
+						{newsPaginItems.map((item, index) => (
+							<NewsItemWrapper
+								key={index}
+								item={item}
+								index={index}
+								delay={0.1 + index * 0.1}
+							/>
+						))}
 					</div>
 
-					{/* <div
+					<div
 						ref={PaginationRef}
 						className="mt-[30px] flex translate-y-[50px] items-center justify-center opacity-0 xl:mt-[50px]"
 					>
 						<MainPagination totalPages={10} />
-					</div> */}
+					</div>
 				</Container>
 			</section>
 		</>

@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
 import { Locale, LocalizedText } from '@/shared/config/i18n'
+import { localize } from '@/shared/utils/localize'
+
 import { IconArrowRight } from '@/shared/icons/IconArrowRight'
 import { IconEye } from '@/shared/icons/IconEye'
-import { localize } from '@/shared/utils/localize'
 
 export interface NewsItemProps {
 	title: LocalizedText | string
@@ -14,7 +15,7 @@ export interface NewsItemProps {
 	tag: LocalizedText | string
 	slug: string
 	variant: 'light' | 'dark'
-	type: 'release' | 'anounce' | 'news'
+	type: 'release' | 'anounce'
 	content: LocalizedText | string
 	wide?: boolean
 	views?: number
