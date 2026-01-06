@@ -14,14 +14,8 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitRef, { x: -90, y: 0, delay: 0.1 })
 	const AboutSummitTitleRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitTitleRef, { x: 90, y: 0, delay: 0.1 })
-	const AboutSummitText1Ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(AboutSummitText1Ref, { y: 90, delay: 0.2 })
-	const AboutSummitText2Ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(AboutSummitText2Ref, { y: 90, delay: 0.3 })
 	const AboutSummitButtonRef = useRef<HTMLButtonElement | null>(null)
 	useAnimSlide(AboutSummitButtonRef, { y: 90, delay: 0.4 })
-	const AboutSummitMapRef = useRef<HTMLImageElement>(null)
-	useAnimSlide(AboutSummitMapRef, { x: 90, y: 0, delay: 0.2 })
 	const AboutSummitImg1Ref = useRef<HTMLImageElement>(null)
 	useAnimSlide(AboutSummitImg1Ref, { y: 90, delay: 0.1 })
 	const AboutSummitImg2Ref = useRef<HTMLImageElement>(null)
@@ -30,10 +24,6 @@ export function AboutSummit() {
 	useAnimSlide(AboutSummitImg3Ref, { y: 90, delay: 0.3 })
 	const AboutSummitImg4Ref = useRef<HTMLImageElement>(null)
 	useAnimSlide(AboutSummitImg4Ref, { y: 90, delay: 0.4 })
-	const AboutSummitPresidentInitiativeRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(AboutSummitPresidentInitiativeRef, { y: 90, delay: 0.5 })
-	const AboutSummitPresidentTextRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(AboutSummitPresidentTextRef, { y: 90, delay: 0.6 })
 	const AboutSummitQuoteRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitQuoteRef, { y: 90, delay: 0.35 })
 	const AboutSummitPurposeRef = useRef<HTMLDivElement>(null)
@@ -78,7 +68,7 @@ export function AboutSummit() {
 								alt="About Summit 2"
 								width={288}
 								height={187}
-								className="block translate-y-[120px] rounded-[12px] opacity-0"
+								className="block translate-y-90 rounded-[12px] opacity-0"
 							/>
 							<div
 								ref={AboutSummitImg3Ref}
