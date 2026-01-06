@@ -58,7 +58,7 @@ export function AboutSummit() {
 								height={363}
 								className="block max-w-full translate-y-90 rounded-[12px] opacity-0"
 							/>
-							<ButtonDefault className="!absolute bottom-[15px] left-[15px] z-1 text-[12px] sm:bottom-[30px] sm:left-[30px] sm:text-base">
+							<ButtonDefault className="absolute! bottom-[15px] left-[15px] z-1 text-[12px] sm:bottom-[30px] sm:left-[30px] sm:text-base">
 								{t('pages.about.moreAboutSummit')}
 							</ButtonDefault>
 						</div>
@@ -108,7 +108,7 @@ export function AboutSummit() {
 
 					<div
 						ref={AboutSummitTitleRef}
-						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold opacity-0 sm:mb-[25px] sm:text-[24px] md:mb-[31px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:mb-[60px] 2xl:text-[44px]"
+						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[24px] md:mb-[31px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:mb-[60px] 2xl:text-[44px]"
 					>
 						{t.rich('pages.aboutSummit.title', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
