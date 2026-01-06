@@ -82,14 +82,11 @@ function OrganizersSection({ t }: SectionProps) {
 					className="aspect-[1.5] max-w-[1316px] grow translate-y-[50px] opacity-0 lg:aspect-[3.6]"
 				>
 					<iframe
-						width="1316"
-						height="365"
-						frameBorder="0"
-						scrolling="no"
-						marginHeight={0}
-						marginWidth={0}
-						id="gmap_canvas"
-						src="https://maps.google.com/maps?width=1316&amp;height=365&amp;hl=en&amp;q=%D0%BA%D0%BE%D0%BD%D0%B3%D1%80%D0%B5%D1%81%D1%81%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
+						style={{ border: 0 }}
+						allowFullScreen
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
 						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
 					></iframe>
 				</div>
@@ -450,12 +447,11 @@ function VenueSection({ t }: SectionProps) {
 					className="aspect-[1.5] max-w-[716px] grow translate-y-[50px] opacity-0 lg:aspect-[4.2]"
 				>
 					<iframe
-						frameBorder="0"
-						scrolling="no"
-						marginHeight={0}
-						marginWidth={0}
-						id="gmap_canvas"
-						src="https://maps.google.com/maps?width=716&amp;height=200&amp;hl=en&amp;q=%D0%BA%D0%BE%D0%BD%D0%B3%D1%80%D0%B5%D1%81%D1%81%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
+						style={{ border: 0 }}
+						allowFullScreen
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
 						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
 					></iframe>
 				</div>
