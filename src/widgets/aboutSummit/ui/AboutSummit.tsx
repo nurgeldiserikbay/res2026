@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 
-import { IconArrowDown } from '@/shared/icons/IconArrowDown'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
@@ -29,7 +28,7 @@ export function AboutSummit() {
 	const AboutSummitPurposeRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitPurposeRef, { y: 90, delay: 0.45 })
 
-	const [isOpen, setIsOpen] = useState(false)
+	// const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] lg:py-[80px] 2xl:py-[80px]">
@@ -142,7 +141,7 @@ export function AboutSummit() {
 						</div>
 					</div>
 
-					<div className="relative pb-[40px] sm:pb-[54px]">
+					<div className="relative">
 						<div
 							ref={AboutSummitPurposeRef}
 							className="translate-y-90 opacity-0"
@@ -153,7 +152,7 @@ export function AboutSummit() {
 							<p className="font-regular text-text text-left text-[14px] leading-normal sm:text-[16px]">{t(`pages.about.text3`)}</p>
 						</div>
 
-						{isOpen && (
+						{/*isOpen && (
 							<div className="mt-[40px] sm:mt-[60px]">
 								<h3 className="text-text mb-[8px] text-[20px] leading-normal font-bold sm:mb-[10px] sm:text-[22px] md:text-[24px]">
 									{t(`pages.about.presidentInitiative`)}
@@ -162,7 +161,7 @@ export function AboutSummit() {
 									{t(`pages.about.presidentInitiativeText`)}
 								</p>
 							</div>
-						)}
+						)*/}
 
 						{/* <p
 							ref={AboutSummitText1Ref}
@@ -171,7 +170,7 @@ export function AboutSummit() {
 							{t(`pages.aboutSummit.text1`)}
 						</p> */}
 
-						<button
+						{/* <button
 							onClick={() => setIsOpen(!isOpen)}
 							className="text-secondary absolute bottom-0 left-0 flex cursor-pointer items-center gap-[8px] text-[12px] leading-normal font-bold sm:gap-[10px] sm:text-[14px]"
 						>
@@ -182,7 +181,7 @@ export function AboutSummit() {
 									isOpen && 'rotate-180',
 								].join(' ')}
 							/>
-						</button>
+						</button> */}
 					</div>
 
 					{/* <Image
