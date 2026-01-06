@@ -27,15 +27,15 @@ export function Footer() {
 	const FooterText1Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterText1Ref, { y: 50, delay: 0.4 })
 	const FooterText2Ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(FooterText2Ref, { y: 50, delay: 0.5, start: 'top bottom' })
+	useAnimSlide(FooterText2Ref, { y: 50, delay: 0.5, start: 'top 95%' })
 	const FooterContactsRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterContactsRef, { y: 50, delay: 0.6 })
 	const FooterSocialRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(FooterSocialRef, { y: 50, delay: 0.7, start: 'top bottom' })
+	useAnimSlide(FooterSocialRef, { y: 50, delay: 0.7, start: 'top 95%' })
 	const FooterNavBottomRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterNavBottomRef, { y: 50, delay: 0.8 })
 	const FooterCopyrightRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9, start: 'top bottom' })
+	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9, start: 'top 95%' })
 
 	return (
 		<footer className="relative z-1 bg-white pt-[50px] pb-[38px] lg:pt-[75px] lg:pb-[58px] 2xl:pt-[100px] 2xl:pb-[82px]">
