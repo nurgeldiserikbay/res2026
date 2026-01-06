@@ -38,7 +38,7 @@ deploy-prod:
     - ssh -p 22022 $D_SERVER "docker rm res2026-dev" || true
     - ssh -p 22022 $D_SERVER "docker run -d --name res2026-dev -p 3000:3000 $CI_REGISTRY_IMAGE:$TAG
   # when: manual
-  only:
-    - main
+#  only:
+#    - main
 
 
