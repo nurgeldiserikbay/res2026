@@ -35,7 +35,8 @@ deploy-prod:
     - echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config	
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
   script:
     - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
     - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-dev" || true
