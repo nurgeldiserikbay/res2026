@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { IconQuot } from '@/shared/icons/IconQuot'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
-import { IconQuot } from '@/shared/icons/IconQuot'
 
 export function AboutSummit() {
 	const t = useTranslations()
@@ -64,11 +64,11 @@ export function AboutSummit() {
 						<div className="relative mb-[16px] max-w-full sm:mb-[24px]">
 							<Image
 								ref={AboutSummitImg1Ref}
-								src="/imgs/about-img-1.png"
+								src="/imgs/about-img-1.webp"
 								alt="About Summit"
-								width={713}
-								height={363}
-								className="block max-w-full translate-y-90 rounded-[12px] opacity-0"
+								width={351}
+								height={377}
+								className="block w-full translate-y-90 rounded-[12px] opacity-0"
 							/>
 						</div>
 					</div>
@@ -110,6 +110,7 @@ export function AboutSummit() {
 								className="block w-full max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 							/>
 							<div className="w-full max-w-[631px]">
+								<div className="text-text mb-[10px] text-[16px] leading-normal font-bold">{t(`pages.about.presidentTextTitle`)}</div>
 								<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
 									{t('pages.about.presidentText')}
 								</div>
