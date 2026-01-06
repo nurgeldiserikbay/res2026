@@ -10,7 +10,9 @@
 		"about": {
 			"root": "ӨЭС 2026 туралы",
 			"region": "Аймақ туралы",
-			"res": "ӨЭС 2026",
+			"res": "Саммит туралы",
+			"preparationProcess": "Дайындық процесі",
+			"keyDirections": "Негізгі бағыттар",
 			"organizers": "Ұйымдастырушылар",
 			"coOrganizers": "Бірлескен ұйымдастырушылар",
 			"specialProjects": "Арнайы жобалар",

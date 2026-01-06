@@ -8,12 +8,12 @@ import { HeaderSocial } from './HeaderSocial'
 
 export function HeaderActions() {
 	return (
-		<div className="flex grow items-center justify-end gap-[10px] md:max-w-[456px] md:justify-end lg:max-w-[556px]">
+		<div className="flex grow items-center justify-end gap-[10px] md:max-w-[456px] md:justify-end lg:max-w-[156px]">
 			<div className="hidden max-w-[210px] grow items-center justify-between gap-[10px] md:flex">
 				{!appConfig.isProduction && <HeaderSocial />}
 				<HeaderSearch />
 			</div>
-			<div className="flex items-center gap-[10px]">
+			<div className="flex items-center gap-[30px]">
 				<HeaderLang />
 				{!appConfig.isProduction && <HeaderCta className="max-[441px]:hidden" />}
 				<HeaderMobileNav />

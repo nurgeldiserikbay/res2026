@@ -29,6 +29,12 @@ export function AboutContent() {
 	useAnimSlide(Image3Ref, { y: 50, delay: 0.8 })
 	const ResText2Ref = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(ResText2Ref, { y: 50, delay: 0.35 })
+	const ResText3Ref = useRef<HTMLParagraphElement>(null)
+	useAnimSlide(ResText3Ref, { y: 50, delay: 0.45 })
+	const PresidentImgRef = useRef<HTMLImageElement>(null)
+	useAnimSlide(PresidentImgRef, { x: -50, delay: 0.35 })
+	const Image1TextRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(Image1TextRef, { y: 30, delay: 0.65 })
 
 	return (
 		<>
@@ -70,7 +76,10 @@ export function AboutContent() {
 											height={662}
 											className="block rounded-[12px]"
 										/>
-										<div className="absolute bottom-0 left-0 p-[15px] sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[60px]">
+										<div
+											ref={Image1TextRef}
+											className="absolute bottom-0 left-0 translate-y-[30px] p-[15px] opacity-0 sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[60px]"
+										>
 											<div className="mb-[10px] max-w-[294px] text-[11px] leading-normal font-normal text-white sm:mb-[15px] sm:text-[12px] md:mb-[20px] md:text-[14px] lg:mb-[25px] lg:text-[16px] xl:mb-[30px]">
 												{t(`pages.footer.text`)}
 											</div>
@@ -101,7 +110,10 @@ export function AboutContent() {
 						>
 							{t('pages.about.resText2')}
 						</p>
-						<p className="text-text mb-[30px] text-[14px] leading-normal font-normal sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]">
+						<p
+							ref={ResText3Ref}
+							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
+						>
 							{t.rich('pages.about.resText3', {
 								link: (chunks) => (
 									<Link
@@ -127,11 +139,12 @@ export function AboutContent() {
 								className="relative z-1 flex flex-wrap items-start gap-[15px] sm:flex-nowrap sm:gap-[20px] md:gap-[30px]"
 							>
 								<Image
+									ref={PresidentImgRef}
 									src="/imgs/president-about-img.png"
 									alt="About President"
 									width={213}
 									height={360}
-									className="block w-full max-w-[150px] rounded-[12px] sm:max-w-[180px] md:max-w-[213px]"
+									className="block w-full max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 								/>
 								<div className="w-full sm:flex-1">
 									<div className="font-regular relative z-1 mb-[20px] text-[12px] leading-normal whitespace-pre-line text-black sm:mb-[25px] sm:text-[13px] md:mb-[30px] md:text-[14px] lg:mb-[40px] lg:text-[15px] xl:mb-[50px]">

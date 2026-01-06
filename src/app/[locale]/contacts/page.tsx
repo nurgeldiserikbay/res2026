@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
+import { appConfig } from '@/shared/config/app.config'
 import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
@@ -68,23 +69,32 @@ function OrganizersSection({ t }: SectionProps) {
 						<span>www.res2026.kz</span>
 					</Link>
 				</div>
-				<div
-					ref={socialRef}
-					className="w-full max-w-[156px] translate-y-[50px] opacity-0"
-				>
-					<FooterSocial />
-				</div>
+				{!appConfig.isProduction && (
+					<div
+						ref={socialRef}
+						className="w-full max-w-[156px] translate-y-[50px] opacity-0"
+					>
+						<FooterSocial />
+					</div>
+				)}
 				<div
 					ref={mapRef}
-					className="aspect-[1.5] max-w-[716px] grow translate-y-[50px] opacity-0 lg:aspect-[4.2]"
+					className="aspect-[1.5] max-w-[1316px] grow translate-y-[50px] opacity-0 lg:aspect-[3.6]"
 				>
 					<iframe
-						id="map_279913141"
 						frameBorder="0"
-						src="https://makemap.2gis.ru/widget?data=eJw1jkFvgzAMhf-Ld0VVEpLS5Ad02q23Spt6QMTbIgWMgiu1Q_z3Gdh8svz83vtmoBKxYHxF6pFLwgnCxwz8HBECnLHle0GoYCw0YuFNn6GjTEX0F2VO-tOIzonz6pA14tSVNHKiYT_8vA0RHxC0-p-lgq-98LnG_bVdKA0s_x0JVBpa3mAafbBa17WvnD4ob2pzE3uKEKyzy62Cvh0vNKW9b4bcMgR51cY7722j3OkoZsirvIbZ2iqnna6PjRE4ol7QjGQKNuV8_UbM79uVyx2XXxioWJ0"
-						sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+						scrolling="no"
+						marginHeight="0"
+						marginWidth="0"
+						id="gmap_canvas"
+						src="https://maps.google.com/maps?width=716&amp;height=200&amp;hl=en&amp;q=%D0%9A%D0%BE%D0%BD%D0%B3%D1%80%D0%B5%D1%81%D1%81%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%20%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 						className="h-full w-full rounded-[12px]"
-					></iframe>
+					></iframe>{' '}
+					<a href="https://masterarbeitschreiben.com/">Masterarbeit schreiben lassen</a>{' '}
+					<script
+						type="text/javascript"
+						src="https://embedmaps.com/google-maps-authorization/script.js?id=8e760b16bf7273b495cf43f967afd5bb75e4a0b1"
+					></script>
 				</div>
 			</div>
 		</>
