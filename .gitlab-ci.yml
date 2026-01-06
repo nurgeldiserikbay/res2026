@@ -16,7 +16,8 @@ before_script:
 docker-build:
   stage: dockerize
   image: docker:29.0.0
-  when: on_success
+  variables:
+    GIT_STRATEGY: fetch
   tags: [crocos-docker]
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
