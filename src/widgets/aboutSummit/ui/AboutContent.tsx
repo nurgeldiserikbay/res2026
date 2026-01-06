@@ -4,22 +4,12 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
-import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 export function AboutContent() {
 	const t = useTranslations()
 
-	const AboutConnectionBannerRef = useRef<HTMLDivElement>(null)
-	useAnimBg(AboutConnectionBannerRef, {
-		fromSize: '120%',
-		toSize: '100%',
-		fromPosition: 'center 60%',
-		toPosition: 'center center',
-		duration: 1.4,
-		bgImage: '/imgs/connection-banner.png',
-	})
 	const TextRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(TextRef, { y: 50, delay: 0.1 })
 	const QuoteRef = useRef<HTMLDivElement>(null)
@@ -29,23 +19,15 @@ export function AboutContent() {
 	const Text2Ref = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(Text2Ref, { y: 50, delay: 0.4 })
 	const Image1Ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(Image1Ref, { y: 50, delay: 0.5 })
+	useAnimSlide(Image1Ref, { y: 60, delay: 0.5 })
 	const Image2Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(Image2Ref, { y: 50, delay: 0.6 })
 	const PurposeRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(PurposeRef, { y: 50, delay: 0.7 })
 	const Image3Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(Image3Ref, { y: 50, delay: 0.8 })
-	const PresidentInitiativeTitleRef = useRef<HTMLHeadingElement>(null)
-	useAnimSlide(PresidentInitiativeTitleRef, { y: 50, delay: 0.15 })
-	const PresidentInitiativeTextRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(PresidentInitiativeTextRef, { y: 50, delay: 0.2 })
-	const ConnectionTextRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(ConnectionTextRef, { y: 50, delay: 0.1 })
-	const ConnectionImageRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(ConnectionImageRef, { x: -200, y: 0, delay: 0.2 })
-	const ConnectionButtonRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(ConnectionButtonRef, { y: 50, delay: 0.3 })
+	const ResText2Ref = useRef<HTMLParagraphElement>(null)
+	useAnimSlide(ResText2Ref, { y: 50, delay: 0.35 })
 
 	return (
 		<>
@@ -120,7 +102,12 @@ export function AboutContent() {
 							</div>
 						</div>
 
-						<p className="mb-[60px]">{t('pages.about.resText2')}</p>
+						<p
+							ref={ResText2Ref}
+							className="text-text mb-[60px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-[16px]"
+						>
+							{t('pages.about.resText2')}
+						</p>
 
 						<h2
 							ref={PurposeRef}
