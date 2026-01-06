@@ -12,7 +12,7 @@ export function NewsTabLinks() {
 	const newsTabs = [
 		{
 			id: 1,
-			href: '/news',
+			href: '/news/last-news',
 			title: t('labels.latestNews'),
 		},
 		{
