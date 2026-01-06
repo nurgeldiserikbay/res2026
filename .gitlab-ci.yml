@@ -10,7 +10,7 @@ before_script:
 
 docker-build:
   stage: dockerize
-  image: docker:stable
+  image: docker:29.0.0
   when: on_success
   tags: [crocos-docker]
   script:
