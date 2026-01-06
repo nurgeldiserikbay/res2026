@@ -21,6 +21,7 @@ variables:
 
 stages:
   - deploy-dev
+  - deploy-prod
 
 deploy-dev:
   stage: deploy-dev
@@ -32,3 +33,14 @@ deploy-dev:
     - if: $CI_COMMIT_BRANCH == $DEVBRANCH
   script:
     - ssh -p$PORT -tt crocos@$SRV "cd /home/crocos/http/www/$DEVPATH && git fetch --all --prune && git reset --hard origin/$DEVBRANCH && git clean -fd && docker exec $NODE bash -lc 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm i && npm run build' && docker exec $NODE pm2 restart $APPDEV --update-env"
+
+deploy-prod:
+  stage: deploy-prod
+  extends: .sshcon
+  needs: []
+  tags:
+    - shell
+  rules:
+    - if: $CI_COMMIT_BRANCH == $PRODBRANCH
+  script:
+    - ssh -p$PORT -tt crocos@$SRV "cd /home/crocos/http/www/$PRODPATH && git fetch --all --prune && git reset --hard origin/$PRODBRANCH && git clean -fd && docker exec $NODE bash -lc 'cd /var/www/$PRODPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm i && npm run build' && docker exec $NODE pm2 restart $APPPROD --update-env"

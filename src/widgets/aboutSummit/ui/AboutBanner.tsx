@@ -1,8 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { IconDoubleArrowDown } from '@/shared/icons/IconDoubleArrowDown'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
@@ -10,45 +12,76 @@ import { Container } from '@/shared/ui/container/container'
 export function AboutBanner() {
 	const t = useTranslations()
 
-	const BannerRef = useRef<HTMLElement>(null)
+	const BannerRef = useRef<HTMLDivElement>(null)
 	useAnimBg(BannerRef, {
 		fromSize: '120%',
 		toSize: '100%',
 		fromPosition: 'center 70%',
 		toPosition: 'center center',
 		duration: 1.4,
-		bgImage: '/imgs/abount-banner.png',
+		bgImage: '/imgs/about-page-bg.png',
 	})
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	useAnimSlide(TitleRef, { y: 90, delay: 0.1 })
 	const SubtitleRef = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(SubtitleRef, { y: 90, delay: 0.2 })
-	const DateRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(DateRef, { y: 50, delay: 0.3 })
-	const MonthRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(MonthRef, { y: 50, delay: 0.4 })
+	const MapRef = useRef<HTMLImageElement>(null)
+	useAnimSlide(MapRef, { y: 50, delay: 0.1 })
+	const DateBlockRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(DateBlockRef, { y: 50, delay: 0.3 })
+	const ButtonRef = useRef<HTMLButtonElement>(null)
+	useAnimSlide(ButtonRef, { y: 50, delay: 0.4 })
 
 	return (
 		<>
-			<section
-				ref={BannerRef}
-				data-animated-banner
-				className="bg-primary-dark min-h-[400px] pt-[120px] pb-[50px] sm:min-h-[500px] sm:pt-[150px] sm:pb-[60px] md:min-h-[600px] md:pt-[200px] md:pb-[80px] lg:min-h-[700px] lg:pt-[240px] lg:pb-[120px] xl:min-h-[800px] xl:pt-[280px] xl:pb-[160px] 2xl:min-h-[895px] 2xl:pt-[296px] 2xl:pb-[196px]"
-			>
-				<Container className="relative z-10 flex flex-col items-start justify-center">
-					<h1
-						ref={TitleRef}
-						className="xs:mb-[40px] xs:text-[40px] mb-[30px] w-full translate-y-[-90px] text-left text-[32px] leading-none font-bold text-white opacity-0 sm:mb-[50px] sm:text-[56px] md:mb-[55px] md:text-[72px] lg:mb-[60px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
-					>
-						{t('pages.about.title')}
-					</h1>
-					<p
-						ref={SubtitleRef}
-						className="w-full max-w-[1027px] translate-y-[90px] text-[14px] leading-normal font-normal whitespace-pre-line text-white opacity-0 sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]"
-					>
-						{t('pages.about.aboutText1')}
-					</p>
-				</Container>
+			<section className="bg-primary-dark">
+				<div
+					ref={BannerRef}
+					data-animated-banner
+					className="relative box-border min-h-[600px] bg-linear-to-b from-[#41754F] to-[#02493F] bg-cover bg-center pt-[100px] pb-[50px] sm:min-h-[700px] sm:pt-[120px] md:min-h-[800px] md:pt-[150px] lg:min-h-[900px] lg:pt-[200px] xl:min-h-[1000px] xl:pt-[250px] 2xl:min-h-[1160px] 2xl:pt-[304px]"
+				>
+					<Image
+						ref={MapRef}
+						src="/imgs/about-page-map.svg"
+						alt="About Summit Logo"
+						width={1039}
+						height={1137}
+						className="absolute top-[10px] left-0 block w-full max-w-[1039px] translate-y-[50px] opacity-0 sm:top-[15px] md:top-[20px] lg:top-[23px]"
+					/>
+
+					<Container className="relative z-10 flex flex-col items-start justify-between gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
+						<div className="w-full max-w-[706px] lg:mt-[43px]">
+							<h1
+								ref={TitleRef}
+								className="xs:mb-[30px] xs:text-[40px] text-primary-dark 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[28px] leading-none font-bold opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
+							>
+								{t('pages.about.title')}
+							</h1>
+							<p
+								ref={SubtitleRef}
+								className="text-text mb-[30px] w-full translate-y-[90px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
+							>
+								{t('pages.about.resText1')}
+							</p>
+
+							<button
+								ref={ButtonRef}
+								className="text-secondary flex translate-y-[50px] items-center gap-[20px] text-[14px] leading-normal font-normal opacity-0 sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
+							>
+								<IconDoubleArrowDown className="text-secondary" />
+								<span>{t('labels.swipeForward')}</span>
+							</button>
+						</div>
+
+						<div
+							ref={DateBlockRef}
+							className="xs:text-[48px] xs:mb-[20px] 3xl:text-[111px] mb-[30px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
+						>
+							<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
+							<div className="block">Summit 2026</div>
+						</div>
+					</Container>
+				</div>
 			</section>
 		</>
 	)
