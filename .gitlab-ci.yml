@@ -31,8 +31,7 @@ docker-build:
 
 
 deploy-prod:
-  stage: deploy-prod
-  extends: .sshcon
+  stage: deploy
   tags:
     - shell
   only:
