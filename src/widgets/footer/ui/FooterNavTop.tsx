@@ -20,25 +20,39 @@ export function FooterNavTop() {
 							key={item.key}
 							className="sm:max-w-unset max-w-[150px]"
 						>
-							<p className="text-text mb-[30px] text-[14px] leading-none font-bold">{t(item.key)}</p>
-							<ul className="flex flex-col gap-[20px]">
-								{item.children?.map((child) => (
-									<li
-										key={child.key}
-										className="block"
-									>
-										<Link
-											href={child.href ?? '/'}
-											className={[
-												'font-regular text-text hover:text-muted block text-[12px] leading-[1.4] transition-colors',
-												pathname === child.href ? 'text-muted' : '',
-											].join(' ')}
-										>
-											{t(child.key)}
-										</Link>
-									</li>
-								))}
-							</ul>
+							{item.children ? (
+								<>
+									<p className="text-text mb-[30px] text-[14px] leading-none font-bold">{t(item.key)}</p>
+									<ul className="flex flex-col gap-[20px]">
+										{item.children?.map((child) => (
+											<li
+												key={child.key}
+												className="block"
+											>
+												<Link
+													href={child.href ?? '/'}
+													className={[
+														'font-regular text-text hover:text-muted block text-[12px] leading-[1.4] transition-colors',
+														pathname === child.href ? 'text-muted' : '',
+													].join(' ')}
+												>
+													{t(child.key)}
+												</Link>
+											</li>
+										))}
+									</ul>
+								</>
+							) : (
+								<Link
+									href={item.href ?? '/'}
+									className={[
+										'text-text hover:text-muted mb-[30px] text-[14px] leading-none font-bold transition-colors',
+										pathname === item.href ? 'text-muted' : '',
+									].join(' ')}
+								>
+									{t(item.key)}
+								</Link>
+							)}
 						</div>
 					)
 				})}
