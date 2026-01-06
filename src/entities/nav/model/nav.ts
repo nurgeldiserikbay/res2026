@@ -37,11 +37,6 @@ const navItems: readonly NavItem[] = [
 		key: 'program.root',
 		href: '/program',
 		main: true,
-		children: [
-			{ key: 'program.schedule', href: '/program', showHeader: true, showFooter: true },
-			{ key: 'program.speakers', href: '/program/speakers', showHeader: true, showFooter: true },
-			{ key: 'program.latestNews', href: '/news', showHeader: true, showFooter: true },
-		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
 	},
