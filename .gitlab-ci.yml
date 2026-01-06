@@ -6,7 +6,6 @@ stages:
 
 
 variables:
-  GIT_STRATEGY: none
   SRV: '89.219.32.148'
   PORT: '22022'
   DEVBRANCH: 'develop'
