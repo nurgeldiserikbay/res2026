@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
+import { IconArrowDown } from '@/shared/icons/IconArrowDown'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
@@ -38,38 +39,50 @@ export function AboutSummit() {
 	const AboutSummitPurposeRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(AboutSummitPurposeRef, { y: 90, delay: 0.45 })
 
+	const [isOpen, setIsOpen] = useState(false)
+
 	return (
 		<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] 2xl:py-[80px]">
 			<Container className="flex flex-wrap-reverse items-start justify-between gap-[30px] xl:flex-nowrap">
-				<div className="grow xl:max-w-[721px]">
-					<div
-						ref={AboutSummitRef}
-						className="font-regular text-text mb-[62px] hidden -translate-x-90 text-[24px] leading-[1.2] opacity-0 xl:block"
-					>
-						{t(`titles.aboutSummit`)}
+				<div className="grow xl:max-w-[713px]">
+					<div className="mb-[32px] flex items-start justify-between">
+						<div
+							ref={AboutSummitRef}
+							className="font-regular text-text hidden -translate-x-90 text-[24px] leading-[1.2] opacity-0 xl:block"
+						>
+							{t(`titles.aboutSummit`)}
+						</div>
+						<ButtonDefault
+							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
+							className="translate-y-90 opacity-0"
+						>
+							{t('pages.about.moreAboutSummit')}
+						</ButtonDefault>
 					</div>
-
-					<div className="xs:flex-row mb-[22px] flex max-w-[655px] flex-col items-start justify-between gap-[5px]">
-						<Image
-							ref={AboutSummitImg1Ref}
-							src="/imgs/about-img-1.png"
-							alt="About Summit"
-							width={351}
-							height={377}
-							className="ax-w-full block translate-y-90 rounded-[12px] opacity-0 sm:max-w-[351px]"
-						/>
-						<div className="flex flex-col items-center justify-between">
+					<div className="w-full">
+						<div className="relative mb-[24px] max-w-full">
+							<Image
+								ref={AboutSummitImg1Ref}
+								src="/imgs/about-img-1.png"
+								alt="About Summit"
+								width={713}
+								height={363}
+								className="block max-w-full translate-y-90 rounded-[12px] opacity-0"
+							/>
+							<ButtonDefault className="!absolute bottom-[30px] left-[30px] z-1">{t('pages.about.moreAboutSummit')}</ButtonDefault>
+						</div>
+						<div className="flex items-center justify-between gap-[20px]">
 							<Image
 								ref={AboutSummitImg2Ref}
 								src="/imgs/about-img-2.png"
 								alt="About Summit 2"
-								width={299}
-								height={181}
-								className="mb-[24px] block max-w-full translate-y-[120px] rounded-[12px] opacity-0 sm:max-w-[299px]"
+								width={288}
+								height={187}
+								className="block translate-y-[120px] rounded-[12px] opacity-0"
 							/>
 							<div
 								ref={AboutSummitImg3Ref}
-								className="font-regular text-secondary mb-[30px] max-w-[197px] translate-y-90 text-left text-[16px] leading-[1.2] opacity-0"
+								className="font-regular text-secondary max-w-[181px] translate-y-90 text-left text-[16px] leading-[1.2] opacity-0"
 							>
 								<div className="mb-[15px] max-w-[170px]">\\{t('titles.strategicPartner')}</div>
 								<Image
@@ -82,7 +95,7 @@ export function AboutSummit() {
 							</div>
 							<div
 								ref={AboutSummitImg4Ref}
-								className="font-regular text-secondary max-w-[197px] translate-y-90 text-left text-[16px] leading-[1.2] opacity-0"
+								className="font-regular text-secondary max-w-[170px] translate-y-90 text-left text-[16px] leading-[1.2] opacity-0"
 							>
 								<div className="mb-[15px] max-w-[170px]">\\{t('titles.strategicMediaPartner')}</div>
 								<Image
@@ -95,46 +108,20 @@ export function AboutSummit() {
 							</div>
 						</div>
 					</div>
-
-					<div className="mb-[60px]">
-						<h3
-							ref={AboutSummitPresidentInitiativeRef}
-							className="text-text mb-[10px] translate-y-90 text-[24px] leading-normal font-bold opacity-0"
-						>
-							{t(`pages.about.presidentInitiative`)}
-						</h3>
-						<p
-							ref={AboutSummitPresidentTextRef}
-							className="text-text mb-[55px] translate-y-90 text-[16px] leading-normal font-normal whitespace-pre-line opacity-0"
-						>
-							{t(`pages.about.presidentInitiativeText`)}
-						</p>
-						<ButtonDefault
-							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
-							className="translate-y-90 opacity-0"
-						>
-							{t('pages.about.moreAboutSummit')}
-						</ButtonDefault>
-					</div>
 				</div>
 
 				<div className="flex grow flex-col justify-start xl:max-w-[1025px]">
 					<div className="font-regular text-text mb-[30px] block text-[24px] leading-[1.2] xl:hidden">{t(`titles.aboutSummit`)}</div>
+
 					<div
 						ref={AboutSummitTitleRef}
-						className="font-regular 3xl:text-[48px] mb-[31px] translate-x-90 self-end text-[24px] leading-[1.2] opacity-0 md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
+						className="3xl:text-[40px] mb-[31px] translate-x-90 self-end text-[24px] leading-[1.2] font-bold opacity-0 md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:mb-[60px] 2xl:text-[44px]"
 					>
 						{t.rich('pages.aboutSummit.title', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
 							secondary: (chunks) => <span className="text-text font-bold">{chunks}</span>,
 						})}
 					</div>
-					<p
-						ref={AboutSummitText1Ref}
-						className="font-regular text-text mb-[60px] translate-y-90 text-left text-[16px] leading-normal opacity-0"
-					>
-						{t(`pages.aboutSummit.text1`)}
-					</p>
 
 					<div
 						ref={AboutSummitQuoteRef}
@@ -154,26 +141,55 @@ export function AboutSummit() {
 								<div className="font-regular relative z-1 mb-[30px] text-[16px] leading-normal whitespace-pre-line text-black">
 									{t('pages.about.presidentText')}
 								</div>
-								<div className="text-primary max-w-[312px] text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
+								<div className="text-primary text-[14px] leading-normal">{t('pages.about.presidentPosition')}</div>
 							</div>
 						</div>
-						<Image
-							ref={AboutSummitMapRef}
-							className="absolute top-[65%] left-[65%] block min-h-[435px] min-w-[1014px] translate-x-90 opacity-0"
-							src="/imgs/kz-map.svg"
-							alt="KZ Map"
-							width={1014}
-							height={435}
-						/>
 					</div>
 
-					<div
-						ref={AboutSummitPurposeRef}
-						className="translate-y-90 opacity-0"
-					>
-						<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.purpose`)}</h3>
-						<p className="font-regular text-text text-left text-[16px] leading-normal">{t(`pages.about.text3`)}</p>
+					<div className="relative pb-[54px]">
+						<div
+							ref={AboutSummitPurposeRef}
+							className="translate-y-90 opacity-0"
+						>
+							<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.purpose`)}</h3>
+							<p className="font-regular text-text text-left text-[16px] leading-normal">{t(`pages.about.text3`)}</p>
+						</div>
+
+						{isOpen && (
+							<div className="mt-[60px]">
+								<h3 className="text-text mb-[10px] text-[24px] leading-normal font-bold">{t(`pages.about.presidentInitiative`)}</h3>
+								<p className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">
+									{t(`pages.about.presidentInitiativeText`)}
+								</p>
+							</div>
+						)}
+
+						{/* <p
+							ref={AboutSummitText1Ref}
+							className="font-regular text-text mb-[60px] translate-y-90 text-left text-[16px] leading-normal opacity-0"
+						>
+							{t(`pages.aboutSummit.text1`)}
+						</p> */}
+
+						<button
+							onClick={() => setIsOpen(!isOpen)}
+							className="text-secondary absolute bottom-0 left-0 flex cursor-pointer items-center gap-[10px] text-[14px] leading-normal font-bold"
+						>
+							<span>{isOpen ? t('labels.hide') : t('labels.readMore')}</span>
+							<IconArrowDown
+								className={[`text-secondary block h-[18px] w-[18px] transition-transform duration-300`, isOpen && 'rotate-180'].join(' ')}
+							/>
+						</button>
 					</div>
+
+					{/* <Image
+						ref={AboutSummitMapRef}
+						className="absolute top-[65%] left-[65%] block min-h-[435px] min-w-[1014px] translate-x-90 opacity-0"
+						src="/imgs/kz-map.svg"
+						alt="KZ Map"
+						width={1014}
+						height={435}
+					/> */}
 				</div>
 			</Container>
 		</section>
