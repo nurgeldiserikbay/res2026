@@ -84,8 +84,8 @@ function OrganizersSection({ t }: SectionProps) {
 					<iframe
 						frameBorder="0"
 						scrolling="no"
-						marginHeight="0"
-						marginWidth="0"
+						marginHeight={0}
+						marginWidth={0}
 						id="gmap_canvas"
 						src="https://maps.google.com/maps?width=716&amp;height=200&amp;hl=en&amp;q=%D0%9A%D0%BE%D0%BD%D0%B3%D1%80%D0%B5%D1%81%D1%81%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%20%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 						className="h-full w-full rounded-[12px]"
