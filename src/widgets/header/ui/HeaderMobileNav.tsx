@@ -100,6 +100,7 @@ export function HeaderMobileNav() {
 										active ? 'text-muted-light' : '',
 										'focus-visible:text-muted-light focus-visible:outline-none',
 									].join(' ')}
+									onClick={() => setOpen(false)}
 								>
 									{t(item.key)}
 								</Link>

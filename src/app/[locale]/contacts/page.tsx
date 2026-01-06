@@ -317,6 +317,7 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 					ref={block1Ref}
 					className="max-w-[570px] translate-y-[50px] opacity-0"
 				>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`labels.pressSecretary`)}</h3>
 					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
 						{t(`pages.contacts.meprName`)}
 					</div>
