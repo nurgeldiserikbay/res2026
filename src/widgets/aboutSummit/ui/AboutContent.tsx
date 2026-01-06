@@ -31,16 +31,16 @@ export function AboutContent() {
 
 	return (
 		<>
-			<section className="bg-white pt-[30px] sm:pt-[50px] md:pt-[70px] lg:pt-[100px]">
+			<section className="bg-white pt-[30px] sm:pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container className="relative z-10 flex flex-col items-start justify-between gap-[30px] lg:flex-row lg:gap-[40px] xl:gap-[60px]">
-					<div className="w-full max-w-[874px]">
+					<div className="w-full lg:max-w-[874px]">
 						<div
 							ref={TextRef}
-							className="text-text mb-[122px] w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:text-[15px] md:text-[16px]"
+							className="text-text mb-[40px] w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[60px] sm:text-[15px] md:mb-[80px] md:text-[16px] lg:mb-[100px] xl:mb-[122px]"
 						>
-							<p className="mb-[30px] sm:mb-[40px] md:mb-[50px] lg:mb-[60px]">{t('pages.about.aboutText2')}</p>
+							<p className="mb-[20px] sm:mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px]">{t('pages.about.aboutText2')}</p>
 							<p>{t('pages.about.aboutText3')}</p>
-							<ul className="list-disc pb-[20px] pl-[20px] sm:pb-[25px] sm:pl-[25px]">
+							<ul className="list-disc pb-[15px] pl-[20px] sm:pb-[20px] sm:pl-[25px]">
 								<li>{t(`pages.about.aboutText31`)}</li>
 								<li>{t(`pages.about.aboutText32`)}</li>
 								<li>{t(`pages.about.aboutText33`)}</li>
@@ -62,9 +62,9 @@ export function AboutContent() {
 						</div>
 					</div>
 
-					<div className="w-full max-w-[871px]">
-						<div className="relative mb-[50px] h-[279px] w-full">
-							<div className="absolute bottom-0 left-0 flex w-full max-w-[865px] flex-col items-end justify-between gap-[10px] lg:flex-row lg:gap-[5px]">
+					<div className="w-full lg:max-w-[871px]">
+						<div className="relative mb-[30px] min-h-[200px] w-full sm:mb-[40px] sm:min-h-[250px] md:mb-[50px] md:min-h-[279px]">
+							<div className="absolute bottom-0 left-0 flex w-full max-w-[865px] flex-col items-end justify-between gap-[10px] sm:gap-[15px] lg:flex-row lg:gap-[5px]">
 								<div className="relative w-full translate-y-0 transform lg:-translate-y-[60px]">
 									<div
 										ref={Image1Ref}
@@ -77,11 +77,11 @@ export function AboutContent() {
 											height={662}
 											className="block w-full max-w-[509px] rounded-[12px]"
 										/>
-										<div className="absolute bottom-0 left-0 p-[20px] sm:p-[30px] md:p-[40px] lg:p-[60px]">
-											<div className="mb-[15px] max-w-[294px] text-[12px] leading-normal font-normal text-white sm:mb-[20px] sm:text-[14px] md:mb-[25px] md:text-[16px] lg:mb-[30px]">
+										<div className="absolute bottom-0 left-0 p-[15px] sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[60px]">
+											<div className="mb-[10px] max-w-[294px] text-[11px] leading-normal font-normal text-white sm:mb-[15px] sm:text-[12px] md:mb-[20px] md:text-[14px] lg:mb-[25px] lg:text-[16px] xl:mb-[30px]">
 												{t(`pages.footer.text`)}
 											</div>
-											<div className="max-w-[294px] text-[20px] leading-[1.2] font-bold text-white sm:text-[24px] md:text-[28px] lg:text-[32px]">
+											<div className="max-w-[294px] text-[16px] leading-[1.2] font-bold text-white sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px]">
 												{t(`pages.footer.text1`)}
 											</div>
 										</div>
@@ -89,14 +89,14 @@ export function AboutContent() {
 								</div>
 								<div
 									ref={Image2Ref}
-									className="translate-y-[50px] opacity-0 lg:w-auto"
+									className="w-full translate-y-[50px] opacity-0 sm:w-auto lg:w-auto"
 								>
 									<Image
 										src="/imgs/about-page-img-2.png"
 										alt="About President"
 										width={342}
 										height={869}
-										className="block max-w-[342px] rounded-[12px]"
+										className="block w-full max-w-[200px] rounded-[12px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[342px]"
 									/>
 								</div>
 							</div>
@@ -104,48 +104,48 @@ export function AboutContent() {
 
 						<p
 							ref={ResText2Ref}
-							className="text-text mb-[60px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-[16px]"
+							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
 						>
 							{t('pages.about.resText2')}
 						</p>
 
 						<h2
 							ref={PurposeRef}
-							className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-[1.2] font-bold opacity-0 sm:mb-[40px] sm:text-[28px] md:mb-[50px] md:text-[32px] lg:mb-[60px] lg:text-[40px] xl:text-[48px]"
+							className="text-text mb-[20px] translate-y-[50px] text-[24px] leading-[1.2] font-bold opacity-0 sm:mb-[30px] sm:text-[28px] md:mb-[40px] md:text-[32px] lg:mb-[50px] lg:text-[36px] xl:mb-[60px] xl:text-[40px] 2xl:text-[48px]"
 						>
 							{t('pages.about.purpose')}
 						</h2>
 						<p
 							ref={Text2Ref}
-							className="text-text mb-[60px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:text-[15px] md:text-[16px]"
+							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
 						>
 							{t('pages.about.aboutText5')}
 						</p>
 
 						<div
 							ref={QuoteRef}
-							className="seld-start relative w-full max-w-[859px] translate-y-[50px] rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:p-[24px] md:pt-[40px] md:pl-[50px] lg:pt-[65px] lg:pl-[86px]"
+							className="seld-start relative w-full max-w-[859px] translate-y-[50px] rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:p-[24px] md:pt-[30px] md:pl-[40px] lg:pt-[50px] lg:pl-[70px] xl:pt-[65px] xl:pl-[86px]"
 						>
-							<div className="text-muted absolute top-[20px] left-[20px] hidden text-[64px] leading-none sm:text-[80px] md:block md:text-[100px] lg:text-[128px]">
-								”
+							<div className="text-muted absolute top-[15px] left-[15px] hidden text-[48px] leading-none sm:top-[20px] sm:left-[20px] sm:text-[64px] md:block md:text-[80px] lg:text-[100px] xl:text-[128px]">
+								&quot;
 							</div>
 
 							<div
 								ref={PresidentInfoRef}
-								className="relative z-1 flex flex-wrap items-start gap-[20px] sm:flex-nowrap sm:gap-[30px]"
+								className="relative z-1 flex flex-wrap items-start gap-[15px] sm:flex-nowrap sm:gap-[20px] md:gap-[30px]"
 							>
 								<Image
 									src="/imgs/president-about-img.png"
 									alt="About President"
 									width={213}
 									height={360}
-									className="block max-w-[213px]"
+									className="block w-full max-w-[150px] rounded-[12px] sm:max-w-[180px] md:max-w-[213px]"
 								/>
-								<div>
-									<div className="font-regular relative z-1 mb-[30px] text-[13px] leading-normal whitespace-pre-line text-black sm:mb-[40px] sm:text-[14px] md:mb-[50px] md:text-[15px]">
+								<div className="w-full sm:flex-1">
+									<div className="font-regular relative z-1 mb-[20px] text-[12px] leading-normal whitespace-pre-line text-black sm:mb-[25px] sm:text-[13px] md:mb-[30px] md:text-[14px] lg:mb-[40px] lg:text-[15px] xl:mb-[50px]">
 										{t('pages.about.presidentText')}
 									</div>
-									<div className="text-primary text-[12px] leading-normal sm:text-[13px] md:text-[14px]">
+									<div className="text-primary text-[11px] leading-normal sm:text-[12px] md:text-[13px] lg:text-[14px]">
 										{t('pages.about.presidentPosition')}
 									</div>
 								</div>
