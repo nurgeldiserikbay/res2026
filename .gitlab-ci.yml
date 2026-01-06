@@ -1,5 +1,5 @@
 variables:
-  GIT_STRATEGY: none
+  GIT_STRATEGY: clone
   SRV: '89.219.32.148'
   PORT: '22022'
 
