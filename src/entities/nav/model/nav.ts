@@ -18,7 +18,7 @@ const navItems: readonly NavItem[] = [
 		main: true,
 		ready: true,
 		children: [
-			{ key: 'about.res', href: '/about', ready: false, showHeader: !appConfig.isProduction, showFooter: true }, // RES 2026
+			{ key: 'about.res', href: '/about', ready: !appConfig.isProduction, showHeader: !appConfig.isProduction, showFooter: true }, // RES 2026
 			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
@@ -41,7 +41,7 @@ const navItems: readonly NavItem[] = [
 		key: 'program.root',
 		href: '/program',
 		main: true,
-		ready: !appConfig.isProduction,
+		ready: false,
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
 	},
