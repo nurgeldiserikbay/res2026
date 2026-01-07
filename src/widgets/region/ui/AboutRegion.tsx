@@ -1,5 +1,7 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Image from 'next/image'
 import { useRef } from 'react'
 
@@ -28,6 +30,7 @@ interface AboutRegionProps {
 }
 
 export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, mapWidth, mapHeight, imgs }: AboutRegionProps) {
+	const SectionRef = useRef<HTMLElement>(null)
 	const ImagesRef = useRef<HTMLDivElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	const Text1Ref = useRef<HTMLParagraphElement>(null)
@@ -36,6 +39,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 	const Stat2Ref = useRef<HTMLDivElement>(null)
 	const Text2Ref = useRef<HTMLParagraphElement>(null)
 	const Stat3Ref = useRef<HTMLDivElement>(null)
+	const MapRef = useRef<HTMLImageElement>(null)
 
 	useAnimSlide(ImagesRef, { x: -90, delay: 0.1 })
 	useAnimSlide(TitleRef, { y: 50, delay: 0.2 })
@@ -45,9 +49,34 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 	useAnimSlide(Text2Ref, { y: 50, delay: 0.6 })
 	useAnimSlide(Stat3Ref, { y: 50, delay: 0.7 })
 
+	// Анимация для карты
+	useGSAP(
+		() => {
+			if (!MapRef.current) return
+
+			gsap.fromTo(
+				MapRef.current,
+				{ opacity: 0 },
+				{
+					opacity: 1,
+					duration: 1.2,
+					delay: 0.8,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: SectionRef.current,
+						start: 'top 80%',
+						once: true,
+					},
+				},
+			)
+		},
+		{ scope: SectionRef },
+	)
+
 	return (
 		<>
 			<section
+				ref={SectionRef}
 				id="about"
 				className="relative pt-[30px] sm:pt-[40px] md:pt-[50px] lg:pt-[60px]"
 			>
@@ -108,11 +137,12 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 							<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stats.stat3}</span>
 						</div>
 						<Image
+							ref={MapRef}
 							src={map}
 							alt={mapAlt}
 							width={mapWidth}
 							height={mapHeight}
-							className="pointer-events-none absolute top-[-480px] left-[5%] z-0 hidden min-h-[1112px] min-w-[1885px] transform lg:block"
+							className="pointer-events-none absolute top-[-480px] left-[5%] z-0 hidden min-h-[1112px] min-w-[1885px] transform opacity-0 lg:block"
 						/>
 					</div>
 				</Container>

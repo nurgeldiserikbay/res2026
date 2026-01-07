@@ -36,8 +36,9 @@ export function Climate({
 	useAnimSlide(TextRef, { y: 50, delay: 0.2 })
 	useAnimSlide(Temp1Ref, { y: 50, delay: 0.3 })
 	useAnimSlide(Temp2Ref, { y: 50, delay: 0.4 })
-	useAnimSlide(Image1Ref, { x: 90, delay: 0.5 })
-	useAnimSlide(Image2Ref, { x: 90, delay: 0.6 })
+	useAnimSlide(ImagesRef, { x: 50, delay: 0.5 })
+	useAnimSlide(Image1Ref, { x: 90, delay: 0.6 })
+	useAnimSlide(Image2Ref, { x: 90, delay: 0.7 })
 
 	return (
 		<>
@@ -101,7 +102,7 @@ export function Climate({
 
 					<div
 						ref={ImagesRef}
-						className="relative z-1 flex w-full flex-col items-stretch justify-between gap-[8px] lg:max-w-[870px] lg:flex-row"
+						className="relative z-1 flex w-full translate-x-[50px] flex-col items-stretch justify-between gap-[8px] opacity-0 lg:max-w-[870px] lg:flex-row"
 					>
 						<div
 							ref={Image1Ref}

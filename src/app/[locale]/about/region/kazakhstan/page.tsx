@@ -11,7 +11,7 @@ import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/flag.jpeg',
+		img: '/imgs/flag.png',
 		alt: 'Region Img 1',
 		width: 612,
 		height: 408,
