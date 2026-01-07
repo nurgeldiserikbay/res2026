@@ -3,16 +3,25 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
-export function AbountEtc() {
-	const t = useTranslations()
-
+export function AbountEtc({
+	strategicVisionTitle,
+	strategicVisionIntro,
+	strategicDocuments,
+	nationalInitiativesTitle,
+	nationalInitiatives,
+}: {
+	strategicVisionTitle: string
+	strategicVisionIntro: string
+	strategicDocuments: { id: number; title: string }[]
+	nationalInitiativesTitle: string
+	nationalInitiatives: { id: number; title: string; description: string | React.ReactNode }[]
+}) {
 	const EtcRef = useRef<HTMLDivElement>(null)
 	const LeftContentRef = useRef<HTMLDivElement>(null)
 	const LogoRef = useRef<HTMLDivElement>(null)
@@ -104,42 +113,23 @@ export function AbountEtc() {
 								className="w-full translate-x-[-90px] opacity-0 lg:w-auto"
 							>
 								<h3 className="mb-[10px] text-[24px] leading-normal font-bold text-white sm:text-[28px] md:text-[32px]">
-									{t('pages.etc.strategicVisionTitle')}
+									{strategicVisionTitle}
 								</h3>
 								<p className="mb-[20px] text-[14px] leading-normal font-normal text-white sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]">
-									{t('pages.etc.strategicVisionIntro')}
+									{strategicVisionIntro}
 								</p>
 								<ul>
-									<li className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]">
-										<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
-											1
-										</span>
-										{t('pages.etc.strategicDocuments.0')}
-									</li>
-									<li className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]">
-										<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
-											2
-										</span>
-										{t('pages.etc.strategicDocuments.1')}
-									</li>
-									<li className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]">
-										<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
-											3
-										</span>
-										{t('pages.etc.strategicDocuments.2')}
-									</li>
-									<li className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]">
-										<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
-											4
-										</span>
-										{t('pages.etc.strategicDocuments.3')}
-									</li>
-									<li className="flex items-center justify-start gap-[10px] text-[13px] text-white sm:text-[14px] md:text-[16px]">
-										<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
-											5
-										</span>
-										{t('pages.etc.strategicDocuments.4')}
-									</li>
+									{strategicDocuments.map((document: { id: number; title: string }) => (
+										<li
+											key={document.id}
+											className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]"
+										>
+											<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
+												{document.id}
+											</span>
+											{document.title}
+										</li>
+									))}
 								</ul>
 							</div>
 
@@ -162,39 +152,26 @@ export function AbountEtc() {
 								ref={InitiativesTitleRef}
 								className="mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-white opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
 							>
-								{t('pages.etc.nationalInitiativesTitle')}
+								{nationalInitiativesTitle}
 							</h3>
 
 							<div
 								ref={InitiativesGridRef}
 								className="grid grid-cols-1 items-start gap-[30px] sm:grid-cols-2 sm:gap-[40px] md:gap-[50px] lg:grid-cols-4"
 							>
-								<div className="translate-y-[50px] opacity-0">
-									<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
-										{t('pages.etc.tazaKazakhstanTitle')}
-									</h5>
-									<p className="text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{t('pages.etc.tazaKazakhstanText')}</p>
-								</div>
-								<div className="translate-y-[50px] opacity-0">
-									<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
-										{t('pages.etc.twoBillionTreesTitle')}
-									</h5>
-									<p className="text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{t('pages.etc.twoBillionTreesText')}</p>
-								</div>
-								<div className="translate-y-[50px] opacity-0">
-									<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
-										{t('pages.etc.biodiversityFundTitle')}
-									</h5>
-									<p className="text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{t('pages.etc.biodiversityFundText')}</p>
-								</div>
-								<div className="translate-y-[50px] opacity-0">
-									<strong className="text-[18px] leading-normal sm:text-[19px] md:text-[20px]">
-										{t('pages.etc.unRegionalCenterTitle')}
-									</strong>
-									<span className="block text-[13px] leading-normal sm:text-[14px] md:text-[16px]">
-										{t('pages.etc.unRegionalCenterText')}
-									</span>
-								</div>
+								{nationalInitiatives.map((initiative: { id: number; title: string; description: string | React.ReactNode }) => (
+									<div
+										key={initiative.id}
+										className="translate-y-[50px] opacity-0"
+									>
+										{initiative.title && (
+											<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
+												{initiative.title}
+											</h5>
+										)}
+										<p className="text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{initiative.description}</p>
+									</div>
+								))}
 							</div>
 						</div>
 					</div>

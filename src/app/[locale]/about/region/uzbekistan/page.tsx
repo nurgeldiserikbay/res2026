@@ -1,6 +1,6 @@
 import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
-import AboutKaz from '@/widgets/region/ui/AboutKaz'
-import { AboutKazBanner } from '@/widgets/region/ui/AboutKazBanner'
+import AboutRegion from '@/widgets/region/ui/AboutRegion'
+import { AboutRegionBanner } from '@/widgets/region/ui/AboutRegionBanner'
 import { Climate } from '@/widgets/region/ui/Climate'
 import { FloraAndFauna } from '@/widgets/region/ui/FloraAndFauna'
 import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
@@ -8,11 +8,11 @@ import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
 export default function Page() {
 	return (
 		<>
-			<AboutKazBanner />
+			<AboutRegionBanner />
 
 			<RegionTabs />
 
-			<AboutKaz />
+			<AboutRegion />
 
 			<Climate />
 

@@ -7,7 +7,21 @@ import { useRef } from 'react'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
-export function Climate() {
+export function Climate({
+	title,
+	climateText2,
+	temp1Value,
+	temp2Value,
+	img1,
+	img2,
+}: {
+	title: string
+	climateText2: string
+	temp1Value: string
+	temp2Value: string
+	img1: string
+	img2: string
+}) {
 	const t = useTranslations()
 
 	const TitleRef = useRef<HTMLHeadingElement>(null)
@@ -37,13 +51,13 @@ export function Climate() {
 							ref={TitleRef}
 							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
 						>
-							{t('pages.region.climateText1')}
+							{title}
 						</h3>
 						<p
 							ref={TextRef}
 							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]"
 						>
-							{t('pages.region.climateText2')}
+							{climateText2}
 						</p>
 						<div className="relative z-1 mb-[20px] grid grid-cols-2 gap-[10px] sm:mb-[25px] md:mb-[30px]">
 							<div
@@ -58,7 +72,7 @@ export function Climate() {
 										height={51}
 										className="h-[35px] w-[35px] sm:h-[45px] sm:w-[45px] md:h-[51px] md:w-[51px]"
 									/>
-									<span>-45</span>
+									<span>{temp1Value}</span>
 								</span>
 								<span className="text-secondary text-[12px] leading-normal font-normal sm:text-[14px] md:text-[16px]">
 									{t(`labels.winters`)}
@@ -76,7 +90,7 @@ export function Climate() {
 										height={51}
 										className="h-[35px] w-[35px] sm:h-[45px] sm:w-[45px] md:h-[51px] md:w-[51px]"
 									/>
-									<span>+40</span>
+									<span>{temp2Value}</span>
 								</span>
 								<span className="text-secondary text-[12px] leading-normal font-normal sm:text-[14px] md:text-[16px]">
 									{t(`labels.summers`)}
@@ -94,7 +108,7 @@ export function Climate() {
 							className="translate-x-[90px] opacity-0 lg:translate-x-[90px]"
 						>
 							<Image
-								src="/imgs/climate-1.png"
+								src={img1}
 								alt="Climate 1"
 								width={560}
 								height={376}
@@ -106,7 +120,7 @@ export function Climate() {
 							className="translate-x-[90px] opacity-0 lg:translate-x-[90px]"
 						>
 							<Image
-								src="/imgs/climate-2.png"
+								src={img2}
 								alt="Climate 2"
 								width={300}
 								height={376}

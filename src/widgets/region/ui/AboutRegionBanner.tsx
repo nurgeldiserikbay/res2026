@@ -6,7 +6,7 @@ import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
-export function AboutKazBanner() {
+export function AboutRegionBanner({ title, bgImage }: { title: string; bgImage: string }) {
 	const BannerRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 
@@ -16,7 +16,7 @@ export function AboutKazBanner() {
 		fromPosition: 'center 70%',
 		toPosition: 'center center',
 		duration: 1.4,
-		bgImage: '/imgs/region-banner.png',
+		bgImage: `${bgImage}`,
 	})
 
 	useAnimSlide(TitleRef, { y: 50, delay: 0.2 })
@@ -26,14 +26,15 @@ export function AboutKazBanner() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] bg-[url('/imgs/region-banner.png')] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]"
+				className="xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]"
+				style={{ backgroundImage: `url(${bgImage})` }}
 			>
 				<Container className="flex h-full items-center justify-center text-center">
 					<h1
 						ref={TitleRef}
 						className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
 					>
-						Kazakhstan
+						{title}
 					</h1>
 				</Container>
 			</section>

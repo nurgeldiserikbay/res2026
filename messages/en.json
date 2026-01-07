@@ -184,38 +184,45 @@
 			"anelName": "Anel Omarova",
 			"anelPosition": "Commercial Director, RES 2026 EXPO (exhibition area participation, sponsorship)"
 		},
-		"region": {
-			"about": "About Kazakhstan",
-			"climate": "Climate",
-			"floraAndFauna": "Flora and fauna",
-			"etc": "Other",
-			"aboutKazakhstan": "About Kazakhstan",
-			"aboutKazakhstanText1": "Kazakhstan is the largest country in the world that does not have direct access to the World Ocean. Most of the country's territory is made up of deserts – 44% and semi-deserts-14%. Steppes occupy 26% of the area of Kazakhstan, forests-5.5%. There are 8,5 thousand rivers in the country. \n\n The north-eastern part of the Caspian Sea is part of the republic. The Aral Sea is divided between Kazakhstan and Uzbekistan. There are 48 thousand large and small lakes in Kazakhstan. The largest of them are Balkhash, Zaisan and Alakol. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
-			"aboutKazakhstanText2": "The population of Kazakhstan exceeds.",
-			"climateText1": "The climate of Kazakhstan",
-			"climateText2": "Is sharply continental, with large temperature fluctuations between summer and winter, dry air and low precipitation. All four seasons are pronounced here: cold winters, hot dry summers, short and changeable spring, and warm autumn. In the north, winters are harsher and summers are warmer; in the south, winters are milder (near zero) and summers are hotter",
-			"floraAndFaunaText1": "The flora and fauna of Kazakhstan",
-			"floraAndFaunaText2": "is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity."
-		},
-		"etc": {
-			"strategicVisionTitle": "Strategic vision and documents",
-			"strategicVisionIntro": "Kazakhstan has adopted the following strategic documents:",
-			"strategicDocuments": {
-				"0": "Strategy for achieving carbon neutrality by 2060. Roadmap to the strategy",
-				"1": "IT AMS to reduce greenhouse gas emissions by 17% from 1990 levels by 2035",
-				"2": "Concept for the transition of the Republic of Kazakhstan to a 'green economy'",
-				"3": "Concept for the management of all types of waste for 2026–2030",
-				"4": "Concept for the conservation and sustainable use of biodiversity for the period 2025–2035"
-			},
-			"nationalInitiativesTitle": "National initiatives",
-			"tazaKazakhstanTitle": "Taza Kazakhstan",
-			"tazaKazakhstanText": "A large-scale national environmental campaign under the auspices of the President of the Republic of Kazakhstan K. Tokayev, aimed at forming an environmental culture through cleaning territories (settlements, natural objects, shores of water bodies), planting trees (millions of seedlings) and fighting unauthorized dumps, with the involvement of youth, business and government agencies, with an emphasis on waste management, innovation and improvement.",
-			"twoBillionTreesTitle": "Project \"2 billion trees\"",
-			"twoBillionTreesText": "An initiative in Kazakhstan aimed at creating forest areas by 2025 with subsequent extension until 2027. The goal of the project is to plant and sow 2 billion seedlings of tree and shrub species, including saxaul, pine, birch and others, in the state forest fund to restore forests and improve the environmental situation.",
-			"biodiversityFundTitle": "International Fund for Biodiversity Conservation",
-			"biodiversityFundText": "Kazakhstan's initiative, uniting the efforts of states, international organizations (UNDP, UNESCO, FAO) and NGOs to finance the protection of ecosystems, develop ecotourism, introduce eco-technologies and raise awareness in accordance with the best international standards of sustainable development and conservation of flora and fauna.",
-			"unRegionalCenterTitle": "The UN Regional Center for Sustainable Development Goals (SDGs) for Central Asia and Afghanistan was established in Kazakhstan (Almaty).",
-			"unRegionalCenterText": "It was approved by UN member states in March 2025, opened in August 2025 and is aimed at facilitating the achievement of 17 global SDGs by 2030."
+		"regions": {
+			"kazakhstan": {
+				"title": "About Kazakhstan",
+				"tabs": {
+					"0": "Geography, description",
+					"1": "Climate",
+					"2": "Flora and fauna",
+					"3": "Etc."
+				},
+				"text1": "Kazakhstan is the largest country in the world that does not have direct access to the World Ocean. Most of the country's territory is made up of deserts – 44% and semi-deserts-14%. Steppes occupy 26% of the area of Kazakhstan, forests-5.5%. There are 8,5 thousand rivers in the country. \n\n The north-eastern part of the Caspian Sea is part of the republic. The Aral Sea is divided between Kazakhstan and Uzbekistan. There are 48 thousand large and small lakes in Kazakhstan. The largest of them are Balkhash, Zaisan and Alakol. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
+				"text2": "The population of Kazakhstan exceeds",
+				"stat1": "oblasts",
+				"stat2": "cities of national significance",
+				"stat3": "million people",
+				"climateTitle": "The climate of Kazakhstan",
+				"climateText": "is sharply continental, with large temperature fluctuations between summer and winter, dry air and low precipitation. All four seasons are pronounced here: cold winters, hot dry summers, short and changeable spring, and warm autumn. In the north, winters are harsher (temperatures can drop to -45 °C) and summers are warmer; in the south, winters are milder (near zero) and summers are hotter, with daytime temperatures up to +40°C and above.",
+				"etc": {
+					"strategicVisionTitle": "Strategic vision and documents",
+					"strategicVisionIntro": "Kazakhstan has adopted the following Strategic Documents:",
+					"strategicDocuments": {
+						"0": "Strategy for achieving Carbon Neutrality until 2060, Road Map to the Strategy",
+						"1": "IT AIMS to reduce greenhouse gas emissions by 17% from 1990 levels by 2035",
+						"2": "Concepts for the transition of the Republic of Kazakhstan to a «green economy»",
+						"3": "The concept of managing all types of waste for 2026-2030",
+						"4": "The concept of conservation and sustainable use of biodiversity will cover the period from 2025 to 2035"
+					},
+					"nationalInitiativesTitle": "National initiatives",
+					"nationalInitiatives": {
+						"title1": "Taza Kazakhstan",
+						"text1": "is a large-scale national environmental campaign under the auspices of the Presidentof the Republic of Kazakhstan K. Tokayev, aimed at creating an ecological culture through cleaning territories (settlements, natural objects, banks of reservoirs), planting trees (millions of seedlings) and combating unauthorized landfills, involving young people, business and government agencies, with a focus on waste management, innovation and landscaping.",
+						"title2": "The 2 Billion Trees project",
+						"text2": "is an initiative in Kazakhstan, with the aim of creating woodlands until 2025, and then extended until 2027. The goal is to plant and sow $ 2 billion. saplings of tree and shrub species, including saxaul, pine, birch and others, in the state forest fund to restore forests and improve the ecological situation.",
+						"title3": "The International Fund for Biodiversity Conservation",
+						"text3": "is an initiative of Kazakhstan that will unite the efforts of states, international organizations (UNDP, UNESCO, FAO) and NGOs to finance the protection of ecosystems, develop ecotourism, introduce eco-technologies and raise awareness, working according to the best international standards for sustainable development and conservation of flora and fauna.",
+						"title4": "",
+						"text4": "The <bold>UN Regional Center for Sustainable Development Goals (SDGs) for Central Asia and Afghanistan has been established in Kazakhstan (Almaty).</bold> It was approved by the UN member states in March 2025, opened in August 2025, and its goal is to contribute to the achievement of 17 global SDGs by 2030."
+					}
+				}
+			}
 		}
 	},
 	"days": {

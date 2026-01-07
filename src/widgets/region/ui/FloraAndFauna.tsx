@@ -15,14 +15,24 @@ import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
 import { localize } from '@/shared/utils/localize'
 
-import { SLIDES } from '../mocks'
-
-export function FloraAndFauna() {
+export function FloraAndFauna({
+	slides,
+}: {
+	slides: {
+		id: number
+		image: string
+		title: { kk: string; ru: string; en: string }
+		description: { kk: string; ru: string; en: string }
+		alt: string
+		width: number
+		height: number
+	}[]
+}) {
 	const locale = useLocale() as Locale
 
 	const [activeSlide, setActiveSlide] = useState(0)
 
-	const slide = SLIDES[activeSlide]
+	const slide = slides[activeSlide]
 	const localizedTitle = localize(slide.title, locale, '')
 	const localizedDescription = localize(slide.description, locale, '')
 
@@ -57,7 +67,7 @@ export function FloraAndFauna() {
 								setActiveSlide(swiper.activeIndex)
 							}}
 						>
-							{SLIDES.map((slide) => (
+							{slides.map((slide) => (
 								<SwiperSlide
 									key={slide.id}
 									className="h-[888px] overflow-hidden"
