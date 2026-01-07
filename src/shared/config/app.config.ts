@@ -1,3 +1,3 @@
 export const appConfig = {
-	isProduction: true,
+	isProduction: process.env.NEXT_PUBLIC_GIT_BRANCH === 'production' ? true : false,
 }

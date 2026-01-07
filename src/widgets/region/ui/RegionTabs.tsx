@@ -61,7 +61,7 @@ export function RegionTabs() {
 		<>
 			<section
 				ref={TabsRef}
-				className="relative z-5 mb-[30px] translate-y-[50px] bg-white pt-[30px] opacity-0 sm:mb-[40px] sm:pt-[40px] md:mb-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+				className="relative z-5 mb-[30px] translate-y-[50px] pt-[30px] opacity-0 sm:mb-[40px] sm:pt-[40px] md:mb-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
 			>
 				<Container className="relative z-10 flex flex-wrap items-center justify-center gap-[15px] overflow-x-auto sm:gap-[20px] md:gap-[30px]">
 					{MENU_ITEMS.map((item) => {
