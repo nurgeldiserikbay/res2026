@@ -1,6 +1,5 @@
 'use client'
 
-import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Image from 'next/image'
 import { useLocale } from 'next-intl'
@@ -11,8 +10,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
 import { Locale } from '@/shared/config/i18n'
-import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
