@@ -96,8 +96,8 @@ const navItems: readonly NavItem[] = [
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
 	},
-	{ key: 'gallery', href: '/gallery', main: false, ready: !appConfig.isProduction, showHeader: !appConfig.isProduction, showFooter: true },
-	{ key: 'faq', href: '/faq', main: false, ready: !appConfig.isProduction, showHeader: !appConfig.isProduction, showFooter: true },
+	{ key: 'gallery', href: '/gallery', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
+	{ key: 'faq', href: '/faq', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
 	{ key: 'contacts', href: '/contacts', main: false, ready: true, showHeader: true, showFooter: true },
 ] as const
 
