@@ -537,7 +537,7 @@ export const newsPaginItems: NewsItemProps[] = [
 
 <p>He added: “A special session on the Caspian Sea crisis will be held at the Regional Environmental Summit in Astana in 2026.”.</p>`,
 		},
-		views: 3420,
+		views: 560,
 	},
 	{
 		title: {
@@ -631,7 +631,7 @@ export const newsPaginItems: NewsItemProps[] = [
 <p>Ms. Schoemaker praised Kazakhstan's environmental initiatives, expressed her readiness for active cooperation with the Kazakh side, and confirmed her participation in the upcoming Regional Ecological Summit.</p>
 `,
 		},
-		views: 3420,
+		views: 1588,
 	},
 	{
 		title: {
