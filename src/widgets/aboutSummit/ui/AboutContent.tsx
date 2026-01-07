@@ -15,8 +15,6 @@ export function AboutContent() {
 	useAnimSlide(TextRef, { y: 50, delay: 0.1 })
 	const QuoteRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(QuoteRef, { y: 50, delay: 0.2 })
-	const PresidentInfoRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(PresidentInfoRef, { y: 50, delay: 0.3 })
 	const Text2Ref = useRef<HTMLParagraphElement>(null)
 	useAnimSlide(Text2Ref, { y: 50, delay: 0.4 })
 	const Image1Ref = useRef<HTMLDivElement>(null)
@@ -46,7 +44,7 @@ export function AboutContent() {
 					<div className="w-full lg:max-w-[874px]">
 						<div
 							ref={TextRef}
-							className="text-text mb-[40px] w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[60px] sm:text-[15px] md:mb-[80px] md:text-[16px] lg:mb-[100px] xl:mb-[122px]"
+							className="text-text mb-[40px] w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[30px] sm:text-[15px] md:mb-[40px] md:text-[16px] lg:mb-[100px] xl:mb-[122px]"
 						>
 							<p className="mb-[20px] text-[18px] leading-normal font-normal sm:mb-[30px] md:mb-[40px] md:text-[20px] lg:mb-[50px] lg:text-[22px] xl:mb-[60px] 2xl:text-[24px]">
 								{t('pages.about.aboutText2')}
@@ -63,7 +61,7 @@ export function AboutContent() {
 
 					<div className="w-full lg:max-w-[871px]">
 						<div className="relative mb-[30px] min-h-[200px] w-full sm:mb-[40px] sm:min-h-[250px] md:mb-[50px] md:min-h-[279px]">
-							<div className="absolute bottom-0 left-0 flex w-full max-w-[865px] flex-col items-end justify-between gap-[10px] sm:gap-[15px] lg:flex-row lg:gap-[5px]">
+							<div className="relative bottom-0 left-0 flex w-full max-w-[865px] flex-col items-end justify-between gap-[10px] sm:gap-[15px] lg:absolute lg:flex-row lg:gap-[5px]">
 								<div className="relative w-full grow translate-y-0 transform lg:-translate-y-[60px]">
 									<div
 										ref={Image1Ref}
@@ -78,12 +76,12 @@ export function AboutContent() {
 										/>
 										<div
 											ref={Image1TextRef}
-											className="absolute bottom-0 left-0 translate-y-[30px] p-[15px] opacity-0 sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[60px]"
+											className="absolute bottom-0 left-0 translate-y-[30px] p-[15px] opacity-0 sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[50px] 2xl:p-[60px]"
 										>
 											<div className="mb-[10px] max-w-[294px] text-[11px] leading-normal font-normal text-white sm:mb-[15px] sm:text-[12px] md:mb-[20px] md:text-[14px] lg:mb-[25px] lg:text-[16px] xl:mb-[30px]">
 												{t(`pages.footer.text`)}
 											</div>
-											<div className="max-w-[294px] text-[16px] leading-[1.2] font-bold text-white sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px]">
+											<div className="max-w-[294px] text-[16px] leading-[1.2] font-bold text-white sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
 												{t(`pages.footer.text1`)}
 											</div>
 										</div>
@@ -91,7 +89,7 @@ export function AboutContent() {
 								</div>
 								<div
 									ref={Image2Ref}
-									className="w-full max-w-[342px] translate-y-[50px] opacity-0"
+									className="3xl:max-w-[342px] hidden w-full max-w-[250px] translate-y-[50px] opacity-0 xl:block"
 								>
 									<Image
 										src="/imgs/about-page-img-2.png"
@@ -125,37 +123,13 @@ export function AboutContent() {
 								),
 							})}
 						</p>
-
-						<div
-							ref={QuoteRef}
-							className="seld-start relative w-full max-w-[859px] translate-y-[50px] rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:p-[24px] md:pt-[30px] md:pl-[40px] lg:pt-[50px] lg:pl-[70px] xl:pt-[65px] xl:pl-[86px]"
-						>
-							<div className="text-muted absolute top-[15px] left-[15px] hidden text-[48px] leading-none sm:top-[20px] sm:left-[20px] sm:text-[64px] md:block md:text-[80px] lg:text-[100px] xl:text-[128px]">
-								&quot;
-							</div>
-
-							<div
-								ref={PresidentInfoRef}
-								className="relative z-1 flex flex-wrap items-start gap-[15px] sm:flex-nowrap sm:gap-[20px] md:gap-[30px]"
-							>
-								<Image
-									ref={PresidentImgRef}
-									src="/imgs/president-about-img.png"
-									alt="About President"
-									width={213}
-									height={360}
-									className="block w-full max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
-								/>
-								<div className="w-full sm:flex-1">
-									<div className="font-regular relative z-1 mb-[20px] text-[12px] leading-normal whitespace-pre-line text-black sm:mb-[25px] sm:text-[13px] md:mb-[30px] md:text-[14px] lg:mb-[40px] lg:text-[15px] xl:mb-[50px]">
-										{t('pages.about.presidentText')}
-									</div>
-									<div className="text-primary text-[11px] leading-normal sm:text-[12px] md:text-[13px] lg:text-[14px]">
-										{t('pages.about.presidentPosition')}
-									</div>
-								</div>
-							</div>
-						</div>
+						<Image
+							src="/imgs/about-page-img-5.png"
+							alt="About President"
+							width={713}
+							height={231}
+							className="block h-auto w-full rounded-[12px]"
+						/>
 					</div>
 				</Container>
 			</section>

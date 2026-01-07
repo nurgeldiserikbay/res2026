@@ -16,7 +16,8 @@ before_script:
 docker-build:
   stage: dockerize
   image: docker:29.0.0
-  when: on_success
+  variables:
+    GIT_STRATEGY: fetch
   tags: [crocos-docker]
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
@@ -25,7 +26,7 @@ docker-build:
     - docker rmi $CI_REGISTRY_IMAGE:$TAG
 
 
-deploy-prod:
+deploy-dev:
   stage: deploy  
   tags:
     - shell
@@ -39,8 +40,9 @@ deploy-prod:
     - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
   script:
     - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
-    - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-prod" || true
-    - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-prod" || true   
-    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-prod --network http_default $CI_REGISTRY_IMAGE:$TAG"	
+    - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-dev" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-dev" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-dev --network http_default -p 3000 $CI_REGISTRY_IMAGE:$TAG"
+    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-dev --network http_default $CI_REGISTRY_IMAGE:$TAG"
 
 

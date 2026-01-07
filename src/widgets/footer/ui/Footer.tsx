@@ -27,15 +27,15 @@ export function Footer() {
 	const FooterText1Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterText1Ref, { y: 50, delay: 0.4 })
 	const FooterText2Ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(FooterText2Ref, { y: 50, delay: 0.5, start: 'top bottom' })
+	useAnimSlide(FooterText2Ref, { y: 50, delay: 0.5, start: 'top 95%' })
 	const FooterContactsRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterContactsRef, { y: 50, delay: 0.6 })
 	const FooterSocialRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(FooterSocialRef, { y: 50, delay: 0.7, start: 'top bottom' })
+	useAnimSlide(FooterSocialRef, { y: 50, delay: 0.7, start: 'top 95%' })
 	const FooterNavBottomRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterNavBottomRef, { y: 50, delay: 0.8 })
 	const FooterCopyrightRef = useRef<HTMLParagraphElement>(null)
-	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9, start: 'top bottom' })
+	useAnimSlide(FooterCopyrightRef, { y: 50, delay: 0.9, start: 'top 95%' })
 
 	return (
 		<footer className="relative z-1 bg-white pt-[50px] pb-[38px] lg:pt-[75px] lg:pb-[58px] 2xl:pt-[100px] 2xl:pb-[82px]">
@@ -45,10 +45,12 @@ export function Footer() {
 					className="aspect-[1.11] max-w-[716px] grow translate-y-[50px] opacity-0"
 				>
 					<iframe
-						id="map_378765882"
-						src="https://makemap.2gis.ru/widget?data=eJw1jsFuhDAMRP_FvUarBAiEfMBWve1tpVZ7QMRtIwUcBa-0W8S_N5DWJ8sznnkrUHKY0L0iTcjJ4wL2YwV-RgQLZxz4nhAExEQREx_6CiMFSll_kZVRn1XW2XPYP_LqcBmTj-xpLoeft9nhA6yS_7MJ-CqFzz3ur-1CfubsHylD-XngA6ZTp6ZStRZanWRfmVrf8rt3YNuu2W4CpiFeaPGlb4UwMNjilbppTNf2UvcCwi6XMK1MXWkjdWsyHdGU2docmrkphOs3Yng_rpzuuP0CbyxY3g"
-						sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
-						className="h-full w-full rounded-[12px]"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
+						style={{ border: 0 }}
+						allowFullScreen
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
 					></iframe>
 				</div>
 				<div className="max-w-[416px] grow lg:max-w-[1024px]">

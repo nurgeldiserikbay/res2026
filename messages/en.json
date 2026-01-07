@@ -8,7 +8,7 @@
 	},
 	"nav": {
 		"about": {
-			"root": "About RES 2026",
+			"root": "About the summit",
 			"region": "About the region",
 			"res": "About the summit",
 			"preparationProcess": "Preparatory process",
@@ -56,6 +56,10 @@
 		"toMainPage": "Return to main page"
 	},
 	"titles": {
+		"slogan": "Shared vision for a Resilient Future",
+		"Regional": "Regional",
+		"Ecological": "Ecological",
+		"Summit2026": "Summit 2026",
 		"april": "April",
 		"eventAddress": "Astana, Kazakhstan",
 		"speakersPage": "Speakers",
@@ -67,11 +71,12 @@
 		"speakers": "Speakers and participants",
 		"news": "News",
 		"partners": "Partners",
+		"mainPartners": "Main partners",
 		"soon": "Something interesting will be here soon",
 		"soonText": "This section is under development. We are preparing new content for you and will open access soon. \n Come back a bit later!",
 		"otherNews": "Other news",
 		"organizers": "Organizers",
-		"contactPersons": "Project office",
+		"contactPersons": "Project Office for Central Asia on Climate Change and Green Energy",
 		"pressSecretary": "Press secretary project office",
 		"responsibleMinistry": "Responsible ministry",
 		"venue": "Venue address",
@@ -81,8 +86,8 @@
 		"registrationAndParticipationName": "Almaganbetov Anuar Serikovich",
 		"partnershipAndSponsorship": "On public relations",
 		"partnershipAndSponsorshipName": "Rysbetova Nazym Kanatbekovna",
-		"organizationQuestions": "On exhibition organization",
-		"internationalCenterForGreenTechnology": "International Center for Green Technologies and Investment Projects (ICGTIP)",
+		"organizationQuestions": "For Summit organization-related issues",
+		"internationalCenterForGreenTechnology": "Ministry of Ecology and natural resources of the Republic of Kazakhstan",
 		"mediaWork": "Media relations",
 		"ministryOfEnvironment": "Ministry of Ecology and Natural Resources of Kazakhstan",
 		"programs": "Program",
@@ -112,7 +117,7 @@
 	"pages": {
 		"aboutSummit": {
 			"title": "<primary>The Regional Ecological Summit 2026</primary> is aimed at shaping a shared vision for the sustainable development of Central Asia.",
-			"text1": "The Summit aims to unite Central Asian countries in partnership with the UN to develop agreed solutions to climate and environmental challenges. This is a two-year process (2024–2026) that has received broad international and political support. The Summit's concept is based on the idea of \"Bir Tamyr\" (\"One Root\") - a symbol of common heritage and collective action for a sustainable future of the region.",
+			"text1": "The Summit aims to unite Central Asian countries in partnership with the UN to develop agreed solutions to climate and environmental challenges. This is a two-year process (2024–2026) that has received broad international and political support. The Summit's concept is based on the idea of \"Bir Tamyr\" (\"Same Root\") - a symbol of common heritage and collective action for a sustainable future of the region.",
 			"text2": "We live in an era when innovation and sustainable development are becoming the most important priorities. At our summit, you will be able to see how cutting-edge ideas and solutions can change the world for the better. We invite you to become part of this movement to build together a future that inspires and motivates."
 		},
 		"programms": {
@@ -124,30 +129,31 @@
 			"text1": "We are proud to be able to present on our platform world leaders in technology, sustainable development and science. Our speakers are those who shape the future by making the most important decisions that change the world."
 		},
 		"partners": {
-			"text": "RES 2026 would not have been possible without the support of our esteemed organizers, partners and media partners.",
-			"text1": "These leading companies and organizations play a key role in creating this unique event and allow us to present the most advanced ideas and technologies of world-class level."
+			"text": "RES 2026 would not be possible without the support of our distinguished organizers, partners, and media partners.",
+			"text1": "These leading organizations play a key role in shaping this unique event and enable us to showcase the most advanced ideas."
 		},
 		"connectionBanner": {
 			"text": "Join us at RES 2026 - a unique event that will become the center of innovation, technology and sustainable development! "
 		},
 		"footer": {
-			"text": "The Summit will be held at EXPO - International Exhibition Center, one of the country's main venues for world events and innovative projects.",
-			"text1": "April 22-24, 2026 Astana, \"Congress Center\"",
+			"text": "The Summit will be held at EXPO.",
+			"text1": "April 22-24, 2026 Astana, «Congress Center»",
 			"copyright": "© Regional Ecological Summit EXPO 2026"
 		},
 		"about": {
 			"title": "About the summit",
-			"presidentText": "«…Kazakhstan, in partnership with the United Nations and other international organizations, will host the Regional Ecological Summit in Astana in April next year. \n\n As part of our broader environmental commitments, Kazakhstan is implementing the nationwide «Taza Kazakhstan» campaign. \n\n This nationwide movement brings together millions of volunteers who take part in clean-up activities, waste reduction initiatives, and environmental awareness-raising efforts.»",
+			"presidentTextTitle": "Quote by the President of the Republic of Kazakhstan:",
+			"presidentText": "«Many LLDCs face water scarcity, glacier loss, desertification and other extreme weather events. Addressing these challenges requires coordinated regional efforts and strong international support. At the same time, I believe that climate action must remain balanced and inclusive, matching the legitimate development needs of nations. To strengthen our joint climate efforts, I invite all of you to take part at the Regional Ecological Summit to be held in Astana in partnership with the United Nations in April next year».",
 			"presidentInitiativeText": "\"However, development cannot be sustainable without addressing the climate crisis. Central Asia is one of the regions most vulnerable to climate change on the planet. Warming here occurs twice as fast as the global average. In response, we are promoting a pragmatic and regionally coordinated climate agenda. Our commitments include participation in various international organizations and agreements. \n\n In 2026, Kazakhstan, in partnership with the UN, will hold a Regional Ecological Summit, which is intended to become a platform for uniting Central Asian strategies and global ambitions\".",
 			"moreAboutSummit": "Learn more about the summit",
-			"presidentPosition": "From the address of Kassym-Jomart Tokayev, President of the Republic of Kazakhstan, at the General Debate of the 80th session of the United Nations General Assembly, New York, USA",
-			"text2": "The Regional Ecological Summit 2026, initiated by the President of Kazakhstan Kassym-Jomart Tokayev, aims to unite Central Asian countries in partnership with the UN to develop agreed solutions to climate and environmental challenges. This is a two-year process (2024–2026) that has received broad international and political support. The Summit's concept is based on the idea of \"Bir Tamyr\" (\"One Root\") - a symbol of common heritage and collective action for a sustainable future of the region.",
+			"presidentPosition": "From the speech of Kassym-Jomart Tokayev, President of the Republic of Kazakhstan, at the Third United Nations Conference on Landlocked Developing Countries, Turkmenistan, Awaza, 2025",
+			"text2": "The Regional Ecological Summit 2026, initiated by the President of Kazakhstan Kassym-Jomart Tokayev, aims to unite Central Asian countries in partnership with the UN to develop agreed solutions to climate and environmental challenges. This is a two-year process (2024–2026) that has received broad international and political support. The Summit's concept is based on the idea of \"Bir Tamyr\" (\"Same Root\") - a symbol of common heritage and collective action for a sustainable future of the region.",
 			"presidentInitiative": "President's initiative",
 			"purpose": "Objective",
-			"text3": "In partnership with the United Nations, the Regional Ecological Summit 2026 will bring together the countries of Central Asia to develop coordinated solutions on climate and environmental issues. The Summit will address topics such as the preservation of the Aral Sea and the reduction of the Caspian Sea basin, the promotion of green finance and low-carbon technologies, as well as the development of joint initiatives, declarations, and a 2026–2030 Action Programme for the sustainable development of the region.",
+			"text3": "In partnership with the United Nations and other international organizations, the Regional Ecological Summit 2026 will bring together the countries of Central Asia to develop coordinated solutions on climate and environmental issues. The Summit will address topics such as the preservation of the Aral Sea and the reduction of the Caspian Sea basin, the promotion of green finance and low-carbon technologies, as well as the development of joint initiatives, declarations, and a 2026–2030 Action Programme for the sustainable development of the region.",
 			"aboutText1": "The Regional Ecological Summit 2026 was initiated by the President of the Republic of Kazakhstan Kassym-Jomart Tokayev and aims to unite Central Asian countries to develop common solutions to combat climate change in partnership with the UN. This is not just a meeting - it is a two-year preparation process that started in 2024 and culminates in a high-level Summit in 2026, where agreed environmental initiatives and mechanisms for regional cooperation will be presented.",
 			"aboutText2": "The United Nations expressed its support for the Summit through General Assembly Resolution 78/147 of 19 December 2023, entitled “Central Asia facing environmental challenges: strengthening regional solidarity for sustainable development and prosperity.”",
-			"aboutText3": "The initiative was also reflected in a number of key political documents at the level of Heads of State, including:",
+			"aboutText3": "In 2024, the initiative was also reflected in a number of key political documents at the level of Heads of State, including:",
 			"aboutText31": "the Karabakh Declaration of the Informal Summit of the Organization of Turkic States (6 July 2024, Azerbaijan);",
 			"aboutText32": "the Joint Statement of the Sixth Consultative Meeting of the Heads of State of Central Asia (9 August 2024, Kazakhstan);",
 			"aboutText33": "the Bishkek Declaration of the Eleventh Summit of the Organization of Turkic States (6 November 2024, Kyrgyz Republic).",
@@ -155,11 +161,12 @@
 			"aboutText4": "\"However, development cannot be sustainable without addressing the climate crisis. Central Asia is one of the regions most vulnerable to climate change on the planet. Warming here occurs twice as fast as the global average. In response, we are promoting a pragmatic and regionally coordinated climate agenda. Our commitments include participation in various international organizations and agreements. \n\n In 2026, Kazakhstan, in partnership with the UN, will hold a Regional Ecological Summit, which is intended to become a platform for uniting Central Asian strategies and global ambitions\".",
 			"aboutText5": "The Regional Ecological Summit 2026 in partnership with the UN is a platform for uniting Central Asian countries in developing agreed working solutions and mechanisms that reflect a regional approach to overcoming climate and environmental challenges, including the tragedy of the Aral Sea, which has become a global symbol of environmental degradation, and the steady decline in the level of the Caspian Sea. Special attention will be paid to the formation of real needs of Central Asia in 'green' financing aimed at supporting adaptation measures, developing low-carbon technologies and strengthening the environmental sustainability of the region. \n\n The Summit creates a regional platform for dialogue and solidarity, strengthening cooperation between states, international organizations, scientific and business communities. It contributes to raising awareness of priority environmental issues, finding practical solutions and forming joint action plans for the future aimed at sustainable development of the region. The goal is to form specific initiatives and mechanisms for joint action. Adoption of the Joint Declaration of Heads of State of Central Asia on regional cooperation in ecology and sustainable development. \n\n Approval of the Regional Action Program with UN agencies (2026–2030) for a sustainable future of Central Asia, including regional initiatives on thematic areas of the Summit, launch of new environmental projects and initiatives in the directions of the Summit. Preparation for the summit began in 2024 and includes a series of regional consultations. The Summit will be the culmination of this process and will give political impetus to the environmental agenda of the region. The initiative strengthens the existing efforts of countries, complementing them with a regional dimension. The basis will be a coordinated environmental agenda, including updated climate goals of Central Asian countries.",
 			"resText1": "The Regional Ecological Summit 2026 (RES 2026) was initiated by the President of the Republic of Kazakhstan, Kassym-Jomart Tokayev, at the 78th session of the United Nations General Assembly in September 2023. At the Astana International Forum held in May 2025, it was announced that the Summit’s agenda would be expanded from climate-related issues to broader environmental issues.",
-			"resText2": "At the heart of the initiative lies the concept of “Bir Tamyr” (“One Root”). The word tamyr exists in many languages of the region and carries a profound symbolic meaning: the roots of nature, the veins of the land, and the vessels of culture. It serves as a metaphor for connection, resilience, and shared heritage, uniting Central Asia not by political borders, but by meaning, memory, and a common future. The Summit reflects this vision: one region – shared challenges – collective action. It brings together governments, international organizations, the scientific community, business, civil society, and youth to lay the foundation for a shared, environmentally sustainable future.",
-			"resText3": "Preparations for the Summit began in 2024 and include a series of regional <link>consultations</link>."
+			"resText2": "At the heart of the initiative lies the concept of “Bir Tamyr” (Same Root”). The word tamyr exists in many languages of the region and carries a profound symbolic meaning: the roots of nature, the veins of the land, and the vessels of culture. It serves as a metaphor for connection, resilience, and shared heritage, uniting Central Asia not by political borders, but by meaning, memory, and a common future. The Summit reflects this vision: one region – shared challenges – collective action. It brings together governments, international organizations, the scientific community, business, civil society, and youth to lay the foundation for a shared, environmentally sustainable future.",
+			"resText3": "Preparations for the Summit began in 2024 and include a series of regional consultations."
 		},
 		"contacts": {
-			"mepr": "MEPR",
+			"mepr": "For RES 2026 EXPO organization–related issues",
+			"meprSubtitle": "NJSC «International Green Technologies and Investment Projects Center» (IGTIPC)",
 			"meprPosition": "Press Secretary of the Ministry of Ecology and Natural Resources of the Republic of Kazakhstan",
 			"meprName": "Koishibayeva Aynash Tlegenovna",
 			"ministryOfEnvironment": "The event is held with the support of the Ministry of Ecology and Natural Resources of Kazakhstan.",
@@ -169,13 +176,13 @@
 			"rsvp": "Due to limited seating, please confirm your participation (RSVP) by phone:",
 			"botPhone": "+7 771 288 65 97, Bota",
 			"lauraPhone": "+7 707 319 7731, Laura",
-			"aydarName": "Aidar Yesembayev",
-			"aydarPosition": "Head of the Office of Competencies for Technology Commercialization of the International Center for Green Technologies and Investment Projects JSC",
+			"aydarName": "Aidar Yessembayev",
+			"aydarPosition": "Head of the Technology Commercialization Competence Office",
 			"communicationLine": "General line",
-			"botaName": "Botakoz Yelshbek",
+			"botaName": "Botakoz Yelshibek",
 			"botaPosition": "Head of Business Development RES 2026 EXPO (partnership, content formation, media and general issues)",
 			"anelName": "Anel Omarova",
-			"anelPosition": "Commercial Director RES 2026 EXPO (participation in the exhibition area, sponsorship)"
+			"anelPosition": "Commercial Director, RES 2026 EXPO (exhibition area participation, sponsorship)"
 		},
 		"region": {
 			"about": "About Kazakhstan",
