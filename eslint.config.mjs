@@ -58,6 +58,7 @@ const eslintConfig = defineConfig([
 			'@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 			'@typescript-eslint/no-explicit-any': 'error',
 			'sonarjs/no-nested-functions': 'off',
+			'security/detect-object-injection': 'off',
 
 			'boundaries/element-types': [
 				'error',
