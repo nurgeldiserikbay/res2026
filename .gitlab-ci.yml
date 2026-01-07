@@ -26,8 +26,28 @@ docker-build:
     - docker rmi $CI_REGISTRY_IMAGE:$TAG
 
 
-deploy-dev:
+deploy-prod:
   stage: deploy  
+  tags:
+    - shell
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
+  script:
+    - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
+    - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-prod" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-prod" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-prod --network http_default $CI_REGISTRY_IMAGE:$TAG"
+  only:
+    - main
+
+deploy-dev:
+  stage: deploy
   tags:
     - shell
   before_script:
@@ -42,7 +62,6 @@ deploy-dev:
     - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
     - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-dev" || true
     - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-dev" || true
-    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-dev --network http_default -p 3000 $CI_REGISTRY_IMAGE:$TAG"
     - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-dev --network http_default $CI_REGISTRY_IMAGE:$TAG"
-
-
+  only:
+    - develop
