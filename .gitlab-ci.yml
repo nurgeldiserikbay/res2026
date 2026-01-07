@@ -1,5 +1,5 @@
 variables:
-#  GIT_STRATEGY: clone
+  #  GIT_STRATEGY: clone
   SRV: '89.219.32.148'
   PORT: '22022'
   NEXT_PUBLIC_GIT_BRANCH: production
@@ -13,7 +13,6 @@ stages:
 before_script:
   - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
 
-
 docker-build:
   stage: dockerize
   image: docker:29.0.0
@@ -26,9 +25,8 @@ docker-build:
     - docker push $CI_REGISTRY_IMAGE:$TAG
     - docker rmi $CI_REGISTRY_IMAGE:$TAG
 
-
 deploy-prod:
-  stage: deploy  
+  stage: deploy
   tags:
     - shell
   before_script:

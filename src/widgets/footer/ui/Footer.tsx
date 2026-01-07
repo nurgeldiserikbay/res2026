@@ -73,9 +73,10 @@ export function Footer() {
 
 						<div
 							ref={FooterNavTopRef}
-							className="max-w-[789px] grow translate-y-[50px] opacity-0"
+							className="flex max-w-[789px] grow translate-y-[50px] flex-wrap gap-x-[80px] gap-y-[36px] opacity-0 lg:flex-nowrap"
 						>
 							<FooterNavTop />
+							<FooterNavBottom />
 						</div>
 					</div>
 
@@ -99,15 +100,6 @@ export function Footer() {
 									<IconPhone className="text-primary" />
 									<span>+7 708 026 88 66</span>
 								</Link>
-							</div>
-						</div>
-
-						<div className="flex">
-							<div
-								ref={FooterNavBottomRef}
-								className="translate-y-[50px] opacity-0"
-							>
-								<FooterNavBottom />
 							</div>
 						</div>
 					</div>
