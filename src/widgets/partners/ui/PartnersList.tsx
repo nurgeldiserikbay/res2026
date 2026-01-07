@@ -6,8 +6,6 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useMemo, useRef } from 'react'
 
-import 'swiper/css'
-
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 
 type PartnerItem = {

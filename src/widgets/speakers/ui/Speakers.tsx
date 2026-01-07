@@ -2,12 +2,25 @@
 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
-import { useRef, useState } from 'react'
-import { Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { useEffect, useRef, useState } from 'react'
 
-import 'swiper/css'
+const Swiper = dynamic(
+	async () => {
+		const mod = await import('swiper/react')
+		return { default: mod.Swiper }
+	},
+	{ ssr: false },
+)
+
+const SwiperSlide = dynamic(
+	async () => {
+		const mod = await import('swiper/react')
+		return { default: mod.SwiperSlide }
+	},
+	{ ssr: false },
+)
 
 import { Speaker } from '@/entities/speaker/Speaker'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
@@ -21,6 +34,16 @@ export function Speakers() {
 
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
+	const [navigationModule, setNavigationModule] = useState<typeof import('swiper/modules').Navigation | null>(null)
+
+	useEffect(() => {
+		// Динамический импорт модуля Navigation
+		import('swiper/modules').then((mod) => {
+			setNavigationModule(mod.Navigation)
+		})
+		// Динамический импорт CSS
+		import('swiper/css')
+	}, [])
 
 	// Refs for animations
 	const sectionRef = useRef<HTMLElement>(null)
@@ -104,55 +127,57 @@ export function Speakers() {
 					ref={swiperRef}
 					className="w-full max-w-[1135px]"
 				>
-					<Swiper
-						modules={[Navigation]}
-						slidesPerView={1}
-						className="w-full overflow-visible"
-						navigation={{
-							nextEl: '#swiper-button-next',
-							prevEl: '#swiper-button-prev',
-						}}
-						breakpoints={{
-							// when window width is >= 320px
-							320: {
-								slidesPerView: 1.2,
-								spaceBetween: 10,
-							},
-							// when window width is >= 480px
-							480: {
-								slidesPerView: 2.2,
-								spaceBetween: 30,
-							},
-							// when window width is >= 640px
-							1020: {
-								slidesPerView: 2.4,
-								spaceBetween: 60,
-							},
-						}}
-						onSwiper={(swiper) => {
-							setIsBeginning(swiper.isBeginning)
-							setIsEnd(swiper.isEnd)
-						}}
-						onSlideChange={(swiper) => {
-							setIsBeginning(swiper.isBeginning)
-							setIsEnd(swiper.isEnd)
-						}}
-					>
-						{new Array(10).fill(0).map((_, index) => (
-							<SwiperSlide
-								key={index}
-								className="translate-x-[90px] opacity-0"
-							>
-								<Speaker
-									name="Lok Sabha"
-									description="(Лок Сабха) от правящего Национального -декомакрвтического альянса"
-									image="/imgs/speaker.png"
-									tag="Спикер"
-									title="Член новоизбранный нижней палаты Индии"
-								/>
-							</SwiperSlide>
-						))}
-					</Swiper>
+					{navigationModule && (
+						<Swiper
+							modules={[navigationModule]}
+							slidesPerView={1}
+							className="w-full overflow-visible"
+							navigation={{
+								nextEl: '#swiper-button-next',
+								prevEl: '#swiper-button-prev',
+							}}
+							breakpoints={{
+								// when window width is >= 320px
+								320: {
+									slidesPerView: 1.2,
+									spaceBetween: 10,
+								},
+								// when window width is >= 480px
+								480: {
+									slidesPerView: 2.2,
+									spaceBetween: 30,
+								},
+								// when window width is >= 640px
+								1020: {
+									slidesPerView: 2.4,
+									spaceBetween: 60,
+								},
+							}}
+							onSwiper={(swiper) => {
+								setIsBeginning(swiper.isBeginning)
+								setIsEnd(swiper.isEnd)
+							}}
+							onSlideChange={(swiper) => {
+								setIsBeginning(swiper.isBeginning)
+								setIsEnd(swiper.isEnd)
+							}}
+						>
+							{new Array(10).fill(0).map((_, index) => (
+								<SwiperSlide
+									key={index}
+									className="translate-x-[90px] opacity-0"
+								>
+									<Speaker
+										name="Lok Sabha"
+										description="(Лок Сабха) от правящего Национального -декомакрвтического альянса"
+										image="/imgs/speaker.png"
+										tag="Спикер"
+										title="Член новоизбранный нижней палаты Индии"
+									/>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					)}
 				</div>
 				<SpekerControl
 					className="mt-[48px] flex lg:hidden"
