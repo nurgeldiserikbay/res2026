@@ -73,7 +73,7 @@ export function RegionTabs({ tabs }: { tabs: { id: number; title: string; href: 
 				className="relative z-5 mb-[30px] translate-y-[50px] pt-[30px] opacity-0 sm:mb-[40px] sm:pt-[40px] md:mb-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
 			>
 				<Container
-					ref={TabsContainerRef}
+					ref={TabsContainerRef as React.RefObject<HTMLDivElement>}
 					className="relative z-10 flex flex-wrap items-center justify-center gap-[15px] overflow-x-auto sm:gap-[20px] md:gap-[30px]"
 				>
 					{tabs.map((item) => {
@@ -84,7 +84,7 @@ export function RegionTabs({ tabs }: { tabs: { id: number; title: string; href: 
 								key={item.id}
 								href={item.href}
 								className={[
-									'cursor-pointer translate-y-[30px] border-b-[3px] border-solid py-[20px] text-center text-[14px] leading-none font-medium opacity-0 whitespace-nowrap transition-colors sm:py-[23px] sm:text-[15px] md:py-[26px] md:text-[16px]',
+									'translate-y-[30px] cursor-pointer border-b-[3px] border-solid py-[20px] text-center text-[14px] leading-none font-medium whitespace-nowrap opacity-0 transition-colors sm:py-[23px] sm:text-[15px] md:py-[26px] md:text-[16px]',
 									isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text',
 								].join(' ')}
 							>
