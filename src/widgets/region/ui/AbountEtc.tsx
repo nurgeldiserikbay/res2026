@@ -145,7 +145,7 @@ export function AbountEtc() {
 
 							<div
 								ref={LogoRef}
-								className="hidden translate-x-[90px] opacity-0 lg:block"
+								className="hidden w-full max-w-[200px] translate-x-[90px] opacity-0 lg:block"
 							>
 								<Image
 									src="/imgs/logotype.svg"
