@@ -42,7 +42,7 @@
 		},
 		"news": {
 			"root": "News",
-			"pressReleases": "Press releases",
+			"publications": "Publications",
 			"announcements": "Announcements",
 			"latest": "Latest news"
 		},
@@ -112,7 +112,8 @@
 		"allNews": "All news",
 		"latestNews": "Latest news",
 		"announcements": "Announcements",
-		"pressReleases": "Press releases"
+		"publications": "Publications",
+		"noContent": "No content"
 	},
 	"pages": {
 		"aboutSummit": {

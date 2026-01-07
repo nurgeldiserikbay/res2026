@@ -42,7 +42,7 @@
 		},
 		"news": {
 			"root": "Новости",
-			"pressReleases": "Публикация",
+			"publications": "Публикации",
 			"announcements": "Анонсы",
 			"latest": "Последние новости"
 		},
@@ -112,7 +112,8 @@
 		"allNews": "Все новости",
 		"latestNews": "Последние новости",
 		"announcements": "Анонсы",
-		"pressReleases": "Пресс-релизы"
+		"publications": "Публикации",
+		"noContent": "Нет контента"
 	},
 	"pages": {
 		"aboutSummit": {

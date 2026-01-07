@@ -10,11 +10,12 @@ import { localize } from '@/shared/utils/localize'
 export interface NewsItemProps {
 	title: LocalizedText | string
 	image: string
+	bannerImage: string
 	date: LocalizedText | string
 	tag: LocalizedText | string
 	slug: string
 	variant: 'light' | 'dark'
-	type: 'release' | 'anounce' | 'news'
+	type: 'latest' | 'anounce' | 'publication'
 	content: LocalizedText | string
 	wide?: boolean
 	views?: number
@@ -42,9 +43,11 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'light', wid
 				<div className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
 					{localizedDate}
 				</div>
-				<div
-					className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
-				>{`//${localizedTag}`}</div>
+				{localizedTag && (
+					<div
+						className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
+					>{`//${localizedTag}`}</div>
+				)}
 				<h4
 					className={`${variant === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[60px] text-[20px] leading-none font-medium md:h-[66px] md:text-[22px] lg:h-[72px] lg:text-[24px]`}
 				>

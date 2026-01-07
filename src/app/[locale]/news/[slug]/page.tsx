@@ -23,13 +23,15 @@ function NewsDetailContent({ slug }: { slug: string }) {
 	const locale = useLocale() as Locale
 
 	const newsItem = newsPaginItems.find((item) => item.slug === slug)
-	const otherNews = newsPaginItems.filter((item) => item.slug !== slug).slice(0, 5)
+	const otherNews = newsPaginItems
+		.filter((item) => item.type === newsItem?.type && item.slug !== slug && localize(item.content, locale) !== '')
+		.slice(0, 5)
 
 	const title = newsItem ? localize(newsItem.title, locale) : ''
 	const date = newsItem ? localize(newsItem.date, locale) : ''
 	const tag = newsItem ? localize(newsItem.tag, locale) : ''
 	const content = newsItem ? localize(newsItem.content, locale) : ''
-	const image = newsItem?.image || '/imgs/news-item-banner.png'
+	const image = newsItem?.bannerImage
 
 	return (
 		<>
@@ -47,23 +49,27 @@ function NewsDetailContent({ slug }: { slug: string }) {
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container className="flex flex-wrap items-start justify-between gap-[30px] lg:flex-nowrap lg:gap-[54px]">
-					<div className="max-w-[1332px] grow">
+					<div className={[`${otherNews.length > 0 ? 'max-w-[1332px]' : ''} grow`].join(` `)}>
 						<h2 className="text-text 3xl:text-[48px] mb-[50px] max-w-[1214px] text-[32px] leading-none font-normal xl:text-[36px] 2xl:text-[44px]">
 							{title}
 						</h2>
 						<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">{date}</div>
-						<div className="mb-[50px] text-[13px] leading-none font-light text-[#777C83]">
-							{'//'}
-							{tag}
-						</div>
+						{tag && (
+							<div className="text-[13px] leading-none font-light text-[#777C83]">
+								{'//'}
+								{tag}
+							</div>
+						)}
 
-						<Image
-							src={image}
-							alt={title}
-							width={1332}
-							height={613}
-							className="mb-[50px] block aspect-[2.17] w-full rounded-[12px] object-cover"
-						/>
+						{image && (
+							<Image
+								src={image}
+								alt={title}
+								width={1332}
+								height={613}
+								className="mt-[50px] mb-[50px] block aspect-[2.17] w-full rounded-[12px] object-cover"
+							/>
+						)}
 
 						{content && (
 							<div
@@ -73,22 +79,26 @@ function NewsDetailContent({ slug }: { slug: string }) {
 						)}
 					</div>
 
-					<div className="lg:w-[405px] lg:shrink-0">
-						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-none font-bold xl:mb-[50px] xl:text-[36px] 2xl:text-[44px]">
-							{t('titles.otherNews')}
-						</h2>
+					{otherNews.length > 0 ? (
+						<div className="lg:w-[405px] lg:shrink-0">
+							<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-none font-bold xl:mb-[50px] xl:text-[36px] 2xl:text-[44px]">
+								{t('titles.otherNews')}
+							</h2>
 
-						<div>
-							{otherNews.map((item, index) => (
-								<div
-									key={index}
-									className="mb-[10px] w-full last:mb-0"
-								>
-									<NewsShortItem {...item} />
-								</div>
-							))}
+							<div>
+								{otherNews.map((item, index) => (
+									<div
+										key={index}
+										className="mb-[10px] w-full last:mb-0"
+									>
+										<NewsShortItem {...item} />
+									</div>
+								))}
+							</div>
 						</div>
-					</div>
+					) : (
+						<></>
+					)}
 				</Container>
 			</section>
 		</>

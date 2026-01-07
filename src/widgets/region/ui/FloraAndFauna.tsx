@@ -75,12 +75,12 @@ export function FloraAndFauna({
 				className="relative mt-[50px] translate-y-[50px] opacity-0 sm:mt-[60px] md:mt-[80px] lg:mt-[100px]"
 			>
 				<Container className="overflow-visible">
-					<div className="relative w-full">
+					<div className="relative w-full after:absolute after:bottom-0 after:left-0 after:z-1 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-r after:from-black/70 after:to-transparent">
 						<Swiper
 							modules={[Navigation]}
 							slidesPerView={1}
 							spaceBetween={30}
-							className="h-[888px] w-full overflow-visible"
+							className="h-[888px] w-full overflow-visible rounded-[12px]"
 							navigation={{
 								nextEl: '#flora-and-fauna-swiper-button-next',
 								prevEl: '#flora-and-fauna-swiper-button-prev',
@@ -99,19 +99,19 @@ export function FloraAndFauna({
 							{slides.map((slide) => (
 								<SwiperSlide
 									key={slide.id}
-									className="h-[888px] overflow-hidden"
+									className="h-[888px] overflow-hidden rounded-[12px]"
 								>
 									<Image
 										src={slide.image}
 										alt={slide.alt}
 										width={slide.width}
 										height={slide.height}
-										className="block h-full w-full object-cover"
+										className="block h-full w-full rounded-[12px] object-cover"
 									/>
 								</SwiperSlide>
 							))}
 						</Swiper>
-						<div className="absolute bottom-0 left-0 z-1 flex flex-col items-start justify-end p-[50px]">
+						<div className="absolute bottom-0 left-0 z-2 flex flex-col items-start justify-end p-[50px]">
 							<div
 								ref={ButtonsRef}
 								className="mb-[50px] translate-x-[-50px] opacity-0"

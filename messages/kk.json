@@ -42,7 +42,7 @@
 		},
 		"news": {
 			"root": "Жаңалықтар",
-			"pressReleases": "Баспасөз хабарландырулары",
+			"publications": "Публикациялар",
 			"announcements": "Хабарландырулар",
 			"latest": "Соңғы жаңалықтар"
 		},
@@ -112,7 +112,8 @@
 		"allNews": "Барлық жаңалықтар",
 		"latestNews": "Соңғы жаңалықтар",
 		"announcements": "Хабарландырулар",
-		"pressReleases": "Баспасөз хабарландырулары"
+		"publications": "Публикациялар",
+		"noContent": "Контент жоқ"
 	},
 	"pages": {
 		"aboutSummit": {

@@ -1,7 +1,7 @@
 export const SLIDES = [
 	{
 		id: 1,
-		image: '/imgs/flora-and-fauna.png',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-1.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 1',
 			ru: 'Флора и фауна Казахстана',
@@ -18,7 +18,7 @@ export const SLIDES = [
 	},
 	{
 		id: 2,
-		image: '/imgs/flora-and-fauna.png',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-2.jpg',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 2',
 			ru: 'Флора и фауна Казахстана',
@@ -35,7 +35,75 @@ export const SLIDES = [
 	},
 	{
 		id: 3,
-		image: '/imgs/flora-and-fauna.png',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-3.jpg',
+		title: {
+			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			ru: 'Флора и фауна Казахстана',
+			en: 'The flora and fauna of Kazakhstan',
+		},
+		description: {
+			kk: 'Табиғи аумақтарының үлкендігіне байланысты өте алуан түрлі: далалар мен шөлдерден бастап Тянь-Шань мен Алтай тауларына дейін, онда ерекше түрлер бар, олардың көпшілігі Қызыл кітапқа енгізілген, мысалы, қар барысы (қар барысы), Тянь-Шань қоңыр аюы, құлан, сондай-ақ қызғылт фламинго, қарақұйрық. Мұнда көптеген сүтқоректілер (180-нен астам түрі), құстар (шамамен 500 түрі), бауырымен жорғалаушылар, қосмекенділер және балықтар мекендейді, ал өсімдіктер әлеміне сексеуіл, арша, қарағай, қайың және көптеген дала шөптері мен гүлдері кіреді, бұл биоәртүрліліктің байлығын көрсетеді.',
+			ru: 'Чрезвычайно разнообразны благодаря крупным природным зонам: от степей и пустынь до гор Тянь-Шаня и Алтая, где встречаются уникальные виды, многие из которых в Красной книге, как снежный барс (ирбис), тяньшаньский бурый медведь, кулан, а также розовые фламинго, джейраны. Здесь обитает множество млекопитающих (более 180 видов), птиц (около 500 видов), рептилий, амфибий и рыб, а растительность включает саксаул, арчу, сосны, березы и множество степных трав и цветов, отражая богатство биоразнообразия.',
+			en: 'is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 4,
+		image: '/imgs/flora-and-fauna/flora-and-fauna-4.jpg',
+		title: {
+			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			ru: 'Флора и фауна Казахстана',
+			en: 'The flora and fauna of Kazakhstan',
+		},
+		description: {
+			kk: 'Табиғи аумақтарының үлкендігіне байланысты өте алуан түрлі: далалар мен шөлдерден бастап Тянь-Шань мен Алтай тауларына дейін, онда ерекше түрлер бар, олардың көпшілігі Қызыл кітапқа енгізілген, мысалы, қар барысы (қар барысы), Тянь-Шань қоңыр аюы, құлан, сондай-ақ қызғылт фламинго, қарақұйрық. Мұнда көптеген сүтқоректілер (180-нен астам түрі), құстар (шамамен 500 түрі), бауырымен жорғалаушылар, қосмекенділер және балықтар мекендейді, ал өсімдіктер әлеміне сексеуіл, арша, қарағай, қайың және көптеген дала шөптері мен гүлдері кіреді, бұл биоәртүрліліктің байлығын көрсетеді.',
+			ru: 'Чрезвычайно разнообразны благодаря крупным природным зонам: от степей и пустынь до гор Тянь-Шаня и Алтая, где встречаются уникальные виды, многие из которых в Красной книге, как снежный барс (ирбис), тяньшаньский бурый медведь, кулан, а также розовые фламинго, джейраны. Здесь обитает множество млекопитающих (более 180 видов), птиц (около 500 видов), рептилий, амфибий и рыб, а растительность включает саксаул, арчу, сосны, березы и множество степных трав и цветов, отражая богатство биоразнообразия.',
+			en: 'is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 5,
+		image: '/imgs/flora-and-fauna/flora-and-fauna-5.jpeg',
+		title: {
+			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			ru: 'Флора и фауна Казахстана',
+			en: 'The flora and fauna of Kazakhstan',
+		},
+		description: {
+			kk: 'Табиғи аумақтарының үлкендігіне байланысты өте алуан түрлі: далалар мен шөлдерден бастап Тянь-Шань мен Алтай тауларына дейін, онда ерекше түрлер бар, олардың көпшілігі Қызыл кітапқа енгізілген, мысалы, қар барысы (қар барысы), Тянь-Шань қоңыр аюы, құлан, сондай-ақ қызғылт фламинго, қарақұйрық. Мұнда көптеген сүтқоректілер (180-нен астам түрі), құстар (шамамен 500 түрі), бауырымен жорғалаушылар, қосмекенділер және балықтар мекендейді, ал өсімдіктер әлеміне сексеуіл, арша, қарағай, қайың және көптеген дала шөптері мен гүлдері кіреді, бұл биоәртүрліліктің байлығын көрсетеді.',
+			ru: 'Чрезвычайно разнообразны благодаря крупным природным зонам: от степей и пустынь до гор Тянь-Шаня и Алтая, где встречаются уникальные виды, многие из которых в Красной книге, как снежный барс (ирбис), тяньшаньский бурый медведь, кулан, а также розовые фламинго, джейраны. Здесь обитает множество млекопитающих (более 180 видов), птиц (около 500 видов), рептилий, амфибий и рыб, а растительность включает саксаул, арчу, сосны, березы и множество степных трав и цветов, отражая богатство биоразнообразия.',
+			en: 'is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 6,
+		image: '/imgs/flora-and-fauna/flora-and-fauna-6.jpg',
+		title: {
+			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			ru: 'Флора и фауна Казахстана',
+			en: 'The flora and fauna of Kazakhstan',
+		},
+		description: {
+			kk: 'Табиғи аумақтарының үлкендігіне байланысты өте алуан түрлі: далалар мен шөлдерден бастап Тянь-Шань мен Алтай тауларына дейін, онда ерекше түрлер бар, олардың көпшілігі Қызыл кітапқа енгізілген, мысалы, қар барысы (қар барысы), Тянь-Шань қоңыр аюы, құлан, сондай-ақ қызғылт фламинго, қарақұйрық. Мұнда көптеген сүтқоректілер (180-нен астам түрі), құстар (шамамен 500 түрі), бауырымен жорғалаушылар, қосмекенділер және балықтар мекендейді, ал өсімдіктер әлеміне сексеуіл, арша, қарағай, қайың және көптеген дала шөптері мен гүлдері кіреді, бұл биоәртүрліліктің байлығын көрсетеді.',
+			ru: 'Чрезвычайно разнообразны благодаря крупным природным зонам: от степей и пустынь до гор Тянь-Шаня и Алтая, где встречаются уникальные виды, многие из которых в Красной книге, как снежный барс (ирбис), тяньшаньский бурый медведь, кулан, а также розовые фламинго, джейраны. Здесь обитает множество млекопитающих (более 180 видов), птиц (около 500 видов), рептилий, амфибий и рыб, а растительность включает саксаул, арчу, сосны, березы и множество степных трав и цветов, отражая богатство биоразнообразия.',
+			en: 'is extremely diverse due to its large natural areas: from steppes and deserts to the Tien Shan and Altai Mountains, where there are unique species, many of which are in the Red Book, such as the snow leopard (snow leopard), Tianshan brown bear, kulan, as well as pink flamingos, gazelles. It is home to many mammals (more than 180 species), birds (about 500 species), reptiles, amphibians and fish, and vegetation includes saxaul, juniper, pine, birch and many steppe grasses and flowers, reflecting the richness of biodiversity.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 7,
+		image: '/imgs/flora-and-fauna/flora-and-fauna-7.jpg',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 3',
 			ru: 'Флора и фауна Казахстана',
