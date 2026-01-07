@@ -38,7 +38,7 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 				alt={item.title}
 				width={item.width}
 				height={item.height}
-				className="block h-[85px] w-auto xl:h-[122px]"
+				className="block w-full xl:h-[122px]"
 			/>
 		</div>
 	)

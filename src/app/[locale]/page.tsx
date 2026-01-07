@@ -75,7 +75,7 @@ export default function Home() {
 				className="bg-primary-dark min-h-[812px] pt-[240px] pb-[64px] sm:pt-[132.5px] md:min-h-[945px]"
 			>
 				<Container className="relative z-10 flex flex-col items-center justify-center">
-					<h1 className="xs:text-[62px] 3xl:text-[111px] mb-[30px] w-full max-w-[790px] text-center text-[48px] leading-[0.96] font-bold text-white sm:text-[82px] xl:text-[98px]">
+					<h1 className="xs:text-[52px] 3xl:text-[111px] mb-[30px] w-full max-w-[790px] text-center text-[48px] leading-[0.96] font-bold text-white sm:text-[82px] xl:text-[98px]">
 						<div
 							ref={RegionalRef}
 							className="text-muted-light block translate-y-[-90px] transform opacity-0"

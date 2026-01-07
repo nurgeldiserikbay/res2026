@@ -7,7 +7,7 @@ import { IconYouTube } from '@/shared/icons/IconYouTube'
 
 export function FooterSocial() {
 	return (
-		<div className="flex w-full max-w-[156px] items-center justify-between gap-[10px]">
+		<div className="flex w-full max-w-[156px] items-center justify-between gap-[20px]">
 			<Link
 				href="https://www.facebook.com/profile.php?id=100063571767189"
 				target="_blank"
