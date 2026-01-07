@@ -11,7 +11,7 @@ export function FooterNavBottom() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="flex max-w-[789px] grow flex-col items-start justify-start gap-[20px]">
+		<nav className="flex max-w-[789px] grow flex-col items-start justify-start gap-[20px] max-[480px]:col-span-2 max-[480px]:flex-row max-[480px]:gap-[40px] md:w-auto">
 			{footerNav
 				.filter((item) => !item.main)
 				.map((item) => {

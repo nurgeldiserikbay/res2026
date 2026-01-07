@@ -6,23 +6,25 @@ import { useTranslations } from 'next-intl'
 import { footerNav } from '@/entities/nav/model/nav'
 import { Link } from '@/i18n/navigation'
 
+import { FooterNavBottom } from './FooterNavBottom'
+
 export function FooterNavTop() {
 	const t = useTranslations('nav')
 	const pathname = usePathname()
 
 	return (
-		<nav className="flex max-w-[789px] grow flex-wrap items-start justify-between gap-x-[80px] gap-y-[36px] lg:flex-nowrap">
+		<nav className="3xl:gap-x-[60px] grid w-full grid-cols-2 justify-between gap-x-[25px] gap-y-[36px] lg:flex lg:flex-nowrap 2xl:gap-x-[40px]">
 			{footerNav
 				.filter((item) => item.main)
 				.map((item) => {
 					return (
 						<div
 							key={item.key}
-							className="sm:max-w-unset max-w-[150px]"
+							className="sm:max-w-unset"
 						>
 							{item.children ? (
 								<>
-									<p className="text-text mb-[30px] text-[14px] leading-none font-bold">{t(item.key)}</p>
+									<p className="text-text 3xl:whitespace-nowrap mb-[30px] text-[14px] leading-none font-bold">{t(item.key)}</p>
 									<ul className="flex flex-col gap-[20px]">
 										{item.children?.map((child) => (
 											<li
@@ -46,8 +48,9 @@ export function FooterNavTop() {
 								<Link
 									href={item.href ?? '/'}
 									className={[
-										'text-text hover:text-muted mb-[30px] block text-[14px] leading-none font-bold transition-colors',
+										'text-text hover:text-muted block text-[14px] leading-none transition-colors',
 										pathname === item.href ? 'text-muted' : '',
+										item.main ? 'mb-[30px] font-bold' : 'mb-[20px]',
 									].join(' ')}
 								>
 									{t(item.key)}
@@ -56,6 +59,8 @@ export function FooterNavTop() {
 						</div>
 					)
 				})}
+
+			<FooterNavBottom />
 		</nav>
 	)
 }

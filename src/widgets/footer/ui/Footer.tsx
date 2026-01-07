@@ -11,7 +11,6 @@ import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 import { FooterLogo } from './FooterLogo'
-import { FooterNavBottom } from './FooterNavBottom'
 import { FooterNavTop } from './FooterNavTop'
 import { FooterSocial } from './FooterSocial'
 
@@ -24,6 +23,10 @@ export function Footer() {
 	useAnimSlide(FooterLogoRef, { y: 50, delay: 0.2 })
 	const FooterNavTopRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterNavTopRef, { y: 50, delay: 0.3 })
+	const FooterText3Ref = useRef<HTMLDivElement>(null)
+	useAnimSlide(FooterText3Ref, { y: 50, delay: 0.4 })
+	const FooterText4Ref = useRef<HTMLDivElement>(null)
+	useAnimSlide(FooterText4Ref, { y: 50, delay: 0.4 })
 	const FooterText1Ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(FooterText1Ref, { y: 50, delay: 0.4 })
 	const FooterText2Ref = useRef<HTMLDivElement>(null)
@@ -39,10 +42,10 @@ export function Footer() {
 
 	return (
 		<footer className="relative z-1 bg-white pt-[50px] pb-[38px] lg:pt-[75px] lg:pb-[58px] 2xl:pt-[100px] 2xl:pb-[82px]">
-			<Container className="flex flex-col items-stretch justify-between gap-8 md:flex-row">
+			<Container className="3xl:gap-x-[60px] flex flex-col items-stretch justify-between gap-x-[40px] gap-y-[30px] lg:flex-row">
 				<div
 					ref={MapRef}
-					className="aspect-[1.11] max-w-[716px] grow translate-y-[50px] opacity-0"
+					className="aspect-[1.11] grow translate-y-[50px] opacity-0 lg:max-w-[716px]"
 				>
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
@@ -53,9 +56,23 @@ export function Footer() {
 						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
 					></iframe>
 				</div>
-				<div className="max-w-[416px] grow lg:max-w-[1024px]">
-					<div className="mb-[30px] flex max-w-[923px] flex-wrap items-start justify-between gap-5 lg:mb-[68px] lg:flex-nowrap">
-						<div className="flex w-full items-center justify-between gap-5 lg:w-auto">
+				<div className="grow lg:max-w-[1180px]">
+					<div className="mb-[30px] flex items-start justify-between gap-[30px] lg:hidden">
+						<div
+							ref={FooterText3Ref}
+							className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
+						>
+							{t(`pages.footer.text`)}
+						</div>
+						<div
+							ref={FooterText4Ref}
+							className="text-text translate-y-[50px] text-[13px] leading-[1.2] font-bold opacity-0 sm:text-[16px]"
+						>
+							{t(`pages.footer.text1`)}
+						</div>
+					</div>
+					<div className="3xl:gap-x-[60px] mb-[30px] flex flex-wrap items-start justify-between gap-x-[40px] gap-y-[30px] lg:mb-[68px] lg:flex-nowrap">
+						<div className="flex w-full items-center justify-between gap-[60px] lg:w-auto">
 							<div
 								ref={FooterLogoRef}
 								className="translate-y-[50px] opacity-0"
@@ -73,14 +90,13 @@ export function Footer() {
 
 						<div
 							ref={FooterNavTopRef}
-							className="flex max-w-[789px] grow translate-y-[50px] flex-wrap gap-x-[80px] gap-y-[36px] opacity-0 lg:flex-nowrap"
+							className="flex w-full grow translate-y-[50px] flex-wrap gap-x-[80px] gap-y-[36px] opacity-0 lg:flex-nowrap"
 						>
 							<FooterNavTop />
-							<FooterNavBottom />
 						</div>
 					</div>
 
-					<div className="mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap lg:mb-[68px]">
+					<div className="mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap lg:mb-[68px] 2xl:mb-[123px]">
 						<div className="flex flex-col items-start justify-between">
 							<div
 								ref={FooterContactsRef}
@@ -102,10 +118,17 @@ export function Footer() {
 								</Link>
 							</div>
 						</div>
+
+						<div
+							ref={FooterSocialRef}
+							className="hidden translate-y-[50px] opacity-0 lg:block"
+						>
+							{!appConfig.isProduction && <FooterSocial />}
+						</div>
 					</div>
 
 					<div className="flex flex-wrap items-end justify-between gap-[60px] gap-y-[30px] sm:flex-nowrap">
-						<div className="flex items-start justify-between gap-[30px] sm:max-w-[247px] md:block">
+						<div className="hidden items-start justify-between gap-[30px] sm:max-w-[247px] lg:block">
 							<div
 								ref={FooterText1Ref}
 								className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
@@ -120,17 +143,10 @@ export function Footer() {
 							</div>
 						</div>
 
-						<div
-							ref={FooterSocialRef}
-							className="hidden grow translate-y-[50px] opacity-0 lg:block"
-						>
-							{!appConfig.isProduction && <FooterSocial />}
-						</div>
-
 						<div className="flex max-w-[367px] grow flex-col items-start justify-between">
 							<p
 								ref={FooterCopyrightRef}
-								className="text-text w-full translate-y-[50px] text-left text-[11px] leading-[1.2] font-light opacity-0 sm:text-right"
+								className="text-text w-full translate-y-[50px] text-left text-[11px] leading-[1.2] font-light opacity-0 lg:text-right"
 							>
 								{t(`pages.footer.copyright`)}
 							</p>

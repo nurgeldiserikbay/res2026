@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
@@ -62,7 +61,7 @@ function NewsDetailContent({ slug }: { slug: string }) {
 						)}
 
 						{image && (
-							<Image
+							<img
 								src={image}
 								alt={title}
 								width={1332}
