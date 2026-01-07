@@ -6,6 +6,7 @@ const isDev = process.env.NEXT_PUBLIC_GIT_BRANCH === 'develop'
 
 const nextConfig: NextConfig = {
 	reactCompiler: true,
+	output: 'standalone',
 	images: isDev
 		? {
 				remotePatterns: [
