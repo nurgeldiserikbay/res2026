@@ -5,93 +5,14 @@ import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { appConfig } from '@/shared/config/app.config'
-import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
-import { FooterSocial } from '@/widgets/footer/ui/FooterSocial'
 
 type SectionProps = {
 	t: ReturnType<typeof useTranslations>
-}
-
-function OrganizersSection({ t }: SectionProps) {
-	const titleRef = useRef<HTMLHeadingElement>(null)
-	const contactsRef = useRef<HTMLDivElement>(null)
-	const socialRef = useRef<HTMLDivElement>(null)
-	const mapRef = useRef<HTMLDivElement>(null)
-
-	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
-	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
-	useAnimSlide(contactsRef, { y: 50, delay: 0.2 })
-	useAnimSlide(socialRef, { y: 50, delay: 0.25 })
-	useAnimSlide(mapRef, { y: 50, delay: 0.3 })
-
-	return (
-		<>
-			<h2
-				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
-			>
-				{t(`titles.organizers`)}
-			</h2>
-			<div className="flex flex-wrap items-start justify-between gap-x-[40px] gap-y-5 lg:flex-nowrap">
-				<div
-					ref={contactsRef}
-					className="translate-y-[50px] opacity-0"
-				>
-					<Link
-						href="mailto:info@res2026.kz"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconMail className="text-secondary block transition-colors" />
-						<span>info@res2026.kz</span>
-					</Link>
-					<Link
-						href="tel:+77080268866"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconPhone className="text-secondary block transition-colors" />
-						<span> +7 708 026 88 66</span>
-					</Link>
-					<Link
-						href="www.res2026.kz"
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconGlobal className="text-secondary block transition-colors" />
-						<span>www.res2026.kz</span>
-					</Link>
-				</div>
-				{!appConfig.isProduction && (
-					<div
-						ref={socialRef}
-						className="w-full max-w-[156px] translate-y-[50px] opacity-0"
-					>
-						<FooterSocial />
-					</div>
-				)}
-				<div
-					ref={mapRef}
-					className="aspect-[1.5] max-w-[1316px] grow translate-y-[50px] opacity-0 lg:aspect-[3.6]"
-				>
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
-						style={{ border: 0 }}
-						allowFullScreen
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
-						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
-					></iframe>
-				</div>
-			</div>
-		</>
-	)
 }
 
 function MeprSection({ t }: SectionProps) {
@@ -382,10 +303,6 @@ export default function Page() {
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
-					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
-						<OrganizersSection t={t} />
-					</div>
-
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<OrganizationQuestionsSection t={t} />
 					</div>
