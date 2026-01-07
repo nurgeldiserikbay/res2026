@@ -5,32 +5,8 @@ import gsap from 'gsap'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-const IMGS = [
-	{
-		id: 1,
-		img: '/imgs/region-slide-1.png',
-		alt: 'Region Img 1',
-		width: 870,
-		height: 758,
-	},
-	{
-		id: 2,
-		img: '/imgs/region-slide-1.png',
-		alt: 'Region Img 1',
-		width: 870,
-		height: 758,
-	},
-	{
-		id: 3,
-		img: '/imgs/region-slide-1.png',
-		alt: 'Region Img 1',
-		width: 870,
-		height: 758,
-	},
-]
-
-export function AboutImgs() {
-	const [activeImg, setActiveImg] = useState(IMGS[0])
+export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: string; width: number; height: number }[] }) {
+	const [activeImg, setActiveImg] = useState(imgs[0])
 	const mainImageRef = useRef<HTMLDivElement>(null)
 	const thumbnailsRef = useRef<HTMLDivElement>(null)
 
@@ -90,7 +66,7 @@ export function AboutImgs() {
 							alt={activeImg.alt}
 							width={activeImg.width}
 							height={activeImg.height}
-							className="block h-full w-full object-cover"
+							className="block w-full rounded-[8px] object-contain sm:rounded-[12px]"
 						/>
 					)}
 				</div>
@@ -99,24 +75,25 @@ export function AboutImgs() {
 					ref={thumbnailsRef}
 					className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-x-auto px-[10px] sm:px-[20px] md:px-[30px] lg:px-[43px]"
 				>
-					{IMGS.map((img) => (
-						<button
-							key={img.id}
-							onClick={() => setActiveImg(img)}
-							className={[
-								`after:bg-secondary/50 relative block h-[60px] w-[70px] shrink-0 translate-y-[30px] cursor-pointer overflow-hidden rounded-[6px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100 sm:h-[80px] sm:w-[90px] sm:rounded-[7px] md:h-[103px] md:w-[110px] md:rounded-[8px]`,
-								activeImg.id === img.id ? 'after:opacity-100' : 'after:opacity-0',
-							].join(` `)}
-						>
-							<Image
-								src={img.img}
-								alt={img.alt}
-								width={img.width}
-								height={img.height}
-								className="block h-full w-full object-cover"
-							/>
-						</button>
-					))}
+					{imgs.length > 1 &&
+						imgs.map((img) => (
+							<button
+								key={img.id}
+								onClick={() => setActiveImg(img)}
+								className={[
+									`after:bg-secondary/50 relative block h-[60px] w-[70px] shrink-0 translate-y-[30px] cursor-pointer overflow-hidden rounded-[6px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100 sm:h-[80px] sm:w-[90px] sm:rounded-[7px] md:h-[103px] md:w-[110px] md:rounded-[8px]`,
+									activeImg.id === img.id ? 'after:opacity-100' : 'after:opacity-0',
+								].join(` `)}
+							>
+								<Image
+									src={img.img}
+									alt={img.alt}
+									width={img.width}
+									height={img.height}
+									className="block h-full w-full object-cover"
+								/>
+							</button>
+						))}
 				</div>
 			</div>
 		</>

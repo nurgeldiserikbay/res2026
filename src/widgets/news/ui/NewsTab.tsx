@@ -1,10 +1,12 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-import { useMemo, useRef, useState } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
+import { useRef, useState } from 'react'
 
 import { NewsItem } from '@/entities/news/NewsItem'
+import { Locale } from '@/shared/config/i18n'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
+import { localize } from '@/shared/utils/localize'
 
 import { newsPaginItems } from '../mocks'
 
@@ -57,24 +59,31 @@ function NewsItemWrapper({ idx, item, delay }: NewsItemWrapperProps) {
 export function NewsTab() {
 	const t = useTranslations()
 	const [activeTab, setActiveTab] = useState(1)
+	const locale = useLocale() as Locale
 
-	const newsTabs = useMemo(
-		() => [
-			{
-				id: 1,
-				title: t('labels.latestNews'),
-			},
-			{
-				id: 2,
-				title: t('labels.announcements'),
-			},
-			{
-				id: 3,
-				title: t('labels.pressReleases'),
-			},
-		],
-		[t],
-	)
+	const newsTabs = [
+		{
+			id: 1,
+			slug: 'latest',
+			title: t('labels.latestNews'),
+		},
+		{
+			id: 2,
+			slug: 'anounce',
+			title: t('labels.announcements'),
+		},
+		{
+			id: 3,
+			slug: 'publication',
+			title: t('labels.publications'),
+		},
+	]
+
+	const currentTab = newsTabs.find((tab) => tab.id === activeTab)
+
+	const newsItems = newsPaginItems
+		.filter((item) => item.type === currentTab?.slug && !item.wide && localize(item.content, locale) !== '')
+		.slice(0, 4)
 
 	const handleTabClick = (tabId: number) => {
 		setActiveTab(tabId)
@@ -95,17 +104,20 @@ export function NewsTab() {
 			</div>
 
 			<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
-				{newsPaginItems
-					.filter((item) => !item.wide)
-					.slice(0, 4)
-					.map((item, index) => (
+				{newsItems.length > 0 ? (
+					newsItems.map((item, index) => (
 						<NewsItemWrapper
 							key={index}
 							idx={index}
 							item={item}
 							delay={0.2 + index * 0.3}
 						/>
-					))}
+					))
+				) : (
+					<>
+						<p>{t('labels.noContent')}</p>
+					</>
+				)}
 			</div>
 		</div>
 	)

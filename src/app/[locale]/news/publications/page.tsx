@@ -1,14 +1,16 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { NewsItem } from '@/entities/news/NewsItem'
+import { Locale } from '@/shared/config/i18n'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 // import { MainPagination } from '@/shared/ui/pagination/MainPagination'
+import { localize } from '@/shared/utils/localize'
 import { newsPaginItems } from '@/widgets/news/mocks'
 import { NewsTabLinks } from '@/widgets/news/ui/NewsTabLinks'
 
@@ -34,6 +36,7 @@ function NewsItemWrapper({ item, delay }: NewsItemWrapperProps) {
 
 export default function Page() {
 	const t = useTranslations()
+	const locale = useLocale() as Locale
 
 	const BannerRef = useRef<HTMLElement>(null)
 	useAnimBg(BannerRef, {
@@ -52,6 +55,8 @@ export default function Page() {
 	useAnimSlide(TabLinksRef, { y: 50, delay: 0.3 })
 	const PaginationRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(PaginationRef, { y: 50, delay: 0.4 })
+
+	const newsItems = newsPaginItems.filter((item) => item.type === 'publication' && !item.wide && localize(item.content, locale) !== '')
 
 	return (
 		<>
@@ -85,10 +90,9 @@ export default function Page() {
 						<NewsTabLinks />
 					</div>
 
-					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
-						{newsPaginItems
-							.filter((item) => item.type === 'release')
-							.map((item, index) => (
+					{newsItems.length > 0 ? (
+						<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
+							{newsItems.map((item, index) => (
 								<NewsItemWrapper
 									key={index}
 									item={item}
@@ -96,7 +100,12 @@ export default function Page() {
 									delay={0.1 + index * 0.1}
 								/>
 							))}
-					</div>
+						</div>
+					) : (
+						<>
+							<p className="text-text text-center text-[24px] font-light">{t('labels.noContent')}</p>
+						</>
+					)}
 
 					{/* <div
 						ref={PaginationRef}
