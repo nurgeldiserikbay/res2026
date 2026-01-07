@@ -19,6 +19,7 @@ export function FooterNavBottom() {
 						<Link
 							key={item.key}
 							href={item.href ?? '/'}
+							aria-current={pathname === item.href ? 'page' : undefined}
 							className={[
 								'font-regular text-text hover:text-muted block text-[12px] leading-[1.4] transition-colors',
 								pathname === item.href ? 'text-muted' : '',

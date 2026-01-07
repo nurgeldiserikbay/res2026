@@ -76,22 +76,30 @@ export function RegionTabs({ tabs }: { tabs: { id: number; title: string; href: 
 					ref={TabsContainerRef as React.RefObject<HTMLDivElement>}
 					className="relative z-10 flex flex-wrap items-center justify-center gap-[15px] overflow-x-auto sm:gap-[20px] md:gap-[30px]"
 				>
-					{tabs.map((item) => {
-						const isActive = activeHash === item.href
+					<nav
+						role="tablist"
+						aria-label="Region sections"
+					>
+						{tabs.map((item) => {
+							const isActive = activeHash === item.href
 
-						return (
-							<Link
-								key={item.id}
-								href={item.href}
-								className={[
-									'translate-y-[30px] cursor-pointer border-b-[3px] border-solid py-[20px] text-center text-[14px] leading-none font-medium whitespace-nowrap opacity-0 transition-colors sm:py-[23px] sm:text-[15px] md:py-[26px] md:text-[16px]',
-									isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text',
-								].join(' ')}
-							>
-								{item.title}
-							</Link>
-						)
-					})}
+							return (
+								<Link
+									key={item.id}
+									href={item.href}
+									role="tab"
+									aria-selected={isActive}
+									aria-controls={item.href.replace('#', '')}
+									className={[
+										'translate-y-[30px] cursor-pointer border-b-[3px] border-solid py-[20px] text-center text-[14px] leading-none font-medium whitespace-nowrap opacity-0 transition-colors sm:py-[23px] sm:text-[15px] md:py-[26px] md:text-[16px]',
+										isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text',
+									].join(' ')}
+								>
+									{item.title}
+								</Link>
+							)
+						})}
+					</nav>
 				</Container>
 			</section>
 		</>

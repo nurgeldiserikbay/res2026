@@ -84,7 +84,7 @@ export function AboutSummit() {
 
 					<div
 						ref={AboutSummitTitleRef}
-						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[24px] md:mb-[31px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:mb-[60px] 2xl:text-[44px]"
+						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[22px] md:mb-[31px] md:text-[28px] lg:text-[30px] xl:text-[30px] 2xl:mb-[60px] 2xl:text-[40px]"
 					>
 						{t.rich('pages.aboutSummit.title', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
@@ -94,13 +94,13 @@ export function AboutSummit() {
 
 					<div
 						ref={AboutSummitQuoteRef}
-						className="seld-start relative mb-[30px] translate-y-90 rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:mb-[40px] sm:p-[26px] md:mb-[54px] md:pt-[65px] md:pl-[97px]"
+						className="seld-start relative mb-[30px] translate-y-90 rounded-[12px] bg-[#FBFFE9] p-[20px] opacity-0 sm:mb-[40px] sm:p-[26px] md:mb-[54px] 2xl:pt-[65px] 2xl:pl-[97px]"
 					>
-						<div className="absolute top-[32px] left-[32px]">
+						<div className="absolute top-[32px] left-[32px] hidden 2xl:block">
 							<IconQuot color="#A1BB94" />
 						</div>
 
-						<div className="relative z-1 flex flex-wrap items-start gap-[20px] sm:flex-nowrap sm:gap-[30px] md:gap-[50px]">
+						<div className="relative z-1 flex flex-wrap items-start gap-[20px] sm:gap-[30px] md:gap-[50px] xl:flex-nowrap">
 							<Image
 								ref={AboutSummitPresidentImgRef}
 								src="/imgs/president-img.jpg"

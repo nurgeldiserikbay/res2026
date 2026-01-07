@@ -20,13 +20,19 @@ type TabButtonProps = {
 function TabButton({ tab, activeTab, onClick, delay }: TabButtonProps) {
 	const ref = useRef<HTMLButtonElement>(null)
 	useAnimSlide(ref, { x: -90, y: 0, delay })
+	const isActive = activeTab === tab.id
 
 	return (
 		<button
+			type="button"
 			ref={ref}
+			role="tab"
+			aria-selected={isActive}
+			aria-controls={`tabpanel-${tab.id}`}
+			id={`tab-${tab.id}`}
 			className={[
 				'box-border translate-x-[-90px] cursor-pointer border-b border-solid py-[26px] text-[16px] leading-none font-medium opacity-0 transition-all duration-300 ease-out',
-				activeTab === tab.id ? `border-b-secondary text-secondary` : `border-b-text text-text`,
+				isActive ? `border-b-secondary text-secondary` : `border-b-text text-text`,
 			].join(` `)}
 			onClick={() => onClick(tab.id)}
 		>
@@ -91,7 +97,11 @@ export function NewsTab() {
 
 	return (
 		<div>
-			<div className="mb-[30px] flex gap-[30px] md:mb-[40px] lg:mb-[50px]">
+			<div
+				role="tablist"
+				aria-label={t('titles.news')}
+				className="mb-[30px] flex gap-[30px] md:mb-[40px] lg:mb-[50px]"
+			>
 				{newsTabs.map((tab, index) => (
 					<TabButton
 						key={tab.id}
@@ -103,7 +113,12 @@ export function NewsTab() {
 				))}
 			</div>
 
-			<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
+			<div
+				role="tabpanel"
+				id={`tabpanel-${activeTab}`}
+				aria-labelledby={`tab-${activeTab}`}
+				className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]"
+			>
 				{newsItems.length > 0 ? (
 					newsItems.map((item, index) => (
 						<NewsItemWrapper

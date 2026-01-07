@@ -11,34 +11,50 @@ export function FooterSocial() {
 			<Link
 				href="https://www.facebook.com/profile.php?id=100063571767189"
 				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="Facebook"
 				className="group block"
 			>
-				<IconFacebook className="transition-duration-300 group-hover:text-muted text-text transition-colors" />
+				<IconFacebook
+					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					aria-hidden="true"
+				/>
 			</Link>
 			<Link
 				href="https://x.com/profile.php?id=100063571767189"
 				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="X"
 				className="group block"
 			>
-				<IconX className="transition-duration-300 group-hover:text-muted! text-text transition-colors" />
+				<IconX
+					className="transition-duration-300 group-hover:text-muted! text-text transition-colors"
+					aria-hidden="true"
+				/>
 			</Link>
 			<Link
 				href="https://www.instagram.com/profile.php?id=100063571767189"
 				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="Instagram"
 				className="group block"
 			>
-				<IconInstagram className="transition-duration-300 group-hover:text-muted text-text transition-colors" />
+				<IconInstagram
+					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					aria-hidden="true"
+				/>
 			</Link>
 			<Link
 				href="https://www.youtube.com/profile.php?id=100063571767189"
 				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="YouTube"
 				className="group block"
 			>
-				<IconYouTube className="transition-duration-300 group-hover:text-muted text-text transition-colors" />
+				<IconYouTube
+					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					aria-hidden="true"
+				/>
 			</Link>
 		</div>
 	)

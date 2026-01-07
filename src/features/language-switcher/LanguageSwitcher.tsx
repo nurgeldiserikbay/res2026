@@ -59,12 +59,16 @@ export function LanguageSwitcher() {
 						className="box-border flex h-[42px] w-full cursor-pointer items-center justify-between gap-[10px] px-[8px] text-white 2xl:h-[58px] 2xl:px-[16px]"
 						aria-haspopup="listbox"
 						aria-expanded={open}
+						aria-label={`Current language: ${LANG_LABEL[locale]}. Select language`}
 					>
 						<span className="text-[16px] leading-none">{LANG_LABEL[locale]}</span>
 
 						{/* Chevron */}
-						<span className={`shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`}>
-							<IconArrowDown />
+						<span
+							className={`shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`}
+							aria-hidden="true"
+						>
+							<IconArrowDown aria-hidden="true" />
 						</span>
 					</button>
 
@@ -91,6 +95,7 @@ export function LanguageSwitcher() {
 										].join(' ')}
 										role="option"
 										aria-selected={false}
+										aria-label={`Select ${LANG_LABEL[l]} language`}
 									>
 										<span className="text-[16px] leading-none">{LANG_LABEL[l]}</span>
 									</button>

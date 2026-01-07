@@ -34,8 +34,14 @@ export function GalleryCard({ src, title, description, alt, className, onClick }
 				className="h-full w-full object-cover"
 				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 			/>
-			<div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100">
-				<IconZoom className="text-white" />
+			<div
+				className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
+				aria-hidden="true"
+			>
+				<IconZoom
+					className="text-white"
+					aria-hidden="true"
+				/>
 			</div>
 			{(title || description) && (
 				<div className="absolute top-0 right-0 bottom-0 left-0 z-1 flex flex-col items-start justify-end p-[30px] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100">

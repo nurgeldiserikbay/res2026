@@ -49,6 +49,7 @@ export function Footer() {
 				>
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
+						title={t('pages.footer.mapTitle') || 'Location map'}
 						style={{ border: 0 }}
 						allowFullScreen
 						loading="lazy"

@@ -40,6 +40,7 @@ export function HeaderNav() {
 					<Link
 						key={item.key}
 						href={item.href ?? '/'}
+						aria-current={active ? 'page' : undefined}
 						className={[
 							'font-regular transition-duration-300 hover:text-muted-light text-center transition-colors',
 							active ? 'text-muted-light' : '',
@@ -138,6 +139,7 @@ function NavDropdown({ item, label, active, t }: { item: NavItem; label: string;
 									href={c.href ?? '/'}
 									role="menuitem"
 									tabIndex={0}
+									aria-current={pathname === c.href ? 'page' : undefined}
 									className={[
 										'font-regular mb-[20px] block text-[14px] last:mb-0',
 										pathname === c.href ? 'text-muted-light' : 'hover:text-muted-light',

@@ -31,8 +31,10 @@ export function HeaderSearch() {
 				<div className="rounded-[8px] bg-linear-to-tr from-white/0 to-white/90 p-px">
 					<div className={`h-[58px] rounded-[8px]`}>
 						<input
-							type="text"
+							type="search"
+							id="header-search-input"
 							placeholder="Search"
+							aria-label="Search"
 							className={`bg-primary-dark box-border h-[58px] w-full rounded-[8px] border-none px-5 text-white transition-all duration-300 ease-out outline-none placeholder:text-white/60`}
 						/>
 					</div>
@@ -43,10 +45,15 @@ export function HeaderSearch() {
 			<button
 				type="button"
 				aria-label="Search"
+				aria-expanded={open}
+				aria-controls="header-search-input"
 				onClick={() => setOpen((v) => !v)}
 				className={`flex cursor-pointer items-center justify-center rounded-full transition-colors duration-300`}
 			>
-				<IconSearchNormal className="text-white transition-colors duration-300" />
+				<IconSearchNormal
+					className="text-white transition-colors duration-300"
+					aria-hidden="true"
+				/>
 			</button>
 		</div>
 	)

@@ -78,8 +78,11 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 					{imgs.length > 1 &&
 						imgs.map((img) => (
 							<button
+								type="button"
 								key={img.id}
 								onClick={() => setActiveImg(img)}
+								aria-label={`View ${img.alt}`}
+								aria-pressed={activeImg.id === img.id}
 								className={[
 									`after:bg-secondary/50 relative block h-[60px] w-[70px] shrink-0 translate-y-[30px] cursor-pointer overflow-hidden rounded-[6px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100 sm:h-[80px] sm:w-[90px] sm:rounded-[7px] md:h-[103px] md:w-[110px] md:rounded-[8px]`,
 									activeImg.id === img.id ? 'after:opacity-100' : 'after:opacity-0',
@@ -87,10 +90,11 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 							>
 								<Image
 									src={img.img}
-									alt={img.alt}
+									alt=""
 									width={img.width}
 									height={img.height}
 									className="block h-full w-full object-cover"
+									aria-hidden="true"
 								/>
 							</button>
 						))}

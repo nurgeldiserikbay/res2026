@@ -28,10 +28,16 @@ export function ButtonDefault({
 			].join(' ')}
 		>
 			{children}
-			{icon && <IconArrowRight className="text-inherit" />}
+			{icon && (
+				<IconArrowRight
+					className="text-inherit"
+					aria-hidden="true"
+				/>
+			)}
 		</Link>
 	) : (
 		<button
+			type="button"
 			id={id}
 			className={[
 				`font-regular relative flex cursor-pointer items-center justify-center gap-[15px] overflow-hidden rounded-[8px] bg-linear-to-tr from-[#71B980] to-[#308757] px-[16px] py-[20px] text-[16px] leading-none text-white`,
@@ -41,7 +47,12 @@ export function ButtonDefault({
 			ref={ref}
 		>
 			{children}
-			{icon && <IconArrowRight className="text-inherit" />}
+			{icon && (
+				<IconArrowRight
+					className="text-inherit"
+					aria-hidden="true"
+				/>
+			)}
 		</button>
 	)
 }
