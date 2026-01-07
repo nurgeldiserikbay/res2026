@@ -25,7 +25,12 @@ function GalleryTabButton({ day, isActive, locale, onClick, delay }: GalleryTabB
 
 	return (
 		<button
+			type="button"
 			ref={ref}
+			role="tab"
+			aria-selected={isActive}
+			aria-controls={`gallery-tabpanel-${day.key}`}
+			id={`gallery-tab-${day.key}`}
 			onClick={onClick}
 			className={[
 				'p-[12px] md:p-[14px] lg:p-[18px] xl:p-[20px] 2xl:p-[26px]',
@@ -101,7 +106,11 @@ export function GallerySection({ locale = 'ru' }: { locale?: Locale }) {
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container>
-				<div className="mb-[30px] flex flex-wrap items-center justify-center gap-[10px] md:mb-[40px] md:gap-[20px] lg:mb-[50px] lg:gap-[27px]">
+				<div
+					role="tablist"
+					aria-label="Gallery days"
+					className="mb-[30px] flex flex-wrap items-center justify-center gap-[10px] md:mb-[40px] md:gap-[20px] lg:mb-[50px] lg:gap-[27px]"
+				>
 					{days.map((d, index) => (
 						<GalleryTabButton
 							key={d.key}
@@ -117,6 +126,8 @@ export function GallerySection({ locale = 'ru' }: { locale?: Locale }) {
 				{/* Grid */}
 				<div
 					id="gallery"
+					role="tabpanel"
+					aria-labelledby={`gallery-tab-${activeDay.key}`}
 					className="mx-auto grid auto-rows-[200px] grid-cols-1 gap-[20px] sm:auto-rows-[250px] sm:grid-cols-2 sm:gap-[30px] md:auto-rows-[300px] md:gap-[40px] lg:auto-rows-[350px] lg:grid-cols-12 lg:gap-[50px] xl:auto-rows-[415px] xl:gap-[60px]"
 				>
 					{activeDay.items.map((item, inx) => {

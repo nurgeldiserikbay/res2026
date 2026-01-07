@@ -120,16 +120,25 @@ export function FloraAndFauna({
 									{isBeginning ? (
 										<ButtonOutlined
 											icon={false}
+											aria-label="Previous slide"
+											aria-disabled="true"
 											className="text-muted pointer-events-none mb-[10px] box-border h-[45px] w-[82px] cursor-default py-[12px]"
 										>
-											<IconArrowHead className="text-muted rotate-180 transform" />
+											<IconArrowHead
+												className="text-muted rotate-180 transform"
+												aria-hidden="true"
+											/>
 										</ButtonOutlined>
 									) : (
 										<ButtonDefault
 											icon={false}
+											aria-label="Previous slide"
 											className="mb-[10px] h-[45px] w-[82px] py-[12px]"
 										>
-											<IconArrowHead className="rotate-180 transform" />
+											<IconArrowHead
+												className="rotate-180 transform"
+												aria-hidden="true"
+											/>
 										</ButtonDefault>
 									)}
 								</div>
@@ -138,16 +147,22 @@ export function FloraAndFauna({
 									{isEnd ? (
 										<ButtonOutlined
 											icon={false}
+											aria-label="Next slide"
+											aria-disabled="true"
 											className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default py-[12px]"
 										>
-											<IconArrowHead className="text-muted" />
+											<IconArrowHead
+												className="text-muted"
+												aria-hidden="true"
+											/>
 										</ButtonOutlined>
 									) : (
 										<ButtonDefault
 											icon={false}
+											aria-label="Next slide"
 											className="h-[45px] w-[82px] py-[12px]"
 										>
-											<IconArrowHead />
+											<IconArrowHead aria-hidden="true" />
 										</ButtonDefault>
 									)}
 								</div>

@@ -33,6 +33,7 @@ export function FooterNavTop() {
 											>
 												<Link
 													href={child.href ?? '/'}
+													aria-current={pathname === child.href ? 'page' : undefined}
 													className={[
 														'font-regular text-text hover:text-muted block text-[12px] leading-[1.4] transition-colors',
 														pathname === child.href ? 'text-muted' : '',
@@ -47,6 +48,7 @@ export function FooterNavTop() {
 							) : (
 								<Link
 									href={item.href ?? '/'}
+									aria-current={pathname === item.href ? 'page' : undefined}
 									className={[
 										'text-text hover:text-muted block text-[14px] leading-none transition-colors',
 										pathname === item.href ? 'text-muted' : '',

@@ -31,7 +31,7 @@ export function useAnimSlide(
 		y = -90,
 		x = 0,
 		delay = 0,
-		start = 'top 90%',
+		start = 'top 100%',
 		immediate = false,
 	}: { duration?: number; y?: number; x?: number; delay?: number; start?: string; immediate?: boolean } = {},
 ) {

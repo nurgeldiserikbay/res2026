@@ -36,13 +36,22 @@ export function HeaderMobileNav() {
 			<button
 				type="button"
 				aria-label="Menu"
+				aria-expanded={open}
+				aria-controls="mobile-menu"
 				className="cursor-pointer"
 				onClick={() => setOpen(true)}
 			>
-				<IconMenu className="hover:text-muted-light h-[26px] w-[47px] text-white transition-colors duration-300" />
+				<IconMenu
+					className="hover:text-muted-light h-[26px] w-[47px] text-white transition-colors duration-300"
+					aria-hidden="true"
+				/>
 			</button>
 
 			<div
+				id="mobile-menu"
+				role="dialog"
+				aria-modal="true"
+				aria-label="Navigation menu"
 				className={[
 					'bg-primary-dark fixed top-0 left-0 z-50 h-screen w-screen transform overflow-y-auto bg-[url("/imgs/menu-mob-bg.png")] bg-cover bg-center bg-no-repeat py-[30px] transition-transform duration-300 ease-out',
 					open ? 'pointer-events-auto translate-x-0 opacity-100' : 'pointer-events-none translate-x-full opacity-0',
@@ -54,11 +63,14 @@ export function HeaderMobileNav() {
 						{!appConfig.isProduction && <HeaderSocial />}
 						<button
 							type="button"
-							aria-label="Close"
+							aria-label="Close menu"
 							className="cursor-pointer"
 							onClick={() => setOpen(false)}
 						>
-							<IconClose className="hover:text-muted-light h-[24px] w-[24px] text-white transition-colors duration-300" />
+							<IconClose
+								className="hover:text-muted-light h-[24px] w-[24px] text-white transition-colors duration-300"
+								aria-hidden="true"
+							/>
 						</button>
 					</div>
 
@@ -73,20 +85,24 @@ export function HeaderMobileNav() {
 										className="xs:max-w-[180px] w-full max-w-[140px]"
 									>
 										<p className="xs:mb-[30px] xs:text-[20px] mb-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
-										{item.children?.map((child) => (
-											<Link
-												key={child.key}
-												href={child.href ?? '/'}
-												className={[
-													'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
-													active ? 'text-muted-light' : '',
-													'focus-visible:text-muted-light focus-visible:outline-none',
-												].join(' ')}
-												onClick={() => setOpen(false)}
-											>
-												{t(child.key)}
-											</Link>
-										))}
+										{item.children?.map((child) => {
+											const childActive = isActive(pathname, child.href)
+											return (
+												<Link
+													key={child.key}
+													href={child.href ?? '/'}
+													aria-current={childActive ? 'page' : undefined}
+													className={[
+														'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
+														childActive ? 'text-muted-light' : '',
+														'focus-visible:text-muted-light focus-visible:outline-none',
+													].join(' ')}
+													onClick={() => setOpen(false)}
+												>
+													{t(child.key)}
+												</Link>
+											)
+										})}
 									</div>
 								)
 							}
@@ -95,6 +111,7 @@ export function HeaderMobileNav() {
 								<Link
 									key={item.key}
 									href={item.href ?? '/'}
+									aria-current={active ? 'page' : undefined}
 									className={[
 										'font-regular transition-duration-300 hover:text-muted-light xs:text-[16px] block text-left text-[14px] text-white transition-colors',
 										active ? 'text-muted-light' : '',
