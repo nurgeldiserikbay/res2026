@@ -1,46 +1,70 @@
 variables:
-  GIT_STRATEGY: none
+#  GIT_STRATEGY: clone
   SRV: '89.219.32.148'
   PORT: '22022'
-  DEVBRANCH: 'develop'
-  PRODBRANCH: 'main'
-  DEVPATH: 'res2026.crocos.kz'
-  PRODPATH: 'res2026.kz'
-  NODE: 'node22'
-  APPDEV: 'res2026'
-  APPPROD: 'okay'
+  NEXT_PUBLIC_GIT_BRANCH: develop
 
-.sshcon:
+image: docker:stable
+
+stages:
+  - dockerize
+  - deploy
+
+before_script:
+  - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
+
+
+docker-build:
+  stage: dockerize
+  image: docker:29.0.0
+  variables:
+    GIT_STRATEGY: fetch
+  tags: [crocos-docker]
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE:$TAG .
+    - docker push $CI_REGISTRY_IMAGE:$TAG
+    - docker rmi $CI_REGISTRY_IMAGE:$TAG
+
+
+deploy-prod:
+  stage: deploy  
+  tags:
+    - shell
   before_script:
     - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
-    - echo -n "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
+  script:
+    - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
+    - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-prod" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-prod" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-prod --network http_default $CI_REGISTRY_IMAGE:$TAG"
+  only:
+    - main
 
-stages:
-  - deploy-dev
-  - deploy-prod
 
 deploy-dev:
-  stage: deploy-dev
-  extends: .sshcon
-  needs: []
+  stage: deploy
   tags:
     - shell
-  rules:
-    - if: $CI_COMMIT_BRANCH == $DEVBRANCH
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - export TAG="$CI_PIPELINE_ID-$CI_COMMIT_SHORT_SHA"
   script:
-    - ssh -p$PORT -tt crocos@$SRV "cd /home/crocos/http/www/$DEVPATH && git fetch --all --prune && git reset --hard origin/$DEVBRANCH && git clean -fd && docker exec $NODE bash -lc 'cd /var/www/$DEVPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm i && npm run build' && docker exec $NODE pm2 restart $APPDEV --update-env"
+    - ssh -p$PORT -tt crocos@$SRV "docker pull $CI_REGISTRY_IMAGE:$TAG"
+    - ssh -p$PORT -tt crocos@$SRV "docker stop res2026-dev" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker rm res2026-dev" || true
+    - ssh -p$PORT -tt crocos@$SRV "docker run -d --name res2026-dev --network http_default $CI_REGISTRY_IMAGE:$TAG"
+  only:
+    - develop
 
-deploy-prod:
-  stage: deploy-prod
-  extends: .sshcon
-  needs: []
-  tags:
-    - shell
-  rules:
-    - if: $CI_COMMIT_BRANCH == $PRODBRANCH
-  script:
-    - ssh -p$PORT -tt crocos@$SRV "cd /home/crocos/http/www/$PRODPATH && git fetch --all --prune && git reset --hard origin/$PRODBRANCH && git clean -fd && docker exec $NODE bash -lc 'cd /var/www/$PRODPATH && export NEXT_PUBLIC_GIT_BRANCH=\"$CI_COMMIT_BRANCH\" && npm i && npm run build' && docker exec $NODE pm2 restart $APPPROD --update-env"
