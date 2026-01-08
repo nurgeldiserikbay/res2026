@@ -5,6 +5,7 @@ import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { NewsItem } from '@/entities/news/NewsItem'
+import { appConfig } from '@/shared/config/app.config'
 import { Locale } from '@/shared/config/i18n'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
@@ -63,7 +64,11 @@ export default function Page() {
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="bg-secondary xs:h-[343px] xs:pt-[176px] h-[451px] pt-[284px]"
+				className={[
+					!appConfig.isProduction
+						? `bg-secondary h-[343px] pt-[176px] max-[441px]:h-[451px] max-[441px]:pt-[284px]`
+						: `bg-secondary h-[343px] pt-[176px]`,
+				].join(``)}
 			>
 				<Container className="relative z-10">
 					<h1

@@ -207,7 +207,7 @@ export default function Home() {
 							data-animated-banner
 							className="relative rounded-[17px] px-[36px] pt-[58px] pr-[28px] pb-[181px] md:pr-[36px] md:pb-[84px]"
 						>
-							<div className="3xl:max-w-[1196px] relative z-10 max-w-full xl:max-w-[800px] 2xl:max-w-[900px]">
+							<div className="3xl:max-w-[1196px] relative z-10 max-w-full sm:max-w-[400px] xl:max-w-[700px] 2xl:max-w-[900px]">
 								<p
 									ref={ConnectionTextRef}
 									className="font-regular 3xl:text-[40px] xs:text-[24px] mb-[55px] translate-y-[50px] text-left text-[20px] leading-[1.3] text-white opacity-0 xl:text-[28px] 2xl:text-[32px]"
@@ -229,14 +229,21 @@ export default function Home() {
 							</div>
 							<div
 								ref={ConnectionImageRef}
-								className="absolute right-0 -bottom-[65px] translate-x-[-200px] opacity-0 md:bottom-0"
+								className="absolute right-0 bottom-0 translate-x-[-200px] opacity-0 sm:-bottom-[65px] md:bottom-0"
 							>
 								<Image
 									src="/imgs/connection.png"
 									alt="Connection"
 									width={811}
 									height={414}
-									className="block h-[280px] w-auto lg:h-[414px]"
+									className="hidden h-[280px] w-auto sm:block lg:h-[414px]"
+								/>
+								<Image
+									src="/imgs/connection-map.png"
+									alt="Connection"
+									width={279}
+									height={212}
+									className="block h-[212px] w-auto sm:hidden"
 								/>
 							</div>
 						</div>

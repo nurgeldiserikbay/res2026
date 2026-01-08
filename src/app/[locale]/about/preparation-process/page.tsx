@@ -1,19 +1,18 @@
 'use client'
 
-import { useLocale, useTranslations } from 'next-intl'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { appConfig } from '@/shared/config/app.config'
-import { Locale } from '@/shared/config/i18n'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
-import { GallerySection } from '@/widgets/gallery-section/GallerySection'
+import { ProcessesSlider } from '@/widgets/preparation-process/ui/ProcessesSlider'
 
 export default function Page() {
 	const t = useTranslations()
-	const locale = useLocale()
 
 	const BannerRef = useRef<HTMLElement>(null)
 	useAnimBg(BannerRef, {
@@ -36,8 +35,8 @@ export default function Page() {
 				data-animated-banner
 				className={[
 					!appConfig.isProduction
-						? `bg-secondary h-[343px] pt-[176px] max-[441px]:h-[451px] max-[441px]:pt-[284px]`
-						: `bg-secondary h-[343px] pt-[176px]`,
+						? `bg-secondary min-h-[343px] pt-[176px] pb-[60px] max-[441px]:min-h-[451px] max-[441px]:pt-[284px]`
+						: `bg-secondary min-h-[343px] pt-[176px]`,
 				].join(``)}
 			>
 				<Container className="relative z-10">
@@ -45,18 +44,42 @@ export default function Page() {
 						ref={TitleRef}
 						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
 					>
-						{t('titles.gallery')}
+						{t('pages.preparationProcess.title')}
 					</h1>
 					<div
 						ref={BreadcrumbsRef}
 						className="translate-y-[50px] opacity-0"
 					>
-						<Breadcrumbs breadcrumbs={[{ label: t('titles.gallery'), href: '/gallery' }]} />
+						<Breadcrumbs
+							breadcrumbs={[
+								{ label: t('pages.about.title'), href: '/about' },
+								{ label: t('pages.preparationProcess.title'), href: '/about/preparation-process' },
+							]}
+						/>
 					</div>
 				</Container>
 			</section>
 
-			<GallerySection locale={locale as Locale} />
+			<section className="3xl:pt-[100px] bg-white pt-[50px] md:pt-[60px] 2xl:pt-[80px]">
+				<Container className="flex items-center justify-between gap-[60px]">
+					<div className="max-w-[1026px]">
+						<Image
+							src="/imgs/preparation-process/preparation-process-2.png"
+							alt="Preparation Process"
+							width={1026}
+							height={446}
+							className="block max-w-full rounded-[12px]"
+						/>
+					</div>
+
+					<div className="max-w-[721px]">
+						<h4 className="text-text mb-[60px] text-[24px] leading-normal font-normal">{t('pages.preparationProcess.subtitle')}</h4>
+						<p className="text-text text-[16px] leading-normal font-normal">{t('pages.preparationProcess.text')}</p>
+					</div>
+				</Container>
+			</section>
+
+			<ProcessesSlider />
 		</>
 	)
 }

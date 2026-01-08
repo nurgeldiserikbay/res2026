@@ -111,10 +111,12 @@ export function AboutSummit() {
 							/>
 							<div className="w-full max-w-[631px]">
 								<div className="text-text mb-[10px] text-[16px] leading-normal font-bold">{t(`pages.about.presidentTextTitle`)}</div>
-								<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
+								<div className="font-regular relative z-1 mb-[20px] text-justify text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
 									{t('pages.about.presidentText')}
 								</div>
-								<div className="text-primary text-[12px] leading-normal sm:text-[14px]">{t('pages.about.presidentPosition')}</div>
+								<div className="text-primary text-justify text-[12px] leading-normal sm:text-[14px]">
+									{t('pages.about.presidentPosition')}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -127,7 +129,7 @@ export function AboutSummit() {
 							<h3 className="text-text mb-[8px] text-[20px] leading-normal font-bold sm:mb-[10px] sm:text-[22px] md:text-[24px]">
 								{t(`pages.about.purpose`)}
 							</h3>
-							<p className="font-regular text-text text-left text-[14px] leading-normal sm:text-[16px]">{t(`pages.about.text3`)}</p>
+							<p className="font-regular text-text text-justify text-[14px] leading-normal sm:text-[16px]">{t(`pages.about.text3`)}</p>
 						</div>
 
 						{/*isOpen && (

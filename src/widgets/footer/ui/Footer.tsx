@@ -61,7 +61,7 @@ export function Footer() {
 					<div className="mb-[30px] flex items-start justify-between gap-[30px] lg:hidden">
 						<div
 							ref={FooterText3Ref}
-							className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
+							className="text-text mb-0 max-w-[175px] translate-y-[50px] text-justify text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
 						>
 							{t(`pages.footer.text`)}
 						</div>
@@ -132,7 +132,7 @@ export function Footer() {
 						<div className="hidden items-start justify-between gap-[30px] sm:max-w-[247px] lg:block">
 							<div
 								ref={FooterText1Ref}
-								className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
+								className="text-text mb-0 hidden max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
 							>
 								{t(`pages.footer.text`)}
 							</div>

@@ -74,55 +74,80 @@ export function HeaderMobileNav() {
 						</button>
 					</div>
 
-					<div className="xs:gap-x-[40px] xs:gap-y-[60px] flex flex-wrap gap-x-[60px] gap-y-[30px]">
-						{headerNav.map((item) => {
-							const active = isActive(pathname, item.href)
+					<div className="grid w-full grid-cols-2 justify-between gap-x-[60px] gap-y-[36px] lg:flex lg:flex-nowrap 2xl:gap-x-[40px]">
+						{headerNav
+							.filter((item) => item.main)
+							.map((item) => {
+								const active = isActive(pathname, item.href)
 
-							if (item.children?.length) {
+								if (item.children?.length) {
+									return (
+										<div
+											key={item.key}
+											className="xs:max-w-[180px] w-full max-w-[140px]"
+										>
+											<p className="xs:mb-[30px] xs:text-[20px] mb-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
+											{item.children?.map((child) => {
+												const childActive = isActive(pathname, child.href)
+												return (
+													<Link
+														key={child.key}
+														href={child.href ?? '/'}
+														aria-current={childActive ? 'page' : undefined}
+														className={[
+															'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
+															childActive ? 'text-muted-light' : '',
+															'focus-visible:text-muted-light focus-visible:outline-none',
+														].join(' ')}
+														onClick={() => setOpen(false)}
+													>
+														{t(child.key)}
+													</Link>
+												)
+											})}
+										</div>
+									)
+								}
+
 								return (
-									<div
+									<Link
 										key={item.key}
-										className="xs:max-w-[180px] w-full max-w-[140px]"
+										href={item.href ?? '/'}
+										aria-current={active ? 'page' : undefined}
+										className={[
+											'font-regular transition-duration-300 hover:text-muted-light xs:text-[16px] block text-left text-[14px] text-white transition-colors',
+											active ? 'text-muted-light' : '',
+											'focus-visible:text-muted-light focus-visible:outline-none',
+										].join(' ')}
+										onClick={() => setOpen(false)}
 									>
-										<p className="xs:mb-[30px] xs:text-[20px] mb-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
-										{item.children?.map((child) => {
-											const childActive = isActive(pathname, child.href)
-											return (
-												<Link
-													key={child.key}
-													href={child.href ?? '/'}
-													aria-current={childActive ? 'page' : undefined}
-													className={[
-														'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
-														childActive ? 'text-muted-light' : '',
-														'focus-visible:text-muted-light focus-visible:outline-none',
-													].join(' ')}
-													onClick={() => setOpen(false)}
-												>
-													{t(child.key)}
-												</Link>
-											)
-										})}
-									</div>
+										{t(item.key)}
+									</Link>
 								)
-							}
+							})}
 
-							return (
-								<Link
-									key={item.key}
-									href={item.href ?? '/'}
-									aria-current={active ? 'page' : undefined}
-									className={[
-										'font-regular transition-duration-300 hover:text-muted-light xs:text-[16px] block text-left text-[14px] text-white transition-colors',
-										active ? 'text-muted-light' : '',
-										'focus-visible:text-muted-light focus-visible:outline-none',
-									].join(' ')}
-									onClick={() => setOpen(false)}
-								>
-									{t(item.key)}
-								</Link>
-							)
-						})}
+						<div className="flex max-w-[789px] grow flex-col items-start justify-start gap-[20px] md:w-auto">
+							{headerNav
+								.filter((item) => !item.main)
+								.map((item) => {
+									const active = isActive(pathname, item.href)
+									return (
+										<Link
+											key={item.key}
+											href={item.href ?? '/'}
+											aria-current={pathname === item.href ? 'page' : undefined}
+											className={[
+												'font-regular transition-duration-300 hover:text-muted-light xs:text-[16px] block text-left text-[14px] text-white transition-colors',
+												active ? 'text-muted-light' : '',
+												'focus-visible:text-muted-light focus-visible:outline-none',
+											].join(' ')}
+											onClick={() => setOpen(false)}
+										>
+											{t(item.key)}
+										</Link>
+									)
+								})}
+						</div>
 					</div>
 				</Container>
 			</div>

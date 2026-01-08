@@ -113,7 +113,7 @@ export function Speakers() {
 						<h4 className="text-text mb-[30px] text-left text-[20px] leading-normal font-bold md:text-[22px] xl:text-[24px]">
 							{t('pages.speakers.text')}
 						</h4>
-						<p className="text-text mb-[30px] text-[16px] leading-normal">{t('pages.speakers.text1')}</p>
+						<p className="text-text mb-[30px] text-justify text-[16px] leading-normal">{t('pages.speakers.text1')}</p>
 
 						<SpekerControl
 							isBeginning={isBeginning}

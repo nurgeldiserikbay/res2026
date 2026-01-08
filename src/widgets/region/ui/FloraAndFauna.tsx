@@ -1,26 +1,13 @@
 'use client'
 
 import gsap from 'gsap'
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { useLocale } from 'next-intl'
 import { useEffect, useRef, useState } from 'react'
+import { Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-const Swiper = dynamic(
-	async () => {
-		const mod = await import('swiper/react')
-		return { default: mod.Swiper }
-	},
-	{ ssr: false },
-)
-
-const SwiperSlide = dynamic(
-	async () => {
-		const mod = await import('swiper/react')
-		return { default: mod.SwiperSlide }
-	},
-	{ ssr: false },
-)
+import 'swiper/css'
 
 import { Locale } from '@/shared/config/i18n'
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
@@ -53,16 +40,6 @@ export function FloraAndFauna({
 
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
-	const [navigationModule, setNavigationModule] = useState<typeof import('swiper/modules').Navigation | null>(null)
-
-	useEffect(() => {
-		// Динамический импорт модуля Navigation
-		import('swiper/modules').then((mod) => {
-			setNavigationModule(mod.Navigation)
-		})
-		// Динамический импорт CSS
-		import('swiper/css')
-	}, [])
 
 	const SectionRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
@@ -99,43 +76,41 @@ export function FloraAndFauna({
 			>
 				<Container className="overflow-visible">
 					<div className="relative w-full after:absolute after:bottom-0 after:left-0 after:z-1 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-r after:from-black/70 after:to-transparent">
-						{navigationModule && (
-							<Swiper
-								modules={[navigationModule]}
-								slidesPerView={1}
-								spaceBetween={30}
-								className="h-[888px] w-full overflow-visible rounded-[12px]"
-								navigation={{
-									nextEl: '#flora-and-fauna-swiper-button-next',
-									prevEl: '#flora-and-fauna-swiper-button-prev',
-								}}
-								onSwiper={(swiper) => {
-									setIsBeginning(swiper.isBeginning)
-									setIsEnd(swiper.isEnd)
-									setActiveSlide(swiper.activeIndex)
-								}}
-								onSlideChange={(swiper) => {
-									setIsBeginning(swiper.isBeginning)
-									setIsEnd(swiper.isEnd)
-									setActiveSlide(swiper.activeIndex)
-								}}
-							>
-								{slides.map((slide) => (
-									<SwiperSlide
-										key={slide.id}
-										className="h-[888px] overflow-hidden rounded-[12px]"
-									>
-										<Image
-											src={slide.image}
-											alt={slide.alt}
-											width={slide.width}
-											height={slide.height}
-											className="block h-full w-full rounded-[12px] object-cover"
-										/>
-									</SwiperSlide>
-								))}
-							</Swiper>
-						)}
+						<Swiper
+							modules={[Navigation]}
+							slidesPerView={1}
+							spaceBetween={30}
+							className="h-[888px] w-full overflow-visible rounded-[12px]"
+							navigation={{
+								nextEl: '#flora-and-fauna-swiper-button-next',
+								prevEl: '#flora-and-fauna-swiper-button-prev',
+							}}
+							onSwiper={(swiper) => {
+								setIsBeginning(swiper.isBeginning)
+								setIsEnd(swiper.isEnd)
+								setActiveSlide(swiper.activeIndex)
+							}}
+							onSlideChange={(swiper) => {
+								setIsBeginning(swiper.isBeginning)
+								setIsEnd(swiper.isEnd)
+								setActiveSlide(swiper.activeIndex)
+							}}
+						>
+							{slides.map((slide) => (
+								<SwiperSlide
+									key={slide.id}
+									className="h-[888px] overflow-hidden rounded-[12px]"
+								>
+									<Image
+										src={slide.image}
+										alt={slide.alt}
+										width={slide.width}
+										height={slide.height}
+										className="block h-full w-full rounded-[12px] object-cover"
+									/>
+								</SwiperSlide>
+							))}
+						</Swiper>
 						<div className="absolute bottom-0 left-0 z-2 flex flex-col items-start justify-end p-[50px]">
 							<div
 								ref={ButtonsRef}

@@ -41,12 +41,12 @@ export function Header() {
 					const delta = currentY - lastY
 
 					// фон при любом скролле
-					setScrolled(currentY > 100)
+					setScrolled(currentY > 20)
 
 					// небольшая "мертвая зона", чтобы не дергалось
 					if (Math.abs(delta) > 6) {
 						// прячем только если реально вниз и уже не в самом верху
-						if (delta > 0 && currentY > 80) setHidden(true)
+						if (delta > 0 && currentY > 20) setHidden(true)
 						// показываем при скролле вверх
 						if (delta < 0) setHidden(false)
 					}
@@ -72,7 +72,7 @@ export function Header() {
 			<div
 				ref={headerContainerRef as React.RefObject<HTMLDivElement>}
 				className={[
-					'-translate-y-[90px] transform py-[30px] opacity-0 lg:py-[18px]',
+					'-translate-y-[90px] transform pt-[30px] pb-[18px] opacity-0 lg:py-[18px]',
 					scrolled || makeDark ? 'bg-primary-dark shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur' : 'bg-transparent',
 				].join(' ')}
 			>

@@ -24,14 +24,14 @@ const navItems: readonly NavItem[] = [
 			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
-				ready: false,
+				ready: !appConfig.isProduction,
 				showHeader: !appConfig.isProduction,
 				showFooter: true,
 			},
 			{
 				key: 'about.preparationProcess',
 				href: '/about/preparation-process',
-				ready: false,
+				ready: !appConfig.isProduction,
 				showHeader: !appConfig.isProduction,
 				showFooter: true,
 			},
