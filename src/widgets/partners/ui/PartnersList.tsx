@@ -244,7 +244,7 @@ const partnersArray: PartnerGroup[] = [
 				height: 122,
 			},
 			// {
-			// 	id: 18,
+			// 	id: 21,
 			// 	image: '/imgs/logo/logo-3.svg',
 			// 	title: 'Organizer 3',
 			// 	link: '/partner-7',
@@ -252,7 +252,7 @@ const partnersArray: PartnerGroup[] = [
 			// 	height: 122,
 			// },
 			// {
-			// 	id: 19,
+			// 	id: 22,
 			// 	image: '/imgs/logo/logo-8.svg',
 			// 	title: 'Organizer 8',
 			// 	link: '/partner-12',
@@ -260,7 +260,7 @@ const partnersArray: PartnerGroup[] = [
 			// 	height: 122,
 			// },
 			// {
-			// 	id: 20,
+			// 	id: 23,
 			// 	image: '/imgs/logo/WMO.svg',
 			// 	title: 'Organizer 22',
 			// 	link: '/partner-25',

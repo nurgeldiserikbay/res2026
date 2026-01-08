@@ -96,7 +96,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 						</h3>
 						<p
 							ref={Text1Ref}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]"
+							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
 						>
 							{text1}
 						</p>
@@ -125,7 +125,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 						</div>
 						<p
 							ref={Text2Ref}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]"
+							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
 						>
 							{text2}
 						</p>

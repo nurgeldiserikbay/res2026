@@ -176,7 +176,7 @@ export function FloraAndFauna({
 								</h3>
 								<p
 									ref={DescriptionRef}
-									className="max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0"
+									className="max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0 md:text-justify"
 								>
 									{localizedDescription}
 								</p>

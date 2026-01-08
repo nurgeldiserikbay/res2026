@@ -73,8 +73,10 @@ export default function Page() {
 					</div>
 
 					<div className="max-w-[721px]">
-						<h4 className="text-text mb-[60px] text-[24px] leading-normal font-normal">{t('pages.preparationProcess.subtitle')}</h4>
-						<p className="text-text text-[16px] leading-normal font-normal">{t('pages.preparationProcess.text')}</p>
+						<h4 className="text-text mb-[60px] text-justify text-[24px] leading-normal font-normal">
+							{t('pages.preparationProcess.subtitle')}
+						</h4>
+						<p className="text-text text-justify text-[16px] leading-normal font-normal">{t('pages.preparationProcess.text')}</p>
 					</div>
 				</Container>
 			</section>

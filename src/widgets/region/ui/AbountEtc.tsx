@@ -119,7 +119,7 @@ export function AbountEtc({
 						data-animated-banner
 						className="relative mb-[50px] rounded-[12px] p-[20px] sm:mb-[60px] sm:p-[30px] md:mb-[80px] md:p-[40px] lg:mb-[100px] lg:p-[50px]"
 					>
-						<div className="relative z-1 flex flex-col items-start justify-between gap-[30px] lg:flex-row lg:gap-[60px]">
+						<div className="relative z-1 flex flex-col items-start gap-[30px] md:justify-between lg:flex-row lg:gap-[60px]">
 							<div
 								ref={LeftContentRef}
 								className="w-full translate-x-[-90px] opacity-0 lg:w-auto"
@@ -127,7 +127,7 @@ export function AbountEtc({
 								<h3 className="mb-[10px] text-[24px] leading-normal font-bold text-white sm:text-[28px] md:text-[32px]">
 									{strategicVisionTitle}
 								</h3>
-								<p className="mb-[20px] text-[14px] leading-normal font-normal text-white sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]">
+								<p className="mb-[20px] text-[14px] leading-normal font-normal text-white sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]">
 									{strategicVisionIntro}
 								</p>
 								<ul>
@@ -136,7 +136,7 @@ export function AbountEtc({
 											key={document.id}
 											className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]"
 										>
-											<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
+											<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-justify text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
 												{document.id}
 											</span>
 											{document.title}
@@ -189,11 +189,11 @@ export function AbountEtc({
 													src={imageSrc}
 													alt={initiative.title}
 													fill
-													className="object-cover"
+													className="rounded-[12px] object-cover"
 													sizes="(max-width: 640px) 100vw, 33vw"
 												/>
 											</div>
-											<div className="p-[16px] sm:p-[18px] md:p-[20px]">
+											<div className="py-[16px] sm:py-[18px] md:py-[20px]">
 												<h5 className="mb-[8px] text-left text-[16px] leading-normal font-bold text-black sm:text-[16px] md:text-[18px]">
 													{initiative.title}
 												</h5>
@@ -228,7 +228,9 @@ export function AbountEtc({
 														{initiative.title}
 													</h5>
 												)}
-												<p className="text-[13px] leading-normal text-white sm:text-[14px] md:text-[16px]">{initiative.description}</p>
+												<p className="text-[13px] leading-normal text-white sm:text-[14px] md:text-justify md:text-[16px]">
+													{initiative.description}
+												</p>
 											</div>
 										</div>
 									)

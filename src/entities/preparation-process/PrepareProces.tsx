@@ -19,7 +19,7 @@ export function PrepareProcess({
 				<div className="text-text mb-[10px] text-[20px] leading-normal font-light">{addessAndTime}</div>
 				<div className="text-text mb-[30px] text-[36px] leading-normal font-medium">{title}</div>
 				<div className="text-text mb-[30px] max-w-[552px] text-[24px] leading-normal font-normal">{subtitle}</div>
-				<div className="text-text max-w-[580px] text-[16px] leading-normal font-normal">{description}</div>
+				<div className="text-text max-w-[580px] text-justify text-[16px] leading-normal font-normal">{description}</div>
 			</div>
 			<div className="max-w-[909px] grow overflow-hidden rounded-[12px]">
 				{image && (

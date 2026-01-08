@@ -1,10 +1,11 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { KeyDirection } from '@/entities/key-directions/KeyDirection'
+import { IKeyDirectionItem, KeyDirection } from '@/entities/key-directions/KeyDirection'
+import { KeyDirectionModal } from '@/entities/key-directions/KeyDirectionModal'
 import { keyDirections } from '@/entities/key-directions/mocks'
 import { appConfig } from '@/shared/config/app.config'
 import { Locale } from '@/shared/config/i18n'
@@ -16,6 +17,7 @@ import { localize } from '@/shared/utils/localize'
 export default function Page() {
 	const t = useTranslations()
 	const locale = useLocale() as Locale
+	const [direction, setDirection] = useState<IKeyDirectionItem | null>(null)
 
 	const BannerRef = useRef<HTMLElement>(null)
 	useAnimBg(BannerRef, {
@@ -80,10 +82,20 @@ export default function Page() {
 							title={direction.title}
 							description={direction.description}
 							href={direction.href}
+							onClick={() => setDirection(direction as unknown as IKeyDirectionItem)}
 						/>
 					))}
 				</Container>
 			</section>
+
+			{direction && (
+				<KeyDirectionModal
+					open={Boolean(direction)}
+					onClose={() => setDirection(null)}
+					title={direction.title}
+					text={direction.description}
+				/>
+			)}
 		</>
 	)
 }
