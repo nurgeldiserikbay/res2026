@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { appConfig } from '@/shared/config/app.config'
 import { IconDoubleArrowDown } from '@/shared/icons/IconDoubleArrowDown'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
@@ -35,7 +36,9 @@ export function AboutBanner() {
 
 	return (
 		<>
-			<section className="bg-primary-dark pt-[100px]">
+			<section
+				className={[!appConfig.isProduction ? `bg-primary-dark pt-[100px] max-[441px]:pt-[178px]` : `bg-primary-dark pt-[100px]`].join(``)}
+			>
 				<div
 					ref={BannerRef}
 					data-animated-banner
@@ -54,13 +57,13 @@ export function AboutBanner() {
 						<div className="w-full max-w-[706px] lg:mt-[43px]">
 							<h1
 								ref={TitleRef}
-								className="xs:mb-[30px] xs:text-[40px] 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[28px] leading-none font-bold text-white opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
+								className="xs:mb-[30px] xs:text-[48px] 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[36px] leading-none font-bold text-white opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
 							>
 								{t('pages.about.title')}
 							</h1>
 							<p
 								ref={SubtitleRef}
-								className="text-text mb-[30px] w-full translate-y-[90px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
+								className="text-text w-full max-w-[286px] translate-y-[90px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
 							>
 								{t('pages.about.resText1')}
 							</p>
@@ -68,19 +71,30 @@ export function AboutBanner() {
 							<Link
 								href="#about-content"
 								ref={ButtonRef}
-								className="text-secondary flex translate-y-[50px] items-center gap-[20px] text-[14px] leading-normal font-normal opacity-0 sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
+								className="text-secondary hidden translate-y-[50px] items-center gap-[20px] text-[14px] leading-normal font-normal opacity-0 sm:flex sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
 							>
 								<IconDoubleArrowDown className="text-secondary" />
 								<span>{t('labels.swipeForward')}</span>
 							</Link>
 						</div>
 
-						<div
-							ref={DateBlockRef}
-							className="xs:text-[48px] xs:mb-[20px] 3xl:text-[111px] mb-[30px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
-						>
-							<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
-							<div className="block">Summit 2026</div>
+						<div>
+							<div
+								ref={DateBlockRef}
+								className="xs:text-[48px] xs:mb-[20px] 3xl:text-[111px] mb-[30px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
+							>
+								<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
+								<div className="block">Summit 2026</div>
+							</div>
+
+							<Link
+								href="#about-content"
+								ref={ButtonRef}
+								className="max-auto flex translate-y-[50px] items-center justify-center gap-[30px] text-[14px] leading-normal font-normal text-white opacity-0 sm:hidden sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
+							>
+								<IconDoubleArrowDown className="text-white" />
+								<span>{t('labels.swipeForward')}</span>
+							</Link>
 						</div>
 					</Container>
 				</div>
