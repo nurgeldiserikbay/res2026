@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 
+import { appConfig } from '@/shared/config/app.config'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
@@ -26,7 +27,11 @@ export function AboutRegionBanner({ title, bgImage }: { title: string; bgImage: 
 			<section
 				ref={BannerRef}
 				data-animated-banner
-				className="xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]"
+				className={[
+					!appConfig.isProduction
+						? `xs:h-[400px] xs:mt-[80px] mt-[50px] h-[380px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]`
+						: `xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]`,
+				].join(' ')}
 				style={{ backgroundImage: `url(${bgImage})` }}
 			>
 				<Container className="flex h-full items-center justify-center text-center">

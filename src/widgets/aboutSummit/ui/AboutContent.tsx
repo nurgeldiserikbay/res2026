@@ -2,14 +2,16 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
+import { ButtonTree } from '@/shared/ui/button/ButtonTree'
 import { Container } from '@/shared/ui/container/container'
 
 export function AboutContent() {
 	const t = useTranslations()
+	const locale = useLocale()
 
 	const TextRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(TextRef, { y: 50, delay: 0.1 })
@@ -44,18 +46,18 @@ export function AboutContent() {
 					<div className="w-full lg:max-w-[874px]">
 						<div
 							ref={TextRef}
-							className="text-text mb-[40px] w-full max-w-[721px] translate-y-[50px] text-justify text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[30px] sm:text-[15px] md:mb-[40px] md:text-[16px] lg:mb-[100px] xl:mb-[122px]"
+							className="text-text w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:text-[15px] md:text-[16px]"
 						>
-							<p className="mb-[20px] text-[18px] leading-normal font-normal sm:mb-[30px] md:mb-[40px] md:text-[20px] lg:mb-[50px] lg:text-[22px] xl:mb-[60px] 2xl:text-[24px]">
+							<p className="mb-[20px] text-[18px] leading-normal font-normal sm:mb-[30px] md:mb-[40px] md:text-justify md:text-[20px] lg:mb-[50px] lg:text-[22px] xl:mb-[60px] 2xl:text-[24px]">
 								{t('pages.about.aboutText2')}
 							</p>
 							<p>{t('pages.about.aboutText3')}</p>
-							<ul className="list-disc pb-[15px] pl-[20px] sm:pb-[20px] sm:pl-[25px]">
+							<ul className="list-disc pb-[15px] pl-[20px] sm:pb-[20px] sm:pl-[25px] md:text-justify">
 								<li>{t(`pages.about.aboutText31`)}</li>
 								<li>{t(`pages.about.aboutText32`)}</li>
 								<li>{t(`pages.about.aboutText33`)}</li>
 							</ul>
-							<p>{t('pages.about.aboutText34')}</p>
+							<p className="md:text-justify">{t('pages.about.aboutText34')}</p>
 						</div>
 					</div>
 
@@ -82,7 +84,8 @@ export function AboutContent() {
 												{t(`pages.footer.text`)}
 											</div>
 											<div className="max-w-[294px] text-[16px] leading-[1.2] font-bold text-white sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
-												{t(`pages.footer.text1`)}
+												<div className="whitespace-nowrap">{t(`pages.footer.text2`)}</div>
+												<div>{t(`pages.footer.text3`)}</div>
 											</div>
 										</div>
 									</div>
@@ -104,7 +107,7 @@ export function AboutContent() {
 
 						<p
 							ref={ResText2Ref}
-							className="text-text translate-y-[50px] text-justify text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-[16px]"
+							className="text-text translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-justify md:text-[16px]"
 						>
 							{t('pages.about.resText2')}
 						</p>
@@ -123,13 +126,68 @@ export function AboutContent() {
 								),
 							})}
 						</p>
-						<Image
-							src="/imgs/about-page-img-5.png"
-							alt="About President"
-							width={713}
-							height={231}
-							className="block h-auto w-full rounded-[12px]"
-						/>
+					</div>
+				</Container>
+			</section>
+
+			<section
+				id="about-content-read"
+				className="bg-white pt-[30px] md:pt-[40px] lg:pt-[50px] 2xl:pt-[60px]"
+			>
+				<Container className="grid grid-cols-1 gap-x-[60px] gap-y-[30px] md:grid-cols-2">
+					<div className="flex w-full flex-col items-start justify-between rounded-[17px] bg-[url('/imgs/docs-bg.png')] bg-cover bg-center px-[20px] pt-[58px] pb-[28px] md:px-[36px]">
+						<div>
+							<h3 className="mb-[10px] text-[24px] leading-[1.3] font-bold text-white md:text-[40px]">{t('pages.about.file1Title')}</h3>
+							<p className="mb-[55px] text-[16px] leading-[1.3] font-normal text-white md:text-[24px]">{t('pages.about.file1Text')}</p>
+						</div>
+
+						<div className="flex items-start justify-start gap-[10px]">
+							<Link
+								href={`/docs/concept-${locale}.pdf`}
+								className="block"
+								target="_blank"
+							>
+								<ButtonTree className="w-full">
+									<span>{t('commands.read')}</span>
+								</ButtonTree>
+							</Link>
+							<Link
+								href={`/docs/concept-${locale}.pdf`}
+								className="block"
+								download
+							>
+								<ButtonTree className="w-full">
+									<span>{t('commands.download')}</span>
+								</ButtonTree>
+							</Link>
+						</div>
+					</div>
+					<div className="flex w-full flex-col items-start justify-between rounded-[17px] bg-[url('/imgs/docs-bg.png')] bg-cover bg-center px-[20px] pt-[58px] pb-[28px] md:px-[36px]">
+						<div>
+							<h3 className="mb-[10px] text-[24px] leading-[1.3] font-bold text-white md:text-[40px]">{t('pages.about.file2Title')}</h3>
+							<p className="mb-[55px] text-[16px] leading-[1.3] font-normal text-white md:text-[24px]">{t('pages.about.file2Text')}</p>
+						</div>
+
+						<div className="flex items-start justify-start gap-[10px]">
+							<Link
+								href={`/docs/brochure-${locale}.pdf`}
+								className="block"
+								target="_blank"
+							>
+								<ButtonTree className="w-full">
+									<span>{t('commands.read')}</span>
+								</ButtonTree>
+							</Link>
+							<Link
+								href={`/docs/brochure-${locale}.pdf`}
+								className="block"
+								download
+							>
+								<ButtonTree className="w-full">
+									<span>{t('commands.download')}</span>
+								</ButtonTree>
+							</Link>
+						</div>
 					</div>
 				</Container>
 			</section>

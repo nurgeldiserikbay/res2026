@@ -112,9 +112,23 @@ export function FloraAndFauna({
 							))}
 						</Swiper>
 						<div className="absolute bottom-0 left-0 z-2 flex flex-col items-start justify-end p-[50px]">
+							<div>
+								<h3
+									ref={TitleRef}
+									className="xs:text-[32px] mb-[30px] translate-y-[50px] text-[24px] leading-normal font-bold text-white opacity-0"
+								>
+									{localizedTitle}
+								</h3>
+								<p
+									ref={DescriptionRef}
+									className="max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0 md:text-justify"
+								>
+									{localizedDescription}
+								</p>
+							</div>
 							<div
 								ref={ButtonsRef}
-								className="mb-[50px] translate-x-[-50px] opacity-0"
+								className="mt-[50px] translate-x-[-50px] opacity-0"
 							>
 								<div id="flora-and-fauna-swiper-button-prev">
 									{isBeginning ? (
@@ -166,20 +180,6 @@ export function FloraAndFauna({
 										</ButtonDefault>
 									)}
 								</div>
-							</div>
-							<div>
-								<h3
-									ref={TitleRef}
-									className="mb-[30px] translate-y-[50px] text-[32px] leading-normal font-bold text-white opacity-0"
-								>
-									{localizedTitle}
-								</h3>
-								<p
-									ref={DescriptionRef}
-									className="max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0"
-								>
-									{localizedDescription}
-								</p>
 							</div>
 						</div>
 					</div>

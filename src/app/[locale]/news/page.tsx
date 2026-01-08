@@ -1,121 +1,37 @@
-'use client'
+import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 
-import { useLocale, useTranslations } from 'next-intl'
-import { useRef } from 'react'
-
-import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { NewsItem } from '@/entities/news/NewsItem'
-import { appConfig } from '@/shared/config/app.config'
-import { Locale } from '@/shared/config/i18n'
-import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
-import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
+import { NewsList } from '@/entities/news/components/NewsList'
+import { newsListQuery } from '@/entities/news/news.queries'
+import { getQueryClient } from '@/shared/lib/query/get-query-client'
 import { Container } from '@/shared/ui/container/container'
-// import { MainPagination } from '@/shared/ui/pagination/MainPagination'
-import { localize } from '@/shared/utils/localize'
-import { newsPaginItems } from '@/widgets/news/mocks'
+import { NewsBanner } from '@/widgets/news/ui/NewsBanner'
 import { NewsTabLinks } from '@/widgets/news/ui/NewsTabLinks'
 
-type NewsItemWrapperProps = {
-	item: (typeof newsPaginItems)[0]
-	index: number
-	delay: number
-}
+export default async function Page() {
+	const queryClient = getQueryClient()
 
-function NewsItemWrapper({ item, delay }: NewsItemWrapperProps) {
-	const ref = useRef<HTMLDivElement>(null)
-	useAnimSlide(ref, { y: 50, delay })
+	// Prefetch данных на сервере
+	await queryClient.prefetchQuery(newsListQuery())
 
 	return (
-		<div
-			ref={ref}
-			className={`translate-y-[50px] opacity-0 ${item.wide ? 'col-span-1 row-span-1 sm:col-span-2' : 'col-span-1 row-span-1'}`}
-		>
-			<NewsItem {...item} />
-		</div>
+		<HydrationBoundary state={dehydrate(queryClient)}>
+			<NewsPageContent />
+		</HydrationBoundary>
 	)
 }
 
-export default function Page() {
-	const t = useTranslations()
-	const locale = useLocale() as Locale
-
-	const BannerRef = useRef<HTMLElement>(null)
-	useAnimBg(BannerRef, {
-		fromSize: '140%',
-		toSize: '120%',
-		fromPosition: 'center 70%',
-		toPosition: 'center center',
-		duration: 1.4,
-		bgImage: '/imgs/news-banner.png',
-	})
-	const TitleRef = useRef<HTMLHeadingElement>(null)
-	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
-	const BreadcrumbsRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
-	const TabLinksRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(TabLinksRef, { y: 50, delay: 0.3 })
-	const PaginationRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(PaginationRef, { y: 50, delay: 0.4 })
-
-	const newsItems = newsPaginItems.filter((item) => item.type === 'latest' && localize(item.content, locale) !== '')
-
+function NewsPageContent() {
 	return (
 		<>
-			<section
-				ref={BannerRef}
-				data-animated-banner
-				className={[
-					!appConfig.isProduction
-						? `bg-secondary h-[343px] pt-[176px] max-[441px]:h-[451px] max-[441px]:pt-[284px]`
-						: `bg-secondary h-[343px] pt-[176px]`,
-				].join(``)}
-			>
-				<Container className="relative z-10">
-					<h1
-						ref={TitleRef}
-						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
-					>
-						{t('titles.news')}
-					</h1>
-					<div
-						ref={BreadcrumbsRef}
-						className="translate-y-[50px] opacity-0"
-					>
-						<Breadcrumbs breadcrumbs={[{ label: t('titles.news'), href: '/news' }]} />
-					</div>
-				</Container>
-			</section>
+			<NewsBanner />
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
-					<div
-						ref={TabLinksRef}
-						className="translate-y-[50px] opacity-0"
-					>
-						<NewsTabLinks />
-					</div>
+					<NewsTabLinks />
 
-					{newsItems.length > 0 ? (
-						<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
-							{newsItems.map((item, index) => (
-								<NewsItemWrapper
-									key={index}
-									item={item}
-									index={index}
-									delay={0.1 + index * 0.1}
-								/>
-							))}
-						</div>
-					) : (
-						<>
-							<p className="text-text text-center text-[24px] font-light">{t('labels.noContent')}</p>
-						</>
-					)}
+					<NewsList />
 
-					{/* <div
-						ref={PaginationRef}
-						className="mt-[30px] flex translate-y-[50px] items-center justify-center opacity-0 xl:mt-[50px]"
-					>
+					{/* <div className="mt-[30px] flex items-center justify-center xl:mt-[50px]">
 						<MainPagination totalPages={10} />
 					</div> */}
 				</Container>

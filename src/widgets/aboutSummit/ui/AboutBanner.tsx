@@ -52,7 +52,7 @@ export function AboutBanner() {
 						alt="About Summit Logo"
 						width={1039}
 						height={681}
-						className="absolute top-[20px] left-0 block opacity-0 max-[762px]:min-w-[120vw] max-[480px]:min-w-[115vw] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]"
+						className="absolute top-[40px] left-0 block opacity-0 max-[762px]:min-w-[120vw] max-[480px]:min-w-[130vw] max-[400px]:min-w-[150vw] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]"
 					/>
 
 					<Container className="relative z-10 flex flex-col items-start justify-between gap-[91px] sm:gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
@@ -65,7 +65,7 @@ export function AboutBanner() {
 							</h1>
 							<p
 								ref={SubtitleRef}
-								className="text-text w-full max-w-[286px] translate-y-[90px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] md:max-w-full lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
+								className="text-text w-full max-w-[286px] translate-y-[90px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] md:max-w-full lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
 							>
 								{t('pages.about.resText1')}
 							</p>
@@ -83,7 +83,7 @@ export function AboutBanner() {
 						<div className="sm:mx-unset mx-auto">
 							<div
 								ref={DateBlockRef}
-								className="xs:text-[36px] xs:mb-[20px] 3xl:text-[111px] mb-[30px] ml-[160px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:ml-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
+								className="xs:text-[36px] xs:mb-[20px] 3xl:text-[111px] xs:ml-[160px] mb-[30px] ml-[60px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:ml-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
 							>
 								<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
 								<div className="block">Summit 2026</div>

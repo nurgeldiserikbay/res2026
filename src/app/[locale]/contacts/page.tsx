@@ -7,8 +7,10 @@ import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { appConfig } from '@/shared/config/app.config'
+import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
+import { IconPin } from '@/shared/icons/IconPin'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
@@ -37,24 +39,27 @@ function MeprSection({ t }: SectionProps): ReactNode {
 
 	return (
 		<>
-			<div className="flex items-center justify-between">
+			<div className="mb-[30px] flex items-center justify-between gap-x-[40px]">
 				<h2
 					ref={titleRef}
-					className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
+					className="text-text translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 				>
 					{t(`pages.contacts.mepr`)}
 				</h2>
-				<a
+
+				<Link
 					href="https://res2026expo.kz/"
 					target="_blank"
+					className="block"
 				>
 					<Image
-						width={224}
-						height={99}
-						src="/imgs/res-expo.png"
-						alt=""
+						src="/imgs/footer-logo.svg"
+						alt="Logo"
+						width={74}
+						height={65}
+						className="block"
 					/>
-				</a>
+				</Link>
 			</div>
 			<h3
 				ref={subtitleRef}
@@ -78,6 +83,22 @@ function MeprSection({ t }: SectionProps): ReactNode {
 					>
 						<IconPhone className="text-secondary block transition-colors" />
 						<span> {`+7 701 888 6643`}</span>
+					</Link>
+					<Link
+						href={'https://www.gov.kz/'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPin className="text-secondary block transition-colors" />
+						<span>{t(`pages.contacts.address`)}</span>
+					</Link>
+					<Link
+						href={'https://www.gov.kz/'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconGlobal className="text-secondary block transition-colors" />
+						<span>{'gov.kz'}</span>
 					</Link>
 				</div>
 				<div
@@ -151,6 +172,15 @@ function MeprSection({ t }: SectionProps): ReactNode {
 						<IconMail className="text-secondary block transition-colors" />
 						<span>office@res2026expo.kz</span>
 					</Link>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.officialWebsite`)}</h3>
+					<Link
+						href={'https://res2026expo.kz/'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconGlobal className="text-secondary block transition-colors" />
+						<span>{'https://res2026expo.kz'}</span>
+					</Link>
 				</div>
 			</div>
 		</>
@@ -162,10 +192,11 @@ type ContactPersonCardProps = {
 	name: string
 	email?: string
 	phone: string
+	web?: string
 	delay: number
 }
 
-function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCardProps): ReactNode {
+function ContactPersonCard({ title, name, email, phone, web, delay }: ContactPersonCardProps) {
 	const ref = useRef<HTMLDivElement>(null)
 	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(ref, { y: 50, delay })
@@ -190,13 +221,23 @@ function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCa
 				</Link>
 			)}
 			<Link
-				href={`tel:${phone}`}
+				href={`tel:${phone.replace(/\s/g, '')}`}
 				target="_blank"
 				className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 			>
 				<IconPhone className="text-secondary block transition-colors" />
 				<span> {phone}</span>
 			</Link>
+			{web && (
+				<Link
+					href={web}
+					target="_blank"
+					className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+				>
+					<IconGlobal className="text-secondary block transition-colors" />
+					<span>{web}</span>
+				</Link>
+			)}
 		</div>
 	)
 }
@@ -217,10 +258,11 @@ function ContactPersonsSection({ t }: SectionProps): ReactNode {
 						{t(`titles.contactPersons`)}
 					</h2>
 					<ContactPersonCard
-						title={t(`labels.head`)}
+						title={t(`labels.chief`)}
 						name={t(`titles.partnershipAndSponsorshipName`)}
-						phone="+7 708 345 79 71"
+						phone="+7 708 345 7971"
 						email="office@caclimate.fund"
+						web="https://caclimate.fund/"
 						delay={0.3}
 					/>
 				</div>
@@ -243,7 +285,7 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.organizationQuestions`)}
 			</h2>
@@ -276,7 +318,61 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 	)
 }
 
-export default function Page(): ReactNode {
+function VenueSection({ t }: SectionProps) {
+	const titleRef = useRef<HTMLHeadingElement>(null)
+	const linksRef = useRef<HTMLDivElement>(null)
+	const textRef = useRef<HTMLDivElement>(null)
+	const mapRef = useRef<HTMLDivElement>(null)
+
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
+	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
+	useAnimSlide(linksRef, { y: 50, delay: 0.2 })
+	useAnimSlide(textRef, { y: 50, delay: 0.25 })
+	useAnimSlide(mapRef, { y: 50, delay: 0.3 })
+
+	return (
+		<>
+			<h3
+				ref={titleRef}
+				className="text-text mt-[60px] mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+			>
+				{t(`titles.venue`)}
+			</h3>
+			<div className="flex items-start justify-start gap-[120px]">
+				<div
+					ref={linksRef}
+					className="max-w-[473px] translate-y-[50px] opacity-0"
+				>
+					<Link
+						href="https://2gis.kz/astana/firm/70000001018130088/71.43893%2C51.124309?m=71.439565%2C51.123237%2F17.41%2Fr%2F3.4"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPin className="text-secondary block transition-colors" />
+						<span>{t(`pages.contacts.eventAddress`)}</span>
+					</Link>
+					<Link
+						href="https://gov.kz"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconGlobal className="text-secondary block transition-colors" />
+						<span>gov.kz</span>
+					</Link>
+				</div>
+
+				<div
+					ref={textRef}
+					className="text-text max-w-[816px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0"
+				>
+					{t(`pages.contacts.text`)}
+				</div>
+			</div>
+		</>
+	)
+}
+
+export default function Page() {
 	const t = useTranslations()
 
 	const BannerRef = useRef<HTMLElement>(null)
@@ -334,6 +430,7 @@ export default function Page(): ReactNode {
 
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<MeprSection t={t} />
+						<VenueSection t={t} />
 					</div>
 				</Container>
 			</section>
