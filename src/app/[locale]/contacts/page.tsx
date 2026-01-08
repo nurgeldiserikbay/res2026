@@ -50,7 +50,7 @@ function MeprSection({ t }: SectionProps): ReactNode {
 				<Link
 					href="https://res2026expo.kz/"
 					target="_blank"
-					className="block"
+					className="block shrink-0"
 				>
 					<Image
 						src="/imgs/footer-logo.svg"
@@ -338,7 +338,7 @@ function VenueSection({ t }: SectionProps) {
 			>
 				{t(`titles.venue`)}
 			</h3>
-			<div className="flex items-start justify-start gap-[120px]">
+			<div className="flex flex-wrap items-start justify-start gap-x-[120px] gap-y-[40px] md:flex-nowrap">
 				<div
 					ref={linksRef}
 					className="max-w-[473px] translate-y-[50px] opacity-0"
@@ -348,7 +348,7 @@ function VenueSection({ t }: SectionProps) {
 						target="_blank"
 						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 					>
-						<IconPin className="text-secondary block transition-colors" />
+						<IconPin className="text-secondary block shrink-0 transition-colors" />
 						<span>{t(`pages.contacts.eventAddress`)}</span>
 					</Link>
 					<Link
@@ -356,7 +356,7 @@ function VenueSection({ t }: SectionProps) {
 						target="_blank"
 						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 					>
-						<IconGlobal className="text-secondary block transition-colors" />
+						<IconGlobal className="text-secondary block shrink-0 transition-colors" />
 						<span>gov.kz</span>
 					</Link>
 				</div>
