@@ -1,7 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { NewsShortItem } from '@/entities/news/NewsShortItem'
+import { NewsShortItem } from '@/entities/news/components/NewsShortItem'
 import { Locale } from '@/shared/config/i18n'
 import { Container } from '@/shared/ui/container/container'
 import { localize } from '@/shared/utils/localize'

@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl'
 import { useRef, useState } from 'react'
 
-import { NewsItem } from '@/entities/news/NewsItem'
+import { NewsItem } from '@/entities/news/components/NewsItem'
 import { Locale } from '@/shared/config/i18n'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { localize } from '@/shared/utils/localize'

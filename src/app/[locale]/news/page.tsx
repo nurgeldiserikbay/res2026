@@ -1,10 +1,9 @@
-'use client'
-
 import { useLocale, useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { NewsItem } from '@/entities/news/NewsItem'
+import { newsApi } from '@/entities/news/news.api'
+import { NewsItem } from '@/entities/news/components/NewsItem'
 import { appConfig } from '@/shared/config/app.config'
 import { Locale } from '@/shared/config/i18n'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
@@ -56,6 +55,13 @@ export default function Page() {
 	useAnimSlide(TabLinksRef, { y: 50, delay: 0.3 })
 	const PaginationRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(PaginationRef, { y: 50, delay: 0.4 })
+
+	newsApi.getAll().then((data) => {
+		console.log(data)
+	})
+	newsApi.getById(1).then((data) => {
+		console.log(data)
+	})
 
 	const newsItems = newsPaginItems.filter((item) => item.type === 'latest' && localize(item.content, locale) !== '')
 
