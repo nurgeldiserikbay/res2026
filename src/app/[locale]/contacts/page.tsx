@@ -266,7 +266,7 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.organizationQuestions`)}
 			</h2>
@@ -293,6 +293,60 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 						<IconPhone className="text-secondary block transition-colors" />
 						<span> {`+7 701 525 0876`}</span>
 					</Link>
+				</div>
+			</div>
+		</>
+	)
+}
+
+function VenueSection({ t }: SectionProps) {
+	const titleRef = useRef<HTMLHeadingElement>(null)
+	const linksRef = useRef<HTMLDivElement>(null)
+	const textRef = useRef<HTMLDivElement>(null)
+	const mapRef = useRef<HTMLDivElement>(null)
+
+	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
+	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
+	useAnimSlide(linksRef, { y: 50, delay: 0.2 })
+	useAnimSlide(textRef, { y: 50, delay: 0.25 })
+	useAnimSlide(mapRef, { y: 50, delay: 0.3 })
+
+	return (
+		<>
+			<h3
+				ref={titleRef}
+				className="text-text mt-[60px] mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+			>
+				{t(`titles.venue`)}
+			</h3>
+			<div className="flex items-start justify-start gap-[120px]">
+				<div
+					ref={linksRef}
+					className="max-w-[473px] translate-y-[50px] opacity-0"
+				>
+					<Link
+						href="https://2gis.kz/astana/firm/70000001018130088/71.43893%2C51.124309?m=71.439565%2C51.123237%2F17.41%2Fr%2F3.4"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPin className="text-secondary block transition-colors" />
+						<span>{t(`pages.contacts.eventAddress`)}</span>
+					</Link>
+					<Link
+						href="https://gov.kz"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconGlobal className="text-secondary block transition-colors" />
+						<span>gov.kz</span>
+					</Link>
+				</div>
+
+				<div
+					ref={textRef}
+					className="text-text max-w-[816px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0"
+				>
+					{t(`pages.contacts.text`)}
 				</div>
 			</div>
 		</>
@@ -357,9 +411,8 @@ export default function Page() {
 
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<MeprSection t={t} />
+						<VenueSection t={t} />
 					</div>
-
-					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">{/* <VenueSection t={t} /> */}</div>
 				</Container>
 			</section>
 		</>
