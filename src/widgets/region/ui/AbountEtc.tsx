@@ -9,26 +9,31 @@ import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
+import type { ReactNode } from 'react'
+
 export function AbountEtc({
 	strategicVisionTitle,
 	strategicVisionIntro,
 	strategicDocuments,
 	nationalInitiativesTitle,
+	nationalInitiativesIntro,
 	nationalInitiatives,
 }: {
 	strategicVisionTitle: string
 	strategicVisionIntro: string
 	strategicDocuments: { id: number; title: string }[]
 	nationalInitiativesTitle: string
-	nationalInitiatives: { id: number; title: string; description: string | React.ReactNode }[]
+	nationalInitiativesIntro: { id: number; title: string; description: string; image?: string }[]
+	nationalInitiatives: { id: number; title: string; description: string | ReactNode; image?: string }[]
 }) {
-	const EtcRef = useRef<HTMLDivElement>(null)
+	const StrategicVisionRef = useRef<HTMLDivElement>(null)
+	const InitiativesSectionRef = useRef<HTMLDivElement>(null)
 	const LeftContentRef = useRef<HTMLDivElement>(null)
 	const LogoRef = useRef<HTMLDivElement>(null)
 	const InitiativesTitleRef = useRef<HTMLHeadingElement>(null)
 	const InitiativesGridRef = useRef<HTMLDivElement>(null)
 
-	useAnimBg(EtcRef, {
+	useAnimBg(StrategicVisionRef, {
 		fromSize: '120%',
 		toSize: '100%',
 		fromPosition: 'center 60%',
@@ -41,7 +46,6 @@ export function AbountEtc({
 	useAnimSlide(LogoRef, { x: 90, delay: 0.3 })
 	useAnimSlide(InitiativesTitleRef, { y: 50, delay: 0.4 })
 
-	// Анимация для списка документов
 	useGSAP(
 		() => {
 			if (!LeftContentRef.current) return
@@ -58,17 +62,16 @@ export function AbountEtc({
 						delay: 0.5 + index * 0.1,
 						ease: 'circ.out',
 						scrollTrigger: {
-							trigger: EtcRef.current,
+							trigger: StrategicVisionRef.current,
 							start: 'top 80%',
 						},
 					},
 				)
 			})
 		},
-		{ scope: EtcRef },
+		{ scope: StrategicVisionRef },
 	)
 
-	// Анимация для карточек инициатив
 	useGSAP(
 		() => {
 			if (!InitiativesGridRef.current) return
@@ -85,15 +88,24 @@ export function AbountEtc({
 						delay: 0.6 + index * 0.1,
 						ease: 'circ.out',
 						scrollTrigger: {
-							trigger: EtcRef.current,
+							trigger: InitiativesSectionRef.current,
 							start: 'top 80%',
 						},
 					},
 				)
 			})
 		},
-		{ scope: EtcRef },
+		{ scope: InitiativesSectionRef },
 	)
+
+	const defaultImages = [
+		'/imgs/national-inits/green1.png',
+		'/imgs/national-inits/green2.png',
+		'/imgs/national-inits/green3.png',
+		'/imgs/national-inits/green4.png',
+	]
+
+	const introDefaultImages = ['/imgs/recycle1.png', '/imgs/recycle2.png', '/imgs/recycle3.png']
 
 	return (
 		<>
@@ -103,11 +115,11 @@ export function AbountEtc({
 			>
 				<Container>
 					<div
-						ref={EtcRef}
+						ref={StrategicVisionRef}
 						data-animated-banner
-						className="relative rounded-[12px] p-[20px] sm:p-[30px] md:p-[40px] lg:p-[50px]"
+						className="relative mb-[50px] rounded-[12px] p-[20px] sm:mb-[60px] sm:p-[30px] md:mb-[80px] md:p-[40px] lg:mb-[100px] lg:p-[50px]"
 					>
-						<div className="relative z-1 mb-[30px] flex flex-col items-start justify-between gap-[30px] sm:mb-[30px] lg:flex-row lg:gap-[60px]">
+						<div className="relative z-1 flex flex-col items-start justify-between gap-[30px] lg:flex-row lg:gap-[60px]">
 							<div
 								ref={LeftContentRef}
 								className="w-full translate-x-[-90px] opacity-0 lg:w-auto"
@@ -146,32 +158,112 @@ export function AbountEtc({
 								/>
 							</div>
 						</div>
+					</div>
 
-						<div className="relative z-1 text-white">
-							<h3
-								ref={InitiativesTitleRef}
-								className="mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-white opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
-							>
-								{nationalInitiativesTitle}
-							</h3>
+					<div
+						ref={InitiativesSectionRef}
+						className="relative"
+					>
+						<h3
+							ref={InitiativesTitleRef}
+							className="mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-black opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
+						>
+							{nationalInitiativesTitle}
+						</h3>
 
-							<div
-								ref={InitiativesGridRef}
-								className="grid grid-cols-1 items-start gap-[30px] sm:grid-cols-2 sm:gap-[40px] md:gap-[50px] lg:grid-cols-4"
-							>
-								{nationalInitiatives.map((initiative: { id: number; title: string; description: string | React.ReactNode }) => (
-									<div
-										key={initiative.id}
-										className="translate-y-[50px] opacity-0"
-									>
-										{initiative.title && (
-											<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
-												{initiative.title}
-											</h5>
-										)}
-										<p className="text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{initiative.description}</p>
-									</div>
-								))}
+						<div
+							ref={InitiativesGridRef}
+							className="flex flex-col gap-[10px]"
+						>
+							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-3">
+								{nationalInitiativesIntro.map((initiative, index) => {
+									const imageSrc = initiative.image || introDefaultImages[index % introDefaultImages.length]
+
+									return (
+										<div
+											key={initiative.id}
+											className="h-full translate-y-[50px] overflow-hidden rounded-[12px] bg-white opacity-0"
+										>
+											<div className="relative h-[180px] w-full sm:h-[160px] md:h-[180px]">
+												<Image
+													src={imageSrc}
+													alt={initiative.title}
+													fill
+													className="object-cover"
+													sizes="(max-width: 640px) 100vw, 33vw"
+												/>
+											</div>
+											<div className="p-[16px] sm:p-[18px] md:p-[20px]">
+												<h5 className="mb-[8px] text-left text-[16px] leading-normal font-bold text-black sm:text-[16px] md:text-[18px]">
+													{initiative.title}
+												</h5>
+												<p className="text-[13px] leading-normal text-black/80 sm:text-[13px] md:text-[14px]">{initiative.description}</p>
+											</div>
+										</div>
+									)
+								})}
+							</div>
+
+							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-[55fr_45fr]">
+								{nationalInitiatives.slice(0, 2).map((initiative, index) => {
+									const bgImage = initiative.image || defaultImages[index % defaultImages.length]
+									const gridColumnClass = index === 0 ? 'sm:col-start-1' : 'sm:col-start-2'
+
+									return (
+										<div
+											key={initiative.id}
+											className={`relative h-full min-h-[300px] translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
+											style={{
+												backgroundImage: `url(${bgImage})`,
+												backgroundSize: 'cover',
+												backgroundPosition: 'center',
+												backgroundRepeat: 'no-repeat',
+											}}
+										>
+											<div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
+
+											<div className="relative z-10 flex h-full flex-col justify-end p-[20px] sm:p-[25px] md:p-[30px]">
+												{initiative.title && (
+													<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
+														{initiative.title}
+													</h5>
+												)}
+												<p className="text-[13px] leading-normal text-white sm:text-[14px] md:text-[16px]">{initiative.description}</p>
+											</div>
+										</div>
+									)
+								})}
+							</div>
+
+							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-[45fr_55fr]">
+								{nationalInitiatives.slice(2, 4).map((initiative, index) => {
+									const originalIndex = index + 2
+									const bgImage = initiative.image || defaultImages[originalIndex % defaultImages.length]
+									const gridColumnClass = index === 0 ? 'sm:col-start-1' : 'sm:col-start-2'
+									return (
+										<div
+											key={initiative.id}
+											className={`relative h-full min-h-[300px] translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
+											style={{
+												backgroundImage: `url(${bgImage})`,
+												backgroundSize: 'cover',
+												backgroundPosition: 'center',
+												backgroundRepeat: 'no-repeat',
+											}}
+										>
+											<div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
+
+											<div className="relative z-10 flex h-full flex-col justify-end p-[20px] sm:p-[25px] md:p-[30px]">
+												{initiative.title && (
+													<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
+														{initiative.title}
+													</h5>
+												)}
+												<p className="text-[13px] leading-normal text-white sm:text-[14px] md:text-[16px]">{initiative.description}</p>
+											</div>
+										</div>
+									)
+								})}
 							</div>
 						</div>
 					</div>
