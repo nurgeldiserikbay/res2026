@@ -1,6 +1,6 @@
 import { Image } from '@/shared/types'
 
-export type NewsType = 'last' | 'anounce' | 'publication'
+export type NewsType = 'last' | 'announce' | 'press-release'
 
 export interface NewsItem {
 	id: number
