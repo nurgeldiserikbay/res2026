@@ -36,7 +36,7 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 				alt={item.title}
 				width={item.width}
 				height={item.height}
-				className="block w-full xl:h-[122px]"
+				className="block w-full sm:w-auto xl:h-[122px]"
 			/>
 		</div>
 	)
@@ -46,14 +46,14 @@ const partnersArray: PartnerGroup[] = [
 	{
 		title: 'titles.mainPartners',
 		list: [
-			{
-				id: 9,
-				image: '/imgs/logo/logo-9.svg',
-				title: 'Organizer 9',
-				link: '/partner-13',
-				width: 167,
-				height: 122,
-			},
+			// {
+			// 	id: 9,
+			// 	image: '/imgs/logo/logo-9.svg',
+			// 	title: 'Organizer 9',
+			// 	link: '/partner-13',
+			// 	width: 167,
+			// 	height: 122,
+			// },
 			{
 				id: 19,
 				image: '/imgs/logo/logo-19.svg',
@@ -91,14 +91,14 @@ const partnersArray: PartnerGroup[] = [
 				width: 167,
 				height: 122,
 			},
-			{
-				id: 7,
-				image: '/imgs/logo/logo-7.svg',
-				title: 'Organizer 7',
-				link: '/partner-11',
-				width: 167,
-				height: 122,
-			},
+			// {
+			// 	id: 7,
+			// 	image: '/imgs/logo/logo-7.svg',
+			// 	title: 'Organizer 7',
+			// 	link: '/partner-11',
+			// 	width: 167,
+			// 	height: 122,
+			// },
 			{
 				id: 8,
 				image: '/imgs/logo/logo-8.svg',
@@ -155,14 +155,14 @@ const partnersArray: PartnerGroup[] = [
 				width: 167,
 				height: 122,
 			},
-			{
-				id: 21,
-				image: '/imgs/logo/SWITCH-Asia.svg',
-				title: 'Organizer 21',
-				link: '/partner-25',
-				width: 167,
-				height: 122,
-			},
+			// {
+			// 	id: 21,
+			// 	image: '/imgs/logo/SWITCH-Asia.svg',
+			// 	title: 'Organizer 21',
+			// 	link: '/partner-25',
+			// 	width: 167,
+			// 	height: 122,
+			// },
 			{
 				id: 22,
 				image: '/imgs/logo/WMO.svg',
@@ -230,7 +230,7 @@ export function PartnersList() {
 						<div className="w-full">
 							<div
 								ref={swiperRef}
-								className="grid grid-cols-2 gap-x-[40px] gap-y-[20px] md:grid-cols-3 lg:grid-cols-4"
+								className="grid grid-cols-2 items-start gap-x-[40px] gap-y-[20px] md:grid-cols-3 lg:grid-cols-4"
 							>
 								{partner.list.map((item, itemIndex) => (
 									<PartnerItemComponent
