@@ -82,7 +82,7 @@ export function Header() {
 				>
 					<HeaderLogo />
 
-					<div className="3xl:max-w-[1656px] flex max-w-[980px] flex-1 items-center justify-end gap-[10px] xl:max-w-[1160px] 2xl:max-w-[1340px] 2xl:justify-between">
+					<div className="3xl:max-w-[1656px] flex max-w-[980px] flex-1 items-center justify-end gap-[10px] xl:max-w-[1160px] xl:justify-between 2xl:max-w-[1340px]">
 						<HeaderNav />
 						<HeaderActions />
 					</div>
