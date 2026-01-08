@@ -65,7 +65,7 @@ export function AboutBanner() {
 							</h1>
 							<p
 								ref={SubtitleRef}
-								className="text-text w-full max-w-[286px] translate-y-[90px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
+								className="text-text w-full max-w-[286px] translate-y-[90px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] md:max-w-full lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
 							>
 								{t('pages.about.resText1')}
 							</p>

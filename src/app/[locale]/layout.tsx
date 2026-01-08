@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { appConfig } from '@/shared/config/app.config'
 import type { Locale } from '@/shared/config/i18n'
 import { GSAPProvider } from '@/shared/lib/gsap/provider'
+import { QueriesProvider } from '@/shared/providers/QueriesProvider'
 import { Footer } from '@/widgets/footer/ui/Footer'
 import { Header } from '@/widgets/header/ui/Header'
 
@@ -140,16 +141,18 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body className={`${HelveticaNeue.className}`}>
-				<NextIntlClientProvider>
-					<GSAPProvider />
-					{/* <div id="smooth-wrapper">
+				<QueriesProvider>
+					<NextIntlClientProvider>
+						<GSAPProvider />
+						{/* <div id="smooth-wrapper">
 						<div id="smooth-content"> */}
-					<Header />
-					<main>{children}</main>
-					<Footer />
-					{/* </div>
+						<Header />
+						<main>{children}</main>
+						<Footer />
+						{/* </div>
 					</div> */}
-				</NextIntlClientProvider>
+					</NextIntlClientProvider>
+				</QueriesProvider>
 			</body>
 		</html>
 	)

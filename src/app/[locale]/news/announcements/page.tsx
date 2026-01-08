@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { NewsItem } from '@/entities/news/NewsItem'
+import { NewsItem } from '@/entities/news/components/NewsItem'
 import { appConfig } from '@/shared/config/app.config'
 import { Locale } from '@/shared/config/i18n'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
