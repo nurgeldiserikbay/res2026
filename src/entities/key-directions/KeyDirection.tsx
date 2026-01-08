@@ -20,7 +20,7 @@ export function KeyDirection({ image, title, description, href, className }: IKe
 				height={584}
 				className="h-full w-full object-cover"
 			/>
-			<div className="absolute top-0 right-0 bottom-0 left-0 z-1 bg-linear-to-b from-[#000000]/20 to-[#02493F] transition-all duration-300 ease-out group-hover:backdrop-blur-sm"></div>
+			<div className="absolute top-0 right-0 bottom-0 left-0 z-1 bg-linear-to-b from-[#000000]/20 to-[#02493F] opacity-0 backdrop-blur-[2px] transition-all duration-300 ease-out group-hover:opacity-100"></div>
 			<div className="absolute bottom-0 left-0 z-10 p-[30px] text-left">
 				<Link
 					href={href}
