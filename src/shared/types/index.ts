@@ -5,6 +5,11 @@ export interface Image {
 	order: number
 }
 
+export interface IPaginationParams {
+	per_page: number
+	current_page: number
+}
+
 export interface IPaginationMeta {
 	total: number
 	per_page: number

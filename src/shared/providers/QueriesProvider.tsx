@@ -1,28 +1,24 @@
 'use client'
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider, HydrationBoundary, DehydratedState } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ReactNode, useState } from 'react'
-// import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-export function QueriesProvider({ children }: { children: ReactNode }) {
-	const [queryClient] = useState(
-		() =>
-			new QueryClient({
-				defaultOptions: {
-					queries: {
-						staleTime: 30_000, // 30s данные считаются "свежими"
-						gcTime: 5 * 60_000, // 5m хранить в кеше без подписчиков
-						retry: 1,
-						refetchOnWindowFocus: false,
-					},
-				},
-			}),
-	)
+import { appConfig } from '@/shared/config/app.config'
+import { queryClientConfig } from '@/shared/lib/query/query-client-config'
+
+interface QueriesProviderProps {
+	children: ReactNode
+	dehydratedState?: DehydratedState
+}
+
+export function QueriesProvider({ children, dehydratedState }: QueriesProviderProps) {
+	const [queryClient] = useState(() => new QueryClient(queryClientConfig))
 
 	return (
 		<QueryClientProvider client={queryClient}>
-			{children}
-			{/* <ReactQueryDevtools initialIsOpen={false} /> */}
+			{dehydratedState ? <HydrationBoundary state={dehydratedState}>{children}</HydrationBoundary> : children}
+			{!appConfig.isProduction && <ReactQueryDevtools initialIsOpen={false} />}
 		</QueryClientProvider>
 	)
 }

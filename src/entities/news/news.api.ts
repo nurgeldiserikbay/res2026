@@ -7,4 +7,6 @@ export const newsApi = {
 	getAll: () => fetcher<IPaginationResponse<NewsItem>>('/api/v1/news'),
 
 	getById: (id: number) => fetcher<IResponse<NewsItem>>(`/api/v1/news/${id}`),
+
+	getBySlug: (slug: string) => fetcher<IResponse<NewsItem>>(`/api/v1/news/slug/${slug}`),
 }
