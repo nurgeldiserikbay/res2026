@@ -83,14 +83,14 @@ const partnersArray: PartnerGroup[] = [
 	{
 		title: 'titles.partners',
 		list: [
-			{
-				id: 3,
-				image: '/imgs/logo/logo-3.svg',
-				title: 'Organizer 3',
-				link: '/partner-7',
-				width: 167,
-				height: 122,
-			},
+			// {
+			// 	id: 3,
+			// 	image: '/imgs/logo/logo-3.svg',
+			// 	title: 'Organizer 3',
+			// 	link: '/partner-7',
+			// 	width: 167,
+			// 	height: 122,
+			// },
 			// {
 			// 	id: 7,
 			// 	image: '/imgs/logo/logo-7.svg',
