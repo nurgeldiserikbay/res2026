@@ -54,7 +54,7 @@ export function AboutSummit() {
 						</div>
 						<ButtonDefault
 							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
-							className="translate-y-90 opacity-0"
+							className="xs:w-auto w-full translate-y-90 opacity-0"
 							onClick={() => router.push('/about')}
 						>
 							{t('pages.about.moreAboutSummit')}
@@ -100,7 +100,7 @@ export function AboutSummit() {
 							<IconQuot color="#A1BB94" />
 						</div>
 
-						<div className="relative z-1 flex flex-wrap items-start gap-[20px] sm:gap-[30px] md:gap-[50px] xl:flex-nowrap">
+						<div className="relative z-1 flex flex-wrap items-start justify-center gap-[20px] sm:gap-[30px] md:gap-[50px] xl:flex-nowrap">
 							<Image
 								ref={AboutSummitPresidentImgRef}
 								src="/imgs/president-img.jpg"

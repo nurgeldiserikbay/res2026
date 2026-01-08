@@ -31,7 +31,7 @@ function TabButton({ tab, activeTab, onClick, delay }: TabButtonProps) {
 			aria-controls={`tabpanel-${tab.id}`}
 			id={`tab-${tab.id}`}
 			className={[
-				'box-border translate-x-[-90px] cursor-pointer border-b border-solid py-[26px] text-[16px] leading-none font-medium opacity-0 transition-all duration-300 ease-out',
+				'xs:text-[16px] box-border translate-x-[-90px] cursor-pointer border-b border-solid py-[26px] text-[12px] leading-none font-medium break-all opacity-0 transition-all duration-300 ease-out',
 				isActive ? `border-b-secondary text-secondary` : `border-b-text text-text`,
 			].join(` `)}
 			onClick={() => onClick(tab.id)}
