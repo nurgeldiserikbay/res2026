@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
@@ -36,12 +37,28 @@ function MeprSection({ t }: SectionProps) {
 
 	return (
 		<>
-			<h2
-				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
-			>
-				{t(`pages.contacts.mepr`)}
-			</h2>
+			<div className="mb-[30px] flex items-center justify-between gap-x-[40px]">
+				<h2
+					ref={titleRef}
+					className="text-text translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
+				>
+					{t(`pages.contacts.mepr`)}
+				</h2>
+
+				<Link
+					href="https://res2026expo.kz/"
+					target="_blank"
+					className="block"
+				>
+					<Image
+						src="/imgs/footer-logo.svg"
+						alt="Logo"
+						width={74}
+						height={65}
+						className="block"
+					/>
+				</Link>
+			</div>
 			<h3
 				ref={subtitleRef}
 				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"

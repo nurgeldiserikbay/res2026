@@ -235,6 +235,14 @@ const partnersArray: PartnerGroup[] = [
 				width: 167,
 				height: 122,
 			},
+			{
+				id: 20,
+				image: '/imgs/logo/gcnca.svg',
+				title: 'gcnca',
+				link: '/gcnca',
+				width: 167,
+				height: 122,
+			},
 			// {
 			// 	id: 18,
 			// 	image: '/imgs/logo/logo-3.svg',

@@ -140,13 +140,13 @@ export default function Home() {
 						</h2>
 						<p
 							ref={PartnersText1Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[20px] leading-normal font-bold opacity-0 xl:text-[22px] 2xl:text-[24px]"
+							className="text-text mb-[30px] translate-y-[50px] text-justify text-[20px] leading-normal font-bold opacity-0 xl:text-[22px] 2xl:text-[24px]"
 						>
 							{t(`pages.partners.text`)}
 						</p>
 						<p
 							ref={PartnersText2Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]"
+							className="text-text mb-[30px] translate-y-[50px] text-justify text-[16px] leading-normal font-normal opacity-0 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]"
 						>
 							{t(`pages.partners.text1`)}
 						</p>

@@ -46,16 +46,16 @@ export function AboutContent() {
 							ref={TextRef}
 							className="text-text mb-[40px] w-full max-w-[721px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[30px] sm:text-[15px] md:mb-[40px] md:text-[16px] lg:mb-[100px] xl:mb-[122px]"
 						>
-							<p className="mb-[20px] text-[18px] leading-normal font-normal sm:mb-[30px] md:mb-[40px] md:text-[20px] lg:mb-[50px] lg:text-[22px] xl:mb-[60px] 2xl:text-[24px]">
+							<p className="mb-[20px] text-justify text-[18px] leading-normal font-normal sm:mb-[30px] md:mb-[40px] md:text-[20px] lg:mb-[50px] lg:text-[22px] xl:mb-[60px] 2xl:text-[24px]">
 								{t('pages.about.aboutText2')}
 							</p>
 							<p>{t('pages.about.aboutText3')}</p>
-							<ul className="list-disc pb-[15px] pl-[20px] sm:pb-[20px] sm:pl-[25px]">
+							<ul className="list-disc pb-[15px] pl-[20px] text-justify sm:pb-[20px] sm:pl-[25px]">
 								<li>{t(`pages.about.aboutText31`)}</li>
 								<li>{t(`pages.about.aboutText32`)}</li>
 								<li>{t(`pages.about.aboutText33`)}</li>
 							</ul>
-							<p>{t('pages.about.aboutText34')}</p>
+							<p className="text-justify">{t('pages.about.aboutText34')}</p>
 						</div>
 					</div>
 
@@ -82,7 +82,8 @@ export function AboutContent() {
 												{t(`pages.footer.text`)}
 											</div>
 											<div className="max-w-[294px] text-[16px] leading-[1.2] font-bold text-white sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
-												{t(`pages.footer.text1`)}
+												<div className="whitespace-nowrap">{t(`pages.footer.text2`)}</div>
+												<div>{t(`pages.footer.text3`)}</div>
 											</div>
 										</div>
 									</div>
@@ -104,13 +105,13 @@ export function AboutContent() {
 
 						<p
 							ref={ResText2Ref}
-							className="text-text translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-[16px]"
+							className="text-text translate-y-[50px] text-justify text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-[16px]"
 						>
 							{t('pages.about.resText2')}
 						</p>
 						<p
 							ref={ResText3Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
+							className="text-text mb-[30px] translate-y-[50px] text-justify text-[14px] leading-normal font-normal opacity-0 sm:mb-[40px] sm:text-[15px] md:mb-[50px] md:text-[16px] lg:mb-[60px]"
 						>
 							{t.rich('pages.about.resText3', {
 								link: (chunks) => (
