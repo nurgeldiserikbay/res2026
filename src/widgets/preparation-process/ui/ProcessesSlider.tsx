@@ -68,6 +68,7 @@ export function ProcessesSlider() {
 					{activeProcessTab ? (
 						<>
 							<Swiper
+								key={activeIndex}
 								modules={[Navigation]}
 								slidesPerView={1}
 								spaceBetween={10}
