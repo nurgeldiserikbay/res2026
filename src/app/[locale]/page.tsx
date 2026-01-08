@@ -123,7 +123,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<Timer targetDate={new Date('2026-04-20')} />
+					<Timer targetDate={new Date('2026-04-22T10:00:00')} />
 				</Container>
 			</section>
 
@@ -136,7 +136,7 @@ export default function Home() {
 							ref={PartnersTitleRef}
 							className="text-text 3xl:text-[48px] mb-[30px] max-w-[376px] translate-x-[-90px] text-[32px] leading-none font-bold opacity-0 lg:text-[36px] xl:mb-[50px] xl:text-[40px] 2xl:mb-[70px] 2xl:text-[44px]"
 						>
-							{t('titles.partners')}
+							{t('pages.partners.title')}
 						</h2>
 						<p
 							ref={PartnersText1Ref}

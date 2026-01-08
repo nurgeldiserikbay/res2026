@@ -6,8 +6,10 @@ import { useRef } from 'react'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { appConfig } from '@/shared/config/app.config'
+import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
+import { IconPin } from '@/shared/icons/IconPin'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
@@ -62,6 +64,22 @@ function MeprSection({ t }: SectionProps) {
 					>
 						<IconPhone className="text-secondary block transition-colors" />
 						<span> {`+7 701 888 6643`}</span>
+					</Link>
+					<Link
+						href={'https://www.gov.kz/'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPin className="text-secondary block transition-colors" />
+						<span>{t(`pages.contacts.address`)}</span>
+					</Link>
+					<Link
+						href={'https://www.gov.kz/'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconGlobal className="text-secondary block transition-colors" />
+						<span>{'gov.kz'}</span>
 					</Link>
 				</div>
 				<div
@@ -135,6 +153,15 @@ function MeprSection({ t }: SectionProps) {
 						<IconMail className="text-secondary block transition-colors" />
 						<span>office@res2026expo.kz</span>
 					</Link>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.officialWebsite`)}</h3>
+					<Link
+						href={'https://res2026expo.kz/'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconGlobal className="text-secondary block transition-colors" />
+						<span>{'https://res2026expo.kz'}</span>
+					</Link>
 				</div>
 			</div>
 		</>
@@ -146,10 +173,11 @@ type ContactPersonCardProps = {
 	name: string
 	email?: string
 	phone: string
+	web?: string
 	delay: number
 }
 
-function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCardProps) {
+function ContactPersonCard({ title, name, email, phone, web, delay }: ContactPersonCardProps) {
 	const ref = useRef<HTMLDivElement>(null)
 	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(ref, { y: 50, delay })
@@ -174,13 +202,23 @@ function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCa
 				</Link>
 			)}
 			<Link
-				href={`tel:${phone}`}
+				href={`tel:${phone.replace(/\s/g, '')}`}
 				target="_blank"
 				className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 			>
 				<IconPhone className="text-secondary block transition-colors" />
 				<span> {phone}</span>
 			</Link>
+			{web && (
+				<Link
+					href={web}
+					target="_blank"
+					className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+				>
+					<IconGlobal className="text-secondary block transition-colors" />
+					<span>{web}</span>
+				</Link>
+			)}
 		</div>
 	)
 }
@@ -201,10 +239,11 @@ function ContactPersonsSection({ t }: SectionProps) {
 						{t(`titles.contactPersons`)}
 					</h2>
 					<ContactPersonCard
-						title={t(`labels.pressSecretary`)}
+						title={t(`labels.chief`)}
 						name={t(`titles.partnershipAndSponsorshipName`)}
-						phone="+7 701 208 1811"
+						phone="+7 708 345 7971"
 						email="office@caclimate.fund"
+						web="https://caclimate.fund/"
 						delay={0.3}
 					/>
 				</div>
@@ -319,6 +358,8 @@ export default function Page() {
 					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">
 						<MeprSection t={t} />
 					</div>
+
+					<div className="border-b-solid mb-[40px] border-b border-b-[#D3E1F3] pb-[40px] last:mb-0">{/* <VenueSection t={t} /> */}</div>
 				</Container>
 			</section>
 		</>
