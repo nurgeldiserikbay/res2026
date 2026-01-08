@@ -78,10 +78,10 @@ export function AboutBanner() {
 							</Link>
 						</div>
 
-						<div>
+						<div className="sm:mx-unset mx-auto">
 							<div
 								ref={DateBlockRef}
-								className="xs:text-[48px] xs:mb-[20px] 3xl:text-[111px] mb-[30px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
+								className="xs:text-[36px] xs:mb-[20px] 3xl:text-[111px] sm:ml-unset mb-[30px] ml-[160px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
 							>
 								<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
 								<div className="block">Summit 2026</div>
@@ -90,7 +90,7 @@ export function AboutBanner() {
 							<Link
 								href="#about-content"
 								ref={ButtonRef}
-								className="max-auto flex translate-y-[50px] items-center justify-center gap-[30px] text-[14px] leading-normal font-normal text-white opacity-0 sm:hidden sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
+								className="mx-auto flex translate-y-[50px] items-center justify-center gap-[30px] text-[14px] leading-normal font-normal text-white opacity-0 sm:hidden sm:gap-[25px] sm:text-[15px] md:gap-[30px] md:text-[16px]"
 							>
 								<IconDoubleArrowDown className="text-white" />
 								<span>{t('labels.swipeForward')}</span>
