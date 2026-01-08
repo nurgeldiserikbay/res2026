@@ -1,14 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
 import { useEffect, useRef, useState } from 'react'
 
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 export function RegionTabs({ tabs }: { tabs: { id: number; title: string; href: string }[] }) {
-	const t = useTranslations()
 	const [activeHash, setActiveHash] = useState<string>(() => {
 		if (typeof window !== 'undefined') {
 			return window.location.hash
@@ -53,7 +51,7 @@ export function RegionTabs({ tabs }: { tabs: { id: number; title: string; href: 
 									isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text',
 								].join(' ')}
 							>
-								{t(item.title)}
+								{item.title}
 							</Link>
 						)
 					})}
