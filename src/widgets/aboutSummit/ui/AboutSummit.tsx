@@ -42,9 +42,9 @@ export function AboutSummit() {
 	// const [isOpen, setIsOpen] = useState(false)
 
 	return (
-		<section className="3xl:py-[100px] bg-white py-[50px] md:py-[60px] lg:py-[80px] 2xl:py-[80px]">
+		<section className="3xl:pb-[100px] 3xl:pt-[50px] bg-white pt-[25px] pb-[50px] md:pt-[30px] md:pb-[60px] lg:pt-[40px] lg:pb-[80px] 2xl:pt-[40px] 2xl:pb-[80px]">
 			<Container className="flex flex-wrap-reverse items-start justify-between gap-[20px] sm:gap-[30px] xl:flex-nowrap">
-				<div className="w-full grow xl:max-w-[713px]">
+				<div className="3xl:pt-[50px] w-full grow pt-[25px] md:pt-[30px] lg:pt-[40px] xl:max-w-[713px] 2xl:pt-[40px]">
 					<div className="mb-[20px] flex items-start justify-between sm:mb-[32px]">
 						<div
 							ref={AboutSummitRef}
@@ -64,10 +64,10 @@ export function AboutSummit() {
 						<div className="relative mb-[16px] max-w-full sm:mb-[24px]">
 							<Image
 								ref={AboutSummitImg1Ref}
-								src="/imgs/about-img-1.webp"
+								src="/imgs/about-img-1.png"
 								alt="About Summit"
-								width={351}
-								height={377}
+								width={713}
+								height={649}
 								className="block w-full translate-y-90 rounded-[12px] opacity-0"
 							/>
 						</div>
@@ -84,7 +84,7 @@ export function AboutSummit() {
 
 					<div
 						ref={AboutSummitTitleRef}
-						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[20px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[22px] md:mb-[31px] md:text-[28px] lg:text-[30px] xl:text-[30px] 2xl:mb-[60px] 2xl:text-[40px]"
+						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[18px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[22px] md:mb-[31px] md:text-justify md:text-[28px] lg:text-[30px] xl:text-[30px] 2xl:mb-[60px] 2xl:text-[40px]"
 					>
 						{t.rich('pages.aboutSummit.title', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
@@ -111,7 +111,7 @@ export function AboutSummit() {
 							/>
 							<div className="w-full max-w-[631px]">
 								<div className="text-text mb-[10px] text-[16px] leading-normal font-bold">{t(`pages.about.presidentTextTitle`)}</div>
-								<div className="font-regular relative z-1 mb-[20px] text-justify text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
+								<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px] md:text-justify">
 									{t('pages.about.presidentText')}
 								</div>
 								<div className="text-primary text-justify text-[12px] leading-normal sm:text-[14px]">
@@ -129,7 +129,7 @@ export function AboutSummit() {
 							<h3 className="text-text mb-[8px] text-[20px] leading-normal font-bold sm:mb-[10px] sm:text-[22px] md:text-[24px]">
 								{t(`pages.about.purpose`)}
 							</h3>
-							<p className="font-regular text-text text-justify text-[14px] leading-normal sm:text-[16px]">{t(`pages.about.text3`)}</p>
+							<p className="font-regular text-text text-[14px] leading-normal sm:text-[16px] md:text-justify">{t(`pages.about.text3`)}</p>
 						</div>
 
 						{/*isOpen && (

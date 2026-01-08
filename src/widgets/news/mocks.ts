@@ -1,4 +1,4 @@
-import { NewsItemProps } from '@/entities/news/NewsItem'
+import { NewsItemProps } from '@/entities/news/components/NewsItem'
 
 export const newsPaginItems: NewsItemProps[] = [
 	{

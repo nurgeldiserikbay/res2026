@@ -94,6 +94,26 @@ export default function Page() {
 			},
 		],
 		nationalInitiativesTitle: t(`pages.regions.kazakhstan.etc.nationalInitiativesTitle`),
+		nationalInitiativesIntro: [
+			{
+				id: 1,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title1`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text1`),
+				image: '/imgs/recycle1.png',
+			},
+			{
+				id: 2,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
+				image: '/imgs/recycle2.png',
+			},
+			{
+				id: 3,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title3`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
+				image: '/imgs/recycle3.png',
+			},
+		],
 		nationalInitiatives: [
 			{
 				id: 1,

@@ -74,7 +74,7 @@ export function HeaderMobileNav() {
 						</button>
 					</div>
 
-					<div className="grid w-full grid-cols-2 justify-between gap-x-[60px] gap-y-[36px] lg:flex lg:flex-nowrap 2xl:gap-x-[40px]">
+					<div className="xs:grid-cols-2 grid w-full grid-cols-1 justify-between gap-x-[40px] gap-y-[36px] lg:flex lg:flex-nowrap 2xl:gap-x-[40px]">
 						{headerNav
 							.filter((item) => item.main)
 							.map((item) => {
@@ -84,7 +84,7 @@ export function HeaderMobileNav() {
 									return (
 										<div
 											key={item.key}
-											className="xs:max-w-[180px] w-full max-w-[140px]"
+											className="xs:max-w-[180px] w-full"
 										>
 											<p className="xs:mb-[30px] xs:text-[20px] mb-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
 											{item.children?.map((child) => {
@@ -95,7 +95,7 @@ export function HeaderMobileNav() {
 														href={child.href ?? '/'}
 														aria-current={childActive ? 'page' : undefined}
 														className={[
-															'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
+															'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] break-word mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
 															childActive ? 'text-muted-light' : '',
 															'focus-visible:text-muted-light focus-visible:outline-none',
 														].join(' ')}
@@ -115,7 +115,7 @@ export function HeaderMobileNav() {
 										href={item.href ?? '/'}
 										aria-current={active ? 'page' : undefined}
 										className={[
-											'font-regular transition-duration-300 hover:text-muted-light xs:text-[16px] block text-left text-[14px] text-white transition-colors',
+											'font-regular transition-duration-300 hover:text-muted-light xs:text-[18px] block text-left text-[16px] leading-none font-bold text-white transition-colors',
 											active ? 'text-muted-light' : '',
 											'focus-visible:text-muted-light focus-visible:outline-none',
 										].join(' ')}
@@ -137,7 +137,7 @@ export function HeaderMobileNav() {
 											href={item.href ?? '/'}
 											aria-current={pathname === item.href ? 'page' : undefined}
 											className={[
-												'font-regular transition-duration-300 hover:text-muted-light xs:text-[16px] block text-left text-[14px] text-white transition-colors',
+												'font-regular transition-duration-300 hover:text-muted-light xs:text-[18px] block text-left text-[16px] leading-none font-bold text-white transition-colors',
 												active ? 'text-muted-light' : '',
 												'focus-visible:text-muted-light focus-visible:outline-none',
 											].join(' ')}

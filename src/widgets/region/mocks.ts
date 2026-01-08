@@ -18,7 +18,7 @@ export const SLIDES = [
 	},
 	{
 		id: 2,
-		image: '/imgs/flora-and-fauna/flora-and-fauna-2.jpg',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-2.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 2',
 			ru: 'Флора и фауна Казахстана',
@@ -35,7 +35,7 @@ export const SLIDES = [
 	},
 	{
 		id: 3,
-		image: '/imgs/flora-and-fauna/flora-and-fauna-3.jpg',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-3.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 3',
 			ru: 'Флора и фауна Казахстана',
@@ -52,7 +52,7 @@ export const SLIDES = [
 	},
 	{
 		id: 4,
-		image: '/imgs/flora-and-fauna/flora-and-fauna-4.jpg',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-4.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 3',
 			ru: 'Флора и фауна Казахстана',
@@ -69,7 +69,7 @@ export const SLIDES = [
 	},
 	{
 		id: 5,
-		image: '/imgs/flora-and-fauna/flora-and-fauna-5.jpeg',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-5.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 3',
 			ru: 'Флора и фауна Казахстана',
@@ -86,7 +86,7 @@ export const SLIDES = [
 	},
 	{
 		id: 6,
-		image: '/imgs/flora-and-fauna/flora-and-fauna-6.jpg',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-6.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 3',
 			ru: 'Флора и фауна Казахстана',
@@ -103,7 +103,7 @@ export const SLIDES = [
 	},
 	{
 		id: 7,
-		image: '/imgs/flora-and-fauna/flora-and-fauna-7.jpg',
+		image: '/imgs/flora-and-fauna/flora-and-fauna-7.png',
 		title: {
 			kk: 'Қазақстанның флорасы мен фаунасы 3',
 			ru: 'Флора и фауна Казахстана',

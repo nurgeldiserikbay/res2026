@@ -123,7 +123,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<Timer targetDate={new Date('2026-04-20')} />
+					<Timer targetDate={new Date('2026-04-22T10:00:00')} />
 				</Container>
 			</section>
 
@@ -136,17 +136,17 @@ export default function Home() {
 							ref={PartnersTitleRef}
 							className="text-text 3xl:text-[48px] mb-[30px] max-w-[376px] translate-x-[-90px] text-[32px] leading-none font-bold opacity-0 lg:text-[36px] xl:mb-[50px] xl:text-[40px] 2xl:mb-[70px] 2xl:text-[44px]"
 						>
-							{t('titles.partners')}
+							{t('pages.partners.title')}
 						</h2>
 						<p
 							ref={PartnersText1Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[20px] leading-normal font-bold opacity-0 xl:text-[22px] 2xl:text-[24px]"
+							className="text-text mb-[30px] translate-y-[50px] text-[20px] leading-normal font-bold opacity-0 md:text-justify xl:text-[22px] 2xl:text-[24px]"
 						>
 							{t(`pages.partners.text`)}
 						</p>
 						<p
 							ref={PartnersText2Ref}
-							className="text-text mb-[30px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0 md:mb-[40px] lg:mb-[50px] 2xl:mb-[70px]"
+							className="text-text mb-[30px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0 md:mb-[40px] md:text-justify lg:mb-[50px] 2xl:mb-[70px]"
 						>
 							{t(`pages.partners.text1`)}
 						</p>
@@ -159,7 +159,7 @@ export default function Home() {
 								src="/imgs/partners-banner.png"
 								alt="Partners"
 								width={560}
-								height={297}
+								height={389}
 								className="block"
 							/>
 						</div>

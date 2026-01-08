@@ -68,10 +68,11 @@ export function ProcessesSlider() {
 					{activeProcessTab ? (
 						<>
 							<Swiper
+								key={activeIndex}
 								modules={[Navigation]}
 								slidesPerView={1}
 								spaceBetween={10}
-								className="h-[482px] w-full overflow-visible rounded-[12px]"
+								className="w-full overflow-visible rounded-[12px]"
 								navigation={{
 									nextEl: '#preparation-process-swiper-button-next',
 									prevEl: '#preparation-process-swiper-button-prev',
@@ -90,7 +91,7 @@ export function ProcessesSlider() {
 								{activeProcessTab.items.map((processItem) => (
 									<SwiperSlide
 										key={processItem.id}
-										className="h-[482px] overflow-hidden rounded-[12px]"
+										className="overflow-hidden rounded-[12px]"
 									>
 										<PrepareProcess {...processItem} />
 									</SwiperSlide>
