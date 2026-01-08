@@ -2,7 +2,7 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-ENV NEXT_PUBLIC_GIT_BRANCH=develop
+ENV NEXT_PUBLIC_GIT_BRANCH=production
 
 RUN corepack enable && corepack prepare pnpm@latest --activate \
     && pnpm install --frozen-lockfile
