@@ -135,10 +135,10 @@ export function AboutContent() {
 				className="bg-white pt-[30px] md:pt-[40px] lg:pt-[50px] 2xl:pt-[60px]"
 			>
 				<Container className="grid grid-cols-1 gap-x-[60px] gap-y-[30px] md:grid-cols-2">
-					<div className="flex w-full flex-col items-start justify-between rounded-[17px] bg-[url('/imgs/docs-bg.png')] bg-cover bg-center px-[36px] pt-[58px] pb-[28px]">
+					<div className="flex w-full flex-col items-start justify-between rounded-[17px] bg-[url('/imgs/docs-bg.png')] bg-cover bg-center px-[20px] pt-[58px] pb-[28px] md:px-[36px]">
 						<div>
-							<h3 className="mb-[10px] text-[40px] leading-[1.3] font-bold text-white">{t('pages.about.file1Title')}</h3>
-							<p className="mb-[55px] text-[24px] leading-[1.3] font-normal text-white">{t('pages.about.file1Text')}</p>
+							<h3 className="mb-[10px] text-[24px] leading-[1.3] font-bold text-white md:text-[40px]">{t('pages.about.file1Title')}</h3>
+							<p className="mb-[55px] text-[16px] leading-[1.3] font-normal text-white md:text-[24px]">{t('pages.about.file1Text')}</p>
 						</div>
 
 						<div className="flex items-start justify-start gap-[10px]">
@@ -162,10 +162,10 @@ export function AboutContent() {
 							</Link>
 						</div>
 					</div>
-					<div className="flex w-full flex-col items-start justify-between rounded-[17px] bg-[url('/imgs/docs-bg.png')] bg-cover bg-center px-[36px] pt-[58px] pb-[28px]">
+					<div className="flex w-full flex-col items-start justify-between rounded-[17px] bg-[url('/imgs/docs-bg.png')] bg-cover bg-center px-[20px] pt-[58px] pb-[28px] md:px-[36px]">
 						<div>
-							<h3 className="mb-[10px] text-[40px] leading-[1.3] font-bold text-white">{t('pages.about.file2Title')}</h3>
-							<p className="mb-[55px] text-[24px] leading-[1.3] font-normal text-white">{t('pages.about.file2Text')}</p>
+							<h3 className="mb-[10px] text-[24px] leading-[1.3] font-bold text-white md:text-[40px]">{t('pages.about.file2Title')}</h3>
+							<p className="mb-[55px] text-[16px] leading-[1.3] font-normal text-white md:text-[24px]">{t('pages.about.file2Text')}</p>
 						</div>
 
 						<div className="flex items-start justify-start gap-[10px]">
