@@ -115,7 +115,7 @@ export function AbountEtc({
 								<h3 className="mb-[10px] text-[24px] leading-normal font-bold text-white sm:text-[28px] md:text-[32px]">
 									{strategicVisionTitle}
 								</h3>
-								<p className="mb-[20px] text-[14px] leading-normal font-normal text-white sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]">
+								<p className="mb-[20px] text-justify text-[14px] leading-normal font-normal text-white sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]">
 									{strategicVisionIntro}
 								</p>
 								<ul>
@@ -169,7 +169,7 @@ export function AbountEtc({
 												{initiative.title}
 											</h5>
 										)}
-										<p className="text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{initiative.description}</p>
+										<p className="text-justify text-[13px] leading-normal sm:text-[14px] md:text-[16px]">{initiative.description}</p>
 									</div>
 								))}
 							</div>

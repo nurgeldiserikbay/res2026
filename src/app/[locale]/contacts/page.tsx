@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
@@ -12,11 +13,13 @@ import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
+import type { ReactNode } from 'react'
+
 type SectionProps = {
 	t: ReturnType<typeof useTranslations>
 }
 
-function MeprSection({ t }: SectionProps) {
+function MeprSection({ t }: SectionProps): ReactNode {
 	const titleRef = useRef<HTMLHeadingElement>(null)
 	const subtitleRef = useRef<HTMLHeadingElement>(null)
 	const contactsRef = useRef<HTMLDivElement>(null)
@@ -34,12 +37,25 @@ function MeprSection({ t }: SectionProps) {
 
 	return (
 		<>
-			<h2
-				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
-			>
-				{t(`pages.contacts.mepr`)}
-			</h2>
+			<div className="flex items-center justify-between">
+				<h2
+					ref={titleRef}
+					className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
+				>
+					{t(`pages.contacts.mepr`)}
+				</h2>
+				<a
+					href="https://res2026expo.kz/"
+					target="_blank"
+				>
+					<Image
+						width={224}
+						height={99}
+						src="/imgs/res-expo.png"
+						alt=""
+					/>
+				</a>
+			</div>
 			<h3
 				ref={subtitleRef}
 				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
@@ -149,7 +165,7 @@ type ContactPersonCardProps = {
 	delay: number
 }
 
-function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCardProps) {
+function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCardProps): ReactNode {
 	const ref = useRef<HTMLDivElement>(null)
 	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(ref, { y: 50, delay })
@@ -185,7 +201,7 @@ function ContactPersonCard({ title, name, email, phone, delay }: ContactPersonCa
 	)
 }
 
-function ContactPersonsSection({ t }: SectionProps) {
+function ContactPersonsSection({ t }: SectionProps): ReactNode {
 	const titleRef2 = useRef<HTMLHeadingElement>(null)
 	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(titleRef2, { y: 50, delay: 0.1 })
@@ -201,9 +217,9 @@ function ContactPersonsSection({ t }: SectionProps) {
 						{t(`titles.contactPersons`)}
 					</h2>
 					<ContactPersonCard
-						title={t(`labels.pressSecretary`)}
+						title={t(`labels.head`)}
 						name={t(`titles.partnershipAndSponsorshipName`)}
-						phone="+7 701 208 1811"
+						phone="+7 708 345 79 71"
 						email="office@caclimate.fund"
 						delay={0.3}
 					/>
@@ -213,7 +229,7 @@ function ContactPersonsSection({ t }: SectionProps) {
 	)
 }
 
-function OrganizationQuestionsSection({ t }: SectionProps) {
+function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 	const titleRef = useRef<HTMLHeadingElement>(null)
 	const subtitleRef = useRef<HTMLHeadingElement>(null)
 	const block1Ref = useRef<HTMLDivElement>(null)
@@ -260,7 +276,7 @@ function OrganizationQuestionsSection({ t }: SectionProps) {
 	)
 }
 
-export default function Page() {
+export default function Page(): ReactNode {
 	const t = useTranslations()
 
 	const BannerRef = useRef<HTMLElement>(null)

@@ -18,11 +18,11 @@
 			"specialProjects": "Спец.проекты",
 			"registration": "Регистрация",
 			"partners": "Спонсоры и партнеры",
-			"regionKazakhstan": "Казахстан",
-			"regionKyrgyzstan": "Кыргыстан",
-			"regionUzbekistan": "Узбекистан",
-			"regionTajikistan": "Таджикистан",
-			"regionTurkmenistan": "Туркменистан"
+			"regionKazakhstan": "Республика Казахстан",
+			"regionKyrgyzstan": "Кыргызская Республика",
+			"regionUzbekistan": "Республика Узбекистан",
+			"regionTajikistan": "Республика Таджикистан",
+			"regionTurkmenistan": "Республика Туркменистан"
 		},
 		"program": {
 			"root": "Программа",
@@ -85,7 +85,7 @@
 		"registrationAndParticipation": "По вопросам архитектуры саммита",
 		"registrationAndParticipationName": "Альмаганбетов Ануар Серикович",
 		"partnershipAndSponsorship": "По связям с общественностью",
-		"partnershipAndSponsorshipName": "Рысбетова Назым Канатбековна",
+		"partnershipAndSponsorshipName": "Қаражан Ерлік Нариманұлы",
 		"organizationQuestions": "По вопросам организации Саммита",
 		"internationalCenterForGreenTechnology": "Министерство экологии и природных ресурсов Республики Казахстан",
 		"mediaWork": "Работа со СМИ",
@@ -97,6 +97,7 @@
 		"swipeForward": "Листать дальше",
 		"readMore": "Читать еще",
 		"hide": "Скрыть",
+		"head": "Руководитель",
 		"pressSecretary": "Пресс-секретарь",
 		"summers": "лета",
 		"winters": "На севере зимы",
@@ -181,7 +182,7 @@
 			"aydarName": "Айдар Есембаев",
 			"aydarPosition": "Руководитель Офиса компетенций по коммерциализации технологий",
 			"communicationLine": "Общая линия",
-			"botaName": "Ботакоз Елшибек",
+			"botaName": "Ботакоз Ельшбек",
 			"botaPosition": "Руководитель по развитию бизнеса RES 2026 EXPO (партнерство, формирование контента, медиа и общие вопросы)",
 			"anelName": "Анель Омарова",
 			"anelPosition": "Коммерческий директор RES 2026 EXPO (участие в выставочной зоне, спонсорство)"
