@@ -7,6 +7,7 @@ export type NavItem = {
 	children?: NavItem[]
 	main?: boolean
 	ready: boolean
+	important?: boolean
 	showHeader: boolean
 	showFooter: boolean
 }
@@ -15,6 +16,7 @@ const navItems: readonly NavItem[] = [
 	{
 		key: 'about.root',
 		href: '/about',
+		important: true,
 		main: true,
 		ready: true,
 		children: [
@@ -40,6 +42,7 @@ const navItems: readonly NavItem[] = [
 	{
 		key: 'program.root',
 		href: '/program',
+		important: true,
 		main: true,
 		ready: false,
 		showHeader: !appConfig.isProduction,
@@ -48,6 +51,7 @@ const navItems: readonly NavItem[] = [
 	{
 		key: 'about.region',
 		href: '/about/region',
+		important: true,
 		main: true,
 		ready: !appConfig.isProduction,
 		children: [
@@ -98,7 +102,7 @@ const navItems: readonly NavItem[] = [
 	},
 	{ key: 'gallery', href: '/gallery', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
 	{ key: 'faq', href: '/faq', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
-	{ key: 'contacts', href: '/contacts', main: false, ready: true, showHeader: true, showFooter: true },
+	{ key: 'contacts', href: '/contacts', main: false, ready: true, important: true, showHeader: true, showFooter: true },
 ] as const
 
 function filterNavItems(items: readonly NavItem[], options?: { for: 'header' | 'footer' }): NavItem[] {

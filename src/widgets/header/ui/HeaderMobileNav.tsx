@@ -32,7 +32,7 @@ export function HeaderMobileNav() {
 	}, [open])
 
 	return (
-		<nav className="relative block lg:hidden">
+		<nav className="relative block 2xl:hidden">
 			<button
 				type="button"
 				aria-label="Menu"
@@ -75,7 +75,7 @@ export function HeaderMobileNav() {
 					</div>
 
 					<div className="xs:gap-x-[40px] xs:gap-y-[60px] flex flex-wrap gap-x-[60px] gap-y-[30px]">
-						{headerNav.slice(0, 2).map((item) => {
+						{headerNav.map((item) => {
 							const active = isActive(pathname, item.href)
 
 							if (item.children?.length) {

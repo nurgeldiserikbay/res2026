@@ -20,7 +20,7 @@ export function HeaderNav() {
 	const pathname = usePathname()
 
 	return (
-		<nav className="3xl:max-w-[1054px] hidden max-w-[600px] grow items-center justify-start gap-[40px] text-[12px] text-white lg:flex xl:max-w-[680px] xl:text-[14px] 2xl:max-w-[800px] 2xl:text-[16px]">
+		<nav className="3xl:max-w-[1054px] 3xl:text-[14px] 3xl:gap-[40px] hidden max-w-[600px] grow items-center justify-start gap-[20px] text-[12px] text-white xl:flex xl:max-w-[680px] 2xl:max-w-[800px]">
 			{headerNav.map((item) => {
 				const active = isActive(pathname, item.href)
 
@@ -31,6 +31,7 @@ export function HeaderNav() {
 							item={item}
 							label={t(item.key)}
 							active={active}
+							className={item.important ? '' : 'hidden 2xl:block'}
 							t={t}
 						/>
 					)
@@ -44,6 +45,7 @@ export function HeaderNav() {
 						className={[
 							'font-regular transition-duration-300 hover:text-muted-light text-center transition-colors',
 							active ? 'text-muted-light' : '',
+							item.important ? '' : 'hidden 2xl:block',
 							'focus-visible:text-muted-light focus-visible:outline-none',
 						].join(' ')}
 					>
@@ -55,7 +57,19 @@ export function HeaderNav() {
 	)
 }
 
-function NavDropdown({ item, label, active, t }: { item: NavItem; label: string; active: boolean; t: (key: string) => string }) {
+function NavDropdown({
+	item,
+	label,
+	active,
+	className,
+	t,
+}: {
+	item: NavItem
+	label: string
+	active: boolean
+	className?: string
+	t: (key: string) => string
+}) {
 	const rootRef = useRef<HTMLDivElement | null>(null)
 	const [open, setOpen] = useState(false)
 	const [closing, setClosing] = useState(false)
@@ -104,7 +118,7 @@ function NavDropdown({ item, label, active, t }: { item: NavItem; label: string;
 	return (
 		<div
 			ref={rootRef}
-			className="relative"
+			className={['relative', className].join(' ')}
 			onMouseEnter={openNow}
 			onMouseLeave={close}
 		>
