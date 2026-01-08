@@ -5,6 +5,6 @@ import { defaultLocale, locales } from '@/shared/config/i18n'
 export const routing = defineRouting({
 	locales: locales,
 	defaultLocale: defaultLocale,
-	localeDetection: true,
+	localeDetection: false,
 	localeCookie: { name: 'NEXT_LOCALE' },
 })

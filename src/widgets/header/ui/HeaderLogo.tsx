@@ -13,7 +13,7 @@ export function HeaderLogo() {
 				alt="Logo"
 				width={74}
 				height={65}
-				className="block"
+				className="block max-[441px]:h-[52px]"
 			/>
 		</Link>
 	)

@@ -54,7 +54,7 @@ export function AboutBanner() {
 						<div className="w-full max-w-[706px] lg:mt-[43px]">
 							<h1
 								ref={TitleRef}
-								className="xs:mb-[30px] xs:text-[40px] text-primary-dark 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[28px] leading-none font-bold opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
+								className="xs:mb-[30px] xs:text-[40px] 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[28px] leading-none font-bold text-white opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
 							>
 								{t('pages.about.title')}
 							</h1>
