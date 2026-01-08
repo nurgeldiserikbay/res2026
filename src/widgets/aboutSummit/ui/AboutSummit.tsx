@@ -54,7 +54,7 @@ export function AboutSummit() {
 						</div>
 						<ButtonDefault
 							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
-							className="xs:w-auto w-full translate-y-90 opacity-0"
+							className="w-full translate-y-90 opacity-0 sm:w-auto"
 							onClick={() => router.push('/about')}
 						>
 							{t('pages.about.moreAboutSummit')}
