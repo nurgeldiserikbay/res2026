@@ -52,7 +52,7 @@ export function AboutBanner() {
 						alt="About Summit Logo"
 						width={1039}
 						height={681}
-						className="absolute top-[20px] left-0 block opacity-0 max-[762px]:min-w-[120vw] max-[480px]:min-w-[115vw] max-[400px]:min-w-[150vw] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]"
+						className="absolute top-[40px] left-0 block opacity-0 max-[762px]:min-w-[120vw] max-[480px]:min-w-[130vw] max-[400px]:min-w-[150vw] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]"
 					/>
 
 					<Container className="relative z-10 flex flex-col items-start justify-between gap-[91px] sm:gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
