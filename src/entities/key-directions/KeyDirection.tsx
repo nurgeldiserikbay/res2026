@@ -32,7 +32,9 @@ export function KeyDirection({ image, title, description, href, className }: IKe
 					className="xs:text-[24px] text-[20px] leading-[1.2] font-normal text-white"
 					dangerouslySetInnerHTML={{ __html: title }}
 				></h3>
-				{description && <p className="xs:mt-[60px] mt-[30px] text-[16px] leading-normal font-normal text-white">{description}</p>}
+				{description && (
+					<p className="xs:mt-[60px] mt-[30px] line-clamp-4 text-[16px] leading-normal font-normal text-white">{description}</p>
+				)}
 			</div>
 		</div>
 	)
