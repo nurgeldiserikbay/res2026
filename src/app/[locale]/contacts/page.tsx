@@ -63,7 +63,7 @@ function MeprSection({ t }: SectionProps): ReactNode {
 			</div>
 			<h3
 				ref={subtitleRef}
-				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+				className="text-text mb-[20px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`pages.contacts.meprSubtitle`)}
 			</h3>
@@ -93,14 +93,6 @@ function MeprSection({ t }: SectionProps): ReactNode {
 					>
 						<IconPin className="text-secondary block transition-colors" />
 						<span>{t(`pages.contacts.address`)}</span>
-					</Link>
-					<Link
-						href={'https://www.gov.kz/'}
-						target="_blank"
-						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
-					>
-						<IconGlobal className="text-secondary block transition-colors" />
-						<span>{'gov.kz'}</span>
 					</Link>
 					<Link
 						href={'mailto:info@igtipc.org'}
@@ -309,13 +301,13 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
+				className="text-text mb-[10px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.organizationQuestions`)}
 			</h2>
 			<h3
 				ref={subtitleRef}
-				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.internationalCenterForGreenTechnology`)}
 			</h3>
