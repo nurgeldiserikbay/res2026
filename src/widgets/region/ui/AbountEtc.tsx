@@ -228,7 +228,7 @@ export function AbountEtc({
 												backgroundRepeat: 'no-repeat',
 											}}
 										>
-											<div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
+											<div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
 
 											<div className="relative z-10 flex h-full flex-col justify-end p-[20px] sm:p-[25px] md:p-[30px]">
 												{initiative.title && (
@@ -261,7 +261,7 @@ export function AbountEtc({
 												backgroundRepeat: 'no-repeat',
 											}}
 										>
-											<div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
+											<div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
 
 											<div className="relative z-10 flex h-full flex-col justify-end p-[20px] sm:p-[25px] md:p-[30px]">
 												{initiative.title && (
