@@ -53,11 +53,11 @@ function MeprSection({ t }: SectionProps): ReactNode {
 					className="block shrink-0"
 				>
 					<Image
-						src="/imgs/footer-logo.svg"
+						src="/imgs/RES_B.svg"
 						alt="Logo"
-						width={74}
-						height={65}
-						className="block"
+						width={685}
+						height={253}
+						className="inline-block max-w-[210px]"
 					/>
 				</Link>
 			</div>

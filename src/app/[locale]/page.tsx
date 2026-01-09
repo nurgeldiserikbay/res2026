@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { useRouter } from '@/i18n/navigation'
 import { appConfig } from '@/shared/config/app.config'
 import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
@@ -19,6 +20,7 @@ import { Timer } from '@/widgets/timer/ui/Timer'
 
 export default function Home() {
 	const t = useTranslations()
+	const router = useRouter()
 
 	const BannerRef = useRef<HTMLDivElement>(null)
 	useAnimBg(BannerRef, {
@@ -189,6 +191,9 @@ export default function Home() {
 							<ButtonDefault
 								ref={NewsButtonRef as React.RefObject<HTMLButtonElement>}
 								className="translate-x-[90px] opacity-0"
+								onClick={() => {
+									router.push('/news')
+								}}
 							>
 								{t('labels.allNews')}
 							</ButtonDefault>
