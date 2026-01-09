@@ -64,10 +64,10 @@ export default function Page() {
 				<Container className="flex items-center justify-between gap-[60px]">
 					<div className="max-w-[1026px]">
 						<Image
-							src="/imgs/preparation-process/preparation-process-2.png"
+							src="/imgs/preparation-process/preparation-process-2.jpeg"
 							alt="Preparation Process"
-							width={1026}
-							height={446}
+							width={1600}
+							height={1066}
 							className="block max-w-full rounded-[12px]"
 						/>
 					</div>
