@@ -22,7 +22,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 	const locale = useLocale() as Locale
 
 	const { data: newsData, isLoading: isLoadingNews } = useQuery({
-		...newsDetailQuery(Number(slug)),
+		...newsDetailQuery(slug),
 		initialData,
 	})
 

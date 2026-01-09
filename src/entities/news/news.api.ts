@@ -21,5 +21,5 @@ export const newsApi = {
 		const url = queryString ? `/api/v1/news?${queryString}` : '/api/v1/news'
 		return fetcher<IPaginationResponse<NewsItem>>(url)
 	},
-	getById: (id: number) => fetcher<IResponse<NewsItem>>(`/api/v1/news/${id}`),
+	getBySlug: (slug: string) => fetcher<IResponse<NewsItem>>(`/api/v1/news/${slug}/slug`),
 }

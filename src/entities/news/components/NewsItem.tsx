@@ -20,7 +20,7 @@ export interface NewsItemProps {
 	views?: number
 }
 
-export function NewsItem({ title, image, date, tag, slug, variant = 'light', wide = false, views = 0 }: NewsItemProps) {
+export function NewsItem({ title, image, date, tag, slug, variant = 'dark', wide = false, views = 0 }: NewsItemProps) {
 	const locale = useLocale() as Locale
 
 	const localizedTitle = localize(title, locale)
