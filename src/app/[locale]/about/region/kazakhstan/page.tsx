@@ -132,7 +132,7 @@ export default function Page() {
 			},
 			{
 				id: 4,
-				title: '',
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiatives.title4`),
 				description: t.rich('pages.regions.kazakhstan.etc.nationalInitiatives.text4', {
 					bold: (chunks) => <span className="font-bold">{chunks}</span>,
 				}),
