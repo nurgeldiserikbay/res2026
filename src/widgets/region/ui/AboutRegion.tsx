@@ -78,12 +78,12 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 			<section
 				ref={SectionRef}
 				id="about"
-				className="relative pt-[30px] sm:pt-[40px] md:pt-[50px] lg:pt-[60px]"
+				className="relative pt-[20px] sm:pt-[40px] md:pt-[50px] lg:pt-[60px]"
 			>
 				<Container className="flex flex-col items-start justify-between gap-[30px] overflow-visible lg:flex-row lg:gap-[40px] xl:gap-[60px]">
 					<div
 						ref={ImagesRef}
-						className="w-full translate-x-[-90px] opacity-0 lg:max-w-[870px]"
+						className="relative z-2 w-full translate-x-[-90px] opacity-0 lg:max-w-[870px]"
 					>
 						<AboutImgs imgs={imgs} />
 					</div>
@@ -142,7 +142,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 							alt={mapAlt}
 							width={mapWidth}
 							height={mapHeight}
-							className="pointer-events-none absolute top-[-480px] left-[5%] z-0 hidden min-h-[1112px] min-w-[1885px] transform opacity-0 lg:block"
+							className="pointer-events-none absolute top-[-750px] left-[15%] z-0 min-w-[800px] transform opacity-0 lg:top-[-480px] lg:left-[5%] lg:block lg:min-w-[1885px]"
 						/>
 					</div>
 				</Container>

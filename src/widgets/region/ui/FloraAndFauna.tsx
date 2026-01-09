@@ -75,60 +75,62 @@ export function FloraAndFauna({
 				className="relative mt-[50px] translate-y-[50px] opacity-0 sm:mt-[60px] md:mt-[80px] lg:mt-[100px]"
 			>
 				<Container className="overflow-visible">
-					<div className="relative w-full after:absolute after:bottom-0 after:left-0 after:z-1 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-r after:from-black/70 after:to-transparent">
-						<Swiper
-							modules={[Navigation]}
-							slidesPerView={1}
-							spaceBetween={30}
-							className="h-[888px] w-full overflow-visible rounded-[12px]"
-							navigation={{
-								nextEl: '#flora-and-fauna-swiper-button-next',
-								prevEl: '#flora-and-fauna-swiper-button-prev',
-							}}
-							onSwiper={(swiper) => {
-								setIsBeginning(swiper.isBeginning)
-								setIsEnd(swiper.isEnd)
-								setActiveSlide(swiper.activeIndex)
-							}}
-							onSlideChange={(swiper) => {
-								setIsBeginning(swiper.isBeginning)
-								setIsEnd(swiper.isEnd)
-								setActiveSlide(swiper.activeIndex)
-							}}
-						>
-							{slides.map((slide) => (
-								<SwiperSlide
-									key={slide.id}
-									className="h-[888px] overflow-hidden rounded-[12px]"
-								>
-									<Image
-										src={slide.image}
-										alt={slide.alt}
-										width={slide.width}
-										height={slide.height}
-										className="block h-full w-full rounded-[12px] object-cover"
-									/>
-								</SwiperSlide>
-							))}
-						</Swiper>
-						<div className="absolute bottom-0 left-0 z-2 flex flex-col items-start justify-end p-[50px]">
+					<div className="relative flex w-full flex-col gap-[30px] md:block">
+						<div className="relative order-2 w-full after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:z-1 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-r after:from-black/70 after:to-transparent">
+							<Swiper
+								modules={[Navigation]}
+								slidesPerView={1}
+								spaceBetween={30}
+								className="h-[287px] w-full overflow-visible rounded-[12px] md:h-[888px]"
+								navigation={{
+									nextEl: '#flora-and-fauna-swiper-button-next',
+									prevEl: '#flora-and-fauna-swiper-button-prev',
+								}}
+								onSwiper={(swiper) => {
+									setIsBeginning(swiper.isBeginning)
+									setIsEnd(swiper.isEnd)
+									setActiveSlide(swiper.activeIndex)
+								}}
+								onSlideChange={(swiper) => {
+									setIsBeginning(swiper.isBeginning)
+									setIsEnd(swiper.isEnd)
+									setActiveSlide(swiper.activeIndex)
+								}}
+							>
+								{slides.map((slide) => (
+									<SwiperSlide
+										key={slide.id}
+										className="h-[287px] overflow-hidden rounded-[12px] md:h-[888px]"
+									>
+										<Image
+											src={slide.image}
+											alt={slide.alt}
+											width={slide.width}
+											height={slide.height}
+											className="block h-full w-full rounded-[12px] object-cover"
+										/>
+									</SwiperSlide>
+								))}
+							</Swiper>
+						</div>
+						<div className="static bottom-0 left-0 z-2 order-1 flex flex-col items-start justify-end md:absolute md:px-[25px] md:py-[25px] lg:px-[50px] lg:py-[50px]">
 							<div>
 								<h3
 									ref={TitleRef}
-									className="xs:text-[32px] mb-[30px] translate-y-[50px] text-[24px] leading-normal font-bold text-white opacity-0"
+									className="xs:text-[32px] text-text mb-[30px] translate-y-[50px] text-[24px] leading-[1.2] font-bold opacity-0 md:text-white"
 								>
 									{localizedTitle}
 								</h3>
 								<p
 									ref={DescriptionRef}
-									className="max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0 md:text-justify"
+									className="text-text max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0 md:text-justify md:text-white"
 								>
 									{localizedDescription}
 								</p>
 							</div>
 							<div
 								ref={ButtonsRef}
-								className="mt-[50px] translate-x-[-50px] opacity-0"
+								className="mt-[50px] flex translate-x-[-50px] gap-[10px] opacity-0 md:block"
 							>
 								<div id="flora-and-fauna-swiper-button-prev">
 									{isBeginning ? (

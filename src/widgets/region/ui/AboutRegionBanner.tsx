@@ -29,8 +29,8 @@ export function AboutRegionBanner({ title, bgImage }: { title: string; bgImage: 
 				data-animated-banner
 				className={[
 					!appConfig.isProduction
-						? `xs:h-[400px] xs:mt-[80px] mt-[50px] h-[380px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]`
-						: `xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]`,
+						? `xs:h-[400px] xs:mt-[100px] mt-[50px] h-[380px] min-h-[567px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]`
+						: `xs:h-[400px] xs:mt-[80px] mt-[50px] h-[300px] min-h-[567px] bg-cover bg-center sm:mt-[90px] sm:h-[500px] md:mt-[100px] md:h-[600px] lg:h-[700px] xl:h-[795px]`,
 				].join(' ')}
 				style={{ backgroundImage: `url(${bgImage})` }}
 			>
