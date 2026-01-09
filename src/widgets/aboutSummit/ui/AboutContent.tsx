@@ -107,7 +107,7 @@ export function AboutContent() {
 
 						<p
 							ref={ResText2Ref}
-							className="text-text translate-y-[50px] text-[14px] leading-normal font-normal opacity-0 sm:text-[15px] md:text-justify md:text-[16px]"
+							className="text-text mb-[30px] translate-y-[50px] text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:text-[15px] md:text-justify md:text-[16px]"
 						>
 							{t('pages.about.resText2')}
 						</p>
