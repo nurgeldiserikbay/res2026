@@ -1,12 +1,25 @@
 import { fetcher } from '@/shared/api/fetcher'
 import { IPaginationResponse, IResponse } from '@/shared/types'
 
-import { NewsItem } from './news.types'
+import { NewsItem, NewsSearchParams } from './news.types'
 
 export const newsApi = {
-	getAll: () => fetcher<IPaginationResponse<NewsItem>>('/api/v1/news'),
+	getAll: (params: NewsSearchParams = { per_page: 10, current_page: 1 }) => {
+		const searchParams = new URLSearchParams()
 
+		if (params.per_page) {
+			searchParams.set('per_page', String(params.per_page))
+		}
+		if (params.current_page) {
+			searchParams.set('current_page', String(params.current_page))
+		}
+		if (params.type) {
+			searchParams.set('type', params.type)
+		}
+
+		const queryString = searchParams.toString()
+		const url = queryString ? `/api/v1/news?${queryString}` : '/api/v1/news'
+		return fetcher<IPaginationResponse<NewsItem>>(url)
+	},
 	getById: (id: number) => fetcher<IResponse<NewsItem>>(`/api/v1/news/${id}`),
-
-	getBySlug: (slug: string) => fetcher<IResponse<NewsItem>>(`/api/v1/news/slug/${slug}`),
 }

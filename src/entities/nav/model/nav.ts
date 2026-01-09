@@ -93,9 +93,9 @@ const navItems: readonly NavItem[] = [
 		main: true,
 		ready: !appConfig.isProduction,
 		children: [
-			{ key: 'news.latest', href: '/news', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
-			{ key: 'news.announcements', href: '/news/announcements', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
-			{ key: 'news.publications', href: '/news/publications', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+			{ key: 'news.latest', href: '/news?type=latest', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+			{ key: 'news.announcements', href: '/news?type=announcements', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+			{ key: 'news.publications', href: '/news?type=publications', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
 		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,

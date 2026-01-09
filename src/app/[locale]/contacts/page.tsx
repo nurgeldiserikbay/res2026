@@ -63,7 +63,7 @@ function MeprSection({ t }: SectionProps): ReactNode {
 			</div>
 			<h3
 				ref={subtitleRef}
-				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+				className="text-text mb-[20px] translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`pages.contacts.meprSubtitle`)}
 			</h3>
@@ -85,7 +85,9 @@ function MeprSection({ t }: SectionProps): ReactNode {
 						<span> {`+7 701 888 6643`}</span>
 					</Link>
 					<Link
-						href={'https://www.gov.kz/'}
+						href={
+							'https://www.google.com/maps/place/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0/@51.1033673,70.8421442,9z/data=!3m1!4b1!4m6!3m5!1s0x424580c47db54609:0x97f9148dddb19228!8m2!3d51.1655126!4d71.4272221!16zL20vMGZuMDg?entry=ttu&g_ep=EgoyMDI2MDEwNi4wIKXMDSoASAFQAw%3D%3D'
+						}
 						target="_blank"
 						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 					>
@@ -93,12 +95,20 @@ function MeprSection({ t }: SectionProps): ReactNode {
 						<span>{t(`pages.contacts.address`)}</span>
 					</Link>
 					<Link
-						href={'https://www.gov.kz/'}
+						href={'mailto:info@igtipc.org'}
 						target="_blank"
 						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 					>
-						<IconGlobal className="text-secondary block transition-colors" />
-						<span>{'gov.kz'}</span>
+						<IconMail className="text-secondary block transition-colors" />
+						<span>{'info@igtipc.org'}</span>
+					</Link>
+					<Link
+						href={'mailto:a.yessembayev@igtipc.org'}
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span>{'a.yessembayev@igtipc.org'}</span>
 					</Link>
 				</div>
 				<div
@@ -275,23 +285,29 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 	const titleRef = useRef<HTMLHeadingElement>(null)
 	const subtitleRef = useRef<HTMLHeadingElement>(null)
 	const block1Ref = useRef<HTMLDivElement>(null)
+	const block2Ref = useRef<HTMLDivElement>(null)
+	const block3Ref = useRef<HTMLDivElement>(null)
+	const block4Ref = useRef<HTMLDivElement>(null)
 
 	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
 	useAnimSlide(titleRef, { y: 50, delay: 0.1 })
 	useAnimSlide(subtitleRef, { y: 50, delay: 0.15 })
 	useAnimSlide(block1Ref, { y: 50, delay: 0.2 })
+	useAnimSlide(block2Ref, { y: 50, delay: 0.25 })
+	useAnimSlide(block3Ref, { y: 50, delay: 0.3 })
+	useAnimSlide(block4Ref, { y: 50, delay: 0.35 })
 
 	return (
 		<>
 			<h2
 				ref={titleRef}
-				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
+				className="text-text mb-[10px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.organizationQuestions`)}
 			</h2>
 			<h3
 				ref={subtitleRef}
-				className="text-text mb-[20px] translate-y-[50px] text-[16px] leading-none font-bold opacity-0"
+				className="text-text mb-[30px] translate-y-[50px] text-[24px] leading-none font-bold whitespace-pre-line opacity-0 lg:text-[28px] xl:text-[32px]"
 			>
 				{t(`titles.internationalCenterForGreenTechnology`)}
 			</h3>
@@ -311,6 +327,65 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 					>
 						<IconPhone className="text-secondary block transition-colors" />
 						<span> {`+7 701 525 0876`}</span>
+					</Link>
+				</div>
+				<div
+					ref={block2Ref}
+					className="max-w-[570px] translate-y-[50px] opacity-0"
+				>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.meprName1Position`)}</h3>
+					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+						{t(`pages.contacts.meprName1`)}
+					</div>
+					<Link
+						href="mailto:s.sabieva@ecogeo.gov.kz"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span> {`s.sabieva@ecogeo.gov.kz`}</span>
+					</Link>
+				</div>
+				<div
+					ref={block3Ref}
+					className="max-w-[570px] translate-y-[50px] opacity-0"
+				>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.meprName2Position`)}</h3>
+					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+						{t(`pages.contacts.meprName2`)}
+					</div>
+					<Link
+						href="mailto:Sh.tastemirova@ecogeo.gov.kz"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span> {`Sh.tastemirova@ecogeo.gov.kz`}</span>
+					</Link>
+					<Link
+						href="mailto:shattyk.tastemirova@gmail.com"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span> {`shattyk.tastemirova@gmail.com`}</span>
+					</Link>
+				</div>
+				<div
+					ref={block4Ref}
+					className="max-w-[570px] translate-y-[50px] opacity-0"
+				>
+					<h3 className="text-text mb-[20px] text-[16px] leading-none font-bold">{t(`pages.contacts.meprName3Position`)}</h3>
+					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
+						{t(`pages.contacts.meprName3`)}
+					</div>
+					<Link
+						href="mailto:zh.mauken@ecogeo.gov.kz"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span> {`zh.mauken@ecogeo.gov.kz`}</span>
 					</Link>
 				</div>
 			</div>
@@ -344,7 +419,9 @@ function VenueSection({ t }: SectionProps) {
 					className="max-w-[473px] translate-y-[50px] opacity-0"
 				>
 					<Link
-						href="https://2gis.kz/astana/firm/70000001018130088/71.43893%2C51.124309?m=71.439565%2C51.123237%2F17.41%2Fr%2F3.4"
+						href={
+							'https://www.google.com/maps/place/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0/@51.1033673,70.8421442,9z/data=!3m1!4b1!4m6!3m5!1s0x424580c47db54609:0x97f9148dddb19228!8m2!3d51.1655126!4d71.4272221!16zL20vMGZuMDg?entry=ttu&g_ep=EgoyMDI2MDEwNi4wIKXMDSoASAFQAw%3D%3D'
+						}
 						target="_blank"
 						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 					>

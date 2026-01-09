@@ -93,7 +93,7 @@ export default function Page() {
 					open={Boolean(direction)}
 					onClose={() => setDirection(null)}
 					title={direction.title}
-					text={direction.description}
+					text={direction.description ?? ''}
 				/>
 			)}
 		</>

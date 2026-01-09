@@ -3,10 +3,10 @@
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
-import { Link } from '@/i18n/navigation'
+// import { Link } from '@/i18n/navigation'
 import { appConfig } from '@/shared/config/app.config'
-import { IconMail } from '@/shared/icons/IconMail'
-import { IconPhone } from '@/shared/icons/IconPhone'
+// import { IconMail } from '@/shared/icons/IconMail'
+// import { IconPhone } from '@/shared/icons/IconPhone'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
@@ -98,7 +98,7 @@ export function Footer() {
 					</div>
 
 					<div className="mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap lg:mb-[68px] 2xl:mb-[123px]">
-						<div className="flex flex-col items-start justify-between">
+						{/* <div className="flex flex-col items-start justify-between">
 							<div
 								ref={FooterContactsRef}
 								className="translate-y-[50px] opacity-0"
@@ -118,7 +118,7 @@ export function Footer() {
 									<span>+7 708 026 88 66</span>
 								</Link>
 							</div>
-						</div>
+						</div> */}
 
 						<div
 							ref={FooterSocialRef}
@@ -132,7 +132,7 @@ export function Footer() {
 						<div className="hidden items-start justify-between gap-[30px] sm:max-w-[247px] lg:block">
 							<div
 								ref={FooterText1Ref}
-								className="text-text mb-0 hidden max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
+								className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
 							>
 								{t(`pages.footer.text`)}
 							</div>

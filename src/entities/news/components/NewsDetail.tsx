@@ -1,14 +1,14 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { NewsShortItem } from '@/entities/news/components/NewsShortItem'
-import { newsDetailBySlugQuery, newsListQuery } from '@/entities/news/news.queries'
+import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
 import { NewsItem } from '@/entities/news/news.types'
-import { IResponse } from '@/shared/types'
 import { Locale } from '@/shared/config/i18n'
+import { IResponse } from '@/shared/types'
 import { Container } from '@/shared/ui/container/container'
 import { formatDate } from '@/shared/utils/formatDate'
 
@@ -22,7 +22,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 	const locale = useLocale() as Locale
 
 	const { data: newsData, isLoading: isLoadingNews } = useQuery({
-		...newsDetailBySlugQuery(slug),
+		...newsDetailQuery(Number(slug)),
 		initialData,
 	})
 
@@ -34,9 +34,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 	const allNews = allNewsData?.data || []
 
 	// Получаем другие новости того же типа
-	const otherNews = allNews
-		.filter((item) => item.type === newsItem?.type && item.slug !== slug)
-		.slice(0, 5)
+	const otherNews = allNews.filter((item) => item.type === newsItem?.type && item.slug !== slug).slice(0, 5)
 
 	if (isLoadingNews && !initialData) {
 		return (

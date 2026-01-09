@@ -1,31 +1,43 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
+import { useMemo } from 'react'
 
 export function NewsTabLinks() {
 	const t = useTranslations()
-	const pathname = usePathname()
 	const locale = useLocale()
+	const searchParams = useSearchParams()
 
-	const newsTabs = [
-		{
-			id: 1,
-			href: `/news`,
-			title: t('labels.latestNews'),
-		},
-		{
-			id: 2,
-			href: `/news/announcements`,
-			title: t('labels.announcements'),
-		},
-		{
-			id: 3,
-			href: `/news/publications`,
-			title: t('labels.publications'),
-		},
-	]
+	const newsTabs = useMemo(
+		() => [
+			{
+				id: 1,
+				type: 'latest',
+				title: t('labels.latestNews'),
+			},
+			{
+				id: 2,
+				type: 'announcements',
+				title: t('labels.announcements'),
+			},
+			{
+				id: 3,
+				type: 'publications',
+				title: t('labels.publications'),
+			},
+		],
+		[t],
+	)
+
+	const buildHref = (type: string) => {
+		const params = new URLSearchParams(searchParams.toString())
+		params.set('type', type)
+		// При смене типа сбрасываем страницу на первую
+		params.delete('page')
+		return `/${locale}/news?${params.toString()}`
+	}
 
 	return (
 		<nav
@@ -34,11 +46,12 @@ export function NewsTabLinks() {
 			className="xs:gap-[30px] mb-[30px] flex items-stretch justify-center gap-[20px] xl:mb-[50px]"
 		>
 			{newsTabs.map((tab) => {
-				const isActive = pathname === `/${locale}${tab.href}`
+				const currentType = searchParams.get('type') || 'latest'
+				const isActive = currentType === tab.type
 				return (
 					<Link
 						key={tab.id}
-						href={`/${locale}${tab.href}`}
+						href={buildHref(tab.type)}
 						role="tab"
 						aria-selected={isActive}
 						aria-controls={`news-tabpanel-${tab.id}`}
