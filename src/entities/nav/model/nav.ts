@@ -20,19 +20,19 @@ const navItems: readonly NavItem[] = [
 		main: true,
 		ready: true,
 		children: [
-			{ key: 'about.res', href: '/about', ready: true, showHeader: !appConfig.isProduction, showFooter: true }, // RES 2026
+			{ key: 'about.res', href: '/about', ready: true, showHeader: true, showFooter: true }, // RES 2026
 			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
 				ready: true,
-				showHeader: !appConfig.isProduction,
+				showHeader: true,
 				showFooter: true,
 			},
 			{
 				key: 'about.preparationProcess',
 				href: '/about/preparation-process',
 				ready: true,
-				showHeader: !appConfig.isProduction,
+				showHeader: true,
 				showFooter: true,
 			},
 		],
@@ -67,7 +67,7 @@ const navItems: readonly NavItem[] = [
 			{ key: 'about.regionTurkmenistan', href: '/about/region/turkmenistan', ready: false, showHeader: true, showFooter: true }, // Turkmenistan
 			{ key: 'about.regionUzbekistan', href: '/about/region/uzbekistan', ready: false, showHeader: true, showFooter: true }, // Uzbekistan
 		],
-		showHeader: !appConfig.isProduction,
+		showHeader: true,
 		showFooter: true,
 	},
 	{
@@ -97,7 +97,7 @@ const navItems: readonly NavItem[] = [
 			{ key: 'news.announcements', href: '/news?type=announcements', ready: true, showHeader: true, showFooter: true },
 			{ key: 'news.publications', href: '/news?type=publications', ready: true, showHeader: true, showFooter: true },
 		],
-		showHeader: !appConfig.isProduction,
+		showHeader: true,
 		showFooter: true,
 	},
 	{ key: 'gallery', href: '/gallery', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
