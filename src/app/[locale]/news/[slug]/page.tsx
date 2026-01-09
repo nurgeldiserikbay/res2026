@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { NewsDetail } from '@/entities/news/components/NewsDetail'
-import { newsDetailBySlugQuery, newsListQuery } from '@/entities/news/news.queries'
+import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
 import { getQueryClient } from '@/shared/lib/query/get-query-client'
 import { Container } from '@/shared/ui/container/container'
 
@@ -17,9 +17,9 @@ export default async function Page({ params }: PageProps) {
 	const queryClient = getQueryClient()
 
 	// Prefetch данных на сервере
-	await Promise.all([queryClient.prefetchQuery(newsDetailBySlugQuery(slug)), queryClient.prefetchQuery(newsListQuery())])
+	await Promise.all([queryClient.prefetchQuery(newsDetailQuery(Number(slug))), queryClient.prefetchQuery(newsListQuery())])
 
-	const newsData = queryClient.getQueryData(newsDetailBySlugQuery(slug).queryKey)
+	const newsData = queryClient.getQueryData(newsDetailQuery(Number(slug)).queryKey)
 	const title = newsData?.data?.name || t('titles.news')
 
 	return (

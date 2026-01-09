@@ -1,36 +1,26 @@
 import { queryOptions } from '@tanstack/react-query'
 
 import { newsApi } from './news.api'
+import { NewsSearchParams } from './news.types'
 
-// Query keys для новостей
 export const newsKeys = {
 	all: ['news'] as const,
 	lists: () => [...newsKeys.all, 'list'] as const,
-	list: (filters?: { type?: string }) => [...newsKeys.lists(), filters] as const,
+	list: (filters?: NewsSearchParams) => [...newsKeys.lists(), filters] as const,
 	details: () => [...newsKeys.all, 'detail'] as const,
 	detail: (id: number) => [...newsKeys.details(), id] as const,
 }
 
-// Query options для списка новостей
-export const newsListQuery = () =>
+export const newsListQuery = (params: NewsSearchParams = { per_page: 10, current_page: 1, type: 'last' }) =>
 	queryOptions({
-		queryKey: newsKeys.list(),
-		queryFn: () => newsApi.getAll(),
-		staleTime: 60 * 1000, // 1 минута
+		queryKey: newsKeys.list(params),
+		queryFn: () => newsApi.getAll(params),
+		staleTime: 60 * 1000,
 	})
 
-// Query options для отдельной новости по ID
 export const newsDetailQuery = (id: number) =>
 	queryOptions({
 		queryKey: newsKeys.detail(id),
 		queryFn: () => newsApi.getById(id),
-		staleTime: 60 * 1000, // 1 минута
-	})
-
-// Query options для отдельной новости по slug
-export const newsDetailBySlugQuery = (slug: string) =>
-	queryOptions({
-		queryKey: [...newsKeys.all, 'slug', slug] as const,
-		queryFn: () => newsApi.getBySlug(slug),
-		staleTime: 60 * 1000, // 1 минута
+		staleTime: 60 * 1000,
 	})

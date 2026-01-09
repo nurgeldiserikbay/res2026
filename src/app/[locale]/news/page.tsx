@@ -1,17 +1,32 @@
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 
 import { NewsList } from '@/entities/news/components/NewsList'
+import { newsTypes } from '@/entities/news/news.consts'
 import { newsListQuery } from '@/entities/news/news.queries'
 import { getQueryClient } from '@/shared/lib/query/get-query-client'
 import { Container } from '@/shared/ui/container/container'
 import { NewsBanner } from '@/widgets/news/ui/NewsBanner'
 import { NewsTabLinks } from '@/widgets/news/ui/NewsTabLinks'
 
-export default async function Page() {
+type PageProps = {
+	searchParams: Promise<{ page?: string; type?: string }>
+}
+
+export default async function Page({ searchParams }: PageProps) {
+	const params = await searchParams
 	const queryClient = getQueryClient()
 
-	// Prefetch данных на сервере
-	await queryClient.prefetchQuery(newsListQuery())
+	const page = Number(params.page) || 1
+	const typeParam = params.type || 'latest'
+	const apiType = newsTypes[typeParam as keyof typeof newsTypes] || 'last'
+
+	const queryParams = {
+		per_page: 10,
+		current_page: page,
+		type: apiType,
+	}
+
+	await queryClient.prefetchQuery(newsListQuery(queryParams))
 
 	return (
 		<HydrationBoundary state={dehydrate(queryClient)}>
@@ -30,10 +45,6 @@ function NewsPageContent() {
 					<NewsTabLinks />
 
 					<NewsList />
-
-					{/* <div className="mt-[30px] flex items-center justify-center xl:mt-[50px]">
-						<MainPagination totalPages={10} />
-					</div> */}
 				</Container>
 			</section>
 		</>

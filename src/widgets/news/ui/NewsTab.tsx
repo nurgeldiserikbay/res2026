@@ -75,12 +75,12 @@ export function NewsTab() {
 		},
 		{
 			id: 2,
-			slug: 'anounce',
+			slug: 'announcements',
 			title: t('labels.announcements'),
 		},
 		{
 			id: 3,
-			slug: 'publication',
+			slug: 'publications',
 			title: t('labels.publications'),
 		},
 	]

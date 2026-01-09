@@ -1,15 +1,20 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import { useLocale } from 'next-intl'
-import { useRef } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { useLocale, useTranslations } from 'next-intl'
+import { useMemo, useRef } from 'react'
 
 import { NewsItem } from '@/entities/news/components/NewsItem'
 import { newsListQuery } from '@/entities/news/news.queries'
 import { NewsItem as NewsItemType } from '@/entities/news/news.types'
 import { Locale } from '@/shared/config/i18n'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
+import { IPaginationResponse } from '@/shared/types'
+import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 import { formatDate } from '@/shared/utils/formatDate'
+
+import { newsTypes } from '../news.consts'
 
 // Маппинг типов новостей из API в типы компонента
 const newsTypeMap: Record<NewsItemType['type'], 'latest' | 'anounce' | 'publication'> = {
@@ -34,7 +39,7 @@ function NewsItemWrapper({ item, delay, locale }: NewsItemWrapperProps) {
 	return (
 		<div
 			ref={ref}
-			className="translate-y-[50px] opacity-0 col-span-1 row-span-1"
+			className="col-span-1 row-span-1 translate-y-[50px] opacity-0"
 		>
 			<NewsItem
 				title={item.name}
@@ -54,41 +59,74 @@ function NewsItemWrapper({ item, delay, locale }: NewsItemWrapperProps) {
 }
 
 interface NewsListProps {
-	initialData?: { data: NewsItemType[]; meta: { total: number; per_page: number; current_page: number } }
+	initialData?: IPaginationResponse<NewsItemType>
 }
 
 export function NewsList({ initialData }: NewsListProps) {
 	const locale = useLocale() as Locale
+	const t = useTranslations()
+	const searchParams = useSearchParams()
+
+	const page = Number(searchParams.get('page')) || 1
+	const typeParam = searchParams.get('type') || 'latest'
+	const apiType = newsTypes[typeParam as keyof typeof newsTypes] || 'last'
+
+	const queryParams = useMemo(
+		() => ({
+			per_page: 10,
+			current_page: page,
+			type: apiType,
+		}),
+		[page, apiType],
+	)
+
 	const { data, isLoading, error } = useQuery({
-		...newsListQuery(),
+		...newsListQuery(queryParams),
 		initialData,
 	})
 
 	if (isLoading && !initialData) {
-		return <div className="text-center text-[24px] font-light">Загрузка...</div>
+		return <div className="text-center text-[24px] font-light">{t('labels.loading') || 'Загрузка...'}</div>
 	}
 
 	if (error) {
-		return <div className="text-center text-[24px] font-light text-red-500">Ошибка загрузки новостей</div>
+		return <div className="text-center text-[24px] font-light text-red-500">{t('labels.error') || 'Ошибка загрузки новостей'}</div>
 	}
 
 	const newsItems = data?.data || []
+	const meta = data?.meta
 
+	// Показываем пустое состояние
 	if (newsItems.length === 0) {
-		return null
+		return (
+			<div className="flex flex-col items-center justify-center py-[60px]">
+				<p className="text-text text-center text-[24px] font-light">{t('labels.noContent')}</p>
+			</div>
+		)
 	}
 
+	// Вычисляем общее количество страниц
+	const totalPages = meta ? Math.ceil(meta.total / meta.per_page) : 1
+
 	return (
-		<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
-			{newsItems.map((item, index) => (
-				<NewsItemWrapper
-					key={item.id}
-					item={item}
-					index={index}
-					delay={0.1 + index * 0.1}
-					locale={locale}
-				/>
-			))}
-		</div>
+		<>
+			<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 xl:grid-cols-4 xl:gap-[60px]">
+				{newsItems.map((item, index) => (
+					<NewsItemWrapper
+						key={item.id}
+						item={item}
+						index={index}
+						delay={0.1 + index * 0.1}
+						locale={locale}
+					/>
+				))}
+			</div>
+
+			{totalPages > 1 && (
+				<div className="mt-[30px] flex items-center justify-center xl:mt-[50px]">
+					<MainPagination totalPages={totalPages} />
+				</div>
+			)}
+		</>
 	)
 }

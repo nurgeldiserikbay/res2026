@@ -1,4 +1,4 @@
-import { Image } from '@/shared/types'
+import { Image, IPaginationParams } from '@/shared/types'
 
 export type NewsType = 'last' | 'announce' | 'press-release'
 
@@ -17,4 +17,8 @@ export interface NewsItem {
 	description_seo: string
 	keywords_seo: string | null
 	images: Image[]
+}
+
+export interface NewsSearchParams extends IPaginationParams {
+	type?: string
 }
