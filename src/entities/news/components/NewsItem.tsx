@@ -55,17 +55,15 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'dark', wide
 				>
 					{localizedTitle}
 				</h4>
-				{views && (
-					<div
-						className={[
-							`mt-[10px] flex items-center justify-start gap-[10px] text-[13px] leading-none font-medium`,
-							variant === 'light' ? 'text-text' : 'text-white',
-						].join(` `)}
-					>
-						<IconEye />
-						<span>{views}</span>
-					</div>
-				)}
+				<div
+					className={[
+						`mt-[10px] flex items-center justify-start gap-[10px] text-[13px] leading-none font-medium`,
+						variant === 'light' ? 'text-text' : 'text-white',
+					].join(` `)}
+				>
+					<IconEye />
+					<span>{views}</span>
+				</div>
 			</div>
 			<Link
 				href={`/${locale}/news/${slug}`}

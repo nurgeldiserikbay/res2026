@@ -24,14 +24,14 @@ const navItems: readonly NavItem[] = [
 			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
-				ready: !appConfig.isProduction,
+				ready: true,
 				showHeader: !appConfig.isProduction,
 				showFooter: true,
 			},
 			{
 				key: 'about.preparationProcess',
 				href: '/about/preparation-process',
-				ready: !appConfig.isProduction,
+				ready: true,
 				showHeader: !appConfig.isProduction,
 				showFooter: true,
 			},
@@ -53,12 +53,12 @@ const navItems: readonly NavItem[] = [
 		href: '/about/region',
 		important: true,
 		main: true,
-		ready: !appConfig.isProduction,
+		ready: true,
 		children: [
 			{
 				key: 'about.regionKazakhstan',
 				href: '/about/region/kazakhstan',
-				ready: !appConfig.isProduction,
+				ready: true,
 				showHeader: true,
 				showFooter: true,
 			}, // Kazakhstan
@@ -91,11 +91,11 @@ const navItems: readonly NavItem[] = [
 		key: 'news.root',
 		href: '/news',
 		main: true,
-		ready: !appConfig.isProduction,
+		ready: true,
 		children: [
-			{ key: 'news.latest', href: '/news?type=latest', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
-			{ key: 'news.announcements', href: '/news?type=announcements', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
-			{ key: 'news.publications', href: '/news?type=publications', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+			{ key: 'news.latest', href: '/news?type=latest', ready: true, showHeader: true, showFooter: true },
+			{ key: 'news.announcements', href: '/news?type=announcements', ready: true, showHeader: true, showFooter: true },
+			{ key: 'news.publications', href: '/news?type=publications', ready: true, showHeader: true, showFooter: true },
 		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
