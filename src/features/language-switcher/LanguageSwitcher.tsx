@@ -35,6 +35,22 @@ export function LanguageSwitcher() {
 		}
 	}, [])
 
+	useEffect(() => {
+		if (!open) return
+
+		const onScroll = () => {
+			setOpen(false)
+		}
+
+		window.addEventListener('scroll', onScroll, { passive: true })
+		document.addEventListener('scroll', onScroll, { passive: true })
+
+		return () => {
+			window.removeEventListener('scroll', onScroll)
+			document.removeEventListener('scroll', onScroll)
+		}
+	}, [open])
+
 	return (
 		<div
 			ref={ref}
