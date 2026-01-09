@@ -25,7 +25,7 @@ export default async function Page({ searchParams }: PageProps) {
 
 	const queryParams = {
 		per_page: 10,
-		current_page: page,
+		page: page,
 		type: apiType,
 	}
 

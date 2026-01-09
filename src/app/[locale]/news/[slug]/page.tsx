@@ -20,7 +20,7 @@ export default async function Page({ params }: PageProps) {
 	// Prefetch данных на сервере
 	await Promise.all([
 		queryClient.prefetchQuery(newsDetailQuery(slug, locale as Locale)),
-		queryClient.prefetchQuery(newsListQuery({ per_page: 10, current_page: 1 }, locale as Locale)),
+		queryClient.prefetchQuery(newsListQuery({ per_page: 10, page: 1 }, locale as Locale)),
 	])
 
 	const newsData = queryClient.getQueryData(newsDetailQuery(slug, locale as Locale).queryKey)

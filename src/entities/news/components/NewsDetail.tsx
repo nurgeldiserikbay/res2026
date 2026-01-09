@@ -27,7 +27,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 	})
 
 	const { data: allNewsData } = useQuery({
-		...newsListQuery({ per_page: 10, current_page: 1 }, locale as Locale),
+		...newsListQuery({ per_page: 10, page: 1 }, locale as Locale),
 	})
 
 	const newsItem = newsData?.data

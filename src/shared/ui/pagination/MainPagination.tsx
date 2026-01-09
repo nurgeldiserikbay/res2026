@@ -39,9 +39,14 @@ export function MainPagination({ totalPages, param = 'page', className = '', sib
 
 	const goTo = (page: number) => {
 		const next = new URLSearchParams(sp.toString())
-		if (page <= 1) next.delete(param)
-		else next.set(param, String(page))
-		router.push(`${pathname}?${next.toString()}`, { scroll: true })
+		if (page <= 1) {
+			next.delete(param)
+		} else {
+			next.set(param, String(page))
+		}
+		const queryString = next.toString()
+		const url = queryString ? `${pathname}?${queryString}` : pathname
+		router.push(url, { scroll: true })
 	}
 
 	const isPrevDisabled = current <= 1

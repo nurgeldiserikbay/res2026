@@ -71,16 +71,15 @@ export function NewsList({ initialData }: NewsListProps) {
 	const typeParam = searchParams.get('type') || 'latest'
 	const apiType = newsTypes[typeParam as keyof typeof newsTypes] || 'last'
 
-	// React Compiler автоматически мемоизирует этот объект
 	const queryParams = {
 		per_page: 10,
-		current_page: page,
+		page: page,
 		type: apiType,
 	}
 
 	const { data, isLoading, error } = useQuery({
 		...newsListQuery(queryParams, locale as Locale),
-		initialData,
+		initialData: page === 1 && typeParam === 'latest' ? initialData : undefined,
 	})
 
 	if (isLoading && !initialData) {

@@ -13,7 +13,7 @@ export const newsKeys = {
 	detail: (slug: string) => [...newsKeys.details(), slug] as const,
 }
 
-export const newsListQuery = (params: NewsSearchParams = { per_page: 10, current_page: 1, type: 'last' }, locale: Locale) =>
+export const newsListQuery = (params: NewsSearchParams = { per_page: 10, page: 1, type: 'last' }, locale: Locale) =>
 	queryOptions({
 		queryKey: newsKeys.list(params),
 		queryFn: () => newsApi.getAll(params, locale),

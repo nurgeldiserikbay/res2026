@@ -115,7 +115,7 @@ export function NewsTab() {
 	// React Compiler автоматически мемоизирует этот объект
 	const queryParams = {
 		per_page: 4,
-		current_page: 1,
+		page: 1,
 		type: apiType,
 	}
 
