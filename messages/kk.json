@@ -96,6 +96,7 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"error": "Жүктеу қате орындалды",
 		"loading": "Жүктелуде",
 		"swipeForward": "Әрі қарай",
 		"readMore": "Толығырақ",
