@@ -44,7 +44,7 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'dark', wide
 				<div className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
 					{localizedDate}
 				</div>
-				{localizedTag && (
+				{tag && (
 					<div
 						className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
 					>{`//${localizedTag}`}</div>
