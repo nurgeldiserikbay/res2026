@@ -7,12 +7,17 @@ const localeMap: Record<Locale, string> = {
 }
 
 export function formatDate(dateString: string, locale: Locale): string {
-	const date = new Date(dateString)
-	const intlLocale = localeMap[locale] || 'ru-RU'
+	try {
+		const date = new Date(dateString)
+		const intlLocale = localeMap[locale] || 'ru-RU'
 
-	return new Intl.DateTimeFormat(intlLocale, {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-	}).format(date)
+		return new Intl.DateTimeFormat(intlLocale, {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		}).format(date)
+	} catch (error) {
+		console.error(error)
+		return ''
+	}
 }

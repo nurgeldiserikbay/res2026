@@ -79,7 +79,7 @@ export function NewsList({ initialData }: NewsListProps) {
 	}
 
 	const { data, isLoading, error } = useQuery({
-		...newsListQuery(queryParams),
+		...newsListQuery(queryParams, locale as Locale),
 		initialData,
 	})
 

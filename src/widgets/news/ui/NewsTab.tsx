@@ -119,7 +119,7 @@ export function NewsTab() {
 		type: apiType,
 	}
 
-	const { data, isLoading, error } = useQuery(newsListQuery(queryParams))
+	const { data, isLoading, error } = useQuery(newsListQuery(queryParams, locale as Locale))
 
 	const newsItems = data?.data || []
 

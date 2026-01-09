@@ -1,7 +1,6 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 
@@ -23,12 +22,12 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 	const locale = useLocale() as Locale
 
 	const { data: newsData, isLoading: isLoadingNews } = useQuery({
-		...newsDetailQuery(slug),
+		...newsDetailQuery(slug, locale as Locale),
 		initialData,
 	})
 
 	const { data: allNewsData } = useQuery({
-		...newsListQuery(),
+		...newsListQuery({ per_page: 10, current_page: 1 }, locale as Locale),
 	})
 
 	const newsItem = newsData?.data
@@ -75,7 +74,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 					)}
 
 					{newsItem.image && (
-						<Image
+						<img
 							src={newsItem.image}
 							alt={newsItem.name}
 							width={1332}
