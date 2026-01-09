@@ -3,7 +3,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useSearchParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { useMemo, useRef } from 'react'
+import { useRef } from 'react'
 
 import { NewsItem } from '@/entities/news/components/NewsItem'
 import { newsListQuery } from '@/entities/news/news.queries'
@@ -71,14 +71,12 @@ export function NewsList({ initialData }: NewsListProps) {
 	const typeParam = searchParams.get('type') || 'latest'
 	const apiType = newsTypes[typeParam as keyof typeof newsTypes] || 'last'
 
-	const queryParams = useMemo(
-		() => ({
-			per_page: 10,
-			current_page: page,
-			type: apiType,
-		}),
-		[page, apiType],
-	)
+	// React Compiler автоматически мемоизирует этот объект
+	const queryParams = {
+		per_page: 10,
+		current_page: page,
+		type: apiType,
+	}
 
 	const { data, isLoading, error } = useQuery({
 		...newsListQuery(queryParams),

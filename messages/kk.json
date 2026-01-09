@@ -96,6 +96,7 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"loading": "Жүктелуде",
 		"swipeForward": "Әрі қарай",
 		"readMore": "Толығырақ",
 		"hide": "Жасыру",

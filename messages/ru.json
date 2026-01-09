@@ -96,6 +96,7 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"loading": "Загрузка",
 		"swipeForward": "Листать дальше",
 		"readMore": "Читать еще",
 		"hide": "Скрыть",

@@ -96,6 +96,7 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"loading": "Loading",
 		"swipeForward": "Scroll further",
 		"readMore": "Read more",
 		"hide": "Hide",
