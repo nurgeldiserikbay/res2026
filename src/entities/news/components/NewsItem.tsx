@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 
@@ -20,7 +21,7 @@ export interface NewsItemProps {
 	views?: number
 }
 
-export function NewsItem({ title, image, date, tag, slug, variant = 'light', wide = false, views = 0 }: NewsItemProps) {
+export function NewsItem({ title, image, date, tag, slug, variant = 'dark', wide = false, views = 0 }: NewsItemProps) {
 	const locale = useLocale() as Locale
 
 	const localizedTitle = localize(title, locale)
@@ -31,7 +32,7 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'light', wid
 		<div
 			className={`group relative ${wide ? 'aspect-[1.696]' : 'aspect-[0.789]'} w-full overflow-hidden rounded-[12px] bg-white shadow-[-1px_5px_11px_0px_rgba(0,0,0,0.05),-5px_20px_20px_0px_rgba(0,0,0,0.04)] ${variant === 'light' ? 'bg-white' : 'after:absolute after:inset-0 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-b after:from-[#00000000] after:to-[#000000] after:content-[""]'}`}
 		>
-			<img
+			<Image
 				loading="lazy"
 				decoding="async"
 				src={image}

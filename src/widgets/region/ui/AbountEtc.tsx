@@ -166,7 +166,7 @@ export function AbountEtc({
 					>
 						<h3
 							ref={InitiativesTitleRef}
-							className="mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-black opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
+							className="mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-black opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px] 2xl:mb-[60px]"
 						>
 							{nationalInitiativesTitle}
 						</h3>
@@ -175,33 +175,41 @@ export function AbountEtc({
 							ref={InitiativesGridRef}
 							className="flex flex-col gap-[10px]"
 						>
-							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-3">
-								{nationalInitiativesIntro.map((initiative, index) => {
-									const imageSrc = initiative.image || introDefaultImages[index % introDefaultImages.length]
+							<div className="mb-[25px] flex flex-wrap items-center gap-x-[60px] gap-y-[30px] lg:flex-nowrap">
+								<div className="grid max-w-[1028px] grid-cols-3 gap-[10px]">
+									{nationalInitiativesIntro.map((initiative, index) => {
+										const imageSrc = initiative.image || introDefaultImages[index % introDefaultImages.length]
 
-									return (
-										<div
-											key={initiative.id}
-											className="h-full translate-y-[50px] overflow-hidden rounded-[12px] bg-white opacity-0"
-										>
-											<div className="relative h-[180px] w-full sm:h-[160px] md:h-[180px]">
+										return (
+											<div
+												key={initiative.id}
+												className="relative overflow-hidden rounded-[12px]"
+											>
 												<Image
 													src={imageSrc}
 													alt={initiative.title}
-													fill
-													className="rounded-[12px] object-cover"
-													sizes="(max-width: 640px) 100vw, 33vw"
+													className="block-cover max-w-full rounded-[12px] object-cover"
+													width={336}
+													height={354}
 												/>
 											</div>
-											<div className="py-[16px] sm:py-[18px] md:py-[20px]">
-												<h5 className="mb-[8px] text-left text-[16px] leading-normal font-bold text-black sm:text-[16px] md:text-[18px]">
-													{initiative.title}
-												</h5>
-												<p className="text-[13px] leading-normal text-black/80 sm:text-[13px] md:text-[14px]">{initiative.description}</p>
+										)
+									})}
+								</div>
+
+								<div className="max-w-[715px]">
+									{nationalInitiativesIntro.map((initiative) => {
+										return (
+											<div
+												key={initiative.id}
+												className="mb-[30px] last:mb-0"
+											>
+												<h5 className="text-text mb-[30px] text-[20px] leading-none font-bold">{initiative.title}</h5>
+												<p className="text-text text-[16px] leading-normal font-normal">{initiative.description}</p>
 											</div>
-										</div>
-									)
-								})}
+										)
+									})}
+								</div>
 							</div>
 
 							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-[55fr_45fr]">

@@ -8,7 +8,7 @@ export const newsKeys = {
 	lists: () => [...newsKeys.all, 'list'] as const,
 	list: (filters?: NewsSearchParams) => [...newsKeys.lists(), filters] as const,
 	details: () => [...newsKeys.all, 'detail'] as const,
-	detail: (id: number) => [...newsKeys.details(), id] as const,
+	detail: (slug: string) => [...newsKeys.details(), slug] as const,
 }
 
 export const newsListQuery = (params: NewsSearchParams = { per_page: 10, current_page: 1, type: 'last' }) =>
@@ -18,9 +18,9 @@ export const newsListQuery = (params: NewsSearchParams = { per_page: 10, current
 		staleTime: 60 * 1000,
 	})
 
-export const newsDetailQuery = (id: number) =>
+export const newsDetailQuery = (slug: string) =>
 	queryOptions({
-		queryKey: newsKeys.detail(id),
-		queryFn: () => newsApi.getById(id),
+		queryKey: newsKeys.detail(slug),
+		queryFn: () => newsApi.getBySlug(slug),
 		staleTime: 60 * 1000,
 	})

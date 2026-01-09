@@ -17,9 +17,9 @@ export default async function Page({ params }: PageProps) {
 	const queryClient = getQueryClient()
 
 	// Prefetch данных на сервере
-	await Promise.all([queryClient.prefetchQuery(newsDetailQuery(Number(slug))), queryClient.prefetchQuery(newsListQuery())])
+	await Promise.all([queryClient.prefetchQuery(newsDetailQuery(slug)), queryClient.prefetchQuery(newsListQuery())])
 
-	const newsData = queryClient.getQueryData(newsDetailQuery(Number(slug)).queryKey)
+	const newsData = queryClient.getQueryData(newsDetailQuery(slug).queryKey)
 	const title = newsData?.data?.name || t('titles.news')
 
 	return (

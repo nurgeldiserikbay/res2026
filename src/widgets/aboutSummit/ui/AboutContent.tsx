@@ -126,6 +126,14 @@ export function AboutContent() {
 								),
 							})}
 						</p>
+
+						<Image
+							src="/imgs/about-summit-line.png"
+							alt="About President"
+							width={871}
+							height={163}
+							className="block rounded-[12px]"
+						/>
 					</div>
 				</Container>
 			</section>
