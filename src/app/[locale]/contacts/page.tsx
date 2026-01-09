@@ -321,12 +321,20 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 						{t(`pages.contacts.meprName`)}
 					</div>
 					<Link
-						href="tel:+77015250876"
+						href="tel:87015250876"
 						target="_blank"
 						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
 					>
 						<IconPhone className="text-secondary block transition-colors" />
-						<span> {`+7 701 525 0876`}</span>
+						<span> {`8 701 525 0876`}</span>
+					</Link>
+					<Link
+						href="mailto:minecology.news@gmail.com"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPhone className="text-secondary block transition-colors" />
+						<span> {`minecology.news@gmail.com`}</span>
 					</Link>
 				</div>
 				<div
