@@ -28,8 +28,9 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'dark', wide
 	const localizedTag = localize(tag, locale)
 
 	return (
-		<div
-			className={`group relative ${wide ? 'aspect-[1.696]' : 'aspect-[0.789]'} w-full overflow-hidden rounded-[12px] bg-white shadow-[-1px_5px_11px_0px_rgba(0,0,0,0.05),-5px_20px_20px_0px_rgba(0,0,0,0.04)] ${variant === 'light' ? 'bg-white' : 'after:absolute after:inset-0 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-b after:from-[#00000000] after:to-[#000000] after:content-[""]'}`}
+		<Link
+			href={`/${locale}/news/${slug}`}
+			className={`group relative block ${wide ? 'aspect-[1.696]' : 'aspect-[0.789]'} w-full overflow-hidden rounded-[12px] bg-white shadow-[-1px_5px_11px_0px_rgba(0,0,0,0.05),-5px_20px_20px_0px_rgba(0,0,0,0.04)] ${variant === 'light' ? 'bg-white' : 'after:absolute after:inset-0 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-b after:from-[#00000000] after:to-[#000000] after:content-[""]'}`}
 		>
 			<img
 				loading="lazy"
@@ -64,12 +65,9 @@ export function NewsItem({ title, image, date, tag, slug, variant = 'dark', wide
 					<span>{views}</span>
 				</div>
 			</div>
-			<Link
-				href={`/${locale}/news/${slug}`}
-				className="absolute top-[30px] right-[30px] z-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-black/10 backdrop-blur-[13px]"
-			>
+			<div className="absolute top-[30px] right-[30px] z-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-black/10 backdrop-blur-[13px]">
 				<IconArrowRight className="text-white" />
-			</Link>
-		</div>
+			</div>
+		</Link>
 	)
 }

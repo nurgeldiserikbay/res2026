@@ -327,10 +327,10 @@ export const preparationProcessMocks = [
 					en: 'In partnership with the International Organization for Migration (IOM), a side event entitled “Climate-Induced Migration and the Development of Green Skills in Central Asia: Towards the Regional Ecological Summit 2026” was organized. The event showcased regional approaches to addressing climate-induced migration through the development of green skills, job creation, and the strengthening of adaptive capacity of populations.',
 				},
 				images: [
-					'/imgs/preparation-process/preparation-process-8-1.png',
 					'/imgs/preparation-process/preparation-process-8-2.png',
 					'/imgs/preparation-process/preparation-process-8-3.png',
 					'/imgs/preparation-process/preparation-process-8-4.png',
+					'/imgs/preparation-process/preparation-process-8-1.png',
 				],
 				link: {
 					src: 'https://caclimate.fund/novosti/migracionnye-processy-v-centralnoy-azii-vyzvannye-izmeneniem-klimata-obsudili-na-sor-30',
