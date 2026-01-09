@@ -7,13 +7,13 @@ export interface Image {
 
 export interface IPaginationParams {
 	per_page: number
-	current_page: number
+	page: number
 }
 
 export interface IPaginationMeta {
 	total: number
 	per_page: number
-	current_page: number
+	page: number
 }
 
 export interface IPaginationResponse<T> {

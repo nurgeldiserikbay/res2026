@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { NewsDetail } from '@/entities/news/components/NewsDetail'
 import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
+import { Locale } from '@/shared/config/i18n'
 import { getQueryClient } from '@/shared/lib/query/get-query-client'
 import { Container } from '@/shared/ui/container/container'
 
@@ -17,9 +18,12 @@ export default async function Page({ params }: PageProps) {
 	const queryClient = getQueryClient()
 
 	// Prefetch данных на сервере
-	await Promise.all([queryClient.prefetchQuery(newsDetailQuery(slug)), queryClient.prefetchQuery(newsListQuery())])
+	await Promise.all([
+		queryClient.prefetchQuery(newsDetailQuery(slug, locale as Locale)),
+		queryClient.prefetchQuery(newsListQuery({ per_page: 10, page: 1 }, locale as Locale)),
+	])
 
-	const newsData = queryClient.getQueryData(newsDetailQuery(slug).queryKey)
+	const newsData = queryClient.getQueryData(newsDetailQuery(slug, locale as Locale).queryKey)
 	const title = newsData?.data?.name || t('titles.news')
 
 	return (

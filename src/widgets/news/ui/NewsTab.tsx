@@ -115,11 +115,11 @@ export function NewsTab() {
 	// React Compiler автоматически мемоизирует этот объект
 	const queryParams = {
 		per_page: 4,
-		current_page: 1,
+		page: 1,
 		type: apiType,
 	}
 
-	const { data, isLoading, error } = useQuery(newsListQuery(queryParams))
+	const { data, isLoading, error } = useQuery(newsListQuery(queryParams, locale as Locale))
 
 	const newsItems = data?.data || []
 
