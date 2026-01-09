@@ -66,12 +66,6 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 						{newsItem.name}
 					</h2>
 					<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">{formattedDate}</div>
-					{newsItem.type && (
-						<div className="text-[13px] leading-none font-light text-[#777C83]">
-							{'//'}
-							{newsItem.type}
-						</div>
-					)}
 
 					{newsItem.image && (
 						<img

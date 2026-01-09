@@ -328,6 +328,14 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 						<IconPhone className="text-secondary block transition-colors" />
 						<span> {`+7 701 525 0876`}</span>
 					</Link>
+					<Link
+						href="mailto:minecology.news@gmail.com"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconMail className="text-secondary block transition-colors" />
+						<span> {`minecology.news@gmail.com`}</span>
+					</Link>
 				</div>
 				<div
 					ref={block2Ref}
@@ -337,6 +345,14 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
 						{t(`pages.contacts.meprName1`)}
 					</div>
+					<Link
+						href="tel:+77172740228"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPhone className="text-secondary block transition-colors" />
+						<span> {`+7 (7172) 74 02 28`}</span>
+					</Link>
 					<Link
 						href="mailto:s.sabieva@ecogeo.gov.kz"
 						target="_blank"
@@ -354,6 +370,14 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
 						{t(`pages.contacts.meprName2`)}
 					</div>
+					<Link
+						href="tel:+77172740293"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPhone className="text-secondary block transition-colors" />
+						<span> {`+7 (7172) 74 02 93`}</span>
+					</Link>
 					<Link
 						href="mailto:Sh.tastemirova@ecogeo.gov.kz"
 						target="_blank"
@@ -379,6 +403,14 @@ function OrganizationQuestionsSection({ t }: SectionProps): ReactNode {
 					<div className="text-text 3xl:text-[24px] mb-[20px] text-[16px] leading-none font-normal lg:text-[18px] xl:text-[20px] 2xl:text-[22px]">
 						{t(`pages.contacts.meprName3`)}
 					</div>
+					<Link
+						href="tel:+77172740258"
+						target="_blank"
+						className="text-text hover:text-muted mb-[20px] flex items-center justify-start gap-[10px] text-[16px] font-normal transition-colors last:mb-0"
+					>
+						<IconPhone className="text-secondary block transition-colors" />
+						<span> {`+7 (7172) 74 02 58`}</span>
+					</Link>
 					<Link
 						href="mailto:zh.mauken@ecogeo.gov.kz"
 						target="_blank"

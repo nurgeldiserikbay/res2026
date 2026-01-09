@@ -46,7 +46,7 @@ function NewsItemWrapper({ item, delay, locale }: NewsItemWrapperProps) {
 				image={item.image}
 				bannerImage={item.image}
 				date={formattedDate}
-				tag={item.type}
+				tag={''}
 				slug={item.slug}
 				variant="dark"
 				wide={false}

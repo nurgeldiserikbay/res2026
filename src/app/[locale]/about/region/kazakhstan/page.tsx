@@ -103,15 +103,15 @@ export default function Page() {
 			},
 			{
 				id: 2,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
-				image: '/imgs/recycle2.png',
-			},
-			{
-				id: 3,
 				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title3`),
 				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
 				image: '/imgs/recycle3.png',
+			},
+			{
+				id: 3,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
+				image: '/imgs/recycle2.png',
 			},
 		],
 		nationalInitiatives: [
