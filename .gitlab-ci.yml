@@ -15,10 +15,10 @@ before_script:
 
 docker-build:
   stage: dockerize
-  image: docker:29.0.0
+  image: docker:dind
   variables:
     GIT_STRATEGY: fetch
-  tags: [crocos-docker]
+  tags: [crocos-runners]
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $CI_REGISTRY_IMAGE:$TAG .
