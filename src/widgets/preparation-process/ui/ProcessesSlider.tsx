@@ -1,5 +1,5 @@
 import { useLocale } from 'next-intl'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -26,16 +26,64 @@ export function ProcessesSlider() {
 	const [isEnd, setIsEnd] = useState(false)
 	const [activeSlide, setActiveSlide] = useState(0)
 
+	const tabsContainerRef = useRef<HTMLDivElement>(null)
+	const [isDragging, setIsDragging] = useState(false)
+	const [startX, setStartX] = useState(0)
+	const [scrollLeft, setScrollLeft] = useState(0)
+	const hasMovedRef = useRef(false)
+
+	const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+		if (!tabsContainerRef.current) return
+		setIsDragging(true)
+		hasMovedRef.current = false
+		setStartX(e.pageX - tabsContainerRef.current.offsetLeft)
+		setScrollLeft(tabsContainerRef.current.scrollLeft)
+	}
+
+	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+		if (!isDragging || !tabsContainerRef.current) return
+		e.preventDefault()
+		hasMovedRef.current = true
+		const x = e.pageX - tabsContainerRef.current.offsetLeft
+		const walk = (x - startX) * 2
+		tabsContainerRef.current.scrollLeft = scrollLeft - walk
+	}
+
+	const handleMouseUp = () => {
+		setIsDragging(false)
+	}
+
+	const handleMouseLeave = () => {
+		setIsDragging(false)
+	}
+
+	const handleTabClick = (index: number, e: React.MouseEvent<HTMLButtonElement>) => {
+		if (hasMovedRef.current) {
+			e.preventDefault()
+			e.stopPropagation()
+			hasMovedRef.current = false
+			return
+		}
+		setActiveIndex(index)
+	}
+
 	return (
 		<section className="3xl:pt-[100px] bg-white pt-[50px] md:pt-[60px] 2xl:pt-[80px]">
 			<Container>
 				<div className="relative mb-[37px]">
-					<div className="flex items-center justify-start gap-[35px]">
+					<div
+						ref={tabsContainerRef}
+						className={`scrollbar-hide relative z-1 flex items-stretch justify-start gap-[35px] overflow-x-scroll pt-[10px] ${isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
+						onMouseDown={handleMouseDown}
+						onMouseMove={handleMouseMove}
+						onMouseUp={handleMouseUp}
+						onMouseLeave={handleMouseLeave}
+					>
 						{data.map((processTab, processTabIndex) => (
 							<button
 								key={processTab.id}
-								className="relative cursor-pointer pb-[37px]"
-								onClick={() => setActiveIndex(processTabIndex)}
+								className="relative h-full min-w-[143px] shrink-0 cursor-pointer pb-[45px] whitespace-nowrap"
+								onClick={(e) => handleTabClick(processTabIndex, e)}
 							>
 								<div
 									key={processTab.id}
@@ -55,14 +103,14 @@ export function ProcessesSlider() {
 								</div>
 								<div
 									className={[
-										`absolute bottom-0 left-1/2 box-border h-[16px] w-[16px] -translate-x-1/2 translate-y-[9px] transform rounded-full border border-solid border-[#02493F] transition-all duration-300`,
+										`absolute bottom-0 left-1/2 box-border h-[16px] w-[16px] -translate-x-1/2 transform rounded-full border border-solid border-[#02493F] transition-all duration-300`,
 										activeIndex >= processTabIndex ? 'bg-[#02493F]' : 'bg-white',
 									].join(` `)}
 								></div>
 							</button>
 						))}
 					</div>
-					<div className="h-[2px] w-full bg-linear-to-r from-[#41754F] to-[#FFFFFF]"></div>
+					<div className="absolute right-0 bottom-[8px] left-0 h-[2px] w-full bg-linear-to-r from-[#41754F] to-[#FFFFFF]"></div>
 				</div>
 				<div className="w-full">
 					{activeProcessTab ? (

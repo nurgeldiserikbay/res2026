@@ -7,7 +7,6 @@ import { NewsItem, NewsSearchParams } from './news.types'
 export const newsApi = {
 	getAll: (params: NewsSearchParams = { per_page: 10, page: 1 }, locale: Locale) => {
 		const searchParams = new URLSearchParams()
-		console.log('params', params)
 		if (params.per_page) {
 			searchParams.set('per_page', String(params.per_page))
 		}
