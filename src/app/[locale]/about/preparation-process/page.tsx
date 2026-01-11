@@ -61,7 +61,7 @@ export default function Page() {
 			</section>
 
 			<section className="3xl:pt-[100px] bg-white pt-[50px] md:pt-[60px] 2xl:pt-[80px]">
-				<Container className="flex items-center justify-between gap-[60px]">
+				<Container className="flex flex-wrap items-center justify-between gap-x-[60px] gap-y-[30px] lg:flex-nowrap">
 					<div className="max-w-[1026px]">
 						<Image
 							src="/imgs/preparation-process/preparation-process-2.jpeg"
@@ -73,7 +73,7 @@ export default function Page() {
 					</div>
 
 					<div className="max-w-[721px]">
-						<h4 className="text-text mb-[60px] text-justify text-[24px] leading-normal font-normal">
+						<h4 className="text-text mb-[30px] text-justify text-[20px] leading-normal font-normal md:text-[22px] xl:mb-[60px] xl:text-[24px]">
 							{t('pages.preparationProcess.subtitle')}
 						</h4>
 						<p className="text-text text-justify text-[16px] leading-normal font-normal">{t('pages.preparationProcess.text')}</p>

@@ -64,6 +64,18 @@ body {
 	overflow: visible !important;
 }
 
+/* Стили для скрытия скроллбара */
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: 0px; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+	height: 0; /* Устанавливаем высоту скроллбара в 0 */
+	width: 0; /* Устанавливаем ширину скроллбара в 0 */
+}
+
 /* Стили для анимированного баннера с псевдоэлементом */
 [data-animated-banner] {
 	position: relative;

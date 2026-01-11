@@ -44,7 +44,7 @@ export function ImageSlider({ images, alt }: { images: string[]; alt: string }) 
 							alt={alt}
 							width={900}
 							height={430}
-							className="block w-full rounded-[12px]"
+							className="md:aspect-unset block aspect-[1.66] w-full rounded-[12px]"
 						/>
 					</SwiperSlide>
 				))}
