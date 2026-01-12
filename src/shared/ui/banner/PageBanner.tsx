@@ -46,9 +46,9 @@ export function PageBanner({
 		}
 	} else {
 		if (!appConfig.isProduction) {
-			heightClass = 'bg-secondary h-[343px] pt-[176px] max-[441px]:h-[451px] max-[441px]:pt-[284px]'
+			heightClass = 'bg-secondary min-h-[343px] pt-[176px] max-[441px]:min-h-[451px] max-[441px]:pt-[284px]'
 		} else {
-			heightClass = 'bg-secondary h-[343px] pt-[176px]'
+			heightClass = 'bg-secondary min-h-[343px] pt-[176px]'
 		}
 	}
 
