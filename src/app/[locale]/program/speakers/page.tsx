@@ -3,11 +3,9 @@
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
-import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { Speaker } from '@/entities/speaker/Speaker'
-import { appConfig } from '@/shared/config/app.config'
-import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
+import { PageBanner } from '@/shared/ui/banner'
 import { Container } from '@/shared/ui/container/container'
 import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 import { speakersPaginItems } from '@/widgets/speakers/mocks'
@@ -35,48 +33,15 @@ function SpeakersItemWrapper({ item, delay }: SpeakersItemWrapperProps) {
 export default function Page() {
 	const t = useTranslations()
 
-	const BannerRef = useRef<HTMLElement>(null)
-	useAnimBg(BannerRef, {
-		fromSize: '140%',
-		toSize: '120%',
-		fromPosition: 'center 70%',
-		toPosition: 'center center',
-		duration: 1.4,
-		bgImage: '/imgs/news-banner.png',
-	})
-	const TitleRef = useRef<HTMLHeadingElement>(null)
-	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
-	const BreadcrumbsRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
 	const PaginationRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(PaginationRef, { y: 50, delay: 0.3 })
 
 	return (
 		<>
-			<section
-				ref={BannerRef}
-				data-animated-banner
-				className={[
-					!appConfig.isProduction
-						? `bg-secondary h-[343px] pt-[176px] max-[441px]:h-[451px] max-[441px]:pt-[284px]`
-						: `bg-secondary h-[343px] pt-[176px]`,
-				].join(``)}
-			>
-				<Container className="relative z-10">
-					<h1
-						ref={TitleRef}
-						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
-					>
-						{t('titles.speakersPage')}
-					</h1>
-					<div
-						ref={BreadcrumbsRef}
-						className="translate-y-[50px] opacity-0"
-					>
-						<Breadcrumbs breadcrumbs={[{ label: t('titles.speakersPage'), href: '/program/speakers' }]} />
-					</div>
-				</Container>
-			</section>
+			<PageBanner
+				title={t('titles.speakersPage')}
+				breadcrumbs={[{ label: t('titles.speakersPage'), href: '/program/speakers' }]}
+			/>
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>

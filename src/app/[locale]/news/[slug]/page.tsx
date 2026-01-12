@@ -1,12 +1,12 @@
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 import { getTranslations } from 'next-intl/server'
 
-import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
 import { NewsDetail } from '@/entities/news/components/NewsDetail'
 import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
 import { appConfig } from '@/shared/config/app.config'
 import { Locale } from '@/shared/config/i18n'
 import { getQueryClient } from '@/shared/lib/query/get-query-client'
+import { Breadcrumbs } from '@/shared/ui/breadcrumbs/Breadcrumbs'
 import { Container } from '@/shared/ui/container/container'
 
 interface PageProps {
