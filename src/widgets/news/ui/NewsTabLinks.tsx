@@ -1,13 +1,13 @@
 'use client'
 
-import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
+
+import { Link } from '@/i18n/navigation'
 
 export function NewsTabLinks() {
 	const t = useTranslations()
-	const locale = useLocale()
 	const searchParams = useSearchParams()
 
 	const newsTabs = useMemo(
@@ -36,7 +36,7 @@ export function NewsTabLinks() {
 		params.set('type', type)
 		// При смене типа сбрасываем страницу на первую
 		params.delete('page')
-		return `/${locale}/news?${params.toString()}`
+		return `/news?${params.toString()}`
 	}
 
 	return (

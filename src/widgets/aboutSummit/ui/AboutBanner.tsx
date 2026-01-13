@@ -44,7 +44,7 @@ export function AboutBanner() {
 				<div
 					ref={BannerRef}
 					data-animated-banner
-					className="relative box-border min-h-[795px] bg-linear-to-b from-[#41754F] to-[#02493F] bg-cover bg-center pt-[184px] pb-[50px] sm:min-h-[700px] sm:pt-[120px] md:min-h-[800px] md:pt-[150px] lg:min-h-[900px] lg:pt-[200px] xl:min-h-[1000px] xl:pt-[250px] 2xl:min-h-[1160px] 2xl:pt-[304px]"
+					className="xs:pt-[184px] relative box-border min-h-[795px] bg-linear-to-b from-[#41754F] to-[#02493F] bg-cover bg-center pt-[154px] pb-[50px] sm:min-h-[700px] sm:pt-[140px] md:min-h-[800px] md:pt-[150px] lg:min-h-[900px] lg:pt-[200px] xl:min-h-[1000px] xl:pt-[250px] 2xl:min-h-[1160px] 2xl:pt-[304px]"
 				>
 					<Image
 						ref={MapRef}
@@ -56,7 +56,7 @@ export function AboutBanner() {
 					/>
 
 					<Container className="relative z-10 flex flex-col items-start justify-between gap-[91px] sm:gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
-						<div className="w-full max-w-[706px] lg:mt-[43px]">
+						<div className="w-full max-w-[646px] lg:mt-[23px]">
 							<h1
 								ref={TitleRef}
 								className="xs:mb-[30px] xs:text-[48px] 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[36px] leading-none font-bold text-white opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
@@ -65,7 +65,7 @@ export function AboutBanner() {
 							</h1>
 							<p
 								ref={SubtitleRef}
-								className="text-text w-full max-w-[286px] translate-y-[90px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] md:max-w-full lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
+								className="text-text xs:text-[16px] xs:max-w-[346px] w-full max-w-[286px] translate-y-[90px] text-justify text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] md:max-w-full lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
 							>
 								{t('pages.about.resText1')}
 							</p>

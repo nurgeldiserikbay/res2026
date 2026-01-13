@@ -37,7 +37,7 @@ function MeprSection({ t }: SectionProps): ReactNode {
 
 	return (
 		<>
-			<div className="mb-[30px] flex items-center justify-between gap-x-[40px]">
+			<div className="mb-[30px] flex flex-wrap-reverse items-center justify-between gap-x-[40px] gap-y-[20px] sm:flex-nowrap">
 				<h2
 					ref={titleRef}
 					className="text-text translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"

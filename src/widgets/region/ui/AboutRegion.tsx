@@ -106,7 +106,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 						>
 							<div
 								ref={Stat1Ref}
-								className="flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] sm:max-w-[271px] md:h-[172px]"
+								className="flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] sm:max-w-[271px] md:h-[172px]"
 							>
 								<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
 									{stats.stat1Value}
@@ -115,7 +115,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 							</div>
 							<div
 								ref={Stat2Ref}
-								className="flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] sm:max-w-[537px] sm:grow md:h-[172px]"
+								className="flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] sm:max-w-[537px] sm:grow md:h-[172px]"
 							>
 								<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
 									{stats.stat2Value}
@@ -131,7 +131,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 						</p>
 						<div
 							ref={Stat3Ref}
-							className="relative z-1 flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#ADF0BF] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
+							className="relative z-1 flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#ADF0BF] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 						>
 							<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">{stats.stat3Value}</span>
 							<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stats.stat3}</span>

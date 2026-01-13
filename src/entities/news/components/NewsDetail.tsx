@@ -1,8 +1,9 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
+
+import { Link } from '@/i18n/navigation'
 
 import { NewsShortItem } from '@/entities/news/components/NewsShortItem'
 import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
@@ -59,7 +60,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 	const formattedDate = formatDate(newsItem.publication_date, locale)
 
 	return (
-		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+		<section className="bg-white pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] lg:pt-[80px] lg:pb-[80px] 2xl:pt-[100px] 2xl:pb-[100px]">
 			<Container className="flex flex-wrap items-start justify-between gap-[30px] lg:flex-nowrap lg:gap-[54px]">
 				<div className={[`${otherNews.length > 0 ? 'max-w-[1332px]' : ''} grow`].join(` `)}>
 					<h2 className="text-text 3xl:text-[48px] mb-[50px] max-w-[1214px] text-[32px] leading-none font-normal xl:text-[36px] 2xl:text-[44px]">
@@ -97,7 +98,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 									key={item.id}
 									className="mb-[10px] w-full last:mb-0"
 								>
-									<Link href={`/${locale}/news/${item.slug}`}>
+									<Link href={`/news/${item.slug}`}>
 										<NewsShortItem
 											title={item.name}
 											tag={item.type}

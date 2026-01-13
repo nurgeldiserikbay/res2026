@@ -100,6 +100,8 @@ export function LanguageSwitcher() {
 									<button
 										type="button"
 										onClick={() => {
+											// Устанавливаем cookie USER_LOCALE для сохранения выбранного языка
+											document.cookie = `USER_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`
 											router.replace(pathname, { locale: l })
 											setOpen(false)
 										}}

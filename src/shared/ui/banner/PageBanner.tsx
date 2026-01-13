@@ -40,15 +40,15 @@ export function PageBanner({
 	let heightClass = ''
 	if (useMinHeight) {
 		if (!appConfig.isProduction) {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[60px] max-[441px]:min-h-[451px] max-[441px]:pt-[284px]'
+			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[60px] max-[441px]:min-h-[451px] max-[441px]:pt-[230px] pb-[51px]'
 		} else {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px]'
+			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[51px]'
 		}
 	} else {
 		if (!appConfig.isProduction) {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px] max-[441px]:min-h-[451px] max-[441px]:pt-[284px]'
+			heightClass = 'bg-secondary min-h-[343px] pt-[176px] max-[441px]:min-h-[451px] max-[441px]:pt-[230px] pb-[51px]'
 		} else {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px]'
+			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[51px]'
 		}
 	}
 
