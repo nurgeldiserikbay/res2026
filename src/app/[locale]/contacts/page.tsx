@@ -5,14 +5,12 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
-import { Breadcrumbs } from '@/entities/breadcrumbs/Breadcrumbs'
-import { appConfig } from '@/shared/config/app.config'
 import { IconGlobal } from '@/shared/icons/IconGlobal'
 import { IconMail } from '@/shared/icons/IconMail'
 import { IconPhone } from '@/shared/icons/IconPhone'
 import { IconPin } from '@/shared/icons/IconPin'
-import { useAnimBg } from '@/shared/lib/gsap/useAnimBg'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
+import { PageBanner } from '@/shared/ui/banner'
 import { Container } from '@/shared/ui/container/container'
 
 import type { ReactNode } from 'react'
@@ -39,7 +37,7 @@ function MeprSection({ t }: SectionProps): ReactNode {
 
 	return (
 		<>
-			<div className="mb-[30px] flex items-center justify-between gap-x-[40px]">
+			<div className="mb-[30px] flex flex-wrap-reverse items-center justify-between gap-x-[40px] gap-y-[20px] sm:flex-nowrap">
 				<h2
 					ref={titleRef}
 					className="text-text translate-y-[50px] text-[24px] leading-none font-bold opacity-0 lg:text-[28px] xl:text-[32px]"
@@ -484,48 +482,12 @@ function VenueSection({ t }: SectionProps) {
 export default function Page() {
 	const t = useTranslations()
 
-	const BannerRef = useRef<HTMLElement>(null)
-	useAnimBg(BannerRef, {
-		fromSize: '140%',
-		toSize: '120%',
-		fromPosition: 'center 70%',
-		toPosition: 'center center',
-		duration: 1.4,
-		bgImage: '/imgs/news-banner.png',
-	})
-	const TitleRef = useRef<HTMLHeadingElement>(null)
-	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
-	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
-	const BreadcrumbsRef = useRef<HTMLDivElement>(null)
-	// Изменена анимация: y изменен с -90 (по умолчанию) на 50
-	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
-
 	return (
 		<>
-			<section
-				ref={BannerRef}
-				data-animated-banner
-				className={[
-					!appConfig.isProduction
-						? `bg-secondary h-[343px] pt-[176px] max-[441px]:h-[451px] max-[441px]:pt-[284px]`
-						: `bg-secondary h-[343px] pt-[176px]`,
-				].join(``)}
-			>
-				<Container className="relative z-10">
-					<h1
-						ref={TitleRef}
-						className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
-					>
-						{t('titles.contacts')}
-					</h1>
-					<div
-						ref={BreadcrumbsRef}
-						className="translate-y-[50px] opacity-0"
-					>
-						<Breadcrumbs breadcrumbs={[{ label: t('titles.contacts'), href: '/contacts' }]} />
-					</div>
-				</Container>
-			</section>
+			<PageBanner
+				title={t('titles.contacts')}
+				breadcrumbs={[{ label: t('titles.contacts'), href: '/contacts' }]}
+			/>
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>

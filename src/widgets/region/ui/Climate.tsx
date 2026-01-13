@@ -60,12 +60,12 @@ export function Climate({
 						>
 							{climateText2}
 						</p>
-						<div className="relative z-1 mb-[20px] grid grid-cols-2 gap-[10px] sm:mb-[25px] md:mb-[30px]">
+						<div className="relative z-1 mb-[20px] grid grid-cols-1 gap-[10px] sm:mb-[25px] sm:grid-cols-2 md:mb-[30px]">
 							<div
 								ref={Temp1Ref}
 								className="flex h-[140px] translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 							>
-								<span className="text-secondary flex flex-col items-center gap-[10px] text-[40px] leading-normal font-bold sm:flex-row sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
+								<span className="text-secondary flex items-center gap-[10px] text-[40px] leading-normal font-bold sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
 									<Image
 										src="/imgs/snow.svg"
 										alt="Snow"
@@ -83,7 +83,7 @@ export function Climate({
 								ref={Temp2Ref}
 								className="flex h-[140px] translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 							>
-								<span className="text-secondary flex flex-col items-center gap-[10px] text-[40px] leading-normal font-bold sm:flex-row sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
+								<span className="text-secondary flex items-center gap-[10px] text-[40px] leading-normal font-bold sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
 									<Image
 										src="/imgs/sun.svg"
 										alt="Sun"

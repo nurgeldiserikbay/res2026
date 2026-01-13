@@ -53,6 +53,8 @@ export default function Home() {
 	useAnimSlide(PartnersText2Ref, { y: 50, delay: 0.3 })
 	const PartnersImageRef = useRef<HTMLDivElement>(null)
 	useAnimSlide(PartnersImageRef, { y: 50, delay: 0.4 })
+	const PartnersImageMobileRef = useRef<HTMLDivElement>(null)
+	useAnimSlide(PartnersImageMobileRef, { y: 50, delay: 0.4 })
 	const ConnectionBannerRef = useRef<HTMLDivElement>(null)
 	useAnimBg(ConnectionBannerRef, {
 		fromSize: '120%',
@@ -155,7 +157,19 @@ export default function Home() {
 
 						<div
 							ref={PartnersImageRef}
-							className="translate-y-[50px] opacity-0"
+							className="hidden translate-y-[50px] opacity-0 lg:block"
+						>
+							<Image
+								src="/imgs/partners-banner-list.png"
+								alt="Partners"
+								width={560}
+								height={946}
+								className="block"
+							/>
+						</div>
+						<div
+							ref={PartnersImageMobileRef}
+							className="translate-y-[50px] opacity-0 lg:hidden"
 						>
 							<Image
 								src="/imgs/partners-banner.png"

@@ -44,7 +44,17 @@ const navItems: readonly NavItem[] = [
 		href: '/program',
 		important: true,
 		main: true,
-		ready: false,
+		ready: !appConfig.isProduction,
+		children: [
+			{
+				key: 'program.schedule',
+				href: '/program',
+				ready: !appConfig.isProduction,
+				showHeader: true,
+				showFooter: true,
+			},
+			{ key: 'program.speakers', href: '/program/speakers', ready: !appConfig.isProduction, showHeader: true, showFooter: true },
+		],
 		showHeader: !appConfig.isProduction,
 		showFooter: true,
 	},
@@ -100,7 +110,7 @@ const navItems: readonly NavItem[] = [
 		showHeader: true,
 		showFooter: true,
 	},
-	{ key: 'gallery', href: '/gallery', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
+	{ key: 'gallery', href: '/gallery', main: false, ready: true, showHeader: !appConfig.isProduction, showFooter: true },
 	{ key: 'faq', href: '/faq', main: false, ready: false, showHeader: !appConfig.isProduction, showFooter: true },
 	{ key: 'contacts', href: '/contacts', main: false, ready: true, important: true, showHeader: true, showFooter: true },
 ] as const
