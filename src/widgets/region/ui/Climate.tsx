@@ -44,7 +44,7 @@ export function Climate({
 		<>
 			<section
 				id="climate"
-				className="relative mt-[50px] sm:mt-[60px] md:mt-[80px] lg:mt-[100px]"
+				className="relative pt-[50px] sm:pt-[60px] md:pt-[80px] lg:pt-[100px]"
 			>
 				<Container className="flex flex-col items-start justify-between gap-[30px] overflow-visible lg:flex-row lg:gap-[40px] xl:gap-[60px]">
 					<div className="relative w-full whitespace-pre-line lg:max-w-[872px]">

@@ -111,7 +111,7 @@ export function AbountEtc({
 		<>
 			<section
 				id="etc"
-				className="relative mt-[50px] sm:mt-[60px] md:mt-[80px] lg:mt-[100px]"
+				className="relative pt-[50px] sm:pt-[60px] md:pt-[80px] lg:pt-[100px]"
 			>
 				<Container>
 					<div
