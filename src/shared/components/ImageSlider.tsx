@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import 'swiper/css'
+
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
