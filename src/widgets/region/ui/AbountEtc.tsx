@@ -220,7 +220,7 @@ export function AbountEtc({
 									return (
 										<div
 											key={initiative.id}
-											className={`relative h-full min-h-[300px] translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
+											className={`relative h-full translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
 											style={{
 												backgroundImage: `url(${bgImage})`,
 												backgroundSize: 'cover',
@@ -253,7 +253,7 @@ export function AbountEtc({
 									return (
 										<div
 											key={initiative.id}
-											className={`relative h-full min-h-[300px] translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
+											className={`relative h-full translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
 											style={{
 												backgroundImage: `url(${bgImage})`,
 												backgroundSize: 'cover',

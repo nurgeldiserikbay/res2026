@@ -102,7 +102,7 @@ export function HeaderMobileNav() {
 											className="xs:max-w-[180px] w-full"
 										>
 											<div className="max-[440px]:hidden">
-												<p className="xs:text-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
+												<p className="xs:mb-[30px] xs:text-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
 											</div>
 											<button
 												type="button"
