@@ -97,7 +97,7 @@ export function NewsList({ initialData }: NewsListProps) {
 	if (newsItems.length === 0) {
 		return (
 			<div className="flex flex-col items-center justify-center py-[60px]">
-				<p className="text-text text-center text-[24px] font-light">{t('labels.noContent')}</p>
+				<p className="text-text text-center text-[24px] font-light">{t('titles.soon')}</p>
 			</div>
 		)
 	}

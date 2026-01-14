@@ -116,7 +116,7 @@ export const preparationProcessMocks = [
 				images: [
 					'/imgs/preparation-process/preparation-process-3-1.png',
 					'/imgs/preparation-process/preparation-process-3-2.png',
-					'/imgs/preparation-process/preparation-process-3-3.png',
+					// '/imgs/preparation-process/preparation-process-3-3.png',
 				],
 				link: {
 					src: 'https://caclimate.fund/novosti/cakik-2025-centralnaya-aziya-obedinyaet-usiliya-dlya-dostizheniya-globalnoy-celi-klimaticheskogo-finansirovaniya',
