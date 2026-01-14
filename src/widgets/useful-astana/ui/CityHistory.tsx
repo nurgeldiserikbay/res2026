@@ -15,12 +15,15 @@ export function CityHistory() {
 						alt="Astana History"
 						width={871}
 						height={417}
-						className="h-auto w-full max-w-[871px] shrink"
+						className="block w-[871px] shrink-4 md:max-w-[60%]"
 					/>
-					<div className="w-full max-w-[860px] shrink-2">
+					<div className="w-full max-w-[860px] shrink">
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
-							{t('pages.programms.title')}
+							{t('pages.useful.astana.historyTitle')}
 						</h2>
+						<div className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">
+							{t('pages.useful.astana.historyText')}
+						</div>
 					</div>
 				</div>
 			</Container>
