@@ -80,7 +80,7 @@ export function AboutContent() {
 											ref={Image1TextRef}
 											className="absolute bottom-0 left-0 translate-y-[30px] p-[15px] opacity-0 sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[50px] 2xl:p-[60px]"
 										>
-											<div className="mb-[10px] max-w-[294px] text-[11px] leading-normal font-normal text-white sm:mb-[15px] sm:text-[12px] md:mb-[20px] md:text-[14px] lg:mb-[25px] lg:text-[16px] xl:mb-[30px]">
+											<div className="mb-[10px] text-[11px] leading-normal font-normal text-white sm:mb-[15px] sm:text-[12px] md:mb-[20px] md:text-[14px] lg:mb-[25px] lg:text-[16px] xl:mb-[30px]">
 												{t(`pages.footer.text`)}
 											</div>
 											<div className="max-w-[294px] text-[16px] leading-[1.2] font-bold text-white sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
