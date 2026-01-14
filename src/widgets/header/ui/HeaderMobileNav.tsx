@@ -1,10 +1,11 @@
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 import { headerNav } from '@/entities/nav/model/nav'
+import { Link } from '@/i18n/navigation'
 import { appConfig } from '@/shared/config/app.config'
+import { IconArrDown } from '@/shared/icons/IconArrDown'
 import { IconClose } from '@/shared/icons/IconClose'
 import { IconMenu } from '@/shared/icons/IconMenu'
 import { Container } from '@/shared/ui/container/container'
@@ -17,6 +18,19 @@ export function HeaderMobileNav() {
 	const t = useTranslations('nav')
 	const pathname = usePathname()
 	const [open, setOpen] = useState(false)
+	const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
+
+	const toggleItem = (key: string) => {
+		setExpandedItems((prev) => {
+			const newSet = new Set(prev)
+			if (newSet.has(key)) {
+				newSet.delete(key)
+			} else {
+				newSet.add(key)
+			}
+			return newSet
+		})
+	}
 
 	useEffect(() => {
 		const prevOverflow = document.documentElement.style.overflow
@@ -74,37 +88,81 @@ export function HeaderMobileNav() {
 						</button>
 					</div>
 
-					<div className="xs:grid-cols-2 grid w-full grid-cols-1 justify-between gap-x-[40px] gap-y-[36px] lg:flex lg:flex-nowrap 2xl:gap-x-[40px]">
+					<div className="xs:grid-cols-2 grid w-full grid-cols-1 justify-between gap-x-[40px] gap-y-[36px] max-[440px]:grid-cols-1 lg:flex lg:flex-nowrap 2xl:gap-x-[40px]">
 						{headerNav
 							.filter((item) => item.main)
 							.map((item) => {
 								const active = isActive(pathname, item.href)
 
 								if (item.children?.length) {
+									const isExpanded = expandedItems.has(item.key)
 									return (
 										<div
 											key={item.key}
 											className="xs:max-w-[180px] w-full"
 										>
-											<p className="xs:mb-[30px] xs:text-[20px] mb-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
-											{item.children?.map((child) => {
-												const childActive = isActive(pathname, child.href)
-												return (
-													<Link
-														key={child.key}
-														href={child.href ?? '/'}
-														aria-current={childActive ? 'page' : undefined}
-														className={[
-															'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] break-word mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
-															childActive ? 'text-muted-light' : '',
-															'focus-visible:text-muted-light focus-visible:outline-none',
-														].join(' ')}
-														onClick={() => setOpen(false)}
-													>
-														{t(child.key)}
-													</Link>
-												)
-											})}
+											<div className="max-[440px]:hidden">
+												<p className="xs:mb-[30px] xs:text-[20px] text-[18px] leading-none font-bold text-white">{t(item.key)}</p>
+											</div>
+											<button
+												type="button"
+												onClick={() => toggleItem(item.key)}
+												className="hidden max-[440px]:flex max-[440px]:w-full max-[440px]:items-center max-[440px]:justify-between max-[440px]:text-left max-[440px]:text-[18px] max-[440px]:leading-none max-[440px]:font-bold max-[440px]:text-white"
+											>
+												<span>{t(item.key)}</span>
+												<IconArrDown
+													size={20}
+													className={['transition-transform duration-300', isExpanded ? 'rotate-180' : 'rotate-0'].join(' ')}
+													aria-hidden="true"
+												/>
+											</button>
+											<div className="max-[440px]:hidden">
+												{item.children?.map((child) => {
+													const childActive = isActive(pathname, child.href)
+													return (
+														<Link
+															key={child.key}
+															href={child.href ?? '/'}
+															aria-current={childActive ? 'page' : undefined}
+															className={[
+																'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] break-word mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
+																childActive ? 'text-muted-light' : '',
+																'focus-visible:text-muted-light focus-visible:outline-none',
+															].join(' ')}
+															onClick={() => setOpen(false)}
+														>
+															{t(child.key)}
+														</Link>
+													)
+												})}
+											</div>
+											<div
+												className={[
+													'max-[440px]:overflow-hidden max-[440px]:transition-all max-[440px]:duration-300 max-[440px]:ease-in-out',
+													isExpanded ? 'max-[440px]:max-h-[1000px] max-[440px]:opacity-100' : 'max-[440px]:max-h-0 max-[440px]:opacity-0',
+												].join(' ')}
+											>
+												<div className="pt-[30px] max-[440px]:flex max-[440px]:flex-col">
+													{item.children?.map((child) => {
+														const childActive = isActive(pathname, child.href)
+														return (
+															<Link
+																key={child.key}
+																href={child.href ?? '/'}
+																aria-current={childActive ? 'page' : undefined}
+																className={[
+																	'font-regular transition-duration-300 hover:text-muted-light xs:mb-[20px] xs:text-[16px] break-word mb-[10px] block text-left text-[14px] text-white transition-colors last:mb-0',
+																	childActive ? 'text-muted-light' : '',
+																	'focus-visible:text-muted-light focus-visible:outline-none',
+																].join(' ')}
+																onClick={() => setOpen(false)}
+															>
+																{t(child.key)}
+															</Link>
+														)
+													})}
+												</div>
+											</div>
 										</div>
 									)
 								}

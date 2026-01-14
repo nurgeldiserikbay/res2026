@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl'
 
+import { HeroBanner } from '@/shared/ui/banner'
 import { SLIDES } from '@/widgets/region/mocks'
 import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
-import { AboutRegionBanner } from '@/widgets/region/ui/AboutRegionBanner'
 import { Climate } from '@/widgets/region/ui/Climate'
 import { FloraAndFauna } from '@/widgets/region/ui/FloraAndFauna'
 import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
@@ -103,14 +103,14 @@ export default function Page() {
 			},
 			{
 				id: 2,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title3`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
 				image: '/imgs/recycle3.png',
 			},
 			{
 				id: 3,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title3`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
 				image: '/imgs/recycle2.png',
 			},
 		],
@@ -142,9 +142,10 @@ export default function Page() {
 
 	return (
 		<>
-			<AboutRegionBanner
+			<HeroBanner
 				title={t(`pages.regions.kazakhstan.title`)}
 				bgImage="/imgs/region-banner.png"
+				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/about/region/kazakhstan' }]}
 			/>
 
 			<RegionTabs tabs={MENU_ITEMS} />

@@ -3,7 +3,7 @@ export const SLIDES = [
 	// 	id: 1,
 	// 	image: '/imgs/flora-and-fauna/flora-and-fauna-1.png',
 	// 	title: {
-	// 		kk: 'Қазақстанның флорасы мен фаунасы 1',
+	// 		kk: 'Қазақстанның флорасы мен фаунасы',
 	// 		ru: 'Флора и фауна Казахстана',
 	// 		en: 'The flora and fauna of Kazakhstan',
 	// 	},
@@ -20,7 +20,7 @@ export const SLIDES = [
 		id: 2,
 		image: '/imgs/flora-and-fauna/flora-and-fauna-2.png',
 		title: {
-			kk: 'Қазақстанның флорасы мен фаунасы 2',
+			kk: 'Қазақстанның флорасы мен фаунасы',
 			ru: 'Флора и фауна Казахстана',
 			en: 'The flora and fauna of Kazakhstan',
 		},
@@ -37,7 +37,7 @@ export const SLIDES = [
 		id: 3,
 		image: '/imgs/flora-and-fauna/flora-and-fauna-3.png',
 		title: {
-			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			kk: 'Қазақстанның флорасы мен фаунасы',
 			ru: 'Флора и фауна Казахстана',
 			en: 'The flora and fauna of Kazakhstan',
 		},
@@ -54,7 +54,7 @@ export const SLIDES = [
 		id: 4,
 		image: '/imgs/flora-and-fauna/flora-and-fauna-4.png',
 		title: {
-			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			kk: 'Қазақстанның флорасы мен фаунасы',
 			ru: 'Флора и фауна Казахстана',
 			en: 'The flora and fauna of Kazakhstan',
 		},
@@ -71,7 +71,7 @@ export const SLIDES = [
 		id: 5,
 		image: '/imgs/flora-and-fauna/flora-and-fauna-5.png',
 		title: {
-			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			kk: 'Қазақстанның флорасы мен фаунасы',
 			ru: 'Флора и фауна Казахстана',
 			en: 'The flora and fauna of Kazakhstan',
 		},
@@ -88,7 +88,7 @@ export const SLIDES = [
 		id: 6,
 		image: '/imgs/flora-and-fauna/flora-and-fauna-6.png',
 		title: {
-			kk: 'Қазақстанның флорасы мен фаунасы 3',
+			kk: 'Қазақстанның флорасы мен фаунасы',
 			ru: 'Флора и фауна Казахстана',
 			en: 'The flora and fauna of Kazakhstan',
 		},
@@ -105,7 +105,7 @@ export const SLIDES = [
 	// 	id: 7,
 	// 	image: '/imgs/flora-and-fauna/flora-and-fauna-7.png',
 	// 	title: {
-	// 		kk: 'Қазақстанның флорасы мен фаунасы 3',
+	// 		kk: 'Қазақстанның флорасы мен фаунасы',
 	// 		ru: 'Флора и фауна Казахстана',
 	// 		en: 'The flora and fauna of Kazakhstan',
 	// 	},

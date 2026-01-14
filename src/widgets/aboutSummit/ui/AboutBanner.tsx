@@ -39,12 +39,14 @@ export function AboutBanner() {
 	return (
 		<>
 			<section
-				className={[!appConfig.isProduction ? `bg-primary-dark pt-[100px] max-[441px]:pt-[178px]` : `bg-primary-dark pt-[100px]`].join(``)}
+				className={[
+					!appConfig.isProduction ? `bg-primary-dark relative pt-[100px] max-[441px]:pt-[178px]` : `bg-primary-dark pt-[100px]`,
+				].join(``)}
 			>
 				<div
 					ref={BannerRef}
 					data-animated-banner
-					className="relative box-border min-h-[795px] bg-linear-to-b from-[#41754F] to-[#02493F] bg-cover bg-center pt-[184px] pb-[50px] sm:min-h-[700px] sm:pt-[120px] md:min-h-[800px] md:pt-[150px] lg:min-h-[900px] lg:pt-[200px] xl:min-h-[1000px] xl:pt-[250px] 2xl:min-h-[1160px] 2xl:pt-[304px]"
+					className="xs:pt-[184px] relative box-border min-h-[795px] bg-linear-to-b from-[#41754F] to-[#02493F] bg-cover bg-center pt-[154px] pb-[50px] sm:min-h-[700px] sm:pt-[140px] md:min-h-[800px] md:pt-[150px] lg:min-h-[900px] lg:pt-[200px] xl:min-h-[1000px] xl:pt-[250px] 2xl:min-h-[1160px] 2xl:pt-[304px]"
 				>
 					<Image
 						ref={MapRef}
@@ -52,11 +54,12 @@ export function AboutBanner() {
 						alt="About Summit Logo"
 						width={1039}
 						height={681}
-						className="absolute top-[40px] left-0 block opacity-0 max-[762px]:min-w-[120vw] max-[480px]:min-w-[130vw] max-[400px]:min-w-[500px] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]"
+						className="xs:w-[580px] absolute top-[30px] left-0 block w-[470px] max-w-none opacity-0 md:w-[640px] lg:w-[780px] xl:w-[980px] 2xl:w-[1080px]"
 					/>
 
-					<Container className="relative z-10 flex flex-col items-start justify-between gap-[91px] sm:gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
-						<div className="w-full max-w-[706px] lg:mt-[43px]">
+					{/* className="max-[762px]:min-w-[120vw] max-[480px]:min-w-[130vw] max-[400px]:min-w-[500px] sm:top-[-140px] md:top-[23px] md:w-full md:max-w-[1039px] lg:top-[23px]" */}
+					<Container className="relative z-10 flex min-h-full flex-col items-start justify-between gap-[191px] sm:gap-[30px] lg:flex-row lg:items-start lg:gap-[40px] xl:gap-[60px]">
+						<div className="w-full max-w-[580px] lg:mt-[23px] xl:max-w-[680px]">
 							<h1
 								ref={TitleRef}
 								className="xs:mb-[30px] xs:text-[48px] 3xl:text-[128px] mb-[20px] w-full translate-y-[-90px] text-left text-[36px] leading-none font-bold text-white opacity-0 sm:mb-[40px] sm:text-[48px] md:mb-[50px] md:text-[56px] lg:mb-[55px] lg:text-[72px] xl:mb-[60px] xl:text-[96px] 2xl:text-[112px]"
@@ -65,7 +68,7 @@ export function AboutBanner() {
 							</h1>
 							<p
 								ref={SubtitleRef}
-								className="text-text w-full max-w-[286px] translate-y-[90px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] md:max-w-full lg:mb-[120px] xl:mb-[150px] 2xl:mb-[181px]"
+								className="text-text xs:text-[16px] xs:max-w-[346px] w-full max-w-[286px] translate-y-[90px] text-justify text-[14px] leading-normal font-normal whitespace-pre-line opacity-0 sm:mb-[50px] sm:text-[16px] md:mb-[80px] lg:mb-[120px] lg:max-w-[456px] xl:mb-[150px] xl:max-w-full 2xl:mb-[181px]"
 							>
 								{t('pages.about.resText1')}
 							</p>
@@ -80,13 +83,13 @@ export function AboutBanner() {
 							</Link>
 						</div>
 
-						<div className="sm:mx-unset mx-auto">
+						<div className="mx-auto sm:mx-0 sm:self-end lg:self-center 2xl:self-start">
 							<div
 								ref={DateBlockRef}
-								className="xs:text-[36px] xs:mb-[20px] 3xl:text-[111px] xs:ml-[160px] mb-[30px] ml-[60px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:ml-0 sm:text-[56px] md:text-[64px] lg:text-[72px] xl:text-[82px] 2xl:text-[98px]"
+								className="xs:text-[32px] xs:mb-[20px] 3xl:text-[88px] xs:ml-[160px] mb-[30px] ml-[60px] w-full max-w-[685px] translate-y-[50px] text-left text-[24px] leading-[0.96] font-bold text-white opacity-0 sm:ml-0 sm:text-[24px] md:text-[36px] lg:text-[54px] xl:text-[82px] 2xl:text-[84px]"
 							>
-								<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
-								<div className="block">Summit 2026</div>
+								<div className="text-muted-light block">{t(`titles.Regional`)}</div> <div className="block">{t(`titles.Ecological`)}</div>{' '}
+								<div className="block">{t(`titles.Summit2026`)}</div>
 							</div>
 
 							<Link
