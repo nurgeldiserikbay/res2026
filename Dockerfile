@@ -31,5 +31,7 @@ EXPOSE 3000
 ENV NODE_ENV=production
 ENV NEXT_PUBLIC_GIT_BRANCH=production
 ENV PORT=3000
+ENV HOST=0.0.0.0
+
 
 CMD ["node", "server.js"]
