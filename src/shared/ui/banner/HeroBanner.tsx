@@ -10,14 +10,16 @@ import { Container } from '@/shared/ui/container/container'
 
 export interface HeroBannerProps {
 	title: string
+	subtitle?: string
 	bgImage: string
 	breadcrumbs?: { label: string; href: string }[]
 	className?: string
 }
 
-export function HeroBanner({ title, bgImage, breadcrumbs, className = '' }: HeroBannerProps) {
+export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = '' }: HeroBannerProps) {
 	const BannerRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
+	const SubtitleRef = useRef<HTMLParagraphElement>(null)
 	const BreadcrumbsRef = useRef<HTMLDivElement>(null)
 
 	useAnimBg(BannerRef, {
@@ -29,6 +31,7 @@ export function HeroBanner({ title, bgImage, breadcrumbs, className = '' }: Hero
 		bgImage,
 	})
 	useAnimSlide(TitleRef, { y: 50, delay: 0.2 })
+	useAnimSlide(SubtitleRef, { y: 50, delay: 0.2 })
 	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
 
 	return (
@@ -37,7 +40,7 @@ export function HeroBanner({ title, bgImage, breadcrumbs, className = '' }: Hero
 			data-animated-banner
 			className={[
 				`flex min-h-[567px] flex-col bg-cover bg-center lg:min-h-[795px]`,
-				!appConfig.isProduction ? `pt-[178px]` : `pt-[100px]`,
+				!appConfig.isProduction ? `pt-[218px]` : `pt-[140px]`,
 				className,
 			]
 				.filter(Boolean)
@@ -53,12 +56,22 @@ export function HeroBanner({ title, bgImage, breadcrumbs, className = '' }: Hero
 						<Breadcrumbs breadcrumbs={breadcrumbs} />
 					</div>
 				)}
-				<h1
-					ref={TitleRef}
-					className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
-				>
-					{title}
-				</h1>
+				<div>
+					<h1
+						ref={TitleRef}
+						className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
+					>
+						{title}
+					</h1>
+					{subtitle && (
+						<p
+							ref={SubtitleRef}
+							className="mt-[30px] max-w-[723px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0 sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
+						>
+							{subtitle}
+						</p>
+					)}
+				</div>
 			</Container>
 		</section>
 	)
