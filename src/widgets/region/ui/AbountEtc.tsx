@@ -105,6 +105,13 @@ export function AbountEtc({
 		'/imgs/national-inits/green4.png',
 	]
 
+	const defaultMobImages = [
+		'/imgs/national-inits/green1-mobile.png',
+		'/imgs/national-inits/green2-mobile.png',
+		'/imgs/national-inits/green3.png',
+		'/imgs/national-inits/green4.png',
+	]
+
 	const introDefaultImages = ['/imgs/recycle1.png', '/imgs/recycle2.png', '/imgs/recycle3.png']
 
 	return (
@@ -212,31 +219,39 @@ export function AbountEtc({
 								</div>
 							</div>
 
-							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-[55fr_45fr]">
+							<div className="mb-[40px] grid grid-cols-1 gap-x-[40px] gap-y-[50px] sm:grid-cols-2 xl:mb-0 xl:grid-cols-[55fr_45fr] xl:gap-x-[10px]">
 								{nationalInitiatives.slice(0, 2).map((initiative, index) => {
 									const bgImage = initiative.image || defaultImages[index % defaultImages.length]
-									const gridColumnClass = index === 0 ? 'sm:col-start-1' : 'sm:col-start-2'
+									const bgMobImage = initiative.image || defaultMobImages[index % defaultMobImages.length]
+									const gridColumnClass = index === 0 ? 'xl:col-start-1' : 'xl:col-start-2'
 
 									return (
 										<div
 											key={initiative.id}
-											className={`relative h-full translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
+											className={`relative h-full translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 max-[1280px]:bg-none! sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
 											style={{
 												backgroundImage: `url(${bgImage})`,
 												backgroundSize: 'cover',
-												backgroundPosition: 'center',
+												backgroundPosition: '100% 0px',
 												backgroundRepeat: 'no-repeat',
 											}}
 										>
-											<div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/50" />
+											<div className="absolute inset-0 hidden bg-linear-to-b from-black/40 to-black/50 xl:block" />
 
-											<div className="relative z-10 flex h-full flex-col justify-end p-[20px] sm:p-[25px] md:p-[30px]">
+											<div className="relative z-10 flex h-full flex-col justify-start xl:justify-end xl:p-[30px]">
 												{initiative.title && (
-													<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
+													<h5 className="text-text mb-[30px] text-left text-[18px] leading-normal font-bold sm:text-[19px] md:text-[20px] xl:text-white">
 														{initiative.title}
 													</h5>
 												)}
-												<p className="text-[13px] leading-normal text-white sm:text-[14px] md:text-justify md:text-[16px]">
+												<Image
+													src={bgMobImage}
+													alt={initiative.title}
+													width={379}
+													height={225}
+													className="mb-[30px] block h-auto w-full rounded-[12px] xl:hidden"
+												/>
+												<p className="text-text text-[13px] leading-normal sm:text-[14px] md:text-justify md:text-[16px] xl:text-white">
 													{initiative.description}
 												</p>
 											</div>
@@ -245,15 +260,17 @@ export function AbountEtc({
 								})}
 							</div>
 
-							<div className="grid grid-cols-1 gap-[10px] sm:grid-cols-[45fr_55fr]">
+							<div className="grid grid-cols-1 gap-x-[40px] gap-y-[50px] sm:grid-cols-2 xl:mb-0 xl:grid-cols-[45fr_55fr] xl:gap-x-[10px]">
 								{nationalInitiatives.slice(2, 4).map((initiative, index) => {
 									const originalIndex = index + 2
 									const bgImage = initiative.image || defaultImages[originalIndex % defaultImages.length]
-									const gridColumnClass = index === 0 ? 'sm:col-start-1' : 'sm:col-start-2'
+									const bgMobImage = initiative.image || defaultMobImages[index % defaultMobImages.length]
+									const gridColumnClass = index === 0 ? 'xl:col-start-1' : 'xl:col-start-2'
+
 									return (
 										<div
 											key={initiative.id}
-											className={`relative h-full translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
+											className={`relative h-full translate-y-[50px] overflow-hidden rounded-[12px] opacity-0 max-[1280px]:bg-none! sm:min-h-[350px] md:min-h-[400px] ${gridColumnClass}`}
 											style={{
 												backgroundImage: `url(${bgImage})`,
 												backgroundSize: 'cover',
@@ -261,15 +278,24 @@ export function AbountEtc({
 												backgroundRepeat: 'no-repeat',
 											}}
 										>
-											<div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/50" />
+											<div className="absolute inset-0 hidden bg-linear-to-b from-black/40 to-black/50 xl:block" />
 
-											<div className="relative z-10 flex h-full flex-col justify-end p-[20px] sm:p-[25px] md:p-[30px]">
+											<div className="relative z-10 flex h-full flex-col justify-start xl:justify-end xl:p-[30px]">
 												{initiative.title && (
-													<h5 className="mb-[10px] text-left text-[18px] leading-normal font-bold text-white sm:text-[19px] md:text-[20px]">
+													<h5 className="text-text mb-[30px] text-left text-[18px] leading-normal font-bold sm:text-[19px] md:text-[20px] xl:text-white">
 														{initiative.title}
 													</h5>
 												)}
-												<p className="text-[13px] leading-normal text-white sm:text-[14px] md:text-[16px]">{initiative.description}</p>
+												<Image
+													src={bgMobImage}
+													alt={initiative.title}
+													width={379}
+													height={225}
+													className="mb-[30px] block h-auto w-full rounded-[12px] xl:hidden"
+												/>
+												<p className="text-text text-[13px] leading-normal sm:text-[14px] md:text-justify md:text-[16px] xl:text-white">
+													{initiative.description}
+												</p>
 											</div>
 										</div>
 									)
