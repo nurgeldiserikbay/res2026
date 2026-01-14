@@ -64,14 +64,14 @@ export function Footer() {
 							src="/imgs/footer-1.png"
 							alt="Footer Map 1"
 							width={277}
-							height={218}
+							height={154}
 							className="h-auto w-full object-cover"
 						/>
 						<Image
 							src="/imgs/footer-2.png"
 							alt="Footer Map 2"
 							width={277}
-							height={218}
+							height={154}
 							className="h-auto w-full object-cover"
 						/>
 					</div>
@@ -116,8 +116,9 @@ export function Footer() {
 						</div>
 					</div>
 
-					<div className="mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap lg:mb-[68px] 2xl:mb-[123px]">
-						{/* <div className="flex flex-col items-start justify-between">
+					{!appConfig.isProduction && (
+						<div className="mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap lg:mb-[68px] 2xl:mb-[123px]">
+							{/* <div className="flex flex-col items-start justify-between">
 							<div
 								ref={FooterContactsRef}
 								className="translate-y-[50px] opacity-0"
@@ -139,13 +140,14 @@ export function Footer() {
 							</div>
 						</div> */}
 
-						<div
-							ref={FooterSocialRef}
-							className="hidden translate-y-[50px] opacity-0 lg:block"
-						>
-							{!appConfig.isProduction && <FooterSocial />}
+							<div
+								ref={FooterSocialRef}
+								className="hidden translate-y-[50px] opacity-0 lg:block"
+							>
+								<FooterSocial />
+							</div>
 						</div>
-					</div>
+					)}
 
 					<div className="flex flex-wrap items-end justify-between gap-[60px] gap-y-[30px] sm:flex-nowrap">
 						<div className="hidden items-start justify-between gap-[30px] lg:block">
