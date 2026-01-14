@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
@@ -45,17 +46,35 @@ export function Footer() {
 			<Container className="3xl:gap-x-[60px] flex flex-col items-stretch justify-between gap-x-[40px] gap-y-[30px] lg:flex-row">
 				<div
 					ref={MapRef}
-					className="aspect-[1.11] grow translate-y-[50px] opacity-0 lg:max-w-[716px]"
+					className="grow translate-y-[50px] opacity-0 lg:max-w-[716px]"
 				>
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
-						title={t('pages.footer.mapTitle') || 'Location map'}
-						style={{ border: 0 }}
-						allowFullScreen
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
-						className="h-full w-full rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.2)]"
-					></iframe>
+					<div className="mb-[6px] aspect-[1.348] w-full">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
+							title={t('pages.footer.mapTitle') || 'Location map'}
+							style={{ border: 0 }}
+							allowFullScreen
+							loading="lazy"
+							referrerPolicy="no-referrer-when-downgrade"
+							className="h-full w-full rounded-[12px]"
+						></iframe>
+					</div>
+					<div className="grid w-full grid-cols-2 gap-[6px]">
+						<Image
+							src="/imgs/footer-1.png"
+							alt="Footer Map 1"
+							width={277}
+							height={218}
+							className="h-auto w-full object-cover"
+						/>
+						<Image
+							src="/imgs/footer-2.png"
+							alt="Footer Map 2"
+							width={277}
+							height={218}
+							className="h-auto w-full object-cover"
+						/>
+					</div>
 				</div>
 				<div className="grow lg:max-w-[1180px]">
 					<div className="mb-[30px] flex items-start justify-between gap-[30px] lg:hidden">
