@@ -44,6 +44,10 @@ export function ImageSlider({ images, alt }: { images: string[]; alt: string }) 
 							alt={alt}
 							width={900}
 							height={430}
+							loading="lazy"
+							unoptimized={true}
+							quality={100}
+							decoding="async"
 							className="md:aspect-unset block w-full rounded-[12px]"
 						/>
 					</SwiperSlide>
