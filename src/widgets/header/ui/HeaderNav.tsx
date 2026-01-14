@@ -146,7 +146,7 @@ function NavDropdown({
 						style={dropdownStyle}
 					>
 						<div className="absolute bottom-[-35%] left-1/2 h-[60%] w-[130%] -translate-x-1/2 rounded-full bg-black/70 blur-[18vw]"></div>
-						<div className="relative z-10 h-full w-full rounded-[12px] bg-gradient-to-b from-[#0C453B] via-[#59D7C033] to-[#0C453B] px-[22px] py-[28px]">
+						<div className="relative z-10 h-full w-full rounded-[12px] bg-linear-to-b from-[#0C453B] via-[#59D7C033] to-[#0C453B] px-[22px] py-[28px]">
 							{item.children?.map((c) => (
 								<Link
 									key={c.key}
