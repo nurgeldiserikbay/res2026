@@ -3,15 +3,15 @@
 import { useQuery } from '@tanstack/react-query'
 import { useLocale, useTranslations } from 'next-intl'
 
-import { Link } from '@/i18n/navigation'
-
 import { NewsShortItem } from '@/entities/news/components/NewsShortItem'
 import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
 import { NewsItem } from '@/entities/news/news.types'
+import { Link } from '@/i18n/navigation'
 import { Locale } from '@/shared/config/i18n'
+import { IconEye } from '@/shared/icons/IconEye'
 import { IResponse } from '@/shared/types'
 import { Container } from '@/shared/ui/container/container'
-import { formatDate } from '@/shared/utils/formatDate'
+// import { formatDate } from '@/shared/utils/formatDate'
 
 interface NewsDetailProps {
 	slug: string
@@ -57,7 +57,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 		)
 	}
 
-	const formattedDate = formatDate(newsItem.publication_date, locale)
+	// const formattedDate = formatDate(newsItem.publication_date, locale)
 
 	return (
 		<section className="bg-white pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] lg:pt-[80px] lg:pb-[80px] 2xl:pt-[100px] 2xl:pb-[100px]">
@@ -66,7 +66,13 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 					<h2 className="text-text 3xl:text-[48px] mb-[50px] max-w-[1214px] text-[32px] leading-none font-normal xl:text-[36px] 2xl:text-[44px]">
 						{newsItem.name}
 					</h2>
-					<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">{formattedDate}</div>
+					<div className="mb-[10px] text-[13px] leading-none font-light text-[#777C83]">{newsItem.publication_date}</div>
+					<div
+						className={[`text-text mt-[10px] flex items-center justify-start gap-[10px] text-[13px] leading-none font-medium`].join(` `)}
+					>
+						<IconEye />
+						<span>{newsItem.views}</span>
+					</div>
 
 					{newsItem.image && (
 						<img

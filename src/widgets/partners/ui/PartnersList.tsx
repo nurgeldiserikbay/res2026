@@ -84,6 +84,14 @@ const partnersArray: PartnerGroup[] = [
 		title: 'titles.partners',
 		list: [
 			{
+				id: 0,
+				image: '/imgs/logo/logo-8.svg',
+				title: 'Organizer 8',
+				link: '/partner-12',
+				width: 167,
+				height: 122,
+			},
+			{
 				id: 1,
 				image: '/imgs/logo/proon.svg',
 				title: 'proon',
@@ -251,14 +259,6 @@ const partnersArray: PartnerGroup[] = [
 				width: 167,
 				height: 122,
 			},
-			// {
-			// 	id: 22,
-			// 	image: '/imgs/logo/logo-8.svg',
-			// 	title: 'Organizer 8',
-			// 	link: '/partner-12',
-			// 	width: 167,
-			// 	height: 122,
-			// },
 			// {
 			// 	id: 23,
 			// 	image: '/imgs/logo/WMO.svg',
