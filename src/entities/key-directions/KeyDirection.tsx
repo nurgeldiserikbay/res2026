@@ -29,7 +29,7 @@ export function KeyDirection({ image, title, onClick, className }: IKeyDirection
 					<IconArrowLeft className="text-white" />
 				</button>
 				<h3
-					className="xs:text-[24px] text-[20px] leading-[1.2] font-normal text-white"
+					className="xs:text-[24px] line-clamp-3 h-[86.5px] overflow-hidden text-[20px] leading-[1.2] font-normal text-white"
 					dangerouslySetInnerHTML={{ __html: title }}
 				></h3>
 			</div>

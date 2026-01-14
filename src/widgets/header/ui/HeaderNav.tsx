@@ -139,14 +139,14 @@ function NavDropdown({
 			</button>
 
 			{open ? (
-				<div className={['absolute top-full left-1/2 z-1 min-w-[191px] -translate-x-1/2 transform'].join(' ')}>
+				<div className={['absolute top-full left-1/2 z-1 min-w-[241px] -translate-x-1/2 transform'].join(' ')}>
 					<div
 						role="menu"
 						className={['bg-primary-dark relative', 'mt-[21px]', 'box-border rounded-[12px]'].join(' ')}
 						style={dropdownStyle}
 					>
 						<div className="absolute bottom-[-35%] left-1/2 h-[60%] w-[130%] -translate-x-1/2 rounded-full bg-black/70 blur-[18vw]"></div>
-						<div className="relative z-10 h-full w-full rounded-[12px] bg-gradient-to-b from-[#0C453B] via-[#59D7C033] to-[#0C453B] px-[22px] py-[28px]">
+						<div className="relative z-10 h-full w-full rounded-[12px] bg-linear-to-b from-[#0C453B] via-[#59D7C033] to-[#0C453B] px-[22px] py-[28px]">
 							{item.children?.map((c) => (
 								<Link
 									key={c.key}

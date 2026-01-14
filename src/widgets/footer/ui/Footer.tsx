@@ -48,7 +48,7 @@ export function Footer() {
 					ref={MapRef}
 					className="grow translate-y-[50px] opacity-0 lg:max-w-[716px]"
 				>
-					<div className="mb-[6px] aspect-[1.348] w-full">
+					<div className="mb-[6px] aspect-[1.8] w-full">
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.8727574198415!2d71.40879307696517!3d51.09235574093826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585ad0a5c0621%3A0x42c14eac2e46fcd3!2sCongress%20Centre%20Astana!5e0!3m2!1sen!2skz!4v1767711978084!5m2!1sen!2skz"
 							title={t('pages.footer.mapTitle') || 'Location map'}
@@ -148,10 +148,10 @@ export function Footer() {
 					</div>
 
 					<div className="flex flex-wrap items-end justify-between gap-[60px] gap-y-[30px] sm:flex-nowrap">
-						<div className="hidden items-start justify-between gap-[30px] sm:max-w-[247px] lg:block">
+						<div className="hidden items-start justify-between gap-[30px] lg:block">
 							<div
 								ref={FooterText1Ref}
-								className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px]"
+								className="text-text mb-0 translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:text-[14px]"
 							>
 								{t(`pages.footer.text`)}
 							</div>

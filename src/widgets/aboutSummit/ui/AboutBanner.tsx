@@ -40,8 +40,9 @@ export function AboutBanner() {
 		<>
 			<section
 				className={[
+					`relative mx-auto max-w-[1920px]`,
 					!appConfig.isProduction ? `bg-primary-dark relative pt-[100px] max-[441px]:pt-[178px]` : `bg-primary-dark pt-[100px]`,
-				].join(``)}
+				].join(` `)}
 			>
 				<div
 					ref={BannerRef}
