@@ -1,5 +1,18 @@
-import { Soon } from '@/widgets/soon/Soon'
+import { useTranslations } from 'next-intl'
+
+import { HeroBanner } from '@/shared/ui/banner'
 
 export default function Page() {
-	return <Soon />
+	const t = useTranslations()
+
+	return (
+		<>
+			<HeroBanner
+				title={t(`pages.useful.astana.title`)}
+				bgImage="/imgs/astana-banner.png"
+				breadcrumbs={[{ label: t(`pages.useful.astana.pageTitle`), href: '/useful/astana' }]}
+				subtitle={t(`pages.useful.astana.subtitle`)}
+			/>
+		</>
+	)
 }
