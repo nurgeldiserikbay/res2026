@@ -59,8 +59,8 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 				{ opacity: 0 },
 				{
 					opacity: 1,
-					duration: 1.2,
-					delay: 0.8,
+					duration: 0.7,
+					delay: 0.2,
 					ease: 'power2.out',
 					scrollTrigger: {
 						trigger: SectionRef.current,
@@ -142,7 +142,7 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 							alt={mapAlt}
 							width={mapWidth}
 							height={mapHeight}
-							className="pointer-events-none absolute top-[-750px] left-[15%] z-0 min-w-[800px] transform opacity-0 lg:top-[-480px] lg:left-[5%] lg:block lg:min-w-[1885px]"
+							className="pointer-events-none absolute top-[-620px] left-[15%] z-0 min-w-[600px] transform opacity-0 lg:top-[-480px] lg:left-[5%] lg:block lg:min-w-[1685px]"
 						/>
 					</div>
 				</Container>

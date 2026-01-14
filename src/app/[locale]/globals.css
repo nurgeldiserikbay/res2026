@@ -76,6 +76,11 @@ body {
 	width: 0; /* Устанавливаем ширину скроллбара в 0 */
 }
 
+section {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
 /* Стили для анимированного баннера с псевдоэлементом */
 [data-animated-banner] {
 	position: relative;

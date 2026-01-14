@@ -39,7 +39,9 @@ export function AboutBanner() {
 	return (
 		<>
 			<section
-				className={[!appConfig.isProduction ? `bg-primary-dark pt-[100px] max-[441px]:pt-[178px]` : `bg-primary-dark pt-[100px]`].join(``)}
+				className={[
+					!appConfig.isProduction ? `bg-primary-dark relative pt-[100px] max-[441px]:pt-[178px]` : `bg-primary-dark pt-[100px]`,
+				].join(``)}
 			>
 				<div
 					ref={BannerRef}
@@ -84,10 +86,10 @@ export function AboutBanner() {
 						<div className="mx-auto sm:mx-0 sm:self-end lg:self-center 2xl:self-start">
 							<div
 								ref={DateBlockRef}
-								className="xs:text-[36px] xs:mb-[20px] 3xl:text-[111px] xs:ml-[160px] mb-[30px] ml-[60px] w-full max-w-[685px] translate-y-[50px] text-left text-[36px] leading-[0.96] font-bold text-white opacity-0 sm:ml-0 sm:text-[36px] md:text-[48px] lg:text-[54px] xl:text-[82px] 2xl:text-[98px]"
+								className="xs:text-[32px] xs:mb-[20px] 3xl:text-[88px] xs:ml-[160px] mb-[30px] ml-[60px] w-full max-w-[685px] translate-y-[50px] text-left text-[24px] leading-[0.96] font-bold text-white opacity-0 sm:ml-0 sm:text-[24px] md:text-[36px] lg:text-[54px] xl:text-[82px] 2xl:text-[84px]"
 							>
-								<div className="text-muted-light block">Regional</div> <div className="block">Ecological</div>{' '}
-								<div className="block">Summit 2026</div>
+								<div className="text-muted-light block">{t(`titles.Regional`)}</div> <div className="block">{t(`titles.Ecological`)}</div>{' '}
+								<div className="block">{t(`titles.Summit2026`)}</div>
 							</div>
 
 							<Link

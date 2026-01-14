@@ -145,6 +145,7 @@ export default function Page() {
 			<AboutRegionBanner
 				title={t(`pages.regions.kazakhstan.title`)}
 				bgImage="/imgs/region-banner.png"
+				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/about/region/kazakhstan' }]}
 			/>
 
 			<RegionTabs tabs={MENU_ITEMS} />
