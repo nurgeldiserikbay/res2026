@@ -139,7 +139,7 @@ function NavDropdown({
 			</button>
 
 			{open ? (
-				<div className={['absolute top-full left-1/2 z-1 min-w-[191px] -translate-x-1/2 transform'].join(' ')}>
+				<div className={['absolute top-full left-1/2 z-1 min-w-[241px] -translate-x-1/2 transform'].join(' ')}>
 					<div
 						role="menu"
 						className={['bg-primary-dark relative', 'mt-[21px]', 'box-border rounded-[12px]'].join(' ')}
