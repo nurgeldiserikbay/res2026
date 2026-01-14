@@ -1,5 +1,6 @@
 'use client'
 
+import { useSearchParams } from 'next/navigation'
 import { useLocale } from 'next-intl'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
@@ -19,6 +20,7 @@ export function LanguageSwitcher() {
 	const locale = useLocale() as Locale
 	const router = useRouter()
 	const pathname = usePathname()
+	const searchParams = useSearchParams()
 
 	const options = useMemo(() => (['kk', 'ru', 'en'] as Locale[]).filter((l) => l !== locale), [locale])
 
@@ -102,7 +104,12 @@ export function LanguageSwitcher() {
 										onClick={() => {
 											// Устанавливаем cookie USER_LOCALE для сохранения выбранного языка
 											document.cookie = `USER_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`
-											router.replace(pathname, { locale: l })
+
+											// Сохраняем query параметры
+											const queryString = searchParams.toString()
+											const url = queryString ? `${pathname}?${queryString}` : pathname
+
+											router.replace(url, { locale: l })
 											setOpen(false)
 										}}
 										className={[
