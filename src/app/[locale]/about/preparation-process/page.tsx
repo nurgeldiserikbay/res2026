@@ -34,10 +34,10 @@ export default function Page() {
 					</div>
 
 					<div className="max-w-[721px]">
-						<h4 className="text-text mb-[30px] text-justify text-[20px] leading-normal font-normal md:text-[22px] xl:mb-[60px] xl:text-[24px]">
+						<h4 className="text-text mb-[30px] text-[20px] leading-normal font-normal md:text-[22px] xl:mb-[60px] xl:text-[24px]">
 							{t('pages.preparationProcess.subtitle')}
 						</h4>
-						<p className="text-text text-justify text-[16px] leading-normal font-normal">{t('pages.preparationProcess.text')}</p>
+						<p className="text-text text-[16px] leading-normal font-normal">{t('pages.preparationProcess.text')}</p>
 					</div>
 				</Container>
 			</section>

@@ -32,7 +32,7 @@ export function PrepareProcess({
 				<div className="text-text mb-[30px] max-w-[552px] text-[20px] leading-normal font-normal lg:text-[22px] 2xl:text-[24px]">
 					{subtitle}
 				</div>
-				<div className="text-text max-w-[580px] text-justify text-[16px] leading-normal font-normal">{description}</div>
+				<div className="text-text max-w-[580px] text-[16px] leading-normal font-normal">{description}</div>
 				{link && (
 					<Link
 						href={link.src}
