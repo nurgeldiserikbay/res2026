@@ -4,11 +4,11 @@ import { useTranslations } from 'next-intl'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
 
-export function Soon() {
+export function Soon({ className, hideBtn }: { className?: string; hideBtn?: boolean }) {
 	const t = useTranslations()
 
 	return (
-		<section className="pt-[249px] pb-[50px] md:pb-[60px] lg:pb-[80px] 2xl:pt-[263px] 2xl:pb-[329px]">
+		<section className={[`pt-[249px] pb-[50px] md:pb-[60px] lg:pb-[80px] 2xl:pt-[263px] 2xl:pb-[329px]`, className].join(` `)}>
 			<Container className="flex flex-col items-center justify-center">
 				<Image
 					src="/imgs/blank-tree.svg"
@@ -23,7 +23,7 @@ export function Soon() {
 				<p className="text-text font-regular mb-[40px] max-w-[433px] text-center text-[16px] leading-normal whitespace-pre-line">
 					{t('titles.soonText')}
 				</p>
-				<ButtonDefault href={'/'}>{t('commands.toMainPage')}</ButtonDefault>
+				{!hideBtn && <ButtonDefault href={'/'}>{t('commands.toMainPage')}</ButtonDefault>}
 			</Container>
 		</section>
 	)

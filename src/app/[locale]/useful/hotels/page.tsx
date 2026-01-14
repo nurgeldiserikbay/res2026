@@ -1,4 +1,4 @@
-import { Soon } from '@/widgets/soon/Soon'
+import { Soon } from '@/shared/ui/soon/Soon'
 
 export default function Page() {
 	return <Soon />

@@ -12,6 +12,7 @@ import { Locale } from '@/shared/config/i18n'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { IPaginationResponse } from '@/shared/types'
 import { MainPagination } from '@/shared/ui/pagination/MainPagination'
+import { Soon } from '@/shared/ui/soon/Soon'
 import { formatDate } from '@/shared/utils/formatDate'
 
 import { newsTypes } from '../news.consts'
@@ -96,9 +97,13 @@ export function NewsList({ initialData }: NewsListProps) {
 	// Показываем пустое состояние
 	if (newsItems.length === 0) {
 		return (
-			<div className="flex flex-col items-center justify-center py-[60px]">
-				<p className="text-text text-center text-[24px] font-light">{t('titles.soon')}</p>
-			</div>
+			<Soon
+				className="pt-[10px]! pb-[10px]! md:pb-[10px]! lg:pb-[10px]! 2xl:pt-[10px]! 2xl:pb-[10px]!"
+				hideBtn={true}
+			/>
+			// <div className="flex flex-col items-center justify-center py-[60px]">
+			// 	<p className="text-text text-center text-[24px] font-light">{t('titles.soon')}</p>
+			// </div>
 		)
 	}
 
