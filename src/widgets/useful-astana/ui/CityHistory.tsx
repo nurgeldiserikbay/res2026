@@ -50,7 +50,7 @@ export function CityHistory() {
 					{histories.map((history, index) => (
 						<div
 							key={index}
-							className="flex flex-col items-center justify-start rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] px-[30px] pt-[26px] pb-[26px] text-center"
+							className="flex flex-col items-center justify-start rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] px-[30px] pt-[26px] pb-[26px] text-center"
 						>
 							<h3 className="text-secondary xs:text-[40px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[48px]">
 								{history.title}
