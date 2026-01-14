@@ -72,7 +72,7 @@ export function NewsList({ initialData }: NewsListProps) {
 	const apiType = newsTypes[typeParam as keyof typeof newsTypes] || 'last'
 
 	const queryParams = {
-		per_page: 10,
+		per_page: 12,
 		page: page,
 		type: apiType,
 	}
