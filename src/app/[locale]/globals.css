@@ -102,3 +102,17 @@ section {
 	transform-origin: center center;
 	z-index: 0;
 }
+
+.bg-weather::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(
+		110% 110% at 0% 100%,
+		rgba(224, 234, 184, 1) 0%,
+		rgba(224, 234, 184, 0.6) 30%,
+		rgba(224, 234, 184, 0.25) 55%,
+		rgba(224, 234, 184, 0) 75%
+	);
+	filter: blur(2px);
+}
