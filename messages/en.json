@@ -98,6 +98,8 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"previous": "Previous",
+		"next": "Next",
 		"priceCategory": "Price category",
 		"price": "Price",
 		"error": "Error loading",

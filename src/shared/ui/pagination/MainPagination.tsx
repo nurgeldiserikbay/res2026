@@ -1,6 +1,7 @@
 'use client'
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
 
 type PaginationProps = {
@@ -15,6 +16,7 @@ function clamp(n: number, min: number, max: number) {
 }
 
 export function MainPagination({ totalPages, param = 'page', className = '', siblingCount = 1 }: PaginationProps) {
+	const t = useTranslations()
 	const router = useRouter()
 	const pathname = usePathname()
 	const sp = useSearchParams()
@@ -66,7 +68,7 @@ export function MainPagination({ totalPages, param = 'page', className = '', sib
 					isPrevDisabled ? 'cursor-not-allowed text-[#252A42]/30' : 'hover:text-secondary cursor-pointer text-[#252A42]',
 				].join(' ')}
 			>
-				Предыдущий
+				{t('labels.previous')}
 			</button>
 
 			<div className="flex items-center gap-[14px]">
@@ -98,7 +100,7 @@ export function MainPagination({ totalPages, param = 'page', className = '', sib
 					isNextDisabled ? 'cursor-not-allowed text-[#252A42]/30' : 'hover:text-secondary cursor-pointer text-[#252A42]',
 				].join(' ')}
 			>
-				Следующий
+				{t('labels.next')}
 			</button>
 		</nav>
 	)
