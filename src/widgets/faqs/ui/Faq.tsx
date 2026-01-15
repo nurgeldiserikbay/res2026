@@ -1,6 +1,6 @@
 'use client'
 
-import { Accordion } from '@/shared/ui/Accordion/Accordion'
+import { Accordion } from '@/shared/ui/accordion/Accordion'
 
 import { FaqBlockData } from '../types'
 

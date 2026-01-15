@@ -2,16 +2,16 @@
 
 import { BannerSlides } from '@/shared/components/BannerSlides'
 
-export function AstanaSlides() {
+export function AttractionSlides() {
 	const images = [
 		{
 			id: 0,
-			image: '/imgs/usefulls/astana-slide-1.png',
+			image: '/imgs/baiterek/baiterek-slides-1.png',
 			description: 'Astana is the capital of Kazakhstan',
 		},
 		{
 			id: 1,
-			image: '/imgs/usefulls/astana-slide-2.png',
+			image: '/imgs/baiterek/baiterek-slides-2.png',
 			description: 'Astana is the capital of Kazakhstan',
 		},
 	]
