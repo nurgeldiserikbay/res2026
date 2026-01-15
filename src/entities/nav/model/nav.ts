@@ -12,7 +12,7 @@ export type NavItem = {
 	showFooter: boolean
 }
 
-const navItems: readonly NavItem[] = [
+export const navItems: readonly NavItem[] = [
 	{
 		key: 'about.root',
 		href: '/about',
