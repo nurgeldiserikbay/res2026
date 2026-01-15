@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { appConfig } from '@/shared/config/app.config'
 import type { Locale } from '@/shared/config/i18n'
 import { GSAPProvider } from '@/shared/lib/gsap/provider'
+import YandexMetrica from '@/shared/lib/metrics/YandexMetrica'
 import { QueriesProvider } from '@/shared/providers/QueriesProvider'
 import { Footer } from '@/widgets/footer/ui/Footer'
 import { Header } from '@/widgets/header/ui/Header'
@@ -151,6 +152,7 @@ export default async function RootLayout({
 						<Footer />
 						{/* </div>
 					</div> */}
+						<YandexMetrica />
 					</NextIntlClientProvider>
 				</QueriesProvider>
 			</body>
