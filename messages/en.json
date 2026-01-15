@@ -98,6 +98,12 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"weather": "Weather",
+		"precipitation": "Precipitation probability",
+		"humidity": "Humidity",
+		"wind": "Wind",
+		"speedKmH": "{speed} km/h",
+		"city": "City",
 		"previous": "Previous",
 		"next": "Next",
 		"priceCategory": "Price category",
