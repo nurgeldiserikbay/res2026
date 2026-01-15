@@ -72,7 +72,7 @@ export function AboutSquare() {
 									height={107}
 									className="mb-[60px]"
 								/>
-								<h3 className="text-text text-[16px] leading-normal font-normal whitespace-nowrap lg:text-[18px] 2xl:text-[20px]">
+								<h3 className="text-text text-[16px] leading-normal font-normal lg:text-[18px] 2xl:text-[20px]">
 									{t('pages.useful.venue.safeAndComfort.text1')}
 								</h3>
 							</div>
@@ -84,7 +84,7 @@ export function AboutSquare() {
 									height={107}
 									className="mb-[60px]"
 								/>
-								<h3 className="text-text text-[16px] leading-normal font-normal whitespace-nowrap lg:text-[18px] 2xl:text-[20px]">
+								<h3 className="text-text text-[16px] leading-normal font-normal lg:text-[18px] 2xl:text-[20px]">
 									{t('pages.useful.venue.safeAndComfort.text2')}
 								</h3>
 							</div>
@@ -96,7 +96,7 @@ export function AboutSquare() {
 									height={107}
 									className="mb-[60px]"
 								/>
-								<h3 className="text-text text-[16px] leading-normal font-normal whitespace-nowrap lg:text-[18px] 2xl:text-[20px]">
+								<h3 className="text-text text-[16px] leading-normal font-normal lg:text-[18px] 2xl:text-[20px]">
 									{t('pages.useful.venue.safeAndComfort.text3')}
 								</h3>
 							</div>

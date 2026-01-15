@@ -13,8 +13,8 @@ export default function Page() {
 	return (
 		<>
 			<PageBanner
-				title={t('pages.hotels.title')}
-				breadcrumbs={[{ label: t('pages.hotels.title'), href: '/useful/hotels' }]}
+				title={t('pages.useful.hotels.title')}
+				breadcrumbs={[{ label: t('pages.useful.hotels.title'), href: '/useful/hotels' }]}
 			/>
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">

@@ -20,26 +20,30 @@ export function VisaInfo() {
 
 					<div>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
-							{t('pages.visa.infoTitle')}
+							{t('pages.useful.visa.infoTitle')}
 						</h2>
-						<p className="text-text mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.visa.infoText1')}</p>
-						<p className="text-text text-[16px] leading-normal font-medium whitespace-pre-line">{t('pages.visa.infoText2')}</p>
+						<p className="text-text mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line">
+							{t('pages.useful.visa.infoText1')}
+						</p>
+						<p className="text-text text-[16px] leading-normal font-medium whitespace-pre-line">{t('pages.useful.visa.infoText2')}</p>
 						<ul className="mb-[30px] pl-[5px]">
-							<li>1. {t('pages.visa.infoText21')} </li>
-							<li>2. {t('pages.visa.infoText22')} </li>
-							<li>3. {t('pages.visa.infoText23')} </li>
+							<li>1. {t('pages.useful.visa.infoText21')} </li>
+							<li>2. {t('pages.useful.visa.infoText22')} </li>
+							<li>3. {t('pages.useful.visa.infoText23')} </li>
 						</ul>
-						<p className="text-text mb-[30px] text-[16px] leading-normal font-medium whitespace-pre-line">{t('pages.visa.infoText3')}</p>
+						<p className="text-text mb-[30px] text-[16px] leading-normal font-medium whitespace-pre-line">
+							{t('pages.useful.visa.infoText3')}
+						</p>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:mb-[60px] xl:text-[36px] 2xl:mb-[60px] 2xl:text-[30px]">
-							{t('pages.visa.processingTimeTitle')}
+							{t('pages.useful.visa.processingTimeTitle')}
 						</h2>
 
 						<div className="flex flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] p-[26px] text-center">
-							<div className="text-[16px] leading-normal font-normal text-[#41754F]">{t('pages.visa.processingTimeText1')}</div>
+							<div className="text-[16px] leading-normal font-normal text-[#41754F]">{t('pages.useful.visa.processingTimeText1')}</div>
 							<h3 className="xs:text-[24px] text-[20px] leading-normal font-bold whitespace-nowrap text-[#41754F] sm:text-[28px] md:text-[32px] xl:text-[48px]">
-								{t('pages.visa.processingTimeText2')}
+								{t('pages.useful.visa.processingTimeText2')}
 							</h3>
-							<div className="text-[16px] leading-normal font-normal text-[#41754F]">{t('pages.visa.processingTimeText3')}</div>
+							<div className="text-[16px] leading-normal font-normal text-[#41754F]">{t('pages.useful.visa.processingTimeText3')}</div>
 						</div>
 					</div>
 				</Container>
@@ -49,10 +53,10 @@ export function VisaInfo() {
 				<Container className="grid grid-cols-1 gap-x-[30px] gap-y-[30px] md:grid-cols-2 md:gap-x-[60px]">
 					<div>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:mb-[60px] 2xl:text-[30px]">
-							{t('pages.visa.visaFreeTitle')}
+							{t('pages.useful.visa.visaFreeTitle')}
 						</h2>
 						<p className="text-text mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
-							{t('pages.visa.visaFreeText')}
+							{t('pages.useful.visa.visaFreeText')}
 						</p>
 					</div>
 					<div className="flex items-center justify-center">
@@ -83,12 +87,12 @@ export function VisaInfo() {
 							className="mb-[30px] block w-full rounded-[12px] md:mb-[45px] xl:mb-[72px]"
 						/>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
-							{t('pages.visa.visaJoinTitle')}
+							{t('pages.useful.visa.visaJoinTitle')}
 						</h2>
 						<p className="text-text mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
-							{t('pages.visa.visaJoinText1')}
+							{t('pages.useful.visa.visaJoinText1')}
 						</p>
-						<p className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.visa.visaJoinText2')}</p>
+						<p className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.useful.visa.visaJoinText2')}</p>
 					</div>
 					<div>
 						<Image
@@ -99,12 +103,12 @@ export function VisaInfo() {
 							className="mb-[30px] block w-full rounded-[12px] md:mb-[45px] xl:mb-[72px]"
 						/>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
-							{t('pages.visa.eVisaTitle')}
+							{t('pages.useful.visa.eVisaTitle')}
 						</h2>
 						<p className="text-text mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
-							{t('pages.visa.eVisaText1')}
+							{t('pages.useful.visa.eVisaText1')}
 						</p>
-						<p className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.visa.eVisaText2')}</p>
+						<p className="text-text text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.useful.visa.eVisaText2')}</p>
 					</div>
 				</Container>
 			</section>

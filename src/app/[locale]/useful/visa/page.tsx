@@ -9,8 +9,8 @@ export default function Page() {
 	return (
 		<>
 			<PageBanner
-				title={t('pages.visa.title')}
-				breadcrumbs={[{ label: t('pages.visa.title'), href: '/useful/visa' }]}
+				title={t('pages.useful.visa.title')}
+				breadcrumbs={[{ label: t('pages.useful.visa.title'), href: '/useful/visa' }]}
 			/>
 
 			<VisaInfo />

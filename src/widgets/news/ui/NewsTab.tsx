@@ -77,6 +77,7 @@ function NewsItemWrapper({ idx, item, delay, locale }: NewsItemWrapperProps) {
 				tag={item.type}
 				slug={item.slug}
 				variant="dark"
+				file={item.file}
 				wide={false}
 				type={newsTypeMap[item.type] || 'latest'}
 				content={item.description}

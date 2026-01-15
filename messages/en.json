@@ -267,41 +267,41 @@
 		},
 		"useful": {
 			"astana": {
-				"title": "Астана",
-				"pageTitle": "Об Астане",
-				"subtitle": "Столица Республики Казахстан, динамичный мегаполис, где традиции кочевой культуры сочетаются с инновациями и архитектурой мирового уровня.",
-				"historyTitle": "История города",
-				"historyText": "История Астаны начинается в 1830 году со строительства крепости Акмола на реке Ишим. Вокруг неё вырос город - важный торгово-экономический центр региона. \n\n В советский период город получил название Целиноград и стал одним из ключевых центров освоения целинных земель. Именно тогда он активно развивался как промышленный, образовательный и научный город, закладывая основу для будущего роста. \n\n В 1997 году было принято историческое решение о переносе столицы Казахстана из Алматы в Акмолу. Уже в 1998 году город получил новое имя  Астана  и новый статус, став символом независимости, обновления и стратегического развития страны. \n\n 6 мая 1998 года Акмола была переименована в Астану, а в 1999 году получила звание «город мира» по решению ЮНЕСКО. С 2000 года город является членом Международной ассамблеи столиц и крупных городов.",
+				"title": "Astana",
+				"pageTitle": "About Astana",
+				"subtitle": "The capital of the Republic of Kazakhstan, a dynamic metropolis where nomadic cultural traditions combine with innovation and world-class architecture",
+				"historyTitle": "City history",
+				"historyText": "The history of Astana begins in 1830 with the construction of the Akmola fortress on the Ishim River. A city grew around it - an important trade and economic center of the region. \n\n During the Soviet period, the city was named Tselinograd and became one of the key centers for the development of virgin lands. It was then that it actively developed as an industrial, educational and scientific city, laying the foundation for future growth. \n\n In 1997, a historic decision was made to move the capital of Kazakhstan from Almaty to Akmola. Already in 1998, the city received a new name - Astana - and a new status, becoming a symbol of independence, renewal and strategic development of the country. \n\n On May 6, 1998, Akmola was renamed Astana, and in 1999 it received the title of \"City of Peace\" by UNESCO decision. Since 2000, the city has been a member of the International Assembly of Capitals and Major Cities.",
 				"histories": {
-					"title1": "1830 г.",
-					"text1": "Основание Акмолинска",
-					"title2": "1961 г.",
-					"text2": "Целиноград, период активного роста",
-					"title3": "1997 г.",
-					"text3": "Перенос столицы из Алматы",
-					"title4": "1998 г.",
-					"text4": "Астана"
+					"title1": "1830",
+					"text1": "Foundation of Akmolinsk",
+					"title2": "1961",
+					"text2": "Tselinograd, period of active growth",
+					"title3": "1997",
+					"text3": "Transfer of the capital from Almaty",
+					"title4": "1998",
+					"text4": "Astana"
 				},
 				"attractionsAndSymbols": {
-					"title": "Архитектура и символы"
+					"title": "Architecture and symbols"
 				},
 				"symbols": {
-					"title1": "Байтерек",
-					"title2": "Дворец мира и согласия",
-					"title3": "Хан Шатыр",
-					"title4": "Музей энергии будущего"
+					"title1": "Baiterek",
+					"title2": "Palace of Peace and Accord",
+					"title3": "Khan Shatyr",
+					"title4": "Museum of Future Energy"
 				},
 				"cultureAndTraditions": {
-					"title": "Культура и традиции",
-					"text1": "Астана - это город, где бережно хранят культурное наследие и одновременно создают современную идентичность. Здесь национальные традиции Казахстана органично вплетаются в ритм динамичной столицы, формируя уникальную атмосферу открытости, уважения и многообразия. \n\n В основе культурной жизни города лежат традиции кочевого народа: уважение к старшим, гостеприимство, единство с природой и почитание семьи. Эти ценности ощущаются не только в праздниках и обрядах, но и в повседневной жизни города - в тёплом отношении к гостям, стремлении к диалогу и взаимопониманию.",
-					"text2": "Национальные праздники занимают особое место в жизни Астаны. Наурыз, День столицы, День независимости отмечаются масштабно и ярко, объединяя жителей и гостей города. Площади и парки наполняются концертами, ярмарками, национальными играми и театрализованными представлениями. \n\n Культурное пространство столицы богато и разнообразно. Театры, музеи, галереи и концертные залы соседствуют с современными арт-пространствами, фестивалями уличной культуры и международными выставками. Астана стала площадкой для диалога разных культур, где встречаются традиционное искусство и современные формы самовыражения."
+					"title": "Culture and traditions",
+					"text1": "Astana is a city where cultural heritage is carefully preserved while creating a modern identity. Here, the national traditions of Kazakhstan are organically woven into the rhythm of the dynamic capital, forming a unique atmosphere of openness, respect and diversity. \n\n The cultural life of the city is based on the traditions of the nomadic people: respect for elders, hospitality, unity with nature and reverence for family. These values are felt not only in holidays and rituals, but also in the daily life of the city - in the warm attitude towards guests, the desire for dialogue and mutual understanding.",
+					"text2": "National holidays occupy a special place in the life of Astana. Nauryz, Capital Day, Independence Day are celebrated on a grand scale and brightly, uniting residents and guests of the city. Squares and parks are filled with concerts, fairs, national games and theatrical performances. \n\n The cultural space of the capital is rich and diverse. Theaters, museums, galleries and concert halls coexist with modern art spaces, street culture festivals and international exhibitions. Astana has become a platform for dialogue between different cultures, where traditional art and modern forms of self-expression meet."
 				},
 				"factsAndNumbers": {
-					"title": "Интересные факты и цифры",
-					"fact1": "млн жителей",
-					"fact2": "международных мероприятий в год",
-					"fact3": "площадь города",
-					"fact4": "млн туристов в год"
+					"title": "Interesting facts and figures",
+					"fact1": "million residents",
+					"fact2": "international events per year",
+					"fact3": "city area",
+					"fact4": "million tourists per year"
 				}
 			},
 			"venue": {

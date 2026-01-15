@@ -10,8 +10,8 @@ export default function Page() {
 	return (
 		<>
 			<PageBanner
-				title={t('pages.weather.title')}
-				breadcrumbs={[{ label: t('pages.weather.title'), href: '/useful/weather' }]}
+				title={t('pages.useful.weather.title')}
+				breadcrumbs={[{ label: t('pages.useful.weather.title'), href: '/useful/weather' }]}
 			/>
 
 			<WeatherWidget />
