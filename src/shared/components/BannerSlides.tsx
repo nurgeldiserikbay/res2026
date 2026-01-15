@@ -25,7 +25,7 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 							modules={[Navigation]}
 							slidesPerView={1}
 							spaceBetween={30}
-							className="h-[393px] w-full overflow-visible rounded-[12px] md:h-[500px] 2xl:h-[888px]"
+							className="h-[305px] w-full overflow-visible rounded-[12px] md:h-[500px] 2xl:h-[888px]"
 							navigation={{
 								nextEl: '#banner-slides-swiper-button-next',
 								prevEl: '#banner-slides-swiper-button-prev',

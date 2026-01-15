@@ -8,7 +8,7 @@ export function InfoInsideAttraction() {
 
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-			<Container className="grid grid-cols-1 items-stretch gap-x-[60px] gap-y-[30px] md:grid-cols-2">
+			<Container className="grid grid-cols-1 gap-x-[60px] gap-y-[30px] lg:grid-cols-2">
 				<div className="flex flex-col items-start justify-start">
 					<h2 className="text-text 3xl:text-[48px] mb-[30px] align-top text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:mb-[60px] 2xl:text-[30px]">
 						{t('pages.useful.baiterek.insideMonumentTitle')}
