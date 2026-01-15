@@ -26,21 +26,23 @@ export function WeatherRow({
 	reverse?: boolean
 }) {
 	return (
-		<div className={[`grid grid-cols-1 gap-x-[30px] gap-y-[30px] md:grid-cols-2 md:gap-x-[60px]`, className].join(' ')}>
-			<div className={`flex flex-row items-stretch justify-center gap-[8px] ${reverse ? 'order-2 flex-row-reverse' : 'order-1 flex-row'}`}>
+		<div className={[`grid grid-cols-1 gap-x-[30px] gap-y-[30px] lg:grid-cols-2 lg:gap-x-[60px]`, className].join(' ')}>
+			<div
+				className={`flex flex-row items-stretch justify-center gap-[8px] ${reverse ? 'flex-row-reverse lg:order-2' : 'order-1 flex-row'}`}
+			>
 				<Image
 					src={image1}
 					alt={title}
 					width={561}
 					height={372}
-					className="block rounded-[12px]"
+					className="block w-[64%] rounded-[12px] object-cover"
 				/>
 				<Image
 					src={image2}
 					alt={title}
 					width={300}
 					height={372}
-					className="block rounded-[12px]"
+					className="block w-[34.48%] rounded-[12px] object-cover"
 				/>
 			</div>
 
@@ -62,13 +64,13 @@ export function WeatherRow({
 
 				<div className="grid grid-cols-1 items-stretch gap-[10px] bg-white sm:grid-cols-2">
 					<div className="flex flex-col items-center justify-start rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] px-[30px] pt-[26px] pb-[26px] text-center">
-						<h3 className="text-secondary xs:text-[40px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[48px] 2xl:text-[64px]">
+						<h3 className="text-secondary xs:text-[36px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[40px] 2xl:text-[64px]">
 							{plus}
 						</h3>
 						<div className="text-secondary text-[16px] leading-normal font-normal">{plusText}</div>
 					</div>
 					<div className="flex flex-col items-center justify-start rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] px-[30px] pt-[26px] pb-[26px] text-center">
-						<h3 className="text-secondary xs:text-[40px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[48px] 2xl:text-[64px]">
+						<h3 className="text-secondary xs:text-[36px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[40px] 2xl:text-[64px]">
 							{minus}
 						</h3>
 						<div className="text-secondary text-[16px] leading-normal font-normal">{minusText}</div>

@@ -9,7 +9,7 @@ export function VisaInfo() {
 	return (
 		<>
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-				<Container className="grid grid-cols-1 gap-x-[30px] gap-y-[30px] md:grid-cols-2 md:gap-x-[60px]">
+				<Container className="grid grid-cols-1 gap-x-[30px] gap-y-[30px] lg:grid-cols-2 lg:gap-x-[60px]">
 					<Image
 						src="/imgs/usefulls/visa-1.png"
 						alt="Visa Info"
@@ -36,7 +36,7 @@ export function VisaInfo() {
 
 						<div className="flex flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] p-[26px] text-center">
 							<div className="text-[16px] leading-normal font-normal text-[#41754F]">{t('pages.visa.processingTimeText1')}</div>
-							<h3 className="xs:text-[40px] text-[32px] leading-normal font-bold whitespace-nowrap text-[#41754F] xl:text-[48px]">
+							<h3 className="xs:text-[24px] text-[20px] leading-normal font-bold whitespace-nowrap text-[#41754F] sm:text-[28px] md:text-[32px] xl:text-[48px]">
 								{t('pages.visa.processingTimeText2')}
 							</h3>
 							<div className="text-[16px] leading-normal font-normal text-[#41754F]">{t('pages.visa.processingTimeText3')}</div>
@@ -56,7 +56,7 @@ export function VisaInfo() {
 						</p>
 					</div>
 					<div className="flex items-center justify-center">
-						<div className="flex items-center justify-center gap-[22px]">
+						<div className="flex flex-wrap items-center justify-center gap-[22px]">
 							{new Array(8).fill(0).map((_, index) => (
 								<Image
 									key={index}
@@ -64,7 +64,7 @@ export function VisaInfo() {
 									alt="Visa Free"
 									width={89}
 									height={89}
-									className="block w-full rounded-[12px]"
+									className="block rounded-[12px]"
 								/>
 							))}
 						</div>
@@ -73,14 +73,14 @@ export function VisaInfo() {
 			</section>
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-				<Container className="grid grid-cols-1 gap-x-[30px] gap-y-[30px] md:grid-cols-2 md:gap-x-[60px]">
+				<Container className="grid grid-cols-1 gap-x-[30px] gap-y-[60px] md:grid-cols-2 md:gap-x-[60px]">
 					<div>
 						<Image
 							src="/imgs/usefulls/visa-2.png"
 							alt="Visa Info"
 							width={870}
 							height={344}
-							className="mb-[72px] block w-full rounded-[12px]"
+							className="mb-[30px] block w-full rounded-[12px] md:mb-[45px] xl:mb-[72px]"
 						/>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
 							{t('pages.visa.visaJoinTitle')}
@@ -96,7 +96,7 @@ export function VisaInfo() {
 							alt="Visa Info"
 							width={870}
 							height={344}
-							className="mb-[72px] block w-full rounded-[12px]"
+							className="mb-[30px] block w-full rounded-[12px] md:mb-[45px] xl:mb-[72px]"
 						/>
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
 							{t('pages.visa.eVisaTitle')}

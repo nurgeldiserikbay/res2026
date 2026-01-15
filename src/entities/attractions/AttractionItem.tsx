@@ -22,7 +22,7 @@ export function AttractionItem({ image, title, slug }: AttractionItemProps) {
 				height={673}
 				className="w-full object-cover"
 			/>
-			<div className="absolute right-0 bottom-0 left-0 p-[40px]">
+			<div className="absolute right-0 bottom-0 left-0 p-[30px] md:p-[40px]">
 				<h3 className="text-[24px] leading-none font-bold text-white">{title}</h3>
 			</div>
 			<div className="absolute top-[30px] right-[30px] z-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-black/10 backdrop-blur-[13px]">
