@@ -28,13 +28,13 @@ export function CityHistory() {
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container>
-				<div className="flex flex-wrap-reverse items-start justify-between gap-x-[60px] gap-y-[30px] lg:flex-nowrap">
+				<div className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] lg:flex-nowrap">
 					<Image
 						src="/imgs/astana-history.png"
 						alt="Astana History"
 						width={871}
 						height={417}
-						className="block w-full shrink-4 lg:w-[671px] lg:max-w-[55%] xl:w-[771px] 2xl:w-[871px]"
+						className="block w-full shrink-4 rounded-[12px] lg:w-[671px] lg:max-w-[55%] xl:w-[771px] 2xl:w-[871px]"
 					/>
 					<div className="w-full max-w-[860px] shrink">
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">

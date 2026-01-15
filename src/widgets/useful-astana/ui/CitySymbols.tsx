@@ -30,13 +30,13 @@ export function CitySymbols() {
 			id: 1,
 			title: t('pages.useful.astana.symbols.title2'),
 			image: `/imgs/usefulls/astana-symbol-2.png`,
-			style: `translate-y-[76px]`,
+			style: `translate-y-[45px] lg:translate-y-[76px]`,
 		},
 		{
 			id: 2,
 			title: t('pages.useful.astana.symbols.title3'),
 			image: `/imgs/usefulls/astana-symbol-3.png`,
-			style: `translate-y-[-48px]`,
+			style: `translate-y-[-28px] lg:translate-y-[-48px]`,
 		},
 		{
 			id: 3,
@@ -49,7 +49,7 @@ export function CitySymbols() {
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container>
-				<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:mb-[60px] xl:text-[36px] 2xl:text-[30px]">
+				<h2 className="text-text 3xl:text-[48px] mb-[56px] text-[32px] leading-[1.2] font-bold xl:mb-[60px] xl:text-[36px] 2xl:text-[30px]">
 					{t('pages.useful.astana.attractionsAndSymbols.title')}
 				</h2>
 
@@ -110,7 +110,7 @@ export function CitySymbols() {
 						))}
 					</Swiper>
 					{images?.length > 1 && (
-						<div className="mt-[100px] flex items-center justify-start gap-[20px] md:mt-[136px]">
+						<div className="mt-[75px] flex items-center justify-start gap-[20px] md:mt-[136px]">
 							<div className="flex items-center justify-start gap-[10px]">
 								<div id="city-symbols-swiper-button-prev">
 									{isBeginning ? (
