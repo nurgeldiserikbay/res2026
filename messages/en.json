@@ -55,7 +55,8 @@
 		"join": "Join",
 		"toMainPage": "Return to main page",
 		"read": "Read",
-		"download": "Download"
+		"download": "Download",
+		"book": "Book"
 	},
 	"titles": {
 		"slogan": "Shared vision for a Resilient Future",
@@ -96,6 +97,8 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"priceCategory": "Price category",
+		"price": "Price",
 		"error": "Error loading",
 		"loading": "Loading",
 		"swipeForward": "Scroll further",
@@ -299,6 +302,102 @@
 					"fact3": "площадь города",
 					"fact4": "млн туристов в год"
 				}
+			},
+			"venue": {
+				"title": "Event venue",
+				"subtitle": "Modern space for international dialogue and innovation",
+				"place": "April 22-24, Kazakhstan Astana, «Congress Center»",
+				"aboutSquare": {
+					"title": "About the venue",
+					"text1": "The venue is conveniently located, easily accessible from the airport and city center, and fully ready to receive participants, speakers and guests from different countries.",
+					"text2": "RES2026 will take place at a modern congress and exhibition venue in Astana, meeting international standards for business and scientific events. Spacious halls, flexible layout and high-tech equipment create comfortable conditions for plenary sessions, sectional meetings and exhibition areas.",
+					"infoTitle1": "400",
+					"infoText1": "Total area (m²)",
+					"infoTitle2": "20,000 people",
+					"infoText2": "Hall capacity"
+				},
+				"safeAndComfort": {
+					"title": "Safety and comfort",
+					"text1": "Security services",
+					"text2": "Navigation and volunteers",
+					"text3": "Climate control"
+				},
+				"photogalery": "Photo gallery"
+			},
+			"baiterek": {
+				"title": "Baiterek Monument",
+				"subtitle": "One of the main symbols of Astana and modern Kazakhstan history. \n It was opened in 2002 and embodies the idea of revival, growth and aspiration for the future.",
+				"aboutMonument": "About the monument",
+				"aboutMonumentText": "The height of the monument is 97 meters, symbolizing 1997 - the year of the transfer of the capital of Kazakhstan to Astana. The structure is a tall tower topped with a golden glass sphere. Inside the sphere is an observation deck offering a panoramic view of the city. \n\n The image of «Baiterek» is based on the ancient Turkic myth of the Tree of Life, at the top of which the bird Samruk lays a golden egg - a symbol of the sun, life and prosperity. This legend reflects the connection between past, present and future. \n\n Today «Baiterek» is a popular tourist attraction and cultural symbol of the capital, attracting guests with its architecture and deep symbolic meaning.",
+				"aboutMonumentTitle1": "97 meters",
+				"aboutMonumentText1": "height",
+				"aboutMonumentTitle2": "2002",
+				"aboutMonumentText2": "monument opening",
+				"insideMonumentTitle": "What is inside the «Baiterek» monument",
+				"insideMonumentSubtitle": "The interior space of the «Baiterek» monument is open to visitors and consists of several levels.",
+				"insideMonumentText": "The lower part of the monument houses an entrance hall with ticket offices, a souvenir shop and an information area for guests. Exhibition materials telling about the history of the creation of «Baiterek» and the development of the capital are also located here. \n\n Access to the upper levels is via a high-speed elevator. During the ascent, visitors can see elements of the tower's internal structure. \n\n On the upper level, inside the glass sphere, there is an observation deck. From here, a circular panoramic view of Astana and its main architectural objects opens up. In the center of the hall is the composition «Ayaly Alakan» - the palm print of the First President of the Republic of Kazakhstan, symbolizing peace, harmony and unity. \n\n Interactive and multimedia elements are also located inside the sphere, allowing you to learn more about the symbolism of the monument and the history of the city. \n\n Visiting «Baiterek» gives you the opportunity not only to see the city from above, but also to get to know the cultural and symbolic meaning of one of the main monuments of Astana in more depth."
+			},
+			"hotels": {
+				"title": "Hotels"
+			},
+			"restaurants": {
+				"title": "Restaurants and cafes"
+			},
+			"visa": {
+				"title": "Visa",
+				"infoTitle": "Visa information",
+				"infoText1": "Foreign citizens may need a visa to enter the Republic of Kazakhstan depending on their citizenship and purpose of travel. Before submitting documents, it is recommended to check if a visa-free regime applies to your country.",
+				"infoText2": "Ways to obtain a visa",
+				"infoText21": "Through the consulate or embassy of Kazakhstan in your country of residence",
+				"infoText22": "Electronic visa (eVisa) - available for citizens of some countries through the official portal",
+				"infoText23": "Upon invitation from an individual or legal entity in Kazakhstan (for business, work and private visas)",
+				"infoText3": "Before traveling, be sure to check the current visa requirements at the consulate of the Republic of Kazakhstan or on official government resources.",
+				"processingTimeTitle": "Processing time",
+				"processingTimeText1": "Visa application processing takes",
+				"processingTimeText2": "from 5 to 10 business days",
+				"processingTimeText3": "but deadlines may vary.",
+				"visaFreeTitle": "Visa-free regime",
+				"visaFreeText": "Citizens of more than 70 countries, including European Union states, the United Kingdom, the United States, Canada, South Korea, Japan, the UAE and others, can enter Kazakhstan without a visa for up to 30 days. For citizens of EAEU countries (Russia, Belarus, Kyrgyzstan, Armenia), a stay of up to 90 days is allowed.",
+				"visaJoinTitle": "Visa on invitation",
+				"visaJoinText1": "Citizens of countries not on the visa-free list require a visa issued at consulates or embassies of Kazakhstan.",
+				"visaJoinText2": "To obtain it, you need an invitation from the host party (travel agency, hotel, individual or organization) and a completed online application through the Visa.mfa.kz portal.",
+				"eVisaTitle": "Electronic visa (eVisa)",
+				"eVisaText1": "Travelers from a number of countries can apply for an electronic visa without visiting a consulate.",
+				"eVisaText2": "eVisa is available for entry through international airports of Kazakhstan, including Nur-Sultan Nazarbayev Airport. It is enough to submit an application online, pay the fee and receive the visa by email. \n You can find additional information on the website - Visa"
+			},
+			"weather": {
+				"title": "Weather",
+				"spring": "Spring",
+				"springMonths": "March - May",
+				"springText": "Spring comes late and uncertainly in Astana. In March, frosts and snow are still possible, and the weather often changes during the day. April brings snowmelt and strong winds. Real warmth is felt closer to the end of May, when the temperature rises to a comfortable +15…+22 °C.",
+				"springMinus": "from −15 °C",
+				"springMinusText": "winter still holds, frosts are possible",
+				"springPlus": "up to +22 °C",
+				"springPlusText": "active snowmelt",
+				"summer": "Summer",
+				"summerMonths": "June - August",
+				"summerText": "Summer is hot and dry. Daytime temperatures often reach +30…+35 °C, but thanks to low humidity, the heat is easier to bear. Evenings become cooler. Precipitation is rare, sometimes thunderstorms with strong winds occur. The best time for walks and outdoor events.",
+				"summerMinus": "from +25 °C",
+				"summerMinusText": "rare thunderstorms",
+				"summerPlus": "up to +35 °C",
+				"summerPlusText": "hot and dry",
+				"autumn": "Autumn",
+				"autumnMonths": "September - November",
+				"autumnText": "Autumn is short and cool. In September it is still warm and sunny, but already in October the weather changes dramatically: the wind intensifies, rains come, and the first frosts appear. In November, snow often falls, and the city gradually prepares for winter.",
+				"autumnMinus": "from +20 °C",
+				"autumnMinusText": "rains, first frosts",
+				"autumnPlus": "up to -15 °C",
+				"autumnPlusText": "sharp cold snaps",
+				"winter": "Winter",
+				"winterMonths": "December - February",
+				"winterText": "Winter is long, cold and windy. Temperatures often drop to −25…−35 °C, and on some days it can be even lower. Strong winds intensify the feeling of cold. Despite the frosts, winter is often sunny, with clear skies.",
+				"winterMinus": "from -25 °C",
+				"winterMinusText": "frequent blizzards and snowstorms",
+				"winterPlus": "up to -40 °C",
+				"winterPlusText": "very cold and windy"
+			},
+			"attractions": {
+				"title": "Attractions"
 			}
 		}
 	},
@@ -312,6 +411,11 @@
 			"5": "Sat",
 			"6": "Sun"
 		}
+	},
+	"currencies": {
+		"KZT": "tenge",
+		"USD": "USD",
+		"EUR": "EUR"
 	},
 	"messages": {
 		"noPrograms": "Program not found"
