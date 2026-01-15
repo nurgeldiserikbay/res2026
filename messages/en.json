@@ -56,7 +56,8 @@
 		"toMainPage": "Return to main page",
 		"read": "Read",
 		"download": "Download",
-		"book": "Book"
+		"book": "Book",
+		"downloadPdf": "Download PDF"
 	},
 	"titles": {
 		"slogan": "Shared vision for a Resilient Future",
