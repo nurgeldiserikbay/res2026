@@ -16,5 +16,6 @@ declare module 'swiper/css' {
 declare global {
 	interface Window {
 		ym?: (counterId: number | string, method: 'init' | 'hit' | 'reachGoal' | 'params', params?: string | Record<string, unknown>) => void
+		dataLayer?: Array<Record<string, unknown>>
 	}
 }

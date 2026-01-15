@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { appConfig } from '@/shared/config/app.config'
 import type { Locale } from '@/shared/config/i18n'
 import { GSAPProvider } from '@/shared/lib/gsap/provider'
+import GoogleTagManager from '@/shared/lib/metrics/GoogleTagManager'
 import YandexMetrica from '@/shared/lib/metrics/YandexMetrica'
 import { QueriesProvider } from '@/shared/providers/QueriesProvider'
 import { Footer } from '@/widgets/footer/ui/Footer'
@@ -127,6 +128,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 				follow: appConfig.isProduction,
 			},
 		},
+		verification: {
+			yandex: '2bb323cdb7d3be6c',
+			google: 'UOHou_6fwLEwrcTJd907ZbDLUWGOF9OunQ6LqSU',
+		},
 	}
 }
 
@@ -142,6 +147,7 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body className={`${HelveticaNeue.className}`}>
+				<GoogleTagManager />
 				<QueriesProvider>
 					<NextIntlClientProvider>
 						<GSAPProvider />
