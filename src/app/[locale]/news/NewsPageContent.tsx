@@ -17,7 +17,7 @@ export function NewsPageContent() {
 				breadcrumbs={[{ label: t('titles.news'), href: '/news' }]}
 			/>
 
-			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+			<section className="bg-white pt-[50px] pb-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
 					<NewsTabLinks />
 

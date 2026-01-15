@@ -12,8 +12,8 @@ export default function Page() {
 	return (
 		<>
 			<PageBanner
-				title={t('pages.restaurants.title')}
-				breadcrumbs={[{ label: t('pages.restaurants.title'), href: '/useful/restaurants' }]}
+				title={t('pages.useful.restaurants.title')}
+				breadcrumbs={[{ label: t('pages.useful.restaurants.title'), href: '/useful/restaurants' }]}
 			/>
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
