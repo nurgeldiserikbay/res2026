@@ -17,6 +17,7 @@ export default function Page() {
 				bgImage="/imgs/astana-banner.png"
 				breadcrumbs={[{ label: t(`pages.useful.astana.pageTitle`), href: '/useful/astana' }]}
 				subtitle={t(`pages.useful.astana.subtitle`)}
+				subtitleClassName="max-w-[723px]!"
 			/>
 
 			<CityHistory />

@@ -12,7 +12,7 @@ interface AttractionItemProps {
 export function AttractionItem({ image, title, slug }: AttractionItemProps) {
 	return (
 		<Link
-			href={`/attractions/${slug}`}
+			href={`/useful/attractions/${slug}`}
 			className="relative block overflow-hidden rounded-[12px] bg-white"
 		>
 			<Image
