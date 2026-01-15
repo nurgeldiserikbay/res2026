@@ -66,7 +66,7 @@ export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = 
 					{subtitle && (
 						<p
 							ref={SubtitleRef}
-							className="mt-[30px] max-w-[723px] translate-y-[50px] text-[16px] leading-normal font-normal text-white opacity-0 sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
+							className="mx-auto mt-[30px] max-w-[830px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line text-white opacity-0 sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
 						>
 							{subtitle}
 						</p>

@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl'
 import { useRef } from 'react'
 
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
-import { Accordion } from '@/shared/ui/Accordion/Accordion'
+import { Accordion } from '@/shared/ui/accordion/Accordion'
 import { PageBanner } from '@/shared/ui/banner'
 import { Container } from '@/shared/ui/container/container'
 import { FAQ_MOCK } from '@/widgets/faqs/model'
