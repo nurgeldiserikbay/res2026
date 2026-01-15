@@ -98,6 +98,12 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"weather": "Ауа райы",
+		"precipitation": "Жауын-шашын",
+		"humidity": "Ылғалдылық",
+		"wind": "Жел",
+		"speedKmH": "{speed} км/сағ",
+		"city": "Қала",
 		"previous": "Алдыңғы",
 		"next": "Келесі",
 		"priceCategory": "Баға категориясы",

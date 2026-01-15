@@ -98,6 +98,12 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"weather": "Погода",
+		"precipitation": "Вероятность осадков",
+		"humidity": "Влажность",
+		"wind": "Ветер",
+		"speedKmH": "{speed} км/ч",
+		"city": "Город",
 		"previous": "Предыдущий",
 		"next": "Следующий",
 		"priceCategory": "Ценовая категория",
