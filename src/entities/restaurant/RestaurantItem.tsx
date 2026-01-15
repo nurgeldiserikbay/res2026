@@ -10,7 +10,7 @@ interface RestaurantItemProps extends RestaurantItemType {
 	className?: string
 }
 
-export function RestaurantItem({ image, title, price, currency, description, address, className }: RestaurantItemProps) {
+export function RestaurantItem({ image, title, price, currency, description, address, buttonText, className }: RestaurantItemProps) {
 	const t = useTranslations()
 
 	return (
@@ -39,7 +39,7 @@ export function RestaurantItem({ image, title, price, currency, description, add
 					{price} {t(`currencies.${currency}`)}
 				</span>
 			</div>
-			<ButtonDefault>{t('labels.more')}</ButtonDefault>
+			<ButtonDefault>{buttonText || t('labels.more')}</ButtonDefault>
 		</div>
 	)
 }

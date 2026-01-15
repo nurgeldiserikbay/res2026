@@ -1,12 +1,14 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { AttractionItem } from '@/entities/attractions/AttractionItem'
-import { attractions } from '@/entities/attractions/mocks'
+import { getAttractions } from '@/entities/attractions/mocks'
 import { PageBanner } from '@/shared/ui/banner'
 import { Container } from '@/shared/ui/container/container'
 
 export default function Page() {
 	const t = useTranslations()
+	const locale = useLocale() as 'ru' | 'kk' | 'en'
+	const attractions = getAttractions(locale)
 
 	return (
 		<>
