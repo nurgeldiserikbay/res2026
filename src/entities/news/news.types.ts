@@ -16,6 +16,7 @@ export interface NewsItem {
 	title_seo: string
 	description_seo: string
 	keywords_seo: string | null
+	file: string
 	images: Image[]
 }
 
