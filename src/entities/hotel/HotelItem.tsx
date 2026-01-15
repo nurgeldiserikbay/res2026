@@ -10,7 +10,7 @@ interface HotelItemProps extends HotelItemType {
 	className?: string
 }
 
-export function HotelItem({ image, title, rating, priceFrom, currency, description, className }: HotelItemProps) {
+export function HotelItem({ image, title, rating, priceFrom, currency, description, buttonText, className }: HotelItemProps) {
 	const t = useTranslations()
 
 	return (
@@ -44,7 +44,7 @@ export function HotelItem({ image, title, rating, priceFrom, currency, descripti
 					{priceFrom} {t(`currencies.${currency}`)}
 				</span>
 			</div>
-			<ButtonDefault>{t('commands.book')}</ButtonDefault>
+			<ButtonDefault>{buttonText || t('commands.book')}</ButtonDefault>
 		</div>
 	)
 }

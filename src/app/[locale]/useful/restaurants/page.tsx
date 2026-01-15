@@ -1,6 +1,6 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
-import { restaurants } from '@/entities/restaurant/mocks'
+import { getRestaurants } from '@/entities/restaurant/mocks'
 import { RestaurantItem } from '@/entities/restaurant/RestaurantItem'
 import { PageBanner } from '@/shared/ui/banner'
 import { Container } from '@/shared/ui/container/container'
@@ -8,6 +8,8 @@ import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 
 export default function Page() {
 	const t = useTranslations()
+	const locale = useLocale() as 'ru' | 'kk' | 'en'
+	const restaurants = getRestaurants(locale)
 
 	return (
 		<>
