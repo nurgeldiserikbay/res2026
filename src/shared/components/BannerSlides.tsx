@@ -27,8 +27,8 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 							spaceBetween={30}
 							className="h-[287px] w-full overflow-visible rounded-[12px] md:h-[888px]"
 							navigation={{
-								nextEl: '#flora-and-fauna-swiper-button-next',
-								prevEl: '#flora-and-fauna-swiper-button-prev',
+								nextEl: '#banner-slides-swiper-button-next',
+								prevEl: '#banner-slides-swiper-button-prev',
 							}}
 							onSwiper={(swiper) => {
 								setIsBeginning(swiper.isBeginning)
@@ -59,10 +59,10 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 							))}
 						</Swiper>
 					</div>
-					<div className="static bottom-0 left-0 z-2 order-1 flex flex-col items-start justify-end md:absolute md:px-[25px] md:py-[25px] lg:px-[50px] lg:py-[50px]">
+					<div className="relative bottom-0 left-0 z-2 z-5 order-1 flex flex-col items-start justify-end md:absolute md:px-[25px] md:py-[25px] lg:px-[50px] lg:py-[50px]">
 						<div className="mt-[100px] flex items-center justify-start gap-[20px] md:mt-[136px]">
 							<div className="flex items-center justify-start gap-[10px]">
-								<div id="city-symbols-swiper-button-prev">
+								<div id="banner-slides-swiper-button-prev">
 									{isBeginning ? (
 										<ButtonOutlined
 											icon={false}
@@ -80,7 +80,7 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 									)}
 								</div>
 
-								<div id="city-symbols-swiper-button-next">
+								<div id="banner-slides-swiper-button-next">
 									{isEnd ? (
 										<ButtonOutlined
 											icon={false}
