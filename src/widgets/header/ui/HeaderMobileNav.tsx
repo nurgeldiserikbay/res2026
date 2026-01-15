@@ -138,6 +138,7 @@ export function HeaderMobileNav() {
 											</div>
 											<div
 												className={[
+													`hidden max-[440px]:block`,
 													'max-[440px]:overflow-hidden max-[440px]:transition-all max-[440px]:duration-300 max-[440px]:ease-in-out',
 													isExpanded ? 'max-[440px]:max-h-[1000px] max-[440px]:opacity-100' : 'max-[440px]:max-h-0 max-[440px]:opacity-0',
 												].join(' ')}
@@ -195,7 +196,7 @@ export function HeaderMobileNav() {
 											href={item.href ?? '/'}
 											aria-current={pathname === item.href ? 'page' : undefined}
 											className={[
-												'font-regular transition-duration-300 hover:text-muted-light xs:text-[18px] block text-left text-[16px] leading-none font-bold text-white transition-colors',
+												'font-regular transition-duration-300 hover:text-muted-light xs:text-[18px] block text-left text-[18px] leading-none font-bold text-white transition-colors',
 												active ? 'text-muted-light' : '',
 												'focus-visible:text-muted-light focus-visible:outline-none',
 											].join(' ')}

@@ -36,7 +36,7 @@ export function HotelsTabs() {
 		<nav
 			role="tablist"
 			aria-label={t('titles.news')}
-			className="xs:gap-[30px] mb-[30px] flex items-center justify-center gap-[20px] xl:mb-[60px] xl:gap-[60px]"
+			className="xs:gap-[41.5px] xs:flex-row mb-[60px] flex flex-col items-center justify-center gap-[20px] md:flex-row xl:gap-[60px]"
 		>
 			{hotelsTabs.map((tab) => {
 				const currentType = searchParams.get('type') || '5'
@@ -52,16 +52,19 @@ export function HotelsTabs() {
 						id={`hotels-tab-${tab.id}`}
 						className={[
 							'flex items-center gap-[10px]',
-							'cursor-pointer text-[16px] leading-none font-bold transition-all duration-300 ease-out',
+							'cursor-pointer text-[14px] leading-none font-bold transition-all duration-300 ease-out md:text-[16px]',
 							isActive ? `text-[#41754F]` : `text-[#E0EAB8]`,
 						].join(` `)}
 					>
 						<span className="mt-[8px] block text-inherit">{tab.count}</span>
-						<div className="flex items-center gap-[10px]">
+						<div className="flex items-center gap-[5px] md:gap-[10px]">
 							{new Array(tab.count).fill(0).map((_, index) => (
 								<IconStar
 									key={index}
-									className={[`transition-all duration-300 ease-out`, isActive ? `text-[#41754F]` : `text-[#E0EAB8]`].join(` `)}
+									className={[
+										`h-[16px] w-[16px] transition-all duration-300 ease-out md:h-[20px] md:w-[20px] lg:h-[24px] lg:w-[24px] xl:h-[28px] xl:w-[28px] 2xl:h-[32px] 2xl:w-[32px]`,
+										isActive ? `text-[#41754F]` : `text-[#E0EAB8]`,
+									].join(` `)}
 									color="currentColor"
 								/>
 							))}

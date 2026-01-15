@@ -18,7 +18,7 @@ export default function Page() {
 
 			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 				<Container>
-					<div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-[60px]">
+					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-[60px]">
 						{restaurants.map((restaurant) => (
 							<RestaurantItem
 								key={restaurant.id}

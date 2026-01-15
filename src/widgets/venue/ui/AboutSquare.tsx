@@ -22,15 +22,24 @@ export function AboutSquare() {
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container className="flex flex-wrap-reverse items-start justify-between gap-x-[50px] gap-y-[30px] lg:flex-nowrap">
-				<div className="w-full max-w-[715px] shrink">
-					<div className="mb-[124px]">
+				<div className="w-full shrink xl:max-w-[715px]">
+					<div className="mb-[30px] md:mb-[50px] lg:mb-[80px] xl:mb-[100px] 2xl:mb-[124px]">
 						<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:mb-[60px] xl:text-[36px] 2xl:text-[30px]">
 							{t('pages.useful.venue.aboutSquare.title')}
 						</h2>
-						<p className="text-text mb-[60px] text-[18px] leading-normal font-normal whitespace-pre-line lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
+
+						<Image
+							src="/imgs/usefulls/venue-banner-mob.png"
+							alt="Astana Square"
+							width={374}
+							height={396}
+							className="mb-[30px] w-full max-w-[450px] md:hidden lg:w-[671px]"
+						/>
+
+						<p className="text-text mb-[30px] text-[18px] leading-normal font-normal whitespace-pre-line lg:mb-[60px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
 							{t('pages.useful.venue.aboutSquare.text1')}
 						</p>
-						<p className="text-text mb-[88px] text-[16px] leading-normal font-normal whitespace-pre-line">
+						<p className="text-text mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line lg:mb-[88px]">
 							{t('pages.useful.venue.aboutSquare.text2')}
 						</p>
 
@@ -100,7 +109,7 @@ export function AboutSquare() {
 					alt="Astana Square"
 					width={1025}
 					height={1085}
-					className="block w-full shrink-4 lg:w-[671px] lg:max-w-[57%] xl:w-[820px] 2xl:w-[1025px]"
+					className="hidden w-full shrink-4 md:max-w-[37%] lg:w-[571px] lg:max-w-[30%] xl:block xl:max-w-[57%] 2xl:w-[1025px]"
 				/>
 			</Container>
 		</section>

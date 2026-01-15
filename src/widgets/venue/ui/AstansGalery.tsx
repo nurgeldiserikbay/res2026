@@ -89,14 +89,14 @@ export function AstansGalery() {
 							key={item.id}
 							data-fancybox="gallery"
 							href={item.image}
-							className={`group relative block h-[386px] grow overflow-hidden rounded-[12px]`}
+							className={`group relative block grow overflow-hidden rounded-[12px] md:h-[386px]`}
 						>
 							<Image
 								src={item.image}
 								alt={item.alt}
 								width={item.width}
 								height={item.height}
-								className="block h-full object-cover"
+								className="block h-full w-full object-cover"
 							/>
 							<div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-[#2E8656]/50 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100">
 								<IconZoom

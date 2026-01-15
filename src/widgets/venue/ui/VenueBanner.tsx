@@ -58,7 +58,7 @@ export function VenueBanner() {
 					</h1>
 					<p
 						ref={SubtitleRef}
-						className="mx-auto mt-[30px] max-w-[923px] translate-y-[50px] text-center text-[16px] leading-normal font-normal text-white opacity-0 sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]"
+						className="xs:text-[20px] mx-auto mt-[30px] max-w-[923px] translate-y-[50px] text-center text-[16px] leading-normal font-normal text-white opacity-0 lg:text-[22px] xl:text-[24px]"
 					>
 						{t(`pages.useful.venue.subtitle`)}
 					</p>
