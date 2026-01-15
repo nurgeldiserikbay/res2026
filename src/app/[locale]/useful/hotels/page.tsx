@@ -21,7 +21,7 @@ export default function Page() {
 				<Container>
 					<HotelsTabs />
 
-					<div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-[60px]">
+					<div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-[60px]">
 						{hotels.map((hotel) => (
 							<HotelItem
 								key={hotel.id}
