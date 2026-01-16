@@ -1,5 +1,3 @@
-import { headers } from 'next/headers'
-
 import { navItems, type NavItem } from '@/entities/nav/model/nav'
 import { locales } from '@/shared/config/i18n'
 
@@ -39,11 +37,12 @@ function collectReadyUrls(items: readonly NavItem[]): UrlWithPriority[] {
 	return urls
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-	const headersList = await headers()
-	const protocol = headersList.get('x-forwarded-proto') || 'https'
-	const host = headersList.get('host') || 'localhost:3000'
-	const baseUrl = `${protocol}://${host}`
+// Принудительно статическая генерация sitemap только при сборке
+export const dynamic = 'force-static'
+export const revalidate = false
+
+export default function sitemap(): MetadataRoute.Sitemap {
+	const baseUrl = `https://res2026.kz`
 
 	// Собираем все готовые URL из навигации
 	const readyUrls = collectReadyUrls(navItems)

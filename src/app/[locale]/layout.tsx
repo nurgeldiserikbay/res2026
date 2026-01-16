@@ -91,6 +91,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 	const canonicalUrl = `${baseUrl}/${locale}`
 
 	const ogImageUrl = `${baseUrl}/imgs/logotype.svg`
+	const ogLogoUrl = `${baseUrl}/imgs/logotype.svg`
 
 	return {
 		title: meta.title,
@@ -113,6 +114,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 			],
 			locale: locale,
 			type: 'website',
+		},
+		other: {
+			'og:logo': ogLogoUrl,
 		},
 		twitter: {
 			card: 'summary_large_image',
