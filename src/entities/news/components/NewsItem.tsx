@@ -77,7 +77,9 @@ export function NewsItem({
 						download={true}
 						className={[
 							`mt-[10px] flex items-center justify-start gap-[10px] text-[13px] leading-none font-medium`,
-							variant === 'light' ? 'text-[#41754F]' : 'text-white',
+							variant === 'light'
+								? 'transition-duration-300 text-[#41754F] transition-all hover:translate-x-[10px] hover:text-[#02493F]'
+								: 'transition-duration-300 text-white hover:text-[#02493F]',
 						].join(` `)}
 					>
 						<IconDownload />
@@ -98,7 +100,7 @@ export function NewsItem({
 					<Link
 						href={external_link}
 						target="_blank"
-						className="mt-[10px] text-[13px] leading-none font-light text-[#777C83]"
+						className="transition-duration-300 mt-[10px] text-[13px] leading-none font-normal text-[#777C83] transition-all hover:translate-x-[10px] hover:text-[#02493F]"
 					>
 						{t(`labels.source`)}
 					</Link>

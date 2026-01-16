@@ -44,7 +44,7 @@ export function AboutSummit() {
 	return (
 		<section className="3xl:pb-[100px] 3xl:pt-[50px] bg-white pt-[25px] pb-[50px] md:pt-[30px] md:pb-[60px] lg:pt-[40px] lg:pb-[80px] 2xl:pt-[40px] 2xl:pb-[80px]">
 			<Container className="flex flex-wrap-reverse items-start justify-between gap-[20px] sm:gap-[30px] xl:flex-nowrap">
-				<div className="3xl:pt-[50px] w-full grow pt-[25px] md:pt-[30px] lg:pt-[40px] xl:max-w-[713px] 2xl:pt-[40px]">
+				<div className="3xl:pt-[50px] 3xl:max-w-[713px] w-full grow pt-[25px] md:pt-[30px] lg:pt-[40px] xl:max-w-[400px] 2xl:max-w-[580px] 2xl:pt-[40px]">
 					<div className="mb-[20px] flex items-start justify-between sm:mb-[32px]">
 						<h2
 							ref={AboutSummitRef}

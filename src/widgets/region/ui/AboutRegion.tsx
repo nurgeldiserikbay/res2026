@@ -111,9 +111,9 @@ export default function AboutRegion({
 							ref={StatsRef}
 							className="relative z-1 mb-[20px] flex flex-col items-stretch justify-between gap-[15px] sm:mb-[25px] sm:flex-row sm:gap-[20px] md:mb-[30px] md:gap-[30px] lg:gap-[30px]"
 						>
-							{stats.map((stat) => (
+							{stats.map((stat, index) => (
 								<div
-									key={stat.statValue}
+									key={index}
 									className={`flex h-[140px] w-full flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] px-[15px] text-center ${stat.statClass}`}
 								>
 									<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
