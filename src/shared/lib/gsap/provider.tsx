@@ -1,7 +1,7 @@
 'use client'
 import { useGSAP } from '@gsap/react'
-import { usePathname } from 'next/navigation'
 
+import { usePathname } from '@/i18n/navigation'
 import { registerGSAP } from '@/shared/lib/gsap/register'
 
 export function GSAPProvider() {

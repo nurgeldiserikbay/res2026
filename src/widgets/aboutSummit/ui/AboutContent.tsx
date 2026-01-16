@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { Link as LocalizedLink } from '@/i18n/navigation'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonTree } from '@/shared/ui/button/ButtonTree'
 import { Container } from '@/shared/ui/container/container'
@@ -117,12 +118,12 @@ export function AboutContent() {
 						>
 							{t.rich('pages.about.resText3', {
 								link: (chunks) => (
-									<Link
+									<LocalizedLink
 										href="/"
 										className="underline"
 									>
 										{chunks}
-									</Link>
+									</LocalizedLink>
 								),
 							})}
 						</p>

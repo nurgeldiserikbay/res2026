@@ -1,11 +1,10 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useMemo, useRef, useState } from 'react'
 
 import { headerNav, type NavItem } from '@/entities/nav/model/nav'
-import { Link } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import { useEscape } from '@/shared/lib/hooks/useEscape'
 import { useOnClickOutside } from '@/shared/lib/hooks/useOnClickOutside'
 

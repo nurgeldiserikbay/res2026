@@ -2,7 +2,8 @@
 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { usePathname } from 'next/navigation'
+
+import { usePathname } from '@/i18n/navigation'
 
 function isElementInViewport(element: HTMLElement, threshold: number = 0.1): boolean {
 	const rect = element.getBoundingClientRect()

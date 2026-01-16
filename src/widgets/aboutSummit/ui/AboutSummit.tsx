@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { useRouter } from '@/i18n/navigation'
 import { IconQuot } from '@/shared/icons/IconQuot'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'

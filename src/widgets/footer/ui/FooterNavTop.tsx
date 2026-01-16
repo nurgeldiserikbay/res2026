@@ -1,10 +1,9 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 import { footerNav } from '@/entities/nav/model/nav'
-import { Link } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 
 import { FooterNavBottom } from './FooterNavBottom'
 
