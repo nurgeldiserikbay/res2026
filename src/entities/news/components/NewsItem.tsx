@@ -21,10 +21,22 @@ export interface NewsItemProps {
 	file: string
 	wide?: boolean
 	views?: number
-	source?: string
+	external_link?: string
 }
 
-export function NewsItem({ title, image, date, tag, type, slug, variant = 'dark', file, wide = false, views = 0, source }: NewsItemProps) {
+export function NewsItem({
+	title,
+	image,
+	date,
+	tag,
+	type,
+	slug,
+	variant = 'dark',
+	file,
+	wide = false,
+	views = 0,
+	external_link,
+}: NewsItemProps) {
 	const locale = useLocale() as Locale
 	const t = useTranslations()
 
@@ -90,9 +102,9 @@ export function NewsItem({ title, image, date, tag, type, slug, variant = 'dark'
 					</div>
 				)}
 
-				{type === 'publication' && source && (
+				{type === 'publication' && external_link && (
 					<Link
-						href={source}
+						href={external_link}
 						target="_blank"
 						className="mt-[10px] text-[13px] leading-none font-light text-[#777C83]"
 					>

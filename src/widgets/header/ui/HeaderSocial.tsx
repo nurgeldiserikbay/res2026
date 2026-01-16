@@ -10,7 +10,7 @@ export function HeaderSocial({ className }: { className?: string }) {
 	return (
 		<div className={['xs:gap-[20px] flex max-w-[200px] grow items-center justify-between gap-[10px]', className].join(' ')}>
 			<Link
-				href="https://www.facebook.com/profile.php?id=100063571767189"
+				href="https://www.facebook.com/profile.php?id=61586761100536"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Facebook"
@@ -22,7 +22,7 @@ export function HeaderSocial({ className }: { className?: string }) {
 				/>
 			</Link>
 			<Link
-				href="https://x.com/profile.php?id=100063571767189"
+				href="https://x.com/res_2026?s=21"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="X"
@@ -34,7 +34,7 @@ export function HeaderSocial({ className }: { className?: string }) {
 				/>
 			</Link>
 			<Link
-				href="https://www.instagram.com/profile.php?id=100063571767189"
+				href="https://www.instagram.com/res_2026?igsh=MTlzMXMyODZwb29mdg=="
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Instagram"
@@ -46,7 +46,7 @@ export function HeaderSocial({ className }: { className?: string }) {
 				/>
 			</Link>
 			<Link
-				href="https://www.youtube.com/profile.php?id=100063571767189"
+				href="https://www.youtube.com/channel/UCsmkooHN4DnsOsvQnGs1nTg"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="YouTube"
@@ -58,7 +58,7 @@ export function HeaderSocial({ className }: { className?: string }) {
 				/>
 			</Link>
 			<Link
-				href="https://t.me/res2026expo"
+				href="https://t.me/res_2026"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Telegram"

@@ -18,7 +18,6 @@ export interface NewsItem {
 	keywords_seo: string | null
 	file: string
 	images: Image[]
-	source?: string
 }
 
 export interface NewsSearchParams extends IPaginationParams {
