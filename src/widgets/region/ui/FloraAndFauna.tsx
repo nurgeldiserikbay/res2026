@@ -72,7 +72,7 @@ export function FloraAndFauna({
 			<section
 				ref={SectionRef}
 				id="flora-and-fauna"
-				className="relative mt-[50px] translate-y-[50px] opacity-0 sm:mt-[60px] md:mt-[80px] lg:mt-[100px]"
+				className="relative translate-y-[50px] pt-[50px] opacity-0 sm:pt-[60px] md:pt-[80px] lg:pt-[100px]"
 			>
 				<Container className="overflow-visible">
 					<div className="relative flex w-full flex-col gap-[30px] md:block">
@@ -125,7 +125,7 @@ export function FloraAndFauna({
 								</h3>
 								<p
 									ref={DescriptionRef}
-									className="text-text max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal opacity-0 md:text-justify md:text-white"
+									className="text-text max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 md:text-justify md:text-white"
 								>
 									{localizedDescription}
 								</p>

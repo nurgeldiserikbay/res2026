@@ -14,14 +14,13 @@ interface AboutRegionProps {
 	title: string
 	text1: string
 	text2: string
-	stats: {
-		stat1Value: string
-		stat1: string
-		stat2Value: string
-		stat2: string
-		stat3Value: string
-		stat3: string
-	}
+	stats: Array<{
+		statValue: string
+		statTitle: string
+		statClass?: string
+	}>
+	stat3Value: string
+	stat3: string
 	map: string
 	mapAlt: string
 	mapWidth: number
@@ -29,14 +28,24 @@ interface AboutRegionProps {
 	imgs: { id: number; img: string; alt: string; width: number; height: number }[]
 }
 
-export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, mapWidth, mapHeight, imgs }: AboutRegionProps) {
+export default function AboutRegion({
+	title,
+	text1,
+	text2,
+	stats,
+	map,
+	mapAlt,
+	mapWidth,
+	mapHeight,
+	imgs,
+	stat3Value,
+	stat3,
+}: AboutRegionProps) {
 	const SectionRef = useRef<HTMLElement>(null)
 	const ImagesRef = useRef<HTMLDivElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	const Text1Ref = useRef<HTMLParagraphElement>(null)
 	const StatsRef = useRef<HTMLDivElement>(null)
-	const Stat1Ref = useRef<HTMLDivElement>(null)
-	const Stat2Ref = useRef<HTMLDivElement>(null)
 	const Text2Ref = useRef<HTMLParagraphElement>(null)
 	const Stat3Ref = useRef<HTMLDivElement>(null)
 	const MapRef = useRef<HTMLImageElement>(null)
@@ -44,8 +53,6 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 	useAnimSlide(ImagesRef, { x: -90, delay: 0.1 })
 	useAnimSlide(TitleRef, { y: 50, delay: 0.2 })
 	useAnimSlide(Text1Ref, { y: 50, delay: 0.3 })
-	useAnimSlide(Stat1Ref, { y: 50, delay: 0.4 })
-	useAnimSlide(Stat2Ref, { y: 50, delay: 0.5 })
 	useAnimSlide(Text2Ref, { y: 50, delay: 0.6 })
 	useAnimSlide(Stat3Ref, { y: 50, delay: 0.7 })
 
@@ -102,26 +109,21 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 						</p>
 						<div
 							ref={StatsRef}
-							className="relative z-1 mb-[20px] flex flex-col items-stretch justify-between gap-[15px] sm:mb-[25px] sm:flex-row sm:gap-[20px] md:mb-[30px] md:gap-[30px] lg:gap-[60px]"
+							className="relative z-1 mb-[20px] flex flex-col items-stretch justify-between gap-[15px] sm:mb-[25px] sm:flex-row sm:gap-[20px] md:mb-[30px] md:gap-[30px] lg:gap-[30px]"
 						>
-							<div
-								ref={Stat1Ref}
-								className="flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] sm:max-w-[271px] md:h-[172px]"
-							>
-								<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
-									{stats.stat1Value}
-								</span>
-								<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stats.stat1}</span>
-							</div>
-							<div
-								ref={Stat2Ref}
-								className="flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] sm:max-w-[537px] sm:grow md:h-[172px]"
-							>
-								<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
-									{stats.stat2Value}
-								</span>
-								<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stats.stat2}</span>
-							</div>
+							{stats.map((stat) => (
+								<div
+									key={stat.statValue}
+									className={`flex h-[140px] w-full flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] px-[15px] text-center ${stat.statClass}`}
+								>
+									<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
+										{stat.statValue}
+									</span>
+									<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">
+										{stat.statTitle}
+									</span>
+								</div>
+							))}
 						</div>
 						<p
 							ref={Text2Ref}
@@ -133,17 +135,19 @@ export default function AboutRegion({ title, text1, text2, stats, map, mapAlt, m
 							ref={Stat3Ref}
 							className="relative z-1 flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#ADF0BF] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 						>
-							<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">{stats.stat3Value}</span>
-							<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stats.stat3}</span>
+							<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">{stat3Value}</span>
+							<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stat3}</span>
 						</div>
-						<Image
-							ref={MapRef}
-							src={map}
-							alt={mapAlt}
-							width={mapWidth}
-							height={mapHeight}
-							className="pointer-events-none absolute top-[-620px] left-[15%] z-0 min-w-[600px] transform opacity-0 lg:top-[-480px] lg:left-[5%] lg:block lg:min-w-[1685px]"
-						/>
+						{map && (
+							<Image
+								ref={MapRef}
+								src={map}
+								alt={mapAlt}
+								width={mapWidth}
+								height={mapHeight}
+								className="pointer-events-none absolute top-[-620px] left-[15%] z-0 min-w-[600px] transform opacity-0 lg:top-[-480px] lg:left-[5%] lg:block lg:min-w-[1685px]"
+							/>
+						)}
 					</div>
 				</Container>
 			</section>

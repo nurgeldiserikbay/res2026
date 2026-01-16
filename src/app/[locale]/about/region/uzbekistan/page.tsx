@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import { HeroBanner } from '@/shared/ui/banner'
-import { SLIDES } from '@/widgets/region/mocks'
+import { SLIDES_UZ } from '@/widgets/region/mocks'
 import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
@@ -11,7 +11,7 @@ import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/flag.jpeg',
+		img: '/imgs/regions/uz/uz-flag.png',
 		alt: 'Region Img 1',
 		width: 612,
 		height: 408,
@@ -48,16 +48,27 @@ export default function Page() {
 		title: t(`pages.regions.uzbekistan.title`),
 		text1: t(`pages.regions.uzbekistan.text1`),
 		text2: t(`pages.regions.uzbekistan.text2`),
-		stats: {
-			stat1Value: '12',
-			stat1: t(`pages.regions.uzbekistan.stat1`),
-			stat2Value: '3',
-			stat2: t(`pages.regions.uzbekistan.stat2`),
-			stat3Value: '20',
-			stat3: t(`pages.regions.uzbekistan.stat3`),
-		},
-		map: '/imgs/kz-about-map.svg',
-		mapAlt: 'KZ About Map',
+		stats: [
+			{
+				statValue: '12',
+				statTitle: t(`pages.regions.uzbekistan.stat1`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+			},
+			{
+				statValue: '1',
+				statTitle: t(`pages.regions.uzbekistan.stat4`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+			},
+			{
+				statValue: '1',
+				statTitle: t(`pages.regions.uzbekistan.stat2`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+			},
+		],
+		stat3Value: '38',
+		stat3: t(`pages.regions.uzbekistan.stat3`),
+		map: '',
+		mapAlt: 'UZ About Map',
 		mapWidth: 1885,
 		mapHeight: 1112,
 		imgs: IMGS,
@@ -66,10 +77,10 @@ export default function Page() {
 	const climateData = {
 		title: t(`pages.regions.uzbekistan.climateTitle`),
 		climateText2: t(`pages.regions.uzbekistan.climateText`),
-		temp1Value: '-45',
-		temp2Value: '+40',
-		img1: '/imgs/climate-1.png',
-		img2: '/imgs/climate-2.png',
+		temp1Value: '-40',
+		temp2Value: '+45',
+		img1: '/imgs/regions/uz/climate-1.png',
+		img2: '/imgs/regions/uz/climate-2.png',
 	}
 
 	const etcData = {
@@ -91,6 +102,14 @@ export default function Page() {
 			{
 				id: 4,
 				title: t(`pages.regions.uzbekistan.etc.strategicDocuments.3`),
+			},
+			{
+				id: 5,
+				title: t(`pages.regions.uzbekistan.etc.strategicDocuments.4`),
+			},
+			{
+				id: 6,
+				title: t(`pages.regions.uzbekistan.etc.strategicDocuments.5`),
 			},
 		],
 		nationalInitiativesTitle: t(`pages.regions.uzbekistan.etc.nationalInitiativesTitle`),
@@ -144,7 +163,7 @@ export default function Page() {
 		<>
 			<HeroBanner
 				title={t(`pages.regions.uzbekistan.title`)}
-				bgImage="/imgs/region-banner.png"
+				bgImage="/imgs/regions/uz/uzb-banner.png"
 				breadcrumbs={[{ label: t(`pages.regions.uzbekistan.title`), href: '/about/region/uzbekistan' }]}
 			/>
 
@@ -154,7 +173,7 @@ export default function Page() {
 
 			<Climate {...climateData} />
 
-			<FloraAndFauna slides={SLIDES} />
+			<FloraAndFauna slides={SLIDES_UZ} />
 
 			<AbountEtc {...etcData} />
 		</>

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import { HeroBanner } from '@/shared/ui/banner'
-import { SLIDES } from '@/widgets/region/mocks'
+import { SLIDES_KZ } from '@/widgets/region/mocks'
 import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
@@ -45,19 +45,25 @@ export default function Page() {
 	]
 
 	const aboutRegionData = {
-		title: t(`pages.regions.kazakhstan.title`),
-		text1: t(`pages.regions.kazakhstan.text1`),
-		text2: t(`pages.regions.kazakhstan.text2`),
-		stats: {
-			stat1Value: '17',
-			stat1: t(`pages.regions.kazakhstan.stat1`),
-			stat2Value: '3',
-			stat2: t(`pages.regions.kazakhstan.stat2`),
-			stat3Value: '20',
-			stat3: t(`pages.regions.kazakhstan.stat3`),
-		},
+		title: t(`pages.regions.uzbekistan.title`),
+		text1: t(`pages.regions.uzbekistan.text1`),
+		text2: t(`pages.regions.uzbekistan.text2`),
+		stats: [
+			{
+				statValue: '12',
+				statTitle: t(`pages.regions.uzbekistan.stat1`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+			},
+			{
+				statValue: '1',
+				statTitle: t(`pages.regions.uzbekistan.stat2`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+			},
+		],
+		stat3Value: '38',
+		stat3: t(`pages.regions.uzbekistan.stat3`),
 		map: '/imgs/kz-about-map.svg',
-		mapAlt: 'KZ About Map',
+		mapAlt: 'UZ About Map',
 		mapWidth: 1885,
 		mapHeight: 1112,
 		imgs: IMGS,
@@ -154,7 +160,7 @@ export default function Page() {
 
 			<Climate {...climateData} />
 
-			<FloraAndFauna slides={SLIDES} />
+			<FloraAndFauna slides={SLIDES_KZ} />
 
 			<AbountEtc {...etcData} />
 		</>

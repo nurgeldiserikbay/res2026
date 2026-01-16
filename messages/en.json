@@ -292,48 +292,48 @@
 				}
 			},
 			"uzbekistan": {
-				"title": "О Казахстане",
+				"title": "About Uzbekistan",
 				"tabs": {
-					"0": "География, описание",
-					"1": "Климат",
-					"2": "Флора и фауна",
-					"3": "Другие"
+					"0": "Geography, description",
+					"1": "Climate",
+					"2": "Flora and fauna",
+					"3": "Etc."
 				},
-				"text1": "Казахстан – самая крупная страна в мире, которая не имеет прямого выхода в Мировой океан. Большую часть территории страны составляют пустыни – 44% и полупустыни – 14%. Степи занимают 26% площади Казахстана, леса – 5,5%. В стране насчитывается 8,5 тысяч рек. \n\n Северо-восточная часть акватории Каспийского моря входит в пределы республики. Аральское море разделено между Казахстаном и Узбекистаном. В Казахстане есть 48 тысяч больших и малых озер. Самые крупные из них – Балхаш, Зайсан и Алакол. Удаленность от океанов обусловливает резко континентальный климат страны. \n\n Административно-территориальная структура страны включает",
-				"text2": "Численность населения Казахстана превышает",
-				"stat1": "областей",
-				"stat2": "города республиканского значения",
-				"stat3": "млн человек",
-				"climateTitle": "Климат Казахстана",
-				"climateText": "Резко континентальный, с большими колебаниями температур между летом и зимой, сухим воздухом и малым количеством осадков. Здесь ярко выражены все четыре сезона: холодные зимы, жаркое сухое лето, короткая и переменчивая весна, а также теплая осень. На севере зимы более суровые (температуры могут падать до −45 °C), а лето теплее; на юге зимы мягче (около нуля), а лето жарче, с дневной температурой до +40°C и выше.",
+				"text1": "The Republic of Uzbekistan is located in Central Asia and covers an area of 448.9 thousand sq. km. The territory of the republic extends 1,425 kilometers from west to east and 930 kilometers from north to south. \n\n Uzbekistan is a state in Central Asia that has no access to the World Ocean and is one of two countries in the world that are twice landlocked. A significant part of the country's territory is occupied by the Kyzylkum Desert, as well as semi-desert and steppe zones; mountain areas are located in the east and southeast. The main water arteries are the transboundary rivers Amu Darya and Syr Darya. Uzbekistan belongs to the Aral Sea region and shares the Aral Sea with Kazakhstan. There are few large natural lakes in Uzbekistan; the most famous is the Aydar-Arnasay lake system. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
+				"text2": "The population of Uzbekistan exceeds",
+				"stat1": "regions",
+				"stat2": "cities of republican significance",
+				"stat3": "million people",
+				"climateTitle": "The weather of Uzbekistan",
+				"climateText": "Sharply continental, with large temperature fluctuations between summer and winter, dry air and low precipitation. All four seasons are pronounced here: cold winters, hot dry summers, short and changeable spring, and warm autumn. In the north, winters are harsher (temperatures can drop to −45 °C) and summers are warmer; in the south, winters are milder (near zero) and summers are hotter, with daytime temperatures up to +40°C and above.",
 				"etc": {
-					"strategicVisionTitle": "Стратегическое видение и документы",
-					"strategicVisionIntro": "Казахстан принял следующие  Стратегические документы:",
+					"strategicVisionTitle": "Strategic vision and documents",
+					"strategicVisionIntro": "Uzbekistan has adopted the following Strategic Documents:",
 					"strategicDocuments": {
-						"0": "Стратегия достижения углеродной нетральности до 2060 года",
-						"1": "ОНУВ до 2035 года на 17% снизить выбросы парниковых газов от уровня 1990 года",
-						"2": "Концепции по переходу Республики Казахстан к «зеленой экономике»",
-						"3": "Концепцию управления всеми видами отходов на 2026–2030 годы",
-						"4": "Концепция сохранения и устойчивого использования биоразнообразия охватит период с 2025 по 2035 годы"
+						"0": "Strategy for achieving Carbon Neutrality until 2060",
+						"1": "NDC aims to reduce greenhouse gas emissions by 17% from 1990 levels by 2035",
+						"2": "Concepts for the transition of the Republic of Uzbekistan to a «green economy»",
+						"3": "The concept of managing all types of waste for 2026-2030",
+						"4": "The concept of conservation and sustainable use of biodiversity will cover the period from 2025 to 2035"
 					},
-					"nationalInitiativesTitle": "Национальные инициативы",
+					"nationalInitiativesTitle": "National initiatives",
 					"nationalInitiativesIntro": {
-						"title1": "Льготное финансирование переработки",
-						"text1": "Поддержка инвестиционных проектов, финансируемых за счет доходов от утилизационных сборов.",
-						"title2": "Программа EcoQoldau",
-						"text2": "Стимулирующие выплаты для поддержки сбора, сортировки и переработки отходов.",
-						"title3": "Концепция управления отходами",
-						"text3": "первая в Центральной Азии, предусматривающая внедрение цифрового отслеживания всех потоков отходов и создание Национального оператора по управлению отходами."
+						"title1": "Concessional financing for recycling",
+						"text1": "Support for investment projects financed through utilization fee revenues.",
+						"title2": "EcoQoldau Programme",
+						"text2": "Incentive payments to support waste collection, sorting, and recycling.",
+						"title3": "Waste Management Concept",
+						"text3": "the first in Central Asia, providing for the introduction of digital tracking of all waste streams and the establishment of a National Waste Management Operator."
 					},
 					"nationalInitiatives": {
-						"title1": "Таза Қазақстан",
-						"text1": "это масштабная национальная экологическая акция под эгидой Президента Республики Казахстан К. Токаева, направленная на формирование экологической культуры через уборки территорий (населенных пунктов, природных объектов, берегов водоемов), посадки деревьев (миллионы саженцев) и борьбу с несанкционированными свалками, с вовлечением молодежи, бизнеса и госорганов, с фокусом на переработку отходов, инновации и благоустройство.",
-						"title2": "Проект «2 миллиарда деревьев»",
-						"text2": "инициатива в Казахстане, с целью создания лесных массивов до 2025 года, а затем продленная до 2027 года. Цель – посадить и посеять 2 млрд. саженцев древесно-кустарниковых пород, включая саксаул, сосну, березу и другие, в государственном лесном фонде, чтобы восстановить леса и улучшить экологическую ситуацию.",
-						"title3": "Международный фонд по сохранению биоразнообразия",
-						"text3": "инициатива Казахстана, которая объединит усилия государств, международных организаций (ПРООН, ЮНЕСКО, ФАО) и НПО, в целях финансирования защиты экосистем, развивать экотуризм, внедрять экотехнологии и повышать осведомленность, работая по лучшим мировым стандартам для устойчивого развития и сохранения флоры и фауны.",
-						"title4": "Региональный центр ООН по Целям устойчивого развития (ЦУР) для Центральной Азии и Афганистана",
-						"text4": "В Казахстане (в Алматы) создан <bold>Региональный центр ООН по Целям устойчивого развития (ЦУР) для Центральной Азии и Афганистана</bold>, который был одобрен странами-членами ООН в марте 2025 года, открыт в августе 2025 года, а его цель — содействие достижению 17 глобальных ЦУР к 2030 году."
+						"title1": "Green Uzbekistan",
+						"text1": "is a large-scale national environmental campaign under the auspices of the President of the Republic of Uzbekistan, aimed at creating an ecological culture through cleaning territories (settlements, natural objects, banks of reservoirs), planting trees (millions of seedlings) and combating unauthorized landfills, involving young people, business and government agencies, with a focus on waste management, innovation and landscaping.",
+						"title2": "The 2 Billion Trees project",
+						"text2": "is an initiative in Uzbekistan, with the aim of creating woodlands until 2025, and then extended until 2027. The goal is to plant and sow 2 billion saplings of tree and shrub species, including saxaul, pine, birch and others, in the state forest fund to restore forests and improve the ecological situation.",
+						"title3": "The International Fund for Biodiversity Conservation",
+						"text3": "is an initiative of Uzbekistan that will unite the efforts of states, international organizations (UNDP, UNESCO, FAO) and NGOs to finance the protection of ecosystems, develop ecotourism, introduce eco-technologies and raise awareness, working according to the best international standards for sustainable development and conservation of flora and fauna.",
+						"title4": "UN Regional Center for Sustainable Development Goals (SDGs) for Central Asia and Afghanistan",
+						"text4": "The <bold>UN Regional Center for Sustainable Development Goals (SDGs) for Central Asia and Afghanistan has been established in Kazakhstan (Almaty).</bold> It was approved by the UN member states in March 2025, opened in August 2025, and its goal is to contribute to the achievement of 17 global SDGs by 2030."
 					}
 				}
 			}

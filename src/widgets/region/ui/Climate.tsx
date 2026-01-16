@@ -113,7 +113,7 @@ export function Climate({
 								alt="Climate 1"
 								width={560}
 								height={376}
-								className="h-auto w-full"
+								className="h-full w-full rounded-[12px] object-cover"
 							/>
 						</div>
 						<div
@@ -125,7 +125,7 @@ export function Climate({
 								alt="Climate 2"
 								width={300}
 								height={376}
-								className="h-auto w-full"
+								className="h-full w-full rounded-[12px] object-cover"
 							/>
 						</div>
 					</div>
