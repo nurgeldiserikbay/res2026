@@ -2,7 +2,7 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-ENV NEXT_PUBLIC_GIT_BRANCH=production
+ENV NEXT_PUBLIC_GIT_BRANCH=develop
 ENV NEXT_PUBLIC_API_URL=https://res2026-backend.crocos.kz
 
 RUN corepack enable && corepack prepare pnpm@latest --activate \
@@ -28,8 +28,8 @@ COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 EXPOSE 3000
-ENV NODE_ENV=production
-ENV NEXT_PUBLIC_GIT_BRANCH=production
+ENV NODE_ENV=develop
+ENV NEXT_PUBLIC_GIT_BRANCH=develop
 ENV PORT=3000
 ENV HOST=0.0.0.0
 
