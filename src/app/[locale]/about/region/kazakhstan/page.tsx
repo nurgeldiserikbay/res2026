@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import { HeroBanner } from '@/shared/ui/banner'
-import { SLIDES } from '@/widgets/region/mocks'
+import { SLIDES_KZ } from '@/widgets/region/mocks'
 import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
@@ -48,16 +48,22 @@ export default function Page() {
 		title: t(`pages.regions.kazakhstan.title`),
 		text1: t(`pages.regions.kazakhstan.text1`),
 		text2: t(`pages.regions.kazakhstan.text2`),
-		stats: {
-			stat1Value: '17',
-			stat1: t(`pages.regions.kazakhstan.stat1`),
-			stat2Value: '3',
-			stat2: t(`pages.regions.kazakhstan.stat2`),
-			stat3Value: '20',
-			stat3: t(`pages.regions.kazakhstan.stat3`),
-		},
+		stats: [
+			{
+				statValue: '17',
+				statTitle: t(`pages.regions.kazakhstan.stat1`),
+				statClass: 'sm:max-w-[271px]',
+			},
+			{
+				statValue: '3',
+				statTitle: t(`pages.regions.kazakhstan.stat2`),
+				statClass: 'sm:max-w-[537px]',
+			},
+		],
+		stat3Value: '20',
+		stat3: t(`pages.regions.kazakhstan.stat3`),
 		map: '/imgs/kz-about-map.svg',
-		mapAlt: 'KZ About Map',
+		mapAlt: 'UZ About Map',
 		mapWidth: 1885,
 		mapHeight: 1112,
 		imgs: IMGS,
@@ -154,7 +160,7 @@ export default function Page() {
 
 			<Climate {...climateData} />
 
-			<FloraAndFauna slides={SLIDES} />
+			<FloraAndFauna slides={SLIDES_KZ} />
 
 			<AbountEtc {...etcData} />
 		</>
