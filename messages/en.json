@@ -135,6 +135,7 @@
 		"city": "City",
 		"previous": "Previous",
 		"next": "Next",
+		"all": "All",
 		"priceCategory": "Price category",
 		"price": "Price",
 		"error": "Error loading",
@@ -294,48 +295,51 @@
 				}
 			},
 			"uzbekistan": {
-				"title": "About Uzbekistan",
+				"title": "О Узбекистане",
 				"tabs": {
-					"0": "Geography, description",
-					"1": "Climate",
-					"2": "Flora and fauna",
-					"3": "Etc."
+					"0": "География, описание",
+					"1": "Климат",
+					"2": "Флора и фауна",
+					"3": "Другие"
 				},
-				"text1": "The Republic of Uzbekistan is located in Central Asia and covers an area of 448.9 thousand sq. km. The territory of the republic extends 1,425 kilometers from west to east and 930 kilometers from north to south. \n\n Uzbekistan is a state in Central Asia that has no access to the World Ocean and is one of two countries in the world that are twice landlocked. A significant part of the country's territory is occupied by the Kyzylkum Desert, as well as semi-desert and steppe zones; mountain areas are located in the east and southeast. The main water arteries are the transboundary rivers Amu Darya and Syr Darya. Uzbekistan belongs to the Aral Sea region and shares the Aral Sea with Kazakhstan. There are few large natural lakes in Uzbekistan; the most famous is the Aydar-Arnasay lake system. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
-				"text2": "The population of Uzbekistan exceeds",
-				"stat1": "regions",
-				"stat2": "cities of republican significance",
-				"stat3": "million people",
-				"climateTitle": "The weather of Uzbekistan",
-				"climateText": "Sharply continental, with large temperature fluctuations between summer and winter, dry air and low precipitation. All four seasons are pronounced here: cold winters, hot dry summers, short and changeable spring, and warm autumn. In the north, winters are harsher (temperatures can drop to −45 °C) and summers are warmer; in the south, winters are milder (near zero) and summers are hotter, with daytime temperatures up to +40°C and above.",
+				"text1": "Республика Узбекистан расположена в Центральной Азии и занимает площадь 448,9 тыс. кв. км. Протяженность территории республики с запада на восток – 1425 километров, с севера на юг – 930 километров. \n\n Узбекистан — государство в Центральной Азии, не имеющее выхода к Мировому океану и являющееся одной из двух стран мира, дважды лишённых выхода к морю. Значительную часть территории страны занимает пустыня Кызылкум, а также полупустынные и степные зоны; горные районы расположены на востоке и юго-востоке. Основными водными артериями являются трансграничные реки Амударья и Сырдарья. Узбекистан относится к региону Приаралья и разделяет Аральское море с Казахстаном. Крупных естественных озёр в Узбекистане немного; наиболее известные — Айдар-Арнасайская система озёр. Удалённость от океанов определяет резко континентальный климат страны. \n\n Административно-территориальная структура страны включает",
+				"text2": "Численность населения Узбекистанa превышает",
+				"stat1": "областей",
+				"stat2": "город центрального подчинения -Ташкент",
+				"stat3": "млн человек",
+				"stat4": "Республика Каракалпакстан",
+				"climateTitle": "Описание климата",
+				"climateText": "Климат Узбекистана классифицируется как континентальный, с жарким летом и прохладной зимой. Южная часть страны является самым теплым, и северная часть является самой холодной. Летом температура часто превосходят 41 ° C (106 ° F), и даже может достигать 45 ° C (113 ° F) и выше. Влажность воздуха не высока. Зимние температуры в среднем около -8 ° C (18 ° F), но может упасть до -40 ° C (-40 ° F).",
 				"etc": {
-					"strategicVisionTitle": "Strategic vision and documents",
-					"strategicVisionIntro": "Uzbekistan has adopted the following Strategic Documents:",
+					"strategicVisionTitle": "Стратегическое видение и документы",
+					"strategicVisionIntro": "Узбекистан принял следующие Стратегические документы:",
 					"strategicDocuments": {
-						"0": "Strategy for achieving Carbon Neutrality until 2060",
-						"1": "NDC aims to reduce greenhouse gas emissions by 17% from 1990 levels by 2035",
-						"2": "Concepts for the transition of the Republic of Uzbekistan to a «green economy»",
-						"3": "The concept of managing all types of waste for 2026-2030",
-						"4": "The concept of conservation and sustainable use of biodiversity will cover the period from 2025 to 2035"
+						"0": "Указ Президента Республики Узбекистан, от 11.09.2023 г. № УП-158, О Стратегии «Узбекистан – 2030»",
+						"1": "Указ Президента Республики Узбекистан, от 30.01.2025 г. № УП-16, О Государственной программе по реализации Стратегии «Узбекистан — 2030» в «Год охраны окружающей среды и «зеленой экономики»",
+						"2": "Указ Президента Республики Узбекистан, от 30.10.2019 г. № УП-5863 «Об утверждении Концепции охраны окружающей среды Республики Узбекистан до 2030 года»",
+						"3": "Постановление Кабинета Министров Республики Узбекистан, от 11.06.2019 г. № 484 Об утверждении Стратегии по сохранению биологического разнообразия в Республике Узбекистан на период 2019-2028 годы",
+						"4": "Постановление Президента Республики Узбекистан, от 17.04.2019 г. № ПП-4291, Об утверждении Стратегии по обращению с твердыми бытовыми отходами в Республике Узбекистан на период 2019-2028 годов",
+						"5": "Постановление Президента Республики Узбекистан, от 06.10.2020 г. № ПП-4850, Об утверждении Концепции развития системы лесного хозяйства Республики Узбекистан до 2030 года",
+						"6": "Постановление Президента Республики Узбекистан №ПП-184 от 15.05.2025г., «Об утверждении Концепции повышения экологической культуры населения на период до 2030 года» и др."
 					},
-					"nationalInitiativesTitle": "National initiatives",
+					"nationalInitiativesTitle": "Национальные инициативы",
 					"nationalInitiativesIntro": {
-						"title1": "Concessional financing for recycling",
-						"text1": "Support for investment projects financed through utilization fee revenues.",
-						"title2": "EcoQoldau Programme",
-						"text2": "Incentive payments to support waste collection, sorting, and recycling.",
-						"title3": "Waste Management Concept",
-						"text3": "the first in Central Asia, providing for the introduction of digital tracking of all waste streams and the establishment of a National Waste Management Operator."
+						"title1": "Национальная программа",
+						"text1": "«Узбекистан без пластиковых отходов».",
+						"title2": "Общенациональный проек",
+						"text2": "«Территория, свободная от отходов», направленный на совершенствование системы переработки отходов и обращения с ними.",
+						"title3": "Общенациональный проект",
+						"text3": "«Чистый воздух», направленный на улучшение качества атмосферного воздуха."
 					},
 					"nationalInitiatives": {
-						"title1": "Green Uzbekistan",
-						"text1": "is a large-scale national environmental campaign under the auspices of the President of the Republic of Uzbekistan, aimed at creating an ecological culture through cleaning territories (settlements, natural objects, banks of reservoirs), planting trees (millions of seedlings) and combating unauthorized landfills, involving young people, business and government agencies, with a focus on waste management, innovation and landscaping.",
-						"title2": "The 2 Billion Trees project",
-						"text2": "is an initiative in Uzbekistan, with the aim of creating woodlands until 2025, and then extended until 2027. The goal is to plant and sow 2 billion saplings of tree and shrub species, including saxaul, pine, birch and others, in the state forest fund to restore forests and improve the ecological situation.",
-						"title3": "The International Fund for Biodiversity Conservation",
-						"text3": "is an initiative of Uzbekistan that will unite the efforts of states, international organizations (UNDP, UNESCO, FAO) and NGOs to finance the protection of ecosystems, develop ecotourism, introduce eco-technologies and raise awareness, working according to the best international standards for sustainable development and conservation of flora and fauna.",
-						"title4": "UN Regional Center for Sustainable Development Goals (SDGs) for Central Asia and Afghanistan",
-						"text4": "The <bold>UN Regional Center for Sustainable Development Goals (SDGs) for Central Asia and Afghanistan has been established in Kazakhstan (Almaty).</bold> It was approved by the UN member states in March 2025, opened in August 2025, and its goal is to contribute to the achievement of 17 global SDGs by 2030."
+						"title1": "Яшил макон",
+						"text1": "Общенациональный проект «Яшил макон» предусматривает ежегодную посадку 200 млн деревьев, увеличение площади зелёных зон на 30 % к 2030 году, а также создание до 2028 года ботанических и дендрологических парков общей площадью не менее 100 гектаров в Республике Каракалпакстан, областях и городе Ташкенте.",
+						"title2": "Экокультура",
+						"text2": "Общенациональный проект «Экокультура», направленный на формирование эко-традиций и широкую пропаганду экологического образа жизни среди населения",
+						"title3": "Бионаследие",
+						"text3": "Общенациональный проект «Бионаследие», направленный на сохранение биоразнообразия для будущего поколения.",
+						"title4": "Региональный центр ООН по Целям устойчивого развития (ЦУР) для Центральной Азии и Афганистана",
+						"text4": "Центральноазиатский университет изучения окружающей среды и изменения климата (Green University), направленный на развитие регионального сотрудничества и подготовку нового поколения лидеров в сфере экологии; в состав Совета входят министры стран Центральной Азии, а также представители Азербайджана и Монголии"
 					}
 				}
 			}

@@ -25,9 +25,13 @@ export function HotelsTabs() {
 		},
 	]
 
-	const buildHref = (type: number) => {
+	const buildHref = (type: number | null) => {
 		const params = new URLSearchParams(searchParams.toString())
-		params.set('type', String(type))
+		if (type === null) {
+			params.delete('type')
+		} else {
+			params.set('type', String(type))
+		}
 		params.delete('page')
 		return `/useful/hotels?${params.toString()}`
 	}
@@ -38,8 +42,8 @@ export function HotelsTabs() {
 			className="xs:gap-[41.5px] xs:flex-row mb-[60px] flex flex-col items-center justify-center gap-[20px] md:flex-row xl:gap-[60px]"
 		>
 			{hotelsTabs.map((tab) => {
-				const currentType = searchParams.get('type') || '5'
-				const isActive = currentType === String(tab.count)
+				const currentType = searchParams.get('type')
+				const isActive = tab.count === null ? !currentType : currentType === String(tab.count)
 
 				return (
 					<Link
