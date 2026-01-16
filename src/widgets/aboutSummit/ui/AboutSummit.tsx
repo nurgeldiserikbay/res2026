@@ -77,14 +77,14 @@ export function AboutSummit() {
 				<div className="flex w-full grow flex-col justify-start xl:max-w-[1025px]">
 					<div
 						ref={AboutSummitMobileTitleRef}
-						className="font-regular text-text mb-[20px] block translate-y-[50px] text-[20px] leading-[1.2] opacity-0 sm:mb-[30px] sm:text-[22px] md:text-[24px] xl:hidden"
+						className="text-text mb-[8px] text-[20px] leading-normal font-bold sm:mb-[10px] sm:text-[22px] md:text-[24px] xl:hidden"
 					>
 						{t(`titles.aboutSummit`)}
 					</div>
 
 					<div
 						ref={AboutSummitTitleRef}
-						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[18px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[22px] md:mb-[31px] md:text-justify md:text-[28px] lg:text-[30px] xl:text-[30px] 2xl:mb-[60px] 2xl:text-[40px]"
+						className="3xl:text-[40px] mb-[20px] translate-x-90 self-end text-[16px] leading-[1.2] font-bold whitespace-pre-line opacity-0 sm:mb-[25px] sm:text-[22px] md:mb-[31px] md:text-justify md:text-[28px] lg:text-[30px] xl:text-[30px] 2xl:mb-[60px] 2xl:text-[40px]"
 					>
 						{t.rich('pages.aboutSummit.title', {
 							primary: (chunks) => <span className="text-primary font-bold">{chunks}</span>,
