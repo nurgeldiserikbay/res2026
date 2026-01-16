@@ -2,7 +2,7 @@ variables:
   #  GIT_STRATEGY: clone
   SRV: '89.219.32.148'
   PORT: '22022'
-  NEXT_PUBLIC_GIT_BRANCH: develop
+  NEXT_PUBLIC_GIT_BRANCH: production
 
 image: docker:stable
 
