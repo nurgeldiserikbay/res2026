@@ -34,7 +34,6 @@ export function HotelsTabs() {
 
 	return (
 		<nav
-			role="tablist"
 			aria-label={t('titles.news')}
 			className="xs:gap-[41.5px] xs:flex-row mb-[60px] flex flex-col items-center justify-center gap-[20px] md:flex-row xl:gap-[60px]"
 		>

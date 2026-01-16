@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
@@ -20,9 +21,10 @@ export interface NewsItemProps {
 	file: string
 	wide?: boolean
 	views?: number
+	source?: string
 }
 
-export function NewsItem({ title, image, date, tag, type, slug, variant = 'dark', file, wide = false, views = 0 }: NewsItemProps) {
+export function NewsItem({ title, image, date, tag, type, slug, variant = 'dark', file, wide = false, views = 0, source }: NewsItemProps) {
 	const locale = useLocale() as Locale
 	const t = useTranslations()
 
@@ -36,9 +38,7 @@ export function NewsItem({ title, image, date, tag, type, slug, variant = 'dark'
 			target={type === 'publication' ? '_blank' : undefined}
 			className={`group relative block ${wide ? 'aspect-[1.696]' : 'aspect-[0.789]'} w-full overflow-hidden rounded-[12px] bg-white shadow-[-1px_5px_11px_0px_rgba(0,0,0,0.05),-5px_20px_20px_0px_rgba(0,0,0,0.04)] ${variant === 'light' ? 'bg-white' : 'after:absolute after:inset-0 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-b after:from-[#00000000] after:to-[#000000] after:content-[""]'}`}
 		>
-			<img
-				loading="lazy"
-				decoding="async"
+			<Image
 				src={image}
 				alt={localizedTitle}
 				width={wide ? 860 : 405}
@@ -88,6 +88,16 @@ export function NewsItem({ title, image, date, tag, type, slug, variant = 'dark'
 						<IconEye />
 						<span>{views}</span>
 					</div>
+				)}
+
+				{type === 'publication' && source && (
+					<Link
+						href={source}
+						target="_blank"
+						className="mt-[10px] text-[13px] leading-none font-light text-[#777C83]"
+					>
+						{t(`labels.source`)}
+					</Link>
 				)}
 			</div>
 			<div className="absolute top-[30px] right-[30px] z-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-black/10 backdrop-blur-[13px]">

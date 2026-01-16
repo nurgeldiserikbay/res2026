@@ -98,6 +98,7 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"source": "Source",
 		"weather": "Weather",
 		"precipitation": "Precipitation probability",
 		"humidity": "Humidity",
@@ -117,7 +118,7 @@
 		"pressSecretary": "Press Secretary",
 		"summers": "summer",
 		"winters": "In the north winters",
-		"oblasts": "oblasts",
+		"regions": "regions",
 		"citiesOfNationalSignificance": "cities of republican significance",
 		"population": "20 million people.",
 		"days": "Days",
@@ -228,7 +229,7 @@
 				},
 				"text1": "Kazakhstan is the largest country in the world that does not have direct access to the World Ocean. Most of the country's territory is made up of deserts – 44% and semi-deserts-14%. Steppes occupy 26% of the area of Kazakhstan, forests-5.5%. There are 8,5 thousand rivers in the country. \n\n The north-eastern part of the Caspian Sea is part of the republic. The Aral Sea is divided between Kazakhstan and Uzbekistan. There are 48 thousand large and small lakes in Kazakhstan. The largest of them are Balkhash, Zaisan and Alakol. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative and territorial structure of the country includes",
 				"text2": "The population of Kazakhstan exceeds",
-				"stat1": "oblasts",
+				"stat1": "regions",
 				"stat2": "cities of national significance",
 				"stat3": "million people",
 				"climateTitle": "The weather of Kazakhstan",
@@ -237,7 +238,7 @@
 					"strategicVisionTitle": "Strategic vision and documents",
 					"strategicVisionIntro": "Kazakhstan has adopted the following Strategic Documents:",
 					"strategicDocuments": {
-						"0": "Strategy for achieving Carbon Neutrality until 2060, Road Map to the Strategy",
+						"0": "Strategy for achieving Carbon Neutrality until 2060",
 						"1": "IT AIMS to reduce greenhouse gas emissions by 17% from 1990 levels by 2035",
 						"2": "Concepts for the transition of the Republic of Kazakhstan to a «green economy»",
 						"3": "The concept of managing all types of waste for 2026-2030",

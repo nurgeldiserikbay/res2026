@@ -71,6 +71,7 @@ export default function GoogleTagManager() {
 					height="0"
 					width="0"
 					style={{ display: 'none', visibility: 'hidden' }}
+					title="Google Tag Manager"
 				/>
 			</noscript>
 		</>

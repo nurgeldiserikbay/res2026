@@ -41,7 +41,6 @@ export function NewsTabLinks() {
 
 	return (
 		<nav
-			role="tablist"
 			aria-label={t('titles.news')}
 			className="xs:gap-[30px] mb-[30px] flex items-stretch justify-center gap-[20px] xl:mb-[50px]"
 		>

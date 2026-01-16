@@ -59,6 +59,12 @@ export function ModalShell({
 	if (!open) return null
 	if (typeof document === 'undefined') return null
 
+	const handleOverlayKeyDown = (e: React.KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			onClose()
+		}
+	}
+
 	return createPortal(
 		<div className={[`fixed inset-0 top-0 right-0 bottom-0 left-0 z-10000 box-border overflow-y-scroll`, className].join(` `)}>
 			<div
@@ -66,6 +72,10 @@ export function ModalShell({
 				onMouseDown={(e) => {
 					if (e.target === e.currentTarget) onClose()
 				}}
+				onKeyDown={handleOverlayKeyDown}
+				tabIndex={-1}
+				role="button"
+				aria-label="Close modal"
 			></div>
 			<div className={['relative z-101 mx-auto w-full py-[80px]', maxWidthClassName].join(' ')}>
 				<div

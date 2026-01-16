@@ -11,10 +11,21 @@ export interface IKeyDirectionItem {
 }
 
 export function KeyDirection({ image, title, onClick, className }: IKeyDirectionItem & { className?: string }) {
+	const handleKeyDown = (e: React.KeyboardEvent) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault()
+			onClick()
+		}
+	}
+
 	return (
 		<div
 			className={[`group xs:h-[584px] relative h-[484px] w-full cursor-pointer overflow-hidden rounded-[12px]`, className].join(` `)}
 			onClick={onClick}
+			onKeyDown={handleKeyDown}
+			tabIndex={0}
+			role="button"
+			aria-label={title}
 		>
 			<Image
 				src={image}

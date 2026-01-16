@@ -115,6 +115,7 @@ export function ProcessesSlider() {
 		<section className="3xl:pt-[100px] bg-white pt-[50px] md:pt-[60px] 2xl:pt-[80px]">
 			<Container>
 				<div className="relative">
+					{/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
 					<div
 						ref={tabsContainerRef}
 						className={`scrollbar-hide relative z-1 flex items-stretch justify-start gap-[35px] overflow-x-scroll pt-[10px] ${isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
@@ -122,6 +123,7 @@ export function ProcessesSlider() {
 						onMouseMove={handleMouseMove}
 						onMouseUp={handleMouseUp}
 						onMouseLeave={handleMouseLeave}
+						aria-label="Preparation process timeline"
 					>
 						{data.map((processTab, processTabIndex) => (
 							<button

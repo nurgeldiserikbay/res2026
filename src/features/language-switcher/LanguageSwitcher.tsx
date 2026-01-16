@@ -95,8 +95,9 @@ export function LanguageSwitcher() {
 						className={['transition-all duration-300', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'].join(
 							' ',
 						)}
+						role="listbox"
 					>
-						<ul role="listbox">
+						<ul>
 							{options.map((l) => (
 								<li key={l}>
 									<button
