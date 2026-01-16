@@ -9,6 +9,17 @@ export interface AttractionItemMultilang {
 		en: string
 	}
 	image: string
+	description: {
+		ru: string
+		kk: string
+		en: string
+	}
+	buttonText: {
+		ru: string
+		kk: string
+		en: string
+	}
+	link: string
 }
 
 export interface AttractionItem {
