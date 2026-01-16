@@ -83,7 +83,8 @@
 		"read": "Read",
 		"download": "Download",
 		"book": "Book",
-		"downloadPdf": "Download PDF"
+		"downloadPdf": "Download PDF",
+		"share": "Share"
 	},
 	"titles": {
 		"slogan": "Shared vision for a Resilient Future",
@@ -124,6 +125,7 @@
 		"gallery": "Gallery"
 	},
 	"labels": {
+		"newsNotFound": "News not found",
 		"source": "Source",
 		"weather": "Weather",
 		"precipitation": "Precipitation probability",

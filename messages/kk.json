@@ -83,7 +83,8 @@
 		"read": "Оқу",
 		"download": "Жүктеу",
 		"book": "Брондау",
-		"downloadPdf": "PDF жүктеу"
+		"downloadPdf": "PDF жүктеу",
+		"share": "Бөлісу"
 	},
 	"titles": {
 		"slogan": "Тұрақты болашақ – ортақ көзқарас",
@@ -124,6 +125,7 @@
 		"gallery": "Галерея"
 	},
 	"labels": {
+		"newsNotFound": "Жаңалықтар табылмады",
 		"source": "Дереккөз",
 		"weather": "Ауа райы",
 		"precipitation": "Жауын-шашын",
