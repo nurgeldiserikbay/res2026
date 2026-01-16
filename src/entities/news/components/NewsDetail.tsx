@@ -1,6 +1,7 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 
 import { NewsShortItem } from '@/entities/news/components/NewsShortItem'
@@ -75,7 +76,7 @@ export function NewsDetail({ slug, initialData }: NewsDetailProps) {
 					</div>
 
 					{newsItem.image && (
-						<img
+						<Image
 							src={newsItem.image}
 							alt={newsItem.name}
 							width={1332}

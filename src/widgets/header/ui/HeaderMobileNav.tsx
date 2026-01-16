@@ -63,7 +63,6 @@ export function HeaderMobileNav() {
 
 			<div
 				id="mobile-menu"
-				role="dialog"
 				aria-modal="true"
 				aria-label="Navigation menu"
 				className={[
@@ -74,7 +73,6 @@ export function HeaderMobileNav() {
 				<Container>
 					<div className="mb-[40px] flex items-center justify-between">
 						<HeaderLogo />
-						{!appConfig.isProduction && <HeaderSocial />}
 						<button
 							type="button"
 							aria-label="Close menu"
@@ -208,6 +206,12 @@ export function HeaderMobileNav() {
 								})}
 						</div>
 					</div>
+
+					{!appConfig.isProduction && (
+						<div className="mt-[30px]">
+							<HeaderSocial />
+						</div>
+					)}
 				</Container>
 			</div>
 		</nav>

@@ -9,7 +9,7 @@ import { HeaderSocial } from './HeaderSocial'
 export function HeaderActions() {
 	return (
 		<div className="flex grow items-center justify-end gap-[28px] md:max-w-[456px] md:justify-end lg:max-w-[156px]">
-			<div className="hidden max-w-[210px] grow items-center justify-between gap-[30px] md:flex">
+			<div className="hidden max-w-[250px] grow items-center justify-between gap-[30px] md:flex">
 				{!appConfig.isProduction && <HeaderSocial />}
 				{!appConfig.isProduction && <HeaderSearch />}
 			</div>

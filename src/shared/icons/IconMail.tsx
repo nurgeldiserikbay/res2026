@@ -19,7 +19,6 @@ export function IconMail({ size = 18, color, title = 'Mail', className }: IconPr
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			className={className}
-			role="img"
 			aria-label={title}
 		>
 			<path
