@@ -5,10 +5,37 @@ import { NewsDetail } from '@/entities/news/components/NewsDetail'
 import { newsDetailQuery, newsListQuery } from '@/entities/news/news.queries'
 import { Locale } from '@/shared/config/i18n'
 import { getQueryClient } from '@/shared/lib/query/get-query-client'
+import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/generate-metadata'
 import { PageBanner } from '@/shared/ui/banner'
+
+import type { Metadata } from 'next'
 
 interface PageProps {
 	params: Promise<{ slug: string; locale: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+	const { slug, locale } = await params
+	const queryClient = getQueryClient()
+
+	// Получаем данные новости для метаданных
+	await queryClient.prefetchQuery(newsDetailQuery(slug, locale as Locale))
+	const newsData = queryClient.getQueryData(newsDetailQuery(slug, locale as Locale).queryKey)
+
+	const news = newsData?.data
+
+	return generateMetadataUtil({
+		locale: locale as Locale,
+		path: `/news/${slug}`,
+		serverData: news
+			? {
+					title: news.title_seo || news.name,
+					description: news.description_seo || news.description,
+					keywords: news.keywords_seo || undefined,
+					image: news.image,
+				}
+			: undefined,
+	})
 }
 
 export default async function Page({ params }: PageProps) {

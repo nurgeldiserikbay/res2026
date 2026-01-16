@@ -5,8 +5,24 @@ import { newsTypes } from '@/entities/news/news.consts'
 import { newsListQuery } from '@/entities/news/news.queries'
 import { Locale } from '@/shared/config/i18n'
 import { getQueryClient } from '@/shared/lib/query/get-query-client'
+import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/generate-metadata'
 
 import { NewsPageContent } from './NewsPageContent'
+
+import type { Metadata } from 'next'
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+	const { locale } = await params
+	const messages = (await import(`../../../../messages/${locale}.json`)).default
+
+	return generateMetadataUtil({
+		locale,
+		path: '/news',
+		pageMeta: {
+			title: messages.titles?.news || 'News',
+		},
+	})
+}
 
 type PageProps = {
 	searchParams: Promise<{ page?: string; type?: string }>
