@@ -1,9 +1,8 @@
-import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 import { headerNav } from '@/entities/nav/model/nav'
-import { Link } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import { appConfig } from '@/shared/config/app.config'
 import { IconArrDown } from '@/shared/icons/IconArrDown'
 import { IconClose } from '@/shared/icons/IconClose'

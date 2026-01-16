@@ -1,8 +1,10 @@
 'use client'
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
+
+import { usePathname, useRouter } from '@/i18n/navigation'
 
 type PaginationProps = {
 	totalPages: number

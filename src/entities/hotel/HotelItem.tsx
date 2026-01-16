@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { IconStar } from '@/shared/icons/IconStar'
-import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
+// import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 
 import { HotelItem as HotelItemType } from './hotel.types'
 
@@ -10,7 +10,7 @@ interface HotelItemProps extends HotelItemType {
 	className?: string
 }
 
-export function HotelItem({ image, title, rating, priceFrom, currency, description, buttonText, className }: HotelItemProps) {
+export function HotelItem({ image, title, rating, priceFrom, currency, description, className }: HotelItemProps) {
 	const t = useTranslations()
 
 	return (
@@ -21,9 +21,15 @@ export function HotelItem({ image, title, rating, priceFrom, currency, descripti
 					alt="Hotel"
 					width={408}
 					height={559}
-					className="w-full object-cover"
+					className="aspect-408/559 w-full object-cover"
 				/>
-				<div className="absolute right-0 bottom-0 left-0 p-[30px]">
+				<div
+					className="pointer-events-none absolute inset-0"
+					style={{
+						background: 'linear-gradient(to bottom, #02493F00 0%, #02493FC2 76%)',
+					}}
+				/>
+				<div className="absolute right-0 bottom-0 left-0 z-10 p-[30px]">
 					<div className="mb-[20px] flex items-center gap-[10px]">
 						{new Array(rating).fill(0).map((_, index) => (
 							<IconStar
@@ -44,7 +50,7 @@ export function HotelItem({ image, title, rating, priceFrom, currency, descripti
 					{priceFrom} {t(`currencies.${currency}`)}
 				</span>
 			</div>
-			<ButtonDefault>{buttonText || t('commands.book')}</ButtonDefault>
+			{/* <ButtonDefault>{buttonText || t('commands.book')}</ButtonDefault> */}
 		</div>
 	)
 }

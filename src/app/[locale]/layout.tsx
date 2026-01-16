@@ -151,9 +151,9 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body className={`${HelveticaNeue.className}`}>
-				<GoogleTagManager />
 				<QueriesProvider>
 					<NextIntlClientProvider>
+						<GoogleTagManager />
 						<GSAPProvider />
 						{/* <div id="smooth-wrapper">
 						<div id="smooth-content"> */}

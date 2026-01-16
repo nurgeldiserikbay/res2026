@@ -1,9 +1,10 @@
 'use client'
 
-import { usePathname, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import Script from 'next/script'
 import { useEffect } from 'react'
 
+import { usePathname } from '@/i18n/navigation'
 import { appConfig } from '@/shared/config/app.config'
 
 const GTM_ID = 'GTM-NT3TCT8K'
