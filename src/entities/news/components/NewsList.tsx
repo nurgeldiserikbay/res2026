@@ -47,6 +47,7 @@ function NewsItemWrapper({ item, delay }: NewsItemWrapperProps) {
 				date={formattedDate}
 				tag={''}
 				slug={item.slug}
+				external_link={item.external_link}
 				file={item.file}
 				variant={newsTypeMap[item.type] === 'publication' ? 'light' : 'dark'}
 				wide={false}

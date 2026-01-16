@@ -1,35 +1,35 @@
 {
 	"meta": {
-		"title": "RES 2026 — международный саммит по устойчивому развитию и энергетике",
-		"description": "RES 2026 — международный саммит, посвящённый устойчивому развитию, энергетике и зелёным технологиям. Спикеры, программа и партнёры мероприятия.",
-		"keywords": "RES 2026, международный саммит, устойчивая энергетика, зеленые технологии, форум, Казахстан",
-		"siteName": "Региональный экологический саммит 2026",
-		"ogImageAlt": "Логотип Регионального экологического саммита 2026",
-		"ogImageTitle": "Региональный экологический саммит 2026",
+		"title": "RES 2026 — International Summit on Sustainable Development and Energy",
+		"description": "RES 2026 — international summit dedicated to sustainable development, energy and green technologies. Speakers, program and partners of the event.",
+		"keywords": "RES 2026, international summit, sustainable energy, green technologies, forum, Kazakhstan",
+		"siteName": "Regional Ecological Summit 2026",
+		"ogImageAlt": "Regional Ecological Summit 2026 logo",
+		"ogImageTitle": "Regional Ecological Summit 2026",
 		"about": {
-			"title": "О саммите RES 2026 — цели, миссия и формат мероприятия",
-			"description": "Узнайте о целях, миссии и формате международного саммита RES 2026, объединяющего экспертов в области устойчивого развития и энергетики.",
-			"keywords": "о саммите RES 2026, устойчивое развитие, энергетический форум, цели саммита"
+			"title": "About RES 2026 Summit — goals, mission and event format",
+			"description": "Learn about the goals, mission and format of the international RES 2026 summit, bringing together experts in sustainable development and energy.",
+			"keywords": "about RES 2026 summit, sustainable development, energy forum, summit goals"
 		},
 		"partners": {
-			"title": "Партнёры RES 2026 — международные и стратегические компании",
-			"description": "Партнёры международного саммита RES 2026 — ведущие компании и организации в сфере устойчивого развития и энергетики.",
-			"keywords": "партнёры RES 2026, стратегические партнёры, международные компании"
+			"title": "RES 2026 Partners — international and strategic companies",
+			"description": "Partners of the international RES 2026 summit — leading companies and organizations in sustainable development and energy.",
+			"keywords": "RES 2026 partners, strategic partners, international companies"
 		},
 		"speakers": {
-			"title": "Спикеры RES 2026 — международные эксперты и лидеры отрасли",
-			"description": "Спикеры RES 2026 — международные эксперты, лидеры и практики в области энергетики и устойчивого развития.",
-			"keywords": "спикеры RES 2026, эксперты энергетики, международные спикеры"
+			"title": "RES 2026 Speakers — international experts and industry leaders",
+			"description": "RES 2026 speakers — international experts, leaders and practitioners in energy and sustainable development.",
+			"keywords": "RES 2026 speakers, energy experts, international speakers"
 		},
 		"programms": {
-			"title": "Программа RES 2026 — ключевые сессии и выступления",
-			"description": "Программа международного саммита RES 2026: ключевые сессии, панельные дискуссии и выступления экспертов.",
-			"keywords": "программа RES 2026, сессии саммита, программа форума"
+			"title": "RES 2026 Program — key sessions and presentations",
+			"description": "Program of the international RES 2026 summit: key sessions, panel discussions and expert presentations.",
+			"keywords": "RES 2026 program, summit sessions, forum program"
 		},
 		"contacts": {
-			"title": "Контакты RES 2026 — связь с организаторами саммита",
-			"description": "Контакты организаторов международного саммита RES 2026. Свяжитесь с нами для партнёрства и участия.",
-			"keywords": "контакты RES 2026, организаторы саммита, связь"
+			"title": "RES 2026 Contacts — contact with summit organizers",
+			"description": "Contacts of the organizers of the international RES 2026 summit. Contact us for partnership and participation.",
+			"keywords": "RES 2026 contacts, summit organizers, contact"
 		}
 	},
 	"nav": {

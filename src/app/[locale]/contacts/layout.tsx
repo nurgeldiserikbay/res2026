@@ -1,17 +1,16 @@
 import type { Locale } from '@/shared/config/i18n'
 import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/generate-metadata'
-import { Soon } from '@/shared/ui/soon/Soon'
 
 import type { Metadata } from 'next'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
 	const { locale } = await params
 	const messages = (await import(`../../../../messages/${locale}.json`)).default
-	const pageMeta = messages.meta?.partners
+	const pageMeta = messages.meta?.contacts
 
 	return generateMetadataUtil({
 		locale,
-		path: '/partners',
+		path: '/contacts',
 		pageMeta: pageMeta
 			? {
 					title: pageMeta.title,
@@ -22,6 +21,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 	})
 }
 
-export default function Page() {
-	return <Soon />
+export default function ContactsLayout({ children }: { children: React.ReactNode }) {
+	return <>{children}</>
 }

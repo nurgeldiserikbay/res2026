@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/i18n/navigation'
@@ -47,7 +46,7 @@ export function NewsItem({
 			target={type === 'publication' ? '_blank' : undefined}
 			className={`group relative block ${wide ? 'aspect-[1.696]' : 'aspect-[0.789]'} w-full overflow-hidden rounded-[12px] bg-white shadow-[-1px_5px_11px_0px_rgba(0,0,0,0.05),-5px_20px_20px_0px_rgba(0,0,0,0.04)] ${variant === 'light' ? 'bg-white' : 'after:absolute after:inset-0 after:h-full after:w-full after:rounded-[12px] after:bg-linear-to-b after:from-[#00000000] after:to-[#000000] after:content-[""]'}`}
 		>
-			<Image
+			<img
 				src={image}
 				alt={localizedTitle}
 				width={wide ? 860 : 405}
@@ -95,7 +94,6 @@ export function NewsItem({
 						<span>{views}</span>
 					</div>
 				)}
-
 				{type === 'publication' && external_link && (
 					<Link
 						href={external_link}

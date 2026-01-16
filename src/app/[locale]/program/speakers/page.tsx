@@ -10,6 +10,8 @@ import { Container } from '@/shared/ui/container/container'
 import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 import { speakersPaginItems } from '@/widgets/speakers/mocks'
 
+// Note: This is a client component, so metadata should be handled in a parent layout or separate metadata file
+
 type SpeakersItemWrapperProps = {
 	item: (typeof speakersPaginItems)[0]
 	index: number
