@@ -77,7 +77,7 @@ export default function Home() {
 				ref={BannerRef}
 				data-animated-banner
 				style={{ maxWidth: 'unset' }}
-				className="bg-primary-dark min-h-[812px] pt-[240px] pb-[64px] sm:pt-[132.5px] lg:min-h-[965px]"
+				className="bg-primary-dark min-h-[812px] pt-[240px] pb-[64px] sm:min-h-screen sm:pt-[132.5px] 2xl:min-h-[965px]"
 			>
 				<Container className="relative z-10 flex flex-col items-center justify-center">
 					<h1 className="xs:text-[52px] 3xl:text-[111px] mb-[30px] w-full max-w-[790px] text-center text-[38px] leading-[0.96] font-bold text-white sm:text-[82px] xl:text-[98px]">

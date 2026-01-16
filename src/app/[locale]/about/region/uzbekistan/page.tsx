@@ -2,11 +2,13 @@ import { useTranslations } from 'next-intl'
 
 import { HeroBanner } from '@/shared/ui/banner'
 import { SLIDES_UZ } from '@/widgets/region/mocks'
-import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
+import { EventsList } from '@/widgets/region/ui/EventsList'
 import { FloraAndFauna } from '@/widgets/region/ui/FloraAndFauna'
+import { Nationalnitiatives } from '@/widgets/region/ui/Nationalnitiatives'
 import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
+import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 
 const IMGS = [
 	{
@@ -77,13 +79,13 @@ export default function Page() {
 	const climateData = {
 		title: t(`pages.regions.uzbekistan.climateTitle`),
 		climateText2: t(`pages.regions.uzbekistan.climateText`),
-		temp1Value: '-40',
+		temp1Value: '-8',
 		temp2Value: '+45',
 		img1: '/imgs/regions/uz/climate-1.png',
 		img2: '/imgs/regions/uz/climate-2.png',
 	}
 
-	const etcData = {
+	const strategicDocumentsData = {
 		strategicVisionTitle: t(`pages.regions.uzbekistan.etc.strategicVisionTitle`),
 		strategicVisionIntro: t(`pages.regions.uzbekistan.etc.strategicVisionIntro`),
 		strategicDocuments: [
@@ -111,50 +113,131 @@ export default function Page() {
 				id: 6,
 				title: t(`pages.regions.uzbekistan.etc.strategicDocuments.5`),
 			},
+			{
+				id: 7,
+				title: t(`pages.regions.uzbekistan.etc.strategicDocuments.6`),
+			},
 		],
-		nationalInitiativesTitle: t(`pages.regions.uzbekistan.etc.nationalInitiativesTitle`),
-		nationalInitiativesIntro: [
+	}
+
+	const nationalInitiativesData = {
+		title: t(`pages.regions.uzbekistan.etc.nationalInitiativesTitle`),
+		list: [
+			{
+				id: 0,
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.0.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.0.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
+			},
 			{
 				id: 1,
-				title: t(`pages.regions.uzbekistan.etc.nationalInitiativesIntro.title1`),
-				description: t(`pages.regions.uzbekistan.etc.nationalInitiativesIntro.text1`),
-				image: '/imgs/recycle1.png',
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.1.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.1.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
 			},
 			{
 				id: 2,
-				title: t(`pages.regions.uzbekistan.etc.nationalInitiativesIntro.title2`),
-				description: t(`pages.regions.uzbekistan.etc.nationalInitiativesIntro.text2`),
-				image: '/imgs/recycle2.png',
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.2.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.2.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
 			},
 			{
 				id: 3,
-				title: t(`pages.regions.uzbekistan.etc.nationalInitiativesIntro.title3`),
-				description: t(`pages.regions.uzbekistan.etc.nationalInitiativesIntro.text3`),
-				image: '/imgs/recycle3.png',
-			},
-		],
-		nationalInitiatives: [
-			{
-				id: 1,
-				title: t(`pages.regions.uzbekistan.etc.nationalInitiatives.title1`),
-				description: t(`pages.regions.uzbekistan.etc.nationalInitiatives.text1`),
-			},
-			{
-				id: 2,
-				title: t(`pages.regions.uzbekistan.etc.nationalInitiatives.title2`),
-				description: t(`pages.regions.uzbekistan.etc.nationalInitiatives.text2`),
-			},
-			{
-				id: 3,
-				title: t(`pages.regions.uzbekistan.etc.nationalInitiatives.title3`),
-				description: t(`pages.regions.uzbekistan.etc.nationalInitiatives.text3`),
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.3.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.3.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
 			},
 			{
 				id: 4,
-				title: '',
-				description: t.rich('pages.regions.uzbekistan.etc.nationalInitiatives.text4', {
-					bold: (chunks) => <span className="font-bold">{chunks}</span>,
-				}),
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.4.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.4.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
+			},
+			{
+				id: 5,
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.5.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.5.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
+			},
+			{
+				id: 6,
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.6.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.6.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
+			},
+			{
+				id: 7,
+				title: t(`pages.regions.uzbekistan.nationalInitiativesData.7.title`),
+				description: t(`pages.regions.uzbekistan.nationalInitiativesData.7.text`),
+				image: '/imgs/regions/uz/national-initiatives-1.png',
+			},
+		],
+	}
+
+	const internationalEventsData = {
+		title: t(`pages.regions.uzbekistan.internationalEventsTitle`),
+		list: [
+			{
+				id: 1,
+				title: t(`pages.regions.uzbekistan.internationalEventsHeld.0.title`),
+				description: t(`pages.regions.uzbekistan.internationalEventsHeld.0.text`),
+				image: '/imgs/regions/uz/international-events-1.png',
+				width: 175,
+				height: 73,
+			},
+			{
+				id: 2,
+				title: t(`pages.regions.uzbekistan.internationalEventsHeld.1.title`),
+				description: t(`pages.regions.uzbekistan.internationalEventsHeld.1.text`),
+				image: '/imgs/regions/uz/international-events-2.png',
+				width: 87,
+				height: 137,
+			},
+			{
+				id: 3,
+				title: t(`pages.regions.uzbekistan.internationalEventsHeld.2.title`),
+				description: t(`pages.regions.uzbekistan.internationalEventsHeld.2.text`),
+				image: '/imgs/regions/uz/international-events-3.png',
+				width: 251,
+				height: 64,
+			},
+			{
+				id: 4,
+				title: t(`pages.regions.uzbekistan.internationalEventsHeld.3.title`),
+				description: t(`pages.regions.uzbekistan.internationalEventsHeld.3.text`),
+				image: '/imgs/regions/uz/international-events-4.png',
+				width: 247,
+				height: 123,
+			},
+			{
+				id: 5,
+				title: t(`pages.regions.uzbekistan.internationalEventsHeld.4.title`),
+				description: t(`pages.regions.uzbekistan.internationalEventsHeld.4.text`),
+				image: '/imgs/regions/uz/international-events-5.png',
+				width: 257.5,
+				height: 183,
+			},
+		],
+	}
+
+	const upcomingInternationalEventsData = {
+		title: t(`pages.regions.uzbekistan.upcomingInternationalTitle`),
+		list: [
+			{
+				id: 1,
+				title: t(`pages.regions.uzbekistan.upcomingInternationalEvents.0.title`),
+				description: t(`pages.regions.uzbekistan.upcomingInternationalEvents.0.text`),
+				image: '/imgs/regions/uz/international-events-6.jpg',
+				width: 271,
+				height: 114,
+			},
+			{
+				id: 2,
+				title: t(`pages.regions.uzbekistan.upcomingInternationalEvents.1.title`),
+				description: t(`pages.regions.uzbekistan.upcomingInternationalEvents.1.text`),
+				image: '/imgs/regions/uz/international-events-7.png',
+				width: 350,
+				height: 112,
 			},
 		],
 	}
@@ -175,7 +258,36 @@ export default function Page() {
 
 			<FloraAndFauna slides={SLIDES_UZ} />
 
-			<AbountEtc {...etcData} />
+			<StrategicDocuments
+				strategicVisionTitle={strategicDocumentsData.strategicVisionTitle}
+				strategicVisionIntro={strategicDocumentsData.strategicVisionIntro}
+				strategicDocuments={strategicDocumentsData.strategicDocuments}
+			/>
+
+			<Nationalnitiatives
+				list={nationalInitiativesData.list}
+				title={nationalInitiativesData.title}
+			/>
+
+			<EventsList
+				list={internationalEventsData.list}
+				title={internationalEventsData.title}
+			/>
+
+			<EventsList
+				list={upcomingInternationalEventsData.list}
+				title={upcomingInternationalEventsData.title}
+				breakpoints={{
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 30,
+					},
+					780: {
+						slidesPerView: 2,
+						spaceBetween: 60,
+					},
+				}}
+			/>
 		</>
 	)
 }

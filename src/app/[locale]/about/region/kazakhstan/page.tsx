@@ -6,7 +6,9 @@ import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
 import { FloraAndFauna } from '@/widgets/region/ui/FloraAndFauna'
+import { Nationalnitiatives } from '@/widgets/region/ui/Nationalnitiatives'
 import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
+import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 
 const IMGS = [
 	{
@@ -78,7 +80,7 @@ export default function Page() {
 		img2: '/imgs/climate-2.png',
 	}
 
-	const etcData = {
+	const strategicDocumentsData = {
 		strategicVisionTitle: t(`pages.regions.kazakhstan.etc.strategicVisionTitle`),
 		strategicVisionIntro: t(`pages.regions.kazakhstan.etc.strategicVisionIntro`),
 		strategicDocuments: [
@@ -99,8 +101,11 @@ export default function Page() {
 				title: t(`pages.regions.kazakhstan.etc.strategicDocuments.3`),
 			},
 		],
-		nationalInitiativesTitle: t(`pages.regions.kazakhstan.etc.nationalInitiativesTitle`),
-		nationalInitiativesIntro: [
+	}
+
+	const nationalInitiativesData = {
+		title: t(`pages.regions.kazakhstan.etc.nationalInitiativesTitle`),
+		list: [
 			{
 				id: 1,
 				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title1`),
@@ -119,7 +124,28 @@ export default function Page() {
 				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
 				image: '/imgs/recycle2.png',
 			},
+			{
+				id: 4,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title4`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text4`),
+				image: '/imgs/recycle4.png',
+			},
+			{
+				id: 5,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title5`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text5`),
+				image: '/imgs/recycle5.png',
+			},
+			{
+				id: 6,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title6`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text6`),
+				image: '/imgs/recycle6.png',
+			},
 		],
+	}
+
+	const etcData = {
 		nationalInitiatives: [
 			{
 				id: 1,
@@ -161,6 +187,17 @@ export default function Page() {
 			<Climate {...climateData} />
 
 			<FloraAndFauna slides={SLIDES_KZ} />
+
+			<StrategicDocuments
+				strategicVisionTitle={strategicDocumentsData.strategicVisionTitle}
+				strategicVisionIntro={strategicDocumentsData.strategicVisionIntro}
+				strategicDocuments={strategicDocumentsData.strategicDocuments}
+			/>
+
+			<Nationalnitiatives
+				list={nationalInitiativesData.list}
+				title={nationalInitiativesData.title}
+			/>
 
 			<AbountEtc {...etcData} />
 		</>

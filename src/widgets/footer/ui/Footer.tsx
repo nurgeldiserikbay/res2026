@@ -43,10 +43,10 @@ export function Footer() {
 
 	return (
 		<footer className="relative z-1 bg-white pt-[50px] pb-[38px] lg:pt-[75px] lg:pb-[58px] 2xl:pt-[100px] 2xl:pb-[82px]">
-			<Container className="3xl:gap-x-[60px] flex flex-col items-stretch justify-between gap-x-[40px] gap-y-[30px] lg:flex-row">
+			<Container className="3xl:gap-x-[60px] flex flex-col items-stretch justify-between gap-x-[40px] gap-y-[30px] xl:flex-row">
 				<div
 					ref={MapRef}
-					className="grow translate-y-[50px] opacity-0 lg:max-w-[716px]"
+					className="grow translate-y-[50px] opacity-0 xl:max-w-[716px]"
 				>
 					<div className="mb-[6px] aspect-[1.8] w-full">
 						<iframe
@@ -80,7 +80,7 @@ export function Footer() {
 					<div className="mb-[30px] flex items-start justify-between gap-[30px] lg:hidden">
 						<div
 							ref={FooterText3Ref}
-							className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:max-w-full sm:text-[14px] md:text-justify"
+							className="text-text mb-0 max-w-[175px] translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:max-w-full sm:text-[14px] md:text-justify xl:mb-[30px]"
 						>
 							{t(`pages.footer.text`)}
 						</div>
@@ -91,11 +91,11 @@ export function Footer() {
 							{t(`pages.footer.text1`)}
 						</div>
 					</div>
-					<div className="3xl:gap-x-[60px] mb-[30px] flex flex-wrap items-start justify-between gap-x-[40px] gap-y-[30px] lg:mb-[68px] lg:flex-nowrap">
+					<div className="3xl:gap-x-[60px] mb-[30px] flex flex-wrap items-start justify-between gap-x-[40px] gap-y-[30px] lg:mb-[28px] lg:flex-nowrap xl:mb-[40px]">
 						<div className="flex w-full items-center justify-between gap-[60px] lg:w-auto">
 							<div
 								ref={FooterLogoRef}
-								className="translate-y-[50px] opacity-0"
+								className="shrink-0 translate-y-[50px] opacity-0"
 							>
 								<FooterLogo />
 							</div>
@@ -117,7 +117,7 @@ export function Footer() {
 					</div>
 
 					{!appConfig.isProduction && (
-						<div className="mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap lg:mb-[68px] 2xl:mb-[123px]">
+						<div className="3xl:mb-[123px] mb-[30px] flex w-full flex-wrap-reverse items-stretch justify-between gap-y-[30px] sm:flex-nowrap md:mb-[40px] lg:mb-[25px] xl:mb-[30px] 2xl:mb-[80px]">
 							{/* <div className="flex flex-col items-start justify-between">
 							<div
 								ref={FooterContactsRef}
@@ -153,7 +153,7 @@ export function Footer() {
 						<div className="hidden items-start justify-between gap-[30px] lg:block">
 							<div
 								ref={FooterText1Ref}
-								className="text-text mb-0 translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:mb-[30px] sm:text-[14px]"
+								className="text-text mb-0 translate-y-[50px] text-[12px] leading-normal font-normal opacity-0 sm:text-[14px] xl:mb-[10px] 2xl:mb-[30px]"
 							>
 								{t(`pages.footer.text`)}
 							</div>

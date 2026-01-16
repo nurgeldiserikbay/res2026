@@ -146,6 +146,7 @@
 		"chief": "Head",
 		"pressSecretary": "Press Secretary",
 		"summers": "summer",
+		"winter": "winter",
 		"winters": "In the north winters",
 		"regions": "regions",
 		"citiesOfNationalSignificance": "cities of republican significance",
@@ -195,26 +196,26 @@
 		"about": {
 			"title": "About the summit",
 			"presidentTextTitle": "Quote by the President of the Republic of Kazakhstan:",
-			"presidentText": "«Many developing countries without access to the sea are facing water scarcity, glacier melt, desertification, and other extreme weather events. Addressing these challenges requires coordinated regional efforts and strong international support. At the same time, I believe that measures to combat climate change must remain balanced and inclusive, and respond to the legitimate development needs of countries. To strengthen our joint efforts in addressing climate change, I invite you to the Regional Ecological Summit, which will be held in Astana in partnership with the United Nations in April next year».",
+			"presidentText": "«Many LLDCs face water scarcity, glacier loss, desertification and other extreme weather events. Addressing these challenges requires coordinated regional efforts and strong international support. At the same time, I believe that climate action must remain balanced and inclusive, matching the legitimate development needs of nations. To strengthen our joint climate efforts, I invite all of you to take part at the Regional Ecological Summit to be held in Astana in partnership with the United Nations in April next year».",
 			"presidentInitiativeText": "\"However, development cannot be sustainable without addressing the climate crisis. Central Asia is one of the regions most vulnerable to climate change on the planet. Warming here occurs twice as fast as the global average. In response, we are promoting a pragmatic and regionally coordinated climate agenda. Our commitments include participation in various international organizations and agreements. \n\n In 2026, Kazakhstan, in partnership with the UN, will hold a Regional Ecological Summit, which is intended to become a platform for uniting Central Asian strategies and global ambitions\".",
 			"moreAboutSummit": "Learn more about the summit",
-			"presidentPosition": "From the statement by the President of the Republic of Kazakhstan, Kassym-Jomart Tokayev, at the Third United Nations Conference on Landlocked Developing Countries, Awaza, Turkmenistan, 2025",
+			"presidentPosition": "From the speech of Kassym-Jomart Tokayev, President of the Republic of Kazakhstan, at the Third United Nations Conference on Landlocked Developing Countries, Turkmenistan, Awaza, 2025",
 			"text2": "The Regional Ecological Summit 2026, initiated by the President of Kazakhstan Kassym-Jomart Tokayev, aims to unite Central Asian countries in partnership with the UN to develop agreed solutions to climate and environmental challenges. This is a two-year process (2024–2026) that has received broad international and political support. The Summit's concept is based on the idea of \"Bir Tamyr\" (\"Same Root\") - a symbol of common heritage and collective action for a sustainable future of the region.",
 			"presidentInitiative": "President's initiative",
 			"purpose": "Objective",
-			"text3": "The Regional Ecological Summit 2026, held in partnership with the United Nations and other international organizations, aims to bring together the countries of Central Asia to develop coordinated solutions on climate and environmental challenges. These include the preservation of the Aral Sea and addressing the shrinking of the Caspian Sea basin, the promotion of green financing and low-carbon technologies, as well as the development of joint initiatives, declarations, and an Action Programme for 2026–2030 to support the region’s sustainable development.",
+			"text3": "In partnership with the United Nations and other international organizations, the Regional Ecological Summit 2026 will bring together the countries of Central Asia to develop coordinated solutions on climate and environmental issues. The Summit will address topics such as the preservation of the Aral Sea and the reduction of the Caspian Sea basin, the promotion of green finance and low-carbon technologies, as well as the development of joint initiatives, declarations, and a 2026–2030 Action Programme for the sustainable development of the region.",
 			"aboutText1": "The Regional Ecological Summit 2026 was initiated by the President of the Republic of Kazakhstan Kassym-Jomart Tokayev and aims to unite Central Asian countries to develop common solutions to combat climate change in partnership with the UN. This is not just a meeting - it is a two-year preparation process that started in 2024 and culminates in a high-level Summit in 2026, where agreed environmental initiatives and mechanisms for regional cooperation will be presented.",
 			"aboutText2": "The United Nations expressed its support for the Summit through General Assembly Resolution 78/147 of 19 December 2023, entitled “Central Asia facing environmental challenges: strengthening regional solidarity for sustainable development and prosperity.”",
-			"aboutText3": "The initiative was further enshrined in a number of key political documents adopted at the level of Heads of State in 2024, including:",
+			"aboutText3": "The initiative was also reflected in a number of key political documents at the level of Heads of State, including:",
 			"aboutText31": "the Karabakh Declaration of the Informal Summit of the Organization of Turkic States (6 July 2024, Azerbaijan);",
 			"aboutText32": "the Joint Statement of the Sixth Consultative Meeting of the Heads of State of Central Asia (9 August 2024, Kazakhstan);",
-			"aboutText33": "the Bishkek Declaration of the 21st Summit of the Organization of Turkic States (6 November 2024, Kyrgyz Republic).",
-			"aboutText34": "In 2025, the initiative gained further international recognition during the opening ceremony of the UN Regional Centre for the Sustainable Development Goals for Central Asia and Afghanistan in Almaty, Kazakhstan, attended by UN Secretary-General António Guterres, as well as at the Third United Nations Conference on Landlocked Developing Countries held in Awaza, Turkmenistan. \n\n RES 2026 aims to bring together the countries of Central Asia, in partnership with the United Nations and other international organizations, to develop common solutions to combat climate change and address broader environmental challenges. Particular emphasis will be placed on identifying the region’s concrete needs for green financing to support adaptation measures, advance low-carbon technologies, and strengthen environmental resilience across Central Asia. The Summit will serve as a regional platform for dialogue and solidarity, enhancing cooperation among governments, international organizations, scientific institutions, and the business community. It will also contribute to raising awareness of priority environmental issues, identifying practical solutions, and shaping joint action plans for the future in support of the region’s sustainable development.",
+			"aboutText33": "the Bishkek Declaration of the Eleventh Summit of the Organization of Turkic States (6 November 2024, Kyrgyz Republic).",
+			"aboutText34": "In 2025, the initiative received further recognition during the opening ceremony of the UN Regional Centre for the Sustainable Development Goals for Central Asia and Afghanistan, as well as during the Third United Nations Conference on Landlocked Developing Countries (Turkmenistan), held with the participation of the UN Secretary-General, António Guterres. \n\n RES 2026 aims to bring together the countries of Central Asia to develop common solutions to combat climate change and address environmental challenges, in partnership with the United Nations and international organizations. Particular attention will be given to identifying the region’s actual needs for green financing aimed at supporting adaptation measures, advancing low-carbon technologies, and strengthening environmental resilience across the region. The Summit provides a regional platform for dialogue and solidarity, enhancing cooperation among states, international organizations, scientific communities, and the business sector. It contributes to raising awareness of priority environmental issues, identifying practical solutions, and developing joint action plans for the future, aimed at the sustainable development of the region.",
 			"aboutText4": "\"However, development cannot be sustainable without addressing the climate crisis. Central Asia is one of the regions most vulnerable to climate change on the planet. Warming here occurs twice as fast as the global average. In response, we are promoting a pragmatic and regionally coordinated climate agenda. Our commitments include participation in various international organizations and agreements. \n\n In 2026, Kazakhstan, in partnership with the UN, will hold a Regional Ecological Summit, which is intended to become a platform for uniting Central Asian strategies and global ambitions\".",
 			"aboutText5": "The Regional Ecological Summit 2026 in partnership with the UN is a platform for uniting Central Asian countries in developing agreed working solutions and mechanisms that reflect a regional approach to overcoming climate and environmental challenges, including the tragedy of the Aral Sea, which has become a global symbol of environmental degradation, and the steady decline in the level of the Caspian Sea. Special attention will be paid to the formation of real needs of Central Asia in 'green' financing aimed at supporting adaptation measures, developing low-carbon technologies and strengthening the environmental sustainability of the region. \n\n The Summit creates a regional platform for dialogue and solidarity, strengthening cooperation between states, international organizations, scientific and business communities. It contributes to raising awareness of priority environmental issues, finding practical solutions and forming joint action plans for the future aimed at sustainable development of the region. The goal is to form specific initiatives and mechanisms for joint action. Adoption of the Joint Declaration of Heads of State of Central Asia on regional cooperation in ecology and sustainable development. \n\n Approval of the Regional Action Program with UN agencies (2026–2030) for a sustainable future of Central Asia, including regional initiatives on thematic areas of the Summit, launch of new environmental projects and initiatives in the directions of the Summit. Preparation for the summit began in 2024 and includes a series of regional consultations. The Summit will be the culmination of this process and will give political impetus to the environmental agenda of the region. The initiative strengthens the existing efforts of countries, complementing them with a regional dimension. The basis will be a coordinated environmental agenda, including updated climate goals of Central Asian countries.",
-			"resText1": "The Regional Ecological Summit 2026 (RES 2026) was initiated by the President of the Republic of Kazakhstan, Kassym-Jomart Tokayev, during the 78th session of the UN General Assembly in September 2023. \n At the Astana International Forum in May 2025, it was announced that the Summit’s agenda would be expanded from a climate-focused framework to a broader environmental scope.",
-			"resText2": "The initiative is reflected in the concept of «Bir Tamyr» (Same Root). The word «Tamyr» exists in almost all languages of the region and carries a profound meaning: roots as a symbol of common history and connection to nature, veins as the symbol of pulse and movement within the region, the intertwining of vessels, spirit, and culture. It is a metaphor for connection, resilience, and shared heritage that unites Central Asia not by political borders, but by meaning, memory, and future. \n\n The visual representation of the countries of Central Asia is reflected in the Summit emblem (logo): different in shape, color, and character, yet standing together as a symbol of unity in diversity. The reference to the barcode shape also symbolizes a common space for dialogue and action, modern approaches, innovations, and the technological nature of solutions. \n\n The Summit reflects this image: one region – shared challenges – collective action. It will bring together governments, international organizations, the scientific community, business, civil society, and youth to lay the foundation for a shared, environmentally sustainable future.",
-			"resText3": "Preparations for the Summit commenced in 2024 and include a series of regional consultations.",
+			"resText1": "The Regional Ecological Summit 2026 (RES 2026) was initiated by the President of the Republic of Kazakhstan, Kassym-Jomart Tokayev, at the 78th session of the United Nations General Assembly in September 2023. \n At the Astana International Forum held in May 2025, it was announced that the Summit’s agenda would be expanded from climate-related issues to broader environmental issues.",
+			"resText2": "At the heart of the initiative lies the concept of “Bir Tamyr” (“One Root”). The word tamyr exists in many languages of the region and carries a profound symbolic meaning: the roots of nature, the veins of the land, and the vessels of culture. It serves as a metaphor for connection, resilience, and shared heritage, uniting Central Asia not by political borders, but by meaning, memory, and a common future. \n\n The Summit reflects this vision: one region – shared challenges – collective action. It brings together governments, international organizations, the scientific community, business, civil society, and youth to lay the foundation for a shared, environmentally sustainable future.",
+			"resText3": "Preparations for the Summit began in 2024 and include a series of regional consultations.",
 			"file1Title": "Concept",
 			"file1Text": "Regional ecological summit 2026: A shared vision for a sustainable future",
 			"file2Title": "Brochure",
@@ -280,7 +281,13 @@
 						"title2": "EcoQoldau Programme",
 						"text2": "Incentive payments to support waste collection, sorting, and recycling.",
 						"title3": "Waste Management Concept",
-						"text3": "the first in Central Asia, providing for the introduction of digital tracking of all waste streams and the establishment of a National Waste Management Operator."
+						"text3": "the first in Central Asia, providing for the introduction of digital tracking of all waste streams and the establishment of a National Waste Management Operator.",
+						"title4": "Tiger reintroduction",
+						"text4": "The program to return the tiger to Kazakhstan is aimed at restoring the species population in the ecosystems of the Balkhash region, based at the Ile–Balkhash Reserve. In the autumn of 2024, two Amur tigers were brought in from the Kingdom of the Netherlands, and on November 12, 2025, a Joint Plan for the reintroduction of the Amur tiger into the territory of the Republic of Kazakhstan was approved.",
+						"title5": "Reintroduction of the Przewalski horse",
+						"text5": "A project on the reintroduction of the Przhevalsky horse in Kazakhstan has been implemented since 2023. At the moment, 13 Przhevalsky horses are kept on the territory of the Altyn-Dala State Nature Reserve. By 2029, it is planned to gradually import up to 40 individuals of the Przewalski horse to form a stable population of this species.",
+						"title6": "Conservation of saiga populations",
+						"text6": "The restoration of the saiga population has become one of the most successful environmental examples - today more than 98% of the world population of the species lives in Kazakhstan, the number of which is estimated at up to 5 million individuals. These achievements have received international recognition, including a change in the status of the saiga on the IUCN Red List and the victory of the Altyn Dala initiative in The Earthshot Prize in 2024."
 					},
 					"nationalInitiatives": {
 						"title1": "Taza Kazakhstan",
@@ -295,52 +302,102 @@
 				}
 			},
 			"uzbekistan": {
-				"title": "О Узбекистане",
+				"title": "About Uzbekistan",
 				"tabs": {
-					"0": "География, описание",
-					"1": "Климат",
-					"2": "Флора и фауна",
-					"3": "Другие"
+					"0": "Geography, description",
+					"1": "Climate",
+					"2": "Flora and fauna",
+					"3": "Etc."
 				},
-				"text1": "Республика Узбекистан расположена в Центральной Азии и занимает площадь 448,9 тыс. кв. км. Протяженность территории республики с запада на восток – 1425 километров, с севера на юг – 930 километров. \n\n Узбекистан — государство в Центральной Азии, не имеющее выхода к Мировому океану и являющееся одной из двух стран мира, дважды лишённых выхода к морю. Значительную часть территории страны занимает пустыня Кызылкум, а также полупустынные и степные зоны; горные районы расположены на востоке и юго-востоке. Основными водными артериями являются трансграничные реки Амударья и Сырдарья. Узбекистан относится к региону Приаралья и разделяет Аральское море с Казахстаном. Крупных естественных озёр в Узбекистане немного; наиболее известные — Айдар-Арнасайская система озёр. Удалённость от океанов определяет резко континентальный климат страны. \n\n Административно-территориальная структура страны включает",
-				"text2": "Численность населения Узбекистанa превышает",
-				"stat1": "областей",
-				"stat2": "город центрального подчинения -Ташкент",
-				"stat3": "млн человек",
-				"stat4": "Республика Каракалпакстан",
-				"climateTitle": "Описание климата",
-				"climateText": "Климат Узбекистана классифицируется как континентальный, с жарким летом и прохладной зимой. Южная часть страны является самым теплым, и северная часть является самой холодной. Летом температура часто превосходят 41 ° C (106 ° F), и даже может достигать 45 ° C (113 ° F) и выше. Влажность воздуха не высока. Зимние температуры в среднем около -8 ° C (18 ° F), но может упасть до -40 ° C (-40 ° F).",
-				"etc": {
-					"strategicVisionTitle": "Стратегическое видение и документы",
-					"strategicVisionIntro": "Узбекистан принял следующие Стратегические документы:",
-					"strategicDocuments": {
-						"0": "Указ Президента Республики Узбекистан, от 11.09.2023 г. № УП-158, О Стратегии «Узбекистан – 2030»",
-						"1": "Указ Президента Республики Узбекистан, от 30.01.2025 г. № УП-16, О Государственной программе по реализации Стратегии «Узбекистан — 2030» в «Год охраны окружающей среды и «зеленой экономики»",
-						"2": "Указ Президента Республики Узбекистан, от 30.10.2019 г. № УП-5863 «Об утверждении Концепции охраны окружающей среды Республики Узбекистан до 2030 года»",
-						"3": "Постановление Кабинета Министров Республики Узбекистан, от 11.06.2019 г. № 484 Об утверждении Стратегии по сохранению биологического разнообразия в Республике Узбекистан на период 2019-2028 годы",
-						"4": "Постановление Президента Республики Узбекистан, от 17.04.2019 г. № ПП-4291, Об утверждении Стратегии по обращению с твердыми бытовыми отходами в Республике Узбекистан на период 2019-2028 годов",
-						"5": "Постановление Президента Республики Узбекистан, от 06.10.2020 г. № ПП-4850, Об утверждении Концепции развития системы лесного хозяйства Республики Узбекистан до 2030 года",
-						"6": "Постановление Президента Республики Узбекистан №ПП-184 от 15.05.2025г., «Об утверждении Концепции повышения экологической культуры населения на период до 2030 года» и др."
+				"text1": "The Republic of Uzbekistan is located in Central Asia and covers an area of 448.9 thousand sq. km. The territory of the republic extends 1,425 kilometers from west to east and 930 kilometers from north to south. \n\n Uzbekistan is a state in Central Asia that does not have access to the World Ocean and is one of two countries in the world that have been twice deprived of access to the sea. A significant part of the country's territory is occupied by the Kyzylkum Desert, as well as semi-desert and steppe zones; mountain areas are located in the east and southeast. \n\n The main water arteries are the transboundary rivers Amu Darya and Syr Darya. Uzbekistan belongs to the Aral Sea region and shares the Aral Sea with Kazakhstan. There are few large natural lakes in Uzbekistan; the most famous is the Aydar-Arnasay lake system. The distance from the oceans determines the sharply continental climate of the country. \n\n The administrative-territorial structure of the country includes",
+				"text2": "The population of Uzbekistan exceeds",
+				"stat1": "regions",
+				"stat2": "city of central subordination - Tashkent",
+				"stat3": "million people",
+				"stat4": "Republic of Karakalpakstan",
+				"climateTitle": "Climate description",
+				"climateText": "The climate of Uzbekistan is classified as continental, with hot summers and cool winters. The southern part of the country is the warmest, and the northern part is the coldest. In summer, temperatures often exceed 41 °C (106 °F), and can even reach 45 °C (113 °F) and above. Air humidity is not high. Winter temperatures average around -8 °C (18 °F), but can drop to -40 °C (-40 °F).",
+				"nationalInitiativesData": {
+					"0": {
+						"title": "Green University",
+						"text": "Central Asian University for the Study of Environment and Climate Change (Green University), aimed at developing regional cooperation and training a new generation of leaders in ecology; the Council includes ministers from Central Asian countries, as well as representatives from Azerbaijan and Mongolia"
 					},
-					"nationalInitiativesTitle": "Национальные инициативы",
-					"nationalInitiativesIntro": {
-						"title1": "Национальная программа",
-						"text1": "«Узбекистан без пластиковых отходов».",
-						"title2": "Общенациональный проек",
-						"text2": "«Территория, свободная от отходов», направленный на совершенствование системы переработки отходов и обращения с ними.",
-						"title3": "Общенациональный проект",
-						"text3": "«Чистый воздух», направленный на улучшение качества атмосферного воздуха."
+					"1": {
+						"title": "Uzbekistan without plastic waste",
+						"text": "National program"
 					},
-					"nationalInitiatives": {
-						"title1": "Яшил макон",
-						"text1": "Общенациональный проект «Яшил макон» предусматривает ежегодную посадку 200 млн деревьев, увеличение площади зелёных зон на 30 % к 2030 году, а также создание до 2028 года ботанических и дендрологических парков общей площадью не менее 100 гектаров в Республике Каракалпакстан, областях и городе Ташкенте.",
-						"title2": "Экокультура",
-						"text2": "Общенациональный проект «Экокультура», направленный на формирование эко-традиций и широкую пропаганду экологического образа жизни среди населения",
-						"title3": "Бионаследие",
-						"text3": "Общенациональный проект «Бионаследие», направленный на сохранение биоразнообразия для будущего поколения.",
-						"title4": "Региональный центр ООН по Целям устойчивого развития (ЦУР) для Центральной Азии и Афганистана",
-						"text4": "Центральноазиатский университет изучения окружающей среды и изменения климата (Green University), направленный на развитие регионального сотрудничества и подготовку нового поколения лидеров в сфере экологии; в состав Совета входят министры стран Центральной Азии, а также представители Азербайджана и Монголии"
+					"2": {
+						"title": "Nationwide project \"Waste-free territory\"",
+						"text": "Aimed at improving the waste processing and management system"
+					},
+					"3": {
+						"title": "Nationwide project \"Clean Air\"",
+						"text": "Nationwide project \"Clean Air\", aimed at improving the quality of atmospheric air"
+					},
+					"4": {
+						"title": "Nationwide project \"Yashil Makon\"",
+						"text": "Provides for annual planting of 200 million trees, increasing the area of green zones by 30% by 2030, as well as creating botanical and dendrological parks with a total area of at least 100 hectares by 2028 in the Republic of Karakalpakstan, regions and the city of Tashkent"
+					},
+					"5": {
+						"title": "Nationwide project \"Eco-culture\"",
+						"text": "Nationwide project \"Eco-culture\", aimed at forming eco-traditions and widespread promotion of an ecological lifestyle among the population"
+					},
+					"6": {
+						"title": "Nationwide project \"Bio-heritage\"",
+						"text": "Nationwide project \"Bio-heritage\", aimed at preserving biodiversity for future generations"
+					},
+					"7": {
+						"title": "\"Eco-project Factory\" (Project Office)",
+						"text": "\"Eco-project Factory\" (Project Office) in the field of ecology with the involvement of up to 15 foreign and domestic experts under civil law contracts"
 					}
+				},
+				"internationalEventsTitle": "International events held",
+				"internationalEventsHeld": {
+					"0": {
+						"title": "November 13–17, 2023, Samarkand",
+						"text": "21st session of the Committee for the Review of the Implementation of the Convention to Combat Desertification and Drought (CRIC-21)"
+					},
+					"1": {
+						"title": "February 12–17, 2024, Samarkand",
+						"text": "14th meeting of the Conference of the Parties to the Convention on the Conservation of Migratory Species of Wild Animals (CMS COP14)"
+					},
+					"2": {
+						"title": "April 4–5, 2025, Samarkand",
+						"text": "First Samarkand International Climate Forum"
+					},
+					"3": {
+						"title": "June 19–21, 2025, Tashkent",
+						"text": "First International Exhibition of Environmental Technologies Eco Expo Central Asia 2025"
+					},
+					"4": {
+						"title": "November 24 – December 5, 2025, Samarkand",
+						"text": "20th Conference of the Parties to the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES CoP20)"
+					}
+				},
+				"upcomingInternationalTitle": "Upcoming international events",
+				"upcomingInternationalEvents": {
+					"0": {
+						"title": "May 30 – June 6, 2026",
+						"text": "The 8th GEF Assembly and 71st GEF Council meeting will be held in Samarkand."
+					},
+					"1": {
+						"title": "May 31 – June 5, 2026",
+						"text": "The International Exhibition of Environmental Technologies Eco Expo Central Asia 2026 will be held in Samarkand."
+					}
+				},
+				"etc": {
+					"strategicVisionTitle": "Strategic vision and documents",
+					"strategicVisionIntro": "Uzbekistan has adopted the following Strategic Documents:",
+					"strategicDocuments": {
+						"0": "Decree of the President of the Republic of Uzbekistan, dated 11.09.2023 No. UP-158, On the Strategy \"Uzbekistan – 2030\"",
+						"1": "Decree of the President of the Republic of Uzbekistan, dated 30.01.2025 No. UP-16, On the State Program for the Implementation of the Strategy \"Uzbekistan — 2030\" in the \"Year of Environmental Protection and \"Green Economy\"",
+						"2": "Decree of the President of the Republic of Uzbekistan, dated 30.10.2019 No. UP-5863 \"On Approval of the Concept of Environmental Protection of the Republic of Uzbekistan until 2030\"",
+						"3": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan, dated 11.06.2019 No. 484 On Approval of the Strategy for the Conservation of Biological Diversity in the Republic of Uzbekistan for the period 2019-2028",
+						"4": "Resolution of the President of the Republic of Uzbekistan, dated 17.04.2019 No. PP-4291, On Approval of the Strategy for Solid Waste Management in the Republic of Uzbekistan for the period 2019-2028",
+						"5": "Resolution of the President of the Republic of Uzbekistan, dated 06.10.2020 No. PP-4850, On Approval of the Concept for the Development of the Forestry System of the Republic of Uzbekistan until 2030",
+						"6": "Resolution of the President of the Republic of Uzbekistan No. PP-184 dated 15.05.2025, \"On Approval of the Concept for Improving the Environmental Culture of the Population for the period until 2030\" and others."
+					},
+					"nationalInitiativesTitle": "National initiatives"
 				}
 			}
 		},
