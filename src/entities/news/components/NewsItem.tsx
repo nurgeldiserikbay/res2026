@@ -28,7 +28,6 @@ export function NewsItem({
 	title,
 	image,
 	date,
-	tag,
 	type,
 	slug,
 	variant = 'dark',
@@ -41,8 +40,6 @@ export function NewsItem({
 	const t = useTranslations()
 
 	const localizedTitle = localize(title, locale)
-	const localizedDate = localize(date, locale)
-	const localizedTag = localize(tag, locale)
 
 	return (
 		<Link
@@ -64,13 +61,10 @@ export function NewsItem({
 				<div className="absolute top-0 right-0 bottom-0 left-0 z-1 bg-[url('/imgs/new-mask.svg')] bg-cover bg-center bg-no-repeat transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[2.4] group-hover:rotate-[-35deg]"></div>
 			)}
 			<div className="relative z-1 flex h-full w-full flex-col items-start justify-end p-[30px]">
-				<div className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
-					{localizedDate}
-				</div>
-				{tag && (
-					<div
-						className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}
-					>{`//${localizedTag}`}</div>
+				{date && (
+					<div className={`${variant === 'light' ? 'text-[#777C83]' : 'text-[#C9CED4]'} mb-[10px] text-[13px] leading-none font-light`}>
+						{String(date)}
+					</div>
 				)}
 				<h4
 					className={`${variant === 'light' ? 'text-text' : 'text-white'} line-clamp-3 h-[60px] text-[20px] leading-none font-medium md:h-[66px] md:text-[22px] lg:h-[72px] lg:text-[24px]`}

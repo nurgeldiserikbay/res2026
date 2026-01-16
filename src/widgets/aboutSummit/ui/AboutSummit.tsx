@@ -46,12 +46,12 @@ export function AboutSummit() {
 			<Container className="flex flex-wrap-reverse items-start justify-between gap-[20px] sm:gap-[30px] xl:flex-nowrap">
 				<div className="3xl:pt-[50px] w-full grow pt-[25px] md:pt-[30px] lg:pt-[40px] xl:max-w-[713px] 2xl:pt-[40px]">
 					<div className="mb-[20px] flex items-start justify-between sm:mb-[32px]">
-						<div
+						<h2
 							ref={AboutSummitRef}
-							className="font-regular text-text hidden -translate-x-90 text-[20px] leading-[1.2] opacity-0 sm:text-[22px] md:text-[24px] xl:block"
+							className="text-text hidden -translate-x-90 text-[20px] leading-[1.2] font-bold opacity-0 sm:text-[26px] md:text-[28px] xl:block xl:text-[32px] 2xl:text-[48px]"
 						>
 							{t(`titles.aboutSummit`)}
-						</div>
+						</h2>
 						<ButtonDefault
 							ref={AboutSummitButtonRef as React.RefObject<HTMLButtonElement>}
 							className="w-full translate-y-90 opacity-0 sm:w-auto"

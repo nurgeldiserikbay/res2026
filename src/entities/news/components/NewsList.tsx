@@ -13,7 +13,6 @@ import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { IPaginationResponse } from '@/shared/types'
 import { MainPagination } from '@/shared/ui/pagination/MainPagination'
 import { Soon } from '@/shared/ui/soon/Soon'
-import { formatDate } from '@/shared/utils/formatDate'
 
 import { newsTypes } from '../news.consts'
 
@@ -28,14 +27,13 @@ type NewsItemWrapperProps = {
 	item: NewsItemType
 	index: number
 	delay: number
-	locale: Locale
 }
 
-function NewsItemWrapper({ item, delay, locale }: NewsItemWrapperProps) {
+function NewsItemWrapper({ item, delay }: NewsItemWrapperProps) {
 	const ref = useRef<HTMLDivElement>(null)
 	useAnimSlide(ref, { y: 50, delay })
 
-	const formattedDate = formatDate(item.publication_date, locale)
+	const formattedDate = item.publication_date
 
 	return (
 		<div
@@ -120,7 +118,6 @@ export function NewsList({ initialData }: NewsListProps) {
 						item={item}
 						index={index}
 						delay={0.1 + index * 0.1}
-						locale={locale}
 					/>
 				))}
 			</div>
