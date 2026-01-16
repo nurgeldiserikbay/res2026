@@ -95,7 +95,6 @@ export function NewsItem({
 						<span>{views}</span>
 					</div>
 				)}
-
 				{type === 'publication' && external_link && (
 					<Link
 						href={external_link}
