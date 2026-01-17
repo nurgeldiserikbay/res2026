@@ -49,7 +49,7 @@ export function AboutSquare() {
 									key={aboutSquare.id}
 									className="flex flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#ADF0BF] to-[#D4D8C300] px-[35px] pt-[26px] pb-[26px] text-center"
 								>
-									<h3 className="text-secondary xs:text-[40px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[48px]">
+									<h3 className="text-secondary xs:text-[32px] text-[24px] leading-normal font-bold whitespace-nowrap lg:text-[38px]">
 										{aboutSquare.title}
 									</h3>
 									<div className="text-secondary text-[16px] leading-normal font-normal">{aboutSquare.text}</div>
@@ -109,7 +109,7 @@ export function AboutSquare() {
 					alt="Astana Square"
 					width={1025}
 					height={1085}
-					className="hidden w-full shrink-4 md:max-w-[37%] lg:w-[571px] lg:max-w-[30%] xl:block xl:max-w-[57%] 2xl:w-[1025px]"
+					className="hidden w-full shrink-4 md:max-w-[37%] lg:w-[571px] lg:max-w-[30%] xl:block xl:max-w-[50%] 2xl:w-[1025px]"
 				/>
 			</Container>
 		</section>
