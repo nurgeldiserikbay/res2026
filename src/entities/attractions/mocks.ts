@@ -1537,7 +1537,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 				en: '600',
 			},
 			text1: {
-				ru: 'высота',
+				ru: 'мест — вместимость зрительного зала',
 				kk: 'орындықтар - аудитория сыйымдылығы',
 				en: 'seats - the capacity of the auditorium',
 			},
