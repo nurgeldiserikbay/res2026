@@ -15,9 +15,18 @@ export interface HeroBannerProps {
 	breadcrumbs?: { label: string; href: string }[]
 	className?: string
 	subtitleClassName?: string
+	showOverlay?: boolean
 }
 
-export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = '', subtitleClassName = '' }: HeroBannerProps) {
+export function HeroBanner({
+	title,
+	subtitle,
+	bgImage,
+	breadcrumbs,
+	className = '',
+	subtitleClassName = '',
+	showOverlay = false,
+}: HeroBannerProps) {
 	const BannerRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	const SubtitleRef = useRef<HTMLParagraphElement>(null)
@@ -40,7 +49,7 @@ export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = 
 			ref={BannerRef}
 			data-animated-banner
 			className={[
-				`flex min-h-[567px] flex-col bg-cover bg-center lg:min-h-[795px]`,
+				`relative flex min-h-[567px] flex-col bg-cover bg-center lg:min-h-[795px]`,
 				!appConfig.isProduction ? `pt-[218px]` : `pt-[140px]`,
 				className,
 			]
@@ -48,7 +57,15 @@ export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = 
 				.join(' ')}
 			style={{ backgroundImage: `url(${bgImage})` }}
 		>
-			<Container className="flex h-full grow flex-col items-center justify-center gap-[37px] pb-[140px] text-center md:gap-[57px] xl:gap-[87px] xl:pb-[200px]">
+			{showOverlay && (
+				<div
+					className="absolute inset-0 z-0"
+					style={{
+						background: `linear-gradient(to bottom, #02493F00, #02493F90)`,
+					}}
+				/>
+			)}
+			<Container className="relative z-10 flex h-full grow flex-col items-center justify-center gap-[37px] pb-[140px] text-center md:gap-[57px] xl:gap-[87px] xl:pb-[200px]">
 				{breadcrumbs && breadcrumbs.length > 0 && (
 					<div
 						ref={BreadcrumbsRef}
