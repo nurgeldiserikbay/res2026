@@ -1,7 +1,8 @@
 import { AttractionItemMultilang, Locale } from './attractions.types'
 
 export const attractionsMultilang: AttractionItemMultilang[] = [
-		i		id: 0,
+	{
+		id: 0,
 		slug: 'palace-of-peace-and-reconciliation',
 		title: {
 			ru: 'Дворец Мира и Согласия',
@@ -1518,50 +1519,6 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			ru: '15 ноября 1991 года Государственный академический казахский музыкально-драматический театр имени Калибека Куанышбаева г. Астана открыл свой занавес трагедией Г. Мусрепова «Акан Сері-Актокты». Первую постановку поставил талантливый режиссер, основатель театра Жакып Омаров. Свой первый приз Театр получил в Уфе на Международном театральном фестивале «Туганлык» среди тюркоязычных государств в 1996 году. Священный Шанырак, который сегодня отражает духовные потребности нации, возглавили такие талантливые деятели искусства как Жакып Омаров, Кадыр Жетписбаев и Народный артист Советского Союза, «Халық Қаһарманы» Азербайджан Мамбетов. Репертуар Государственного академического казахского музыкально-драматического театра им. Калибек Куанышбаева постоянно обновляется и дополняется национальной и мировой драматургией.Коллектив имеет чёткие ориентиры, которые были сформированы в ходе участия в нескольких театральных фестивалях как в нашей стране, так и за рубежом. Это-возрождение казахского театрального искусства, демонстрация через вершину искусства прошлого и настоящего. 14 декабря 2011 года коллективу Театра присвоен статус “Государственный академический театр”. Государственному академическому казахскому драматическому театру имени К. Куанышбаева, ровеснику независимости, в этом году исполняется 30 лет. В 2020 году по инициативе Первого Президента РК – Елбасы Нурсултана Назарбаева, при поддержке главы государства Касым-Жомарта Токаева было построено новое здание театра, которое будет украшать величественную архитектуру столицы. Это особая забота государства о искусстве.',
 			kk: '1991 жылдың 15 қарашасында Астанадағы Қалибек Қуанышбаев атындағы мемлекеттік академиялық қазақ музыкалық-драма театры Ғ.Мүсіреповтің «Ақан сері-Ақтоқты» трагедиясымен есігін ашты. Алғашқы қойылымды талантты режиссер және театрдың негізін қалаушы Жақып Омаров қойды. Театр 1996 жылы Уфада түркітілдес мемлекеттер арасындағы Туғанлық халықаралық театр фестивалінде бірінші жүлдесін алды. Бүгінде ұлттың рухани қажеттіліктерін көрсететін қасиетті Шаңырақты Жақып Омаров, Қадыр Жетпісбаев және Кеңес Одағының халық әртісі, «Халық қаһарманы» Әзірбайжан Мәмбетов сияқты талантты әртістер басқарды. Қалибек Қуанышбаев атындағы мемлекеттік академиялық қазақ музыкалық-драма театрының репертуары үнемі ұлттық және халықаралық драматургиямен жаңартылып, байытылып отырады. Труппаның ішкі және халықаралық деңгейдегі бірнеше театр фестивальдеріне қатысу арқылы қалыптасқан нақты нұсқаулары бар. Бұл қазақ театр өнерінің қайта жаңғыруы, өткен мен қазіргі кездегі өнер шыңының көрінісі. 2011 жылдың 14 желтоқсанында театр труппасына «Мемлекеттік академиялық театр» мәртебесі берілді. Тәуелсіздікпен құрдас Қ.Қуанышбаев атындағы Мемлекеттік академиялық қазақ драма театры биыл 30 жылдық мерейтойын атап өтуде. 2020 жылы Қазақстан Республикасының Тұңғыш Президенті, Елбасы Нұрсұлтан Назарбаевтың бастамасымен және Мемлекет басшысы Қасым-Жомарт Тоқаевтың қолдауымен астананың сәулет өнерін безендіретін жаңа театр ғимараты салынды. Бұл мемлекеттің өнерге деген ерекше қамқорлығының көрінісі.',
 			en: 'On November 15, 1991, the Kalibek Kuanyshbayev State Academic Kazakh Music and Drama Theater in Astana opened its doors with G. Musrepov\'s tragedy "Akan Seri-Aktokty." The first production was staged by the talented director and founder of the theater, Zhakyp Omarov. The theater received its first prize in Ufa at the Tuganlyk International Theater Festival among Turkic-speaking states in 1996. The sacred Shanyrak, which today reflects the spiritual needs of the nation, was led by such talented artists as Zhakyp Omarov, Kadyr Zhetpisbayev, and People\'s Artist of the Soviet Union, "Khalyk Kaharmany" Azerbaijan Mambetov. The repertoire of the Kalibek Kuanyshbayev State Academic Kazakh Music and Drama Theater Kalibek Kuanyshbayev\'s theater is constantly updated and enriched by national and international dramaturgy. The company has clear guidelines, shaped by participation in several theater festivals both domestically and internationally. This is the revival of Kazakh theater art, a showcase of the pinnacle of art from the past and present. On December 14, 2011, the theater company was awarded the status of "State Academic Theater." The State Academic Kazakh Drama Theater named after K. Kuanyshbayev, the same age as independence, celebrates its 30th anniversary this year. In 2020, at the initiative of the First President of the Republic of Kazakhstan, Elbasy Nursultan Nazarbayev, and with the support of the head of state, Kassym-Jomart Tokayev, a new theater building was constructed, which will adorn the capital\'s majestic architecture. This is a reflection of the state\'s special commitment to the arts.',
-		},
-		insideImage: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_03.jpeg',
-		slidesImages: [
-			{
-				id: 0,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_01.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 1,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_02.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 2,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_03.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 3,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_04.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 4,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_05.png',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-		],
-	},
-]
-
-export function getAttractions(locale: Locale = 'ru') {
-	return attractionsMultilang.map((attraction) => ({
-		id: attraction.id,
-		slug: attraction.slug,
-		title: attraction.title[locale],
-		image: attraction.image,
-	}))
-}
-
-export function getAttractionBySlug(slug: string): AttractionItemMultilang | undefined {
-	return attractionsMultilang.find((attraction) => attraction.slug === slug)
-ayev, a new theater building was constructed, which will adorn the capital\'s majestic architecture. This is a reflection of the state\'s special commitment to the arts.',
 		},
 		insideImage: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_03.jpeg',
 		slidesImages: [
