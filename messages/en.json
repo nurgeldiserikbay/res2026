@@ -34,6 +34,7 @@
 	},
 	"nav": {
 		"about": {
+			"exhibition": "About the exhibition",
 			"root": "About the summit",
 			"region": "About the region",
 			"res": "General information",

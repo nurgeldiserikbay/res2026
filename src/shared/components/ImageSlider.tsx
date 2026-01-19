@@ -12,7 +12,6 @@ import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 export function ImageSlider({ images, alt }: { images: string[]; alt: string }) {
 	const [isBeginning, setIsBeginning] = useState(false)
 	const [isEnd, setIsEnd] = useState(false)
-	const [activeSlide, setActiveSlide] = useState(0)
 	const [showNavigation, setShowNavigation] = useState(false)
 
 	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
@@ -34,13 +33,11 @@ export function ImageSlider({ images, alt }: { images: string[]; alt: string }) 
 				onSwiper={(swiper) => {
 					setIsBeginning(swiper.isBeginning)
 					setIsEnd(swiper.isEnd)
-					setActiveSlide(swiper.activeIndex)
 					updateShowNavigation(swiper, images.length)
 				}}
 				onSlideChange={(swiper) => {
 					setIsBeginning(swiper.isBeginning)
 					setIsEnd(swiper.isEnd)
-					setActiveSlide(swiper.activeIndex)
 				}}
 			>
 				{images.map((image, imageIndex) => (
@@ -103,11 +100,11 @@ export function ImageSlider({ images, alt }: { images: string[]; alt: string }) 
 						)}
 					</div>
 				</div>
-				<div className="text-muted-light text-[24px] leading-normal font-normal">
+				{/* <div className="text-muted-light text-[24px] leading-normal font-normal">
 					<span className="text-[24px] leading-normal font-normal text-[#02493F]">{activeSlide + 1}</span>
 					<span>/</span>
 					<span className="font-normal] text-[16px] leading-normal">{images?.length}</span>
-				</div>
+				</div> */}
 			</div>
 		</>
 	)

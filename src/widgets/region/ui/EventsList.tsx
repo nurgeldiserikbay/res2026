@@ -26,7 +26,6 @@ export function EventsList({
 		}
 	}
 }) {
-	const [activeSlide, setActiveSlide] = useState(0)
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
@@ -71,13 +70,11 @@ export function EventsList({
 						onSwiper={(swiper) => {
 							setIsBeginning(swiper.isBeginning)
 							setIsEnd(swiper.isEnd)
-							setActiveSlide(swiper.activeIndex)
 							updateShowNavigation(swiper, list.length)
 						}}
 						onSlideChange={(swiper) => {
 							setIsBeginning(swiper.isBeginning)
 							setIsEnd(swiper.isEnd)
-							setActiveSlide(swiper.activeIndex)
 						}}
 						onBreakpoint={(swiper) => updateShowNavigation(swiper, list.length)}
 					>
@@ -140,11 +137,11 @@ export function EventsList({
 								)}
 							</div>
 						</div>
-						<div className="text-muted-light text-[24px] leading-normal font-normal">
+						{/* <div className="text-muted-light text-[24px] leading-normal font-normal">
 							<span className="text-[24px] leading-normal font-normal text-[#02493F]">{activeSlide + 1}</span>
 							<span>/</span>
 							<span className="font-normal] text-[16px] leading-normal">{list.length}</span>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</Container>
