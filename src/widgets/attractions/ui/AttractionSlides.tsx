@@ -2,19 +2,18 @@
 
 import { BannerSlides } from '@/shared/components/BannerSlides'
 
-export function AttractionSlides() {
-	const images = [
-		{
-			id: 0,
-			image: '/imgs/baiterek/baiterek-slides-1.png',
-			description: 'Astana is the capital of Kazakhstan',
-		},
-		{
-			id: 1,
-			image: '/imgs/baiterek/baiterek-slides-2.png',
-			description: 'Astana is the capital of Kazakhstan',
-		},
-	]
+interface AttractionSlidesProps {
+	slidesImages?: Array<{
+		id: number
+		image: string
+		description: string
+	}>
+}
 
-	return <BannerSlides images={images} />
+export function AttractionSlides({ slidesImages }: AttractionSlidesProps) {
+	if (!slidesImages || slidesImages.length === 0) {
+		return null
+	}
+
+	return <BannerSlides images={slidesImages} />
 }
