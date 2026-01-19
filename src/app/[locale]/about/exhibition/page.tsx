@@ -2,6 +2,7 @@ import type { Locale } from '@/shared/config/i18n'
 import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/generate-metadata'
 import { AboutExhibition } from '@/widgets/exhibition/ui/AboutExhibition'
 import { ExhibitionBanner } from '@/widgets/exhibition/ui/ExhibitionBanner'
+import { QuotsList } from '@/widgets/exhibition/ui/QuotsList'
 
 import type { Metadata } from 'next'
 
@@ -29,6 +30,8 @@ export default function Page() {
 			<ExhibitionBanner />
 
 			<AboutExhibition />
+
+			<QuotsList />
 		</>
 	)
 }
