@@ -1,7 +1,7 @@
 import type { Locale } from '@/shared/config/i18n'
 import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/generate-metadata'
-import { AboutBanner } from '@/widgets/aboutSummit/ui/AboutBanner'
 import { AboutContent } from '@/widgets/aboutSummit/ui/AboutContent'
+import { ExhibitionBanner } from '@/widgets/exhibition/ui/ExhibitionBanner'
 
 import type { Metadata } from 'next'
 
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 export default function Page() {
 	return (
 		<>
-			<AboutBanner />
+			<ExhibitionBanner />
 
 			<AboutContent />
 		</>
