@@ -133,7 +133,7 @@ export default function Page() {
 				id: 1,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.1.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.1.text`),
-				image: '/imgs/regions/uz/national-initiatives-2.webp',
+				image: '/imgs/regions/uz/national-initiatives-2.jpeg',
 			},
 			{
 				id: 2,
