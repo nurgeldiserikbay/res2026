@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
 	const { locale } = await params
-	const messages = (await import(`../../../../messages/${locale}.json`)).default
+	const messages = (await import(`../../../../../messages/${locale}.json`)).default
 	const pageMeta = messages.meta?.exhibition
 
 	return generateMetadataUtil({

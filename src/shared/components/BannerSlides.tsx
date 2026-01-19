@@ -12,7 +12,6 @@ import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
 
 export function BannerSlides({ images }: { images: { id: number; image: string; description: string }[] }) {
-	const [activeSlide, setActiveSlide] = useState(0)
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
@@ -39,13 +38,11 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 							onSwiper={(swiper) => {
 								setIsBeginning(swiper.isBeginning)
 								setIsEnd(swiper.isEnd)
-								setActiveSlide(swiper.activeIndex)
 								updateShowNavigation(swiper, images.length)
 							}}
 							onSlideChange={(swiper) => {
 								setIsBeginning(swiper.isBeginning)
 								setIsEnd(swiper.isEnd)
-								setActiveSlide(swiper.activeIndex)
 							}}
 						>
 							{images.map((slide) => (
@@ -108,11 +105,11 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 									)}
 								</div>
 							</div>
-							<div className="text-muted-light text-[24px] leading-normal font-normal">
+							{/* <div className="text-muted-light text-[24px] leading-normal font-normal">
 								<span className="text-text text-[24px] leading-normal font-normal md:text-white">{activeSlide + 1}</span>
 								<span>/</span>
 								<span className="font-normal] text-[16px] leading-normal">{images?.length}</span>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
