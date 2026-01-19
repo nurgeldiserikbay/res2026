@@ -7,9 +7,9 @@ export function WeatherWidgetView({ data }: { data: WeatherWidgetData }) {
 	const t = useTranslations()
 
 	return (
-		<div className="relative overflow-hidden rounded-[12px] bg-[url('/imgs/weather/weather-widget-bg.png')] bg-cover bg-center bg-no-repeat px-[24px] py-[20px]">
+		<div className="xs:px-[24px] relative overflow-hidden rounded-[12px] bg-[url('/imgs/weather/weather-widget-bg.png')] bg-cover bg-center bg-no-repeat px-[10px] py-[20px]">
 			<div className="mx-auto max-w-[499px]">
-				<div className="relative z-10 flex items-start justify-between gap-24">
+				<div className="relative z-10 flex items-start justify-between gap-[24px]">
 					<div>
 						<div className="flex items-center gap-[10px]">
 							<div className="h-[36px] w-[36px] text-[#F7B733]">
@@ -49,16 +49,16 @@ export function WeatherWidgetView({ data }: { data: WeatherWidgetData }) {
 					</div>
 				</div>
 
-				<div className="relative z-10 mt-[20px] flex items-center justify-between gap-[10px]">
+				<div className="xs:gap-[10px] relative z-10 mt-[20px] flex items-center justify-between gap-[5px]">
 					{data.hourly.map((h) => (
 						<div
 							key={h.timeISO}
 							className="p-[5px] text-center"
 						>
-							<div className="text-[14px] text-white opacity-70">
+							<div className="xs:text-[14px] text-[12px] text-white opacity-70 md:text-[14px]">
 								{new Date(h.timeISO).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
 							</div>
-							<div className="mt-[5px] text-[18px] font-medium text-white">{Math.round(h.temp)}°</div>
+							<div className="xs:text-[14px] mt-[5px] text-[12px] font-medium text-white md:text-[18px]">{Math.round(h.temp)}°</div>
 						</div>
 					))}
 				</div>

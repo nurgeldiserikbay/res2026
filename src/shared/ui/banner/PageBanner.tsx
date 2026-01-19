@@ -16,13 +16,7 @@ export interface PageBannerProps {
 	className?: string
 }
 
-export function PageBanner({
-	title,
-	breadcrumbs,
-	bgImage = '/imgs/news-banner.png',
-	useMinHeight = false,
-	className = '',
-}: PageBannerProps) {
+export function PageBanner({ title, breadcrumbs, bgImage = '/imgs/news-banner.png', className = '' }: PageBannerProps) {
 	const BannerRef = useRef<HTMLElement>(null)
 	useAnimBg(BannerRef, {
 		fromSize: '140%',
@@ -38,40 +32,34 @@ export function PageBanner({
 	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
 
 	let heightClass = ''
-	if (useMinHeight) {
-		if (!appConfig.isProduction) {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[60px] max-[441px]:min-h-[451px] max-[441px]:pt-[230px] pb-[51px]'
-		} else {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[51px]'
-		}
+	if (!appConfig.isProduction) {
+		heightClass = 'pt-[178px] sm:pt-[100px]'
 	} else {
-		if (!appConfig.isProduction) {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px] max-[441px]:min-h-[451px] max-[441px]:pt-[230px] pb-[51px]'
-		} else {
-			heightClass = 'bg-secondary min-h-[343px] pt-[176px] pb-[51px]'
-		}
+		heightClass = 'pt-[100px]'
 	}
 
 	return (
-		<section
-			ref={BannerRef}
-			data-animated-banner
-			className={`${heightClass} ${className}`.trim()}
-		>
-			<Container className="relative z-10">
-				<h1
-					ref={TitleRef}
-					className="3xl:text-[48px] mb-[30px] translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
-				>
-					{title}
-				</h1>
-				<div
-					ref={BreadcrumbsRef}
-					className="translate-y-[50px] opacity-0"
-				>
-					<Breadcrumbs breadcrumbs={breadcrumbs} />
-				</div>
-			</Container>
-		</section>
+		<div className={`${heightClass} bg-secondary`}>
+			<section
+				ref={BannerRef}
+				data-animated-banner
+				className={`bg-secondary flex min-h-[243px] flex-col items-center justify-center gap-[30px] pt-[51px] pb-[81px] ${className}`.trim()}
+			>
+				<Container className="relative z-10">
+					<h1
+						ref={TitleRef}
+						className="3xl:text-[48px] xs:text-[32px] mb-[30px] translate-y-[50px] text-center text-[22px] leading-none font-bold text-white opacity-0 md:text-[34px] lg:text-[36px] xl:text-[40px] 2xl:text-[44px]"
+					>
+						{title}
+					</h1>
+					<div
+						ref={BreadcrumbsRef}
+						className="translate-y-[50px] opacity-0"
+					>
+						<Breadcrumbs breadcrumbs={breadcrumbs} />
+					</div>
+				</Container>
+			</section>
+		</div>
 	)
 }

@@ -54,7 +54,7 @@ export function HotelsTabs() {
 						aria-controls={`hotels-tabpanel-${tab.id}`}
 						id={`hotels-tab-${tab.id}`}
 						className={[
-							'flex items-center gap-[10px]',
+							'xs:flex-row flex flex-col items-center gap-[10px]',
 							'cursor-pointer text-[14px] leading-none font-bold transition-all duration-300 ease-out md:text-[16px]',
 							isActive ? `text-[#41754F]` : `text-[#E0EAB8]`,
 						].join(` `)}

@@ -127,49 +127,49 @@ export default function Page() {
 				id: 0,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.0.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.0.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-1.webp',
 			},
 			{
 				id: 1,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.1.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.1.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-2.webp',
 			},
 			{
 				id: 2,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.2.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.2.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-3.webp',
 			},
 			{
 				id: 3,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.3.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.3.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-4.webp',
 			},
 			{
 				id: 4,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.4.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.4.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-5.webp',
 			},
 			{
 				id: 5,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.5.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.5.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-6.webp',
 			},
 			{
 				id: 6,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.6.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.6.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-7.webp',
 			},
 			{
 				id: 7,
 				title: t(`pages.regions.uzbekistan.nationalInitiativesData.7.title`),
 				description: t(`pages.regions.uzbekistan.nationalInitiativesData.7.text`),
-				image: '/imgs/regions/uz/national-initiatives-1.png',
+				image: '/imgs/regions/uz/national-initiatives-8.webp',
 			},
 		],
 	}
@@ -246,7 +246,7 @@ export default function Page() {
 		<>
 			<HeroBanner
 				title={t(`pages.regions.uzbekistan.title`)}
-				bgImage="/imgs/regions/uz/uzb-banner.webp"
+				bgImage="/imgs/regions/uz/uzb-banner.png"
 				breadcrumbs={[{ label: t(`pages.regions.uzbekistan.title`), href: '/about/region/uzbekistan' }]}
 			/>
 
