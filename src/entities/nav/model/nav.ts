@@ -22,6 +22,13 @@ export const navItems: readonly NavItem[] = [
 		children: [
 			{ key: 'about.res', href: '/about', ready: true, showHeader: true, showFooter: true }, // RES 2026
 			{
+				key: 'about.exhibition',
+				href: '/about/exhibition',
+				ready: !appConfig.isProduction,
+				showHeader: !appConfig.isProduction,
+				showFooter: true,
+			}, // Exhibition
+			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
 				ready: true,
@@ -78,7 +85,7 @@ export const navItems: readonly NavItem[] = [
 			{
 				key: 'about.regionUzbekistan',
 				href: '/about/region/uzbekistan',
-				ready: !appConfig.isProduction,
+				ready: true,
 				showHeader: true,
 				showFooter: true,
 			}, // Uzbekistan

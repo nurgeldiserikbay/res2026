@@ -114,7 +114,7 @@ export function FloraAndFauna({
 											alt={slide.alt}
 											width={slide.width}
 											height={slide.height}
-											quality={75}
+											quality={100}
 											loading="lazy"
 											className="block h-full w-full rounded-[12px] object-cover"
 										/>
