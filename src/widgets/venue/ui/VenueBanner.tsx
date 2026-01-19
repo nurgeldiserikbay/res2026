@@ -63,7 +63,7 @@ export function VenueBanner() {
 						</p>
 						<p
 							ref={Subtitle2Ref}
-							className="mx-auto mt-[41px] max-w-[1323px] translate-y-[50px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C3]/50 bg-clip-text text-[32px] leading-normal font-normal text-transparent opacity-0 sm:text-[34px] md:text-[36px] lg:text-[38px] xl:text-[44px] 2xl:text-[48px]"
+							className="mx-auto mt-[41px] max-w-[1323px] translate-y-[50px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C3]/50 bg-clip-text text-[24px] leading-normal font-normal text-transparent opacity-0 sm:text-[34px] md:text-[36px] lg:text-[38px] xl:text-[44px] 2xl:text-[48px]"
 						>
 							{t(`pages.useful.venue.place`)}
 						</p>
