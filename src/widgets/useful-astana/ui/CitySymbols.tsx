@@ -18,6 +18,12 @@ export function CitySymbols() {
 	const [isBeginning, setIsBeginning] = useState(false)
 	const [isEnd, setIsEnd] = useState(false)
 	const [activeSlide, setActiveSlide] = useState(0)
+	const [showNavigation, setShowNavigation] = useState(false)
+
+	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
+		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
+		setShowNavigation(count > spv)
+	}
 
 	const images = [
 		{
@@ -79,12 +85,14 @@ export function CitySymbols() {
 							setIsBeginning(swiper.isBeginning)
 							setIsEnd(swiper.isEnd)
 							setActiveSlide(swiper.activeIndex)
+							updateShowNavigation(swiper, images.length)
 						}}
 						onSlideChange={(swiper) => {
 							setIsBeginning(swiper.isBeginning)
 							setIsEnd(swiper.isEnd)
 							setActiveSlide(swiper.activeIndex)
 						}}
+						onBreakpoint={(swiper) => updateShowNavigation(swiper, images.length)}
 					>
 						{images.map((item) => (
 							<SwiperSlide key={item.id}>
@@ -109,52 +117,53 @@ export function CitySymbols() {
 							</SwiperSlide>
 						))}
 					</Swiper>
-					{images?.length > 1 && (
-						<div className="mt-[75px] flex items-center justify-start gap-[20px] md:mt-[136px]">
-							<div className="flex items-center justify-start gap-[10px]">
-								<div id="city-symbols-swiper-button-prev">
-									{isBeginning ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
-										>
-											<IconArrowHead className="text-muted rotate-180 transform" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[82px] p-[8px]!"
-										>
-											<IconArrowHead className="rotate-180 transform" />
-										</ButtonDefault>
-									)}
-								</div>
-
-								<div id="city-symbols-swiper-button-next">
-									{isEnd ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
-										>
-											<IconArrowHead className="text-muted" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[82px] p-[8px]!"
-										>
-											<IconArrowHead />
-										</ButtonDefault>
-									)}
-								</div>
+					<div
+						className={`mt-[75px] flex items-center justify-start gap-[20px] md:mt-[136px] ${!showNavigation ? 'hidden' : ''}`}
+						aria-hidden={!showNavigation}
+					>
+						<div className="flex items-center justify-start gap-[10px]">
+							<div id="city-symbols-swiper-button-prev">
+								{isBeginning ? (
+									<ButtonOutlined
+										icon={false}
+										className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
+									>
+										<IconArrowHead className="text-muted rotate-180 transform" />
+									</ButtonOutlined>
+								) : (
+									<ButtonDefault
+										icon={false}
+										className="h-[45px] w-[82px] p-[8px]!"
+									>
+										<IconArrowHead className="rotate-180 transform" />
+									</ButtonDefault>
+								)}
 							</div>
-							<div className="text-muted-light text-[24px] leading-normal font-normal">
-								<span className="text-[24px] leading-normal font-normal text-[#02493F]">{activeSlide + 1}</span>
-								<span>/</span>
-								<span className="font-normal] text-[16px] leading-normal">{images?.length}</span>
+
+							<div id="city-symbols-swiper-button-next">
+								{isEnd ? (
+									<ButtonOutlined
+										icon={false}
+										className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
+									>
+										<IconArrowHead className="text-muted" />
+									</ButtonOutlined>
+								) : (
+									<ButtonDefault
+										icon={false}
+										className="h-[45px] w-[82px] p-[8px]!"
+									>
+										<IconArrowHead />
+									</ButtonDefault>
+								)}
 							</div>
 						</div>
-					)}
+						<div className="text-muted-light text-[24px] leading-normal font-normal">
+							<span className="text-[24px] leading-normal font-normal text-[#02493F]">{activeSlide + 1}</span>
+							<span>/</span>
+							<span className="font-normal] text-[16px] leading-normal">{images?.length}</span>
+						</div>
+					</div>
 				</div>
 			</Container>
 		</section>

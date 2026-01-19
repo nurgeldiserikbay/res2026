@@ -15,6 +15,12 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 	const [activeSlide, setActiveSlide] = useState(0)
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
+	const [showNavigation, setShowNavigation] = useState(false)
+
+	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
+		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
+		setShowNavigation(count > spv)
+	}
 
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
@@ -34,6 +40,7 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 								setIsBeginning(swiper.isBeginning)
 								setIsEnd(swiper.isEnd)
 								setActiveSlide(swiper.activeIndex)
+								updateShowNavigation(swiper, images.length)
 							}}
 							onSlideChange={(swiper) => {
 								setIsBeginning(swiper.isBeginning)
@@ -60,7 +67,10 @@ export function BannerSlides({ images }: { images: { id: number; image: string; 
 						</Swiper>
 					</div>
 					<div className="relative bottom-0 left-0 z-5 flex flex-col items-start justify-end md:absolute md:px-[25px] md:py-[25px] lg:px-[50px] lg:py-[50px]">
-						<div className="flex items-center justify-start gap-[20px] md:mt-[136px]">
+						<div
+							className={`flex items-center justify-start gap-[20px] md:mt-[136px] ${!showNavigation ? 'hidden' : ''}`}
+							aria-hidden={!showNavigation}
+						>
 							<div className="flex items-center justify-start gap-[10px]">
 								<div id="banner-slides-swiper-button-prev">
 									{isBeginning ? (

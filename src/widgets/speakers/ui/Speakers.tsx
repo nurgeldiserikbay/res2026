@@ -34,7 +34,13 @@ export function Speakers() {
 
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
+	const [showNavigation, setShowNavigation] = useState(false)
 	const [navigationModule, setNavigationModule] = useState<typeof import('swiper/modules').Navigation | null>(null)
+
+	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
+		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
+		setShowNavigation(count > spv)
+	}
 
 	useEffect(() => {
 		// Динамический импорт модуля Navigation
@@ -118,6 +124,7 @@ export function Speakers() {
 						<SpekerControl
 							isBeginning={isBeginning}
 							isEnd={isEnd}
+							showNavigation={showNavigation}
 							className="hidden lg:flex"
 						/>
 					</div>
@@ -156,11 +163,13 @@ export function Speakers() {
 							onSwiper={(swiper) => {
 								setIsBeginning(swiper.isBeginning)
 								setIsEnd(swiper.isEnd)
+								updateShowNavigation(swiper, 10)
 							}}
 							onSlideChange={(swiper) => {
 								setIsBeginning(swiper.isBeginning)
 								setIsEnd(swiper.isEnd)
 							}}
+							onBreakpoint={(swiper) => updateShowNavigation(swiper, 10)}
 						>
 							{new Array(10).fill(0).map((_, index) => (
 								<SwiperSlide
@@ -183,6 +192,7 @@ export function Speakers() {
 					className="mt-[48px] flex lg:hidden"
 					isBeginning={isBeginning}
 					isEnd={isEnd}
+					showNavigation={showNavigation}
 				/>
 			</Container>
 		</section>
