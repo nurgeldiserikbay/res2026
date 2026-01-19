@@ -89,7 +89,7 @@ export function Header() {
 				</Container>
 
 				{!appConfig.isProduction && (
-					<Container className="mt-[20px] hidden max-[441px]:block">
+					<Container className="mt-[20px] block sm:hidden">
 						<HeaderCta className="h-[58px]! w-full" />
 					</Container>
 				)}

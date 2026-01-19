@@ -15,7 +15,7 @@ export function HeaderActions() {
 			</div>
 			<div className="flex items-center gap-[30px]">
 				<HeaderLang />
-				{!appConfig.isProduction && <HeaderCta className="max-[441px]:hidden" />}
+				{!appConfig.isProduction && <HeaderCta className="hidden sm:flex" />}
 				<HeaderMobileNav />
 			</div>
 		</div>
