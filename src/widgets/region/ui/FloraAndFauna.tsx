@@ -40,6 +40,12 @@ export function FloraAndFauna({
 
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
+	const [showNavigation, setShowNavigation] = useState(slides.length > 1)
+
+	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
+		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
+		setShowNavigation(count > spv)
+	}
 
 	const SectionRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
@@ -90,6 +96,7 @@ export function FloraAndFauna({
 									setIsBeginning(swiper.isBeginning)
 									setIsEnd(swiper.isEnd)
 									setActiveSlide(swiper.activeIndex)
+									updateShowNavigation(swiper, slides.length)
 								}}
 								onSlideChange={(swiper) => {
 									setIsBeginning(swiper.isBeginning)
@@ -132,7 +139,8 @@ export function FloraAndFauna({
 							</div>
 							<div
 								ref={ButtonsRef}
-								className="mt-[50px] flex translate-x-[-50px] gap-[10px] opacity-0 md:block"
+								className={`mt-[50px] flex translate-x-[-50px] gap-[10px] opacity-0 md:block ${!showNavigation ? 'hidden' : ''}`}
+								aria-hidden={!showNavigation}
 							>
 								<div id="flora-and-fauna-swiper-button-prev">
 									{isBeginning ? (

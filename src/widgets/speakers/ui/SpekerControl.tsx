@@ -4,14 +4,27 @@ import { IconArrowHead } from '@/shared/icons/IconArrowHead'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 
-export function SpekerControl({ className, isBeginning, isEnd }: { className: string; isBeginning: boolean; isEnd: boolean }) {
+export function SpekerControl({
+	className,
+	isBeginning,
+	isEnd,
+	showNavigation = true,
+}: {
+	className: string
+	isBeginning: boolean
+	isEnd: boolean
+	showNavigation?: boolean
+}) {
 	const t = useTranslations()
 
 	return (
 		<div className={`flex w-full items-start justify-between gap-[20px] ${className}`}>
 			<ButtonDefault>{t('labels.allSpeakers')}</ButtonDefault>
 
-			<div>
+			<div
+				className={!showNavigation ? 'hidden' : ''}
+				aria-hidden={!showNavigation}
+			>
 				<div id="swiper-button-prev">
 					{isBeginning ? (
 						<ButtonOutlined
