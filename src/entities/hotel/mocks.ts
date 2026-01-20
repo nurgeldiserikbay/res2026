@@ -9,7 +9,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 70000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/4e4/v7rgjd517ovuzqcw2a474zncswgli1it.png',
+		image: '/imgs/hotels/SAAD Hotel Astana.webp',
 		description: {
 			ru: 'Пятизвёздочный бизнес-отель в центре Астаны с высоким уровнем сервиса и современной инфраструктурой.',
 			kk: 'Астананың орталығындағы жоғары сервисті және заманауи инфрақұрылымы бар бес жұлдызды бизнес-отель.',
@@ -26,7 +26,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 70000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/e65/tn5kwk607k9ioet26pzo49ko7lw5ik60.webp',
+		image: '/imgs/hotels/Rixos President Astana.webp',
 		description: {
 			ru: 'Роскошный пятизвёздочный отель премиум-класса, ориентированный на деловых гостей и официальные визиты.',
 			kk: 'Іскер қонақтар мен ресми сапарларға бағытталған премиум санаттағы сәнді бес жұлдызды қонақүй.',
@@ -43,7 +43,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 70000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/8e6/xslzrrccgxkkq651bayv9i23rmkxdh6j.jpg',
+		image: '/imgs/hotels/Radisson Astana.webp',
 		description: {
 			ru: 'Современный пятизвёздочный отель международной сети в престижном районе столицы.',
 			kk: 'Елордадағы беделді ауданда орналасқан халықаралық желінің заманауи бес жұлдызды қонақүйі.',
@@ -60,7 +60,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 47000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/de5/ybi5b1lvkxg9jseanj0jez8j7t8xgozf.jpg',
+		image: '/imgs/hotels/Hilton Garden Inn Astana.webp',
 		description: {
 			ru: 'Четырёхзвёздочный городской отель с удобным расположением и оптимальным соотношением цены и качества.',
 			kk: 'Ыңғайлы орналасуы және баға мен сапаның оңтайлы үйлесімі бар төрт жұлдызды қалалық қонақүй.',
@@ -77,7 +77,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 69000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/168/3utqn69jpbh1hk84zzud8tksc3zz91w3.jpg',
+		image: '/imgs/hotels/Hilton Astana.webp',
 		description: {
 			ru: 'Ультрасовременный пятизвёздочный отель в комплексе EXPO с панорамными видами и развитой инфраструктурой.',
 			kk: 'EXPO кешеніндегі панорамалық көріністері мен дамыған инфрақұрылымы бар ультразаманауи бес жұлдызды қонақүй.',
@@ -94,7 +94,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 70000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/560/9coo1m2fsftlnwmbp3gdu6xzhhfi6n3s.jpg',
+		image: '/imgs/hotels/Sheraton Astana.webp',
 		description: {
 			ru: 'Sheraton Astana Hotel – премиальный отель в центре столицы с комфортабельными номерами, спа-центром и развитой инфраструктурой для бизнеса и отдыха.',
 			kk: 'Sheraton Astana Hotel — елорданың орталығындағы жайлы бөлмелері, спа-орталығы және бизнес пен демалысқа арналған дамыған инфрақұрылымы бар премиум қонақүй.',
@@ -111,7 +111,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 30000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/e6b/leui9jja5oublvh7b3g52fw425vk648k.jpg',
+		image: '/imgs/hotels/Park Inn by Radisson.webp',
 		description: {
 			ru: 'Отель удобно расположен в деловом районе Астаны и предлагает отличные условия для продуктивной работы и отдыха.',
 			kk: 'Қонақүй Астананың іскер ауданында ыңғайлы орналасқан және жұмыс пен демалысқа тамаша жағдай ұсынады.',
@@ -128,7 +128,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 3,
 		priceFrom: 24000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/24f/ambzy89t2u6bglhm7gnaqorh0xh7hp6a.jpg',
+		image: '/imgs/hotels/Ibis Astana.webp',
 		description: {
 			ru: 'Современный отель бизнес-класса в центре столицы, предлагающий европейский уровень сервиса по доступной цене.',
 			kk: 'Елорда орталығындағы қолжетімді бағада еуропалық сервис ұсынатын заманауи бизнес-класс қонақүйі.',
@@ -145,7 +145,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 25000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/261/y73jgs16ltaxgf8xg0m8xqg2sk7237ur.jpg',
+		image: '/imgs/hotels/Wyndham Garden Astana.webp',
 		description: {
 			ru: 'Комфортабельный отель рядом с EXPO и аэропортом, идеально подходящий для деловых поездок и семейного отдыха.',
 			kk: 'EXPO мен әуежайға жақын, іссапарлар мен отбасылық демалысқа өте қолайлы жайлы қонақүй.',
@@ -162,7 +162,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 30000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/089/lroq2j5cltxs36u8w3uy3kz7hs0kqbvb.jpg',
+		image: '/imgs/hotels/Alanda.webp',
 		description: {
 			ru: 'Элегантный четырехзвездочный отель с атмосферой старой Европы и безупречным сервисом в центре Астаны.',
 			kk: 'Астананың орталығындағы ескі Еуропа атмосферасы мен мінсіз сервисі бар сәнді төрт жұлдызды қонақүй.',
@@ -179,7 +179,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 130000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/cea/lop1x5qyhy9fjofk14u8t9vv4dsr6nje.jpg',
+		image: '/imgs/hotels/The St. Regis Astana.webp',
 		description: {
 			ru: 'Пятизвёздочный отель премиум-класса на набережной с акцентом на эксклюзивный сервис и приватность.',
 			kk: 'Жағалауда орналасқан, эксклюзивті сервис пен құпиялыққа басымдық беретін премиум санаттағы бес жұлдызды қонақүй.',
@@ -196,7 +196,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 117000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/643/otdliijpxahpkxxq1hcnhkdeo4lujk7w.png',
+		image: '/imgs/hotels/The Ritz-Carlton, Astana.webp',
 		description: {
 			ru: 'Роскошный пятизвёздочный отель в высотном комплексе с панорамными видами на столицу.',
 			kk: 'Елордаға панорамалық көрініс ашылатын биік кешендегі сәнді бес жұлдызды қонақүй.',
@@ -213,7 +213,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 40000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/98b/p5omqu5ut923avb805lev2nnzh02acbv.jpg',
+		image: '/imgs/hotels/The One Hotel Astana.webp',
 		description: {
 			ru: 'Современный четырёхзвёздочный отель в деловом районе, ориентированный на комфортное размещение.',
 			kk: 'Іскер ауданда орналасқан, жайлы орналастыруға бағытталған заманауи төрт жұлдызды қонақүй.',
@@ -247,7 +247,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 17000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/637/608wk31u8frsmlufxhlghqg88cug63k2.jpg',
+		image: '/imgs/hotels/Monaco.webp',
 		description: {
 			ru: 'Современный бутик-отель бизнес-класса в элитном районе Астаны, предлагающий уютные номера и высокий уровень комфорта.',
 			kk: 'Астананың элиталы ауданындағы жайлы бөлмелері мен жоғары жайлылық деңгейін ұсынатын заманауи бизнес-класс бутик-қонақүй.',
@@ -264,7 +264,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 40000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/eeb/2njd2wyke17bu9zka2zwf7dnxshtubu3.jpeg',
+		image: '/imgs/hotels/Ramada by Wyndham Astana.webp',
 		description: {
 			ru: 'Исторический отель в центре города с современными удобствами, расположенный вблизи главных коммерческих и правительственных объектов.',
 			kk: 'Қала орталығындағы заманауи қолайлылықтары бар тарихи қонақүй, негізгі коммерциялық және мемлекеттік нысандарға жақын орналасқан.',
@@ -285,7 +285,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 3,
 		priceFrom: 35000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/fd8/e4fe6wes4ifkd3s2fjj8o1asn8wgairq.jpg',
+		image: '/imgs/hotels/Hampton by Hilton Astana Triumphal Arch.webp',
 		description: {
 			ru: 'Современный отель на проспекте Мангилик Ел, предлагающий комфортные номера и удобный доступ к главным достопримечательностям нового центра столицы.',
 			kk: 'Мәңгілік Ел даңғылындағы заманауи қонақүй: жайлы бөлмелер және елорданың жаңа орталығының басты көрнекі орындарына ыңғайлы қолжетімділік.',
@@ -319,7 +319,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 50000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/445/truqlwl5f1blot0lqytafbd9rj16xmjq.JPG',
+		image: '/imgs/hotels/Aisha Bibi Hotel & Spa.webp',
 		description: {
 			ru: 'Стильный и уютный отель с высоким уровнем сервиса, расположенный в удобном районе недалеко от делового центра.',
 			kk: 'Іскерлік орталыққа жақын, ыңғайлы ауданда орналасқан, сервистің жоғары деңгейі бар сәнді әрі жайлы қонақүй.',
@@ -370,7 +370,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 12000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/5da/8hn68282ljamodhbfql3p47my21ihan6.png',
+		image: '/imgs/hotels/Comfort Hotel.webp',
 		description: {
 			ru: 'Уютный отель в центре города с полным спектром услуг для комфортного проживания, включая спа-центр и конференц-залы.',
 			kk: 'Қала орталығындағы жайлы қонақүй: спа-орталық пен конференц-залдарды қоса алғанда, жайлы тұруға арналған толық қызметтер.',
@@ -421,7 +421,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 50000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/413/rx2mcysxnybgi78fs9e2q9tri3hpevst.png',
+		image: '/imgs/hotels/Jumbaktas.webp',
 		description: {
 			ru: 'Комфортабельный отель на левом берегу с панорамными видами и широким выбором номеров от стандарта до президентских апартаментов.',
 			kk: 'Сол жағалаудағы панорамалық көріністері бар жайлы қонақүй: стандарттан президенттік апартаменттерге дейінгі бөлмелер таңдауы кең.',
@@ -438,7 +438,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 50000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/3ff/9x1ztf2v415ftngnz1wk60yeptj3e3w9.png',
+		image: '/imgs/hotels/Best Western Plus Astana.webp',
 		description: {
 			ru: 'Современный отель мирового бренда в центре столицы, ориентированный на деловых путешественников и туристов.',
 			kk: 'Елорда орталығындағы әлемдік брендтің заманауи қонақүйі, іссапардағы қонақтар мен туристерге бағытталған.',
@@ -455,7 +455,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 100000,
 		currency: 'KZT',
-		image: 'https://visitastana.kz/upload/iblock/399/vzu90tddih1gc8w92js85qpqju1cd3q8.jpg',
+		image: '/imgs/hotels/Rixos Borovoe.webp',
 		description: {
 			ru: 'Роскошный курортный отель на берегу озера Щучье в окружении соснового леса, предлагающий исключительный сервис и спа-отдых.',
 			kk: 'Шортанды көлі жағасында, қарағайлы орман қоршауындағы сәнді курорттық қонақүй: ерекше сервис және спа-демалыс.',
