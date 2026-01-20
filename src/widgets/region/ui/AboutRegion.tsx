@@ -19,8 +19,8 @@ interface AboutRegionProps {
 		statTitle: string
 		statClass?: string
 	}>
-	stat3Value: string
-	stat3: string
+	stat3Value?: string
+	stat3?: string
 	map: string
 	mapAlt: string
 	mapWidth: number
@@ -97,13 +97,13 @@ export default function AboutRegion({
 					<div className="relative w-full whitespace-pre-line lg:max-w-[868px]">
 						<h3
 							ref={TitleRef}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px] lg:text-[32px]"
+							className="relative z-1 mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-text opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px] lg:text-[32px]"
 						>
 							{title}
 						</h3>
 						<p
 							ref={Text1Ref}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
+							className="relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal text-text opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
 						>
 							{text1}
 						</p>
@@ -116,10 +116,10 @@ export default function AboutRegion({
 									key={index}
 									className={`flex h-[140px] w-full flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] px-[15px] text-center ${stat.statClass}`}
 								>
-									<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">
+									<span className="text-[48px] leading-normal font-bold text-secondary sm:text-[56px] md:text-[64px]">
 										{stat.statValue}
 									</span>
-									<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">
+									<span className="text-[14px] leading-normal font-normal text-secondary sm:text-[15px] md:text-[16px]">
 										{stat.statTitle}
 									</span>
 								</div>
@@ -127,17 +127,19 @@ export default function AboutRegion({
 						</div>
 						<p
 							ref={Text2Ref}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
+							className="relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal text-text opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
 						>
 							{text2}
 						</p>
-						<div
-							ref={Stat3Ref}
-							className="relative z-1 flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#ADF0BF] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] md:h-[172px]"
-						>
-							<span className="text-secondary text-[48px] leading-normal font-bold sm:text-[56px] md:text-[64px]">{stat3Value}</span>
-							<span className="text-secondary text-[14px] leading-normal font-normal sm:text-[15px] md:text-[16px]">{stat3}</span>
-						</div>
+						{stat3Value && stat3 && (
+							<div
+								ref={Stat3Ref}
+								className="relative z-1 flex h-[140px] w-full translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#ADF0BF] to-[#D4D8C300] text-center opacity-0 sm:h-[155px] md:h-[172px]"
+							>
+								<span className="text-[48px] leading-normal font-bold text-secondary sm:text-[56px] md:text-[64px]">{stat3Value}</span>
+								<span className="text-[14px] leading-normal font-normal text-secondary sm:text-[15px] md:text-[16px]">{stat3}</span>
+							</div>
+						)}
 						{map && (
 							<Image
 								ref={MapRef}

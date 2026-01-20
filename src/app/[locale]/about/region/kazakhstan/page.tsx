@@ -176,7 +176,7 @@ export default function Page() {
 		<>
 			<HeroBanner
 				title={t(`pages.regions.kazakhstan.title`)}
-				bgImage="/imgs/region-banner.png"
+				bgImage="/imgs/region-banner.webp"
 				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/about/region/kazakhstan' }]}
 			/>
 

@@ -241,3 +241,142 @@ export const SLIDES_UZ = [
 		height: 888,
 	},
 ]
+
+export const SLIDES_TJ = [
+	{
+		id: 1,
+		image: '/imgs/regions/tj/tj-ff-1.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 2,
+		image: '/imgs/regions/tj/tj-ff-2.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 3,
+		image: '/imgs/regions/tj/tj-ff-3.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 4,
+		image: '/imgs/regions/tj/tj-ff-4.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 5,
+		image: '/imgs/regions/tj/tj-ff-5.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 6,
+		image: '/imgs/regions/tj/tj-ff-6.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 7,
+		image: '/imgs/regions/tj/tj-ff-7.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+	{
+		id: 8,
+		image: '/imgs/regions/tj/tj-ff-8.webp',
+		title: {
+			kk: 'Флорасы мен фаунасы',
+			ru: 'Флора и фауна',
+			en: 'The flora and fauna',
+		},
+		description: {
+			kk: 'Тәжікстан экожүйелерінің алуан түрлілігімен ерекшеленеді: тоғайлы ормандардан альпілік шалғындарға дейін. Бұл ел қар барысының ең маңызды мекен ету аймақтарының бірі болып табылады. Басқа да айрықша түрлерге памирлік тау қошқары (Ovis ammon polii), бұрандалы мүйізді теке — мархур (Capra falconeri heptneri) және сібір текесі (Capra sibirica alaiana Noack) жатады. Ел флорасы 5000-нан астам өсімдік түрін қамтиды, олардың көпшілігі жеміс дақылдарының эндемик жабайы арғы тектері болып табылады.',
+			ru: 'Таджикистан отличается разнообразием экосистем: от тугайных лесов до альпийских лугов. Это важнейший ареал обитания снежного барса. Другие знаковые виды включают памирского горного барана (Ovis ammon polii), винторогого козла (Capra falconeri heptneri) и сибирского козерога (Capra sibirica alaiana Noack). Флора насчитывает более 5000 видов, многие из которых являются эндемичными дикими предками фруктовых культур.',
+			en: 'Tajikistan is characterized by a wide diversity of ecosystems, ranging from tugai riparian forests to alpine meadows. It is one of the most important habitats of the snow leopard. Other iconic species include the Pamir argali (Ovis ammon polii), the markhor (Capra falconeri heptneri), and the Siberian ibex (Capra sibirica alaiana Noack). The country’s flora includes more than 5,000 plant species, many of which are endemic wild ancestors of cultivated fruit crops.',
+		},
+		alt: 'flora-and-fauna',
+		width: 1793,
+		height: 888,
+	},
+]

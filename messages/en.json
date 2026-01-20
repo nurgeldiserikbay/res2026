@@ -403,6 +403,84 @@
 					},
 					"nationalInitiativesTitle": "National initiatives"
 				}
+			},
+			"tajikistan": {
+				"title": "Tajikistan",
+				"tabs": {
+					"0": "About the Country",
+					"1": "Climate",
+					"2": "Flora and Fauna",
+					"3": "Other"
+				},
+				"title1": "About the Country",
+				"text1": "Tajikistan is a landlocked mountainous country in the heart of Central Asia. Mountains cover more than 93% of its territory, dominated by the majestic Pamir and Alay ranges. Tajikistan is a vital source of water for the region, generating approximately 60% of Central Asia’s water resources. The country is known for its breathtaking natural landscapes, high-altitude lakes, and rich Persian cultural heritage. The republic is actively developing its hydropower potential to build a green economy. The capital city, Dushanbe, is an emerging hub of regional diplomacy.",
+				"text2": "",
+				"stat1": "regions",
+				"stat2": "million population",
+				"climateTitle": "Climate Description",
+				"climateText": "The climate is continental and varies sharply with altitude. In the lowland valleys, summers are hot and dry while winters are mild, whereas high mountain areas experience polar conditions with permanent snow. Tajikistan is home to thousands of glaciers, including the massive Vanjyakh Glacier. These glaciers are crucial for sustainable water management in the region but are highly vulnerable to climate change.",
+				"climateText2": "winter in the Pamir highlands",
+				"climateText3": "summer in the valleys",
+				"nationalInitiativesData": {
+					"0": {
+						"title": "Green Country Program",
+						"text": "A national greening initiative that includes an ambitious plan to plant 2 billion trees by 2040 to combat desertification."
+					}
+				},
+				"globalTitle": "International Events Held",
+				"globalSubtitle": "Tajikistan is a global pioneer in water and climate diplomacy, leading several major initiatives:",
+				"globalEventsHeld": {
+					"0": {
+						"title": "2003",
+						"subtitle": "International Year of Freshwater",
+						"text": "Proposed by Tajikistan and adopted by the UN, highlighting the importance of freshwater and the need for its sustainable management."
+					},
+					"1": {
+						"title": "2005–2015",
+						"subtitle": "International Decade for Action “Water for Life”",
+						"text": "Aimed at ensuring sustainable water resource management and basic sanitation for all."
+					},
+					"2": {
+						"title": "2013",
+						"subtitle": "International Year of Water Cooperation",
+						"text": "Proposed by Tajikistan to promote water cooperation at all levels and address shared water challenges."
+					},
+					"3": {
+						"title": "2025",
+						"subtitle": "International Year of Glaciers’ Preservation",
+						"text": "Initiated by Tajikistan and adopted by the UN, this global campaign raises awareness of rapid glacier melting and establishes a dedicated international trust fund for their protection."
+					},
+					"4": {
+						"title": "2018–2028",
+						"subtitle": "Water for Sustainable Development",
+						"text": "Tajikistan leads this “Water Decade,” a global action plan to advance water cooperation and sanitation goals, hosting high-level conferences in Dushanbe every two years."
+					},
+					"5": {
+						"title": "May 24",
+						"subtitle": "International Markhor Conservation Day",
+						"text": "Proposed by Tajikistan and adopted by the UN, this day raises global awareness about the conservation of the markhor and its habitat."
+					},
+					"6": {
+						"title": "2025",
+						"subtitle": "International Year of Glaciers’ Preservation",
+						"text": "A global campaign initiated by Tajikistan and adopted by the UN, drawing attention to glacier melting and creating an international trust fund for their protection."
+					},
+					"7": {
+						"title": "2018–2028",
+						"subtitle": "Water for Sustainable Development",
+						"text": "Tajikistan leads this global decade focused on promoting water cooperation through regular high-level conferences in Dushanbe."
+					}
+				},
+				"etc": {
+					"strategicVisionTitle": "Strategic Vision and Documents",
+					"strategicVisionIntro": "Tajikistan has adopted a number of key strategic documents to support its transition to sustainable development:",
+					"strategicDocuments": {
+						"0": "<sbold>Green Economy Development Strategy (2023–2037):</sbold> A comprehensive roadmap aimed at doubling renewable energy capacity, introducing electric transport, and ensuring efficient use of natural resources. The goal is full green energy independence by 2037.",
+						"1": "<sbold>National Climate Change Adaptation Strategy (until 2030):</sbold> Focuses on increasing resilience in critical sectors such as agriculture, water resources, and energy. Includes disaster risk reduction measures.",
+						"2": "<sbold>National Development Strategy (until 2030):</sbold> A foundational document aimed at improving living standards and ensuring energy security, integrating the Sustainable Development Goals (SDGs)."
+					},
+					"nationalInitiativesTitle": "National Initiatives"
+				}
 			}
 		},
 		"keyDirections": {
