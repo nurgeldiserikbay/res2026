@@ -9,7 +9,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Бейбітшілік пен келісім сарайы',
 			en: 'Palace of Peace and Reconciliation',
 		},
-		image: '/imgs/attractions/06_dvorets_mira_i_soglasija_preview.jpg',
+		image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_preview.webp',
 		description: {
 			ru: 'Дворец Мира и Согласия — символ диалога культур и религий в Астане, построенный по проекту Нормана Фостера.',
 			kk: 'Бейбітшілік пен келісім сарайы — Астанадағы мәдениеттер мен діндер диалогының символы, Норман Фостер жобалаған.',
@@ -24,7 +24,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 		},
 
 		// Баннер (можешь заменить на реальную картинку для этой достопримечательности)
-		bannerImage: '/imgs/attractions/06_dvorets_mira_i_soglasija_main.webp',
+		bannerImage: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_main.webp',
 
 		aboutTitle: {
 			ru: 'О Дворце Мира и Согласия',
@@ -61,9 +61,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 		},
 
 		aboutImages: [
-			'/imgs/attractions/06_dvorets_mira_i_soglasija_desc_1.webp',
-			'/imgs/attractions/06_dvorets_mira_i_soglasija_desc_2.jpg',
-			'/imgs/attractions/06_dvorets_mira_i_soglasija_desc_3.webp',
+			'/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_desc_1.webp',
+			'/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_desc_2.webp',
+			'/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_desc_3.webp',
 		],
 
 		insideTitle: {
@@ -81,37 +81,37 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Бейбітшілік және келісім сарайы – Қазақстандағы бірліктің, достықтың, бейбітшіліктің және ынтымақтастықтың символы. Дизайнды танымал британдық сәулетші Норман Роберт Фостер жасаған. Елордада пирамида тәрізді ғимарат салу идеясын, онда әртүрлі ұлттар мен дін өкілдері бүкіл адамзатты бейбітшілік пен ізгілікке жетелейтін шешімдер қабылдау үшін жинала алатын еді, оны Тұңғыш Президент Нұрсұлтан Назарбаев 2003 жылы Астанада өткен Әлемдік және дәстүрлі діндер көшбасшыларының бірінші съезінде ұсынған болатын.  \n\n Мемлекет басшысының бастамасы әлемнің түкпір-түкпірінен жиналған әртүрлі діндер көшбасшыларының кең қолдауына ие болды. 2006 жылы әлемдегі ең жаңа астана Астанада қайтадан бас қосқан Съезд делегаттары екінші кездесуін жаңа, ерекше ғимаратта – Бейбітшілік және келісім сарайында өткізді. \n\n Пирамиданың табанының өлшемі 63-ке 63 метр, ал биіктігі 63 метр. Ғимараттың сыртқы көрінісі шыны мен тас тақтайшалардан жасалған, бұл оның ішкі көрінісін көрсетеді. Пирамиданың жоғарғы жағы, күмбезі, танымал суретші Брайан Кларктың витражымен безендірілген. Витраж – нағыз өнер туындысы, онда елде тұратын әртүрлі ұлт өкілдерін бейнелейтін 130 ақ көгершін бейнеленген. \n\n Жаңа сарайдың салтанатты ашылуында әлемдік классикалық музыка жұлдызы Монсеррат Кабалье өнер көрсетті. Сарай үш тілде: қазақ, орыс және ағылшын тілдерінде 7 күндік тур қызметін ұсынады. Бейбітшілік және келісім сарайы – бейбітшілік, келісім және прогресс идеялары бір жарқыраған күмбездің астында тоғысатын орын. Міндетті түрде көруге тұрарлық жер!',
 			en: "The Palace of Peace and Reconciliation is a symbol of unity, friendship, peace, and cooperation in Kazakhstan. The design was designed by renowned British architect Norman Robert Foster. The idea of ​constructing a pyramid-shaped building in the capital, where representatives of various nations and religions could gather to make decisions leading all of humanity to peace and goodness, was proposed by First President Nursultan Nazarbayev in 2003 at the First Congress of Leaders of World and Traditional Religions in Astana. \n\n The Head of State's initiative received broad support from leaders of various faiths gathered from around the world. The Congress delegates, who met again in 2006 in the world's newest capital, Astana, held their second meeting in a new, unique building—the Palace of Peace and Reconciliation. \n\n The Pyramid's base measures 63 by 63 meters, and its height is 63 meters. The building's exterior is made of glass and stone slabs, reflecting its interior. The top of the Pyramid, the dome, is adorned with a stained-glass window by renowned artist Brian Clark. The stained-glass window is a true work of art, depicting 130 white doves, symbolizing the various nationalities living in the country. \n\n World classical music star Montserrat Caballe performed at the grand opening of the new Palace. The Palace offers a 7-day tour service, available in three languages: Kazakh, Russian, and English. The Palace of Peace and Reconciliation is a place where the ideas of peace, harmony, and progress meet under a single shining dome. A must-see!",
 		},
-		insideImage: '/imgs/attractions/06_dvorets_mira_i_soglasija_desc_01.jpg',
+		insideImage: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_desc_4.webp',
 
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/06_dvorets_mira_i_soglasija_gallery_01.webp',
+				image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_gallery_01.webp',
 				description: 'Palace of Peace and Reconciliation — Astana, Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/06_dvorets_mira_i_soglasija_gallery_02.webp',
+				image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_gallery_02.webp',
 				description: 'Iconic pyramid designed by Norman Foster',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/06_dvorets_mira_i_soglasija_gallery_03.jpg',
+				image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_gallery_03.webp',
 				description: 'Interior tours are available in three languages',
 			},
 			{
 				id: 3,
-				image: '/imgs/attractions/06_dvorets_mira_i_soglasija_gallery_04.jpg',
+				image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_gallery_04.webp',
 				description: 'Stained-glass dome with 130 white doves',
 			},
 			{
 				id: 4,
-				image: '/imgs/attractions/06_dvorets_mira_i_soglasija_gallery_05.webp',
+				image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_gallery_05.webp',
 				description: 'A symbol of unity, dialogue, and peace',
 			},
 			{
 				id: 5,
-				image: '/imgs/attractions/06_dvorets_mira_i_soglasija_gallery_06.jpg',
+				image: '/imgs/attractions/dvorets_mira_i_soglasija/06_dvorets_mira_i_soglasija_gallery_06.webp',
 				description: 'A symbol of unity, dialogue, and peace',
 			},
 		],
@@ -138,7 +138,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Тұңғыш Президент музейі',
 			en: 'Museum of the First President',
 		},
-		image: '/imgs/attractions/01_muzej_pervogo_prezidenta_preview.png',
+		image: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_preview.webp',
 		description: {
 			ru: 'Музей Первого Президента Республики Казахстан — это уникальное культурное учреждение, отражающее независимость страны, её политическое развитие и становление государственных институтов.',
 			kk: 'Қазақстан Республикасы Тұңғыш Президентінің мұражайы – елдің тәуелсіздігін, саяси дамуын және мемлекеттік институттардың қалыптасуын көрсететін бірегей мәдени мекеме.',
@@ -151,7 +151,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Қазақстан Республикасы Тұңғыш Президентінің мұражайы – елдің тәуелсіздігін, саяси дамуын және мемлекеттік институттардың қалыптасуын көрсететін бірегей мәдени мекеме.',
 			en: "The Museum of the First President of the Republic of Kazakhstan is a unique cultural institution reflecting the country's independence, its political development, and the formation of state institutions.",
 		},
-		bannerImage: '/imgs/attractions/01_muzej_pervogo_prezidenta_main.png',
+		bannerImage: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_main.webp',
 		aboutTitle: {
 			ru: 'О музее',
 			kk: 'Музей туралы',
@@ -169,9 +169,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			text2: { ru: 'экспозиции', kk: 'экспозиция', en: 'exhibits' },
 		},
 		aboutImages: [
-			'/imgs/attractions/01_muzej_pervogo_prezidenta_desc_1.jpg',
-			'/imgs/attractions/01_muzej_pervogo_prezidenta_desc_2.png',
-			'/imgs/attractions/01_muzej_pervogo_prezidenta_desc_3.png',
+			'/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_desc_1.webp',
+			'/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_desc_2.webp',
+			'/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -188,21 +188,26 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Бірінші Президент мұражайы сэр Норман Фостердің таңғажайып сәулеттік жобасы болып табылатын Назарбаев орталығында орналасқан. Ғимарат аспанға көтерілген алып көзге ұқсайды. Сәулетшінің айтуынша, құрылымның ерекше көрінісі Қазақстанның өміршеңдігін білдіреді. \n\n Мұражай көрмесінде Қазақстан Республикасының Бірінші Президенті Нұрсұлтан Назарбаевтың өмірі мен қызметінің әртүрлі кезеңдеріне және Қазақстанның тәуелсіздік тарихына арналған мұрағаттық құжаттардың, фотосуреттердің, бейнематериалдардың және экспонаттардың кең коллекциясы ұсынылған. Мұражай залдарында Қазақстан Республикасының Бірінші Президентінің мемлекеттік және қоғамдық марапаттарының коллекциялары, дипломатиялық сыйлықтар, шетел мемлекеттері мен үкіметтерінің басшылары мен халықаралық ұйымдар сыйға тартқан кітаптар қойылған. \n\n Тұрақты көрмелерден басқа, мұражайда уақытша көрмелер өткізіледі.',
 			en: "The Museum of the First President is located in the Nazarbayev Center, a striking architectural design by Sir Norman Foster. The building resembles a giant eye reaching skyward. According to the architect, the unique appearance of the structure symbolizes the vitality of Kazakhstan. \n\n The museum's exhibition draws on an extensive collection of archival documents, photographs, video materials, and exhibits dedicated to various stages of the life and work of the First President of the Republic of Kazakhstan, Nursultan Nazarbayev, and the history of Kazakhstan's independence. The Museum's halls display collections of state and public awards of the First President of the Republic of Kazakhstan, diplomatic gifts, and books presented by heads of state and government of foreign countries and international organizations. \n\n In addition to the permanent exhibitions, the Museum hosts temporary exhibitions.",
 		},
-		insideImage: '/imgs/attractions/01_muzej_pervogo_prezidenta_desc_1.jpg',
+		insideImage: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/01_muzej_pervogo_prezidenta_gallery_01.jpg',
+				image: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/01_muzej_pervogo_prezidenta_gallery_02.png',
+				image: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/01_muzej_pervogo_prezidenta_gallery_03.png',
+				image: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_gallery_03.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 3,
+				image: '/imgs/attractions/muzej_pervogo_prezidenta/01_muzej_pervogo_prezidenta_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -215,7 +220,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Өнер музейі',
 			en: 'Museum of Arts',
 		},
-		image: '/imgs/attractions/02_muzej_iskusstv_preview.jpeg',
+		image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_preview.webp',
 		description: {
 			ru: 'Сформирован как музей в 1980 году. Играет ключевую роль в развитии художественной среды и культурного имиджа города.',
 			kk: '1980 жылы мұражай ретінде құрылған бұл ғимарат қаланың көркемдік ортасы мен мәдени имиджін дамытуда маңызды рөл атқарады.',
@@ -228,7 +233,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '1980 жылы мұражай ретінде құрылған бұл ғимарат қаланың көркемдік ортасы мен мәдени имиджін дамытуда маңызды рөл атқарады.',
 			en: "Established as a museum in 1980, it plays a key role in the development of the city's artistic environment and cultural image.",
 		},
-		bannerImage: '/imgs/attractions/02_muzej_iskusstv_main.jpeg',
+		bannerImage: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -262,9 +267,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/02_muzej_iskusstv_desc_1.jpeg',
-			'/imgs/attractions/02_muzej_iskusstv_desc_2.jpeg',
-			'/imgs/attractions/02_muzej_iskusstv_desc_3.jpeg',
+			'/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_desc_1.webp',
+			'/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_desc_2.webp',
+			'/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -281,96 +286,81 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Өнер мұражайы - Астана қаласы әкімдігінің қолдауымен жаңа, заманауи мәдени орталық ашылды. Мұражайда қазақ халқының сирек кездесетін музыкалық аспаптары, түркі тілдес халықтардың ұқсас аспаптары және қазақтың ұлттық бас киімдерінің коллекциясы қойылған. \n\n Мұражайда сонымен қатар органолог, этнограф және ғалым Б. Сарыбаев атындағы ғылыми-зерттеу зертханасы мен шеберханасы орналасқан. Дәстүрлі аспаптарды жасайтын қолөнершілер үшін барлық қажетті жағдайлар жасалған. Қала әкімдігінің қолдауының арқасында аспаптарды зерттеудің ыңғайлылығы мен дәлдігін қамтамасыз ету үшін заманауи техникалық және материалдық ресурстар қамтамасыз етілген. \n\n Мұражай жұмысының бөлігі ретінде келушілерге соғыстар мен көшпелі жорықтар кезінде сигнал беру үшін пайдаланылған, бірақ ақырында ұмытылған ежелгі аспаптар көрсетіледі. Бұл аспаптарды жасау процесі де көрсетіледі. \n\n Кіру ақысы: бір адамға 1200 теңге. Тур: бір адамға 1500 теңге. Пакет: бір адамға 2700 теңге. \n\n Әртүрлі тақырыптағы музыкалық шығармалар орындалады. Сонымен қатар, қазақ ұлттық киімдері мен бас киімдерінің коллекциясының тұсаукесері өтуде.',
 			en: "Art Museum - With the support of the Astana City Hall, a new, contemporary cultural center has opened. The museum displays rare musical instruments of the Kazakh people, similar instruments of Turkic-speaking peoples, and a collection of Kazakh national headdresses. \n\n The museum also houses a research laboratory and workshop named after organologist, ethnographer, and scientist B. Sarybayev. All necessary conditions have been created for the artisans who create traditional instruments. Thanks to the support of the City Hall, modern technical and material resources have been provided to ensure the convenience and precision of instrument research. \n\n As part of the museum's work, visitors are shown ancient instruments that were once used to signal during wars and nomadic campaigns, but were eventually forgotten. The process of making these instruments is also demonstrated. \n\n Entrance fee: 1,200 tenge per person. Tour: 1,500 tenge per person. Package: 2,700 tenge per person. \n\n Musical pieces on various themes are performed. In addition, a presentation of a collection of Kazakh national costumes and headdresses is taking place.",
 		},
-		insideImage: '/imgs/attractions/02_muzej_iskusstv_gallery_05.jpeg',
+		insideImage: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_01.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_02.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_03.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 3,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_04.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 4,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_05.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_05.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 5,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_06.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_06.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 6,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_07.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_07.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 7,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_08.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_08.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 8,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_09.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_09.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 9,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_10.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_10.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 10,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_11.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_11.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 11,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_12.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_12.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 12,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_13.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_13.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 13,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_14.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_14.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 14,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_15.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 15,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_16.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 16,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_17.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 17,
-				image: '/imgs/attractions/02_muzej_iskusstv_gallery_18.jpeg',
+				image: '/imgs/attractions/muzej_iskusstv/02_muzej_iskusstv_gallery_15.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -383,7 +373,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Қ. Қуанышбаев атындағы мемлекеттік театр',
 			en: 'K. Kuanyshbaev State Theatre',
 		},
-		image: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_preview.jpg',
+		image: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_preview.webp',
 		description: {
 			ru: 'Основан в 1991 году вместе с обретением независимости. Символ национального театрального искусства столицы.',
 			kk: 'Тәуелсіздікпен қатар 1991 жылы құрылған бұл театр астананың ұлттық театр өнерінің символы болып табылады.',
@@ -396,7 +386,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Тәуелсіздікпен қатар 1991 жылы құрылған бұл театр астананың ұлттық театр өнерінің символы болып табылады.',
 			en: "Founded in 1991, along with independence, it is a symbol of the capital's national theatrical art.",
 		},
-		bannerImage: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_main.jpeg',
+		bannerImage: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -430,9 +420,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_1.webp',
-			'/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_2.jpg',
-			'/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_3.jpeg',
+			'/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_1.webp',
+			'/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_2.webp',
+			'/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -449,31 +439,31 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '1991 жылдың 15 қарашасында Астанадағы Қалибек Қуанышбаев атындағы мемлекеттік академиялық қазақ музыкалық-драма театры Ғ.Мүсіреповтің «Ақан сері-Ақтоқты» трагедиясымен есігін ашты. Алғашқы қойылымды талантты режиссер және театрдың негізін қалаушы Жақып Омаров қойды. Театр 1996 жылы Уфада түркітілдес мемлекеттер арасындағы Туғанлық халықаралық театр фестивалінде бірінші жүлдесін алды. \n\n Бүгінде ұлттың рухани қажеттіліктерін көрсететін қасиетті Шаңырақты Жақып Омаров, Қадыр Жетпісбаев және Кеңес Одағының халық әртісі, «Халық қаһарманы» Әзірбайжан Мәмбетов сияқты талантты әртістер басқарды. \n\n Қалибек Қуанышбаев атындағы мемлекеттік академиялық қазақ музыкалық-драма театрының репертуары үнемі ұлттық және халықаралық драматургиямен жаңартылып, байытылып отырады. Труппаның ішкі және халықаралық деңгейдегі бірнеше театр фестивальдеріне қатысу арқылы қалыптасқан нақты нұсқаулары бар. Бұл қазақ театр өнерінің қайта жаңғыруы, өткен мен қазіргі кездегі өнер шыңының көрінісі. \n\n 2011 жылдың 14 желтоқсанында театр труппасына «Мемлекеттік академиялық театр» мәртебесі берілді. Тәуелсіздікпен құрдас Қ.Қуанышбаев атындағы Мемлекеттік академиялық қазақ драма театры биыл 30 жылдық мерейтойын атап өтуде. \n\n 2020 жылы Қазақстан Республикасының Тұңғыш Президенті, Елбасы Нұрсұлтан Назарбаевтың бастамасымен және Мемлекет басшысы Қасым-Жомарт Тоқаевтың қолдауымен астананың сәулет өнерін безендіретін жаңа театр ғимараты салынды. Бұл мемлекеттің өнерге деген ерекше қамқорлығының көрінісі.',
 			en: 'On November 15, 1991, the Kalibek Kuanyshbayev State Academic Kazakh Music and Drama Theater in Astana opened its doors with G. Musrepov\'s tragedy "Akan Seri-Aktokty." The first production was staged by the talented director and founder of the theater, Zhakyp Omarov. The theater received its first prize in Ufa at the Tuganlyk International Theater Festival among Turkic-speaking states in 1996. \n\n The sacred Shanyrak, which today reflects the spiritual needs of the nation, was led by such talented artists as Zhakyp Omarov, Kadyr Zhetpisbayev, and People\'s Artist of the Soviet Union, "Khalyk Kaharmany" Azerbaijan Mambetov. \n\n The repertoire of the Kalibek Kuanyshbayev State Academic Kazakh Music and Drama Theater Kalibek Kuanyshbayev\'s theater is constantly updated and enriched by national and international dramaturgy. The company has clear guidelines, shaped by participation in several theater festivals both domestically and internationally. This is the revival of Kazakh theater art, a showcase of the pinnacle of art from the past and present. \n\n On December 14, 2011, the theater company was awarded the status of "State Academic Theater." The State Academic Kazakh Drama Theater named after K. Kuanyshbayev, the same age as independence, celebrates its 30th anniversary this year. \n\n In 2020, at the initiative of the First President of the Republic of Kazakhstan, Elbasy Nursultan Nazarbayev, and with the support of the head of state, Kassym-Jomart Tokayev, a new theater building was constructed, which will adorn the capital\'s majestic architecture. This is a reflection of the state\'s special commitment to the arts.',
 		},
-		insideImage: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_03.jpeg',
+		insideImage: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_01.jpg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_02.jpeg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_03.jpeg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 3,
-				image: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_04.jpg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 4,
-				image: '/imgs/attractions/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_05.jpg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_imeni_kkuanyshbaeva/03_gosudarstvennyj_teatr_imeni_kkuanyshbaeva_gallery_05.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -486,7 +476,8 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'М. Горький атындағы мемлекеттік академиялық орыс драма театры',
 			en: 'M. Gorky State Academic Russian Drama Theatre',
 		},
-		image: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_preview.jpg',
+		image:
+			'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_preview.webp',
 		description: {
 			ru: 'Работает с 1899 года. Формирует многокультурный облик города и сохраняет театральные традиции.',
 			kk: 'Ол 1899 жылдан бері жұмыс істейді. Ол қаланың көпмәдениетті бейнесін қалыптастырады және театр дәстүрлерін сақтайды.',
@@ -499,7 +490,8 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Ол 1899 жылдан бері жұмыс істейді. Ол қаланың көпмәдениетті бейнесін қалыптастырады және театр дәстүрлерін сақтайды.',
 			en: 'It has been operating since 1899. It shapes the city’s multicultural image and preserves theatrical traditions.',
 		},
-		bannerImage: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_main.jpg',
+		bannerImage:
+			'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -533,9 +525,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_1.webp',
-			'/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_2.jpg',
-			'/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_3.jpg',
+			'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_1.webp',
+			'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_2.webp',
+			'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -552,26 +544,25 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Қазақстан астанасындағы ең көне театр, Астанадағы М.Горький атындағы Мемлекеттік академиялық орыс драма театры 19 ғасырдың соңында құрылған және уақытты қабылдау, бейнелеу және өз жұмысында шындықты бағалау қабілетінің арқасында көрермендердің берік адалдығына ие болды. \n\n Қазіргі уақытта театрдың репертуарында орыс және халықаралық драматургия туындыларына негізделген, жанрлар мен эстетикалық үрдістердің кең ауқымын білдіретін, барлық жастағы көрермендерге ұнайтын 31 қойылым бар. Театрдың маңызды дәстүрі - көрермендерді жас кезінен бастап тәрбиелеу. Жас театр әуесқойлары үшін репертуарға жеті ертегі кіреді. \n\n 1899 жылы жергілікті меценаттардың қаржыландыруымен қала тұрғындары арасында үлкен танымалдыққа ие болған репертуары бар тұрақты труппа құрылды. Алғашқы қойылым Федоровтың бір актілі «Ошақтағы жарылыс» атты водевилі, одан кейін үш актілі «Асыл отбасындағы жанжал» әзілі болды. \n\n 1959 жылдан бастап театрға Максим Горькийдің есімі берілді. 2012 жылы театрға «Академиялық» мәртебесі берілді.',
 			en: 'The oldest theater in the capital of Kazakhstan, the State Academic Russian Drama Theater named after M. Gorky in Astana, was founded in the late 19th century and has earned the steadfast loyalty of its audiences thanks to its ability to perceive, reflect the times, and value truth in its work. \n\n Currently, the theater\'s repertoire includes 31 productions based on works of Russian and international drama, representing a wide range of genres and aesthetic trends, appealing to audiences of all ages. A crucial tradition of the theater is nurturing its audience from a very young age. For young theater lovers, the repertoire includes seven fairy tales. \n\n In 1899, with funding from local patrons, a permanent troupe was established, with a repertoire that enjoyed great popularity among the city\'s residents. The first production was Fedorov\'s one-act vaudeville, "Outburst on the Hearth," followed by a three-act joke, "Scandal in a Noble Family." \n\n Since 1959, the theater has been named after Maxim Gorky. In 2012, the theater was awarded the status of "Academic."',
 		},
-		insideImage: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_03.jpg',
+		insideImage:
+			'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_01.jpg',
+				image:
+					'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_02.jpg',
+				image:
+					'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_03.jpg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 3,
-				image: '/imgs/attractions/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_04.jpg',
+				image:
+					'/imgs/attractions/gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo/04_gosudarstvennyj_akademicheskij_russkij_teatr_dramy_imeni_mgorkogo_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -584,7 +575,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '«Астана Опера» опера және балет театры',
 			en: 'Astana Opera House',
 		},
-		image: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_preview.jpeg',
+		image: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_preview.webp',
 		description: {
 			ru: 'Открыт в 2013 году. Подчёркивает статус столицы как центра высокого искусства международного уровня.',
 			kk: '2013 жылы ашылған бұл мұражай астананың жоғары халықаралық өнер орталығы ретіндегі мәртебесін көрсетеді.',
@@ -597,7 +588,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '2013 жылы ашылған бұл мұражай астананың жоғары халықаралық өнер орталығы ретіндегі мәртебесін көрсетеді.',
 			en: "Opened in 2013, it underlines the capital's status as a centre of high international art.",
 		},
-		bannerImage: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_main.jpg',
+		bannerImage: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -631,9 +622,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_desc_1.png',
-			'/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_desc_2.png',
-			'/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_desc_3.jpg',
+			'/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_desc_1.webp',
+			'/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_desc_2.webp',
+			'/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -650,26 +641,26 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Астана операсы – Қазақстанның мәдени ұлылығы мен шабытының символы. «Астана опера» Мемлекеттік опера және балет театры 2013 жылы Қазақстан Республикасының Тұңғыш Президенті Нұрсұлтан Назарбаевтың бастамасымен ашылды. Орталық Азиядағы ең ірі театр – Астана операсы әлемдік сәулет өнерінің ең үздік классикалық дәстүрлеріне сәйкес салынған, сонымен қатар сәулет өнерінде қазақтың ұлттық сипатын ерекше атап өткен; оның техникалық жабдықтары халықаралық стандарттарға сәйкес келеді.',
 			en: 'Astana Opera – a symbol of Kazakhstan\'s cultural grandeur and inspiration. The State Opera and Ballet Theatre "Astana Opera" was opened in 2013 at the initiative of the First President of the Republic of Kazakhstan, Nursultan Nazarbayev. Astana Opera – the largest theatre in Central Asia – was built in accordance with the best classical traditions of global architecture, while emphasizing Kazakh national character in its architecture; its technical equipment meets international standards.',
 		},
-		insideImage: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_gallery_03.jpg',
+		insideImage: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_gallery_01.jpg',
+				image: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_gallery_02.jpg',
+				image: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_gallery_03.jpg',
+				image: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 3,
-				image: '/imgs/attractions/05_teatr_opery_i_baleta_astana_opera_gallery_04.jpg',
+				image: '/imgs/attractions/teatr_opery_i_baleta_astana_opera/05_teatr_opery_i_baleta_astana_opera_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -682,7 +673,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '«Астана Бәйтерек» монументі',
 			en: 'Baiterek Monument',
 		},
-		image: 'https://visitastana.kz/upload/iblock/438/i652jm4g4uv6m5qmpcx2rilwkcgdqbfa.jpg',
+		image: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_preview.webp',
 		description: {
 			ru: 'Символ столицы и «Древо жизни», отражающее философию кочевников: обзорная площадка и панорама города.',
 			kk: 'Елорданың символы әрі «Өмір ағашы»: көшпенділер дүниетанымын бейнелейтін нысан, қаланың панорамасын тамашалау алаңы бар.',
@@ -695,7 +686,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Астана мен қазіргі Қазақстан тарихының негізгі символдарының бірі. \n Ол 2002 жылы ашылды және қайта өрлеу, өсу және болашаққа ұмтылу идеясын білдіреді.',
 			en: 'One of the main symbols of Astana and modern Kazakhstan history. \n It was opened in 2002 and embodies the idea of revival, growth and aspiration for the future.',
 		},
-		bannerImage: '/imgs/baiterek/baiterek-banner.png',
+		bannerImage: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_main.webp',
 		aboutTitle: {
 			ru: 'О монументе',
 			kk: 'Монумент туралы',
@@ -728,7 +719,11 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 				en: 'monument opening',
 			},
 		},
-		aboutImages: ['/imgs/baiterek/baiterek-1.png', '/imgs/baiterek/baiterek-2.png', '/imgs/baiterek/baiterek-3.png'],
+		aboutImages: [
+			'/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_desc_1.webp',
+			'/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_desc_2.webp',
+			'/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_desc_3.webp',
+		],
 		insideTitle: {
 			ru: 'Что находится внутри монумента «Бәйтерек»',
 			kk: '«Бәйтерек» монументінің ішінде не бар',
@@ -744,16 +739,26 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Монументтің төменгі бөлігінде кассалар, сувенир дүкені және қонақтарға арналған ақпараттық аймақ орналасқан кіру холы бар. Мұнда «Бәйтеректің» құрылу тарихы мен астананың дамуы туралы көрме материалдары да орналасқан. \n\n Жоғарғы деңгейлерге көтерілу жылдам лифт арқылы жүзеге асырылады. Көтерілу кезінде қонақтар мұнараның ішкі құрылымының элементтерін көре алады. \n\n Жоғарғы деңгейде, шыны сфера ішінде бақылау алаңы орналасқан. Осы жерден Астана мен оның негізгі сәулет нысандарына дөңгелек панорамалық көрініс ашылады. Залдың ортасында «Аялы алақан» композициясы орналасқан - Қазақстан Республикасының Тұңғыш Президентінің алақан ізі, бұл бейбітшілік, келісім және бірлікті білдіреді. \n\n Сфера ішінде монументтің символикасы мен қала тарихы туралы толығырақ білуге мүмкіндік беретін интерактивті және мультимедиялық элементтер де орналасқан. \n\n «Бәйтеректі» бару тек қаланы биіктен көруге ғана емес, сонымен қатар Астананың негізгі ескерткіштерінің бірінің мәдени және символикалық мағынасымен тереңірек танысуға мүмкіндік береді.',
 			en: "The lower part of the monument houses an entrance hall with ticket offices, a souvenir shop and an information area for guests. Exhibition materials telling about the history of the creation of «Baiterek» and the development of the capital are also located here. \n\n Access to the upper levels is via a high-speed elevator. During the ascent, visitors can see elements of the tower's internal structure. \n\n On the upper level, inside the glass sphere, there is an observation deck. From here, a circular panoramic view of Astana and its main architectural objects opens up. In the center of the hall is the composition «Ayaly Alakan» - the palm print of the First President of the Republic of Kazakhstan, symbolizing peace, harmony and unity. \n\n Interactive and multimedia elements are also located inside the sphere, allowing you to learn more about the symbolism of the monument and the history of the city. \n\n Visiting «Baiterek» gives you the opportunity not only to see the city from above, but also to get to know the cultural and symbolic meaning of one of the main monuments of Astana in more depth.",
 		},
-		insideImage: '/imgs/baiterek/baiterek-4.png',
+		insideImage: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/baiterek/baiterek-slides-1.png',
+				image: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/baiterek/baiterek-slides-2.png',
+				image: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_gallery_02.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 2,
+				image: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_gallery_03.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 3,
+				image: '/imgs/attractions/monument_astana_bajterek/07_monument_astana_bajterek_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -766,7 +771,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Астана қаласының орталық мешіті',
 			en: 'Astana Grand Mosque',
 		},
-		image: '/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_preview.jpg',
+		image: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_preview.webp',
 		description: {
 			ru: 'Открыта в 2022 году. Определяет современный духовный облик города и его архитектурный масштаб.',
 			kk: '2022 жылы ашылған бұл қаланың заманауи рухани бейнесі мен сәулеттік ауқымын анықтайды.',
@@ -779,7 +784,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '2022 жылы ашылған бұл қаланың заманауи рухани бейнесі мен сәулеттік ауқымын анықтайды.',
 			en: "Opened in 2022, it defines the city's contemporary spiritual image and architectural scale.",
 		},
-		bannerImage: '/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_main.jpg',
+		bannerImage: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -813,9 +818,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_desc_1.jpg',
-			'/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_desc_2.jpg',
-			'/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_desc_3.jpg',
+			'/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_desc_1.webp',
+			'/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_desc_2.webp',
+			'/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -832,109 +837,30 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Астананың Орталық мешіті: Сенім мен бірліктің символы. Астананың Орталық мешіті - астананың ең әсерлі көрікті жерлерінің бірі және Қазақстандағы ең үлкен мешіт. Ол дәстүрлі ислам сәулет өнерін заманауи стильмен үйлестіре отырып, өзінің ауқымы мен сұлулығымен таң қалдырады. Төрт мұнараның биіктігі 130 метрге жетеді, ал диаметрі 62 метр болатын алып күмбез жарықты, даналық пен рухани қайта туылуды білдіреді. Ішінде кең намаз залы ақ мәрмәрмен, витраждармен және керемет оюлармен безендірілген. Мұнда бір уақытта 30 000-ға дейін адам намаз оқи алады, ал бүкіл аумақ 120 000-нан астам келушіні қабылдай алады. Барлығына ашық мешіт тек рухани өмірдің орталығы ғана емес, сонымен қатар бейбітшілік, мәдениет және шабыт орны болып табылады. Орталық мешітке бару терең әсер қалдырады және сізге сенім мен сәулет өнерінің үйлесімділігін сезінуге мүмкіндік береді.',
 			en: "Astana's Central Mosque: A Symbol of Faith and Unity. Astana's Central Mosque is one of the capital's most impressive landmarks and the largest mosque in Kazakhstan. It is striking in its scale and beauty, blending traditional Islamic architecture with contemporary style. The four minarets reach 130 meters in height, and the enormous dome, 62 meters in diameter, symbolizes light, wisdom, and spiritual rebirth. Inside, a spacious prayer hall is decorated with white marble, stained glass, and exquisite carvings. Up to 30,000 people can pray here simultaneously, and the entire grounds can accommodate over 120,000 visitors. Open to all, the mosque is not only a center of spiritual life but also a place of peace, culture, and inspiration. A visit to the Central Mosque will leave a profound impression and allow you to experience the harmony of faith and architecture.",
 		},
-		insideImage: '/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_gallery_02.jpg',
+		insideImage: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_gallery_01.jpg',
+				image: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_gallery_02.jpg',
+				image: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/08_tsentralnaja_mechet_goroda_astany_gallery_03.jpg',
+				image: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_gallery_03.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 3,
+				image: '/imgs/attractions/tsentralnaja_mechet_goroda_astany/08_tsentralnaja_mechet_goroda_astany_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
 	},
-	// {
-	// 	id: 8,
-	// 	slug: 'youth-musical-theatre',
-	// 	title: {
-	// 		ru: 'Музыкальный театр юного зрителя',
-	// 		kk: 'Жас көрермен музыкалық театры',
-	// 		en: 'Youth Musical Theatre',
-	// 	},
-	// 	image: 'https://visitastana.kz/upload/iblock/f97/4kioedx7im1908dwcrcwgr8xzm4xlkge.webp',
-	// 	description: {
-	// 		ru: 'Театр для молодежи и семейной аудитории: мюзиклы и музыкальные спектакли, современные постановки с национальным колоритом.',
-	// 		kk: 'Жастар мен отбасыға арналған театр: мюзиклдер мен музыкалық қойылымдар, ұлттық нақышы бар заманауи сахналанымдар.',
-	// 		en: 'A theatre for youth and families featuring musicals and music-driven productions, including modern shows with national flair.',
-	// 	},
-	// 	buttonText: { ru: 'Подробнее', kk: 'Толығырақ', en: 'More' },
-	// 	link: '/attractions/youth-musical-theatre',
-	// 	subtitle: {
-	// 		ru: 'Один из главных символов Астаны и современной истории Казахстана. \n Он был открыт в 2002 году и олицетворяет идею возрождения, роста и стремления к будущему.',
-	// 		kk: 'Астана мен қазіргі Қазақстан тарихының негізгі символдарының бірі. \n Ол 2002 жылы ашылды және қайта өрлеу, өсу және болашаққа ұмтылу идеясын білдіреді.',
-	// 		en: 'One of the main symbols of Astana and modern Kazakhstan history. \n It was opened in 2002 and embodies the idea of revival, growth and aspiration for the future.',
-	// 	},
-	// 	bannerImage: '/imgs/baiterek/baiterek-banner.png',
-	// 	aboutTitle: {
-	// 		ru: 'О монументе',
-	// 		kk: 'Монумент туралы',
-	// 		en: 'About the monument',
-	// 	},
-	// 	aboutText: {
-	// 		ru: 'Высота монумента составляет 97 метров, что символизирует 1997 год - год переноса столицы Казахстана в Астану. Конструкция представляет собой высокую башню, увенчанную стеклянной сферой золотистого цвета. Внутри сферы расположена смотровая площадка, откуда открывается панорамный вид на город. \n\n Образ «Бәйтерека» основан на древнем тюркском мифе о Древе жизни, на вершине которого птица Самрук откладывает золотое яйцо - символ солнца, жизни и благополучия. Эта легенда отражает связь прошлого, настоящего и будущего. \n\n Сегодня «Бәйтерек» является популярным туристическим объектом и культурным символом столицы, привлекающим гостей своей архитектурой и глубоким символическим смыслом.',
-	// 		kk: 'Монументтің биіктігі 97 метр, бұл 1997 жылды - Қазақстан астанасын Астанаға көшіру жылын білдіреді. Құрылым - алтын түсті шыны сферамен жабдықталған биік мұнара. Сфера ішінде қалаға панорамалық көрініс ашатын бақылау алаңы орналасқан. \n\n «Бәйтерек» бейнесі Өмір ағашы туралы ежелгі түркі мифіне негізделген, оның төбесінде Самрук құсы алтын жұмыртқа салады - күн, өмір және әл-ауқаттың символы. Бұл аңыз өткен, қазіргі және болашақтың байланысын көрсетеді. \n\n Бүгінгі таңда «Бәйтерек» танымал туристік нысан және астананың мәдени символы болып табылады, ол өз сәулетімен және терең символикалық мағынасымен қонақтарды тартады.',
-	// 		en: 'The height of the monument is 97 meters, symbolizing 1997 - the year of the transfer of the capital of Kazakhstan to Astana. The structure is a tall tower topped with a golden glass sphere. Inside the sphere is an observation deck offering a panoramic view of the city. \n\n The image of «Baiterek» is based on the ancient Turkic myth of the Tree of Life, at the top of which the bird Samruk lays a golden egg - a symbol of the sun, life and prosperity. This legend reflects the connection between past, present and future. \n\n Today «Baiterek» is a popular tourist attraction and cultural symbol of the capital, attracting guests with its architecture and deep symbolic meaning.',
-	// 	},
-	// 	aboutStats: {
-	// 		title1: {
-	// 			ru: '97 метров',
-	// 			kk: '97 метр',
-	// 			en: '97 meters',
-	// 		},
-	// 		text1: {
-	// 			ru: 'высота',
-	// 			kk: 'биіктігі',
-	// 			en: 'height',
-	// 		},
-	// 		title2: {
-	// 			ru: '2002 год',
-	// 			kk: '2002 жыл',
-	// 			en: '2002',
-	// 		},
-	// 		text2: {
-	// 			ru: 'открытие монумента',
-	// 			kk: 'монументтің ашылуы',
-	// 			en: 'monument opening',
-	// 		},
-	// 	},
-	// 	aboutImages: ['/imgs/baiterek/baiterek-1.png', '/imgs/baiterek/baiterek-2.png', '/imgs/baiterek/baiterek-3.png'],
-	// 	insideTitle: {
-	// 		ru: 'Что находится внутри монумента «Бәйтерек»',
-	// 		kk: '«Бәйтерек» монументінің ішінде не бар',
-	// 		en: 'What is inside the «Baiterek» monument',
-	// 	},
-	// 	insideSubtitle: {
-	// 		ru: 'Внутреннее пространство монумента «Бәйтерек» открыто для посетителей и состоит из нескольких уровней.',
-	// 		kk: '«Бәйтерек» монументінің ішкі кеңістігі қонақтарға ашық және бірнеше деңгейден тұрады.',
-	// 		en: 'The interior space of the «Baiterek» monument is open to visitors and consists of several levels.',
-	// 	},
-	// 	insideText: {
-	// 		ru: 'В нижней части монумента расположен входной холл, где находятся кассы, сувенирный магазин и информационная зона для гостей. Здесь же размещены выставочные материалы, рассказывающие об истории создания «Бәйтерека» и развитии столицы. \n\n Подъём на верхние уровни осуществляется с помощью скоростного лифта. Во время подъёма посетители могут увидеть элементы внутренней конструкции башни. \n\n На верхнем уровне, внутри стеклянной сферы, расположена смотровая площадка. Отсюда открывается круговой панорамный вид на Астану и её главные архитектурные объекты. В центре зала находится композиция «Аялы алақан» - отпечаток ладони Первого Президента Республики Казахстан, символизирующий мир, согласие и единство. \n\n Также внутри сферы размещены интерактивные и мультимедийные элементы, позволяющие подробнее узнать о символике монумента и истории города. \n\n Посещение «Бәйтерека» даёт возможность не только увидеть город с высоты, но и глубже познакомиться с культурным и символическим значением одного из главных памятников Астаны.',
-	// 		kk: 'Монументтің төменгі бөлігінде кассалар, сувенир дүкені және қонақтарға арналған ақпараттық аймақ орналасқан кіру холы бар. Мұнда «Бәйтеректің» құрылу тарихы мен астананың дамуы туралы көрме материалдары да орналасқан. \n\n Жоғарғы деңгейлерге көтерілу жылдам лифт арқылы жүзеге асырылады. Көтерілу кезінде қонақтар мұнараның ішкі құрылымының элементтерін көре алады. \n\n Жоғарғы деңгейде, шыны сфера ішінде бақылау алаңы орналасқан. Осы жерден Астана мен оның негізгі сәулет нысандарына дөңгелек панорамалық көрініс ашылады. Залдың ортасында «Аялы алақан» композициясы орналасқан - Қазақстан Республикасының Тұңғыш Президентінің алақан ізі, бұл бейбітшілік, келісім және бірлікті білдіреді. \n\n Сфера ішінде монументтің символикасы мен қала тарихы туралы толығырақ білуге мүмкіндік беретін интерактивті және мультимедиялық элементтер де орналасқан. \n\n «Бәйтеректі» бару тек қаланы биіктен көруге ғана емес, сонымен қатар Астананың негізгі ескерткіштерінің бірінің мәдени және символикалық мағынасымен тереңірек танысуға мүмкіндік береді.',
-	// 		en: 'The lower part of the monument houses an entrance hall with ticket offices, a souvenir shop and an information area for guests. Exhibition materials telling about the history of the creation of «Baiterek» and the development of the capital are also located here. \n\n Access to the upper levels is via a high-speed elevator. During the ascent, visitors can see elements of the tower\'s internal structure. \n\n On the upper level, inside the glass sphere, there is an observation deck. From here, a circular panoramic view of Astana and its main architectural objects opens up. In the center of the hall is the composition «Ayaly Alakan» - the palm print of the First President of the Republic of Kazakhstan, symbolizing peace, harmony and unity. \n\n Interactive and multimedia elements are also located inside the sphere, allowing you to learn more about the symbolism of the monument and the history of the city. \n\n Visiting «Baiterek» gives you the opportunity not only to see the city from above, but also to get to know the cultural and symbolic meaning of one of the main monuments of Astana in more depth.',
-	// 	},
-	// 	insideImage: '/imgs/baiterek/baiterek-4.png',
-	// 	slidesImages: [
-	// 		{
-	// 			id: 0,
-	// 			image: '/imgs/baiterek/baiterek-slides-1.png',
-	// 			description: 'Astana is the capital of Kazakhstan',
-	// 		},
-	// 		{
-	// 			id: 1,
-	// 			image: '/imgs/baiterek/baiterek-slides-2.png',
-	// 			description: 'Astana is the capital of Kazakhstan',
-	// 		},
-	// 	],
-	// },
 	{
 		id: 10,
 		slug: 'uly-dala-eli-monument',
@@ -943,7 +869,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '«Ұлы Дала Елі» монументі',
 			en: 'Uly Dala Eli Monument',
 		},
-		image: '/imgs/attractions/10_monument_ұly_dala_elі_preview.jpg',
+		image: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_preview.webp',
 		description: {
 			ru: 'Установлен в 2011 году. Визуально закрепляет идею независимости и национальной идентичности.',
 			kk: '2011 жылы орнатылған бұл ескерткіш тәуелсіздік пен ұлттық бірегейлік идеясын көрнекі түрде күшейтеді.',
@@ -956,7 +882,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '2011 жылы орнатылған бұл ескерткіш тәуелсіздік пен ұлттық бірегейлік идеясын көрнекі түрде күшейтеді.',
 			en: 'Installed in 2011, it visually reinforces the idea of ​​independence and national identity.',
 		},
-		bannerImage: '/imgs/attractions/10_monument_ұly_dala_elі_main.png',
+		bannerImage: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -990,9 +916,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/10_monument_ұly_dala_elі_desc_1.png',
-			'/imgs/attractions/10_monument_ұly_dala_elі_desc_2.png',
-			'/imgs/attractions/10_monument_ұly_dala_elі_desc_3.png',
+			'/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_desc_1.webp',
+			'/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_desc_2.webp',
+			'/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -1009,114 +935,26 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Ескерткіш Қазақстан Республикасы Тәуелсіздігінің 25 жылдығына арналған. Аспанға қараған стела 25 қырдан тұрады, олардың әрқайсысы тәуелсіздік жылдарындағы – 1991 жылдан бүгінгі күнге дейінгі – ұлттың негізгі жетістіктері мен оқиғаларының бірін бейнелейді. 25 қыр Тәуелсіздіктің 25 жылын және қазіргі Қазақстан тарихындағы 25 маңызды кезеңді білдіреді. \n\n Аспанға бағытталған ескерткіш қазақстандықтардың ұмтылыстарын, үміттерін және рухани ұмтылыстарын бейнелейді. \n\n Авторы: Еділ Әлімбеков. \n\n Құрылған жылы: 2016 жылғы 16 желтоқсан. \n\n Орналасқан жері: Астана, Есіл ауданы.',
 			en: "The monument is dedicated to the 25th anniversary of the Independence of the Republic of Kazakhstan. The skyward-facing stele consists of 25 facets, each symbolizing one of the nation's key achievements and events over the years of independence—from 1991 to the present. The 25 facets represent 25 years of Independence and 25 important stages in the history of modern Kazakhstan. \n\n The monument, directed toward the sky, embodies the aspirations, hopes, and spiritual aspirations of Kazakhstanis. \n\n Author: Edil Alimbekov \n\n Year of creation: December 16, 2016 \n\n Location: Astana, Yesil District.",
 		},
-		insideImage: '/imgs/attractions/10_monument_ұly_dala_elі_gallery_02.png',
+		insideImage: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/10_monument_ұly_dala_elі_gallery_01.png',
+				image: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/10_monument_ұly_dala_elі_gallery_02.png',
+				image: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/10_monument_ұly_dala_elі_gallery_03.png',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-		],
-	},
-	{
-		id: 11,
-		slug: 'mineralogical-museum',
-		title: {
-			ru: 'Минералогический (геологический) музей',
-			kk: 'Минералогиялық (геологиялық) музей',
-			en: 'Mineralogical (Geological) Museum',
-		},
-		image: '/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_preview.png',
-		description: {
-			ru: 'Основан в 1942 году. Отражает богатство природных ресурсов и научный потенциал страны.',
-			kk: '1942 жылы құрылған бұл университет елдің табиғи ресурстарының байлығы мен ғылыми әлеуетін көрсетеді.',
-			en: "Founded in 1942, it reflects the country's wealth of natural resources and scientific potential.",
-		},
-		buttonText: { ru: 'Подробнее', kk: 'Толығырақ', en: 'More' },
-		link: '/attractions/mineralogical-museum',
-		subtitle: {
-			ru: 'Основан в 1942 году. Отражает богатство природных ресурсов и научный потенциал страны.',
-			kk: '1942 жылы құрылған бұл университет елдің табиғи ресурстарының байлығы мен ғылыми әлеуетін көрсетеді.',
-			en: "Founded in 1942, it reflects the country's wealth of natural resources and scientific potential.",
-		},
-		bannerImage: '/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_main.webp',
-		aboutTitle: {
-			ru: '',
-			kk: '',
-			en: '',
-		},
-		aboutText: {
-			ru: 'Минералогический музей — единственный в столице Казахстана музей, посвящённый минералогии и геологии. Основанный в 2010 году геологом Улжабаем Исмаиловым, музей располагает более 750 уникальными экспонатами, включая самородные металлы, редкие минералы и окаменелости. Экспонаты представлены не только из Казахстана, но и из других стран мира. Музей также располагает архивом геологической литературы XIX века и образцами полевого геологического инструментария XX века. Входной билет стоит 3500 KZT, оплата возможна наличными и банковскими картами.',
-			kk: 'Минералогиялық мұражай - Қазақстан астанасындағы минералогия мен геологияға арналған жалғыз мұражай. 2010 жылы геолог Ұлжабай Исмаилов негізін қалаған мұражайда жергілікті металдар, сирек кездесетін минералдар және қазба байлықтар сияқты 750-ден астам бірегей экспонаттар бар. Экспонаттар тек Қазақстаннан ғана емес, сонымен қатар басқа елдерден де келеді. Мұражайда сонымен қатар 19 ғасырдағы геологиялық әдебиеттер мен 20 ғасырдағы далалық геологиялық құралдардың үлгілері мұрағаты бар. Кіру ақысы 3500 теңге (3500 АҚШ доллары), ал төлем қолма-қол ақшамен және несие картасымен қабылданады.',
-			en: 'The Mineralogical Museum is the only museum in the capital of Kazakhstan dedicated to mineralogy and geology. Founded in 2010 by geologist Ulzhabay Ismailov, the museum houses over 750 unique exhibits, including native metals, rare minerals, and fossils. The exhibits come not only from Kazakhstan but also from other countries. The museum also houses an archive of 19th-century geological literature and examples of 20th-century field geological instruments. Admission is 3,500 tenge (US$3,500), and payment is accepted in cash and by credit card.',
-		},
-		aboutStats: {
-			title1: {
-				ru: '3 000+',
-				kk: '3 000+',
-				en: '3 000+',
-			},
-			text1: {
-				ru: 'экспонатов — коллекция минералов',
-				kk: 'экспонаттар - минералдар жинағы',
-				en: 'exhibits - a collection of minerals',
-			},
-			title2: {
-				ru: '1942 год',
-				kk: '1942 жыл',
-				en: '1942',
-			},
-			text2: {
-				ru: 'основание музея',
-				kk: 'мұражайдың құрылуы',
-				en: 'founding of the museum',
-			},
-		},
-		aboutImages: [
-			'/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_desc_1.png',
-			'/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_desc_2.webp',
-			'/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_desc_3.png',
-		],
-		insideTitle: {
-			ru: '',
-			kk: '',
-			en: '',
-		},
-		insideSubtitle: {
-			ru: '',
-			kk: '',
-			en: '',
-		},
-		insideText: {
-			ru: 'Музей располагает минералогической и палеонтологической коллекциями, архивом геологической литературы, коллекцией современных фаунистических остатков. С 2010 года в Астане работает единственный в городе минералогический музей, который является лучшим в Средней Азии по разнообразию представленных минералов. В его коллекции собрано более тысячи экспонатов. \n\n Основатель музея, заслуженный геолог Казахстана Улжабай Исмаилов трудится в отрасли уже полвека и продолжает вносить значительный личный вклад в геологическое изучение и укрепление минерально-сырьевой базы страны. \n\n В коллекции музея — более 750 уникальных экспонатов: самородное золото, медь, железо, а также редкие минералы и камни, такие как аметист, изумруд, топаз, танзанит, чароит, нефелин и даже окаменевшие деревья. Каждая находка рассказывает свою историю и открывает детям удивительный̆ мир геологии и природы. \n\n Экспозиция музея охватывает не только Казахстан, но и минералы из России, Европы, Африки, Южной Америки и Австралии. Это шанс увидеть разнообразие природных сокровищ с разных уголков планеты.',
-			kk: 'Мұражайда минералогиялық және палеонтологиялық коллекциялар, геологиялық әдебиет мұрағаты және қазіргі заманғы фауна қалдықтарының коллекциясы бар. 2010 жылдан бастап Астанада қаладағы жалғыз минералогиялық мұражай орналасқан, ол минералды коллекцияларының алуан түрлілігі бойынша Орталық Азиядағы ең үздік болып саналады. Оның коллекциясында мыңнан астам экспонат бар. \n\n Мұражайдың негізін қалаушы, Қазақстанның еңбек сіңірген геологы Ұлжабай Исмаилов салада жарты ғасыр бойы жұмыс істеп келеді және геологиялық зерттеулерге және елдің минералды-шикізат базасын нығайтуға елеулі жеке үлес қосуды жалғастыруда. \n\n Мұражай коллекциясында 750-ден астам бірегей экспонаттар бар: табиғи алтын, мыс, темір, сондай-ақ аметист, изумруд, топаз, танзанит, шарти, нефелин және тіпті тасқа айналған ағаш сияқты сирек кездесетін минералдар мен тастар. Әрбір олжа өз тарихын баяндайды және балаларды геология мен табиғаттың таңғажайып әлемімен таныстырады. \n\n Мұражай көрмесінде тек Қазақстан ғана емес, сонымен қатар Ресей, Еуропа, Африка, Оңтүстік Америка және Австралия минералдары да бар. Бұл планетаның әртүрлі бұрыштарынан алынған әртүрлі табиғи қазыналарды көруге мүмкіндік береді.',
-			en: "The museum houses mineralogical and paleontological collections, an archive of geological literature, and a collection of modern faunal remains. Since 2010, Astana has been home to the city's only mineralogical museum, which is considered the best in Central Asia for the diversity of its mineral collections. Its collection contains over a thousand exhibits. \n\n The museum's founder, Honored Geologist of Kazakhstan Ulzhabay Ismailov, has been working in the industry for half a century and continues to make significant personal contributions to geological research and the strengthening of the country's mineral resource base. \n\n The museum's collection contains over 750 unique exhibits: native gold, copper, iron, as well as rare minerals and stones such as amethyst, emerald, topaz, tanzanite, charoite, nepheline, and even petrified wood. Each find tells its own story and introduces children to the amazing world of geology and nature. \n\n The museum's exhibition covers not only Kazakhstan but also minerals from Russia, Europe, Africa, South America, and Australia. This is a chance to see a variety of natural treasures from different corners of the planet.",
-		},
-		insideImage: '/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_gallery_02.png',
-		slidesImages: [
-			{
-				id: 0,
-				image: '/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_gallery_01.png',
+				image: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
-				id: 1,
-				image: '/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_gallery_02.png',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 2,
-				image: '/imgs/attractions/11_mineralogicheskij_geologicheskij_muzej_gallery_03.webp',
+				id: 3,
+				image: '/imgs/attractions/monument_ұly_dala_elі/10_monument_ұly_dala_elі_gallery_04.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -1125,11 +963,11 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 		id: 12,
 		slug: 'book-museum',
 		title: {
-			ru: 'Книжный музей',
-			kk: 'Кітап музейі',
-			en: 'Book Museum',
+			ru: 'Национальная академическая библиотека Республики Казахстан',
+			kk: 'Қазақстан Республикасының Ұлттық академиялық кітапханасы',
+			en: 'National Academic Library of the Republic of Kazakhstan',
 		},
-		image: '/imgs/attractions/12_knizhnyj_muzej_preview.png',
+		image: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_preview.webp',
 		description: {
 			ru: 'Открыт в 2010 году. Служит центром сохранения письменного наследия и интеллектуальной истории.',
 			kk: '2010 жылы ашылған бұл мекеме жазбаша мұра мен интеллектуалдық тарихты сақтау орталығы ретінде қызмет етеді.',
@@ -1142,7 +980,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '2010 жылы ашылған бұл мекеме жазбаша мұра мен интеллектуалдық тарихты сақтау орталығы ретінде қызмет етеді.',
 			en: 'Opened in 2010, it serves as a center for the preservation of written heritage and intellectual history.',
 		},
-		bannerImage: '/imgs/attractions/12_knizhnyj_muzej_main.png',
+		bannerImage: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -1176,9 +1014,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/12_knizhnyj_muzej_desc_1.png',
-			'/imgs/attractions/12_knizhnyj_muzej_desc_2.webp',
-			'/imgs/attractions/12_knizhnyj_muzej_desc_3.png',
+			'/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_desc_1.webp',
+			'/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_desc_2.webp',
+			'/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -1195,118 +1033,128 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Монументтің төменгі бөлігінде кассалар, сувенир дүкені және қонақтарға арналған ақпараттық аймақ орналасқан кіру холы бар. Мұнда «Бәйтеректің» құрылу тарихы мен астананың дамуы туралы көрме материалдары да орналасқан. \n\n Жоғарғы деңгейлерге көтерілу жылдам лифт арқылы жүзеге асырылады. Көтерілу кезінде қонақтар мұнараның ішкі құрылымының элементтерін көре алады. \n\n Жоғарғы деңгейде, шыны сфера ішінде бақылау алаңы орналасқан. Осы жерден Астана мен оның негізгі сәулет нысандарына дөңгелек панорамалық көрініс ашылады. Залдың ортасында «Аялы алақан» композициясы орналасқан - Қазақстан Республикасының Тұңғыш Президентінің алақан ізі, бұл бейбітшілік, келісім және бірлікті білдіреді. \n\n Сфера ішінде монументтің символикасы мен қала тарихы туралы толығырақ білуге мүмкіндік беретін интерактивті және мультимедиялық элементтер де орналасқан. \n\n «Бәйтеректі» бару тек қаланы биіктен көруге ғана емес, сонымен қатар Астананың негізгі ескерткіштерінің бірінің мәдени және символикалық мағынасымен тереңірек танысуға мүмкіндік береді.',
 			en: "The lower part of the monument houses an entrance hall with ticket offices, a souvenir shop and an information area for guests. Exhibition materials telling about the history of the creation of «Baiterek» and the development of the capital are also located here. \n\n Access to the upper levels is via a high-speed elevator. During the ascent, visitors can see elements of the tower's internal structure. \n\n On the upper level, inside the glass sphere, there is an observation deck. From here, a circular panoramic view of Astana and its main architectural objects opens up. In the center of the hall is the composition «Ayaly Alakan» - the palm print of the First President of the Republic of Kazakhstan, symbolizing peace, harmony and unity. \n\n Interactive and multimedia elements are also located inside the sphere, allowing you to learn more about the symbolism of the monument and the history of the city. \n\n Visiting «Baiterek» gives you the opportunity not only to see the city from above, but also to get to know the cultural and symbolic meaning of one of the main monuments of Astana in more depth.",
 		},
-		insideImage: '/imgs/attractions/12_knizhnyj_muzej_gallery_02.png',
+		insideImage: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/12_knizhnyj_muzej_gallery_01.png',
+				image: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/12_knizhnyj_muzej_gallery_02.png',
+				image: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/12_knizhnyj_muzej_gallery_03.png',
+				image: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_gallery_03.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 3,
+				image: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_gallery_04.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 4,
+				image: '/imgs/attractions/knizhnyj_muzej/12_knizhnyj_muzej_gallery_05.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
 	},
-	{
-		id: 13,
-		slug: 'berik-alibai-house-museum',
-		title: {
-			ru: 'Дом-музей Берика Алибая',
-			kk: 'Берік Әлибайдың үй-музейі',
-			en: 'Berik Alibai House-Museum',
-		},
-		image: '/imgs/attractions/13_dom-muzej_berika_alibaja_preview.png',
-		description: {
-			ru: 'Открыт в 2009 году. Подчёркивает вклад личности в развитие культуры и искусства города.',
-			kk: '2009 жылы ашылған бұл мұражай қаланың мәдени және көркемдік дамуына қосқан үлесін көрсетеді.',
-			en: "Opened in 2009, it highlights the individual's contribution to the city's cultural and artistic development.",
-		},
-		buttonText: { ru: 'Подробнее', kk: 'Толығырақ', en: 'More' },
-		link: '/attractions/berik-alibai-house-museum',
-		subtitle: {
-			ru: 'Открыт в 2009 году. Подчёркивает вклад личности в развитие культуры и искусства города.',
-			kk: '2009 жылы ашылған бұл мұражай қаланың мәдени және көркемдік дамуына қосқан үлесін көрсетеді.',
-			en: "Opened in 2009, it highlights the individual's contribution to the city's cultural and artistic development.",
-		},
-		bannerImage: '/imgs/attractions/13_dom-muzej_berika_alibaja_main.webp',
-		aboutTitle: {
-			ru: '',
-			kk: '',
-			en: '',
-		},
-		aboutText: {
-			ru: 'Дом-музей Берика Алибая — музей-коллекция мастера-ювелира Берика Алибая, в которой представлены его ювелирные изделия, реставрационные работы и коллекция национальных предметов (оружие, одежда, посуда, монеты и др.), отражающих казахское культурное наследие и художественные традиции.',
-			kk: 'Берік Әлібай үй-мұражайы – шебер зергер Берік Әлібайдың мұражай-коллекциясы, онда оның зергерлік бұйымдары, қалпына келтіру жұмыстары және қазақтың мәдени мұрасы мен көркемдік дәстүрлерін көрсететін ұлттық заттар (қару-жарақ, киім, ыдыс-аяқ, тиындар және т.б.) коллекциясы қойылған.',
-			en: 'The Berik Alibay House-Museum is a museum-collection of the master jeweler Berik Alibay, which displays his jewelry, restoration work, and a collection of national items (weapons, clothing, dishes, coins, etc.), reflecting the Kazakh cultural heritage and artistic traditions.',
-		},
-		aboutStats: {
-			title1: {
-				ru: '4 зала',
-				kk: '4 зал',
-				en: '4 halls',
-			},
-			text1: {
-				ru: 'экспозиционные помещения',
-				kk: 'көрме залдары',
-				en: 'exhibition rooms',
-			},
-			title2: {
-				ru: '2009 год',
-				kk: '2009 жыл',
-				en: '2009',
-			},
-			text2: {
-				ru: 'открытие',
-				kk: 'ашылуы',
-				en: 'opening',
-			},
-		},
-		aboutImages: [
-			'/imgs/attractions/13_dom-muzej_berika_alibaja_desc_1.jpg',
-			'/imgs/attractions/13_dom-muzej_berika_alibaja_desc_2.jpg',
-			'/imgs/attractions/13_dom-muzej_berika_alibaja_desc_3.webp',
-		],
-		insideTitle: {
-			ru: '',
-			kk: '',
-			en: '',
-		},
-		insideSubtitle: {
-			ru: '',
-			kk: '',
-			en: '',
-		},
-		insideText: {
-			ru: 'Дом-музей Берика Алибая — уникальное культурное пространство, посвящённое жизни и творчеству известного казахстанского ювелира, реставратора и педагога. Здесь выставлена богатейшая коллекция авторских работ мастера, предметов национального быта и истории, позволяющих прикоснуться к истокам казахского декоративно-прикладного искусства. \n\n Берик Сатинбекович Алибай — мастер, чья деятельность олицетворяет слияние традиций и современного взгляда: его украшения, головные уборы, оружие, седла вобрали в себя казахские мотивы, мастерство металлообработки и художественный вкус. \n\n В экспозиции музея, помимо украшений, собраны разнообразные национально-исторические предметы: одежда, посуда, монеты, картины, оружие и другие артефакты, несущие дух казахской культуры. Посетители могут не только узнать о технике, материалах и символике, но и при желании приобрести или заказать изделие у самого мастера. \n\n Музей расположен по адресу: улица Кордай, дом 54, в Астане.',
-			kk: 'Берік Әлібай үй-мұражайы – әйгілі қазақ зергерінің, қалпына келтірушісінің және ағартушысының өмірі мен қызметіне арналған бірегей мәдени кеңістік. Онда шебердің түпнұсқа жұмыстарының бай коллекциясы, сондай-ақ ұлттық және тарихи заттар қойылған, бұл келушілерге қазақтың сәндік-қолданбалы өнерінің шығу тегіне үңілуге ​​мүмкіндік береді. \n\n Берік Сатинбекұлы Әлібай – шығармашылығы дәстүр мен қазіргі заманның үйлесімін бейнелейтін шебер: оның зергерлік бұйымдары, бас киімдері, қару-жарақтары мен ер-тоқымдары қазақтың нақыштарын, металл өңдеу шеберлігін және көркемдік талғамын қамтиды. \n\n Зергерлік бұйымдардан басқа, мұражай көрмесінде әртүрлі ұлттық және тарихи заттар: киім, ыдыс-аяқ, тиындар, суреттер, қару-жарақтар және қазақ мәдениетінің рухын бейнелейтін басқа да артефактілер бар. Келушілер тек техникалар, материалдар және рәміздер туралы біліп қана қоймай, сонымен қатар шеберден тікелей туынды сатып ала немесе тапсырыс бере алады. \n\n Мұражай Астанадағы Қордай көшесі, 54 мекенжайында орналасқан.',
-			en: "The Berik Alibay House-Museum is a unique cultural space dedicated to the life and work of the renowned Kazakh jeweler, restorer, and educator. It displays a rich collection of the master's original works, along with national and historical objects, allowing visitors to delve into the origins of Kazakh decorative and applied arts. \n\n Berik Satinbekovich Alibay is a master whose work embodies the fusion of tradition and modernity: his jewelry, headdresses, weapons, and saddles incorporate Kazakh motifs, metalworking skill, and artistic flair. \n\n In addition to jewelry, the museum's exhibition features a variety of national and historical items: clothing, tableware, coins, paintings, weapons, and other artifacts that embody the spirit of Kazakh culture. Visitors can not only learn about techniques, materials, and symbols but also purchase or commission a piece directly from the master. \n\n The museum is located at 54 Kordai Street in Astana.",
-		},
-		insideImage: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_02.webp',
-		slidesImages: [
-			{
-				id: 0,
-				image: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_01.jpg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 1,
-				image: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_02.webp',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 1,
-				image: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_03.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-		],
-	},
+	// {
+	// 	id: 13,
+	// 	slug: 'berik-alibai-house-museum',
+	// 	title: {
+	// 		ru: 'Дом-музей Берика Алибая',
+	// 		kk: 'Берік Әлибайдың үй-музейі',
+	// 		en: 'Berik Alibai House-Museum',
+	// 	},
+	// 	image: '/imgs/attractions/13_dom-muzej_berika_alibaja_preview.webp',
+	// 	description: {
+	// 		ru: 'Открыт в 2009 году. Подчёркивает вклад личности в развитие культуры и искусства города.',
+	// 		kk: '2009 жылы ашылған бұл мұражай қаланың мәдени және көркемдік дамуына қосқан үлесін көрсетеді.',
+	// 		en: "Opened in 2009, it highlights the individual's contribution to the city's cultural and artistic development.",
+	// 	},
+	// 	buttonText: { ru: 'Подробнее', kk: 'Толығырақ', en: 'More' },
+	// 	link: '/attractions/berik-alibai-house-museum',
+	// 	subtitle: {
+	// 		ru: 'Открыт в 2009 году. Подчёркивает вклад личности в развитие культуры и искусства города.',
+	// 		kk: '2009 жылы ашылған бұл мұражай қаланың мәдени және көркемдік дамуына қосқан үлесін көрсетеді.',
+	// 		en: "Opened in 2009, it highlights the individual's contribution to the city's cultural and artistic development.",
+	// 	},
+	// 	bannerImage: '/imgs/attractions/13_dom-muzej_berika_alibaja_main.webp',
+	// 	aboutTitle: {
+	// 		ru: '',
+	// 		kk: '',
+	// 		en: '',
+	// 	},
+	// 	aboutText: {
+	// 		ru: 'Дом-музей Берика Алибая — музей-коллекция мастера-ювелира Берика Алибая, в которой представлены его ювелирные изделия, реставрационные работы и коллекция национальных предметов (оружие, одежда, посуда, монеты и др.), отражающих казахское культурное наследие и художественные традиции.',
+	// 		kk: 'Берік Әлібай үй-мұражайы – шебер зергер Берік Әлібайдың мұражай-коллекциясы, онда оның зергерлік бұйымдары, қалпына келтіру жұмыстары және қазақтың мәдени мұрасы мен көркемдік дәстүрлерін көрсететін ұлттық заттар (қару-жарақ, киім, ыдыс-аяқ, тиындар және т.б.) коллекциясы қойылған.',
+	// 		en: 'The Berik Alibay House-Museum is a museum-collection of the master jeweler Berik Alibay, which displays his jewelry, restoration work, and a collection of national items (weapons, clothing, dishes, coins, etc.), reflecting the Kazakh cultural heritage and artistic traditions.',
+	// 	},
+	// 	aboutStats: {
+	// 		title1: {
+	// 			ru: '4 зала',
+	// 			kk: '4 зал',
+	// 			en: '4 halls',
+	// 		},
+	// 		text1: {
+	// 			ru: 'экспозиционные помещения',
+	// 			kk: 'көрме залдары',
+	// 			en: 'exhibition rooms',
+	// 		},
+	// 		title2: {
+	// 			ru: '2009 год',
+	// 			kk: '2009 жыл',
+	// 			en: '2009',
+	// 		},
+	// 		text2: {
+	// 			ru: 'открытие',
+	// 			kk: 'ашылуы',
+	// 			en: 'opening',
+	// 		},
+	// 	},
+	// 	aboutImages: [
+	// 		'/imgs/attractions/13_dom-muzej_berika_alibaja_desc_1.jpg',
+	// 		'/imgs/attractions/13_dom-muzej_berika_alibaja_desc_2.jpg',
+	// 		'/imgs/attractions/13_dom-muzej_berika_alibaja_desc_3.webp',
+	// 	],
+	// 	insideTitle: {
+	// 		ru: '',
+	// 		kk: '',
+	// 		en: '',
+	// 	},
+	// 	insideSubtitle: {
+	// 		ru: '',
+	// 		kk: '',
+	// 		en: '',
+	// 	},
+	// 	insideText: {
+	// 		ru: 'Дом-музей Берика Алибая — уникальное культурное пространство, посвящённое жизни и творчеству известного казахстанского ювелира, реставратора и педагога. Здесь выставлена богатейшая коллекция авторских работ мастера, предметов национального быта и истории, позволяющих прикоснуться к истокам казахского декоративно-прикладного искусства. \n\n Берик Сатинбекович Алибай — мастер, чья деятельность олицетворяет слияние традиций и современного взгляда: его украшения, головные уборы, оружие, седла вобрали в себя казахские мотивы, мастерство металлообработки и художественный вкус. \n\n В экспозиции музея, помимо украшений, собраны разнообразные национально-исторические предметы: одежда, посуда, монеты, картины, оружие и другие артефакты, несущие дух казахской культуры. Посетители могут не только узнать о технике, материалах и символике, но и при желании приобрести или заказать изделие у самого мастера. \n\n Музей расположен по адресу: улица Кордай, дом 54, в Астане.',
+	// 		kk: 'Берік Әлібай үй-мұражайы – әйгілі қазақ зергерінің, қалпына келтірушісінің және ағартушысының өмірі мен қызметіне арналған бірегей мәдени кеңістік. Онда шебердің түпнұсқа жұмыстарының бай коллекциясы, сондай-ақ ұлттық және тарихи заттар қойылған, бұл келушілерге қазақтың сәндік-қолданбалы өнерінің шығу тегіне үңілуге ​​мүмкіндік береді. \n\n Берік Сатинбекұлы Әлібай – шығармашылығы дәстүр мен қазіргі заманның үйлесімін бейнелейтін шебер: оның зергерлік бұйымдары, бас киімдері, қару-жарақтары мен ер-тоқымдары қазақтың нақыштарын, металл өңдеу шеберлігін және көркемдік талғамын қамтиды. \n\n Зергерлік бұйымдардан басқа, мұражай көрмесінде әртүрлі ұлттық және тарихи заттар: киім, ыдыс-аяқ, тиындар, суреттер, қару-жарақтар және қазақ мәдениетінің рухын бейнелейтін басқа да артефактілер бар. Келушілер тек техникалар, материалдар және рәміздер туралы біліп қана қоймай, сонымен қатар шеберден тікелей туынды сатып ала немесе тапсырыс бере алады. \n\n Мұражай Астанадағы Қордай көшесі, 54 мекенжайында орналасқан.',
+	// 		en: "The Berik Alibay House-Museum is a unique cultural space dedicated to the life and work of the renowned Kazakh jeweler, restorer, and educator. It displays a rich collection of the master's original works, along with national and historical objects, allowing visitors to delve into the origins of Kazakh decorative and applied arts. \n\n Berik Satinbekovich Alibay is a master whose work embodies the fusion of tradition and modernity: his jewelry, headdresses, weapons, and saddles incorporate Kazakh motifs, metalworking skill, and artistic flair. \n\n In addition to jewelry, the museum's exhibition features a variety of national and historical items: clothing, tableware, coins, paintings, weapons, and other artifacts that embody the spirit of Kazakh culture. Visitors can not only learn about techniques, materials, and symbols but also purchase or commission a piece directly from the master. \n\n The museum is located at 54 Kordai Street in Astana.",
+	// 	},
+	// 	insideImage: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_02.webp',
+	// 	slidesImages: [
+	// 		{
+	// 			id: 0,
+	// 			image: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_01.jpg',
+	// 			description: 'Astana is the capital of Kazakhstan',
+	// 		},
+	// 		{
+	// 			id: 1,
+	// 			image: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_02.webp',
+	// 			description: 'Astana is the capital of Kazakhstan',
+	// 		},
+	// 		{
+	// 			id: 1,
+	// 			image: '/imgs/attractions/13_dom-muzej_berika_alibaja_gallery_03.jpeg',
+	// 			description: 'Astana is the capital of Kazakhstan',
+	// 		},
+	// 	],
+	// },
 	{
 		id: 14,
 		slug: 'hazret-sultan-mosque',
@@ -1315,7 +1163,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '«Хазірет Сұлтан» мешіті',
 			en: 'Hazret Sultan Mosque',
 		},
-		image: '/imgs/attractions/14_mechet_hazret_sultan_preview.jpg',
+		image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_preview.webp',
 		description: {
 			ru: 'Открыта в 2012 году. Является одной из самых узнаваемых религиозных достопримечательностей столицы.',
 			kk: '2012 жылы ашылған бұл мешіт астананың ең танымал діни орындарының бірі.',
@@ -1328,7 +1176,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '2012 жылы ашылған бұл мешіт астананың ең танымал діни орындарының бірі.',
 			en: "Opened in 2012, it is one of the capital's most recognizable religious landmarks.",
 		},
-		bannerImage: '/imgs/attractions/14_mechet_hazret_sultan_main.jpg',
+		bannerImage: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -1362,9 +1210,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/14_mechet_hazret_sultan_desc_1.jpg',
-			'/imgs/attractions/14_mechet_hazret_sultan_desc_2.webp',
-			'/imgs/attractions/14_mechet_hazret_sultan_desc_03.jpg',
+			'/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_desc_1.webp',
+			'/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_desc_2.webp',
+			'/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -1381,21 +1229,41 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Хазірет Сұлтан мешіті бүгінде Астананың ең заманауи көрікті жерлерінің бірі. Бұл Орталық Азиядағы ең үлкен мешіт, оны ашылғанға дейін үш жыл бойы салу үшін 1500 жұмысшы қажет болды. Ғимараттың өзі шығыс сарайына ұқсайды және Астанадағы ең әдемі сәулет ескерткіші болып табылады. \n\n Мешіттің биіктігі 51 метр және диаметрі 28 метр болатын күмбезі бар. Мешіттің бұрыштарында 77 метрлік төрт мұнара көзге түседі, ал негізгі күмбезді сегіз кіші күмбез қоршап тұр. Хазірет Сұлтан мешіті классикалық шығыс стилімен ерекшеленеді. Ақ түс қасбет пен интерьер үшін негізгі түс ретінде таңдалды. Мешіттің орталық залын үлкен ақ бағандар безендіріп, бұл керемет құрылымның монументалдылық сезімін арттырады. Интерьер мен қасбетте дәстүрлі қазақ ою-өрнегі мол. \n\n 11 гектар аумақта орналасқан мешіт бір уақытта 10 000 адамды қабылдай алады. Мұнда неке қию залы, намазхана, дәретхана, киім ауыстыратын бөлме, семинария сабақтары мен Құран оқу бөлмелері бар. \n\n Біз ерекше сәулеті мен таңғажайып ішкі безендірілуімен мақтана алатын Хазірет Сұлтан мешітіне баруды ұсынамыз.',
 			en: "The Hazret Sultan Mosque is one of Astana's most modern landmarks today. It is the largest mosque in Central Asia, requiring 1,500 workers to construct it for three years before its opening. The building itself resembles an oriental palace and is a most beautiful architectural monument in Astana. \n\n The mosque boasts a dome 51 meters high and 28 meters in diameter. Four 77-meter minarets stand out at the corners of the mosque, while eight smaller domes surround the main dome. The Hazret Sultan Mosque is distinguished by its classical oriental style. White was chosen as the primary color for both the façade and interior. Massive white columns adorn the mosque's central hall, enhancing the sense of monumentality of this magnificent structure. Traditional Kazakh ornamentation abounds in the interior and façade. \n\n Situated on an area of ​​11 hectares, the mosque can accommodate 10,000 people at a time. Here you'll find a wedding hall, a prayer hall, an ablution room, a dressing room, and rooms for seminary classes and Koranic readings. \n\n We highly recommend visiting the Hazrat Sultan Mosque, which boasts unique architecture and stunning interior decoration.",
 		},
-		insideImage: '/imgs/attractions/14_mechet_hazret_sultan_gallery_02.jpg',
+		insideImage: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/14_mechet_hazret_sultan_gallery_01.jpg',
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/14_mechet_hazret_sultan_gallery_02.jpg',
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/14_mechet_hazret_sultan_gallery_03.jpg',
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_03.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 3,
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_04.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 4,
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_05.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 5,
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_06.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 6,
+				image: '/imgs/attractions/mechet_hazret_sultan/14_mechet_hazret_sultan_gallery_07.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -1408,7 +1276,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Қасиетті Успение кафедралды соборы',
 			en: 'Holy Dormition Cathedral',
 		},
-		image: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_preview.jpg',
+		image: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_preview.webp',
 		description: {
 			ru: 'Освящён в 2010 году. Формирует духовный и архитектурный баланс города.',
 			kk: '2010 жылы киелілендірілген бұл ғимарат қаланың рухани және сәулеттік тепе-теңдігін қалыптастырады.',
@@ -1421,7 +1289,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '2010 жылы киелілендірілген бұл ғимарат қаланың рухани және сәулеттік тепе-теңдігін қалыптастырады.',
 			en: 'Consecrated in 2010, it shapes the spiritual and architectural balance of the city.',
 		},
-		bannerImage: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_main.jpg',
+		bannerImage: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -1455,9 +1323,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_desc_1.jpg',
-			'/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_desc_2.jpeg',
-			'/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_desc_3.jpeg',
+			'/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_desc_1.webp',
+			'/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_desc_2.webp',
+			'/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -1474,26 +1342,31 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Православие христиандары Қазақстандағы екінші ірі діни конфессия болып табылады. Елдегі әрбір ірі қалада, ірі мешітпен қатар, көбінесе бірдей биіктіктегі үлкен православие шіркеуі немесе соборы бар. Қасиетті Успен соборы - Қазақстандағы православие қауымдастығының ерекше орталығы. \n\n Соборда төрт ерекше жәдігер бар: Бірінші шақырылған Әулие Андрейдің жәдігерлерінің фрагменті, Киев-Печерск лаврасынан алынған Құдай әулиелерінің жәдігерлерінің фрагменттері, Әулие Александр Свирскийдің жәдігерлерінің фрагменті бар белгіше, Мысыр Әулие Мәриямның белгішесі және Мәскеу мен бүкіл Русь Патриархы Кириллдің сыйға тартқан «Қазан» (Қазан Құдай Анасының) белгішесі. \n\n Собордың ішкі көрінісін иконка суретшілерімен танымал орыс Палех ауылының суретшілері безендірген. Соборда Қазақстан Православие Шіркеуінің Синоды және Кирилл мен Мефодий рухани-мәдени орталығы орналасқан.',
 			en: 'Orthodox Christians are the second largest religious denomination in Kazakhstan. Every major city in the country, along with a major mosque, boasts a large Orthodox church or cathedral, often of equal height. The Holy Dormition Cathedral is a distinctive center for the Orthodox community in Kazakhstan. \n\n The cathedral houses four unique relics: a fragment of the relics of St. Andrew the First-Called, fragments of the relics of saints of God from the Kiev-Pechersk Lavra, an icon containing a fragment of the relics of St. Alexander of Svir, an icon of St. Mary of Egypt, and an icon of the Mother of God "Kazan" (Our Lady of Kazan), a gift from Patriarch Kirill of Moscow and All Rus\'. \n\n The interior of the cathedral is decorated by artists from the Russian village of Palekh, renowned for its icon painters. The Cathedral houses the Synod of the Orthodox Church of Kazakhstan and the Cyril and Methodius Spiritual and Cultural Center.',
 		},
-		insideImage: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_gallery_03.jpeg',
+		insideImage: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_gallery_01.webp',
+				image: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_gallery_02.jpg',
+				image: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_gallery_03.jpeg',
+				image: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 3,
-				image: '/imgs/attractions/15_svjato-uspenskij_kafedralnyj_sobor_gallery_04.jpg',
+				image: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_gallery_04.webp',
+				description: 'Astana is the capital of Kazakhstan',
+			},
+			{
+				id: 4,
+				image: '/imgs/attractions/svjato-uspenskij_kafedralnyj_sobor/15_svjato-uspenskij_kafedralnyj_sobor_gallery_05.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
@@ -1506,7 +1379,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Ә. Мамбетov атындағы мемлекеттік театр',
 			en: 'A. Mambetov State Theatre',
 		},
-		image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_preview.png',
+		image: '/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_preview.webp',
 		description: {
 			ru: 'Основан в 1991 году вместе с обретением независимости. Символ национального театрального искусства столицы.',
 			kk: 'Тәуелсіздікпен қатар 1991 жылы құрылған бұл театр астананың ұлттық театр өнерінің символы болып табылады.',
@@ -1519,7 +1392,7 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: 'Тәуелсіздікпен қатар 1991 жылы құрылған бұл театр астананың ұлттық театр өнерінің символы болып табылады.',
 			en: "Founded in 1991, along with independence, it is a symbol of the capital's national theatrical art.",
 		},
-		bannerImage: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_main.png',
+		bannerImage: '/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_main.webp',
 		aboutTitle: {
 			ru: '',
 			kk: '',
@@ -1553,9 +1426,9 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			},
 		},
 		aboutImages: [
-			'/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_desc_1.png',
-			'/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_desc_2.jpeg',
-			'/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_desc_3.jpeg',
+			'/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_desc_1.webp',
+			'/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_desc_2.webp',
+			'/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_desc_3.webp',
 		],
 		insideTitle: {
 			ru: '',
@@ -1572,31 +1445,21 @@ export const attractionsMultilang: AttractionItemMultilang[] = [
 			kk: '1991 жылдың 15 қарашасында Астанадағы Қалибек Қуанышбаев атындағы мемлекеттік академиялық қазақ музыкалық-драма театры Ғ.Мүсіреповтің «Ақан сері-Ақтоқты» трагедиясымен есігін ашты. Алғашқы қойылымды талантты режиссер және театрдың негізін қалаушы Жақып Омаров қойды. Театр 1996 жылы Уфада түркітілдес мемлекеттер арасындағы Туғанлық халықаралық театр фестивалінде бірінші жүлдесін алды. \n\n Бүгінде ұлттың рухани қажеттіліктерін көрсететін қасиетті Шаңырақты Жақып Омаров, Қадыр Жетпісбаев және Кеңес Одағының халық әртісі, «Халық қаһарманы» Әзірбайжан Мәмбетов сияқты талантты әртістер басқарды. \n\n Қалибек Қуанышбаев атындағы мемлекеттік академиялық қазақ музыкалық-драма театрының репертуары үнемі ұлттық және халықаралық драматургиямен жаңартылып, байытылып отырады. Труппаның ішкі және халықаралық деңгейдегі бірнеше театр фестивальдеріне қатысу арқылы қалыптасқан нақты нұсқаулары бар. Бұл қазақ театр өнерінің қайта жаңғыруы, өткен мен қазіргі кездегі өнер шыңының көрінісі. \n\n 2011 жылдың 14 желтоқсанында театр труппасына «Мемлекеттік академиялық театр» мәртебесі берілді. Тәуелсіздікпен құрдас Қ.Қуанышбаев атындағы Мемлекеттік академиялық қазақ драма театры биыл 30 жылдық мерейтойын атап өтуде. \n\n 2020 жылы Қазақстан Республикасының Тұңғыш Президенті, Елбасы Нұрсұлтан Назарбаевтың бастамасымен және Мемлекет басшысы Қасым-Жомарт Тоқаевтың қолдауымен астананың сәулет өнерін безендіретін жаңа театр ғимараты салынды. Бұл мемлекеттің өнерге деген ерекше қамқорлығының көрінісі.',
 			en: 'On November 15, 1991, the Kalibek Kuanyshbayev State Academic Kazakh Music and Drama Theater in Astana opened its doors with G. Musrepov\'s tragedy "Akan Seri-Aktokty." The first production was staged by the talented director and founder of the theater, Zhakyp Omarov. The theater received its first prize in Ufa at the Tuganlyk International Theater Festival among Turkic-speaking states in 1996. \n\n The sacred Shanyrak, which today reflects the spiritual needs of the nation, was led by such talented artists as Zhakyp Omarov, Kadyr Zhetpisbayev, and People\'s Artist of the Soviet Union, "Khalyk Kaharmany" Azerbaijan Mambetov. \n\n The repertoire of the Kalibek Kuanyshbayev State Academic Kazakh Music and Drama Theater Kalibek Kuanyshbayev\'s theater is constantly updated and enriched by national and international dramaturgy. The company has clear guidelines, shaped by participation in several theater festivals both domestically and internationally. This is the revival of Kazakh theater art, a showcase of the pinnacle of art from the past and present. \n\n On December 14, 2011, the theater company was awarded the status of "State Academic Theater." The State Academic Kazakh Drama Theater named after K. Kuanyshbayev, the same age as independence, celebrates its 30th anniversary this year. \n\n In 2020, at the initiative of the First President of the Republic of Kazakhstan, Elbasy Nursultan Nazarbayev, and with the support of the head of state, Kassym-Jomart Tokayev, a new theater building was constructed, which will adorn the capital\'s majestic architecture. This is a reflection of the state\'s special commitment to the arts.',
 		},
-		insideImage: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_03.jpeg',
+		insideImage: '/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_desc_4.webp',
 		slidesImages: [
 			{
 				id: 0,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_01.jpeg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_01.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 1,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_02.jpeg',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_02.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 			{
 				id: 2,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_03.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 3,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_04.jpeg',
-				description: 'Astana is the capital of Kazakhstan',
-			},
-			{
-				id: 4,
-				image: '/imgs/attractions/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_05.png',
+				image: '/imgs/attractions/gosudarstvennyj_teatr_im_a_mambetova/16_gosudarstvennyj_teatr_im_a_mambetova_gallery_03.webp',
 				description: 'Astana is the capital of Kazakhstan',
 			},
 		],
