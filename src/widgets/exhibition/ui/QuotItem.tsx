@@ -4,7 +4,7 @@ import { IconQuot } from '@/shared/icons/IconQuot'
 
 export function QuotItem({ image, text, name, position }: { image: string; text: string; name: string; position: string }) {
 	return (
-		<div className="flex items-start justify-between gap-[44px]">
+		<div className="flex flex-col items-start justify-between gap-x-[44px] gap-y-[20px] sm:flex-row">
 			<Image
 				src={image}
 				alt={name}

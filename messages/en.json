@@ -104,6 +104,9 @@
 		"news": "News",
 		"partners": "Participants",
 		"mainPartners": "Main partners",
+		"organizators": "Organizers",
+		"ecoSystemPartners": "Eco - System partners",
+		"mediaPartners": "Media - partners",
 		"soon": "Something interesting will be here soon",
 		"soonText": "This section is under development. We are preparing new content for you and will open access soon. \n Come back a bit later!",
 		"otherNews": "Other news",
@@ -544,6 +547,46 @@
 			},
 			"attractions": {
 				"title": "Attractions"
+			}
+		},
+		"exhibition": {
+			"title": "About the Exhibition",
+			"subtitle": "RES 2026 EXPO – The Ecological Future of Central Asia",
+			"presidentText": "“Kazakhstan, in partnership with the UN and other international organizations, will host the Regional Environmental Summit in Astana in April next year. As part of our broader environmental commitments, Kazakhstan is implementing the nationwide ‘Taza Qazaqstan’ campaign. This national movement brings together millions of volunteers engaged in clean-up activities, waste reduction, and environmental education.”",
+			"presidentName": "Kassym-Jomart Tokayev",
+			"presidentPosition": "President of Kazakhstan",
+			"presidentTextFrom": "From the address at the General Debate of the 80th Session of the United Nations General Assembly, New York, USA",
+			"text": "The main mission of RES 2026 EXPO is to unite governments, businesses, the scientific community, and international organizations around a shared goal — the transition to environmentally responsible development and a green economy. The exhibition will serve as a platform where global environmental challenges are transformed into concrete technologies, projects, and investments.",
+			"stats": {
+				"title1": "20,000+",
+				"text1": "expected visitors and participants",
+				"title2": "300+",
+				"text2": "exhibiting companies",
+				"title3": "30+",
+				"text3": "countries",
+				"title4": "12,000 m2",
+				"text4": "exhibition area"
+			},
+			"factsAndNumbers": {
+				"title": "Why Participate",
+				"text": "The future is created here. Be at the center of change at RES 2026",
+				"fact1Title": "20,000+ participants",
+				"fact1Text": "A platform bringing together over 20,000 representatives from government, business, and the expert community.",
+				"fact2Title": "8 thematic zones",
+				"fact2Text": "Energy, water resources, agrotechnologies, ESG, biodiversity, and other key areas of sustainable development.",
+				"fact3Title": "Access to investors",
+				"fact3Text": "Direct dialogue with investors, government programs, and international initiatives.",
+				"fact4Title": "New opportunities",
+				"fact4Text": "Build partnerships, launch projects, and grow your business in the green economy sector"
+			},
+			"eventPlace": {
+				"title": "Venue",
+				"text": "RES2026 will take place at a modern congress and exhibition venue in Astana that meets international standards for business and scientific events.",
+				"text2": "You can also explore the exhibition map."
+			},
+			"themeZones": {
+				"title": "Thematic Zones",
+				"text": "Each zone is a new idea for a green future"
 			}
 		}
 	},

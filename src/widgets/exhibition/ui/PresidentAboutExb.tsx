@@ -24,7 +24,7 @@ export function PresidentAboutExb({ className }: { className?: string }) {
 				<IconQuot color="#A1BB94" />
 			</div>
 
-			<div className="relative z-1 flex flex-wrap items-start justify-center gap-[20px] sm:gap-[30px] md:gap-[50px] xl:flex-nowrap">
+			<div className="relative z-1 flex flex-wrap items-start justify-center gap-[20px] sm:gap-[30px] md:gap-[50px] 2xl:flex-nowrap">
 				<Image
 					ref={PresidentAboutExbImgRef}
 					src="/imgs/president-img-mob.png"
