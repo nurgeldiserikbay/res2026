@@ -104,6 +104,9 @@
 		"news": "News",
 		"partners": "Participants",
 		"mainPartners": "Main partners",
+		"organizators": "Organizers",
+		"ecoSystemPartners": "Eco - System partners",
+		"mediaPartners": "Media - partners",
 		"soon": "Something interesting will be here soon",
 		"soonText": "This section is under development. We are preparing new content for you and will open access soon. \n Come back a bit later!",
 		"otherNews": "Other news",
@@ -204,7 +207,7 @@
 			"text2": "The Regional Ecological Summit 2026, initiated by the President of Kazakhstan Kassym-Jomart Tokayev, aims to unite Central Asian countries in partnership with the UN to develop agreed solutions to climate and environmental challenges. This is a two-year process (2024–2026) that has received broad international and political support. The Summit's concept is based on the idea of \"Bir Tamyr\" (\"Same Root\") - a symbol of common heritage and collective action for a sustainable future of the region.",
 			"presidentInitiative": "President's initiative",
 			"purpose": "Objective",
-			"text3": "The Regional Ecological Summit 2026 is organized in partnership with the United Nations and other international organizations. It aims to bring together the countries of Central Asia and other stakeholders to develop coordinated solutions on climate and environmental challenges. These include the preservation of the Aral Sea and addressing the shrinking of the Caspian Sea basin, the promotion of green financing and low-carbon technologies, as well as the development of joint initiatives, declarations, and the Action Programme for 2026–2030 to support the region’s sustainable development.",
+			"text3": "The Regional Ecological Summit 2026 establishes an international platform for dialogue and coordination among governments, international and regional organizations, financial institutions, development agencies, the private sector, the scientific community, and civil society. \n The objective of RES 2026 is to establish an open platform for the development of joint and practical solutions to climate and ecological challenges, bringing together a broad range of countries, regions, and partners, and demonstrating, through the example of Central Asia, how interregional cooperation strengthens global efforts.",
 			"aboutText1": "The Regional Ecological Summit 2026 was initiated by the President of the Republic of Kazakhstan Kassym-Jomart Tokayev and aims to unite Central Asian countries to develop common solutions to combat climate change in partnership with the UN. This is not just a meeting - it is a two-year preparation process that started in 2024 and culminates in a high-level Summit in 2026, where agreed environmental initiatives and mechanisms for regional cooperation will be presented.",
 			"aboutText2": "The United Nations expressed its support to the Summit through General Assembly Resolution 78/147 of 19 December 2023, entitled “Central Asia facing environmental challenges: strengthening regional solidarity for sustainable development and prosperity.”",
 			"aboutText3": "The initiative was further supported in a number of key political documents adopted at the level of Heads of State in 2024, including:",
@@ -218,9 +221,9 @@
 			"resText2": "The initiative is reflected in the concept of «Bir Tamyr» (eng.: same roots). The word «Tamyr» exists in almost all languages of the region and carries a profound meaning: roots as a symbol of common history and connection to nature, veins as the symbol of pulse and movement within the region, the intertwining of vessels, spirit, and culture. It is a metaphor for connection, resilience, and shared heritage that unites Central Asia not by political borders, but by meaning, memory, and future. \n\n The visual representation of the countries of Central Asia is reflected in the Summit emblem (logo): different in shape, color, and character, yet standing together as a symbol of unity in diversity. The reference to the barcode shape also symbolizes a common space for dialogue and action, modern approaches, innovations, and the technological nature of solutions. \n\nThe Summit reflects this image: one region – shared challenges – collective action. It will bring together governments, international organizations, the scientific community, businesses, civil society, and youth to lay the foundation for a shared, environmentally sustainable future.",
 			"resText3": "Preparations for the Summit commenced in 2024 and include a series of regional <link>consultations</link>.",
 			"file1Title": "Concept",
-			"file1Text": "Regional ecological summit 2026: A shared vision for a sustainable future",
+			"file1Text": "Regional Ecological Summit 2026: Shared vision for resilient future",
 			"file2Title": "Brochure",
-			"file2Text": "Regional ecological summit 2026: A shared vision for a sustainable future"
+			"file2Text": "Regional Ecological Summit 2026: Shared vision for resilient future"
 		},
 		"contacts": {
 			"mepr": "On RES 2026 EXPO exhibition organization",
@@ -400,6 +403,84 @@
 					},
 					"nationalInitiativesTitle": "National initiatives"
 				}
+			},
+			"tajikistan": {
+				"title": "Tajikistan",
+				"tabs": {
+					"0": "About the Country",
+					"1": "Climate",
+					"2": "Flora and Fauna",
+					"3": "Other"
+				},
+				"title1": "About the Country",
+				"text1": "Tajikistan is a landlocked mountainous country in the heart of Central Asia. Mountains cover more than 93% of its territory, dominated by the majestic Pamir and Alay ranges. Tajikistan is a vital source of water for the region, generating approximately 60% of Central Asia’s water resources. The country is known for its breathtaking natural landscapes, high-altitude lakes, and rich Persian cultural heritage. The republic is actively developing its hydropower potential to build a green economy. The capital city, Dushanbe, is an emerging hub of regional diplomacy.",
+				"text2": "",
+				"stat1": "regions",
+				"stat2": "million population",
+				"climateTitle": "Climate Description",
+				"climateText": "The climate is continental and varies sharply with altitude. In the lowland valleys, summers are hot and dry while winters are mild, whereas high mountain areas experience polar conditions with permanent snow. Tajikistan is home to thousands of glaciers, including the massive Vanjyakh Glacier. These glaciers are crucial for sustainable water management in the region but are highly vulnerable to climate change.",
+				"climateText2": "winter in the Pamir highlands",
+				"climateText3": "summer in the valleys",
+				"nationalInitiativesData": {
+					"0": {
+						"title": "Green Country Program",
+						"text": "A national greening initiative that includes an ambitious plan to plant 2 billion trees by 2040 to combat desertification."
+					}
+				},
+				"globalTitle": "International Events Held",
+				"globalSubtitle": "Tajikistan is a global pioneer in water and climate diplomacy, leading several major initiatives:",
+				"globalEventsHeld": {
+					"0": {
+						"title": "2003",
+						"subtitle": "International Year of Freshwater",
+						"text": "Proposed by Tajikistan and adopted by the UN, highlighting the importance of freshwater and the need for its sustainable management."
+					},
+					"1": {
+						"title": "2005–2015",
+						"subtitle": "International Decade for Action “Water for Life”",
+						"text": "Aimed at ensuring sustainable water resource management and basic sanitation for all."
+					},
+					"2": {
+						"title": "2013",
+						"subtitle": "International Year of Water Cooperation",
+						"text": "Proposed by Tajikistan to promote water cooperation at all levels and address shared water challenges."
+					},
+					"3": {
+						"title": "2025",
+						"subtitle": "International Year of Glaciers’ Preservation",
+						"text": "Initiated by Tajikistan and adopted by the UN, this global campaign raises awareness of rapid glacier melting and establishes a dedicated international trust fund for their protection."
+					},
+					"4": {
+						"title": "2018–2028",
+						"subtitle": "Water for Sustainable Development",
+						"text": "Tajikistan leads this “Water Decade,” a global action plan to advance water cooperation and sanitation goals, hosting high-level conferences in Dushanbe every two years."
+					},
+					"5": {
+						"title": "May 24",
+						"subtitle": "International Markhor Conservation Day",
+						"text": "Proposed by Tajikistan and adopted by the UN, this day raises global awareness about the conservation of the markhor and its habitat."
+					},
+					"6": {
+						"title": "2025",
+						"subtitle": "International Year of Glaciers’ Preservation",
+						"text": "A global campaign initiated by Tajikistan and adopted by the UN, drawing attention to glacier melting and creating an international trust fund for their protection."
+					},
+					"7": {
+						"title": "2018–2028",
+						"subtitle": "Water for Sustainable Development",
+						"text": "Tajikistan leads this global decade focused on promoting water cooperation through regular high-level conferences in Dushanbe."
+					}
+				},
+				"etc": {
+					"strategicVisionTitle": "Strategic Vision and Documents",
+					"strategicVisionIntro": "Tajikistan has adopted a number of key strategic documents to support its transition to sustainable development:",
+					"strategicDocuments": {
+						"0": "<sbold>Green Economy Development Strategy (2023–2037):</sbold> A comprehensive roadmap aimed at doubling renewable energy capacity, introducing electric transport, and ensuring efficient use of natural resources. The goal is full green energy independence by 2037.",
+						"1": "<sbold>National Climate Change Adaptation Strategy (until 2030):</sbold> Focuses on increasing resilience in critical sectors such as agriculture, water resources, and energy. Includes disaster risk reduction measures.",
+						"2": "<sbold>National Development Strategy (until 2030):</sbold> A foundational document aimed at improving living standards and ensuring energy security, integrating the Sustainable Development Goals (SDGs)."
+					},
+					"nationalInitiativesTitle": "National Initiatives"
+				}
 			}
 		},
 		"keyDirections": {
@@ -434,7 +515,9 @@
 					"title1": "Baiterek",
 					"title2": "Palace of Peace and Accord",
 					"title3": "Khan Shatyr",
-					"title4": "Museum of Future Energy"
+					"title4": "Museum of Future Energy",
+					"title5": "Ak Orda",
+					"title6": "Khazret Sultan Mosque"
 				},
 				"cultureAndTraditions": {
 					"title": "Culture and traditions",
@@ -544,6 +627,46 @@
 			},
 			"attractions": {
 				"title": "Attractions"
+			}
+		},
+		"exhibition": {
+			"title": "About the Exhibition",
+			"subtitle": "RES 2026 EXPO – The Ecological Future of Central Asia",
+			"presidentText": "“Kazakhstan, in partnership with the UN and other international organizations, will host the Regional Environmental Summit in Astana in April next year. As part of our broader environmental commitments, Kazakhstan is implementing the nationwide ‘Taza Qazaqstan’ campaign. This national movement brings together millions of volunteers engaged in clean-up activities, waste reduction, and environmental education.”",
+			"presidentName": "Kassym-Jomart Tokayev",
+			"presidentPosition": "President of Kazakhstan",
+			"presidentTextFrom": "From the address at the General Debate of the 80th Session of the United Nations General Assembly, New York, USA",
+			"text": "The main mission of RES 2026 EXPO is to unite governments, businesses, the scientific community, and international organizations around a shared goal — the transition to environmentally responsible development and a green economy. The exhibition will serve as a platform where global environmental challenges are transformed into concrete technologies, projects, and investments.",
+			"stats": {
+				"title1": "20,000+",
+				"text1": "expected visitors and participants",
+				"title2": "300+",
+				"text2": "exhibiting companies",
+				"title3": "30+",
+				"text3": "countries",
+				"title4": "12,000 m2",
+				"text4": "exhibition area"
+			},
+			"factsAndNumbers": {
+				"title": "Why Participate",
+				"text": "The future is created here. Be at the center of change at RES 2026",
+				"fact1Title": "20,000+ participants",
+				"fact1Text": "A platform bringing together over 20,000 representatives from government, business, and the expert community.",
+				"fact2Title": "8 thematic zones",
+				"fact2Text": "Energy, water resources, agrotechnologies, ESG, biodiversity, and other key areas of sustainable development.",
+				"fact3Title": "Access to investors",
+				"fact3Text": "Direct dialogue with investors, government programs, and international initiatives.",
+				"fact4Title": "New opportunities",
+				"fact4Text": "Build partnerships, launch projects, and grow your business in the green economy sector"
+			},
+			"eventPlace": {
+				"title": "Venue",
+				"text": "RES2026 will take place at a modern congress and exhibition venue in Astana that meets international standards for business and scientific events.",
+				"text2": "You can also explore the exhibition map."
+			},
+			"themeZones": {
+				"title": "Thematic Zones",
+				"text": "Each zone is a new idea for a green future"
 			}
 		}
 	},

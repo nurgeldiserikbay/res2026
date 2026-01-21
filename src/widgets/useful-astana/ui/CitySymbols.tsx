@@ -49,6 +49,18 @@ export function CitySymbols() {
 			image: `/imgs/usefulls/astana-symbol-4.png`,
 			style: `translate-y-[-6px]`,
 		},
+		{
+			id: 4,
+			title: t('pages.useful.astana.symbols.title5'),
+			image: `/imgs/usefulls/astana-symbol-5.png`,
+			style: `translate-y-[6px]`,
+		},
+		{
+			id: 5,
+			title: t('pages.useful.astana.symbols.title6'),
+			image: `/imgs/usefulls/astana-symbol-6.png`,
+			style: `translate-y-0`,
+		},
 	]
 
 	return (

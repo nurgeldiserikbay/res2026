@@ -13,6 +13,7 @@ const prettierConfig = {
 	vueIndentScriptAndStyle: false,
 	singleAttributePerLine: true,
 	plugins: ['prettier-plugin-tailwindcss'],
+	tailwindStylesheet: './src/app/[locale]/globals.css',
 }
 
 export default prettierConfig

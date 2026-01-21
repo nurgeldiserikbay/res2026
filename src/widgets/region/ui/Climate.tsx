@@ -11,14 +11,18 @@ export function Climate({
 	title,
 	climateText2,
 	temp1Value,
+	temp1text,
 	temp2Value,
+	temp2text,
 	img1,
 	img2,
 }: {
 	title: string
 	climateText2: string
 	temp1Value: string
+	temp1text?: string
 	temp2Value: string
+	temp2text?: string
 	img1: string
 	img2: string
 }) {
@@ -50,13 +54,13 @@ export function Climate({
 					<div className="relative w-full whitespace-pre-line lg:max-w-[872px]">
 						<h3
 							ref={TitleRef}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
+							className="relative z-1 mb-[20px] translate-y-[50px] text-[24px] leading-normal font-bold text-text opacity-0 sm:mb-[25px] sm:text-[28px] md:mb-[30px] md:text-[32px]"
 						>
 							{title}
 						</h3>
 						<p
 							ref={TextRef}
-							className="text-text relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
+							className="relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal text-text opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
 						>
 							{climateText2}
 						</p>
@@ -65,7 +69,7 @@ export function Climate({
 								ref={Temp1Ref}
 								className="flex h-[140px] translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 							>
-								<span className="text-secondary flex items-center gap-[10px] text-[40px] leading-normal font-bold sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
+								<span className="flex items-center gap-[10px] text-[40px] leading-normal font-bold text-secondary sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
 									<Image
 										src="/imgs/snow.svg"
 										alt="Snow"
@@ -75,15 +79,15 @@ export function Climate({
 									/>
 									<span>{temp1Value}</span>
 								</span>
-								<span className="text-secondary text-[12px] leading-normal font-normal sm:text-[14px] md:text-[16px]">
-									{t(`labels.winters`)}
+								<span className="text-[12px] leading-normal font-normal text-secondary sm:text-[14px] md:text-[16px]">
+									{temp1text || t(`labels.winters`)}
 								</span>
 							</div>
 							<div
 								ref={Temp2Ref}
 								className="flex h-[140px] translate-y-[50px] flex-col items-center justify-center rounded-[12px] bg-linear-to-b from-[#E0EAB8] to-[#D4D8C30000] text-center opacity-0 sm:h-[155px] md:h-[172px]"
 							>
-								<span className="text-secondary flex items-center gap-[10px] text-[40px] leading-normal font-bold sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
+								<span className="flex items-center gap-[10px] text-[40px] leading-normal font-bold text-secondary sm:gap-[20px] sm:text-[48px] md:gap-[30px] md:text-[64px]">
 									<Image
 										src="/imgs/sun.svg"
 										alt="Sun"
@@ -93,8 +97,8 @@ export function Climate({
 									/>
 									<span>{temp2Value}</span>
 								</span>
-								<span className="text-secondary text-[12px] leading-normal font-normal sm:text-[14px] md:text-[16px]">
-									{t(`labels.summers`)}
+								<span className="text-[12px] leading-normal font-normal text-secondary sm:text-[14px] md:text-[16px]">
+									{temp2text || t(`labels.summers`)}
 								</span>
 							</div>
 						</div>

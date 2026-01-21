@@ -12,11 +12,14 @@ export function QuotsList() {
 
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-			<Container className="grid grid-cols-1 gap-x-[61px] gap-y-[30px] sm:grid-cols-2 lg:grid-cols-3">
+			<Container className="grid grid-cols-1 gap-x-[61px] gap-y-[30px] lg:grid-cols-2 xl:grid-cols-3">
 				{quots.map((quot, index) => (
 					<QuotItem
 						key={index}
-						{...quot}
+						text={quot.text}
+						image={quot.image}
+						name={quot.name}
+						position={quot.position}
 					/>
 				))}
 			</Container>

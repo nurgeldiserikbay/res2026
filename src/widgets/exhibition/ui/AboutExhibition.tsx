@@ -40,13 +40,13 @@ export function AboutExhibition() {
 					<p className="text-text max-w-[810px] text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.exhibition.text')}</p>
 				</div>
 
-				<div className="relative z-1 aspect-[1.11] w-full max-w-[715px]">
+				<div className="relative z-1 w-full max-w-[715px] lg:aspect-[1.11]">
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
 						width={715}
 						height={834}
-						className="absolute bottom-0 left-0 w-full"
+						className="bottom-0 left-0 w-full lg:absolute"
 					/>
 				</div>
 			</Container>

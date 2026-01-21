@@ -58,7 +58,7 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 			<div className="relative z-2 w-full">
 				<div
 					ref={mainImageRef}
-					className="aspect-870/758 w-full overflow-hidden rounded-[12px]"
+					className="w-full overflow-hidden rounded-[12px]"
 				>
 					{activeImg && (
 						<Image
@@ -66,16 +66,16 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 							alt={activeImg.alt}
 							width={activeImg.width}
 							height={activeImg.height}
-							className="block w-full rounded-[12px] object-contain sm:rounded-[12px]"
+							className="block w-full rounded-[12px] sm:rounded-[12px]"
 						/>
 					)}
 				</div>
-				<div
-					ref={thumbnailsRef}
-					className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-x-auto px-[10px] sm:px-[20px] md:px-[30px] lg:px-[43px]"
-				>
-					{imgs.length > 1 &&
-						imgs.map((img) => (
+				{imgs.length > 1 && (
+					<div
+						ref={thumbnailsRef}
+						className="absolute bottom-0 left-0 flex w-full items-center justify-start gap-1 overflow-x-auto px-[10px] sm:px-[20px] md:px-[30px] lg:px-[43px]"
+					>
+						{imgs.map((img) => (
 							<button
 								type="button"
 								key={img.id}
@@ -83,7 +83,7 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 								aria-label={`View ${img.alt}`}
 								aria-pressed={activeImg.id === img.id}
 								className={[
-									`after:bg-secondary/50 relative block h-[60px] w-[70px] shrink-0 translate-y-[30px] cursor-pointer overflow-hidden rounded-[6px] opacity-0 after:absolute after:inset-0 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100 sm:h-[80px] sm:w-[90px] sm:rounded-[7px] md:h-[103px] md:w-[110px] md:rounded-[8px]`,
+									`relative block h-[60px] w-[70px] shrink-0 translate-y-[30px] cursor-pointer overflow-hidden rounded-[6px] opacity-0 after:absolute after:inset-0 after:bg-secondary/50 after:transition-opacity after:duration-300 after:ease-out after:content-[''] hover:after:opacity-100 sm:h-[80px] sm:w-[90px] sm:rounded-[7px] md:h-[103px] md:w-[110px] md:rounded-[8px]`,
 									activeImg.id === img.id ? 'after:opacity-100' : 'after:opacity-0',
 								].join(` `)}
 							>
@@ -97,7 +97,8 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 								/>
 							</button>
 						))}
-				</div>
+					</div>
+				)}
 			</div>
 		</>
 	)

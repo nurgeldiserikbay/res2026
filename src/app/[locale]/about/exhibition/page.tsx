@@ -1,8 +1,12 @@
 import type { Locale } from '@/shared/config/i18n'
 import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/generate-metadata'
 import { AboutExhibition } from '@/widgets/exhibition/ui/AboutExhibition'
+import { EventPlace } from '@/widgets/exhibition/ui/EventPlace'
+import { ExbFactsAndNumbers } from '@/widgets/exhibition/ui/ExbFactsAndNumbers'
 import { ExhibitionBanner } from '@/widgets/exhibition/ui/ExhibitionBanner'
+import { PartnersBlock } from '@/widgets/exhibition/ui/PartnersBlock'
 import { QuotsList } from '@/widgets/exhibition/ui/QuotsList'
+import { ThemeZones } from '@/widgets/exhibition/ui/ThemeZones'
 
 import type { Metadata } from 'next'
 
@@ -32,6 +36,14 @@ export default function Page() {
 			<AboutExhibition />
 
 			<QuotsList />
+
+			<ExbFactsAndNumbers />
+
+			<EventPlace />
+
+			<ThemeZones />
+
+			<PartnersBlock />
 		</>
 	)
 }

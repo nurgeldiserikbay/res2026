@@ -80,7 +80,13 @@ export const navItems: readonly NavItem[] = [
 				showFooter: true,
 			}, // Kazakhstan
 			{ key: 'about.regionKyrgyzstan', href: '/about/region/kyrgyzstan', ready: false, showHeader: true, showFooter: true }, // Kyrgyzstan
-			{ key: 'about.regionTajikistan', href: '/about/region/tajikistan', ready: false, showHeader: true, showFooter: true }, // Tajikistan
+			{
+				key: 'about.regionTajikistan',
+				href: '/about/region/tajikistan',
+				ready: !appConfig.isProduction,
+				showHeader: true,
+				showFooter: true,
+			}, // Tajikistan
 			{ key: 'about.regionTurkmenistan', href: '/about/region/turkmenistan', ready: false, showHeader: true, showFooter: true }, // Turkmenistan
 			{
 				key: 'about.regionUzbekistan',
