@@ -196,7 +196,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 5,
 		priceFrom: 117000,
 		currency: 'KZT',
-		image: '/imgs/hotels/The Ritz-Carlton, Astana.webp',
+		image: '/imgs/hotels/The_Ritz_Carlton_Astana.webp',
 		description: {
 			ru: 'Роскошный пятизвёздочный отель в высотном комплексе с панорамными видами на столицу.',
 			kk: 'Елордаға панорамалық көрініс ашылатын биік кешендегі сәнді бес жұлдызды қонақүй.',
@@ -213,7 +213,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 40000,
 		currency: 'KZT',
-		image: '/imgs/hotels/The One Hotel Astana.webp',
+		image: '/imgs/hotels/THE_ONE_Hotel_Astana.webp',
 		description: {
 			ru: 'Современный четырёхзвёздочный отель в деловом районе, ориентированный на комфортное размещение.',
 			kk: 'Іскер ауданда орналасқан, жайлы орналастыруға бағытталған заманауи төрт жұлдызды қонақүй.',
@@ -319,7 +319,7 @@ export const hotelsMultilang: HotelItemMultilang[] = [
 		rating: 4,
 		priceFrom: 50000,
 		currency: 'KZT',
-		image: '/imgs/hotels/Aisha Bibi Hotel & Spa.webp',
+		image: '/imgs/hotels/Aisha_Bibi_Hotel_Spa.webp',
 		description: {
 			ru: 'Стильный и уютный отель с высоким уровнем сервиса, расположенный в удобном районе недалеко от делового центра.',
 			kk: 'Іскерлік орталыққа жақын, ыңғайлы ауданда орналасқан, сервистің жоғары деңгейі бар сәнді әрі жайлы қонақүй.',
