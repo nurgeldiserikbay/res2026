@@ -149,9 +149,9 @@
 		"hide": "Hide",
 		"chief": "Head",
 		"pressSecretary": "Press Secretary",
-		"summers": "summer",
+		"summers": "in the summer",
 		"winter": "winter",
-		"winters": "In the north winters",
+		"winters": "in the winter",
 		"regions": "regions",
 		"citiesOfNationalSignificance": "cities of republican significance",
 		"population": "20 million people.",
@@ -413,32 +413,32 @@
 					"3": "Other"
 				},
 				"title1": "About the Country",
-				"text1": "Tajikistan is a landlocked mountainous country in the heart of Central Asia. Mountains cover more than 93% of its territory, dominated by the majestic Pamir and Alay ranges. Tajikistan is a vital source of water for the region, generating approximately 60% of Central Asia’s water resources. The country is known for its breathtaking natural landscapes, high-altitude lakes, and rich Persian cultural heritage. The republic is actively developing its hydropower potential to build a green economy. The capital city, Dushanbe, is an emerging hub of regional diplomacy.",
+				"text1": "Tajikistan is a mountainous, landlocked country in the heart of Central Asia. Mountains cover more than 93% of its territory, with the majestic Pamir and Alay ranges dominating the landscape. Tajikistan is a vital source of water for the region, generating approximately 60% of Central Asia's water resources. The country is renowned for its stunning natural beauty, high-altitude lakes, and rich Persian cultural heritage. It is actively developing its vast hydropower potential to drive a green economy. Dushanbe, the capital, is a growing hub for regional diplomacy and sustainability.",
 				"text2": "",
 				"stat1": "regions",
 				"stat2": "million population",
 				"climateTitle": "Climate Description",
-				"climateText": "The climate is continental and varies sharply with altitude. In the lowland valleys, summers are hot and dry while winters are mild, whereas high mountain areas experience polar conditions with permanent snow. Tajikistan is home to thousands of glaciers, including the massive Vanjyakh Glacier. These glaciers are crucial for sustainable water management in the region but are highly vulnerable to climate change.",
+				"climateText": "The climate is continental, changing drastically with altitude. Lowland valleys experience hot, dry summers and mild winters, while high mountain areas feature polar-like conditions with year-round snow. Tajikistan is home to thousands of glaciers, including the massive Vanjyakh Glacier. These glaciers are vital for regional sustainable water management but are increasingly vulnerable to climate change.",
 				"climateText2": "winter in the Pamir highlands",
 				"climateText3": "summer in the valleys",
 				"nationalInitiativesData": {
 					"0": {
-						"title": "Green Country Program",
-						"text": "A national greening initiative that includes an ambitious plan to plant 2 billion trees by 2040 to combat desertification."
+						"title": "\"Green Country\" Program",
+						"text": "A national greening initiative that includes an ambitious plan to plant 2 billion trees by 2040 to combat desertification and reduce the country's carbon footprint."
 					}
 				},
-				"globalTitle": "International Events Held",
-				"globalSubtitle": "Tajikistan is a global pioneer in water and climate diplomacy, leading several major initiatives:",
+				"globalTitle": "Global initiatives",
+				"globalSubtitle": "Tajikistan is a global pioneer in water and climate diplomacy, spearheading several major initiatives:",
 				"globalEventsHeld": {
 					"0": {
 						"title": "2003",
 						"subtitle": "International Year of Freshwater",
-						"text": "Proposed by Tajikistan and adopted by the UN, highlighting the importance of freshwater and the need for its sustainable management."
+						"text": "Proposed by Tajikistan and adopted by the UN, this initiative highlighted the importance of freshwater and the need for its sustainable management."
 					},
 					"1": {
 						"title": "2005–2015",
-						"subtitle": "International Decade for Action “Water for Life”",
-						"text": "Aimed at ensuring sustainable water resource management and basic sanitation for all."
+						"subtitle": "International Decade for Action \"Water for Life\"",
+						"text": "This decade aimed to ensure the sustainable management of water resources and basic sanitation for all."
 					},
 					"2": {
 						"title": "2013",
@@ -452,34 +452,34 @@
 					},
 					"4": {
 						"title": "2018–2028",
-						"subtitle": "Water for Sustainable Development",
-						"text": "Tajikistan leads this “Water Decade,” a global action plan to advance water cooperation and sanitation goals, hosting high-level conferences in Dushanbe every two years."
+						"subtitle": "Dushanbe Water Process",
+						"text": "A framework for dialogue and partnership, including hosting the biennial International High-Level Conference on the International Decade for Action \"Water for Sustainable Development\"."
 					},
 					"5": {
-						"title": "May 24",
-						"subtitle": "International Markhor Conservation Day",
-						"text": "Proposed by Tajikistan and adopted by the UN, this day raises global awareness about the conservation of the markhor and its habitat."
-					},
-					"6": {
 						"title": "2025",
 						"subtitle": "International Year of Glaciers’ Preservation",
-						"text": "A global campaign initiated by Tajikistan and adopted by the UN, drawing attention to glacier melting and creating an international trust fund for their protection."
+						"text": "Initiated by Tajikistan and adopted by the UN, this global campaign raises awareness about the rapid melting of glaciers and establishes a dedicated international trust fund for their protection."
 					},
-					"7": {
+					"6": {
 						"title": "2018–2028",
 						"subtitle": "Water for Sustainable Development",
-						"text": "Tajikistan leads this global decade focused on promoting water cooperation through regular high-level conferences in Dushanbe."
+						"text": "Tajikistan leads this \"Water Decade\", a global action plan to advance water cooperation and sanitation goals, hosting biennial high-level conferences in Dushanbe."
+					},
+					"7": {
+						"title": "24 May",
+						"subtitle": "International Day for the Conservation of the Markhor",
+						"text": "Proposed by Tajikistan and adopted by the UN, this day raises global awareness about the conservation of the Markhor and its habitat."
 					}
 				},
 				"etc": {
 					"strategicVisionTitle": "Strategic Vision and Documents",
-					"strategicVisionIntro": "Tajikistan has adopted a number of key strategic documents to support its transition to sustainable development:",
+					"strategicVisionIntro": "Tajikistan has adopted several key strategic documents to guide its transition to a sustainable future:",
 					"strategicDocuments": {
-						"0": "<sbold>Green Economy Development Strategy (2023–2037):</sbold> A comprehensive roadmap aimed at doubling renewable energy capacity, introducing electric transport, and ensuring efficient use of natural resources. The goal is full green energy independence by 2037.",
-						"1": "<sbold>National Climate Change Adaptation Strategy (until 2030):</sbold> Focuses on increasing resilience in critical sectors such as agriculture, water resources, and energy. Includes disaster risk reduction measures.",
-						"2": "<sbold>National Development Strategy (until 2030):</sbold> A foundational document aimed at improving living standards and ensuring energy security, integrating the Sustainable Development Goals (SDGs)."
+						"0": "<sbold>Green Economy Development Strategy (2023–2037):</sbold> A comprehensive roadmap aiming to double renewable energy capacity, introduce electric transport, and ensure the efficient use of natural resources. The strategy targets complete \"green\" energy independence by 2037.",
+						"1": "<sbold>National Strategy for Adaptation to Climate Change (to 2030):</sbold> Focuses on increasing resilience in critical sectors such as agriculture, water resources, and energy. It outlines specific measures to mitigate disaster risks and adapt to changing weather patterns.",
+						"2": "<sbold>National Development Strategy (to 2030):</sbold> The overarching framework for improving living standards and energy security, explicitly integrating environmental sustainability and the Sustainable Development Goals (SDGs)."
 					},
-					"nationalInitiativesTitle": "National Initiatives"
+					"nationalInitiativesTitle": "National initiatives"
 				}
 			}
 		},
