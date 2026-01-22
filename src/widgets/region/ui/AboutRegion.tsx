@@ -54,6 +54,7 @@ export default function AboutRegion({
 	useAnimSlide(TitleRef, { y: 50, delay: 0.2 })
 	useAnimSlide(Text1Ref, { y: 50, delay: 0.3 })
 	useAnimSlide(Text2Ref, { y: 50, delay: 0.6 })
+	useAnimSlide(StatsRef, { y: 50, delay: 0.4 })
 	useAnimSlide(Stat3Ref, { y: 50, delay: 0.7 })
 
 	// Анимация для карты
