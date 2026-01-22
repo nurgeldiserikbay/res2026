@@ -2,13 +2,18 @@
 
 import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
+import { useRef } from 'react'
 
 import { Link } from '@/i18n/navigation'
 import { IconStar } from '@/shared/icons/IconStar'
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 
 export function HotelsTabs() {
 	const t = useTranslations()
 	const searchParams = useSearchParams()
+
+	const TabsRef = useRef<HTMLElement>(null)
+	useAnimSlide(TabsRef, { y: 50, delay: 0.1 })
 
 	const hotelsTabs = [
 		{
@@ -38,8 +43,9 @@ export function HotelsTabs() {
 
 	return (
 		<nav
+			ref={TabsRef}
 			aria-label={t('titles.news')}
-			className="xs:gap-[41.5px] xs:flex-row mb-[60px] flex flex-col items-center justify-center gap-[20px] md:flex-row xl:gap-[60px]"
+			className="mb-[60px] flex translate-y-[50px] flex-col items-center justify-center gap-[20px] opacity-0 xs:flex-row xs:gap-[41.5px] md:flex-row xl:gap-[60px]"
 		>
 			{hotelsTabs.map((tab) => {
 				const currentType = searchParams.get('type')
@@ -54,7 +60,7 @@ export function HotelsTabs() {
 						aria-controls={`hotels-tabpanel-${tab.id}`}
 						id={`hotels-tab-${tab.id}`}
 						className={[
-							'flex items-center gap-[10px]',
+							'flex flex-col items-center gap-[10px] xs:flex-row',
 							'cursor-pointer text-[14px] leading-none font-bold transition-all duration-300 ease-out md:text-[16px]',
 							isActive ? `text-[#41754F]` : `text-[#E0EAB8]`,
 						].join(` `)}

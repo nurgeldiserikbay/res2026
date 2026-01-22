@@ -8,7 +8,7 @@ import { IconYouTube } from '@/shared/icons/IconYouTube'
 
 export function FooterSocial() {
 	return (
-		<div className="flex w-full max-w-[200px] items-center justify-between gap-[20px]">
+		<div className="xs:gap-[20px] flex w-full max-w-[200px] items-center justify-between gap-[10px]">
 			<Link
 				href="https://www.facebook.com/profile.php?id=61586761100536"
 				target="_blank"
@@ -17,7 +17,7 @@ export function FooterSocial() {
 				className="group block"
 			>
 				<IconFacebook
-					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					className="transition-duration-300 group-hover:text-muted text-text xs:w-[24px] xs:h-[24px] h-[20px] w-[20px] transition-colors"
 					aria-hidden="true"
 				/>
 			</Link>
@@ -29,7 +29,7 @@ export function FooterSocial() {
 				className="group block"
 			>
 				<IconX
-					className="transition-duration-300 group-hover:text-muted! text-text transition-colors"
+					className="transition-duration-300 group-hover:text-muted! text-text xs:w-[24px] xs:h-[24px] h-[20px] w-[20px] transition-colors"
 					aria-hidden="true"
 				/>
 			</Link>
@@ -41,7 +41,7 @@ export function FooterSocial() {
 				className="group block"
 			>
 				<IconInstagram
-					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					className="transition-duration-300 group-hover:text-muted text-text xs:w-[24px] xs:h-[24px] h-[20px] w-[20px] transition-colors"
 					aria-hidden="true"
 				/>
 			</Link>
@@ -53,7 +53,7 @@ export function FooterSocial() {
 				className="group block"
 			>
 				<IconYouTube
-					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					className="transition-duration-300 group-hover:text-muted text-text xs:w-[24px] xs:h-[24px] h-[20px] w-[20px] transition-colors"
 					aria-hidden="true"
 				/>
 			</Link>
@@ -65,7 +65,7 @@ export function FooterSocial() {
 				className="group block"
 			>
 				<IconTelegram
-					className="transition-duration-300 group-hover:text-muted text-text transition-colors"
+					className="transition-duration-300 group-hover:text-muted text-text xs:w-[24px] xs:h-[24px] h-[20px] w-[20px] transition-colors"
 					aria-hidden="true"
 				/>
 			</Link>

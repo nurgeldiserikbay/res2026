@@ -1,14 +1,17 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
@@ -17,7 +20,44 @@ export function CitySymbols() {
 	const t = useTranslations()
 	const [isBeginning, setIsBeginning] = useState(false)
 	const [isEnd, setIsEnd] = useState(false)
-	const [activeSlide, setActiveSlide] = useState(0)
+	const [showNavigation, setShowNavigation] = useState(false)
+
+	const SectionRef = useRef<HTMLElement>(null)
+	const TitleRef = useRef<HTMLHeadingElement>(null)
+	const SwiperRef = useRef<HTMLDivElement>(null)
+
+	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
+
+	useGSAP(
+		() => {
+			if (!SwiperRef.current) return
+
+			const slides = SwiperRef.current.querySelectorAll('.swiper-slide')
+			slides.forEach((slide, index) => {
+				gsap.fromTo(
+					slide,
+					{ y: 50, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.8,
+						delay: 0.3 + index * 0.1,
+						ease: 'circ.out',
+						scrollTrigger: {
+							trigger: SectionRef.current,
+							start: 'top 80%',
+						},
+					},
+				)
+			})
+		},
+		{ scope: SectionRef },
+	)
+
+	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
+		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
+		setShowNavigation(count > spv)
+	}
 
 	const images = [
 		{
@@ -44,16 +84,37 @@ export function CitySymbols() {
 			image: `/imgs/usefulls/astana-symbol-4.png`,
 			style: `translate-y-[-6px]`,
 		},
+		{
+			id: 4,
+			title: t('pages.useful.astana.symbols.title5'),
+			image: `/imgs/usefulls/astana-symbol-5.png`,
+			style: `translate-y-[6px]`,
+		},
+		{
+			id: 5,
+			title: t('pages.useful.astana.symbols.title6'),
+			image: `/imgs/usefulls/astana-symbol-6.png`,
+			style: `translate-y-0`,
+		},
 	]
 
 	return (
-		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+		<section
+			ref={SectionRef}
+			className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+		>
 			<Container>
-				<h2 className="text-text 3xl:text-[48px] mb-[56px] text-[32px] leading-[1.2] font-bold xl:mb-[60px] xl:text-[36px] 2xl:text-[30px]">
+				<h2
+					ref={TitleRef}
+					className="mb-[56px] translate-y-[50px] text-[32px] leading-[1.2] font-bold text-text opacity-0 xl:mb-[60px] xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]"
+				>
 					{t('pages.useful.astana.attractionsAndSymbols.title')}
 				</h2>
 
-				<div>
+				<div
+					ref={SwiperRef}
+					className="relative w-full"
+				>
 					<Swiper
 						modules={[Navigation]}
 						className="w-full overflow-visible! rounded-[12px]"
@@ -78,13 +139,13 @@ export function CitySymbols() {
 						onSwiper={(swiper) => {
 							setIsBeginning(swiper.isBeginning)
 							setIsEnd(swiper.isEnd)
-							setActiveSlide(swiper.activeIndex)
+							updateShowNavigation(swiper, images.length)
 						}}
 						onSlideChange={(swiper) => {
 							setIsBeginning(swiper.isBeginning)
 							setIsEnd(swiper.isEnd)
-							setActiveSlide(swiper.activeIndex)
 						}}
+						onBreakpoint={(swiper) => updateShowNavigation(swiper, images.length)}
 					>
 						{images.map((item) => (
 							<SwiperSlide key={item.id}>
@@ -109,52 +170,53 @@ export function CitySymbols() {
 							</SwiperSlide>
 						))}
 					</Swiper>
-					{images?.length > 1 && (
-						<div className="mt-[75px] flex items-center justify-start gap-[20px] md:mt-[136px]">
-							<div className="flex items-center justify-start gap-[10px]">
-								<div id="city-symbols-swiper-button-prev">
-									{isBeginning ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
-										>
-											<IconArrowHead className="text-muted rotate-180 transform" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[82px] p-[8px]!"
-										>
-											<IconArrowHead className="rotate-180 transform" />
-										</ButtonDefault>
-									)}
-								</div>
-
-								<div id="city-symbols-swiper-button-next">
-									{isEnd ? (
-										<ButtonOutlined
-											icon={false}
-											className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
-										>
-											<IconArrowHead className="text-muted" />
-										</ButtonOutlined>
-									) : (
-										<ButtonDefault
-											icon={false}
-											className="h-[45px] w-[82px] p-[8px]!"
-										>
-											<IconArrowHead />
-										</ButtonDefault>
-									)}
-								</div>
+					<div
+						className={`mt-[75px] flex items-center justify-start gap-[20px] md:mt-[136px] ${!showNavigation ? 'hidden' : ''}`}
+						aria-hidden={!showNavigation}
+					>
+						<div className="flex items-center justify-start gap-[10px]">
+							<div id="city-symbols-swiper-button-prev">
+								{isBeginning ? (
+									<ButtonOutlined
+										icon={false}
+										className="pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]! text-muted"
+									>
+										<IconArrowHead className="rotate-180 transform text-muted" />
+									</ButtonOutlined>
+								) : (
+									<ButtonDefault
+										icon={false}
+										className="h-[45px] w-[82px] p-[8px]!"
+									>
+										<IconArrowHead className="rotate-180 transform" />
+									</ButtonDefault>
+								)}
 							</div>
-							<div className="text-muted-light text-[24px] leading-normal font-normal">
-								<span className="text-[24px] leading-normal font-normal text-[#02493F]">{activeSlide + 1}</span>
-								<span>/</span>
-								<span className="font-normal] text-[16px] leading-normal">{images?.length}</span>
+
+							<div id="city-symbols-swiper-button-next">
+								{isEnd ? (
+									<ButtonOutlined
+										icon={false}
+										className="pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]! text-muted"
+									>
+										<IconArrowHead className="text-muted" />
+									</ButtonOutlined>
+								) : (
+									<ButtonDefault
+										icon={false}
+										className="h-[45px] w-[82px] p-[8px]!"
+									>
+										<IconArrowHead />
+									</ButtonDefault>
+								)}
 							</div>
 						</div>
-					)}
+						{/* <div className="text-muted-light text-[24px] leading-normal font-normal">
+							<span className="text-[24px] leading-normal font-normal text-[#02493F]">{activeSlide + 1}</span>
+							<span>/</span>
+							<span className="font-normal] text-[16px] leading-normal">{images?.length}</span>
+						</div> */}
+					</div>
 				</div>
 			</Container>
 		</section>

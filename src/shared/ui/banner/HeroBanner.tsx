@@ -15,9 +15,18 @@ export interface HeroBannerProps {
 	breadcrumbs?: { label: string; href: string }[]
 	className?: string
 	subtitleClassName?: string
+	showOverlay?: boolean
 }
 
-export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = '', subtitleClassName = '' }: HeroBannerProps) {
+export function HeroBanner({
+	title,
+	subtitle,
+	bgImage,
+	breadcrumbs,
+	className = '',
+	subtitleClassName = '',
+	showOverlay = false,
+}: HeroBannerProps) {
 	const BannerRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	const SubtitleRef = useRef<HTMLParagraphElement>(null)
@@ -36,44 +45,50 @@ export function HeroBanner({ title, subtitle, bgImage, breadcrumbs, className = 
 	useAnimSlide(BreadcrumbsRef, { y: 50, delay: 0.2 })
 
 	return (
-		<section
-			ref={BannerRef}
-			data-animated-banner
-			className={[
-				`flex min-h-[567px] flex-col bg-cover bg-center lg:min-h-[795px]`,
-				!appConfig.isProduction ? `pt-[218px]` : `pt-[140px]`,
-				className,
-			]
-				.filter(Boolean)
-				.join(' ')}
-			style={{ backgroundImage: `url(${bgImage})` }}
-		>
-			<Container className="flex h-full grow flex-col items-center justify-center gap-[37px] pb-[140px] text-center md:gap-[57px] xl:gap-[87px] xl:pb-[200px]">
-				{breadcrumbs && breadcrumbs.length > 0 && (
+		<div className={['bg-secondary', !appConfig.isProduction ? `pt-[178px] sm:pt-[100px]` : `pt-[100px]`].join(' ')}>
+			<section
+				ref={BannerRef}
+				data-animated-banner
+				className={[`relative flex min-h-[567px] flex-col bg-cover bg-center pt-[55px] lg:min-h-[795px]`, className]
+					.filter(Boolean)
+					.join(' ')}
+				style={{ backgroundImage: `url(${bgImage})` }}
+			>
+				{showOverlay && (
 					<div
-						ref={BreadcrumbsRef}
-						className="translate-y-[50px] opacity-0"
-					>
-						<Breadcrumbs breadcrumbs={breadcrumbs} />
-					</div>
+						className="absolute inset-0 z-0"
+						style={{
+							background: `linear-gradient(to bottom, #02493F00, #02493F90)`,
+						}}
+					/>
 				)}
-				<div>
-					<h1
-						ref={TitleRef}
-						className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
-					>
-						{title}
-					</h1>
-					{subtitle && (
-						<p
-							ref={SubtitleRef}
-							className={`mx-auto mt-[30px] max-w-[830px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line text-white opacity-0 sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] ${subtitleClassName}`}
+				<Container className="relative z-10 flex h-full grow flex-col items-center justify-center gap-[37px] pb-[140px] text-center md:gap-[57px] xl:gap-[87px] xl:pb-[200px]">
+					{breadcrumbs && breadcrumbs.length > 0 && (
+						<div
+							ref={BreadcrumbsRef}
+							className="mb-[53px] translate-y-[50px] opacity-0 xl:gap-[30px]"
 						>
-							{subtitle}
-						</p>
+							<Breadcrumbs breadcrumbs={breadcrumbs} />
+						</div>
 					)}
-				</div>
-			</Container>
-		</section>
+					<div>
+						<h1
+							ref={TitleRef}
+							className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
+						>
+							{title}
+						</h1>
+						{subtitle && (
+							<p
+								ref={SubtitleRef}
+								className={`mx-auto mt-[30px] max-w-[830px] translate-y-[50px] text-[16px] leading-normal font-light whitespace-pre-line text-white opacity-0 sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] ${subtitleClassName}`}
+							>
+								{subtitle}
+							</p>
+						)}
+					</div>
+				</Container>
+			</section>
+		</div>
 	)
 }

@@ -7,6 +7,7 @@ import type { Locale } from '@/shared/config/i18n'
 import { GSAPProvider } from '@/shared/lib/gsap/provider'
 import GoogleTagManager from '@/shared/lib/metrics/GoogleTagManager'
 import YandexMetrica from '@/shared/lib/metrics/YandexMetrica'
+import { SchemaOrg } from '@/shared/lib/seo/SchemaOrg'
 import { QueriesProvider } from '@/shared/providers/QueriesProvider'
 import { Footer } from '@/widgets/footer/ui/Footer'
 import { Header } from '@/widgets/header/ui/Header'
@@ -79,6 +80,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 	const meta = messages.meta as {
 		title: string
 		description?: string
+		keywords?: string
 		siteName?: string
 		ogImageAlt?: string
 		ogImageTitle?: string
@@ -93,15 +95,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 	const ogImageUrl = `${baseUrl}/imgs/logotype.svg`
 	const ogLogoUrl = `${baseUrl}/imgs/logotype.svg`
 
+	const description = meta.description || meta.title
+
 	return {
 		title: meta.title,
-		description: meta.description || meta.title,
+		description,
+		keywords: meta.keywords,
 		alternates: {
 			canonical: canonicalUrl,
+			languages: {
+				'ru-RU': `${baseUrl}/ru`,
+				'kk-KZ': `${baseUrl}/kk`,
+				'en-US': `${baseUrl}/en`,
+				'x-default': `${baseUrl}/en`,
+			},
 		},
 		openGraph: {
 			title: meta.title,
-			description: meta.description || meta.title,
+			description,
 			siteName: meta.siteName || meta.title,
 			images: [
 				{
@@ -117,6 +128,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 		},
 		other: {
 			'og:logo': ogLogoUrl,
+			...(meta.keywords && { keywords: meta.keywords }),
 		},
 		twitter: {
 			card: 'summary_large_image',
@@ -148,9 +160,29 @@ export default async function RootLayout({
 }>) {
 	const { locale } = await params
 
+	const headersList = await headers()
+	const protocol = headersList.get('x-forwarded-proto') || 'https'
+	const host = headersList.get('host') || 'localhost:3000'
+	const baseUrl = `${protocol}://${host}`
+
+	// Загружаем сообщения для Schema.org
+	const messages = (await import(`../../../messages/${locale}.json`)).default
+	const meta = messages.meta as {
+		title: string
+		description?: string
+		siteName?: string
+	}
+	const organizationName = meta.siteName || meta.title
+	const organizationDescription = meta.description || meta.title
+
 	return (
 		<html lang={locale}>
 			<body className={`${HelveticaNeue.className}`}>
+				<SchemaOrg
+					baseUrl={baseUrl}
+					organizationName={organizationName}
+					organizationDescription={organizationDescription}
+				/>
 				<QueriesProvider>
 					<NextIntlClientProvider>
 						<GoogleTagManager />

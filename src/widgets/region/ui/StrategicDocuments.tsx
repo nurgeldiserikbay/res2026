@@ -16,7 +16,7 @@ export function StrategicDocuments({
 }: {
 	strategicVisionTitle: string
 	strategicVisionIntro: string
-	strategicDocuments: { id: number; title: string }[]
+	strategicDocuments: { id: number; title: string | React.ReactNode }[]
 }) {
 	const StrategicVisionRef = useRef<HTMLDivElement>(null)
 	const LogoRef = useRef<HTMLDivElement>(null)
@@ -83,15 +83,15 @@ export function StrategicDocuments({
 								{strategicVisionIntro}
 							</p>
 							<ul>
-								{strategicDocuments.map((document: { id: number; title: string }) => (
+								{strategicDocuments.map((document: { id: number; title: string | React.ReactNode }) => (
 									<li
 										key={document.id}
 										className="mb-[8px] flex items-center justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]"
 									>
-										<span className="bg-muted-light flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-justify text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
+										<span className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full bg-muted-light text-justify text-[13px] leading-normal font-normal text-black sm:h-[32px] sm:w-[32px] sm:text-[14px] md:h-[35px] md:w-[35px] md:text-[16px]">
 											{document.id}
 										</span>
-										{document.title}
+										<div>{document.title}</div>
 									</li>
 								))}
 							</ul>

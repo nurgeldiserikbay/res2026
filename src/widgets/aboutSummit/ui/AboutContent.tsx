@@ -119,7 +119,7 @@ export function AboutContent() {
 							{t.rich('pages.about.resText3', {
 								link: (chunks) => (
 									<LocalizedLink
-										href="/"
+										href="/about/preparation-process"
 										className="underline"
 									>
 										{chunks}

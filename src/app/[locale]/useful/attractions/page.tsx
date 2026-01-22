@@ -1,8 +1,10 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import { useSearchParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
 
 import { AttractionItem } from '@/entities/attractions/AttractionItem'
 import { getAttractions } from '@/entities/attractions/mocks'
@@ -16,6 +18,9 @@ export default function Page() {
 	const t = useTranslations()
 	const locale = useLocale() as 'ru' | 'kk' | 'en'
 	const searchParams = useSearchParams()
+
+	const SectionRef = useRef<HTMLElement>(null)
+	const GridRef = useRef<HTMLDivElement>(null)
 
 	// Получаем параметр страницы из URL
 	const currentPage = Number(searchParams.get('page') || '1')
@@ -35,6 +40,32 @@ export default function Page() {
 		return Math.ceil(allAttractions.length / ITEMS_PER_PAGE)
 	}, [allAttractions.length])
 
+	useGSAP(
+		() => {
+			if (!GridRef.current) return
+
+			const items = GridRef.current.querySelectorAll('a')
+			items.forEach((item, index) => {
+				gsap.fromTo(
+					item,
+					{ y: 50, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.8,
+						delay: 0.1 + index * 0.05,
+						ease: 'circ.out',
+						scrollTrigger: {
+							trigger: SectionRef.current,
+							start: 'top 80%',
+						},
+					},
+				)
+			})
+		},
+		{ dependencies: [paginatedAttractions], scope: SectionRef },
+	)
+
 	return (
 		<>
 			<PageBanner
@@ -42,9 +73,15 @@ export default function Page() {
 				breadcrumbs={[{ label: t('pages.useful.attractions.title'), href: '/useful/attractions' }]}
 			/>
 
-			<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+			<section
+				ref={SectionRef}
+				className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+			>
 				<Container>
-					<div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3 xl:gap-[60px]">
+					<div
+						ref={GridRef}
+						className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3 xl:gap-[60px]"
+					>
 						{paginatedAttractions.map((attraction) => (
 							<AttractionItem
 								key={attraction.id}

@@ -22,6 +22,13 @@ export const navItems: readonly NavItem[] = [
 		children: [
 			{ key: 'about.res', href: '/about', ready: true, showHeader: true, showFooter: true }, // RES 2026
 			{
+				key: 'about.exhibition',
+				href: '/about/exhibition',
+				ready: !appConfig.isProduction,
+				showHeader: !appConfig.isProduction,
+				showFooter: true,
+			}, // Exhibition
+			{
 				key: 'about.keyDirections',
 				href: '/about/key-directions',
 				ready: true,
@@ -73,12 +80,18 @@ export const navItems: readonly NavItem[] = [
 				showFooter: true,
 			}, // Kazakhstan
 			{ key: 'about.regionKyrgyzstan', href: '/about/region/kyrgyzstan', ready: false, showHeader: true, showFooter: true }, // Kyrgyzstan
-			{ key: 'about.regionTajikistan', href: '/about/region/tajikistan', ready: false, showHeader: true, showFooter: true }, // Tajikistan
+			{
+				key: 'about.regionTajikistan',
+				href: '/about/region/tajikistan',
+				ready: !appConfig.isProduction,
+				showHeader: true,
+				showFooter: true,
+			}, // Tajikistan
 			{ key: 'about.regionTurkmenistan', href: '/about/region/turkmenistan', ready: false, showHeader: true, showFooter: true }, // Turkmenistan
 			{
 				key: 'about.regionUzbekistan',
 				href: '/about/region/uzbekistan',
-				ready: !appConfig.isProduction,
+				ready: true,
 				showHeader: true,
 				showFooter: true,
 			}, // Uzbekistan

@@ -48,7 +48,7 @@ export function RegionTabs({ tabs }: { tabs: { id: number; title: string; href: 
 								href={item.href}
 								className={[
 									'cursor-pointer border-b-[3px] border-solid py-[20px] text-center text-[14px] leading-none font-medium whitespace-nowrap transition-colors sm:py-[23px] sm:text-[15px] md:py-[26px] md:text-[16px]',
-									isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text',
+									isActive ? 'border-b-secondary text-secondary' : 'border-b-text text-text hover:text-secondary hover:border-b-secondary',
 								].join(' ')}
 							>
 								{item.title}

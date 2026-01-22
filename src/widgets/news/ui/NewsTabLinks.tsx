@@ -57,7 +57,7 @@ export function NewsTabLinks() {
 						id={`news-tab-${tab.id}`}
 						className={[
 							'xs:text-[16px] box-border cursor-pointer border-b border-solid py-[26px] text-center text-[12px] leading-none font-medium transition-all duration-300 ease-out',
-							isActive ? `border-b-secondary text-secondary` : `border-b-text text-text`,
+							isActive ? `border-b-secondary text-secondary` : `border-b-text text-text hover:text-secondary hover:border-b-secondary`,
 						].join(` `)}
 					>
 						{tab.title}
