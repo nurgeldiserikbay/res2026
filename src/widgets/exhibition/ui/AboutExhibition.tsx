@@ -1,13 +1,55 @@
+'use client'
+
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { useRef } from 'react'
 
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
 import { PresidentAboutExb } from './PresidentAboutExb'
 
 export function AboutExhibition() {
 	const t = useTranslations()
+
+	const TitleRef = useRef<HTMLHeadingElement>(null)
+	const ContentRef = useRef<HTMLDivElement>(null)
+	const ImageRef = useRef<HTMLDivElement>(null)
+	const StatsRef = useRef<HTMLDivElement>(null)
+
+	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
+	useAnimSlide(ContentRef, { y: 50, delay: 0.2 })
+	useAnimSlide(ImageRef, { x: 50, delay: 0.3 })
+
+	// Animation for stats
+	useGSAP(
+		() => {
+			if (!StatsRef.current) return
+
+			const items = StatsRef.current.querySelectorAll('[data-stat-item]')
+			items.forEach((item, index) => {
+				gsap.fromTo(
+					item,
+					{ y: 50, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.8,
+						delay: 0.4 + index * 0.1,
+						ease: 'circ.out',
+						scrollTrigger: {
+							trigger: StatsRef.current,
+							start: 'top 80%',
+						},
+					},
+				)
+			})
+		},
+		{ dependencies: [], revertOnUpdate: true },
+	)
 
 	const stats = [
 		{
@@ -34,11 +76,17 @@ export function AboutExhibition() {
 				<div>
 					<PresidentAboutExb className="mb-[47px] lg:mb-[100px]" />
 
-					<h2 className="mb-[30px] text-[32px] leading-[1.2] font-bold text-text xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]">
+					<h2
+						ref={TitleRef}
+						className="mb-[30px] translate-y-[50px] text-[32px] leading-[1.2] font-bold text-text opacity-0 xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]"
+					>
 						{t('pages.exhibition.title')}
 					</h2>
 
-					<div className="flex flex-wrap items-center justify-between gap-[30px]">
+					<div
+						ref={ContentRef}
+						className="flex translate-y-[50px] flex-wrap items-center justify-between gap-[30px] opacity-0"
+					>
 						<Link
 							href="https://res2026expo.kz/"
 							target="_blank"
@@ -58,7 +106,10 @@ export function AboutExhibition() {
 					</div>
 				</div>
 
-				<div className="aspect-none relative z-1 w-full max-w-[715px] lg:aspect-[1.056] lg:translate-y-[-60px]">
+				<div
+					ref={ImageRef}
+					className="aspect-none relative z-1 w-full max-w-[715px] translate-x-[50px] opacity-0 lg:aspect-[1.056] lg:translate-y-[-60px]"
+				>
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
@@ -69,10 +120,14 @@ export function AboutExhibition() {
 				</div>
 			</Container>
 
-			<Container className="grid grid-cols-1 gap-x-[10px] gap-y-[10px] pt-[30px] sm:grid-cols-2 xl:grid-cols-4">
+			<Container
+				ref={StatsRef as React.RefObject<HTMLDivElement>}
+				className="grid grid-cols-1 gap-x-[10px] gap-y-[10px] pt-[30px] sm:grid-cols-2 xl:grid-cols-4"
+			>
 				{stats.map((stat, index) => (
 					<div
 						key={index}
+						data-stat-item
 						className="flex flex-col items-center justify-start rounded-[12px] bg-linear-to-b from-[#9ADDB8] to-[#D4D8C300] px-[30px] pt-[26px] pb-[26px] text-center"
 					>
 						<h3 className="text-[32px] leading-normal font-bold whitespace-nowrap text-secondary xs:text-[40px] lg:text-[48px]">
