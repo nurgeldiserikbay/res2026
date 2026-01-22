@@ -259,6 +259,14 @@ const partnersArray: PartnerGroup[] = [
 				width: 167,
 				height: 122,
 			},
+			{
+				id: 24,
+				image: '/imgs/logo/ndc-partner.svg',
+				title: 'ndc-partner',
+				link: '/ndc-partner',
+				width: 167,
+				height: 122,
+			},
 			// {
 			// 	id: 23,
 			// 	image: '/imgs/logo/WMO.svg',
@@ -330,7 +338,7 @@ export function PartnersList() {
 						key={partner.title}
 						className="mb-[30px] last:mb-0 xl:mb-[50px] 2xl:mb-[70px]"
 					>
-						<h2 className="text-primary font-regular mb-[40px] text-[24px] leading-none">{`\\\\${t(partner.title)}`}</h2>
+						<h2 className="font-regular mb-[40px] text-[24px] leading-none text-primary">{`\\\\${t(partner.title)}`}</h2>
 						<div className="w-full">
 							<div
 								ref={swiperRef}

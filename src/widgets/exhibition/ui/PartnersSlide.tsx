@@ -25,14 +25,14 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 	return (
 		<div
 			ref={ref}
-			className="block translate-y-[50px] opacity-0"
+			className="aspect-ratio-[2.049] flex max-h-[122px] w-full translate-y-[50px] items-center justify-center bg-[#D9D9D922] p-[5px] opacity-0"
 		>
 			<Image
 				src={item.image}
 				alt={item.title}
-				width={167}
+				width={122}
 				height={122}
-				className="block w-full sm:w-auto xl:h-[122px]"
+				className="block max-h-full object-contain sm:w-auto xl:h-[122px]"
 			/>
 		</div>
 	)
@@ -63,7 +63,7 @@ export function PartnersSlide({
 
 	return (
 		<div className={`relative flex w-full flex-col items-center gap-[40px] ${className}`}>
-			<h5 className="text-primary font-regular text-center text-[18px] leading-normal md:text-[20px] lg:text-[22px] xl:text-[24px]">
+			<h5 className="font-regular text-center text-[18px] leading-normal text-primary md:text-[20px] lg:text-[22px] xl:text-[24px]">
 				{t(title)}
 			</h5>
 			<div className="w-full">
@@ -150,9 +150,9 @@ export function PartnersSlide({
 								{isBeginning ? (
 									<ButtonOutlined
 										icon={false}
-										className="text-muted pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]!"
+										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
 									>
-										<IconArrowHead className="text-muted rotate-180 transform" />
+										<IconArrowHead className="rotate-180 transform text-muted" />
 									</ButtonOutlined>
 								) : (
 									<ButtonDefault
@@ -168,7 +168,7 @@ export function PartnersSlide({
 								{isEnd ? (
 									<ButtonOutlined
 										icon={false}
-										className="text-muted pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]!"
+										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
 									>
 										<IconArrowHead className="text-muted" />
 									</ButtonOutlined>

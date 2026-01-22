@@ -39,31 +39,33 @@ export function ExhibitionBanner() {
 				ref={BannerRef}
 				data-animated-banner
 				className={[
-					`3xl:pt-[158px] flex min-h-[567px] flex-col bg-cover bg-center pt-[73px] pb-[65px] lg:min-h-[890px] lg:pt-[100px] xl:pt-[120px] 2xl:pt-[140px]`,
+					`flex min-h-[567px] flex-col bg-cover bg-center pt-[73px] pb-[65px] lg:min-h-[890px] lg:pt-[100px] xl:pt-[120px] 2xl:pt-[140px] 3xl:pt-[158px]`,
 				].join(' ')}
 				style={{ backgroundImage: `url(${bgImage})` }}
 			>
-				<Container className="flex h-full grow flex-col items-center justify-start gap-[30px]">
-					<h1
-						ref={TitleRef}
-						className="xs:text-[48px] translate-y-[50px] text-[32px] leading-none font-bold text-white opacity-0 sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
-					>
-						{t(`pages.exhibition.title`)}
-					</h1>
+				<Container className="flex h-full grow flex-col items-center justify-start">
+					<div>
+						<h1
+							ref={TitleRef}
+							className="mb-[6px] w-full translate-y-[50px] text-center text-[32px] leading-none font-bold text-white opacity-0 xs:text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] 2xl:text-[128px]"
+						>
+							{t(`pages.exhibition.title`)}
+						</h1>
 
-					<p
-						ref={SubtitleRef}
-						className="xs:text-[20px] mx-auto mb-[30px] max-w-[733px] translate-y-[50px] text-center text-[16px] leading-normal font-normal text-white opacity-0 lg:text-[22px] xl:text-[32px]"
-					>
-						{t(`pages.exhibition.subtitle`)}
-					</p>
+						<p
+							ref={SubtitleRef}
+							className="mx-auto mb-[36px] max-w-[733px] translate-y-[50px] text-center text-[16px] leading-normal font-normal text-white opacity-0 xs:text-[20px] lg:text-[22px] xl:text-[32px]"
+						>
+							{t(`pages.exhibition.subtitle`)}
+						</p>
+					</div>
 
 					<div
 						ref={BannerDateRef}
 						className="mb-[25.5px] flex translate-y-[-180px] transform items-center justify-center gap-[30px] opacity-0"
 					>
 						<div
-							className="xs:text-[64px] align-top text-[44px] leading-none font-bold sm:text-[72px] md:text-[80px] xl:text-[96px]"
+							className="align-top text-[44px] leading-none font-bold xs:text-[64px] sm:text-[72px] md:text-[80px] xl:text-[96px]"
 							style={{
 								background: 'linear-gradient(to bottom, #E0EAB8 0%, rgba(212, 216, 195, 0) 95%)',
 								WebkitBackgroundClip: 'text',
@@ -74,7 +76,7 @@ export function ExhibitionBanner() {
 						>
 							22-24
 						</div>
-						<div className="xs:text-[20px] text-[16px] leading-none font-light text-white md:text-[22px] xl:text-[24px]">
+						<div className="text-[16px] leading-none font-light text-white xs:text-[20px] md:text-[22px] xl:text-[24px]">
 							<div className="opacity-40">{t('titles.april')}</div>
 							<div>{t('titles.eventAddress')}</div>
 						</div>

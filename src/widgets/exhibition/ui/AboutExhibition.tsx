@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
 import { Container } from '@/shared/ui/container/container'
@@ -31,21 +32,38 @@ export function AboutExhibition() {
 		<section className="relative z-1 bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! lg:flex-nowrap">
 				<div>
-					<PresidentAboutExb className="mb-[47px] lg:mb-[87px]" />
+					<PresidentAboutExb className="mb-[47px] lg:mb-[100px]" />
 
-					<h2 className="text-text 3xl:text-[48px] mb-[30px] text-[32px] leading-[1.2] font-bold xl:text-[36px] 2xl:text-[30px]">
+					<h2 className="mb-[30px] text-[32px] leading-[1.2] font-bold text-text xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]">
 						{t('pages.exhibition.title')}
 					</h2>
 
-					<p className="text-text max-w-[810px] text-[16px] leading-normal font-normal whitespace-pre-line">{t('pages.exhibition.text')}</p>
+					<div className="flex flex-wrap items-center justify-between gap-[30px]">
+						<Link
+							href="https://res2026expo.kz/"
+							target="_blank"
+							className="block shrink-0"
+						>
+							<Image
+								src="/imgs/RES_B.svg"
+								alt="Logo"
+								width={685}
+								height={253}
+								className="inline-block max-w-[210px]"
+							/>
+						</Link>
+						<p className="max-w-[839px] text-[16px] leading-normal font-normal whitespace-pre-line text-text">
+							{t('pages.exhibition.text')}
+						</p>
+					</div>
 				</div>
 
-				<div className="relative z-1 w-full max-w-[715px] lg:aspect-[1.11]">
+				<div className="aspect-none relative z-1 w-full max-w-[715px] lg:aspect-[1.056] lg:translate-y-[-60px]">
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
 						width={715}
-						height={834}
+						height={813}
 						className="bottom-0 left-0 w-full lg:absolute"
 					/>
 				</div>
@@ -57,10 +75,10 @@ export function AboutExhibition() {
 						key={index}
 						className="flex flex-col items-center justify-start rounded-[12px] bg-linear-to-b from-[#9ADDB8] to-[#D4D8C300] px-[30px] pt-[26px] pb-[26px] text-center"
 					>
-						<h3 className="text-secondary xs:text-[40px] text-[32px] leading-normal font-bold whitespace-nowrap lg:text-[48px]">
+						<h3 className="text-[32px] leading-normal font-bold whitespace-nowrap text-secondary xs:text-[40px] lg:text-[48px]">
 							{stat.title}
 						</h3>
-						<div className="text-secondary text-[16px] leading-normal font-normal">{stat.text}</div>
+						<div className="text-[16px] leading-normal font-normal text-secondary">{stat.text}</div>
 					</div>
 				))}
 			</Container>

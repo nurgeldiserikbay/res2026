@@ -85,7 +85,8 @@
 		"download": "Download",
 		"book": "Book",
 		"downloadPdf": "Download PDF",
-		"share": "Share"
+		"share": "Share",
+		"lookAtMap": "Look at the map"
 	},
 	"titles": {
 		"slogan": "Shared vision for a Resilient Future",
@@ -631,11 +632,11 @@
 		},
 		"exhibition": {
 			"title": "About the Exhibition",
-			"subtitle": "RES 2026 EXPO – The Ecological Future of Central Asia",
-			"presidentText": "“Kazakhstan, in partnership with the UN and other international organizations, will host the Regional Environmental Summit in Astana in April next year. As part of our broader environmental commitments, Kazakhstan is implementing the nationwide ‘Taza Qazaqstan’ campaign. This national movement brings together millions of volunteers engaged in clean-up activities, waste reduction, and environmental education.”",
+			"subtitle": "Exhibition of Green and Environmental Technologies within the framework of the Regional Environmental Summit of Central Asian Countries 2026 EXPO",
+			"presidentText": "«Kazakhstan firmly believes that only collective action and cooperation can lead to addressing the climate crisis. In order to strengthen the momentum of climate action in Central Asia, we have also decided to hold a Regional Climate Summit in Kazakhstan in 2026 under the auspices of the UN.»",
 			"presidentName": "Kassym-Jomart Tokayev",
 			"presidentPosition": "President of Kazakhstan",
-			"presidentTextFrom": "From the address at the General Debate of the 80th Session of the United Nations General Assembly, New York, USA",
+			"presidentTextFrom": "World Summit on Climate Action",
 			"text": "The main mission of RES 2026 EXPO is to unite governments, businesses, the scientific community, and international organizations around a shared goal — the transition to environmentally responsible development and a green economy. The exhibition will serve as a platform where global environmental challenges are transformed into concrete technologies, projects, and investments.",
 			"stats": {
 				"title1": "20,000+",
@@ -659,10 +660,45 @@
 				"fact4Title": "New opportunities",
 				"fact4Text": "Build partnerships, launch projects, and grow your business in the green economy sector"
 			},
+			"participateWays": {
+				"title": "Ways to Participate",
+				"item1": "Participation with \n a stand",
+				"item2": "Sponsorship \n participation",
+				"item3": "Participation in the business \n program",
+				"item4": "Partnership and \n special formats",
+				"item5": "Delegate \n participation"
+			},
+			"specialProgramms": {
+				"title": "Special Programs",
+				"item1": "Invest Forum",
+				"item1Text": "This is a business platform within RES 2026 EXPO, focused on attracting investments in projects in sustainable development and green economy. The forum will bring together representatives of government agencies, international financial institutions, business and investors to discuss priority financing areas, present promising projects and develop partnerships in environmental and climate initiatives.",
+				"item2": "Turan film festival",
+				"item2Text": "This is a professional cultural platform aimed at promoting cinema as a tool for understanding environmental and social challenges of our time. Within the framework of the exhibition, the festival will present selected film projects dedicated to sustainable development, environmental protection and the future of Central Asia, contributing to meaningful dialogue between representatives of creative industries, the expert community and exhibition participants.",
+				"item3": "Eco startup competition",
+				"item3Text": "A professional platform for presenting environmental startups and advanced solutions. Participants have the opportunity to present projects, exchange experiences and demonstrate innovations that can influence the sustainable development of the region.",
+				"item4": "Fashion show",
+				"item4Text": "The runway will feature collections created using sustainable materials, recycled fabrics and natural dyes. Fashion Show emphasizes the connection between culture, nature and innovation.",
+				"item5": "Art exhibition",
+				"item5Text": "An art exhibition dedicated to the theme of nature, sustainable future and environmental values. Within the framework of the exhibition, works by contemporary artists and author workshops of Central Asia are presented, revealing environmental issues.",
+				"item6": "Mother earth day (greening ceremony)",
+				"item6Text": "An environmental campaign aimed at supporting urban green areas and forming a culture of conscious attitude towards the environment. Participants will be able to take part in joint tree planting.",
+				"item7": "Sustainable Gastronomy & Cultural Experience",
+				"item7Text": "A gastronomic and cultural space dedicated to the principles of sustainable nutrition and national cuisine. Within the framework of the zone, visitors will be able to get acquainted with local products, traditional dishes prepared using environmentally friendly technologies, waste-free approaches and sustainable practices. The exhibition will also emphasize the role of small and local businesses in the development of green gastronomy and the preservation of cultural heritage."
+			},
+			"contacts": {
+				"title": "Organizers and Contacts",
+				"text": "The exhibition operators are <primary>Businessfirst LLP</primary> — a team that confirms its expertise through actions and creates value for those who choose a future based on responsibility, efficiency and international cooperation"
+			},
 			"eventPlace": {
 				"title": "Venue",
 				"text": "RES2026 will take place at a modern congress and exhibition venue in Astana that meets international standards for business and scientific events.",
-				"text2": "You can also explore the exhibition map."
+				"text2": "You can also explore the exhibition map.",
+				"time1Title": "22 апреля 2026 года",
+				"time1Text": "Ср. 11:00-18:00",
+				"time2Title": "23 апреля 2026 года",
+				"time2Text": "Чт. 09:00-18:00",
+				"time3Title": "24 апреля 2026 года",
+				"time3Text": "Пт. 09:00-16:00"
 			},
 			"themeZones": {
 				"title": "Thematic Zones",

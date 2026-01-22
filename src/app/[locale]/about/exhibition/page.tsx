@@ -3,9 +3,12 @@ import { generateMetadata as generateMetadataUtil } from '@/shared/lib/seo/gener
 import { AboutExhibition } from '@/widgets/exhibition/ui/AboutExhibition'
 import { EventPlace } from '@/widgets/exhibition/ui/EventPlace'
 import { ExbFactsAndNumbers } from '@/widgets/exhibition/ui/ExbFactsAndNumbers'
+import { ExhContacts } from '@/widgets/exhibition/ui/ExhContacts'
 import { ExhibitionBanner } from '@/widgets/exhibition/ui/ExhibitionBanner'
+import { ParticipateWays } from '@/widgets/exhibition/ui/ParticipateWays'
 import { PartnersBlock } from '@/widgets/exhibition/ui/PartnersBlock'
 import { QuotsList } from '@/widgets/exhibition/ui/QuotsList'
+import { SpecialProgramms } from '@/widgets/exhibition/ui/SpecialProgramms'
 import { ThemeZones } from '@/widgets/exhibition/ui/ThemeZones'
 
 import type { Metadata } from 'next'
@@ -42,6 +45,12 @@ export default function Page() {
 			<EventPlace />
 
 			<ThemeZones />
+
+			<ParticipateWays />
+
+			<SpecialProgramms />
+
+			<ExhContacts />
 
 			<PartnersBlock />
 		</>

@@ -27,29 +27,21 @@ export function PresidentAboutExb({ className }: { className?: string }) {
 			<div className="relative z-1 flex flex-wrap items-start justify-center gap-[20px] sm:gap-[30px] md:gap-[50px] 2xl:flex-nowrap">
 				<Image
 					ref={PresidentAboutExbImgRef}
-					src="/imgs/president-img-mob.png"
-					alt="About President"
-					width={328}
-					height={240}
-					className="block w-full lg:hidden"
-				/>
-				<Image
-					ref={PresidentAboutExbImgRef}
-					src="/imgs/president-img.jpg"
+					src="/imgs/exhibition/president-img.png"
 					alt="About President"
 					width={213}
-					height={309}
-					className="hidden w-full max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px] lg:block"
+					height={267}
+					className="block max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 				/>
 				<div className="w-full max-w-[631px]">
 					<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
 						{t('pages.exhibition.presidentText')}
 					</div>
-					<div className="text-primary xs:text-[18px] mb-[5px] text-[16px] leading-normal font-bold md:text-[20px] lg:text-[22px] xl:text-[24px]">
+					<div className="mb-[5px] text-[16px] leading-normal font-bold text-primary xs:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]">
 						{t(`pages.exhibition.presidentName`)}
 					</div>
-					<div className="text-primary mb-[5px] text-[16px] leading-normal font-thin">{t('pages.exhibition.presidentPosition')}</div>
-					<div className="text-primary max-w-[428px] text-[16px] leading-normal">{t('pages.exhibition.presidentTextFrom')}</div>
+					<div className="mb-[5px] text-[16px] leading-normal font-thin text-primary">{t('pages.exhibition.presidentPosition')}</div>
+					<div className="max-w-[428px] text-[16px] leading-normal text-primary">{t('pages.exhibition.presidentTextFrom')}</div>
 				</div>
 			</div>
 		</div>
