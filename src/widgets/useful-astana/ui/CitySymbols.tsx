@@ -1,14 +1,17 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
@@ -18,6 +21,38 @@ export function CitySymbols() {
 	const [isBeginning, setIsBeginning] = useState(false)
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
+
+	const SectionRef = useRef<HTMLElement>(null)
+	const TitleRef = useRef<HTMLHeadingElement>(null)
+	const SwiperRef = useRef<HTMLDivElement>(null)
+
+	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
+
+	useGSAP(
+		() => {
+			if (!SwiperRef.current) return
+
+			const slides = SwiperRef.current.querySelectorAll('.swiper-slide')
+			slides.forEach((slide, index) => {
+				gsap.fromTo(
+					slide,
+					{ y: 50, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.8,
+						delay: 0.3 + index * 0.1,
+						ease: 'circ.out',
+						scrollTrigger: {
+							trigger: SectionRef.current,
+							start: 'top 80%',
+						},
+					},
+				)
+			})
+		},
+		{ scope: SectionRef },
+	)
 
 	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
 		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
@@ -64,13 +99,22 @@ export function CitySymbols() {
 	]
 
 	return (
-		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
+		<section
+			ref={SectionRef}
+			className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]"
+		>
 			<Container>
-				<h2 className="text-text 3xl:text-[48px] mb-[56px] text-[32px] leading-[1.2] font-bold xl:mb-[60px] xl:text-[36px] 2xl:text-[30px]">
+				<h2
+					ref={TitleRef}
+					className="mb-[56px] translate-y-[50px] text-[32px] leading-[1.2] font-bold text-text opacity-0 xl:mb-[60px] xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]"
+				>
 					{t('pages.useful.astana.attractionsAndSymbols.title')}
 				</h2>
 
-				<div>
+				<div
+					ref={SwiperRef}
+					className="relative w-full"
+				>
 					<Swiper
 						modules={[Navigation]}
 						className="w-full overflow-visible! rounded-[12px]"
@@ -135,9 +179,9 @@ export function CitySymbols() {
 								{isBeginning ? (
 									<ButtonOutlined
 										icon={false}
-										className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
+										className="pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]! text-muted"
 									>
-										<IconArrowHead className="text-muted rotate-180 transform" />
+										<IconArrowHead className="rotate-180 transform text-muted" />
 									</ButtonOutlined>
 								) : (
 									<ButtonDefault
@@ -153,7 +197,7 @@ export function CitySymbols() {
 								{isEnd ? (
 									<ButtonOutlined
 										icon={false}
-										className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
+										className="pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]! text-muted"
 									>
 										<IconArrowHead className="text-muted" />
 									</ButtonOutlined>

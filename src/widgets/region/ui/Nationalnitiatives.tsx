@@ -1,13 +1,16 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
+import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 import { Container } from '@/shared/ui/container/container'
@@ -23,19 +26,60 @@ export function Nationalnitiatives({
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
 
+	const SectionRef = useRef<HTMLElement>(null)
+	const TitleRef = useRef<HTMLHeadingElement>(null)
+	const SwiperRef = useRef<HTMLDivElement>(null)
+
+	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
+
+	useGSAP(
+		() => {
+			if (!SwiperRef.current) return
+
+			const slides = SwiperRef.current.querySelectorAll('.swiper-slide')
+			slides.forEach((slide, index) => {
+				gsap.fromTo(
+					slide,
+					{ y: 50, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						duration: 0.8,
+						delay: 0.3 + index * 0.1,
+						ease: 'circ.out',
+						scrollTrigger: {
+							trigger: SectionRef.current,
+							start: 'top 80%',
+						},
+					},
+				)
+			})
+		},
+		{ scope: SectionRef },
+	)
+
 	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
 		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
 		setShowNavigation(count > spv)
 	}
 
 	return (
-		<section className="3xl:pt-[100px] bg-white pt-[50px] md:pt-[60px] 2xl:pt-[80px]">
+		<section
+			ref={SectionRef}
+			className="bg-white pt-[50px] md:pt-[60px] 2xl:pt-[80px] 3xl:pt-[100px]"
+		>
 			<Container>
-				<h2 className="mb-[30px] text-left text-[24px] leading-normal font-bold md:mb-[40px] md:text-[28px] lg:mb-[50px] lg:text-[32px] 2xl:mb-[60px]">
+				<h2
+					ref={TitleRef}
+					className="mb-[30px] translate-y-[50px] text-left text-[24px] leading-normal font-bold opacity-0 md:mb-[40px] md:text-[28px] lg:mb-[50px] lg:text-[32px] 2xl:mb-[60px]"
+				>
 					{title}
 				</h2>
 
-				<div className="relative w-full">
+				<div
+					ref={SwiperRef}
+					className="relative w-full"
+				>
 					<Swiper
 						modules={[Navigation]}
 						slidesPerView={1}
@@ -79,8 +123,8 @@ export function Nationalnitiatives({
 										height={310}
 										className="mb-[30px] aspect-407/310 w-full rounded-[12px] object-cover"
 									/>
-									<h3 className="text-text mb-[10px] text-[20px] leading-normal font-bold">{item.title}</h3>
-									<p className="text-text text-[16px] leading-normal font-normal">{item.description}</p>
+									<h3 className="mb-[10px] text-[20px] leading-normal font-bold text-text">{item.title}</h3>
+									<p className="text-[16px] leading-normal font-normal text-text">{item.description}</p>
 								</div>
 							</SwiperSlide>
 						))}
@@ -94,9 +138,9 @@ export function Nationalnitiatives({
 								{isBeginning ? (
 									<ButtonOutlined
 										icon={false}
-										className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
+										className="pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]! text-muted"
 									>
-										<IconArrowHead className="text-muted rotate-180 transform" />
+										<IconArrowHead className="rotate-180 transform text-muted" />
 									</ButtonOutlined>
 								) : (
 									<ButtonDefault
@@ -111,7 +155,7 @@ export function Nationalnitiatives({
 								{isEnd ? (
 									<ButtonOutlined
 										icon={false}
-										className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]!"
+										className="pointer-events-none box-border h-[45px] w-[82px] cursor-default p-[8px]! text-muted"
 									>
 										<IconArrowHead className="text-muted" />
 									</ButtonOutlined>
