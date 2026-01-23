@@ -1,3 +1,20 @@
+/**
+ * Скрипт для генерации JSON файлов индекса поиска из sitemap.xml
+ * 
+ * Генерирует файлы в два места:
+ * 1. src/shared/lib/search/data/ - основной источник (source of truth)
+ * 2. public/search/ - копия для fallback в production
+ * 
+ * Использование:
+ *   pnpm build:search
+ *   или
+ *   tsx scripts/build-search-from-sitemap.ts
+ * 
+ * Переменные окружения:
+ *   SITE_URL - базовый URL сайта (по умолчанию: http://localhost:3000)
+ *   SITEMAP_PATH - путь к sitemap.xml (по умолчанию: http://localhost:3000/sitemap.xml)
+ */
+
 import * as cheerio from 'cheerio'
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -142,6 +159,9 @@ async function main() {
 		en: [],
 	}
 
+	// Отслеживаем уже обработанные ID для предотвращения дубликатов
+	const seenIds = new Set<string>()
+
 	for (const fullUrl of urls) {
 		const u = new URL(fullUrl)
 		const locale = getLocaleFromPathname(u.pathname, locales)
@@ -149,6 +169,15 @@ async function main() {
 		// если у тебя английский без префикса, см. блок ниже (комментарий)
 		if (!locale) continue
 
+		const docId = `${locale}:${u.pathname}`
+		
+		// Skip if we've already processed this ID
+		if (seenIds.has(docId)) {
+			console.warn(`[skip duplicate] ${fullUrl} (ID: ${docId})`)
+			continue
+		}
+
+		seenIds.add(docId)
 		const localUrl = toLocalUrl(fullUrl)
 
 		try {
@@ -161,7 +190,7 @@ async function main() {
 			const url = u.pathname
 
 			docsByLocale[locale].push({
-				id: `${locale}:${u.pathname}`,
+				id: docId,
 				locale,
 				url,
 				title,
@@ -176,14 +205,27 @@ async function main() {
 		}
 	}
 
-	const outDir = path.join(process.cwd(), 'public', 'search')
-	await fs.mkdir(outDir, { recursive: true })
+	// Основной источник данных - src/shared/lib/search/data/
+	const sourceDir = path.join(process.cwd(), 'src', 'shared', 'lib', 'search', 'data')
+	await fs.mkdir(sourceDir, { recursive: true })
+
+	// Также копируем в public/search/ для production (fallback)
+	const publicDir = path.join(process.cwd(), 'public', 'search')
+	await fs.mkdir(publicDir, { recursive: true })
 
 	for (const locale of locales) {
-		const outPath = path.join(outDir, `index-${locale}.json`)
-		await fs.writeFile(outPath, JSON.stringify(docsByLocale[locale], null, 2), 'utf-8')
-		 
-		console.log(`[write] ${outPath}: ${docsByLocale[locale].length} docs`)
+		const sourcePath = path.join(sourceDir, `index-${locale}.json`)
+		const publicPath = path.join(publicDir, `index-${locale}.json`)
+		
+		const jsonContent = JSON.stringify(docsByLocale[locale], null, 2)
+		
+		// Записываем в основной источник
+		await fs.writeFile(sourcePath, jsonContent, 'utf-8')
+		console.log(`[write] ${sourcePath}: ${docsByLocale[locale].length} docs`)
+		
+		// Копируем в public для fallback
+		await fs.writeFile(publicPath, jsonContent, 'utf-8')
+		console.log(`[copy] ${publicPath}: ${docsByLocale[locale].length} docs`)
 	}
 }
 

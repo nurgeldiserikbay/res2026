@@ -10,14 +10,15 @@ const cache = globalThis as unknown as {
 
 /**
  * Загружает JSON файл индекса поиска
- * Пытается загрузить из public/search/ (для production) или из src/shared/lib/search/data/ (для development)
+ * Основной источник: src/shared/lib/search/data/ (source of truth)
+ * Fallback: public/search/ (для совместимости)
  */
 function loadSearchIndex(locale: string): Doc[] {
 	const possiblePaths = [
-		// Production путь (файлы копируются в public/)
-		join(process.cwd(), 'public', 'search', `index-${locale}.json`),
-		// Development путь (исходные файлы)
+		// Основной источник данных (source of truth)
 		join(process.cwd(), 'src', 'shared', 'lib', 'search', 'data', `index-${locale}.json`),
+		// Fallback для production (если файлы скопированы в public/)
+		join(process.cwd(), 'public', 'search', `index-${locale}.json`),
 	]
 
 	for (const filePath of possiblePaths) {
@@ -56,6 +57,24 @@ export function getSearch(locale: string) {
 			if (!Array.isArray(docs)) {
 				console.warn(`Search index for locale "${locale}" is not an array. Using empty array.`)
 				docs = []
+			} else {
+				// Deduplicate by ID to prevent MiniSearch errors
+				const seenIds = new Set<string>()
+				const deduplicated: Doc[] = []
+				for (const doc of docs) {
+					if (!seenIds.has(doc.id)) {
+						seenIds.add(doc.id)
+						deduplicated.push(doc)
+					} else {
+						console.warn(`Duplicate document ID found and removed: ${doc.id}`)
+					}
+				}
+				if (deduplicated.length !== docs.length) {
+					console.warn(
+						`Removed ${docs.length - deduplicated.length} duplicate(s) from search index for locale "${locale}"`
+					)
+				}
+				docs = deduplicated
 			}
 		} catch (error) {
 			console.error(`Error loading search index for locale "${locale}":`, error)
