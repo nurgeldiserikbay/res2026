@@ -18,7 +18,7 @@ export function getSearch(locale: string) {
     try {
       const fileContent = fs.readFileSync(p, { encoding: "utf-8" });
       docs = JSON.parse(fileContent)
-      
+
       // Валидация структуры данных
       if (!Array.isArray(docs)) {
         console.warn(`Search index for locale "${locale}" is not an array. Using empty array.`)
@@ -32,11 +32,25 @@ export function getSearch(locale: string) {
     const ms = new MiniSearch<Doc>({
       fields: ["title", "content"], // Поиск по title и content
       storeFields: ["title", "content", "url", "locale"], // Храним все поля для возврата
-      searchOptions: { prefix: true, fuzzy: 0.2 },
+      // Настройки токенизации для лучшей работы с русским языком
+      tokenize: (text) => {
+        // Разбиваем текст на слова (поддерживает кириллицу, латиницу, цифры)
+        // Используем более универсальную регулярку для кириллицы
+        return text.toLowerCase().match(/[а-яёa-z0-9]+/gi) || []
+      },
+      // Настройки поиска по умолчанию
+      searchOptions: {
+        prefix: true,
+        fuzzy: 0.2,
+        boost: { title: 2 }, // Увеличиваем вес заголовка
+      },
     })
 
     if (docs.length > 0) {
       ms.addAll(docs)
+      console.log(`Search index loaded for locale "${locale}": ${docs.length} documents`)
+    } else {
+      console.warn(`No documents found for locale "${locale}"`)
     }
     
     cache.__search[locale] = ms

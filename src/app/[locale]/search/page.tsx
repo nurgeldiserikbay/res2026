@@ -2,10 +2,9 @@
 
 import { useSearchParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 import { Link } from '@/i18n/navigation'
-import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { PageBanner } from '@/shared/ui/banner'
 import { Container } from '@/shared/ui/container/container'
 import { MainPagination } from '@/shared/ui/pagination/MainPagination'
@@ -44,9 +43,6 @@ export default function SearchPage() {
 	const [hasSearched, setHasSearched] = useState(false)
 	const [error, setError] = useState<string | null>(null)
 
-	const resultsRef = useRef<HTMLDivElement>(null)
-	useAnimSlide(resultsRef, { y: 50, delay: 0.1 })
-
 	const performSearch = useCallback(async (searchQuery: string, currentPage: number = 1) => {
 		// Валидация на клиенте
 		if (!searchQuery || searchQuery.trim().length < 2) {
@@ -65,13 +61,14 @@ export default function SearchPage() {
 		try {
 			const apiUrl = `/api/search?q=${encodeURIComponent(searchQuery.trim())}&locale=${locale}&page=${currentPage}`
 			const response = await fetch(apiUrl)
-
+			console.log("response", response)
 			if (!response.ok) {
 				throw new Error(`Search failed: ${response.status}`)
 			}
 
 			const data: SearchResponse = await response.json()
 
+			console.log("data", data)
 			if (data.error) {
 				setError(data.error)
 				setResults([])
@@ -131,8 +128,6 @@ export default function SearchPage() {
 
 					{hasSearched && !loading && !error && (
 						<div
-							ref={resultsRef}
-							className="translate-y-[50px] opacity-0"
 						>
 							{query && (
 								<div className="mb-[40px]">

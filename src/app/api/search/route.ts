@@ -62,7 +62,7 @@ export async function GET(req: Request) {
     const { searchParams } = new URL(req.url)
     const q = (searchParams.get("q") ?? "").trim()
     const locale = (searchParams.get("locale") ?? "en").toLowerCase()
-    
+
     // Параметры пагинации
     const page = Math.max(1, Number(searchParams.get("page")) || 1)
     const perPage = Math.min(
@@ -90,10 +90,20 @@ export async function GET(req: Request) {
     const ms = getSearch(locale)
 
     // Выполняем поиск по title и content
+    // Используем более гибкие настройки поиска
     const searchResults = ms.search(q, {
       prefix: true,
       fuzzy: 0.2,
+      boost: { title: 2 }, // Увеличиваем вес совпадений в заголовке
     })
+
+    console.log(`Search query: "${q}", locale: "${locale}", results: ${searchResults.length}`)
+    
+    // Отладочная информация при отсутствии результатов
+    if (searchResults.length === 0) {
+      console.log(`No results found for query: "${q}"`)
+      console.log(`Try searching with different terms or check if documents are indexed correctly.`)
+    }
 
     // Вычисляем пагинацию
     const total = searchResults.length
