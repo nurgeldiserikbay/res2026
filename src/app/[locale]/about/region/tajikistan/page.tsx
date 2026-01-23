@@ -198,8 +198,18 @@ export default function Page() {
 
 			<SingleNationalBanner
 				title={t(`pages.regions.tajikistan.etc.nationalInitiativesTitle`)}
-				subtitle={t(`pages.regions.tajikistan.nationalInitiativesData.0.title`)}
-				text={t(`pages.regions.tajikistan.nationalInitiativesData.0.text`)}
+				items={[
+					{
+						id: 1,
+						title: t(`pages.regions.tajikistan.nationalInitiativesData.0.title`),
+						text: t(`pages.regions.tajikistan.nationalInitiativesData.0.text`),
+					},
+					{
+						id: 2,
+						title: t(`pages.regions.tajikistan.nationalInitiativesData.1.title`),
+						text: t(`pages.regions.tajikistan.nationalInitiativesData.1.text`),
+					},
+				]}
 			/>
 		</>
 	)
