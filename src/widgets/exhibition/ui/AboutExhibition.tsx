@@ -30,7 +30,7 @@ export function AboutExhibition() {
 
 	return (
 		<section className="relative z-1 bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! lg:flex-nowrap">
+			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! xl:flex-nowrap">
 				<div>
 					<PresidentAboutExb className="mb-[47px] lg:mb-[100px]" />
 
@@ -38,7 +38,7 @@ export function AboutExhibition() {
 						{t('pages.exhibition.title')}
 					</h2>
 
-					<div className="flex flex-wrap items-center justify-between gap-[30px]">
+					<div className="flex flex-wrap items-center justify-between gap-[30px] md:flex-nowrap lg:flex-wrap 2xl:flex-nowrap">
 						<Link
 							href="https://res2026expo.kz/"
 							target="_blank"
@@ -58,13 +58,13 @@ export function AboutExhibition() {
 					</div>
 				</div>
 
-				<div className="aspect-none relative z-1 w-full max-w-[715px] lg:aspect-[1.056] lg:translate-y-[-60px]">
+				<div className="aspect-none relative z-1 w-full max-w-[715px] xl:aspect-[1.056] xl:translate-y-[-60px]">
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
 						width={715}
 						height={813}
-						className="bottom-0 left-0 w-full lg:absolute"
+						className="bottom-0 left-0 w-full xl:absolute"
 					/>
 				</div>
 			</Container>

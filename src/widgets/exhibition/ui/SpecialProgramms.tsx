@@ -128,8 +128,8 @@ export function SpecialProgramms() {
 									slidesPerView: 1,
 									spaceBetween: 10,
 								},
-								480: {
-									slidesPerView: 2.2,
+								980: {
+									slidesPerView: 2,
 									spaceBetween: 30,
 								},
 								1020: {

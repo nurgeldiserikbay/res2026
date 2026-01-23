@@ -15,7 +15,7 @@ export function ParticipateWays() {
 					</h2>
 
 					<div className="grid grid-cols-1 items-start gap-y-[30px] md:grid-cols-2 lg:items-start lg:justify-between xl:flex xl:gap-x-[30px] 2xl:gap-x-[60px]">
-						<div className="flex max-w-[339px] flex-col items-center justify-start text-center">
+						<div className="flex flex-col items-center justify-start text-center xl:max-w-[339px]">
 							<Image
 								src="/imgs/exhibition/ParticipateWays-1.svg"
 								alt="Fact 1"
@@ -27,7 +27,7 @@ export function ParticipateWays() {
 								{t('pages.exhibition.participateWays.item1')}
 							</div>
 						</div>
-						<div className="flex max-w-[339px] flex-col items-center justify-start text-center">
+						<div className="flex flex-col items-center justify-start text-center xl:max-w-[339px]">
 							<Image
 								src="/imgs/exhibition/ParticipateWays-2.svg"
 								alt="Fact 1"
@@ -39,7 +39,7 @@ export function ParticipateWays() {
 								{t('pages.exhibition.participateWays.item2')}
 							</div>
 						</div>
-						<div className="flex max-w-[339px] flex-col items-center justify-start text-center">
+						<div className="flex flex-col items-center justify-start text-center xl:max-w-[339px]">
 							<Image
 								src="/imgs/exhibition/ParticipateWays-3.svg"
 								alt="Fact 1"
@@ -51,7 +51,7 @@ export function ParticipateWays() {
 								{t('pages.exhibition.participateWays.item3')}
 							</div>
 						</div>
-						<div className="flex max-w-[339px] flex-col items-center justify-start text-center">
+						<div className="flex flex-col items-center justify-start text-center xl:max-w-[339px]">
 							<Image
 								src="/imgs/exhibition/ParticipateWays-4.svg"
 								alt="Fact 1"
@@ -63,7 +63,7 @@ export function ParticipateWays() {
 								{t('pages.exhibition.participateWays.item4')}
 							</div>
 						</div>
-						<div className="flex max-w-[339px] flex-col items-center justify-start text-center">
+						<div className="flex flex-col items-center justify-start text-center xl:max-w-[339px]">
 							<Image
 								src="/imgs/exhibition/ParticipateWays-5.svg"
 								alt="Fact 1"
