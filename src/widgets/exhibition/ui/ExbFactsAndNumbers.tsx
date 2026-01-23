@@ -73,7 +73,7 @@ export function ExbFactsAndNumbers() {
 					>
 						<div
 							data-fact-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center md:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/factsAndNumbers-1.svg"
@@ -89,7 +89,7 @@ export function ExbFactsAndNumbers() {
 						</div>
 						<div
 							data-fact-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center md:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/factsAndNumbers-2.svg"
@@ -105,7 +105,7 @@ export function ExbFactsAndNumbers() {
 						</div>
 						<div
 							data-fact-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center md:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/factsAndNumbers-3.svg"
@@ -121,7 +121,7 @@ export function ExbFactsAndNumbers() {
 						</div>
 						<div
 							data-fact-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center md:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/factsAndNumbers-4.svg"

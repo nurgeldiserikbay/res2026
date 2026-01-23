@@ -65,7 +65,7 @@ export function ParticipateWays() {
 					>
 						<div
 							data-participate-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center xl:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/ParticipateWays-1.svg"
@@ -80,7 +80,7 @@ export function ParticipateWays() {
 						</div>
 						<div
 							data-participate-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center xl:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/ParticipateWays-2.svg"
@@ -95,7 +95,7 @@ export function ParticipateWays() {
 						</div>
 						<div
 							data-participate-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center xl:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/ParticipateWays-3.svg"
@@ -110,7 +110,7 @@ export function ParticipateWays() {
 						</div>
 						<div
 							data-participate-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center xl:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/ParticipateWays-4.svg"
@@ -125,7 +125,7 @@ export function ParticipateWays() {
 						</div>
 						<div
 							data-participate-item
-							className="flex max-w-[339px] flex-col items-center justify-start text-center"
+							className="flex flex-col items-center justify-start text-center xl:max-w-[339px]"
 						>
 							<Image
 								src="/imgs/exhibition/ParticipateWays-5.svg"

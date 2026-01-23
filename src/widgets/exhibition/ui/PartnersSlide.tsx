@@ -12,6 +12,8 @@ import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 
+import type { Swiper as SwiperType } from 'swiper'
+
 export type PartnerItem = {
 	id: number
 	image: string
@@ -41,7 +43,7 @@ function PartnerItemComponent({ item, delay }: { item: PartnerItem; delay: numbe
 export function PartnersSlide({
 	images,
 	title,
-	id,
+	id: _id,
 	delays = [],
 	className,
 }: {
@@ -55,10 +57,19 @@ export function PartnersSlide({
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
+	const swiperRef = useRef<SwiperType | null>(null)
 
 	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
 		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
 		setShowNavigation(count > spv)
+	}
+
+	const handlePrev = () => {
+		swiperRef.current?.slidePrev()
+	}
+
+	const handleNext = () => {
+		swiperRef.current?.slideNext()
 	}
 
 	return (
@@ -70,11 +81,8 @@ export function PartnersSlide({
 				<Swiper
 					modules={[Navigation]}
 					className="w-full overflow-visible rounded-[12px] md:h-[122px] 2xl:h-[122px]"
-					navigation={{
-						nextEl: `#partners-swiper-button-next-${id}`,
-						prevEl: `#partners-swiper-button-prev-${id}`,
-					}}
 					onSwiper={(swiper) => {
+						swiperRef.current = swiper
 						setIsBeginning(swiper.isBeginning)
 						setIsEnd(swiper.isEnd)
 						updateShowNavigation(swiper, images.length)
@@ -146,41 +154,41 @@ export function PartnersSlide({
 						aria-hidden={!showNavigation}
 					>
 						<div className="flex items-center justify-start gap-[10px]">
-							<div id={`partners-swiper-button-prev-${id}`}>
-								{isBeginning ? (
-									<ButtonOutlined
-										icon={false}
-										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
-									>
-										<IconArrowHead className="rotate-180 transform text-muted" />
-									</ButtonOutlined>
-								) : (
-									<ButtonDefault
-										icon={false}
-										className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
-									>
-										<IconArrowHead className="rotate-180 transform" />
-									</ButtonDefault>
-								)}
-							</div>
+							{isBeginning ? (
+								<ButtonOutlined
+									icon={false}
+									onClick={handlePrev}
+									className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
+								>
+									<IconArrowHead className="rotate-180 transform text-muted" />
+								</ButtonOutlined>
+							) : (
+								<ButtonDefault
+									icon={false}
+									onClick={handlePrev}
+									className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
+								>
+									<IconArrowHead className="rotate-180 transform" />
+								</ButtonDefault>
+							)}
 
-							<div id={`partners-swiper-button-next-${id}`}>
-								{isEnd ? (
-									<ButtonOutlined
-										icon={false}
-										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
-									>
-										<IconArrowHead className="text-muted" />
-									</ButtonOutlined>
-								) : (
-									<ButtonDefault
-										icon={false}
-										className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
-									>
-										<IconArrowHead />
-									</ButtonDefault>
-								)}
-							</div>
+							{isEnd ? (
+								<ButtonOutlined
+									icon={false}
+									onClick={handleNext}
+									className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
+								>
+									<IconArrowHead className="text-muted" />
+								</ButtonOutlined>
+							) : (
+								<ButtonDefault
+									icon={false}
+									onClick={handleNext}
+									className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
+								>
+									<IconArrowHead />
+								</ButtonDefault>
+							)}
 						</div>
 						{/* <div className="text-muted-light text-[24px] leading-normal font-normal">
             <span className="text-text text-[24px] leading-normal font-normal md:text-white">{activeSlide + 1}</span>

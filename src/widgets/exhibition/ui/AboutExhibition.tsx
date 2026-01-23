@@ -72,7 +72,7 @@ export function AboutExhibition() {
 
 	return (
 		<section className="relative z-1 bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! lg:flex-nowrap">
+			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! xl:flex-nowrap">
 				<div>
 					<PresidentAboutExb className="mb-[47px] lg:mb-[100px]" />
 
@@ -85,7 +85,7 @@ export function AboutExhibition() {
 
 					<div
 						ref={ContentRef}
-						className="flex translate-y-[50px] flex-wrap items-center justify-between gap-[30px] opacity-0"
+						className="flex translate-y-[50px] flex-wrap items-center justify-between gap-[30px] opacity-0 md:flex-nowrap lg:flex-wrap 2xl:flex-nowrap"
 					>
 						<Link
 							href="https://res2026expo.kz/"
@@ -100,7 +100,7 @@ export function AboutExhibition() {
 								className="inline-block max-w-[210px]"
 							/>
 						</Link>
-						<p className="max-w-[839px] text-[16px] leading-normal font-normal whitespace-pre-line text-text">
+						<p className="max-w-[839px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line text-text">
 							{t('pages.exhibition.text')}
 						</p>
 					</div>
@@ -108,14 +108,14 @@ export function AboutExhibition() {
 
 				<div
 					ref={ImageRef}
-					className="aspect-none relative z-1 w-full max-w-[715px] translate-x-[50px] opacity-0 lg:aspect-[1.056] lg:translate-y-[-60px]"
+					className="aspect-none relative z-1 w-full max-w-[715px] opacity-0 lg:translate-y-[-60px] xl:aspect-[1.056] xl:translate-y-[-60px]"
 				>
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
 						width={715}
 						height={813}
-						className="bottom-0 left-0 w-full lg:absolute"
+						className="bottom-0 left-0 w-full xl:absolute"
 					/>
 				</div>
 			</Container>

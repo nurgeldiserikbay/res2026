@@ -12,6 +12,8 @@ import { IconArrowHead } from '@/shared/icons/IconArrowHead'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
 
+import type { Swiper as SwiperType } from 'swiper'
+
 type ThemeZone = {
 	id: number
 	image: string
@@ -22,9 +24,10 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
+	const swiperRef = useRef<SwiperType | null>(null)
 
 	const gridRef = useRef<HTMLDivElement>(null)
-	const swiperRef = useRef<HTMLDivElement>(null)
+	const swiperContainerRef = useRef<HTMLDivElement>(null)
 
 	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
 		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
@@ -61,9 +64,9 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 	// Animation for swiper slides
 	useGSAP(
 		() => {
-			if (!swiperRef.current) return
+			if (!swiperContainerRef.current) return
 
-			const slides = swiperRef.current.querySelectorAll('.swiper-slide')
+			const slides = swiperContainerRef.current.querySelectorAll('.swiper-slide')
 			slides.forEach((slide, index) => {
 				gsap.fromTo(
 					slide,
@@ -75,7 +78,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 						delay: 0.3 + index * 0.1,
 						ease: 'circ.out',
 						scrollTrigger: {
-							trigger: swiperRef.current,
+							trigger: swiperContainerRef.current,
 							start: 'top 80%',
 						},
 					},
@@ -84,6 +87,14 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 		},
 		{ dependencies: [themeZones], revertOnUpdate: true },
 	)
+
+	const handlePrev = () => {
+		swiperRef.current?.slidePrev()
+	}
+
+	const handleNext = () => {
+		swiperRef.current?.slideNext()
+	}
 
 	return (
 		<>
@@ -118,7 +129,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 
 			{/* Slider для меньших экранов (до xl) */}
 			<div
-				ref={swiperRef}
+				ref={swiperContainerRef}
 				className="xl:hidden"
 			>
 				<Swiper
@@ -126,10 +137,6 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 					slidesPerView={1}
 					spaceBetween={10}
 					className="w-full overflow-visible rounded-[12px]"
-					navigation={{
-						nextEl: '#theme-zones-swiper-button-next',
-						prevEl: '#theme-zones-swiper-button-prev',
-					}}
 					breakpoints={{
 						640: {
 							slidesPerView: 2,
@@ -141,6 +148,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 						},
 					}}
 					onSwiper={(swiper) => {
+						swiperRef.current = swiper
 						setIsBeginning(swiper.isBeginning)
 						setIsEnd(swiper.isEnd)
 						updateShowNavigation(swiper, themeZones.length)
@@ -183,41 +191,41 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 						aria-hidden={!showNavigation}
 					>
 						<div className="flex items-center justify-start gap-[10px]">
-							<div id="theme-zones-swiper-button-prev">
-								{isBeginning ? (
-									<ButtonOutlined
-										icon={false}
-										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
-									>
-										<IconArrowHead className="rotate-180 transform text-muted" />
-									</ButtonOutlined>
-								) : (
-									<ButtonDefault
-										icon={false}
-										className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
-									>
-										<IconArrowHead className="rotate-180 transform" />
-									</ButtonDefault>
-								)}
-							</div>
+							{isBeginning ? (
+								<ButtonOutlined
+									icon={false}
+									onClick={handlePrev}
+									className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
+								>
+									<IconArrowHead className="rotate-180 transform text-muted" />
+								</ButtonOutlined>
+							) : (
+								<ButtonDefault
+									icon={false}
+									onClick={handlePrev}
+									className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
+								>
+									<IconArrowHead className="rotate-180 transform" />
+								</ButtonDefault>
+							)}
 
-							<div id="theme-zones-swiper-button-next">
-								{isEnd ? (
-									<ButtonOutlined
-										icon={false}
-										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
-									>
-										<IconArrowHead className="text-muted" />
-									</ButtonOutlined>
-								) : (
-									<ButtonDefault
-										icon={false}
-										className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
-									>
-										<IconArrowHead />
-									</ButtonDefault>
-								)}
-							</div>
+							{isEnd ? (
+								<ButtonOutlined
+									icon={false}
+									onClick={handleNext}
+									className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
+								>
+									<IconArrowHead className="text-muted" />
+								</ButtonOutlined>
+							) : (
+								<ButtonDefault
+									icon={false}
+									onClick={handleNext}
+									className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
+								>
+									<IconArrowHead />
+								</ButtonDefault>
+							)}
 						</div>
 					</div>
 				)}
