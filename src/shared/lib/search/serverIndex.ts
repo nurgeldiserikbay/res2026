@@ -1,20 +1,46 @@
+import { readFileSync } from 'fs'
 import MiniSearch from 'minisearch'
+import { join } from 'path'
 
 export type Doc = { id: string; title: string; content: string; url: string; locale: string }
 
-// Импортируем JSON файлы напрямую из папки data
-import indexEn from './data/index-en.json'
-import indexKk from './data/index-kk.json'
-import indexRu from './data/index-ru.json'
-
-const searchIndexes: Record<string, Doc[]> = {
-	en: indexEn as Doc[],
-	ru: indexRu as Doc[],
-	kk: indexKk as Doc[],
-}
-
 const cache = globalThis as unknown as {
 	__search?: Record<string, MiniSearch<Doc>>
+}
+
+/**
+ * Загружает JSON файл индекса поиска
+ * Пытается загрузить из public/search/ (для production) или из src/shared/lib/search/data/ (для development)
+ */
+function loadSearchIndex(locale: string): Doc[] {
+	const possiblePaths = [
+		// Production путь (файлы копируются в public/)
+		join(process.cwd(), 'public', 'search', `index-${locale}.json`),
+		// Development путь (исходные файлы)
+		join(process.cwd(), 'src', 'shared', 'lib', 'search', 'data', `index-${locale}.json`),
+	]
+
+	for (const filePath of possiblePaths) {
+		try {
+			// eslint-disable-next-line security/detect-non-literal-fs-filename
+			const fileContent = readFileSync(filePath, 'utf-8')
+			const data = JSON.parse(fileContent) as Doc[]
+
+			if (!Array.isArray(data)) {
+				console.warn(`Search index for locale "${locale}" at ${filePath} is not an array.`)
+				continue
+			}
+
+			console.log(`Search index loaded for locale "${locale}" from ${filePath}: ${data.length} documents`)
+			return data
+		} catch {
+			// Пробуем следующий путь, если файл не найден или произошла ошибка чтения
+			continue
+		}
+	}
+
+	console.warn(`Failed to load search index for locale "${locale}" from any path`)
+	return []
 }
 
 export function getSearch(locale: string) {
@@ -24,14 +50,12 @@ export function getSearch(locale: string) {
 		let docs: Doc[] = []
 
 		try {
-			// Получаем данные из импортированных JSON файлов
-			docs = searchIndexes[locale] || []
+			// Загружаем данные из JSON файлов через fs
+			docs = loadSearchIndex(locale)
 
 			if (!Array.isArray(docs)) {
 				console.warn(`Search index for locale "${locale}" is not an array. Using empty array.`)
 				docs = []
-			} else {
-				console.log(`Search index loaded for locale "${locale}": ${docs.length} documents`)
 			}
 		} catch (error) {
 			console.error(`Error loading search index for locale "${locale}":`, error)
