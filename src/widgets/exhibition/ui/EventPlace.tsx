@@ -15,7 +15,7 @@ export function EventPlace() {
 					<h2 className="mb-[30px] text-[32px] leading-normal font-bold text-text xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]">
 						{t('pages.exhibition.eventPlace.title')}
 					</h2>
-					<p className="mb-[15px] max-w-[662px] text-[16px] leading-normal font-normal whitespace-pre-line text-text md:text-[18px] 2xl:mb-[30px] 2xl:text-[24px]">
+					<p className="mb-[15px] max-w-[662px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line text-text md:text-[18px] 2xl:mb-[30px] 2xl:text-[24px]">
 						{t('pages.exhibition.eventPlace.text')}
 					</p>
 					<p className="mb-[30px] max-w-[662px] text-[16px] leading-normal font-bold whitespace-pre-line text-text">

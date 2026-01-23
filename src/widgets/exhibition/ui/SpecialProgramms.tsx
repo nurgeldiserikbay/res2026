@@ -154,7 +154,7 @@ export function SpecialProgramms() {
 										<h3 className="mb-[10px] text-[20px] leading-normal font-bold text-[#41754F] md:text-[24px] lg:text-[26px] xl:text-[28px] 2xl:text-[35px]">
 											{item.title}
 										</h3>
-										<p className="text-[16px] leading-normal font-normal text-text">{item.description}</p>
+										<p className="text-justify text-[16px] leading-normal font-normal text-text">{item.description}</p>
 									</div>
 								</SwiperSlide>
 							))}

@@ -18,7 +18,7 @@ export function QuotItem({ image, text, name, position }: { image: string; text:
 					color="#A1BB94"
 					className="mb-[30px] block"
 				/>
-				<p className="mb-[30px] text-[16px] leading-normal font-normal whitespace-pre-line text-text">{text}</p>
+				<p className="mb-[30px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line text-text">{text}</p>
 
 				<h3 className="mb-[5px] text-[18px] leading-normal font-bold whitespace-pre-line text-primary xs:text-[20px] lg:text-[22px] xl:text-[24px]">
 					{name}

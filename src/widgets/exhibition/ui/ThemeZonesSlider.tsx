@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -9,6 +9,8 @@ import 'swiper/css'
 import { IconArrowHead } from '@/shared/icons/IconArrowHead'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { ButtonOutlined } from '@/shared/ui/button/ButtonOutlined'
+
+import type { Swiper as SwiperType } from 'swiper'
 
 type ThemeZone = {
 	id: number
@@ -20,10 +22,19 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 	const [isBeginning, setIsBeginning] = useState(true)
 	const [isEnd, setIsEnd] = useState(false)
 	const [showNavigation, setShowNavigation] = useState(false)
+	const swiperRef = useRef<SwiperType | null>(null)
 
 	const updateShowNavigation = (swiper: { params: { slidesPerView?: number | string } }, count: number) => {
 		const spv = typeof swiper.params.slidesPerView === 'number' ? swiper.params.slidesPerView : 1
 		setShowNavigation(count > spv)
+	}
+
+	const handlePrev = () => {
+		swiperRef.current?.slidePrev()
+	}
+
+	const handleNext = () => {
+		swiperRef.current?.slideNext()
 	}
 
 	return (
@@ -60,10 +71,6 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 					slidesPerView={1}
 					spaceBetween={10}
 					className="w-full overflow-visible rounded-[12px]"
-					navigation={{
-						nextEl: '#theme-zones-swiper-button-next',
-						prevEl: '#theme-zones-swiper-button-prev',
-					}}
 					breakpoints={{
 						640: {
 							slidesPerView: 2,
@@ -75,6 +82,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 						},
 					}}
 					onSwiper={(swiper) => {
+						swiperRef.current = swiper
 						setIsBeginning(swiper.isBeginning)
 						setIsEnd(swiper.isEnd)
 						updateShowNavigation(swiper, themeZones.length)
@@ -117,41 +125,41 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 						aria-hidden={!showNavigation}
 					>
 						<div className="flex items-center justify-start gap-[10px]">
-							<div id="theme-zones-swiper-button-prev">
-								{isBeginning ? (
-									<ButtonOutlined
-										icon={false}
-										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
-									>
-										<IconArrowHead className="rotate-180 transform text-muted" />
-									</ButtonOutlined>
-								) : (
-									<ButtonDefault
-										icon={false}
-										className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
-									>
-										<IconArrowHead className="rotate-180 transform" />
-									</ButtonDefault>
-								)}
-							</div>
+							{isBeginning ? (
+								<ButtonOutlined
+									icon={false}
+									onClick={handlePrev}
+									className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
+								>
+									<IconArrowHead className="rotate-180 transform text-muted" />
+								</ButtonOutlined>
+							) : (
+								<ButtonDefault
+									icon={false}
+									onClick={handlePrev}
+									className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
+								>
+									<IconArrowHead className="rotate-180 transform" />
+								</ButtonDefault>
+							)}
 
-							<div id="theme-zones-swiper-button-next">
-								{isEnd ? (
-									<ButtonOutlined
-										icon={false}
-										className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
-									>
-										<IconArrowHead className="text-muted" />
-									</ButtonOutlined>
-								) : (
-									<ButtonDefault
-										icon={false}
-										className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
-									>
-										<IconArrowHead />
-									</ButtonDefault>
-								)}
-							</div>
+							{isEnd ? (
+								<ButtonOutlined
+									icon={false}
+									onClick={handleNext}
+									className="pointer-events-none box-border h-[45px] w-[36px] cursor-default rounded-[8px]! p-[8px]! text-muted"
+								>
+									<IconArrowHead className="text-muted" />
+								</ButtonOutlined>
+							) : (
+								<ButtonDefault
+									icon={false}
+									onClick={handleNext}
+									className="h-[45px] w-[36px] rounded-[8px]! p-[8px]!"
+								>
+									<IconArrowHead />
+								</ButtonDefault>
+							)}
 						</div>
 					</div>
 				)}

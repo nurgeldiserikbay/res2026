@@ -32,7 +32,7 @@ export function ExhContacts() {
 				</h2>
 
 				<div className="flex flex-wrap items-center justify-between gap-x-[60px] gap-y-[30px] md:flex-nowrap">
-					<div className="max-w-[1084px] text-[16px] leading-normal font-normal text-text xs:text-[20px] md:text-[22px] xl:text-[24px]">
+					<div className="max-w-[1084px] text-justify text-[16px] leading-normal font-normal text-text xs:text-[20px] md:text-[22px] xl:text-[24px]">
 						{t.rich('pages.exhibition.contacts.text', {
 							primary: (chunks) => <span className="text-[#41754F]">{chunks}</span>,
 						})}

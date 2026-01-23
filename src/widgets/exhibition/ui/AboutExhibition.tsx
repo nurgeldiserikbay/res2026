@@ -52,7 +52,7 @@ export function AboutExhibition() {
 								className="inline-block max-w-[210px]"
 							/>
 						</Link>
-						<p className="max-w-[839px] text-[16px] leading-normal font-normal whitespace-pre-line text-text">
+						<p className="max-w-[839px] text-justify text-[16px] leading-normal font-normal whitespace-pre-line text-text">
 							{t('pages.exhibition.text')}
 						</p>
 					</div>
