@@ -16,6 +16,7 @@
 		"fix": "pnpm format && pnpm lint:fix",
 		"check": "pnpm lint:ci && pnpm typecheck && pnpm format:check",
 		"typecheck:watch": "tsc --noEmit --watch",
+		"build:search": "tsx scripts/build-search-from-sitemap.ts",
 		"prepare": "husky"
 	},
 	"dependencies": {
@@ -42,7 +43,9 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"@types/xml2js": "^0.4.14",
 		"babel-plugin-react-compiler": "1.0.0",
+		"cheerio": "^1.1.2",
 		"eslint": "^9",
 		"eslint-config-next": "16.1.1",
 		"eslint-config-prettier": "^10.1.8",
@@ -55,7 +58,9 @@
 		"prettier": "^3.7.4",
 		"prettier-plugin-tailwindcss": "^0.7.2",
 		"tailwindcss-animate": "^1.0.7",
-		"typescript": "^5"
+		"tsx": "^4.21.0",
+		"typescript": "^5",
+		"xml2js": "^0.6.2"
 	},
 	"lint-staged": {
 		"*.{ts,tsx,js,jsx,mjs,cjs}": [
