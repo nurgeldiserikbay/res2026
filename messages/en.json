@@ -427,6 +427,10 @@
 					"0": {
 						"title": "\"Green Country\" Program",
 						"text": "A national greening initiative that includes an ambitious plan to plant 2 billion trees by 2040 to combat desertification and reduce the country's carbon footprint."
+					},
+					"1": {
+						"title": "Environmental Education Program",
+						"text": "A state-level initiative focused on integrating environmental knowledge, sustainability principles, and responsible ecological behavior into the national education system, from schools to universities.The user is asking me to perform two actions: \"Conduct online research\" and \"translate into russian by using the official translations of the documents.\""
 					}
 				},
 				"globalTitle": "Global initiatives",
@@ -458,19 +462,19 @@
 						"text": "A framework for dialogue and partnership, including hosting the biennial International High-Level Conference on the International Decade for Action \"Water for Sustainable Development\"."
 					},
 					"5": {
-						"title": "2025",
-						"subtitle": "International Year of Glaciers’ Preservation",
-						"text": "Initiated by Tajikistan and adopted by the UN, this global campaign raises awareness about the rapid melting of glaciers and establishes a dedicated international trust fund for their protection."
-					},
-					"6": {
 						"title": "2018–2028",
 						"subtitle": "Water for Sustainable Development",
 						"text": "Tajikistan leads this \"Water Decade\", a global action plan to advance water cooperation and sanitation goals, hosting biennial high-level conferences in Dushanbe."
 					},
-					"7": {
+					"6": {
 						"title": "24 May",
 						"subtitle": "International Day for the Conservation of the Markhor",
 						"text": "Proposed by Tajikistan and adopted by the UN, this day raises global awareness about the conservation of the Markhor and its habitat."
+					},
+					"7": {
+						"title": "2025",
+						"subtitle": "UNEA Resolution on Preservation of Glaciers and the Broader Cryosphere, in Particular in Mountain Regions",
+						"text": "Initiated by Tajikistan and adopted at the seventh session of the UN Environment Assembly (UNEA-7), this landmark resolution calls for global action to preserve glaciers and the broader cryosphere, recognizing their critical importance to the environment and water resources."
 					}
 				},
 				"etc": {
@@ -479,7 +483,7 @@
 					"strategicDocuments": {
 						"0": "<sbold>Green Economy Development Strategy (2023–2037):</sbold> A comprehensive roadmap aiming to double renewable energy capacity, introduce electric transport, and ensure the efficient use of natural resources. The strategy targets complete \"green\" energy independence by 2037.",
 						"1": "<sbold>National Strategy for Adaptation to Climate Change (to 2030):</sbold> Focuses on increasing resilience in critical sectors such as agriculture, water resources, and energy. It outlines specific measures to mitigate disaster risks and adapt to changing weather patterns.",
-						"2": "<sbold>National Development Strategy (to 2030):</sbold> The overarching framework for improving living standards and energy security, explicitly integrating environmental sustainability and the Sustainable Development Goals (SDGs)."
+						"2": "<sbold>National Biodiversity Strategy and Action Plan:</sbold> A key framework for the conservation and sustainable use of the country's biodiversity, aligning national efforts with the global Convention on Biological Diversity (CBD) targets. The current iteration outlines priorities, targets, and actions up to 2030."
 					},
 					"nationalInitiativesTitle": "National initiatives"
 				}
