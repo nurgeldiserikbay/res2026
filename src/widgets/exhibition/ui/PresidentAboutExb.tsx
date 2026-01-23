@@ -34,7 +34,7 @@ export function PresidentAboutExb({ className }: { className?: string }) {
 					className="block max-w-[150px] -translate-x-[50px] rounded-[12px] opacity-0 sm:max-w-[180px] md:max-w-[213px]"
 				/>
 				<div className="w-full max-w-[631px]">
-					<div className="font-regular relative z-1 mb-[20px] text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
+					<div className="font-regular relative z-1 mb-[20px] text-justify text-[14px] leading-normal whitespace-pre-line text-black sm:mb-[30px] sm:text-[16px]">
 						{t('pages.exhibition.presidentText')}
 					</div>
 					<div className="mb-[5px] text-[16px] leading-normal font-bold text-primary xs:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px]">
