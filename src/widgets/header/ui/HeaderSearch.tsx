@@ -1,12 +1,16 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, FormEvent } from 'react'
 
+import { useRouter } from '@/i18n/navigation'
 import { IconSearchNormal } from '@/shared/icons/IconSearchNormal'
 
 export function HeaderSearch() {
 	const [open, setOpen] = useState(false)
+	const [searchValue, setSearchValue] = useState('')
 	const ref = useRef<HTMLDivElement>(null)
+	const inputRef = useRef<HTMLInputElement>(null)
+	const router = useRouter()
 
 	useEffect(() => {
 		const handleClickOutside = (e: MouseEvent) => {
@@ -19,6 +23,35 @@ export function HeaderSearch() {
 		return () => document.removeEventListener('mousedown', handleClickOutside)
 	}, [])
 
+	useEffect(() => {
+		if (open && inputRef.current) {
+			inputRef.current.focus()
+		}
+	}, [open])
+
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault()
+		const query = searchValue.trim()
+		if (query.length >= 2) {
+			router.push(`/search?q=${encodeURIComponent(query)}`)
+			setOpen(false)
+			setSearchValue('')
+		}
+	}
+
+	const handleSearchClick = () => {
+		if (open) {
+			const query = searchValue.trim()
+			if (query.length >= 2) {
+				router.push(`/search?q=${encodeURIComponent(query)}`)
+				setOpen(false)
+				setSearchValue('')
+			}
+		} else {
+			setOpen(true)
+		}
+	}
+
 	return (
 		<div
 			ref={ref}
@@ -30,13 +63,18 @@ export function HeaderSearch() {
 			>
 				<div className="rounded-[8px] bg-linear-to-tr from-white/0 to-white/90 p-px">
 					<div className={`h-[58px] rounded-[8px]`}>
-						<input
-							type="search"
-							id="header-search-input"
-							placeholder="Search"
-							aria-label="Search"
-							className={`bg-primary-dark box-border h-[58px] w-full rounded-[8px] border-none px-5 text-white transition-all duration-300 ease-out outline-none placeholder:text-white/60`}
-						/>
+						<form onSubmit={handleSubmit}>
+							<input
+								ref={inputRef}
+								type="search"
+								id="header-search-input"
+								placeholder="Search"
+								aria-label="Search"
+								value={searchValue}
+								onChange={(e) => setSearchValue(e.target.value)}
+								className={`bg-primary-dark box-border h-[58px] w-full rounded-[8px] border-none px-5 text-white transition-all duration-300 ease-out outline-none placeholder:text-white/60`}
+							/>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -47,7 +85,7 @@ export function HeaderSearch() {
 				aria-label="Search"
 				aria-expanded={open}
 				aria-controls="header-search-input"
-				onClick={() => setOpen((v) => !v)}
+				onClick={handleSearchClick}
 				className={`flex cursor-pointer items-center justify-center rounded-full transition-colors duration-300`}
 			>
 				<IconSearchNormal

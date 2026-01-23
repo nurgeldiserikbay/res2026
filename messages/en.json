@@ -112,6 +112,7 @@
 		"soonText": "This section is under development. We are preparing new content for you and will open access soon. \n Come back a bit later!",
 		"otherNews": "Other news",
 		"organizers": "Organizers",
+		"search": "Search",
 		"contactPersons": "Central Asia Climate Foundation, Project Office for Central Asia on Climate Change and Green Energy",
 		"pressSecretary": "Press secretary project office",
 		"responsibleMinistry": "Responsible ministry",
@@ -724,5 +725,15 @@
 	},
 	"messages": {
 		"noPrograms": "Program not found"
+	},
+	"search": {
+		"enterQuery": "Enter a search query to find results",
+		"loading": "Searching...",
+		"resultsFor": "Search results for",
+		"resultsFound": "results found",
+		"noResults": "No results found",
+		"error": "An error occurred while searching. Please try again.",
+		"page": "Page",
+		"of": "of"
 	}
 }
