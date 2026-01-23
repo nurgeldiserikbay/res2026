@@ -12,20 +12,49 @@ export function getSearch(locale: string) {
   cache.__search ??= {}
 
   if (!cache.__search[locale]) {
-    const p = path.join(process.cwd(), "public", "search", `index-${locale}.json`)
-    
     let docs: Doc[] = []
+    
     try {
-      const fileContent = fs.readFileSync(p, { encoding: "utf-8" });
-      docs = JSON.parse(fileContent)
+      // Используем синхронную загрузку для совместимости
+      const possiblePaths = [
+        path.join(process.cwd(), "public", "search", `index-${locale}.json`),
+        path.join(process.cwd(), "..", "public", "search", `index-${locale}.json`),
+      ]
 
-      // Валидация структуры данных
-      if (!Array.isArray(docs)) {
-        console.warn(`Search index for locale "${locale}" is not an array. Using empty array.`)
+      let loaded = false
+      for (const p of possiblePaths) {
+        try {
+          if (fs.existsSync(p)) {
+            const fileContent = fs.readFileSync(p, { encoding: "utf-8" })
+            docs = JSON.parse(fileContent)
+            
+            if (!Array.isArray(docs)) {
+              console.warn(`Search index for locale "${locale}" is not an array. Using empty array.`)
+              docs = []
+            } else {
+              console.log(`Search index loaded for locale "${locale}" from: ${p}`)
+              loaded = true
+              break
+            }
+          }
+        } catch (error) {
+          // Продолжаем пробовать другие пути
+          continue
+        }
+      }
+
+      if (!loaded) {
+        console.error(`Search index file not found for locale "${locale}"`)
+        console.error(`Tried paths:`, possiblePaths)
+        console.error(`Current working directory: ${process.cwd()}`)
         docs = []
       }
     } catch (error) {
       console.error(`Error loading search index for locale "${locale}":`, error)
+      if (error instanceof Error) {
+        console.error(`Error message: ${error.message}`)
+        console.error(`Error stack: ${error.stack}`)
+      }
       docs = []
     }
 

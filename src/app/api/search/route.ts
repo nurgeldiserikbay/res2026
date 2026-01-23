@@ -87,15 +87,40 @@ export async function GET(req: Request) {
     }
 
     // Получаем поисковый индекс для локали
-    const ms = getSearch(locale)
+    let ms
+    try {
+      ms = getSearch(locale)
+      if (!ms) {
+        console.error(`Failed to get search index for locale: ${locale}`)
+        return NextResponse.json(
+          { items: [], error: "Search index not available", meta: { total: 0, per_page: perPage, page: 1, totalPages: 0 } },
+          { status: 500 }
+        )
+      }
+    } catch (error) {
+      console.error(`Error getting search index for locale "${locale}":`, error)
+      return NextResponse.json(
+        { items: [], error: "Failed to load search index", meta: { total: 0, per_page: perPage, page: 1, totalPages: 0 } },
+        { status: 500 }
+      )
+    }
 
     // Выполняем поиск по title и content
     // Используем более гибкие настройки поиска
-    const searchResults = ms.search(q, {
-      prefix: true,
-      fuzzy: 0.2,
-      boost: { title: 2 }, // Увеличиваем вес совпадений в заголовке
-    })
+    let searchResults
+    try {
+      searchResults = ms.search(q, {
+        prefix: true,
+        fuzzy: 0.2,
+        boost: { title: 2 }, // Увеличиваем вес совпадений в заголовке
+      })
+    } catch (error) {
+      console.error(`Error performing search for query "${q}":`, error)
+      return NextResponse.json(
+        { items: [], error: "Search failed", meta: { total: 0, per_page: perPage, page: 1, totalPages: 0 } },
+        { status: 500 }
+      )
+    }
 
     console.log(`Search query: "${q}", locale: "${locale}", results: ${searchResults.length}`)
     
@@ -148,6 +173,10 @@ export async function GET(req: Request) {
     )
   } catch (error) {
     console.error("Search API error:", error)
+    if (error instanceof Error) {
+      console.error(`Error message: ${error.message}`)
+      console.error(`Error stack: ${error.stack}`)
+    }
     return NextResponse.json(
       { items: [], error: "Internal server error", meta: { total: 0, per_page: DEFAULT_PER_PAGE, page: 1, totalPages: 0 } },
       { status: 500 }
