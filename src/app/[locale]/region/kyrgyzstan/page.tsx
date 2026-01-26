@@ -14,6 +14,7 @@ const IMGS = [
 		id: 1,
 		img: '/imgs/regions/kg/kg-flag.webp',
 		alt: 'Region Img 1',
+		quality: 100,
 		width: 612,
 		height: 408,
 	},

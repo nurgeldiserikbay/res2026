@@ -60,7 +60,7 @@ export function Climate({
 						</h3>
 						<p
 							ref={TextRef}
-							className="relative z-1 mb-[20px] translate-y-[50px] text-[14px] leading-normal text-text opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-justify md:text-[16px]"
+							className="relative z-1 mb-[20px] translate-y-[50px] text-justify text-[14px] leading-normal text-text opacity-0 sm:mb-[25px] sm:text-[15px] md:mb-[30px] md:text-[16px]"
 						>
 							{climateText2}
 						</p>
