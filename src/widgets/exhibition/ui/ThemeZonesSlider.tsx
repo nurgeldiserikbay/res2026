@@ -44,7 +44,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 				{themeZones.map((themeZone) => (
 					<div
 						key={themeZone.id}
-						className={[`group relative h-[484px] w-full cursor-pointer overflow-hidden rounded-[12px] xs:h-[584px]`].join(' ')}
+						className={[`group relative h-[484px] w-full overflow-hidden rounded-[12px] xs:h-[584px]`].join(' ')}
 						aria-label={themeZone.title}
 					>
 						<Image
@@ -99,7 +99,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 							className="overflow-hidden rounded-[12px]"
 						>
 							<div
-								className={[`group relative h-[484px] w-full cursor-pointer overflow-hidden rounded-[12px] xs:h-[584px]`].join(' ')}
+								className={[`group relative h-[484px] w-full overflow-hidden rounded-[12px] xs:h-[584px]`].join(' ')}
 								aria-label={themeZone.title}
 							>
 								<Image

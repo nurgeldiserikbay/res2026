@@ -1,16 +1,26 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 
+import { useFancybox } from '@/shared/lib/fancybox/useFancybox'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
 
 export function EventPlace() {
 	const t = useTranslations()
 
+	useFancybox({
+		rootSelector: '#event-place-gallery',
+	})
+
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-			<Container className="flex flex-wrap items-start justify-center gap-x-[60px] gap-y-[30px] lg:items-start xl:flex-nowrap">
+			<Container
+				id="event-place-gallery"
+				className="flex flex-wrap items-start justify-center gap-x-[60px] gap-y-[30px] lg:items-start xl:flex-nowrap"
+			>
 				<div className="w-full xl:w-auto">
 					<h2 className="mb-[30px] text-[32px] leading-normal font-bold text-text xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]">
 						{t('pages.exhibition.eventPlace.title')}
@@ -66,13 +76,19 @@ export function EventPlace() {
 						</ButtonDefault>
 					</Link>
 				</div>
-				<Image
-					src="/imgs/exhibition/event-place-2.svg"
-					alt="Event Place Map"
-					width={1025}
-					height={579}
-					className="w-full rounded-[12px] xl:max-w-[640px] 3xl:max-w-[1025px]"
-				/>
+				<a
+					data-fancybox="gallery"
+					href="/imgs/exhibition/event-place-2.svg"
+					className="block w-full cursor-zoom-in rounded-[12px] xl:max-w-[640px] 3xl:max-w-[1025px]"
+				>
+					<Image
+						src="/imgs/exhibition/event-place-2.svg"
+						alt="Event Place Map"
+						width={1025}
+						height={579}
+						className="w-full rounded-[12px] xl:max-w-[640px] 3xl:max-w-[1025px]"
+					/>
+				</a>
 			</Container>
 		</section>
 	)
