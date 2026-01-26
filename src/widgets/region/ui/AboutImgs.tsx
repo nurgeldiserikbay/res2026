@@ -64,7 +64,6 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 						<img
 							src={activeImg.img}
 							alt={activeImg.alt}
-							quality={activeImg.quality || 75}
 							width={activeImg.width}
 							height={activeImg.height}
 							className="block w-full rounded-[12px] sm:rounded-[12px]"
