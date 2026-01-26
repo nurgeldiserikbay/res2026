@@ -487,6 +487,58 @@
 					},
 					"nationalInitiativesTitle": "National initiatives"
 				}
+			},
+			"kyrgyzstan": {
+				"title": "Kyrgyz Republic",
+				"tabs": {
+					"0": "Geography, description",
+					"1": "Climate",
+					"2": "Flora and fauna",
+					"3": "Etc."
+				},
+				"title1": "About the Country",
+				"text1": "The Kyrgyz Republic is a high-altitude country located in the very center of the Eurasian continent, in the northeastern part of Central Asia. About 90% of the country's territory is located at an altitude of over 1,500 m above sea level, which determines its unique natural and climatic conditions. \n\n The main mountain ranges – the Tien Shan and Pamir – form a striking mountainous landscape, home to some of the highest peaks in the region, including Jennish Peak (7,439 m). \n\n Despite its lack of access to the sea, the Kyrgyz Republic has significant water potential and plays an important role in shaping the water resources of Central Asia. The country has over 3,500 rivers and about 1,900 lakes, including Lake Issyk-Kul, one of the largest high-altitude lakes in the world. \n\n As of early 2025, the country's permanent population is 7.3 million people. The administrative-territorial structure includes:",
+				"text2": "",
+				"stat1": "regions",
+				"stat2": "cities of republican significance – Bishkek (capital) and Osh",
+				"climateTitle": "Climate of the Kyrgyz Republic",
+				"climateText": "The climate of the Kyrgyz Republic is directly related to its predominantly mountainous terrain: the lowlands have a temperate continental climate, while the mountains have harsher alpine conditions, with sharp temperature fluctuations and heavy snowfall. \n\n Summers in the valleys can be hot, with an average temperature of around +27°C, while the average maximum temperature reaches +33°C and the minimum is +16°C. In mountainous areas, even in the summer months, it remains cool, especially at night, due to the high-altitude nature of the landscape. \n\n In winter, the average air temperature is +1°C, ranging from –12°C to +10°C, depending on the altitude above sea level. The four distinct seasons and diverse natural landscapes create excellent conditions for outdoor activities throughout the year (mountain trekking along the Tien Shan and Pamir routes, mountaineering and rock climbing in the highlands , skiing, horseback riding tours through alpine meadows and nature reserves).",
+				"nationalInitiativesTitle": "Initiatives",
+				"nationalInitiativesData": {
+					"0": {
+						"title": "National campaign \"Jashyl Muras\"",
+						"text": "The aim of the campaign is to green the country, plant trees, improve the ecological situation, and increase the country's forest areas, with the active participation of state bodies, citizens, and organizations, planning to plant millions of seedlings annually. \n In 2025, more than 8.3 million seedlings were planted throughout the country as part of this campaign."
+					},
+					"1": {
+						"title": "Five-Year Action Plan for Mountain Regions",
+						"text": "(UN General Assembly Resolution of December 14, 2022) \n The initiative aims to consolidate the efforts of the international community in response to the climatic, environmental, and socio-economic challenges faced by mountain countries. The Decade aims to raise the international profile of the mountain agenda, strengthen coordination and partnership among mountain states, mobilize financial and technical support, and promote sustainable development models for mountain regions that combine climate change adaptation, ecosystem conservation, economic development, and improved human well-being."
+					},
+					"2": {
+						"title": "Global Snow Leopard and Ecosystem Protection Program (GSLEP)",
+						"text": "This is an international long-term initiative that brings together snow leopard range states, international and non-governmental organizations, the scientific community, local communities, and the private sector to conserve the snow leopard as a flagship species and protect high-altitude ecosystems in Asia."
+					},
+					"3": {
+						"title": "Kyrgyzstan Nature Conservation Trust Fund",
+						"text": "It is proposed to establish a financial mechanism within the framework of the UN Multi-Partner Trust Fund to consolidate and mobilize public, private, and donor contributions to support biodiversity conservation and the development of innovative mechanisms for nature conservation and environmental initiatives at the local, national, and subnational levels. \n\n The fund will also directly and indirectly influence other aspects of society, including promoting economic diversification and the creation of alternative sources of sustainable income, improving the regulatory framework, stimulating innovation, and empowering women, youth, and local communities."
+					},
+					"4": {
+						"title": "Extended producer responsibility (EPR)",
+						"text": "In the Kyrgyz Republic, with the entry into force of the Law of the Kyrgyz Republic \"On Production and Consumption Waste\" No. 181 of August 15, 2023, the principle of extended producer responsibility (EPR) based on the \"polluter pays\" approach has been introduced. \n\n The EPR mechanism establishes the responsibility of producers and importers of goods and packaging for the management of waste after it has lost its consumer properties ( ). Payers are required to either independently ensure compliance with established recycling standards or pay a disposal fee, the proceeds of which are used to develop waste management infrastructure, introduce separate collection, recycling and disposal, reduce waste disposal, and develop the secondary resources market."
+					}
+				},
+				"etc": {
+					"strategicVisionTitle": "Strategic vision and documents",
+					"strategicVisionIntro": "The Kyrgyz Republic has adopted the following strategic documents:",
+					"strategicDocuments": {
+						"0": "<sbold>The National Development Strategy of the Kyrgyz Republic for 2018–2040</sbold> \n is a comprehensive document that defines the country's development priorities until 2040, based on the principles of sustainability and balance between the economy, social sphere, and ecology, with specific programs until 2026 and 2030 aimed at a \"green\" economy, effective resource management, and improving the well-being of citizens.",
+						"1": "<sbold>The National Development Program of the Kyrgyz Republic until 2030</sbold> \n is a strategic document that defines the country's medium-term goals and priorities. The program aims to ensure sustainable economic growth, improve the quality of life of the population, and create conditions for the comprehensive development of key sectors of the economy.",
+						"2": "<sbold>The Concept for Achieving Carbon Neutrality in the Kyrgyz Republic</sbold> \n envisages achieving carbon neutrality by 2050 and forming a low-carbon \"green\" economy.",
+						"3": "<sbold>The nationally determined contribution of the Kyrgyz Republic (NDC 3.0)</sbold> \n sets targets for reducing greenhouse gas emissions and measures to adapt to climate change under the Paris Agreement.",
+						"4": "<sbold>The Concept of Environmental Security of the Kyrgyz Republic for the period up to 2040</sbold> \n defines the priorities of state policy in the field of environmental protection and climate sustainability.",
+						"5": "<sbold>The Kyrgyz Republic's Green Economy Development Program</sbold> \n aims at the sustainable use of natural resources, the development of renewable energy sources, and environmentally friendly technologies.",
+						"6": "<sbold>The Concept for the Sustainable Development of the Issyk-Kul Ecological and Economic System</sbold> \n for the period up to 2030 and the Action Plan for its implementation consider the development of the Issyk-Kul region of the Kyrgyz Republic as an ecosystem as a whole, ensuring high environmental quality, economic growth, and increased prosperity for the population."
+					}
+				}
 			}
 		},
 		"keyDirections": {

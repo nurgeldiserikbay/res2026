@@ -13,7 +13,7 @@ import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/regions/tj/tj-flag.jpg',
+		img: '/imgs/regions/tj/tj-flag.webp',
 		alt: 'Region Img 1',
 		quality: 100,
 		width: 870,
