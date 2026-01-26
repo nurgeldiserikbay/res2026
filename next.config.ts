@@ -15,7 +15,10 @@ const nextConfig: NextConfig = {
 				],
 			}
 		: {
-				remotePatterns: [{ protocol: 'https', hostname: 'https://res2026.kz/' }],
+				remotePatterns: [
+					{ protocol: 'https', hostname: 'https://res2026.kz/' },
+					{ protocol: 'https', hostname: 'visitastana.kz' },
+				],
 			},
 }
 
