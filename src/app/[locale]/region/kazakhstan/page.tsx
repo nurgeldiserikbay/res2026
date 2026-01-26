@@ -6,12 +6,14 @@ import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
 import { FloraAndFauna } from '@/widgets/region/ui/FloraAndFauna'
+import { Nationalnitiatives } from '@/widgets/region/ui/Nationalnitiatives'
 import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
+import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/flag.jpeg',
+		img: '/imgs/flag.png',
 		alt: 'Region Img 1',
 		width: 612,
 		height: 408,
@@ -45,23 +47,23 @@ export default function Page() {
 	]
 
 	const aboutRegionData = {
-		title: t(`pages.regions.uzbekistan.title`),
-		text1: t(`pages.regions.uzbekistan.text1`),
-		text2: t(`pages.regions.uzbekistan.text2`),
+		title: t(`pages.regions.kazakhstan.title`),
+		text1: t(`pages.regions.kazakhstan.text1`),
+		text2: t(`pages.regions.kazakhstan.text2`),
 		stats: [
 			{
-				statValue: '12',
-				statTitle: t(`pages.regions.uzbekistan.stat1`),
-				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+				statValue: '17',
+				statTitle: t(`pages.regions.kazakhstan.stat1`),
+				statClass: 'sm:max-w-[271px]',
 			},
 			{
-				statValue: '1',
-				statTitle: t(`pages.regions.uzbekistan.stat2`),
-				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+				statValue: '3',
+				statTitle: t(`pages.regions.kazakhstan.stat2`),
+				statClass: 'sm:max-w-[537px]',
 			},
 		],
-		stat3Value: '38',
-		stat3: t(`pages.regions.uzbekistan.stat3`),
+		stat3Value: '20',
+		stat3: t(`pages.regions.kazakhstan.stat3`),
 		map: '/imgs/kz-about-map.svg',
 		mapAlt: 'UZ About Map',
 		mapWidth: 1885,
@@ -78,7 +80,7 @@ export default function Page() {
 		img2: '/imgs/climate-2.png',
 	}
 
-	const etcData = {
+	const strategicDocumentsData = {
 		strategicVisionTitle: t(`pages.regions.kazakhstan.etc.strategicVisionTitle`),
 		strategicVisionIntro: t(`pages.regions.kazakhstan.etc.strategicVisionIntro`),
 		strategicDocuments: [
@@ -99,8 +101,11 @@ export default function Page() {
 				title: t(`pages.regions.kazakhstan.etc.strategicDocuments.3`),
 			},
 		],
-		nationalInitiativesTitle: t(`pages.regions.kazakhstan.etc.nationalInitiativesTitle`),
-		nationalInitiativesIntro: [
+	}
+
+	const nationalInitiativesData = {
+		title: t(`pages.regions.kazakhstan.etc.nationalInitiativesTitle`),
+		list: [
 			{
 				id: 1,
 				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title1`),
@@ -111,15 +116,36 @@ export default function Page() {
 				id: 2,
 				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
 				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
-				image: '/imgs/recycle2.png',
+				image: '/imgs/recycle3.png',
 			},
 			{
 				id: 3,
 				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title3`),
 				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
-				image: '/imgs/recycle3.png',
+				image: '/imgs/recycle2.png',
+			},
+			{
+				id: 4,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title4`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text4`),
+				image: '/imgs/recycle4.png',
+			},
+			{
+				id: 5,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title5`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text5`),
+				image: '/imgs/recycle5.png',
+			},
+			{
+				id: 6,
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title6`),
+				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text6`),
+				image: '/imgs/recycle6.png',
 			},
 		],
+	}
+
+	const etcData = {
 		nationalInitiatives: [
 			{
 				id: 1,
@@ -138,7 +164,7 @@ export default function Page() {
 			},
 			{
 				id: 4,
-				title: '',
+				title: t(`pages.regions.kazakhstan.etc.nationalInitiatives.title4`),
 				description: t.rich('pages.regions.kazakhstan.etc.nationalInitiatives.text4', {
 					bold: (chunks) => <span className="font-bold">{chunks}</span>,
 				}),
@@ -150,8 +176,8 @@ export default function Page() {
 		<>
 			<HeroBanner
 				title={t(`pages.regions.kazakhstan.title`)}
-				bgImage="/imgs/region-banner.png"
-				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/about/region/kazakhstan' }]}
+				bgImage="/imgs/region-banner.webp"
+				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/region/kazakhstan' }]}
 			/>
 
 			<RegionTabs tabs={MENU_ITEMS} />
@@ -161,6 +187,17 @@ export default function Page() {
 			<Climate {...climateData} />
 
 			<FloraAndFauna slides={SLIDES_KZ} />
+
+			<StrategicDocuments
+				strategicVisionTitle={strategicDocumentsData.strategicVisionTitle}
+				strategicVisionIntro={strategicDocumentsData.strategicVisionIntro}
+				strategicDocuments={strategicDocumentsData.strategicDocuments}
+			/>
+
+			<Nationalnitiatives
+				list={nationalInitiativesData.list}
+				title={nationalInitiativesData.title}
+			/>
 
 			<AbountEtc {...etcData} />
 		</>

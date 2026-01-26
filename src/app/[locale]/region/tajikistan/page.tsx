@@ -13,10 +13,11 @@ import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/regions/tj/tj-flag.webp',
+		img: '/imgs/regions/tj/tj-flag.jpg',
 		alt: 'Region Img 1',
-		width: 612,
-		height: 408,
+		quality: 100,
+		width: 870,
+		height: 448,
 	},
 ]
 
@@ -177,7 +178,7 @@ export default function Page() {
 			<HeroBanner
 				title={t(`pages.regions.tajikistan.title`)}
 				bgImage="/imgs/regions/tj/tj-banner.webp"
-				breadcrumbs={[{ label: t(`pages.regions.tajikistan.title`), href: '/about/region/tajikistan' }]}
+				breadcrumbs={[{ label: t(`pages.regions.tajikistan.title`), href: '/region/tajikistan' }]}
 			/>
 
 			<RegionTabs tabs={MENU_ITEMS} />

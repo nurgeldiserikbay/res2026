@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 	return generateMetadataUtil({
 		locale,
-		path: '/about/region/turkmenistan',
+		path: '/region/turkmenistan',
 		pageMeta: {
 			title: messages.pages?.regions?.turkmenistan?.title || 'Turkmenistan',
 		},

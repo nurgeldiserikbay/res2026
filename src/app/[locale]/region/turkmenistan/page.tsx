@@ -151,7 +151,7 @@ export default function Page() {
 			<HeroBanner
 				title={t(`pages.regions.kazakhstan.title`)}
 				bgImage="/imgs/region-banner.png"
-				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/about/region/kazakhstan' }]}
+				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/region/turkmenistan' }]}
 			/>
 
 			<RegionTabs tabs={MENU_ITEMS} />

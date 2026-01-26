@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 	return generateMetadataUtil({
 		locale,
-		path: '/about/region/tajikistan',
+		path: '/region/tajikistan',
 		pageMeta: {
 			title: t('pages.regions.tajikistan.title'),
 		},
