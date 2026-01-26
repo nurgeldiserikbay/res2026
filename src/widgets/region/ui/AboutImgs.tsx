@@ -61,7 +61,7 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 					className="w-full overflow-hidden rounded-[12px]"
 				>
 					{activeImg && (
-						<Image
+						<img
 							src={activeImg.img}
 							alt={activeImg.alt}
 							quality={activeImg.quality || 75}

@@ -89,7 +89,7 @@ export function StrategicDocuments({
 									<li
 										key={document.id}
 										className={[
-											`mb-[8px] flex justify-start gap-[10px] text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]`,
+											`mb-[8px] flex justify-start gap-[10px] text-justify text-[13px] text-white sm:mb-[10px] sm:text-[14px] md:text-[16px]`,
 											listItemClass,
 										].join(' ')}
 									>

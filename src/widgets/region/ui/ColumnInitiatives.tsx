@@ -32,7 +32,7 @@ export function ColumnInitiatives({
 								className="mb-[60px] last:mb-0"
 							>
 								<h3 className="mb-[10px] text-[20px] leading-normal font-bold text-text">{item.title}</h3>
-								<p className="text-[16px] leading-normal font-normal text-text">{item.description}</p>
+								<p className="text-justify text-[16px] leading-normal font-normal text-text">{item.description}</p>
 							</div>
 						))}
 					</div>

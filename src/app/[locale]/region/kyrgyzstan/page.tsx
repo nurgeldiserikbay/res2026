@@ -12,8 +12,9 @@ import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/regions/kg/kg-flag.webp',
+		img: '/imgs/regions/kg/kg-flag.jpeg',
 		alt: 'Region Img 1',
+		quality: 100,
 		width: 612,
 		height: 408,
 	},
