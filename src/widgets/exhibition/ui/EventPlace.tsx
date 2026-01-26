@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { useRef } from 'react'
 
+import { useFancybox } from '@/shared/lib/fancybox/useFancybox'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { ButtonDefault } from '@/shared/ui/button/ButtonDefault'
 import { Container } from '@/shared/ui/container/container'
@@ -26,9 +27,16 @@ export function EventPlace() {
 	useAnimSlide(MapRef, { y: 50, delay: 0.35 })
 	useAnimSlide(ImageRef, { x: 50, delay: 0.4 })
 
+	useFancybox({
+		rootSelector: '#event-place-gallery',
+	})
+
 	return (
 		<section className="bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
-			<Container className="flex flex-wrap items-start justify-center gap-x-[60px] gap-y-[30px] lg:items-start xl:flex-nowrap">
+			<Container
+				id="event-place-gallery"
+				className="flex flex-wrap items-start justify-center gap-x-[60px] gap-y-[30px] lg:items-start xl:flex-nowrap"
+			>
 				<div className="w-full xl:w-auto">
 					<h2
 						ref={TitleRef}
@@ -100,14 +108,20 @@ export function EventPlace() {
 						</Link>
 					</div>
 				</div>
-				<Image
-					ref={ImageRef}
-					src="/imgs/exhibition/event-place-2.svg"
-					alt="Event Place Map"
-					width={1025}
-					height={579}
-					className="w-full translate-x-[50px] rounded-[12px] opacity-0 xl:max-w-[640px] 3xl:max-w-[1025px]"
-				/>
+				<a
+					data-fancybox="gallery"
+					href="/imgs/exhibition/event-place-2.svg"
+					className="block w-full cursor-zoom-in rounded-[12px] xl:max-w-[640px] 3xl:max-w-[1025px]"
+				>
+					<Image
+						ref={ImageRef}
+						src="/imgs/exhibition/event-place-2.svg"
+						alt="Event Place Map"
+						width={1025}
+						height={579}
+						className="w-full translate-x-[50px] rounded-[12px] opacity-0 xl:max-w-[640px] 3xl:max-w-[1025px]"
+					/>
+				</a>
 			</Container>
 		</section>
 	)

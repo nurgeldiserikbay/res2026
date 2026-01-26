@@ -107,7 +107,9 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 					<div
 						key={themeZone.id}
 						data-theme-zone-item
-						className={[`group relative h-[484px] w-full cursor-pointer overflow-hidden rounded-[12px] xs:h-[584px]`].join(' ')}
+						className={[
+							`group relative flex h-[484px] w-full flex-col items-center justify-center overflow-hidden rounded-[12px] bg-[url('/imgs/exhibition/theme-zone.webp')] bg-cover bg-center xs:h-[584px]`,
+						].join(' ')}
 						aria-label={themeZone.title}
 					>
 						<Image
@@ -115,7 +117,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 							alt={themeZone.title}
 							width={443}
 							height={584}
-							className="transform-origin-center h-full w-full object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.15]"
+							className="transform-origin-center mx-auto mb-[80px] h-auto w-[55%] object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.15]"
 						/>
 						<div className="absolute right-0 bottom-0 left-0 z-10 p-[30px] pb-[51px] text-center">
 							<h3
@@ -165,7 +167,9 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 							className="overflow-hidden rounded-[12px]"
 						>
 							<div
-								className={[`group relative h-[484px] w-full cursor-pointer overflow-hidden rounded-[12px] xs:h-[584px]`].join(' ')}
+								className={[
+									`group relative flex h-[484px] w-full flex-col items-center justify-center overflow-hidden rounded-[12px] bg-[url('/imgs/exhibition/theme-zone.webp')] bg-cover bg-center xs:h-[584px]`,
+								].join(' ')}
 								aria-label={themeZone.title}
 							>
 								<Image
@@ -173,7 +177,7 @@ export function ThemeZonesSlider({ themeZones }: { themeZones: ThemeZone[] }) {
 									alt={themeZone.title}
 									width={443}
 									height={584}
-									className="transform-origin-center h-full w-full object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.15]"
+									className="transform-origin-center mx-auto mb-[80px] h-auto w-[65%] object-cover transition-transform duration-2000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.15]"
 								/>
 								<div className="absolute right-0 bottom-0 left-0 z-10 p-[30px] pb-[51px] text-center">
 									<h3

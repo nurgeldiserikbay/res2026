@@ -72,7 +72,7 @@ export function getQuots(locale: Locale) {
 export const themeZones = [
 	{
 		id: 0,
-		image: '/imgs/exhibition/theme-zone-1.png',
+		image: '/imgs/exhibition/theme-zone-1.webp',
 		title: {
 			ru: 'Новая энергия',
 			kk: 'Жаңа энергия',
@@ -81,7 +81,7 @@ export const themeZones = [
 	},
 	{
 		id: 1,
-		image: '/imgs/exhibition/theme-zone-2.png',
+		image: '/imgs/exhibition/theme-zone-2.webp',
 		title: {
 			ru: 'Вода',
 			kk: 'Су',
@@ -90,7 +90,7 @@ export const themeZones = [
 	},
 	{
 		id: 2,
-		image: '/imgs/exhibition/theme-zone-3.png',
+		image: '/imgs/exhibition/theme-zone-3.webp',
 		title: {
 			ru: 'AI & Smart city',
 			kk: 'AI және Ақылды қала',
@@ -99,7 +99,7 @@ export const themeZones = [
 	},
 	{
 		id: 3,
-		image: '/imgs/exhibition/theme-zone-4.png',
+		image: '/imgs/exhibition/theme-zone-4.webp',
 		title: {
 			ru: 'Управление отходами',
 			kk: 'Қалдықтарды басқару',
@@ -108,7 +108,7 @@ export const themeZones = [
 	},
 	{
 		id: 4,
-		image: '/imgs/exhibition/theme-zone-5.png',
+		image: '/imgs/exhibition/theme-zone-5.webp',
 		title: {
 			ru: 'Экологические технологии',
 			kk: 'Экологиялық технологиялар',
@@ -117,7 +117,7 @@ export const themeZones = [
 	},
 	{
 		id: 5,
-		image: '/imgs/exhibition/theme-zone-6.png',
+		image: '/imgs/exhibition/theme-zone-6.webp',
 		title: {
 			ru: 'ESG & экологичное финансирование',
 			kk: 'ESG және экологиялық қаржыландыру',
@@ -126,7 +126,7 @@ export const themeZones = [
 	},
 	{
 		id: 6,
-		image: '/imgs/exhibition/theme-zone-7.png',
+		image: '/imgs/exhibition/theme-zone-7.webp',
 		title: {
 			ru: 'Сельское хозяйство',
 			kk: 'Ауыл шаруашылығы',
@@ -135,7 +135,7 @@ export const themeZones = [
 	},
 	{
 		id: 7,
-		image: '/imgs/exhibition/theme-zone-8.png',
+		image: '/imgs/exhibition/theme-zone-8.webp',
 		title: {
 			ru: 'Зеленое строительство',
 			kk: 'Жасыл құрылыс',
