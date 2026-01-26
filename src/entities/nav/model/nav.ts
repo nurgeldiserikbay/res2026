@@ -113,7 +113,7 @@ export const navItems: readonly NavItem[] = [
 			{ key: 'useful.weather', href: '/useful/weather', ready: true, showHeader: true, showFooter: true },
 			{ key: 'useful.attractions', href: '/useful/attractions', ready: true, showHeader: true, showFooter: true },
 		],
-		showHeader: !appConfig.isProduction,
+		showHeader: true,
 		showFooter: true,
 	},
 	{
