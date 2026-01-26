@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: string; width: number; height: number }[] }) {
+export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: string; width: number; height: number; quality?: number }[] }) {
 	const [activeImg, setActiveImg] = useState(imgs[0])
 	const mainImageRef = useRef<HTMLDivElement>(null)
 	const thumbnailsRef = useRef<HTMLDivElement>(null)
@@ -64,6 +64,7 @@ export function AboutImgs({ imgs }: { imgs: { id: number; img: string; alt: stri
 						<Image
 							src={activeImg.img}
 							alt={activeImg.alt}
+							quality={activeImg.quality || 75}
 							width={activeImg.width}
 							height={activeImg.height}
 							className="block w-full rounded-[12px] sm:rounded-[12px]"

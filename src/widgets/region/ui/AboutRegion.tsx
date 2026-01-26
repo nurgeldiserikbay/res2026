@@ -25,7 +25,7 @@ interface AboutRegionProps {
 	mapAlt: string
 	mapWidth: number
 	mapHeight: number
-	imgs: { id: number; img: string; alt: string; width: number; height: number }[]
+	imgs: { id: number; img: string; alt: string; width: number; height: number; quality?: number }[]
 }
 
 export default function AboutRegion({
