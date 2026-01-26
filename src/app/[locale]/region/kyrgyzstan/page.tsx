@@ -1,17 +1,18 @@
 import { useTranslations } from 'next-intl'
 
 import { HeroBanner } from '@/shared/ui/banner'
-import { SLIDES_KZ } from '@/widgets/region/mocks'
-import { AbountEtc } from '@/widgets/region/ui/AbountEtc'
+import { SLIDES_KG } from '@/widgets/region/mocks'
 import AboutRegion from '@/widgets/region/ui/AboutRegion'
 import { Climate } from '@/widgets/region/ui/Climate'
+import { ColumnInitiatives } from '@/widgets/region/ui/ColumnInitiatives'
 import { FloraAndFauna } from '@/widgets/region/ui/FloraAndFauna'
 import { RegionTabs } from '@/widgets/region/ui/RegionTabs'
+import { StrategicDocuments } from '@/widgets/region/ui/StrategicDocuments'
 
 const IMGS = [
 	{
 		id: 1,
-		img: '/imgs/flag.jpeg',
+		img: '/imgs/regions/kg/kg-flag.webp',
 		alt: 'Region Img 1',
 		width: 612,
 		height: 408,
@@ -24,45 +25,43 @@ export default function Page() {
 	const MENU_ITEMS = [
 		{
 			id: 1,
-			title: t(`pages.regions.kazakhstan.tabs.0`),
+			title: t(`pages.regions.kyrgyzstan.tabs.0`),
 			href: '#about',
 		},
 		{
 			id: 2,
-			title: t(`pages.regions.kazakhstan.tabs.1`),
+			title: t(`pages.regions.kyrgyzstan.tabs.1`),
 			href: '#climate',
 		},
 		{
 			id: 3,
-			title: t(`pages.regions.kazakhstan.tabs.2`),
+			title: t(`pages.regions.kyrgyzstan.tabs.2`),
 			href: '#flora-and-fauna',
 		},
 		{
 			id: 4,
-			title: t(`pages.regions.kazakhstan.tabs.3`),
+			title: t(`pages.regions.kyrgyzstan.tabs.3`),
 			href: '#etc',
 		},
 	]
 
 	const aboutRegionData = {
-		title: t(`pages.regions.uzbekistan.title`),
-		text1: t(`pages.regions.uzbekistan.text1`),
-		text2: t(`pages.regions.uzbekistan.text2`),
+		title: t(`pages.regions.kyrgyzstan.title1`),
+		text1: t(`pages.regions.kyrgyzstan.text1`),
+		text2: t(`pages.regions.kyrgyzstan.text2`),
 		stats: [
 			{
-				statValue: '12',
-				statTitle: t(`pages.regions.uzbekistan.stat1`),
-				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+				statValue: '7',
+				statTitle: t(`pages.regions.kyrgyzstan.stat1`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] sm:max-w-[271px]',
 			},
 			{
-				statValue: '1',
-				statTitle: t(`pages.regions.uzbekistan.stat2`),
-				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300]',
+				statValue: '2',
+				statTitle: t(`pages.regions.kyrgyzstan.stat2`),
+				statClass: 'bg-linear-to-b from-[#E0EAB8] to-[#D4D8C300] sm:max-w-[537px]',
 			},
 		],
-		stat3Value: '38',
-		stat3: t(`pages.regions.uzbekistan.stat3`),
-		map: '/imgs/kz-about-map.svg',
+		map: '',
 		mapAlt: 'UZ About Map',
 		mapWidth: 1885,
 		mapHeight: 1112,
@@ -70,88 +69,101 @@ export default function Page() {
 	}
 
 	const climateData = {
-		title: t(`pages.regions.kazakhstan.climateTitle`),
-		climateText2: t(`pages.regions.kazakhstan.climateText`),
-		temp1Value: '-45',
-		temp2Value: '+40',
-		img1: '/imgs/climate-1.png',
-		img2: '/imgs/climate-2.png',
+		title: t(`pages.regions.kyrgyzstan.climateTitle`),
+		climateText2: t(`pages.regions.kyrgyzstan.climateText`),
+		temp1Value: '-12',
+		temp2Value: '+33',
+		img1: '/imgs/regions/kg/kg-climate-1.webp',
+		img2: '/imgs/regions/kg/kg-climate-2.webp',
 	}
 
-	const etcData = {
-		strategicVisionTitle: t(`pages.regions.kazakhstan.etc.strategicVisionTitle`),
-		strategicVisionIntro: t(`pages.regions.kazakhstan.etc.strategicVisionIntro`),
+	const strategicDocumentsData = {
+		strategicVisionTitle: t(`pages.regions.kyrgyzstan.etc.strategicVisionTitle`),
+		strategicVisionIntro: t(`pages.regions.kyrgyzstan.etc.strategicVisionIntro`),
 		strategicDocuments: [
 			{
 				id: 1,
-				title: t(`pages.regions.kazakhstan.etc.strategicDocuments.0`),
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.0', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
+				}),
 			},
 			{
 				id: 2,
-				title: t(`pages.regions.kazakhstan.etc.strategicDocuments.1`),
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.1', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
+				}),
 			},
 			{
 				id: 3,
-				title: t(`pages.regions.kazakhstan.etc.strategicDocuments.2`),
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.2', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
+				}),
 			},
 			{
 				id: 4,
-				title: t(`pages.regions.kazakhstan.etc.strategicDocuments.3`),
-			},
-		],
-		nationalInitiativesTitle: t(`pages.regions.kazakhstan.etc.nationalInitiativesTitle`),
-		nationalInitiativesIntro: [
-			{
-				id: 1,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title1`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text1`),
-				image: '/imgs/recycle1.png',
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.3', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
+				}),
 			},
 			{
-				id: 2,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title2`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text2`),
-				image: '/imgs/recycle2.png',
+				id: 5,
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.4', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
+				}),
 			},
 			{
-				id: 3,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.title3`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiativesIntro.text3`),
-				image: '/imgs/recycle3.png',
-			},
-		],
-		nationalInitiatives: [
-			{
-				id: 1,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiatives.title1`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiatives.text1`),
+				id: 6,
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.5', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
+				}),
 			},
 			{
-				id: 2,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiatives.title2`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiatives.text2`),
-			},
-			{
-				id: 3,
-				title: t(`pages.regions.kazakhstan.etc.nationalInitiatives.title3`),
-				description: t(`pages.regions.kazakhstan.etc.nationalInitiatives.text3`),
-			},
-			{
-				id: 4,
-				title: '',
-				description: t.rich('pages.regions.kazakhstan.etc.nationalInitiatives.text4', {
-					bold: (chunks) => <span className="font-bold">{chunks}</span>,
+				id: 7,
+				title: t.rich('pages.regions.kyrgyzstan.etc.strategicDocuments.6', {
+					sbold: (chunks) => <span className="font-bold">{chunks}</span>,
 				}),
 			},
 		],
 	}
 
+	const nationalInitiativesData = {
+		title: t(`pages.regions.kyrgyzstan.nationalInitiativesTitle`),
+		nationalInitiatives: [
+			{
+				id: 1,
+				title: t(`pages.regions.kyrgyzstan.nationalInitiativesData.0.title`),
+				description: t(`pages.regions.kyrgyzstan.nationalInitiativesData.0.text`),
+			},
+			{
+				id: 2,
+				title: t(`pages.regions.kyrgyzstan.nationalInitiativesData.1.title`),
+				description: t(`pages.regions.kyrgyzstan.nationalInitiativesData.1.text`),
+			},
+			{
+				id: 3,
+				title: t(`pages.regions.kyrgyzstan.nationalInitiativesData.2.title`),
+				description: t(`pages.regions.kyrgyzstan.nationalInitiativesData.2.text`),
+			},
+			{
+				id: 4,
+				title: t(`pages.regions.kyrgyzstan.nationalInitiativesData.3.title`),
+				description: t(`pages.regions.kyrgyzstan.nationalInitiativesData.3.text`),
+			},
+			{
+				id: 5,
+				title: t(`pages.regions.kyrgyzstan.nationalInitiativesData.4.title`),
+				description: t(`pages.regions.kyrgyzstan.nationalInitiativesData.4.text`),
+			},
+		],
+		img: '/imgs/regions/kg/national-initiatives.webp',
+	}
+
 	return (
 		<>
 			<HeroBanner
-				title={t(`pages.regions.kazakhstan.title`)}
-				bgImage="/imgs/region-banner.png"
-				breadcrumbs={[{ label: t(`pages.regions.kazakhstan.title`), href: '/region/kyrgyzstan' }]}
+				title={t(`pages.regions.kyrgyzstan.title`)}
+				bgImage="/imgs/regions/kg/kg-banner.webp"
+				breadcrumbs={[{ label: t(`pages.regions.kyrgyzstan.title`), href: '/region/kyrgyzstan' }]}
 			/>
 
 			<RegionTabs tabs={MENU_ITEMS} />
@@ -160,9 +172,20 @@ export default function Page() {
 
 			<Climate {...climateData} />
 
-			<FloraAndFauna slides={SLIDES_KZ} />
+			<FloraAndFauna slides={SLIDES_KG} />
 
-			<AbountEtc {...etcData} />
+			<StrategicDocuments
+				strategicVisionTitle={strategicDocumentsData.strategicVisionTitle}
+				strategicVisionIntro={strategicDocumentsData.strategicVisionIntro}
+				strategicDocuments={strategicDocumentsData.strategicDocuments}
+				listItemClass={'items-start! mb-[30px]! last:mb-0! max-w-[1159px]!'}
+			/>
+
+			<ColumnInitiatives
+				title={nationalInitiativesData.title}
+				items={nationalInitiativesData.nationalInitiatives}
+				img={nationalInitiativesData.img}
+			/>
 		</>
 	)
 }

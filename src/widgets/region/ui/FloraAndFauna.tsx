@@ -126,20 +126,20 @@ export function FloraAndFauna({
 							<div>
 								<h3
 									ref={TitleRef}
-									className="xs:text-[32px] text-text mb-[30px] translate-y-[50px] text-[24px] leading-[1.2] font-bold opacity-0 md:text-white"
+									className="mb-[30px] translate-y-[50px] text-[24px] leading-[1.2] font-bold text-text opacity-0 xs:text-[32px] md:text-white"
 								>
 									{localizedTitle}
 								</h3>
 								<p
 									ref={DescriptionRef}
-									className="text-text max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line opacity-0 md:text-justify md:text-white"
+									className="max-w-[860px] translate-y-[50px] text-[16px] leading-normal font-normal whitespace-pre-line text-text opacity-0 md:text-justify md:text-white"
 								>
 									{localizedDescription}
 								</p>
 							</div>
 							<div
 								ref={ButtonsRef}
-								className={`mt-[50px] flex translate-x-[-50px] gap-[10px] opacity-0 md:block ${!showNavigation ? 'hidden' : ''}`}
+								className={`mt-[50px] flex translate-x-[-50px] gap-[10px] opacity-0 ${!showNavigation ? 'hidden' : ''}`}
 								aria-hidden={!showNavigation}
 							>
 								<div id="flora-and-fauna-swiper-button-prev">
@@ -148,10 +148,10 @@ export function FloraAndFauna({
 											icon={false}
 											aria-label="Previous slide"
 											aria-disabled="true"
-											className="text-muted pointer-events-none mb-[10px] box-border h-[45px] w-[82px] cursor-default py-[12px]"
+											className="pointer-events-none mb-[10px] box-border h-[45px] w-[82px] cursor-default py-[12px] text-muted"
 										>
 											<IconArrowHead
-												className="text-muted rotate-180 transform"
+												className="rotate-180 transform text-muted"
 												aria-hidden="true"
 											/>
 										</ButtonOutlined>
@@ -175,7 +175,7 @@ export function FloraAndFauna({
 											icon={false}
 											aria-label="Next slide"
 											aria-disabled="true"
-											className="text-muted pointer-events-none box-border h-[45px] w-[82px] cursor-default py-[12px]"
+											className="pointer-events-none box-border h-[45px] w-[82px] cursor-default py-[12px] text-muted"
 										>
 											<IconArrowHead
 												className="text-muted"

@@ -91,6 +91,9 @@ export function PartnersSlide({
 						setIsBeginning(swiper.isBeginning)
 						setIsEnd(swiper.isEnd)
 					}}
+					onResize={(swiper) => {
+						updateShowNavigation(swiper, images.length)
+					}}
 					breakpoints={{
 						320: {
 							slidesPerView: 1.5,

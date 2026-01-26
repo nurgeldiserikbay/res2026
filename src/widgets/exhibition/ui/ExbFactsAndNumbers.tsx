@@ -14,11 +14,9 @@ export function ExbFactsAndNumbers() {
 
 	const SectionRef = useRef<HTMLElement>(null)
 	const TitleRef = useRef<HTMLHeadingElement>(null)
-	const TextRef = useRef<HTMLParagraphElement>(null)
 	const ItemsRef = useRef<HTMLDivElement>(null)
 
 	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
-	useAnimSlide(TextRef, { y: 50, delay: 0.2 })
 
 	// Animation for items
 	useGSAP(
@@ -56,16 +54,13 @@ export function ExbFactsAndNumbers() {
 				<div className="rounded-[12px] bg-[#02493F] bg-[url('/imgs/usefulls/facts-and-numbers-bg.png')] bg-cover bg-center bg-no-repeat p-[20px] py-[57px] lg:px-[55px] lg:pt-[60px] lg:pb-[55px]">
 					<h2
 						ref={TitleRef}
-						className="mx-auto mb-[15px] max-w-[302px] translate-y-[50px] text-center text-[32px] leading-[1.2] font-bold text-white opacity-0 sm:max-w-none lg:text-left xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]"
+						className="mx-auto mb-[65px] max-w-[302px] translate-y-[50px] text-center text-[32px] leading-[1.2] font-bold text-white opacity-0 sm:max-w-none lg:text-left xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]"
 					>
 						{t('pages.exhibition.factsAndNumbers.title')}
 					</h2>
-					<p
-						ref={TextRef}
-						className="mb-[65px] translate-y-[50px] text-center text-[20px] leading-none font-normal text-white opacity-0 lg:text-left lg:text-[22px] xl:text-[24px] 2xl:text-[24px]"
-					>
+					{/* <p className="mb-[65px] text-center text-[20px] leading-none font-normal text-white lg:text-left lg:text-[22px] xl:text-[24px] 2xl:text-[24px]">
 						{t('pages.exhibition.factsAndNumbers.text')}
-					</p>
+					</p> */}
 
 					<div
 						ref={ItemsRef}

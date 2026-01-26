@@ -10,19 +10,17 @@ import { useRef } from 'react'
 import { useAnimSlide } from '@/shared/lib/gsap/useAnimSlide'
 import { Container } from '@/shared/ui/container/container'
 
-import { PresidentAboutExb } from './PresidentAboutExb'
+// import { PresidentAboutExb } from './PresidentAboutExb'
 
 export function AboutExhibition() {
 	const t = useTranslations()
 
 	const TitleRef = useRef<HTMLHeadingElement>(null)
 	const ContentRef = useRef<HTMLDivElement>(null)
-	const ImageRef = useRef<HTMLDivElement>(null)
 	const StatsRef = useRef<HTMLDivElement>(null)
 
 	useAnimSlide(TitleRef, { y: 50, delay: 0.1 })
 	useAnimSlide(ContentRef, { y: 50, delay: 0.2 })
-	useAnimSlide(ImageRef, { x: 50, delay: 0.3 })
 
 	// Animation for stats
 	useGSAP(
@@ -74,7 +72,7 @@ export function AboutExhibition() {
 		<section className="relative z-1 bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! xl:flex-nowrap">
 				<div>
-					<PresidentAboutExb className="mb-[47px] lg:mb-[100px]" />
+					{/* <PresidentAboutExb className="mb-[47px] lg:mb-[100px]" /> */}
 
 					<h2
 						ref={TitleRef}
@@ -106,10 +104,7 @@ export function AboutExhibition() {
 					</div>
 				</div>
 
-				<div
-					ref={ImageRef}
-					className="aspect-none relative z-1 w-full max-w-[715px] opacity-0 lg:translate-y-[-60px] xl:aspect-[1.056] xl:translate-y-[-60px]"
-				>
+				{/* <div className="aspect-none relative z-1 w-full max-w-[715px] xl:aspect-[1.056] xl:translate-y-[-60px]">
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
@@ -117,7 +112,7 @@ export function AboutExhibition() {
 						height={813}
 						className="bottom-0 left-0 w-full xl:absolute"
 					/>
-				</div>
+				</div> */}
 			</Container>
 
 			<Container
