@@ -34,7 +34,7 @@
 	},
 	"nav": {
 		"about": {
-			"exhibition": "About the exhibition",
+			"exhibition": "RES2026 EXPO exhibition",
 			"root": "About the summit",
 			"region": "About the region",
 			"res": "General information",
@@ -688,8 +688,8 @@
 			}
 		},
 		"exhibition": {
-			"title": "About the Exhibition",
-			"subtitle": "Exhibition of Green and Environmental Technologies within the framework of the Regional Environmental Summit 2026",
+			"title": "RES2026 EXPO",
+			"subtitle": "International Exhibition of Green and Sustainable Technologies within the framework of the Regional Environmental Summit",
 			"presidentText": "«Kazakhstan firmly believes that only collective action and cooperation can lead to addressing the climate crisis. In order to strengthen the momentum of climate action in Central Asia, we have also decided to hold a Regional Climate Summit in Kazakhstan in 2026 under the auspices of the UN.»",
 			"presidentName": "Kassym-Jomart Tokayev",
 			"presidentPosition": "President of Kazakhstan",
@@ -748,7 +748,7 @@
 			},
 			"eventPlace": {
 				"title": "Venue",
-				"text": "RES2026 will take place at a modern congress and exhibition venue in Astana that meets international standards for business and scientific events.",
+				"text": "The exhibition will be held at the EXPO International Exhibition Center, one of the country's main venues for global events and innovative projects.",
 				"text2": "You can also explore the exhibition map.",
 				"time1Title": "April 22, 2026",
 				"time1Text": "Wed. 11:00 AM – 6:00 PM",

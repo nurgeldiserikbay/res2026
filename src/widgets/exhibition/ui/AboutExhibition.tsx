@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 
 import { Container } from '@/shared/ui/container/container'
 
-import { PresidentAboutExb } from './PresidentAboutExb'
+// import { PresidentAboutExb } from './PresidentAboutExb'
 
 export function AboutExhibition() {
 	const t = useTranslations()
@@ -32,7 +32,7 @@ export function AboutExhibition() {
 		<section className="relative z-1 bg-white pt-[50px] md:pt-[60px] lg:pt-[80px] 2xl:pt-[100px]">
 			<Container className="flex flex-wrap items-start justify-between gap-x-[60px] gap-y-[30px] overflow-visible! xl:flex-nowrap">
 				<div>
-					<PresidentAboutExb className="mb-[47px] lg:mb-[100px]" />
+					{/* <PresidentAboutExb className="mb-[47px] lg:mb-[100px]" /> */}
 
 					<h2 className="mb-[30px] text-[32px] leading-[1.2] font-bold text-text xl:text-[36px] 2xl:text-[30px] 3xl:text-[48px]">
 						{t('pages.exhibition.title')}
@@ -58,7 +58,7 @@ export function AboutExhibition() {
 					</div>
 				</div>
 
-				<div className="aspect-none relative z-1 w-full max-w-[715px] xl:aspect-[1.056] xl:translate-y-[-60px]">
+				{/* <div className="aspect-none relative z-1 w-full max-w-[715px] xl:aspect-[1.056] xl:translate-y-[-60px]">
 					<Image
 						src="/imgs/exhibition/exhibition-img.png"
 						alt="Exhibition"
@@ -66,7 +66,7 @@ export function AboutExhibition() {
 						height={813}
 						className="bottom-0 left-0 w-full xl:absolute"
 					/>
-				</div>
+				</div> */}
 			</Container>
 
 			<Container className="grid grid-cols-1 gap-x-[10px] gap-y-[10px] pt-[30px] sm:grid-cols-2 xl:grid-cols-4">
